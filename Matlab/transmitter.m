@@ -9,6 +9,7 @@ Fc = 40e3; %40kHz
 M = 4; %Modulation order
 bitsPerSymbol = log2(M);
 N = 100;
+Tx_PowDB = 10;
 
 rolloff = 0.5;
 oversample = 32;
@@ -47,6 +48,10 @@ figure; scatter(real(symbols), imag(symbols))
 xlim([-2 2])
 ylim([-2 2])
 title('Constellation Diagram of QPSK Symbols')
+
+%% Add Golay code as preamble
+[Ga, Gb] = wlanGolaySequence(64);
+symbols = [Ga' symbols];
 
 %% Pulse Shape
 dataUpsampled = upsample(symbols,oversample);
@@ -104,6 +109,20 @@ figure;
 scatter(real(dataMod), imag(dataMod))
 title('COnstellation Diagram of Pulse Shaped Modulated QPSK Signal')
 
+%% Give Tx the correct power (Amplifier)
+tx_power = sum(abs(dataMod).^2)/length(dataMod);
+amp_const = 10^(Tx_PowDB/10)/tx_power;
+dataMod = amp_const*dataMod;
 
+%% Apply Channel
+received = channel(dataMod);
+figure;
+sgtitle("Power Spectrum")
+subplot(2,1,1)
+plot(10*log10(abs(fftshift(fft(dataMod))).^2))
+ylabel("Before Channel")
+subplot(2,1,2)
+plot(10*log10(abs(fftshift(fft(received))).^2))
+ylabel("After Channel")
 
 
