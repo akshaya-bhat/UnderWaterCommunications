@@ -56,7 +56,7 @@ symbols = [Ga' symbols];
 %% Pulse Shape
 dataUpsampled = upsample(symbols,oversample);
 h = rcosdesign(rolloff,6,oversample,'sqrt');
-dataPulseShaped = conv(h*sum(h),dataUpsampled);
+dataPulseShaped = conv(h,dataUpsampled);
 
 figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped))
 title('Pulse Shaped QPSK SIgnal')
@@ -76,21 +76,24 @@ title('Constellation Diagram of Pulse Shaped QPSK Signal')
 
 %% Modulation
 t = (0:1/Fs:(length(dataPulseShaped)-1)/Fs);
-carrier = (exp(1i*2*pi*Fc.*t));
-figure; plot(real(carrier)); hold on; plot(imag(carrier))
+carrier_I = cos(2*pi*Fc.*t);
+carrier_Q = sin(2*pi*Fc.*t);
+figure; plot(carrier_I); hold on; plot(carrier_Q)
 title('Carrier')
 
-fftX1 = abs(fftshift(fft(carrier, length(carrier))));
-Nfft = length(fftX1);
-fvec = -Fs/2:Fs/(Nfft):(Fs/2)-(Fs/Nfft);
-powerX1 = fftX1.^2;
-dbX = 10*log10(powerX1);
-figure;
-plot(fvec/1e3, fftX1); 
-xlabel('Frequency (kHz)');
-title('Frequency of Carrier');
+% fftX1 = abs(fftshift(fft(carrier, length(carrier))));
+% Nfft = length(fftX1);
+% fvec = -Fs/2:Fs/(Nfft):(Fs/2)-(Fs/Nfft);
+% powerX1 = fftX1.^2;
+% dbX = 10*log10(powerX1);
+% figure;
+% plot(fvec/1e3, fftX1); 
+% xlabel('Frequency (kHz)');
+% title('Frequency of Carrier');
 
-dataMod = dataPulseShaped.*carrier;
+dataMod_I = real(dataPulseShaped).*carrier_I;
+dataMod_Q = imag(dataPulseShaped).*carrier_Q;
+dataMod = dataMod_I + dataMod_Q;
 figure; plot(real(dataMod)); hold on; plot(imag(dataMod))
 title('QPSK Pulse Shaped Modulated Signal')
 
@@ -105,9 +108,9 @@ xlabel('Frequency (kHz)');
 title('Frequency of Pulse Shaped Modulated QPSK Signal');
 xlim([-200 200])
 
-figure;
-scatter(real(dataMod), imag(dataMod))
-title('COnstellation Diagram of Pulse Shaped Modulated QPSK Signal')
+% figure;
+% scatter(real(dataMod), imag(dataMod))
+% title('COnstellation Diagram of Pulse Shaped Modulated QPSK Signal')
 
 %% Give Tx the correct power (Amplifier)
 tx_power = sum(abs(dataMod).^2)/length(dataMod);
@@ -115,14 +118,30 @@ amp_const = 10^(Tx_PowDB/10)/tx_power;
 dataMod = amp_const*dataMod;
 
 %% Apply Channel
-received = channel(dataMod);
+received = dataMod;
+% received = channel(dataMod);
+% figure;
+% sgtitle("Power Spectrum")
+% subplot(2,1,1)
+% plot(10*log10(abs(fftshift(fft(dataMod))).^2))
+% ylabel("Before Channel")
+% subplot(2,1,2)
+% plot(10*log10(abs(fftshift(fft(received))).^2))
+% ylabel("After Channel")
+
+%% Demodulate
+rx_I = received.*carrier_I;
+rx_Q = received.*carrier_Q;
+
+%% Matched Filter
 figure;
-sgtitle("Power Spectrum")
-subplot(2,1,1)
-plot(10*log10(abs(fftshift(fft(dataMod))).^2))
-ylabel("Before Channel")
-subplot(2,1,2)
-plot(10*log10(abs(fftshift(fft(received))).^2))
-ylabel("After Channel")
+hold on;
+plot(rx_I)
+plot(conv(h,rx_I))
 
-
+num_symbols = length(rx_I)/oversample;
+symbols_I = zeros(1, num_symbols);
+symbols_Q = zeros(1, num_symbols);
+for i=1:num_symbols
+    symbols_I(i) = 1;
+end
