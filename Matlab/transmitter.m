@@ -134,14 +134,40 @@ rx_I = received.*carrier_I;
 rx_Q = received.*carrier_Q;
 
 %% Matched Filter
+matched_I = conv(h, rx_I);
+matched_I = matched_I(97:end);
+matched_Q = conv(h, rx_Q);
+matched_Q = matched_Q(97:end);
+
+%% Symbol Synchronization with early-late algorithm
+matched_abs = abs(matched_I + 1j*matched_Q);
+num_chunks = length(matched_abs)/oversample;
+sense_I = zeros(1, num_chunks);
+sense_Q = zeros(1, num_chunks);
+symbol_indices = zeros(1, num_chunks);
+sample = 16;
+for i=1:num_chunks
+    chunk = matched_abs((i-1)*oversample + 1: i*oversample);
+    sense_I(i) = matched_I((i-1)*oversample + sample);
+    sense_Q(i) = matched_Q((i-1)*oversample + sample);
+    symbol_indices(i) = (i-1)*oversample + sample;
+    S = (chunk(sample-1) - chunk(sample+1))*chunk(sample);
+    if S > 0
+        sample = sample + 1;
+    elseif S < 0
+        sample = sample - 1;
+    end
+end
+
 figure;
+sgtitle("I and Q received signal after demodulation and matched filter")
+subplot(2,1,1)
 hold on;
 plot(rx_I)
-plot(conv(h,rx_I))
-
-num_symbols = length(rx_I)/oversample;
-symbols_I = zeros(1, num_symbols);
-symbols_Q = zeros(1, num_symbols);
-for i=1:num_symbols
-    symbols_I(i) = 1;
-end
+plot(matched_I)
+plot(symbol_indices, sense_I, '*')
+subplot(2,1,2)
+hold on;
+plot(rx_Q)
+plot(matched_Q)
+plot(symbol_indices, sense_Q, 'o')
