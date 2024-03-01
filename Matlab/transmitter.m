@@ -30,8 +30,8 @@ encodedDataQ = convenc(dataQ,trellis);
 %%% Introduces controlled randomness to signal
 %%% PRBS of 2^M - 1
 pnGen = pngen(M,length(encodedDataI));
-scrambledDataI = encodedDataI .* pnGen;
-scrambledDataQ = encodedDataQ .* pnGen;
+scrambledDataI = +xor(encodedDataI,pnGen);
+scrambledDataQ = +xor(encodedDataQ,pnGen);
 
 %% Symbol Mapper for QPSK
 %%% Grouping bits into QPSK (2 bits) and mapping to complex values based on
@@ -53,7 +53,7 @@ title('Constellation Diagram of QPSK Symbols')
 [Ga, Gb] = wlanGolaySequence(64);
 symbols = [Ga' symbols];
 
-%% Pulse Shape
+%% Pulse Shape with SRRC filter
 dataUpsampled = upsample(symbols,oversample);
 h = rcosdesign(rolloff,6,oversample,'sqrt');
 dataPulseShaped = conv(h,dataUpsampled);
@@ -80,6 +80,9 @@ carrier_I = cos(2*pi*Fc.*t);
 carrier_Q = sin(2*pi*Fc.*t);
 figure; plot(carrier_I); hold on; plot(carrier_Q)
 title('Carrier')
+% for later use
+preamb_time = t(1:length(Ga)*oversample);
+MOD_PREAMBLE = upsample(Ga',oversample).*cos(2*pi*Fc.*preamb_time);
 
 % fftX1 = abs(fftshift(fft(carrier, length(carrier))));
 % Nfft = length(fftX1);
@@ -135,39 +138,102 @@ rx_Q = received.*carrier_Q;
 
 %% Matched Filter
 matched_I = conv(h, rx_I);
-matched_I = matched_I(97:end);
 matched_Q = conv(h, rx_Q);
-matched_Q = matched_Q(97:end);
 
-%% Symbol Synchronization with early-late algorithm
+%% Initial symbol and frame sync before downsampling
+temp = xcorr(matched_I,MOD_PREAMBLE);
+L = numel(matched_I);
+modulated_correlation = temp(L:end);
+[corr_max,frame_start] = max(modulated_correlation);
+first_sample = frame_start + ceil(length(h)/2);
+
+figure;
+plot(modulated_correlation)
+title("Correlation with Golay Preamble before downsampling")
+
+
+%% Symbol Synchronization with Gardner algorithm
 matched_abs = abs(matched_I + 1j*matched_Q);
-num_chunks = length(matched_abs)/oversample;
+num_chunks = floor(length(matched_abs)/oversample);
+
 sense_I = zeros(1, num_chunks);
 sense_Q = zeros(1, num_chunks);
-symbol_indices = zeros(1, num_chunks);
-sample = 16;
-for i=1:num_chunks
-    chunk = matched_abs((i-1)*oversample + 1: i*oversample);
-    sense_I(i) = matched_I((i-1)*oversample + sample);
-    sense_Q(i) = matched_Q((i-1)*oversample + sample);
-    symbol_indices(i) = (i-1)*oversample + sample;
-    S = (chunk(sample-1) - chunk(sample+1))*chunk(sample);
-    if S > 0
-        sample = sample + 1;
-    elseif S < 0
-        sample = sample - 1;
+sense_I_plot = zeros(1, length(matched_abs));
+sense_Q_plot = zeros(1, length(matched_abs));
+
+sample = first_sample;
+i = 1;
+while sample < (length(matched_abs)-oversample)
+    sense_I(i) = matched_I(sample);
+    sense_Q(i) = matched_Q(sample);
+    i = i+1;
+    sense_I_plot(sample) = matched_I(sample);
+    sense_Q_plot(sample) = matched_Q(sample);
+    
+    e = (matched_abs(sample+oversample) - matched_abs(sample)) * matched_abs(sample+oversample/2);
+    edec = (matched_abs(sample+oversample-1) - matched_abs(sample-1)) * matched_abs(sample+oversample/2 - 1);
+    einc = (matched_abs(sample+oversample+1) - matched_abs(sample+1)) * matched_abs(sample+oversample/2 + 1);
+
+    if abs(edec) < abs(e)
+        sample = sample + oversample - 1;
+    elseif abs(einc) < abs(e)
+        sample = sample + oversample + 1;
+    else
+        sample = sample + oversample;
+    end
+end
+sense_I(i) = matched_I(sample);
+sense_Q(i) = matched_Q(sample);
+
+figure;
+sgtitle("I and Q optimal sampling points")
+subplot(2,1,1)
+hold on;
+plot(matched_I)
+plot(sense_I_plot)
+subplot(2,1,2)
+hold on;
+plot(matched_Q)
+plot(sense_Q_plot)
+
+
+%% Thresholding
+hard_I = zeros(1, length(sense_I));
+hard_Q = zeros(1, length(sense_I));
+for m=1:length(sense_I)
+    if sense_I(m) > 0
+        hard_I(m) = 1;
+    end
+    if sense_Q(m) > 0
+        hard_Q(m) = 1;
     end
 end
 
+%% De-scramble the data
+hard_I = hard_I(65:N+64);
+hard_Q = hard_Q(65:N+64);
+descrambled_I = +xor(hard_I, pnGen);
+descrambled_Q = +xor(hard_Q, pnGen);
+
+% plot descrambled data vs ogiginal encoded bits
 figure;
-sgtitle("I and Q received signal after demodulation and matched filter")
+subplot(2,1,1)
+plot(encodedDataI)
+ylabel("Tx encoded bits")
+subplot(2,1,2)
+plot(descrambled_I)
+ylabel("Rx descrambled bits")
+
+figure;
+sgtitle("Pulse Shaping on Tx and Rx side")
 subplot(2,1,1)
 hold on;
-plot(rx_I)
-plot(matched_I)
-plot(symbol_indices, sense_I, '*')
+plot(real(dataUpsampled)./max(real(dataUpsampled)), 'g')
+plot(real(dataPulseShaped(97:end))./max(real(dataPulseShaped)), 'b')
+plot(matched_I(97:end)./max(matched_I), 'r')
 subplot(2,1,2)
 hold on;
-plot(rx_Q)
-plot(matched_Q)
-plot(symbol_indices, sense_Q, 'o')
+plot(imag(dataUpsampled)./max(imag(dataUpsampled)), 'g')
+plot(matched_Q(97:end)./max(matched_Q), 'r')
+plot(imag(dataPulseShaped(97:end))./max(imag(dataPulseShaped)), 'b')
+
