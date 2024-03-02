@@ -57,6 +57,8 @@ symbols = [Ga' symbols];
 dataUpsampled = upsample(symbols,oversample);
 h = rcosdesign(rolloff,6,oversample,'sqrt');
 dataPulseShaped = conv(h,dataUpsampled);
+% for later use
+MOD_PREAMBLE = conv(h,upsample(Ga',oversample));
 
 figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped))
 title('Pulse Shaped QPSK SIgnal')
@@ -80,9 +82,6 @@ carrier_I = cos(2*pi*Fc.*t);
 carrier_Q = sin(2*pi*Fc.*t);
 figure; plot(carrier_I); hold on; plot(carrier_Q)
 title('Carrier')
-% for later use
-preamb_time = t(1:length(Ga)*oversample);
-MOD_PREAMBLE = upsample(Ga',oversample).*cos(2*pi*Fc.*preamb_time);
 
 % fftX1 = abs(fftshift(fft(carrier, length(carrier))));
 % Nfft = length(fftX1);
@@ -196,6 +195,18 @@ hold on;
 plot(matched_Q)
 plot(sense_Q_plot)
 
+% plot sampled rx vs tx
+figure;
+sgtitle("Downsampled Rx symbols vs Tx symbols")
+subplot(2,1,1)
+hold on
+plot(sense_I./max(sense_I))
+plot(real(symbols))
+subplot(2,1,2)
+hold on
+plot(sense_Q./max(sense_Q))
+plot(imag(symbols))
+
 
 %% Thresholding
 hard_I = zeros(1, length(sense_I));
@@ -210,30 +221,23 @@ for m=1:length(sense_I)
 end
 
 %% De-scramble the data
-hard_I = hard_I(65:N+64);
-hard_Q = hard_Q(65:N+64);
+start = length(Ga);
+hard_I = hard_I(1+start:N+start);
+hard_Q = hard_Q(1+start:N+start);
 descrambled_I = +xor(hard_I, pnGen);
 descrambled_Q = +xor(hard_Q, pnGen);
 
 % plot descrambled data vs ogiginal encoded bits
 figure;
+sgtitle("Descrambled Rx bits vs Tx bits")
 subplot(2,1,1)
-plot(encodedDataI)
-ylabel("Tx encoded bits")
-subplot(2,1,2)
+hold on
 plot(descrambled_I)
-ylabel("Rx descrambled bits")
-
-figure;
-sgtitle("Pulse Shaping on Tx and Rx side")
-subplot(2,1,1)
-hold on;
-plot(real(dataUpsampled)./max(real(dataUpsampled)), 'g')
-plot(real(dataPulseShaped(97:end))./max(real(dataPulseShaped)), 'b')
-plot(matched_I(97:end)./max(matched_I), 'r')
+plot(encodedDataI)
 subplot(2,1,2)
-hold on;
-plot(imag(dataUpsampled)./max(imag(dataUpsampled)), 'g')
-plot(matched_Q(97:end)./max(matched_Q), 'r')
-plot(imag(dataPulseShaped(97:end))./max(imag(dataPulseShaped)), 'b')
+hold on
+plot(descrambled_Q)
+plot(encodedDataQ)
+
+
 
