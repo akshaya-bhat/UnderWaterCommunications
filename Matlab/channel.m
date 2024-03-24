@@ -74,6 +74,12 @@ function received = channel(x)
             nf = [nf conj(nf(end-1:-1:2))];
         end
         n = real(ifft(nf));
+
+        % from paper: DC corresponds to 107 dB noise
+        % normalize based off of that
+        amp1 = sqrt(10^(107/10));
+        norm_const = amp1/max(n);
+        n = norm_const*n;
     end
 
     % generate delay path attenuations:
