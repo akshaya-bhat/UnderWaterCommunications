@@ -69,7 +69,7 @@ dataMod = amp_const*dataMod;
 
 
 %% Channel
-received = dataMod;
+received = channel(dataMod);
 
 
 %% Receiver
@@ -104,7 +104,7 @@ for idx=1:length(correlationAbs)
     if is_max(idx) == 1
         if correlationAbs(idx) > threshold
             echo_amp(i) = correlationAbs(idx);
-            echo_phase(i) = atan2(correlationI(idx), correlationQ(idx))
+            echo_phase(i) = atan2(correlationQ(idx), correlationI(idx));
             echo_idx(i) = idx;
 
             i = i+1;
