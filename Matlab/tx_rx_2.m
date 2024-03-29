@@ -10,6 +10,7 @@ N = 100;                 % length of data payload
 Tx_PowDB = 10;           % power out of amplifier
 rolloff = 0.5;
 oversample = 32;         % samples per symbol
+correlation_threshold = 0.5; % half of highest peak
 
 
 %% Transmitter
@@ -44,13 +45,14 @@ symbols = qpskDataI + 1j*qpskDataQ;
 
 % add Golay Preamble
 [Ga, Gb] = wlanGolaySequence(32);
-symbols = [Ga' Gb' symbols];
+preamble_bpsk = [Ga' Gb'].*sqrt(2);
+symbols = [preamble_bpsk symbols];
 
 % upsample and apply pulse shaping
 dataUpsampled = upsample(symbols,oversample);
 h = rcosdesign(rolloff,6,oversample,'sqrt');
 dataPulseShaped = conv(h,dataUpsampled);
-MOD_PREAMBLE = conv(h,upsample([Ga' Gb'],oversample));
+MOD_PREAMBLE = conv(h,upsample(preamble_bpsk,oversample));
 
 % modulate with carrier
 t = (0:1/fs:(length(dataPulseShaped)-1)/fs);
@@ -84,47 +86,70 @@ matchedQ = conv(h, rxQ);
 % to one sample per symbol
 
 % Correlate with modulated preamble and find peaks representing
-% the start of images
-matchedAbs = abs(matchedI + 1j.*matchedQ);
-L = numel(matchedAbs);
-temp = xcorr(matchedAbs,MOD_PREAMBLE);
-correlationAbs = temp(L:end);
-temp = xcorr(matchedI,MOD_PREAMBLE);
-correlationI = temp(L:end);
-temp = xcorr(matchedQ,MOD_PREAMBLE);
-correlationQ = temp(L:end);
+% the start of images. Need both I and Q correlation.
+L = numel(matchedI);
+tempI = xcorr(matchedI, MOD_PREAMBLE);
+tempQ = xcorr(matchedQ, MOD_PREAMBLE);
+correlationI = tempI(L:end);
+correlationQ = tempQ(L:end);
+% take the amplitude of the correlation, as this should be phase neutral
+correlationAbs = sqrt(abs(correlationI).^2 + abs(correlationQ).^2);
 
-% we handle the 4 highest amplitude correlation peaks
-[amp, idx] = maxk(correlationAbs, 4);
+% find local maxima of absolute value of correlation
+is_max = islocalmax(correlationAbs);
+threshold = correlation_threshold*max(correlationAbs);
+i = 1;
+% rake receiver uses echoes where correlation exceeds the threshold
+for idx=1:length(correlationAbs)
+    if is_max(idx) == 1
+        if correlationAbs(idx) > threshold
+            echo_amp(i) = correlationAbs(idx);
+            echo_phase(i) = atan2(correlationQ(idx), correlationI(idx));
+            echo_idx(i) = idx;
 
-% find the phase of each echo
-phases = zeros(1,4);
-for i=1:4
-    phases(i) = atan2(correlationI(idx(i)), correlationQ(idx(i)));
+            i = i+1;
+        end
+    end
 end
 
-% apply the phase rotation to each echo
-echoes = zeros(4, length(dataPulseShaped));
+% % we handle the 4 highest amplitude correlation peaks
+% [amp, idx] = maxk(correlationAbs, 4);
+% 
+% % find the phase of each echo
+% phases = zeros(1,4);
+% for i=1:4
+%     phases(i) = atan2(correlationI(idx(i)), correlationQ(idx(i)));
+% end
+
+% apply the phase rotation & amplitude cancellation to each echo
+echoes = zeros(length(echo_idx), length(dataPulseShaped));
 matched_extended = [matchedI+1j*matchedQ zeros(1,10000)];
-for i=1:4
-    start = idx(i);
+for i=1:length(echo_idx)
+    start = echo_idx(i);
     finish = start + length(dataPulseShaped) - 1;
-    echoes(i,:) = matched_extended(start:finish).*exp(-1j*phases(i));
+    echoes(i,:) = matched_extended(start:finish).*exp(-1j*echo_phase(i));
 end
 
 % sum up all of the echoes
-rake_symbols = echoes(1,:) + echoes(2,:) + echoes(3,:) + echoes(4,:);
+rake_symbols = zeros(1, length(dataPulseShaped));
+for i=1:length(echo_idx)
+    rake_symbols = rake_symbols + echoes(i,:);
+end
 
 % symbol synchronization with gardner algorithm
 rake_abs = abs(rake_symbols);
 num_chunks = floor(length(rake_abs)/oversample);
+
 sense_symbols = zeros(1, num_chunks);
+sense_symbols_plot = zeros(1, length(rake_abs));
+
 sample = 1 + ceil(length(h)/2);
 i = 1;
 while sample < (length(rake_abs)-oversample)
     sense_symbols(i) = rake_symbols(sample);
     i = i+1;
-    
+    sense_symbols_plot(sample) = rake_symbols(sample);
+
     e = (rake_abs(sample+oversample) - rake_abs(sample)) * rake_abs(sample+oversample/2);
     edec = (rake_abs(sample+oversample-1) - rake_abs(sample-1)) * rake_abs(sample+oversample/2 - 1);
     einc = (rake_abs(sample+oversample+1) - rake_abs(sample+1)) * rake_abs(sample+oversample/2 + 1);
@@ -142,6 +167,16 @@ sense_symbols(i) = rake_symbols(sample);
 % separate preamble from payload
 preamble_symbols = sense_symbols(1:64);
 payload_symbols = sense_symbols(65:end);
+
+% channel estimation matrix
+top_row = [preamble_bpsk(1) zeros(1, 63)];
+Tmat = toeplitz(preamble_bpsk, top_row);
+hhat = pinv(Tmat)*preamble_symbols.';
+
+% channel equalization matrix
+top_row = [preamble_symbols(1) zeros(1, 64)];
+Rmat = toeplitz(preamble_symbols, top_row);
+ghat = pinv(Rmat)*preamble_bpsk.';
 
 % decode the payload symbols with soft decision decoding
 
@@ -162,7 +197,7 @@ xlim([-200 200])
 
 % sent vs received matched filter output
 figure(2)
-sgtitle("Tx/Rx pulses")
+sgtitle("Tx/Rx pulses Without Correction")
 subplot(2,1,1)
 hold on;
 plot(real(dataPulseShaped)./max(real(dataPulseShaped)))
@@ -172,6 +207,47 @@ subplot(2,1,2)
 hold on;
 plot(imag(dataPulseShaped)./max(imag(dataPulseShaped)))
 plot(matchedQ(ceil(length(h)/2+1):end)./max(matchedQ))
+
+% sent vs received with correction
+figure(3)
+sgtitle("Tx/Rx pulses With Correction")
+subplot(2,1,1)
+hold on;
+plot(real(dataPulseShaped)./max(real(dataPulseShaped)))
+plot(real(rake_symbols)./max(real(rake_symbols)))
+legend("tx pulse", "corrected rx pulse")
+subplot(2,1,2)
+hold on;
+plot(imag(dataPulseShaped)./max(imag(dataPulseShaped)))
+plot(imag(rake_symbols)./max(imag(rake_symbols)))
+
+% correlation with training sequence
+figure(4)
+plot(correlationAbs)
+grid on
+title("Absolute Value Correlation with Golay Preamble")
+
+% chosen sampling points
+figure(5)
+sgtitle("I and Q optimal sampling points")
+subplot(2,1,1)
+hold on;
+plot(real(rake_symbols))
+plot(real(sense_symbols_plot))
+subplot(2,1,2)
+hold on;
+plot(imag(rake_symbols))
+plot(imag(sense_symbols_plot))
+
+% sampling points vs
+
+% % check that convolution of hhat and ghat is impulse
+% figure(7)
+% stem(abs(conv(hhat, ghat)))
+% title("convolution of h(n) and g(n)")
+
+figure(12)
+plot(dataMod)
 
 
 
