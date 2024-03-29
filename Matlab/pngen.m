@@ -76,7 +76,8 @@ function y = pngen(r,N)
     % to matlab-like indices. f(.) represents the XOR summation.
 
     idx = P(2:end); % first index is not used, so we discard it
-    idx = linspace(r+1,r+1,length(idx))-idx;  
+    idxTemp = linspace(r+1,r+1,length(idx));
+    idx = idxTemp-idx;  
 
     % create output sequence
     for n=1:N

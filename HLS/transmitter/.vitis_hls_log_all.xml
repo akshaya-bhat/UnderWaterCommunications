@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T19:45:48.471-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T19:45:11.112-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T19:31:40.987-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:57:59.436-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:57:24.790-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:56:37.572-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:14:38.490-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:13:29.891-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:11:37.849-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T18:10:49.265-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T22:37:30.869-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T22:03:46.567-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T22:02:23.622-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T22:01:56.397-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T21:58:23.769-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T21:57:52.470-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-27T21:26:56.105-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T20:34:05.525-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T19:56:02.726-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T19:52:41.841-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T19:51:21.936-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T19:50:28.908-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T18:50:24.161-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-03-26T18:48:03.383-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-03-26T18:47:29.391-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-03-26T18:45:10.795-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-03-26T18:44:09.263-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-03-26T18:42:59.265-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T17:40:01.664-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T17:33:05.378-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T17:32:25.891-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-26T17:31:42.517-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-25T22:11:19.484-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-25T22:08:31.013-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-25T22:07:36.467-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-25T22:05:51.090-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-24T15:32:26.536-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-24T15:31:26.698-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-24T15:30:29.440-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-24T15:28:55.823-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-24T15:28:07.608-0700"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
