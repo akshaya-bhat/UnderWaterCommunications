@@ -40,6 +40,7 @@ const int pnGenSequence[50] = {1, 1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1
 //CONVOLUTIONAL ENCODER
 const int G1[K] = {1, 1, 1, 0, 1, 0, 1};  // 171
 const int G2[K] = {1, 0, 1, 1, 0, 0, 1};  // 133
+extern int encoder_state;
 
 //GOLAY PREAMBLE
 const int Ga[GOL_LEN] = {1,1,1,1,-1,1,-1,-1,-1,1,1,1,-1,-1,1,1,1,-1,-1,1,-1,-1,1,-1,-1,-1,-1,1,-1,1,-1};

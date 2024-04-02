@@ -3,6 +3,17 @@
   <errorLogs>
     <logs>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T19:34:47.842-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T19:05:10.383-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T19:04:33.603-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:45:16.148-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:44:25.214-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:40:45.601-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:33:09.772-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:07:59.496-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:07:08.996-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:03:48.315-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-01T18:02:25.546-0700"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T19:45:48.471-0700"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T19:45:11.112-0700"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-03-28T19:31:40.987-0700"/>

@@ -82,8 +82,8 @@ fid = fopen("/home/lilian/school/UnderWaterCommunications/HLS/outPulseShapred.bi
 data_HLS = fread(fid, "double");
 realData = data_HLS(1:2:end);
 imagData = data_HLS(2:2:end);
-figure; plot(realData); hold on; plot(imagData);
-figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped));
+figure; plot(realData); hold on; plot(imagData); title("1");
+figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped)); title("2");
 %%
 
 
@@ -91,15 +91,25 @@ figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped));
 t = (0:1/fs:(length(dataPulseShaped)-1)/fs);
 carrierI = cos(2*pi*fc.*t);
 carrierQ = sin(2*pi*fc.*t);
+realPart = real(dataPulseShaped);
+imagPart = imag(dataPulseShaped);
 dataModI = real(dataPulseShaped).*carrierI;
 dataModQ = imag(dataPulseShaped).*carrierQ;
-dataMod = dataModI + dataModQ;
-figure; plot(real(dataMod)); hold on; plot(imag(dataMod));
+dataMod = dataModI + 1i*dataModQ; %%%%%%%%%%%before it was dataModI + dataModQ
 
-% Create gold data file to compare
-fid1 = fopen("tx_gold.dat","w");
-fwrite(fid1, dataMod,'int16');
-fclose(fid1);
+%%
+fid = fopen("/home/lilian/school/UnderWaterCommunications/HLS/outMod.bin", "r");
+data_HLS1 = fread(fid, "double");
+realData1 = data_HLS1(1:2:end);
+imagData1 = data_HLS1(2:2:end);
+figure; plot(realData1); hold on; plot(imagData1); title("1");
+figure; plot(real(dataMod)); hold on; plot(imag(dataMod)); title("2");
+
+%%
+% % Create gold data file to compare
+% fid1 = fopen("tx_gold.dat","w");
+% fwrite(fid1, dataMod,'int16');
+% fclose(fid1);
 
 % amplifier (will be analog)
 tx_power = sum(abs(dataMod).^2)/length(dataMod);

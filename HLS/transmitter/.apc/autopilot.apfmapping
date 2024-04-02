@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="transmitter.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter.cpp"/>
     <originFiles name="transmitter.h" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter.h"/>
+    <originFiles name="transmitter.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter.cpp"/>
   </source>
   <testbench>
     <originFiles name="transmitter_tb.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter_tb.cpp"/>

@@ -8,8 +8,10 @@
 #include <ap_int.h>
 #include <iostream>
 #include <vector>
+#include <cmath>
 using namespace std;
 
+int encoder_state = 0; //global variable
 
 void transmitter (data_t* input_i, data_t* input_q, data_t* output_i, data_t* output_q)
 {
@@ -36,6 +38,7 @@ void transmitter (data_t* input_i, data_t* input_q, data_t* output_i, data_t* ou
 	//encoder output doesn't match matlab
 	data_t encodedDataI[100];
 	data_t encodedDataQ[100];
+
 	for (int i = 0; i < 50; i++) {
 		encoder(scrambledDataI[i], &encodedDataI[i], &encodedDataI[i*2]);
 		encoder(scrambledDataQ[i], &encodedDataQ[i], &encodedDataQ[i*2]);
@@ -160,6 +163,41 @@ cout << "--------------------------------------------\n";
 	/**
 	 * Modulation
 	 */
+	cout << "--------------------------------------------\n";
+	cout << "MODULATION\n";
+	std::vector<double> time;
+	std::vector<double> dataModI;
+	std::vector<double> dataModQ;
+	std::complex<double> dataMod[5248];
+	double theta;
+	FILE *fp3 = fopen("/home/lilian/school/UnderWaterCommunications/HLS/outMod.bin","wb");
+	for (int i = 0; i < 5248; i++) {
+		double t = i / fs;
+//		cout << "time " << t << endl;
+		theta = fc * t;
+//		cout << "theta " << theta << endl;
+		time.push_back(t);
+		int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
+//		cout << "index " << index << endl;
+		double cos = cos_coefficients_table[index];
+//		cout << "cos " << cos << endl;
+		double sin = -1 * sin_coefficients_table[index];
+//		cout << "sin " << sin << endl;
+		double modI = dataPulseShaped[i].real() * cos;
+		double modQ = dataPulseShaped[i].imag() * sin;
+		cout << "modI " << modI << endl;
+		cout << "modQ " << modQ << endl;
+
+
+//		dataMod[i] = std::complex<double>(modI, modQ);
+		dataMod[i] = modI + modQ;
+		cout << i << " " << dataMod[i].real() << " " << dataMod[i].imag() << endl;
+		double realPart = dataMod[i].real();
+		double imagPart = dataMod[i].imag();
+		fwrite(&(realPart), sizeof(double),1, fp3);
+		fwrite(&(imagPart), sizeof(double),1, fp3);
+	}
+	fclose(fp3);
 
 
 }
@@ -169,19 +207,28 @@ cout << "--------------------------------------------\n";
  * Convolutional Encoder
  */
 void encoder(data_t bit, data_t *bit0, data_t *bit1) {
-	int out0 = 0;
-	int out1 = 0;
+	int feedback1 = 0;
+	int feedback2 = 0;
 
-	for (int i = 0; i < K; i++) {
-		out0 ^= (bit * G1[i]);
-		out1 ^= (bit * G2[i]);
-	}
+	feedback1 = ((encoder_state & G1[0]) >> 0) ^
+				((encoder_state & G1[1]) >> 1) ^
+				((encoder_state & G1[2]) >> 2) ^
+				((encoder_state & G1[3]) >> 3) ^
+				((encoder_state & G1[4]) >> 4) ^
+				((encoder_state & G1[5]) >> 5) ^
+				((encoder_state & G1[6]) >> 6);
 
-	out0 %= 2;
-	out1 %= 2;
+	feedback2 = ((encoder_state & G2[0]) >> 0) ^
+				((encoder_state & G2[1]) >> 1) ^
+				((encoder_state & G2[2]) >> 2) ^
+				((encoder_state & G2[3]) >> 3) ^
+				((encoder_state & G2[4]) >> 4) ^
+				((encoder_state & G2[5]) >> 5) ^
+				((encoder_state & G2[6]) >> 6);
 
-	(*bit0) = out0;
-	(*bit1) = out1;
+	encoder_state = ((encoder_state << 1) | bit) & 0x3F;
+	(*bit0) = feedback1;
+	(*bit1) = feedback2;
 
 }
 
