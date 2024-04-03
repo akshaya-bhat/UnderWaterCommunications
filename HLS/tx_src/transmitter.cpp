@@ -7,197 +7,153 @@
 #include <ap_fixed.h>
 #include <ap_int.h>
 #include <iostream>
-#include <vector>
-#include <cmath>
 using namespace std;
 
 int encoder_state = 0; //global variable
 
-void transmitter (data_t* input_i, data_t* input_q, data_t* output_i, data_t* output_q)
+//make sizes dynamic
+//make the input data 128
+//optimizations, bitstream, and connect to DAC
+//void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i)
+
+void transmitter (data_t* input_i, data_t* input_q, double* output_i)
+
 {
+	#pragma HLS PIPELINE off
+
+
 	/**
 	 * Scrambler
 	 * 	xor with PN gen sequence LUT
 	 */
-	data_t scrambledDataI[50], scrambledDataQ[50];
-	for (int i = 0; i < N/2; i++) {
+	data_t scrambledDataI[NHalf], scrambledDataQ[NHalf];
+	for (int i = 0; i < NHalf; i++) {
+		#pragma HLS UNROLL factor=16
 		scrambledDataI[i] = input_i[i] ^ pnGenSequence[i];
 		scrambledDataQ[i] = input_q[i] ^ pnGenSequence[i];
 	}
 
-	cout << "scrambled " << endl;
-	for (int i = 0; i < 50; ++i) {
-		cout << "I: " << scrambledDataI[i] << " Q: " << scrambledDataQ[i] << endl;
-	}
 
 	/**
 	 * Encoder
 	 * 	apply convolutional encoder (7 [171 133] code)
 	 */
+	data_t encodedDataI[N];
+	data_t encodedDataQ[N];
 
-	//encoder output doesn't match matlab
-	data_t encodedDataI[100];
-	data_t encodedDataQ[100];
-
-	for (int i = 0; i < 50; i++) {
+	for (int i = 0; i < NHalf; i++) {
 		encoder(scrambledDataI[i], &encodedDataI[i], &encodedDataI[i*2]);
 		encoder(scrambledDataQ[i], &encodedDataQ[i], &encodedDataQ[i*2]);
 	}
 
-	cout << "encoded " << endl;
-	for (int i = 0; i < 10; ++i) {
-		cout << "I: " << encodedDataI[i] << " Q: " << encodedDataQ[i] << endl;
-	}
-	cout << "-----------------------------------------------------\n";
 
 	/**
 	 * Symbol Mapping
 	 * 	QPSK
 	 */
-	data_t qpskDataI[100];
-	data_t qpskDataQ[100];
+	double qpskDataI[N];
+	double qpskDataQ[N];
 
-	for (int i = 0; i < 100; i++) {
-
+	for (int i = 0; i < N; i++) {
+		#pragma HLS UNROLL factor=16
 		if (encodedDataI[i] == 0) {
-			qpskDataI[i] = -1;
+			qpskDataI[i] = -1.0;
 		}
 		else {
-			qpskDataI[i] = 1;
+			qpskDataI[i] = 1.0;
 		}
 		if (encodedDataQ[i] == 0) {
-			qpskDataQ[i] = -1;
+			qpskDataQ[i] = -1.0;
 		}
 		else {
-			qpskDataQ[i] = 1;
+			qpskDataQ[i] = 1.0;
 		}
 	}
-	cout << "mapping " << endl;
-		for (int i = 0; i < 10; ++i) {
-			cout << "I: " << qpskDataI[i] << " Q: " << qpskDataQ[i] << endl;
-		}
 
-	cout << "------------------------------------------------\n";
 
-	std::complex<double> raw_symbols[100];
-
-	for (int i = 0; i < 100; i++) {
-		raw_symbols[i] = std::complex<double>(qpskDataI[i], qpskDataQ[i]);
-	}
-	cout << "symbols " << endl;
-			for (int i = 0; i < 100; ++i) {
-				cout << "I: " << raw_symbols[i] << endl;
-			}
-	cout << "-----------------------------------------------\n";
 	/**
 	 * Golay Preamble
 	 */
+	double preamble_bpskI[preambleLen];
+	double preamble_bpskQ[preambleLen];
+	for (int i = 0; i < preambleLenHalf; ++i) {
+		#pragma HLS UNROLL factor=16
+		preamble_bpskI[i] = Ga[i];//*1.414;
+		preamble_bpskQ[i] = Ga[i];//*1.414;
 
-	//Theres a weird zero somewhere
-	std::complex<double> preamble_bpsk[64];
-	for (int i = 0; i < 32; ++i) {
-		preamble_bpsk[i] = Ga[i]*1.414;
+		preamble_bpskI[(preambleLenHalf-1) + i] = Gb[i];//*1.414;
+		preamble_bpskQ[(preambleLenHalf-1) + i] = Gb[i];//*1.414;
 
 	}
-	for (int i = 0; i < 32; ++i) {
-		preamble_bpsk[32-1 + i] = Gb[i]*1.414;
-	}
-	cout << "golay " << endl;
-		for (int i = 0; i < 64; ++i) {
-			cout << "I: " << preamble_bpsk[i] << endl;
-		}
 
-	std::complex<double> symbols[164];
-	for (int i = 0; i < 64; ++i) {
-		symbols[i] = preamble_bpsk[i];
+	double symbolsI[preambleLen+N];
+	double symbolsQ[preambleLen+N];
+
+	for (int i = 0; i < preambleLen; ++i) {
+		#pragma HLS UNROLL factor=16
+		symbolsI[i] = preamble_bpskI[i];
+		symbolsQ[i] = preamble_bpskQ[i];
 	}
-	for (int i = 0; i < 100; i++) {
-		symbols[64+i] = raw_symbols[i];
+	for (int i = 0; i < N; i++) {
+		#pragma HLS UNROLL factor=16
+		symbolsI[preambleLen+i] = qpskDataI[i];
+		symbolsQ[preambleLen+i] = qpskDataQ[i];
 	}
-	cout << "symbols with golay " << endl;
-			for (int i = 0; i < 164; ++i) {
-				cout << symbols[i] << endl;
-			}
+
+
 	/**
 	 * Pulse Shaping
 	 * 	SRRC Filter
 	 */
-cout << "--------------------------------------------\n";
 	//Upsample
-	int upsampleSize = oversample*164;
-	cout << "upsample Size " << upsampleSize << endl;
-	std::complex<double> dataUpsampled[upsampleSize];
-	std::fill(dataUpsampled,dataUpsampled + upsampleSize,std::complex<double>(0.0, 0.0));
+	int upsampleSize = oversample*(preambleLen+N);
+
+	double dataUpsampledI[upsampleSize];
+	double dataUpsampledQ[upsampleSize];
 
 	int j = 0;
 	for (int i = 0; i < upsampleSize; i+=oversample) {
-		dataUpsampled[i] = symbols[j];
+		#pragma HLS UNROLL factor=64
+		dataUpsampledI[i] = symbolsI[j];
+		dataUpsampledQ[i] = symbolsQ[j];
 		j++;
 	}
 
-	cout << "upsampled " << endl;
-	for (int i = 0; i < upsampleSize; ++i) {
-		cout << i << " " << dataUpsampled[i] << endl;
-	}
+	double dataPulseShapedI[upsampleSize];
+	double dataPulseShapedQ[upsampleSize];
 
-	std::complex<double> dataPulseShaped[upsampleSize];
 	//Convolution
 	for (int i = 0; i < upsampleSize; i++) {
-		dataPulseShaped[i] = 0;
+		#pragma HLS UNROLL factor=256
+		dataPulseShapedI[i] = 0;
+		dataPulseShapedQ[i] = 0;
 		for (int j = 0; j < 193; j++) {
-			dataPulseShaped[i] += dataUpsampled[i-j] * h[j];
+			dataPulseShapedI[i] += dataUpsampledI[i-j] * h[j];
+			dataPulseShapedQ[i] += dataUpsampledQ[i-j] * h[j];
 		}
 	}
-	cout << "pulse shapred " << endl;
-	FILE *fp2 = fopen("/home/lilian/school/UnderWaterCommunications/HLS/outPulseShapred.bin","wb");
-		for (int i = 0; i < (upsampleSize); ++i) {
-			cout << i << " " << dataPulseShaped[i].real() << " " << dataPulseShaped[i].imag() << endl;
-			double realPart = dataPulseShaped[i].real();
-			double imagPart = dataPulseShaped[i].imag();
-			fwrite(&(realPart), sizeof(double),1, fp2);
-			fwrite(&(imagPart), sizeof(double),1, fp2);
-		}
 
-	fclose(fp2);
 
 	/**
 	 * Modulation
 	 */
-	cout << "--------------------------------------------\n";
-	cout << "MODULATION\n";
-	std::vector<double> time;
-	std::vector<double> dataModI;
-	std::vector<double> dataModQ;
-	std::complex<double> dataMod[5248];
 	double theta;
-	FILE *fp3 = fopen("/home/lilian/school/UnderWaterCommunications/HLS/outMod.bin","wb");
-	for (int i = 0; i < 5248; i++) {
+
+	for (int i = 0; i < upsampleSize; i++) {
+		#pragma HLS UNROLL factor=256
 		double t = i / fs;
-//		cout << "time " << t << endl;
 		theta = fc * t;
-//		cout << "theta " << theta << endl;
-		time.push_back(t);
+
 		int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
-//		cout << "index " << index << endl;
+
 		double cos = cos_coefficients_table[index];
-//		cout << "cos " << cos << endl;
 		double sin = -1 * sin_coefficients_table[index];
-//		cout << "sin " << sin << endl;
-		double modI = dataPulseShaped[i].real() * cos;
-		double modQ = dataPulseShaped[i].imag() * sin;
-		cout << "modI " << modI << endl;
-		cout << "modQ " << modQ << endl;
+		double modI = dataPulseShapedI[i] * cos;
+		double modQ = dataPulseShapedQ[i] * sin;
 
-
-//		dataMod[i] = std::complex<double>(modI, modQ);
-		dataMod[i] = modI + modQ;
-		cout << i << " " << dataMod[i].real() << " " << dataMod[i].imag() << endl;
-		double realPart = dataMod[i].real();
-		double imagPart = dataMod[i].imag();
-		fwrite(&(realPart), sizeof(double),1, fp3);
-		fwrite(&(imagPart), sizeof(double),1, fp3);
+		(output_i)[i] = modI + modQ;
 	}
-	fclose(fp3);
+
 
 
 }

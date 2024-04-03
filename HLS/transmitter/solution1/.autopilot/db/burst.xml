@@ -1,0 +1,5 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="tx_src/transmitter.cpp:55:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="tx_src/transmitter.cpp:55:19" LoopName="VITIS_LOOP_55_3" ParentFunc="transmitter(short*, short*, double*)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="tx_src/transmitter.cpp:138:20" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="tx_src/transmitter.cpp:138:20" LoopName="VITIS_LOOP_138_8" ParentFunc="transmitter(short*, short*, double*)"/>
+</VitisHLS:BurstInfo>
+

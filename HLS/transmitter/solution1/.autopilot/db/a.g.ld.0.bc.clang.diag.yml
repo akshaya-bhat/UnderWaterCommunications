@@ -1,0 +1,274 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_167_10
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:167:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '512'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_138_8
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:138:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '512'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_7
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:127:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_108_6
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:108:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_103_5
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:103:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_55_3
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:55:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_29_1
+  - String:          ''' ('
+  - LoopLoc:         'tx_src/transmitter.cpp:29:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          transmitter
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EdET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EdET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::mantissa() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 532, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EdET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 514, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 12, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IiL9ap_q_mode6EdET_T1_bN3hls9enable_ifIXsr3std14numeric_limitsIS1_EE9is_signedEbE4typeE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::__signbit() const'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 541, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                   Line: 116, Column: 0 }
+Function:        _Z20generic_cast_IEEE754IidET_T0_b
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 12, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_cast_IEEE754<int, double>(double, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                   Line: 55, Column: 0 }
+Function:        __hls_fptosi_double_i32
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_cast_IEEE754<int, double>(double, bool)'
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h, 
+                       Line: 116, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          __hls_fptosi_double_i32
+    DebugLoc:        { File: /wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp, 
+                       Line: 55, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'encoder(short, short*, short*)'
+    DebugLoc:        { File: tx_src/transmitter.cpp, Line: 200, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'transmitter(short*, short*, double*)'
+    DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 55, Column: 19 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_55_3
+  - String:          ' '
+  - LoopLoc:         'tx_src/transmitter.cpp:55:19'
+  - String:          ' '
+  - Function:        'transmitter(short*, short*, double*)'
+    DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: tx_src/transmitter.cpp, Line: 138, Column: 20 }
+Function:        _Z11transmitterPsS_Pd
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_138_8
+  - String:          ' '
+  - LoopLoc:         'tx_src/transmitter.cpp:138:20'
+  - String:          ' '
+  - Function:        'transmitter(short*, short*, double*)'
+    DebugLoc:        { File: tx_src/transmitter.cpp, Line: 21, Column: 0 }
+  - String:          ' '
+...

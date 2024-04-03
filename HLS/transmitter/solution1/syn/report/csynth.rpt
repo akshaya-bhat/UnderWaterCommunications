@@ -1,0 +1,123 @@
+
+
+================================================================
+== Synthesis Summary Report of 'transmitter'
+================================================================
++ General Information: 
+    * Date:           Tue Apr  2 19:49:47 2024
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        transmitter
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |       Modules      | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |          |     |
+    |       & Loops      | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
+    +--------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |+ transmitter       |     -|  1.68|      130|  1.300e+03|         -|      131|     -|        no|     -|   -|  193 (~0%)|  752 (1%)|    -|
+    | o VITIS_LOOP_29_1  |     -|  7.30|       28|    280.000|         9|        -|     3|        no|     -|   -|          -|         -|    -|
+    | o VITIS_LOOP_43_2  |     -|  7.30|      100|  1.000e+03|         2|        -|    50|        no|     -|   -|          -|         -|    -|
+    +--------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| input_i   | ap_none | 16       |
+| input_q   | ap_none | 16       |
+| output_i  | ap_vld  | 64       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| input_i  | in        | short*   |
+| input_q  | in        | short*   |
+| output_i | out       | double*  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+-----------------+---------+
+| Argument | HW Interface    | HW Type |
++----------+-----------------+---------+
+| input_i  | input_i         | port    |
+| input_q  | input_q         | port    |
+| output_i | output_i        | port    |
+| output_i | output_i_ap_vld | port    |
++----------+-----------------+---------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------+-----+--------+----------+-----+--------+---------+
+| Name                 | DSP | Pragma | Variable | Op  | Impl   | Latency |
++----------------------+-----+--------+----------+-----+--------+---------+
+| + transmitter        | 0   |        |          |     |        |         |
+|   add_ln29_fu_614_p2 | -   |        | add_ln29 | add | fabric | 0       |
+|   add_ln43_fu_913_p2 | -   |        | add_ln43 | add | fabric | 0       |
++----------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------+------+------+--------+----------------+---------+------+---------+
+| Name               | BRAM | URAM | Pragma | Variable       | Storage | Impl | Latency |
++--------------------+------+------+--------+----------------+---------+------+---------+
+| + transmitter      | 0    | 0    |        |                |         |      |         |
+|   scrambledDataI_U | -    | -    |        | scrambledDataI | ram_t2p | auto | 1       |
+|   scrambledDataQ_U | -    | -    |        | scrambledDataQ | ram_t2p | auto | 1       |
+|   pnGenSequence_U  | -    | -    |        | pnGenSequence  | rom_2p  | auto | 1       |
++--------------------+------+------+--------+----------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+------------+-------------------------------------------+
+| Type     | Options    | Location                                  |
++----------+------------+-------------------------------------------+
+| pipeline | off        | tx_src/transmitter.cpp:27 in transmitter  |
+| unroll   | factor=16  | tx_src/transmitter.cpp:30 in transmitter  |
+| unroll   | factor=16  | tx_src/transmitter.cpp:56 in transmitter  |
+| unroll   | factor=16  | tx_src/transmitter.cpp:87 in transmitter  |
+| unroll   | factor=16  | tx_src/transmitter.cpp:104 in transmitter |
+| unroll   | factor=16  | tx_src/transmitter.cpp:109 in transmitter |
+| unroll   | factor=64  | tx_src/transmitter.cpp:128 in transmitter |
+| unroll   | factor=512 | tx_src/transmitter.cpp:139 in transmitter |
+| unroll   | factor=512 | tx_src/transmitter.cpp:168 in transmitter |
++----------+------------+-------------------------------------------+
+
+

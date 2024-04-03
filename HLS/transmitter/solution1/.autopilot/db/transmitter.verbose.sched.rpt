@@ -1,0 +1,449 @@
+
+
+================================================================
+== Vitis HLS Report for 'transmitter'
+================================================================
+* Date:           Tue Apr  2 19:49:47 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        transmitter
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.622 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      130|      130|  1.300 us|  1.300 us|  131|  131|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_29_1  |       28|       28|         9|          -|          -|     3|        no|
+        |- VITIS_LOOP_43_2  |      100|      100|         2|          -|          -|    50|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 11 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 2 
+11 --> 12 
+12 --> 11 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 13 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%spectopmodule_ln20 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [tx_src/transmitter.cpp:20]   --->   Operation 14 'spectopmodule' 'spectopmodule_ln20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_i"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_i, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_q"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_q, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %output_i"   --->   Operation 19 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_i, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%scrambledDataI = alloca i64 1" [tx_src/transmitter.cpp:28]   --->   Operation 21 'alloca' 'scrambledDataI' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%scrambledDataQ = alloca i64 1" [tx_src/transmitter.cpp:28]   --->   Operation 22 'alloca' 'scrambledDataQ' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%input_i_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %input_i" [tx_src/transmitter.cpp:31]   --->   Operation 23 'read' 'input_i_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln32 = trunc i16 %input_i_read" [tx_src/transmitter.cpp:32]   --->   Operation 24 'trunc' 'trunc_ln32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%input_q_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %input_q" [tx_src/transmitter.cpp:32]   --->   Operation 25 'read' 'input_q_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln29 = trunc i16 %input_q_read" [tx_src/transmitter.cpp:29]   --->   Operation 26 'trunc' 'trunc_ln29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.58ns)   --->   "%store_ln29 = store i6 0, i6 %i" [tx_src/transmitter.cpp:29]   --->   Operation 27 'store' 'store_ln29' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln29 = br void %for.inc.0.split" [tx_src/transmitter.cpp:29]   --->   Operation 28 'br' 'br_ln29' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%i_2 = load i6 %i" [tx_src/transmitter.cpp:29]   --->   Operation 29 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln29 = zext i6 %i_2" [tx_src/transmitter.cpp:29]   --->   Operation 30 'zext' 'zext_ln29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%pnGenSequence_addr = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln29" [tx_src/transmitter.cpp:31]   --->   Operation 31 'getelementptr' 'pnGenSequence_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (2.32ns)   --->   "%pnGenSequence_load = load i6 %pnGenSequence_addr" [tx_src/transmitter.cpp:31]   --->   Operation 32 'load' 'pnGenSequence_load' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%or_ln29 = or i6 %i_2, i6 1" [tx_src/transmitter.cpp:29]   --->   Operation 33 'or' 'or_ln29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln31_2 = zext i6 %or_ln29" [tx_src/transmitter.cpp:31]   --->   Operation 34 'zext' 'zext_ln31_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_1 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_2" [tx_src/transmitter.cpp:31]   --->   Operation 35 'getelementptr' 'pnGenSequence_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (2.32ns)   --->   "%pnGenSequence_load_1 = load i6 %pnGenSequence_addr_1" [tx_src/transmitter.cpp:31]   --->   Operation 36 'load' 'pnGenSequence_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 3 <SV = 2> <Delay = 5.62>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln29 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [tx_src/transmitter.cpp:29]   --->   Operation 37 'specloopname' 'specloopname_ln29' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/2] (2.32ns)   --->   "%pnGenSequence_load = load i6 %pnGenSequence_addr" [tx_src/transmitter.cpp:31]   --->   Operation 38 'load' 'pnGenSequence_load' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln31 = zext i1 %pnGenSequence_load" [tx_src/transmitter.cpp:31]   --->   Operation 39 'zext' 'zext_ln31' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln31_1 = zext i1 %pnGenSequence_load" [tx_src/transmitter.cpp:31]   --->   Operation 40 'zext' 'zext_ln31_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.78ns)   --->   "%xor_ln31 = xor i5 %trunc_ln32, i5 %zext_ln31" [tx_src/transmitter.cpp:31]   --->   Operation 41 'xor' 'xor_ln31' <Predicate = true> <Delay = 0.78> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%scrambledDataI_addr = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln29" [tx_src/transmitter.cpp:31]   --->   Operation 42 'getelementptr' 'scrambledDataI_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %xor_ln31, i6 %scrambledDataI_addr" [tx_src/transmitter.cpp:31]   --->   Operation 43 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_3 : Operation 44 [1/1] (0.97ns)   --->   "%xor_ln32 = xor i6 %trunc_ln29, i6 %zext_ln31_1" [tx_src/transmitter.cpp:32]   --->   Operation 44 'xor' 'xor_ln32' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln29" [tx_src/transmitter.cpp:32]   --->   Operation 45 'getelementptr' 'scrambledDataQ_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %xor_ln32, i6 %scrambledDataQ_addr" [tx_src/transmitter.cpp:32]   --->   Operation 46 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_3 : Operation 47 [1/2] (2.32ns)   --->   "%pnGenSequence_load_1 = load i6 %pnGenSequence_addr_1" [tx_src/transmitter.cpp:31]   --->   Operation 47 'load' 'pnGenSequence_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln31_3 = zext i1 %pnGenSequence_load_1" [tx_src/transmitter.cpp:31]   --->   Operation 48 'zext' 'zext_ln31_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln31_4 = zext i1 %pnGenSequence_load_1" [tx_src/transmitter.cpp:31]   --->   Operation 49 'zext' 'zext_ln31_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_1 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_2" [tx_src/transmitter.cpp:31]   --->   Operation 50 'getelementptr' 'scrambledDataI_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_3, i6 %scrambledDataI_addr_1" [tx_src/transmitter.cpp:31]   --->   Operation 51 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_1 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_2" [tx_src/transmitter.cpp:32]   --->   Operation 52 'getelementptr' 'scrambledDataQ_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_4, i6 %scrambledDataQ_addr_1" [tx_src/transmitter.cpp:32]   --->   Operation 53 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%or_ln29_1 = or i6 %i_2, i6 2" [tx_src/transmitter.cpp:29]   --->   Operation 54 'or' 'or_ln29_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln29_1 = zext i6 %or_ln29_1" [tx_src/transmitter.cpp:29]   --->   Operation 55 'zext' 'zext_ln29_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (1.42ns)   --->   "%icmp_ln29 = icmp_eq  i6 %or_ln29_1, i6 50" [tx_src/transmitter.cpp:29]   --->   Operation 56 'icmp' 'icmp_ln29' <Predicate = true> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3"   --->   Operation 57 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln29 = br i1 %icmp_ln29, void %for.inc.2, void %for.end" [tx_src/transmitter.cpp:29]   --->   Operation 58 'br' 'br_ln29' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_2 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln29_1" [tx_src/transmitter.cpp:31]   --->   Operation 59 'getelementptr' 'pnGenSequence_addr_2' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 60 [2/2] (2.32ns)   --->   "%pnGenSequence_load_2 = load i6 %pnGenSequence_addr_2" [tx_src/transmitter.cpp:31]   --->   Operation 60 'load' 'pnGenSequence_load_2' <Predicate = (!icmp_ln29)> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%or_ln29_2 = or i6 %i_2, i6 3" [tx_src/transmitter.cpp:29]   --->   Operation 61 'or' 'or_ln29_2' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%zext_ln31_7 = zext i6 %or_ln29_2" [tx_src/transmitter.cpp:31]   --->   Operation 62 'zext' 'zext_ln31_7' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_3 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_7" [tx_src/transmitter.cpp:31]   --->   Operation 63 'getelementptr' 'pnGenSequence_addr_3' <Predicate = (!icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 64 [2/2] (2.32ns)   --->   "%pnGenSequence_load_3 = load i6 %pnGenSequence_addr_3" [tx_src/transmitter.cpp:31]   --->   Operation 64 'load' 'pnGenSequence_load_3' <Predicate = (!icmp_ln29)> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_3 : Operation 65 [1/1] (1.82ns)   --->   "%add_ln29 = add i6 %i_2, i6 16" [tx_src/transmitter.cpp:29]   --->   Operation 65 'add' 'add_ln29' <Predicate = (!icmp_ln29)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (1.58ns)   --->   "%store_ln29 = store i6 %add_ln29, i6 %i" [tx_src/transmitter.cpp:29]   --->   Operation 66 'store' 'store_ln29' <Predicate = (!icmp_ln29)> <Delay = 1.58>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%and38_i3032 = alloca i32 1"   --->   Operation 67 'alloca' 'and38_i3032' <Predicate = (icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%i_1 = alloca i32 1"   --->   Operation 68 'alloca' 'i_1' <Predicate = (icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%encoder_state_1_load = load i32 %encoder_state_1" [tx_src/transmitter.cpp:220]   --->   Operation 69 'load' 'encoder_state_1_load' <Predicate = (icmp_ln29)> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (1.58ns)   --->   "%store_ln43 = store i6 0, i6 %i_1" [tx_src/transmitter.cpp:43]   --->   Operation 70 'store' 'store_ln43' <Predicate = (icmp_ln29)> <Delay = 1.58>
+ST_3 : Operation 71 [1/1] (1.58ns)   --->   "%store_ln43 = store i32 %encoder_state_1_load, i32 %and38_i3032" [tx_src/transmitter.cpp:43]   --->   Operation 71 'store' 'store_ln43' <Predicate = (icmp_ln29)> <Delay = 1.58>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc33" [tx_src/transmitter.cpp:43]   --->   Operation 72 'br' 'br_ln43' <Predicate = (icmp_ln29)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.64>
+ST_4 : Operation 73 [1/2] (2.32ns)   --->   "%pnGenSequence_load_2 = load i6 %pnGenSequence_addr_2" [tx_src/transmitter.cpp:31]   --->   Operation 73 'load' 'pnGenSequence_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln31_5 = zext i1 %pnGenSequence_load_2" [tx_src/transmitter.cpp:31]   --->   Operation 74 'zext' 'zext_ln31_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln31_6 = zext i1 %pnGenSequence_load_2" [tx_src/transmitter.cpp:31]   --->   Operation 75 'zext' 'zext_ln31_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_2 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln29_1" [tx_src/transmitter.cpp:31]   --->   Operation 76 'getelementptr' 'scrambledDataI_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_5, i6 %scrambledDataI_addr_2" [tx_src/transmitter.cpp:31]   --->   Operation 77 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_2 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln29_1" [tx_src/transmitter.cpp:32]   --->   Operation 78 'getelementptr' 'scrambledDataQ_addr_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_6, i6 %scrambledDataQ_addr_2" [tx_src/transmitter.cpp:32]   --->   Operation 79 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_4 : Operation 80 [1/2] (2.32ns)   --->   "%pnGenSequence_load_3 = load i6 %pnGenSequence_addr_3" [tx_src/transmitter.cpp:31]   --->   Operation 80 'load' 'pnGenSequence_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln31_8 = zext i1 %pnGenSequence_load_3" [tx_src/transmitter.cpp:31]   --->   Operation 81 'zext' 'zext_ln31_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln31_9 = zext i1 %pnGenSequence_load_3" [tx_src/transmitter.cpp:31]   --->   Operation 82 'zext' 'zext_ln31_9' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_3 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_7" [tx_src/transmitter.cpp:31]   --->   Operation 83 'getelementptr' 'scrambledDataI_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_8, i6 %scrambledDataI_addr_3" [tx_src/transmitter.cpp:31]   --->   Operation 84 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_3 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_7" [tx_src/transmitter.cpp:32]   --->   Operation 85 'getelementptr' 'scrambledDataQ_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_9, i6 %scrambledDataQ_addr_3" [tx_src/transmitter.cpp:32]   --->   Operation 86 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%or_ln29_3 = or i6 %i_2, i6 4" [tx_src/transmitter.cpp:29]   --->   Operation 87 'or' 'or_ln29_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln31_10 = zext i6 %or_ln29_3" [tx_src/transmitter.cpp:31]   --->   Operation 88 'zext' 'zext_ln31_10' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_4 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_10" [tx_src/transmitter.cpp:31]   --->   Operation 89 'getelementptr' 'pnGenSequence_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [2/2] (2.32ns)   --->   "%pnGenSequence_load_4 = load i6 %pnGenSequence_addr_4" [tx_src/transmitter.cpp:31]   --->   Operation 90 'load' 'pnGenSequence_load_4' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%or_ln29_4 = or i6 %i_2, i6 5" [tx_src/transmitter.cpp:29]   --->   Operation 91 'or' 'or_ln29_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln31_13 = zext i6 %or_ln29_4" [tx_src/transmitter.cpp:31]   --->   Operation 92 'zext' 'zext_ln31_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_5 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_13" [tx_src/transmitter.cpp:31]   --->   Operation 93 'getelementptr' 'pnGenSequence_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [2/2] (2.32ns)   --->   "%pnGenSequence_load_5 = load i6 %pnGenSequence_addr_5" [tx_src/transmitter.cpp:31]   --->   Operation 94 'load' 'pnGenSequence_load_5' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 5 <SV = 4> <Delay = 4.64>
+ST_5 : Operation 95 [1/2] (2.32ns)   --->   "%pnGenSequence_load_4 = load i6 %pnGenSequence_addr_4" [tx_src/transmitter.cpp:31]   --->   Operation 95 'load' 'pnGenSequence_load_4' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln31_11 = zext i1 %pnGenSequence_load_4" [tx_src/transmitter.cpp:31]   --->   Operation 96 'zext' 'zext_ln31_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%zext_ln31_12 = zext i1 %pnGenSequence_load_4" [tx_src/transmitter.cpp:31]   --->   Operation 97 'zext' 'zext_ln31_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_4 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_10" [tx_src/transmitter.cpp:31]   --->   Operation 98 'getelementptr' 'scrambledDataI_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 99 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_11, i6 %scrambledDataI_addr_4" [tx_src/transmitter.cpp:31]   --->   Operation 99 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_4 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_10" [tx_src/transmitter.cpp:32]   --->   Operation 100 'getelementptr' 'scrambledDataQ_addr_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_12, i6 %scrambledDataQ_addr_4" [tx_src/transmitter.cpp:32]   --->   Operation 101 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_5 : Operation 102 [1/2] (2.32ns)   --->   "%pnGenSequence_load_5 = load i6 %pnGenSequence_addr_5" [tx_src/transmitter.cpp:31]   --->   Operation 102 'load' 'pnGenSequence_load_5' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_5 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln31_14 = zext i1 %pnGenSequence_load_5" [tx_src/transmitter.cpp:31]   --->   Operation 103 'zext' 'zext_ln31_14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%zext_ln31_15 = zext i1 %pnGenSequence_load_5" [tx_src/transmitter.cpp:31]   --->   Operation 104 'zext' 'zext_ln31_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_5 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_13" [tx_src/transmitter.cpp:31]   --->   Operation 105 'getelementptr' 'scrambledDataI_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 106 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_14, i6 %scrambledDataI_addr_5" [tx_src/transmitter.cpp:31]   --->   Operation 106 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_5 : Operation 107 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_5 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_13" [tx_src/transmitter.cpp:32]   --->   Operation 107 'getelementptr' 'scrambledDataQ_addr_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 108 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_15, i6 %scrambledDataQ_addr_5" [tx_src/transmitter.cpp:32]   --->   Operation 108 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_5 : Operation 109 [1/1] (0.00ns)   --->   "%or_ln29_5 = or i6 %i_2, i6 6" [tx_src/transmitter.cpp:29]   --->   Operation 109 'or' 'or_ln29_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 110 [1/1] (0.00ns)   --->   "%zext_ln31_16 = zext i6 %or_ln29_5" [tx_src/transmitter.cpp:31]   --->   Operation 110 'zext' 'zext_ln31_16' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 111 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_6 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_16" [tx_src/transmitter.cpp:31]   --->   Operation 111 'getelementptr' 'pnGenSequence_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 112 [2/2] (2.32ns)   --->   "%pnGenSequence_load_6 = load i6 %pnGenSequence_addr_6" [tx_src/transmitter.cpp:31]   --->   Operation 112 'load' 'pnGenSequence_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_5 : Operation 113 [1/1] (0.00ns)   --->   "%or_ln29_6 = or i6 %i_2, i6 7" [tx_src/transmitter.cpp:29]   --->   Operation 113 'or' 'or_ln29_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 114 [1/1] (0.00ns)   --->   "%zext_ln31_19 = zext i6 %or_ln29_6" [tx_src/transmitter.cpp:31]   --->   Operation 114 'zext' 'zext_ln31_19' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 115 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_7 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_19" [tx_src/transmitter.cpp:31]   --->   Operation 115 'getelementptr' 'pnGenSequence_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 116 [2/2] (2.32ns)   --->   "%pnGenSequence_load_7 = load i6 %pnGenSequence_addr_7" [tx_src/transmitter.cpp:31]   --->   Operation 116 'load' 'pnGenSequence_load_7' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 6 <SV = 5> <Delay = 4.64>
+ST_6 : Operation 117 [1/2] (2.32ns)   --->   "%pnGenSequence_load_6 = load i6 %pnGenSequence_addr_6" [tx_src/transmitter.cpp:31]   --->   Operation 117 'load' 'pnGenSequence_load_6' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_6 : Operation 118 [1/1] (0.00ns)   --->   "%zext_ln31_17 = zext i1 %pnGenSequence_load_6" [tx_src/transmitter.cpp:31]   --->   Operation 118 'zext' 'zext_ln31_17' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 119 [1/1] (0.00ns)   --->   "%zext_ln31_18 = zext i1 %pnGenSequence_load_6" [tx_src/transmitter.cpp:31]   --->   Operation 119 'zext' 'zext_ln31_18' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 120 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_6 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_16" [tx_src/transmitter.cpp:31]   --->   Operation 120 'getelementptr' 'scrambledDataI_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 121 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_17, i6 %scrambledDataI_addr_6" [tx_src/transmitter.cpp:31]   --->   Operation 121 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_6 : Operation 122 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_6 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_16" [tx_src/transmitter.cpp:32]   --->   Operation 122 'getelementptr' 'scrambledDataQ_addr_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 123 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_18, i6 %scrambledDataQ_addr_6" [tx_src/transmitter.cpp:32]   --->   Operation 123 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_6 : Operation 124 [1/2] (2.32ns)   --->   "%pnGenSequence_load_7 = load i6 %pnGenSequence_addr_7" [tx_src/transmitter.cpp:31]   --->   Operation 124 'load' 'pnGenSequence_load_7' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_6 : Operation 125 [1/1] (0.00ns)   --->   "%zext_ln31_20 = zext i1 %pnGenSequence_load_7" [tx_src/transmitter.cpp:31]   --->   Operation 125 'zext' 'zext_ln31_20' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 126 [1/1] (0.00ns)   --->   "%zext_ln31_21 = zext i1 %pnGenSequence_load_7" [tx_src/transmitter.cpp:31]   --->   Operation 126 'zext' 'zext_ln31_21' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 127 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_7 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_19" [tx_src/transmitter.cpp:31]   --->   Operation 127 'getelementptr' 'scrambledDataI_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_20, i6 %scrambledDataI_addr_7" [tx_src/transmitter.cpp:31]   --->   Operation 128 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_7 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_19" [tx_src/transmitter.cpp:32]   --->   Operation 129 'getelementptr' 'scrambledDataQ_addr_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 130 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_21, i6 %scrambledDataQ_addr_7" [tx_src/transmitter.cpp:32]   --->   Operation 130 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_6 : Operation 131 [1/1] (0.00ns)   --->   "%or_ln29_7 = or i6 %i_2, i6 8" [tx_src/transmitter.cpp:29]   --->   Operation 131 'or' 'or_ln29_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 132 [1/1] (0.00ns)   --->   "%zext_ln31_22 = zext i6 %or_ln29_7" [tx_src/transmitter.cpp:31]   --->   Operation 132 'zext' 'zext_ln31_22' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 133 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_8 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_22" [tx_src/transmitter.cpp:31]   --->   Operation 133 'getelementptr' 'pnGenSequence_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 134 [2/2] (2.32ns)   --->   "%pnGenSequence_load_8 = load i6 %pnGenSequence_addr_8" [tx_src/transmitter.cpp:31]   --->   Operation 134 'load' 'pnGenSequence_load_8' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_6 : Operation 135 [1/1] (0.00ns)   --->   "%or_ln29_8 = or i6 %i_2, i6 9" [tx_src/transmitter.cpp:29]   --->   Operation 135 'or' 'or_ln29_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln31_25 = zext i6 %or_ln29_8" [tx_src/transmitter.cpp:31]   --->   Operation 136 'zext' 'zext_ln31_25' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 137 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_9 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_25" [tx_src/transmitter.cpp:31]   --->   Operation 137 'getelementptr' 'pnGenSequence_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 138 [2/2] (2.32ns)   --->   "%pnGenSequence_load_9 = load i6 %pnGenSequence_addr_9" [tx_src/transmitter.cpp:31]   --->   Operation 138 'load' 'pnGenSequence_load_9' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 7 <SV = 6> <Delay = 4.64>
+ST_7 : Operation 139 [1/2] (2.32ns)   --->   "%pnGenSequence_load_8 = load i6 %pnGenSequence_addr_8" [tx_src/transmitter.cpp:31]   --->   Operation 139 'load' 'pnGenSequence_load_8' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_7 : Operation 140 [1/1] (0.00ns)   --->   "%zext_ln31_23 = zext i1 %pnGenSequence_load_8" [tx_src/transmitter.cpp:31]   --->   Operation 140 'zext' 'zext_ln31_23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 141 [1/1] (0.00ns)   --->   "%zext_ln31_24 = zext i1 %pnGenSequence_load_8" [tx_src/transmitter.cpp:31]   --->   Operation 141 'zext' 'zext_ln31_24' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 142 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_8 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_22" [tx_src/transmitter.cpp:31]   --->   Operation 142 'getelementptr' 'scrambledDataI_addr_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 143 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_23, i6 %scrambledDataI_addr_8" [tx_src/transmitter.cpp:31]   --->   Operation 143 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_7 : Operation 144 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_8 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_22" [tx_src/transmitter.cpp:32]   --->   Operation 144 'getelementptr' 'scrambledDataQ_addr_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 145 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_24, i6 %scrambledDataQ_addr_8" [tx_src/transmitter.cpp:32]   --->   Operation 145 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_7 : Operation 146 [1/2] (2.32ns)   --->   "%pnGenSequence_load_9 = load i6 %pnGenSequence_addr_9" [tx_src/transmitter.cpp:31]   --->   Operation 146 'load' 'pnGenSequence_load_9' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_7 : Operation 147 [1/1] (0.00ns)   --->   "%zext_ln31_26 = zext i1 %pnGenSequence_load_9" [tx_src/transmitter.cpp:31]   --->   Operation 147 'zext' 'zext_ln31_26' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln31_27 = zext i1 %pnGenSequence_load_9" [tx_src/transmitter.cpp:31]   --->   Operation 148 'zext' 'zext_ln31_27' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 149 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_9 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_25" [tx_src/transmitter.cpp:31]   --->   Operation 149 'getelementptr' 'scrambledDataI_addr_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 150 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_26, i6 %scrambledDataI_addr_9" [tx_src/transmitter.cpp:31]   --->   Operation 150 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_7 : Operation 151 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_9 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_25" [tx_src/transmitter.cpp:32]   --->   Operation 151 'getelementptr' 'scrambledDataQ_addr_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 152 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_27, i6 %scrambledDataQ_addr_9" [tx_src/transmitter.cpp:32]   --->   Operation 152 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_7 : Operation 153 [1/1] (0.00ns)   --->   "%or_ln29_9 = or i6 %i_2, i6 10" [tx_src/transmitter.cpp:29]   --->   Operation 153 'or' 'or_ln29_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%zext_ln31_28 = zext i6 %or_ln29_9" [tx_src/transmitter.cpp:31]   --->   Operation 154 'zext' 'zext_ln31_28' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 155 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_10 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_28" [tx_src/transmitter.cpp:31]   --->   Operation 155 'getelementptr' 'pnGenSequence_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 156 [2/2] (2.32ns)   --->   "%pnGenSequence_load_10 = load i6 %pnGenSequence_addr_10" [tx_src/transmitter.cpp:31]   --->   Operation 156 'load' 'pnGenSequence_load_10' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_7 : Operation 157 [1/1] (0.00ns)   --->   "%or_ln29_10 = or i6 %i_2, i6 11" [tx_src/transmitter.cpp:29]   --->   Operation 157 'or' 'or_ln29_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln31_31 = zext i6 %or_ln29_10" [tx_src/transmitter.cpp:31]   --->   Operation 158 'zext' 'zext_ln31_31' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 159 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_11 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_31" [tx_src/transmitter.cpp:31]   --->   Operation 159 'getelementptr' 'pnGenSequence_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 160 [2/2] (2.32ns)   --->   "%pnGenSequence_load_11 = load i6 %pnGenSequence_addr_11" [tx_src/transmitter.cpp:31]   --->   Operation 160 'load' 'pnGenSequence_load_11' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 8 <SV = 7> <Delay = 4.64>
+ST_8 : Operation 161 [1/2] (2.32ns)   --->   "%pnGenSequence_load_10 = load i6 %pnGenSequence_addr_10" [tx_src/transmitter.cpp:31]   --->   Operation 161 'load' 'pnGenSequence_load_10' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_8 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln31_29 = zext i1 %pnGenSequence_load_10" [tx_src/transmitter.cpp:31]   --->   Operation 162 'zext' 'zext_ln31_29' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 163 [1/1] (0.00ns)   --->   "%zext_ln31_30 = zext i1 %pnGenSequence_load_10" [tx_src/transmitter.cpp:31]   --->   Operation 163 'zext' 'zext_ln31_30' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 164 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_10 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_28" [tx_src/transmitter.cpp:31]   --->   Operation 164 'getelementptr' 'scrambledDataI_addr_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 165 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_29, i6 %scrambledDataI_addr_10" [tx_src/transmitter.cpp:31]   --->   Operation 165 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_8 : Operation 166 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_10 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_28" [tx_src/transmitter.cpp:32]   --->   Operation 166 'getelementptr' 'scrambledDataQ_addr_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 167 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_30, i6 %scrambledDataQ_addr_10" [tx_src/transmitter.cpp:32]   --->   Operation 167 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_8 : Operation 168 [1/2] (2.32ns)   --->   "%pnGenSequence_load_11 = load i6 %pnGenSequence_addr_11" [tx_src/transmitter.cpp:31]   --->   Operation 168 'load' 'pnGenSequence_load_11' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_8 : Operation 169 [1/1] (0.00ns)   --->   "%zext_ln31_32 = zext i1 %pnGenSequence_load_11" [tx_src/transmitter.cpp:31]   --->   Operation 169 'zext' 'zext_ln31_32' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 170 [1/1] (0.00ns)   --->   "%zext_ln31_33 = zext i1 %pnGenSequence_load_11" [tx_src/transmitter.cpp:31]   --->   Operation 170 'zext' 'zext_ln31_33' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 171 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_11 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_31" [tx_src/transmitter.cpp:31]   --->   Operation 171 'getelementptr' 'scrambledDataI_addr_11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 172 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_32, i6 %scrambledDataI_addr_11" [tx_src/transmitter.cpp:31]   --->   Operation 172 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_8 : Operation 173 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_11 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_31" [tx_src/transmitter.cpp:32]   --->   Operation 173 'getelementptr' 'scrambledDataQ_addr_11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 174 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_33, i6 %scrambledDataQ_addr_11" [tx_src/transmitter.cpp:32]   --->   Operation 174 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_8 : Operation 175 [1/1] (0.00ns)   --->   "%or_ln29_11 = or i6 %i_2, i6 12" [tx_src/transmitter.cpp:29]   --->   Operation 175 'or' 'or_ln29_11' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 176 [1/1] (0.00ns)   --->   "%zext_ln31_34 = zext i6 %or_ln29_11" [tx_src/transmitter.cpp:31]   --->   Operation 176 'zext' 'zext_ln31_34' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 177 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_12 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_34" [tx_src/transmitter.cpp:31]   --->   Operation 177 'getelementptr' 'pnGenSequence_addr_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 178 [2/2] (2.32ns)   --->   "%pnGenSequence_load_12 = load i6 %pnGenSequence_addr_12" [tx_src/transmitter.cpp:31]   --->   Operation 178 'load' 'pnGenSequence_load_12' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_8 : Operation 179 [1/1] (0.00ns)   --->   "%or_ln29_12 = or i6 %i_2, i6 13" [tx_src/transmitter.cpp:29]   --->   Operation 179 'or' 'or_ln29_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 180 [1/1] (0.00ns)   --->   "%zext_ln31_37 = zext i6 %or_ln29_12" [tx_src/transmitter.cpp:31]   --->   Operation 180 'zext' 'zext_ln31_37' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 181 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_13 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_37" [tx_src/transmitter.cpp:31]   --->   Operation 181 'getelementptr' 'pnGenSequence_addr_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 182 [2/2] (2.32ns)   --->   "%pnGenSequence_load_13 = load i6 %pnGenSequence_addr_13" [tx_src/transmitter.cpp:31]   --->   Operation 182 'load' 'pnGenSequence_load_13' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 9 <SV = 8> <Delay = 4.64>
+ST_9 : Operation 183 [1/2] (2.32ns)   --->   "%pnGenSequence_load_12 = load i6 %pnGenSequence_addr_12" [tx_src/transmitter.cpp:31]   --->   Operation 183 'load' 'pnGenSequence_load_12' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_9 : Operation 184 [1/1] (0.00ns)   --->   "%zext_ln31_35 = zext i1 %pnGenSequence_load_12" [tx_src/transmitter.cpp:31]   --->   Operation 184 'zext' 'zext_ln31_35' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 185 [1/1] (0.00ns)   --->   "%zext_ln31_36 = zext i1 %pnGenSequence_load_12" [tx_src/transmitter.cpp:31]   --->   Operation 185 'zext' 'zext_ln31_36' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 186 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_12 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_34" [tx_src/transmitter.cpp:31]   --->   Operation 186 'getelementptr' 'scrambledDataI_addr_12' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 187 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_35, i6 %scrambledDataI_addr_12" [tx_src/transmitter.cpp:31]   --->   Operation 187 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_9 : Operation 188 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_12 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_34" [tx_src/transmitter.cpp:32]   --->   Operation 188 'getelementptr' 'scrambledDataQ_addr_12' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 189 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_36, i6 %scrambledDataQ_addr_12" [tx_src/transmitter.cpp:32]   --->   Operation 189 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_9 : Operation 190 [1/2] (2.32ns)   --->   "%pnGenSequence_load_13 = load i6 %pnGenSequence_addr_13" [tx_src/transmitter.cpp:31]   --->   Operation 190 'load' 'pnGenSequence_load_13' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_9 : Operation 191 [1/1] (0.00ns)   --->   "%zext_ln31_38 = zext i1 %pnGenSequence_load_13" [tx_src/transmitter.cpp:31]   --->   Operation 191 'zext' 'zext_ln31_38' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 192 [1/1] (0.00ns)   --->   "%zext_ln31_39 = zext i1 %pnGenSequence_load_13" [tx_src/transmitter.cpp:31]   --->   Operation 192 'zext' 'zext_ln31_39' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 193 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_13 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_37" [tx_src/transmitter.cpp:31]   --->   Operation 193 'getelementptr' 'scrambledDataI_addr_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 194 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_38, i6 %scrambledDataI_addr_13" [tx_src/transmitter.cpp:31]   --->   Operation 194 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_9 : Operation 195 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_13 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_37" [tx_src/transmitter.cpp:32]   --->   Operation 195 'getelementptr' 'scrambledDataQ_addr_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 196 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_39, i6 %scrambledDataQ_addr_13" [tx_src/transmitter.cpp:32]   --->   Operation 196 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_9 : Operation 197 [1/1] (0.00ns)   --->   "%or_ln29_13 = or i6 %i_2, i6 14" [tx_src/transmitter.cpp:29]   --->   Operation 197 'or' 'or_ln29_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 198 [1/1] (0.00ns)   --->   "%zext_ln31_40 = zext i6 %or_ln29_13" [tx_src/transmitter.cpp:31]   --->   Operation 198 'zext' 'zext_ln31_40' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 199 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_14 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_40" [tx_src/transmitter.cpp:31]   --->   Operation 199 'getelementptr' 'pnGenSequence_addr_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 200 [2/2] (2.32ns)   --->   "%pnGenSequence_load_14 = load i6 %pnGenSequence_addr_14" [tx_src/transmitter.cpp:31]   --->   Operation 200 'load' 'pnGenSequence_load_14' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_9 : Operation 201 [1/1] (0.00ns)   --->   "%or_ln29_14 = or i6 %i_2, i6 15" [tx_src/transmitter.cpp:29]   --->   Operation 201 'or' 'or_ln29_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 202 [1/1] (0.00ns)   --->   "%zext_ln31_43 = zext i6 %or_ln29_14" [tx_src/transmitter.cpp:31]   --->   Operation 202 'zext' 'zext_ln31_43' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 203 [1/1] (0.00ns)   --->   "%pnGenSequence_addr_15 = getelementptr i1 %pnGenSequence, i64 0, i64 %zext_ln31_43" [tx_src/transmitter.cpp:31]   --->   Operation 203 'getelementptr' 'pnGenSequence_addr_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 204 [2/2] (2.32ns)   --->   "%pnGenSequence_load_15 = load i6 %pnGenSequence_addr_15" [tx_src/transmitter.cpp:31]   --->   Operation 204 'load' 'pnGenSequence_load_15' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+
+State 10 <SV = 9> <Delay = 4.64>
+ST_10 : Operation 205 [1/2] (2.32ns)   --->   "%pnGenSequence_load_14 = load i6 %pnGenSequence_addr_14" [tx_src/transmitter.cpp:31]   --->   Operation 205 'load' 'pnGenSequence_load_14' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_10 : Operation 206 [1/1] (0.00ns)   --->   "%zext_ln31_41 = zext i1 %pnGenSequence_load_14" [tx_src/transmitter.cpp:31]   --->   Operation 206 'zext' 'zext_ln31_41' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 207 [1/1] (0.00ns)   --->   "%zext_ln31_42 = zext i1 %pnGenSequence_load_14" [tx_src/transmitter.cpp:31]   --->   Operation 207 'zext' 'zext_ln31_42' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 208 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_14 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_40" [tx_src/transmitter.cpp:31]   --->   Operation 208 'getelementptr' 'scrambledDataI_addr_14' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 209 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_41, i6 %scrambledDataI_addr_14" [tx_src/transmitter.cpp:31]   --->   Operation 209 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_10 : Operation 210 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_14 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_40" [tx_src/transmitter.cpp:32]   --->   Operation 210 'getelementptr' 'scrambledDataQ_addr_14' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 211 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_42, i6 %scrambledDataQ_addr_14" [tx_src/transmitter.cpp:32]   --->   Operation 211 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_10 : Operation 212 [1/2] (2.32ns)   --->   "%pnGenSequence_load_15 = load i6 %pnGenSequence_addr_15" [tx_src/transmitter.cpp:31]   --->   Operation 212 'load' 'pnGenSequence_load_15' <Predicate = true> <Delay = 2.32> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 1> <Depth = 50> <ROM>
+ST_10 : Operation 213 [1/1] (0.00ns)   --->   "%zext_ln31_44 = zext i1 %pnGenSequence_load_15" [tx_src/transmitter.cpp:31]   --->   Operation 213 'zext' 'zext_ln31_44' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 214 [1/1] (0.00ns)   --->   "%zext_ln31_45 = zext i1 %pnGenSequence_load_15" [tx_src/transmitter.cpp:31]   --->   Operation 214 'zext' 'zext_ln31_45' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 215 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_15 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln31_43" [tx_src/transmitter.cpp:31]   --->   Operation 215 'getelementptr' 'scrambledDataI_addr_15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 216 [1/1] (2.32ns)   --->   "%store_ln31 = store i5 %zext_ln31_44, i6 %scrambledDataI_addr_15" [tx_src/transmitter.cpp:31]   --->   Operation 216 'store' 'store_ln31' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_10 : Operation 217 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_15 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln31_43" [tx_src/transmitter.cpp:32]   --->   Operation 217 'getelementptr' 'scrambledDataQ_addr_15' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 218 [1/1] (2.32ns)   --->   "%store_ln32 = store i6 %zext_ln31_45, i6 %scrambledDataQ_addr_15" [tx_src/transmitter.cpp:32]   --->   Operation 218 'store' 'store_ln32' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_10 : Operation 219 [1/1] (0.00ns)   --->   "%br_ln29 = br void %for.inc.0.split" [tx_src/transmitter.cpp:29]   --->   Operation 219 'br' 'br_ln29' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 3> <Delay = 3.41>
+ST_11 : Operation 220 [1/1] (0.00ns)   --->   "%i_3 = load i6 %i_1" [tx_src/transmitter.cpp:43]   --->   Operation 220 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 221 [1/1] (0.00ns)   --->   "%zext_ln43 = zext i6 %i_3" [tx_src/transmitter.cpp:43]   --->   Operation 221 'zext' 'zext_ln43' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 222 [1/1] (1.42ns)   --->   "%icmp_ln43 = icmp_eq  i6 %i_3, i6 50" [tx_src/transmitter.cpp:43]   --->   Operation 222 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 223 [1/1] (0.00ns)   --->   "%empty_7 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 50, i64 50, i64 50"   --->   Operation 223 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 224 [1/1] (1.82ns)   --->   "%add_ln43 = add i6 %i_3, i6 1" [tx_src/transmitter.cpp:43]   --->   Operation 224 'add' 'add_ln43' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 225 [1/1] (0.00ns)   --->   "%br_ln43 = br i1 %icmp_ln43, void %for.inc33.split, void %for.end35" [tx_src/transmitter.cpp:43]   --->   Operation 225 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 226 [1/1] (0.00ns)   --->   "%scrambledDataI_addr_16 = getelementptr i5 %scrambledDataI, i64 0, i64 %zext_ln43" [tx_src/transmitter.cpp:44]   --->   Operation 226 'getelementptr' 'scrambledDataI_addr_16' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_11 : Operation 227 [2/2] (2.32ns)   --->   "%scrambledDataI_load = load i6 %scrambledDataI_addr_16" [tx_src/transmitter.cpp:44]   --->   Operation 227 'load' 'scrambledDataI_load' <Predicate = (!icmp_ln43)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_11 : Operation 228 [1/1] (0.00ns)   --->   "%scrambledDataQ_addr_16 = getelementptr i6 %scrambledDataQ, i64 0, i64 %zext_ln43" [tx_src/transmitter.cpp:45]   --->   Operation 228 'getelementptr' 'scrambledDataQ_addr_16' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_11 : Operation 229 [2/2] (2.32ns)   --->   "%scrambledDataQ_load = load i6 %scrambledDataQ_addr_16" [tx_src/transmitter.cpp:45]   --->   Operation 229 'load' 'scrambledDataQ_load' <Predicate = (!icmp_ln43)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_11 : Operation 230 [1/1] (1.58ns)   --->   "%store_ln43 = store i6 %add_ln43, i6 %i_1" [tx_src/transmitter.cpp:43]   --->   Operation 230 'store' 'store_ln43' <Predicate = (!icmp_ln43)> <Delay = 1.58>
+ST_11 : Operation 231 [1/1] (0.00ns)   --->   "%and38_i3032_load_1 = load i32 %and38_i3032" [tx_src/transmitter.cpp:220]   --->   Operation 231 'load' 'and38_i3032_load_1' <Predicate = (icmp_ln43)> <Delay = 0.00>
+ST_11 : Operation 232 [1/1] (0.00ns)   --->   "%store_ln220 = store i32 %and38_i3032_load_1, i32 %encoder_state_1" [tx_src/transmitter.cpp:220]   --->   Operation 232 'store' 'store_ln220' <Predicate = (icmp_ln43)> <Delay = 0.00>
+ST_11 : Operation 233 [1/1] (0.00ns)   --->   "%write_ln179 = write void @_ssdm_op_Write.ap_auto.i64P0A, i64 %output_i, i64 0" [tx_src/transmitter.cpp:179]   --->   Operation 233 'write' 'write_ln179' <Predicate = (icmp_ln43)> <Delay = 0.00>
+ST_11 : Operation 234 [1/1] (0.00ns)   --->   "%ret_ln194 = ret" [tx_src/transmitter.cpp:194]   --->   Operation 234 'ret' 'ret_ln194' <Predicate = (icmp_ln43)> <Delay = 0.00>
+
+State 12 <SV = 4> <Delay = 4.88>
+ST_12 : Operation 235 [1/1] (0.00ns)   --->   "%and38_i3032_load = load i32 %and38_i3032" [tx_src/transmitter.cpp:220]   --->   Operation 235 'load' 'and38_i3032_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 236 [1/1] (0.00ns)   --->   "%specloopname_ln43 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [tx_src/transmitter.cpp:43]   --->   Operation 236 'specloopname' 'specloopname_ln43' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 237 [1/2] (2.32ns)   --->   "%scrambledDataI_load = load i6 %scrambledDataI_addr_16" [tx_src/transmitter.cpp:44]   --->   Operation 237 'load' 'scrambledDataI_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 50> <RAM>
+ST_12 : Operation 238 [1/1] (0.00ns) (grouped into LUT with out node or_ln220_1)   --->   "%trunc_ln220 = trunc i32 %and38_i3032_load" [tx_src/transmitter.cpp:220]   --->   Operation 238 'trunc' 'trunc_ln220' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 239 [1/1] (0.00ns) (grouped into LUT with out node or_ln220_1)   --->   "%shl_ln = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i4.i1, i4 %trunc_ln220, i1 0" [tx_src/transmitter.cpp:220]   --->   Operation 239 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 240 [1/2] (2.32ns)   --->   "%scrambledDataQ_load = load i6 %scrambledDataQ_addr_16" [tx_src/transmitter.cpp:45]   --->   Operation 240 'load' 'scrambledDataQ_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 50> <RAM>
+ST_12 : Operation 241 [1/1] (0.00ns) (grouped into LUT with out node or_ln220_1)   --->   "%or_ln220 = or i5 %scrambledDataI_load, i5 %shl_ln" [tx_src/transmitter.cpp:220]   --->   Operation 241 'or' 'or_ln220' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 242 [1/1] (0.00ns) (grouped into LUT with out node or_ln220_1)   --->   "%shl_ln220_1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %or_ln220, i1 0" [tx_src/transmitter.cpp:220]   --->   Operation 242 'bitconcatenate' 'shl_ln220_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 243 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln220_1 = or i6 %scrambledDataQ_load, i6 %shl_ln220_1" [tx_src/transmitter.cpp:220]   --->   Operation 243 'or' 'or_ln220_1' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 244 [1/1] (0.00ns)   --->   "%zext_ln43_1 = zext i6 %or_ln220_1" [tx_src/transmitter.cpp:43]   --->   Operation 244 'zext' 'zext_ln43_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 245 [1/1] (1.58ns)   --->   "%store_ln43 = store i32 %zext_ln43_1, i32 %and38_i3032" [tx_src/transmitter.cpp:43]   --->   Operation 245 'store' 'store_ln43' <Predicate = true> <Delay = 1.58>
+ST_12 : Operation 246 [1/1] (0.00ns)   --->   "%br_ln43 = br void %for.inc33" [tx_src/transmitter.cpp:43]   --->   Operation 246 'br' 'br_ln43' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('i') [6]  (0 ns)
+	'store' operation ('store_ln29', tx_src/transmitter.cpp:29) of constant 0 on local variable 'i' [20]  (1.59 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('i', tx_src/transmitter.cpp:29) on local variable 'i' [23]  (0 ns)
+	'getelementptr' operation ('pnGenSequence_addr', tx_src/transmitter.cpp:31) [26]  (0 ns)
+	'load' operation ('pnGenSequence_load', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [27]  (2.32 ns)
+
+ <State 3>: 5.62ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [27]  (2.32 ns)
+	'xor' operation ('xor_ln32', tx_src/transmitter.cpp:32) [33]  (0.978 ns)
+	'store' operation ('store_ln32', tx_src/transmitter.cpp:32) of variable 'xor_ln32', tx_src/transmitter.cpp:32 on array 'scrambledDataQ', tx_src/transmitter.cpp:28 [35]  (2.32 ns)
+
+ <State 4>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_2', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [53]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_5', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [57]  (2.32 ns)
+
+ <State 5>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_4', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [73]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_11', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [77]  (2.32 ns)
+
+ <State 6>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_6', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [93]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_17', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [97]  (2.32 ns)
+
+ <State 7>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_8', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [113]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_23', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [117]  (2.32 ns)
+
+ <State 8>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_10', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [133]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_29', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [137]  (2.32 ns)
+
+ <State 9>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_12', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [153]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_35', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [157]  (2.32 ns)
+
+ <State 10>: 4.64ns
+The critical path consists of the following:
+	'load' operation ('pnGenSequence_load_14', tx_src/transmitter.cpp:31) on array 'pnGenSequence' [173]  (2.32 ns)
+	'store' operation ('store_ln31', tx_src/transmitter.cpp:31) of variable 'zext_ln31_41', tx_src/transmitter.cpp:31 on array 'scrambledDataI', tx_src/transmitter.cpp:28 [177]  (2.32 ns)
+
+ <State 11>: 3.41ns
+The critical path consists of the following:
+	'load' operation ('i', tx_src/transmitter.cpp:43) on local variable 'i' [201]  (0 ns)
+	'add' operation ('add_ln43', tx_src/transmitter.cpp:43) [205]  (1.83 ns)
+	'store' operation ('store_ln43', tx_src/transmitter.cpp:43) of variable 'add_ln43', tx_src/transmitter.cpp:43 on local variable 'i' [220]  (1.59 ns)
+
+ <State 12>: 4.89ns
+The critical path consists of the following:
+	'load' operation ('bit', tx_src/transmitter.cpp:44) on array 'scrambledDataI', tx_src/transmitter.cpp:28 [211]  (2.32 ns)
+	'or' operation ('or_ln220', tx_src/transmitter.cpp:220) [216]  (0 ns)
+	'or' operation ('or_ln220_1', tx_src/transmitter.cpp:220) [218]  (0.978 ns)
+	'store' operation ('store_ln43', tx_src/transmitter.cpp:43) of variable 'zext_ln43_1', tx_src/transmitter.cpp:43 on local variable 'and38_i3032' [221]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

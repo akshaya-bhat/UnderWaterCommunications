@@ -95,14 +95,14 @@ realPart = real(dataPulseShaped);
 imagPart = imag(dataPulseShaped);
 dataModI = real(dataPulseShaped).*carrierI;
 dataModQ = imag(dataPulseShaped).*carrierQ;
-dataMod = dataModI + 1i*dataModQ; %%%%%%%%%%%before it was dataModI + dataModQ
+dataMod = dataModI + dataModQ;
 
 %%
-fid = fopen("/home/lilian/school/UnderWaterCommunications/HLS/outMod.bin", "r");
+fid = fopen("/home/lilian/school/UnderWaterCommunications/data/output.bin", "r");
 data_HLS1 = fread(fid, "double");
-realData1 = data_HLS1(1:2:end);
-imagData1 = data_HLS1(2:2:end);
-figure; plot(realData1); hold on; plot(imagData1); title("1");
+realData1 = data_HLS1(1:end);
+% imagData1 = data_HLS1(2:2:end);
+figure; plot(realData1); title("1");
 figure; plot(real(dataMod)); hold on; plot(imag(dataMod)); title("2");
 
 %%

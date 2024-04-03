@@ -10,26 +10,34 @@
 #include <ap_fixed.h>
 #include <ap_int.h>
 #include <iostream>
-#include <vector>
-#include <complex>
+#include "hls_stream.h"
+#include "ap_axi_sdata.h"
+
 using namespace std;
 
 
 typedef int	coef_t;
-typedef int16_t	data_t;
-//typedef complex<double> complex_t;
+typedef int16_t data_t;
+
+//DMA
+union fp_int
+{
+	int i;
+	float fp;
+};
+
+typedef ap_axis<16,2,5,6> transPkt;
 
 /**
  * Parameters
  */
 #define fs 128e3 //sampling frequency
 #define fc 40e3 //carrier frequency (40kHz)
-#define M 4 // pngen sequence order
 #define N 100 //length of data payload
-#define Tx_PowDB 10 //power out of amplifier
-#define rolloff 0.5 //rolloff factor for SRRC Filter
+#define NHalf 50
 #define oversample 32 //samples per symbol
-
+#define preambleLen 64
+#define preambleLenHalf 32
 #define K 7
 
 #define GOL_LEN 32
@@ -38,8 +46,8 @@ typedef int16_t	data_t;
 const int pnGenSequence[50] = {1, 1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0};
 
 //CONVOLUTIONAL ENCODER
-const int G1[K] = {1, 1, 1, 0, 1, 0, 1};  // 171
-const int G2[K] = {1, 0, 1, 1, 0, 0, 1};  // 133
+const int G1[K] = {1,1,1,1,0,0,1};  // 171
+const int G2[K] = {1,0,1,1,0,1,1};  // 133
 extern int encoder_state;
 
 //GOLAY PREAMBLE
@@ -93,7 +101,7 @@ const double cos_coefficients_table[]={1.000000,0.980785,0.923880,0.831470,0.707
 const double sin_coefficients_table[]={0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,-0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785,1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090};
 
 
-void transmitter (data_t* input_i, data_t* input_q, data_t* output_i, data_t* output_q);
+void transmitter (data_t* input_i, data_t* input_q, double* output_i);
 void encoder(data_t bit, data_t *bit0, data_t *bit1);
 
 #endif

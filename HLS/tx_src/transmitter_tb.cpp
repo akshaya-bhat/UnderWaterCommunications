@@ -35,8 +35,7 @@ int main () {
 
 	data_t input_i[N];
 	data_t input_q[N];
-	data_t output_i[N];
-	data_t output_q[N];
+	double output_i[5248];
 
   data_t gold_R, gold_I;
 
@@ -53,12 +52,14 @@ for (int i = 0; i < N/2; i++) {
 
 }
 
-transmitter(input_i, input_q, output_i, output_q);
-
-   for(int i=0; i< N ; i++)
+transmitter(input_i, input_q, output_i);
+cout << "Hi\n";
+   for(int i=0; i<  5248; i++)
    	{
 //   		fscanf(fp_gold, "%f %f\n", &gold_R, &gold_I);
-//   		printf("gold: %f %f \n", gold_R, gold_I);
+   		printf("output: %f \n", output_i[i]);
+   		fwrite(&(output_i[i]), sizeof(double),1, fp2);
+//   				fwrite(&(imagPart), sizeof(double),1, fp3);
 //   		rmse_R.add_value((float)cancelled_i[i] - gold_R);
 //   		rmse_I.add_value((float)cancelled_q[i] - gold_I);
    	}

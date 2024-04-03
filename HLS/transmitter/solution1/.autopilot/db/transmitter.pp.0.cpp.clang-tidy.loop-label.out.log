@@ -1,0 +1,75 @@
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:1338:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:1338:7: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:2312:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:2312:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:2326:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:2326:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:2340:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:2340:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:3939:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:3939:7: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44599:2: warning: Added loop label VITIS_LOOP_29_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 50; i++) {
+ ^~~
+ VITIS_LOOP_29_1: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44599:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44613:2: warning: Added loop label VITIS_LOOP_43_2:   [xilinx-label-all-loops]
+ for (int i = 0; i < 50; i++) {
+ ^~~
+ VITIS_LOOP_43_2: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44613:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44625:2: warning: Added loop label VITIS_LOOP_55_3:   [xilinx-label-all-loops]
+ for (int i = 0; i < 100; i++) {
+ ^~~
+ VITIS_LOOP_55_3: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44625:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44643:2: warning: Added loop label VITIS_LOOP_86_4:   [xilinx-label-all-loops]
+ for (int i = 0; i < 32; ++i) {
+ ^~~
+ VITIS_LOOP_86_4: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44643:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44660:2: warning: Added loop label VITIS_LOOP_103_5:   [xilinx-label-all-loops]
+ for (int i = 0; i < 64; ++i) {
+ ^~~
+ VITIS_LOOP_103_5: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44660:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44665:2: warning: Added loop label VITIS_LOOP_108_6:   [xilinx-label-all-loops]
+ for (int i = 0; i < 100; i++) {
+ ^~~
+ VITIS_LOOP_108_6: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44665:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44684:2: warning: Added loop label VITIS_LOOP_127_7:   [xilinx-label-all-loops]
+ for (int i = 0; i < upsampleSize; i+=32) {
+ ^~~
+ VITIS_LOOP_127_7: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44684:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44695:2: warning: Added loop label VITIS_LOOP_138_8:   [xilinx-label-all-loops]
+ for (int i = 0; i < upsampleSize; i++) {
+ ^~~
+ VITIS_LOOP_138_8: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44695:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44699:3: warning: Added loop label VITIS_LOOP_142_9:   [xilinx-label-all-loops]
+  for (int j = 0; j < 193; j++) {
+  ^~~
+  VITIS_LOOP_142_9: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44699:3: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44707:2: warning: Added loop label VITIS_LOOP_167_10:   [xilinx-label-all-loops]
+ for (int i = 0; i < upsampleSize; i++) {
+ ^~~
+ VITIS_LOOP_167_10: 
+/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.autopilot/db/transmitter.pp.0.cpp:44707:2: note: FIX-IT applied suggested code changes
