@@ -43,10 +43,10 @@ idx = find(qpskDataQ == 0);
 qpskDataQ(idx) = -1;
 symbols = qpskDataI + 1j*qpskDataQ;
 
-% add Golay Preamble
+% add Golay Preamble and guard interval
 [Ga, Gb] = wlanGolaySequence(32);
 preamble_bpsk = [Ga' Gb'].*sqrt(2);
-symbols = [preamble_bpsk symbols];
+symbols = [preamble_bpsk zeros(1,32) symbols];
 
 % upsample and apply pulse shaping
 dataUpsampled = upsample(symbols,oversample);
@@ -112,15 +112,6 @@ for idx=1:length(correlationAbs)
     end
 end
 
-% % we handle the 4 highest amplitude correlation peaks
-% [amp, idx] = maxk(correlationAbs, 4);
-% 
-% % find the phase of each echo
-% phases = zeros(1,4);
-% for i=1:4
-%     phases(i) = atan2(correlationI(idx(i)), correlationQ(idx(i)));
-% end
-
 % apply the phase rotation & amplitude cancellation to each echo
 echoes = zeros(length(echo_idx), length(dataPulseShaped));
 matched_extended = [matchedI+1j*matchedQ zeros(1,10000)];
@@ -166,20 +157,22 @@ sense_symbols(i) = rake_symbols(sample);
 
 % separate preamble from payload
 preamble_symbols = sense_symbols(1:64);
-payload_symbols = sense_symbols(65:end);
+payload_symbols = sense_symbols(97:end);
 
 % channel estimation matrix
-top_row = [preamble_bpsk(1) zeros(1, 63)];
+top_row = [preamble_bpsk(1) zeros(1, 31)];
 Tmat = toeplitz(preamble_bpsk, top_row);
 hhat = pinv(Tmat)*preamble_symbols.';
 
 % channel equalization matrix
-top_row = [preamble_symbols(1) zeros(1, 64)];
+top_row = [preamble_symbols(1) zeros(1, 31)];
 Rmat = toeplitz(preamble_symbols, top_row);
 ghat = pinv(Rmat)*preamble_bpsk.';
 
-% decode the payload symbols with soft decision decoding
+% use equalization filter on payload data
+equalized_symbols = conv(ghat, payload_symbols);
 
+% decode the payload symbols with soft decision decoding
 
 %% Figures
 
@@ -239,12 +232,19 @@ hold on;
 plot(imag(rake_symbols))
 plot(imag(sense_symbols_plot))
 
-% sampling points vs
+% compare channel estimate to power spectrum of received
+figure(6)
+subplot(2,1,1)
+plot(abs(fftshift(fft(sense_symbols))).^2)
+subplot(2,1,2)
+stem((abs(fftshift(fft(hhat)))).^2)
 
-% % check that convolution of hhat and ghat is impulse
-% figure(7)
-% stem(abs(conv(hhat, ghat)))
-% title("convolution of h(n) and g(n)")
+
+% check that convolution of channel estimation and channel equalization is
+% impulse
+figure(7)
+stem(abs(conv(hhat, ghat)))
+title("convolution of h(n) and g(n)")
 
 figure(12)
 plot(dataMod)
