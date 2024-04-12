@@ -6,11 +6,12 @@ clear all
 fs = 128e3;              % sampling frequency
 fc = 40e3;               % carrier frequency 40kHz
 M = 4;                   % pngen sequence order
-N = 100;                 % length of data payload
-Tx_PowDB = 10;           % power out of amplifier
+N = 128;                 % length of data payload
+Tx_PowDB = 0.5;           % power out of amplifier
 rolloff = 0.5;
 oversample = 32;         % samples per symbol
 correlation_threshold = 0.5; % half of highest peak
+nsdec = 13;              % number of bits for soft decision decoding
 
 
 %% Transmitter
@@ -25,14 +26,9 @@ scrambledDataI = +xor(dataI,pnGen);
 scrambledDataQ = +xor(dataQ,pnGen);
 
 % apply convolutional encoder (7 [171 133] code)
-encodedDataI = zeros(1, 2*length(scrambledDataI)-6);
-encodedDataQ = zeros(1, 2*length(scrambledDataQ)-6);
-for i=1:length(scrambledDataI)-6
-    encodedDataI(2*i-1) = mod(scrambledDataI(i)+scrambledDataI(i+1)+scrambledDataI(i+2)+scrambledDataI(i+3)+scrambledDataI(i+6),2);
-    encodedDataI(2*i) = mod(scrambledDataI(i)+scrambledDataI(i+2)+scrambledDataI(i+3)+scrambledDataI(i+5)+scrambledDataI(i+6),2);
-    encodedDataQ(2*i-1) = mod(scrambledDataQ(i)+scrambledDataQ(i+1)+scrambledDataQ(i+2)+scrambledDataQ(i+3)+scrambledDataQ(i+6),2);
-    encodedDataQ(2*i) = mod(scrambledDataQ(i)+scrambledDataQ(i+2)+scrambledDataQ(i+3)+scrambledDataQ(i+5)+scrambledDataQ(i+6),2);
-end
+trellis = poly2trellis(7, [171 133]);
+encodedDataI = convenc(scrambledDataI,trellis);
+encodedDataQ = convenc(scrambledDataQ,trellis);
 
 % qpsk symbol mapping
 qpskDataI = encodedDataI;
@@ -69,7 +65,11 @@ dataMod = amp_const*dataMod;
 
 
 %% Channel
+%received = dataMod;
 received = channel(dataMod);
+%rayleigh_vector = raylrnd(1/sqrt(2), 1, length(dataMod));
+%noise_vector = randn(1,length(dataMod));
+%received = rayleigh_vector.*dataMod + noise_vector;
 
 
 %% Receiver
@@ -171,8 +171,25 @@ ghat = pinv(Rmat)*preamble_bpsk.';
 
 % use equalization filter on payload data
 equalized_symbols = conv(ghat, payload_symbols);
+equalized_symbols = equalized_symbols(1:128);
 
 % decode the payload symbols with soft decision decoding
+normI = real(equalized_symbols)/max(abs(real(equalized_symbols)));
+normQ = imag(equalized_symbols)/max(abs(imag(equalized_symbols)));
+shiftedI = (normI + 1)./2 .*(2^(nsdec) - 1);
+shiftedQ = (normQ + 1)./2 .*(2^(nsdec) - 1);
+integerI = round(shiftedI);
+integerQ = round(shiftedQ);
+decodedI = vitdec(integerI,trellis,30,'trunc','soft', nsdec);
+decodedQ = vitdec(integerQ,trellis,30,'trunc','soft', nsdec);
+
+% de-scramble the decoded data
+descrambledI = +xor(decodedI,pnGen);
+descrambledQ = +xor(decodedQ,pnGen);
+
+% make a final comparison
+I_errors = numel(find(descrambledI~=dataI))
+Q_errors = numel(find(descrambledQ~=dataQ))
 
 %% Figures
 
@@ -239,15 +256,31 @@ plot(abs(fftshift(fft(sense_symbols))).^2)
 subplot(2,1,2)
 stem((abs(fftshift(fft(hhat)))).^2)
 
-
 % check that convolution of channel estimation and channel equalization is
 % impulse
 figure(7)
 stem(abs(conv(hhat, ghat)))
 title("convolution of h(n) and g(n)")
 
+% compare sent symbols to symbols before and after equalization
+figure(8)
+subplot(2,1,1)
+hold on
+plot(real(symbols(97:end))/max(real(symbols(97:end))))
+plot(real(payload_symbols)/max(real(payload_symbols)))
+plot(real(equalized_symbols)/max(real(equalized_symbols)))
+legend("Tx", "Not Equalized", "Equalized")
+subplot(2,1,2)
+hold on
+plot(imag(symbols(97:end))/max(imag(symbols(97:end))))
+plot(imag(payload_symbols)/max(imag(payload_symbols)))
+plot(imag(equalized_symbols)/max(imag(equalized_symbols)))
+
 figure(12)
 plot(dataMod)
+
+figure(13)
+scatter(real(sense_symbols), imag(sense_symbols))
 
 
 
