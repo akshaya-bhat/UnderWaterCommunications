@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'lilian' on host 'lilian' (Linux_x86_64 version 5.15.0-101-generic) on Tue Apr 02 19:49:07 PDT 2024
+INFO: [HLS 200-10] For user 'lilian' on host 'lilian' (Linux_x86_64 version 5.15.0-102-generic) on Thu Apr 11 19:56:52 PDT 2024
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/lilian/school/UnderWaterCommunications/HLS'
 Sourcing Tcl script '/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/csynth.tcl'
@@ -7,11 +7,11 @@ INFO: [HLS 200-1510] Running: source /home/lilian/school/UnderWaterCommunication
 INFO: [HLS 200-1510] Running: open_project transmitter 
 INFO: [HLS 200-10] Opening project '/home/lilian/school/UnderWaterCommunications/HLS/transmitter'.
 INFO: [HLS 200-1510] Running: set_top transmitter 
-INFO: [HLS 200-1510] Running: add_files tx_src/transmitter.cpp 
-INFO: [HLS 200-10] Adding design file 'tx_src/transmitter.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files tx_src/transmitter.h 
 INFO: [HLS 200-10] Adding design file 'tx_src/transmitter.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb tx_src/transmitter_tb.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files tx_src/transmitter.cpp 
+INFO: [HLS 200-10] Adding design file 'tx_src/transmitter.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tx_src/transmitter_tb.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'tx_src/transmitter_tb.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1'.
@@ -21,68 +21,169 @@ INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./transmitter/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name transmitter transmitter 
 INFO: [HLS 200-1510] Running: csynth_design 
-Running Dispatch Server on port: 39569
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.06 seconds; current allocated memory: 756.359 MB.
+Running Dispatch Server on port: 45447
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.07 seconds; current allocated memory: 756.359 MB.
 INFO: [HLS 200-10] Analyzing design file 'tx_src/transmitter.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 5.02 seconds. CPU system time: 0.54 seconds. Elapsed time: 5.59 seconds; current allocated memory: 756.414 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.77 seconds. CPU system time: 0.78 seconds. Elapsed time: 6.09 seconds; current allocated memory: 757.262 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_167_10' (tx_src/transmitter.cpp:167:21) in function 'transmitter' partially with a factor of 512 (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_138_8' (tx_src/transmitter.cpp:138:20) in function 'transmitter' partially with a factor of 512 (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_127_7' (tx_src/transmitter.cpp:127:20) in function 'transmitter' partially with a factor of 64 (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_108_6' (tx_src/transmitter.cpp:108:20) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_103_5' (tx_src/transmitter.cpp:103:20) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_55_3' (tx_src/transmitter.cpp:55:19) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_29_1' (tx_src/transmitter.cpp:29:19) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:21:0)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_193_9' is marked as complete unroll implied by the pipeline pragma (tx_src/transmitter.cpp:193:23)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_233_11' (tx_src/transmitter.cpp:233:21) in function 'transmitter' partially with a factor of 128 (tx_src/transmitter.cpp:20:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_182_8' (tx_src/transmitter.cpp:182:19) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:20:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_193_9' (tx_src/transmitter.cpp:193:23) in function 'transmitter' completely with a factor of 193 (tx_src/transmitter.cpp:20:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_141_6' (tx_src/transmitter.cpp:141:20) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:20:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_136_5' (tx_src/transmitter.cpp:136:20) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:20:0)
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_95_3' (tx_src/transmitter.cpp:95:19) in function 'transmitter' partially with a factor of 16 (tx_src/transmitter.cpp:20:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
 INFO: [HLS 214-178] Inlining function 'fp_struct<double>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
 INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, double>(double, bool)' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
 INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, double>(double, bool)' into '__hls_fptosi_double_i32' (/wrk/ci/prod/2022.2/hls_product/continuous/608/2022.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:55:0)
-INFO: [HLS 214-178] Inlining function 'encoder(short, short*, short*)' into 'transmitter(short*, short*, double*)' (tx_src/transmitter.cpp:21:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 20.65 seconds. CPU system time: 0.51 seconds. Elapsed time: 21.18 seconds; current allocated memory: 757.629 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 757.629 MB.
+INFO: [HLS 214-178] Inlining function 'encoder(short, short*, short*)' into 'transmitter(hls::stream<hls::axis<ap_int<16>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<16>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<16>, 2ul, 5ul, 6ul>, 0>&)' (tx_src/transmitter.cpp:20:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_double_i32' into 'transmitter(hls::stream<hls::axis<ap_int<16>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<16>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<16>, 2ul, 5ul, 6ul>, 0>&)' (tx_src/transmitter.cpp:20:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (tx_src/transmitter.cpp:197:17)
+WARNING: [HLS 214-167] The program may have out of bound array access (tx_src/transmitter.cpp:198:24)
+INFO: [HLS 214-248] Applying array_partition to '_ZL13pnGenSequence': Complete partitioning on dimension 1. (tx_src/transmitter.h:52:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL22sin_coefficients_table': Complete partitioning on dimension 1. (tx_src/transmitter.h:107:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL22cos_coefficients_table': Complete partitioning on dimension 1. (tx_src/transmitter.h:105:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataUpsampledI': Complete partitioning on dimension 1. (tx_src/transmitter.cpp:154:11)
+INFO: [HLS 214-248] Applying array_partition to 'dataUpsampledQ': Complete partitioning on dimension 1. (tx_src/transmitter.cpp:155:11)
+INFO: [HLS 214-248] Applying array_partition to 'dataPulseShapedI': Cyclic partitioning with factor 16 on dimension 1. (tx_src/transmitter.cpp:169:11)
+INFO: [HLS 214-248] Applying array_partition to 'dataPulseShapedQ': Cyclic partitioning with factor 16 on dimension 1. (tx_src/transmitter.cpp:170:11)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 63.71 seconds. CPU system time: 1.07 seconds. Elapsed time: 65.2 seconds; current allocated memory: 794.191 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 794.191 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 788.809 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 11.67 seconds. CPU system time: 0.07 seconds. Elapsed time: 11.78 seconds; current allocated memory: 879.422 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 790.719 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 829.305 MB.
-INFO: [HLS 200-472] Inferring partial write operation for 'scrambledDataI' (tx_src/transmitter.cpp:31:20)
-INFO: [HLS 200-472] Inferring partial write operation for 'scrambledDataQ' (tx_src/transmitter.cpp:32:21)
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 834.715 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 11.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 11.31 seconds; current allocated memory: 921.953 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 18.33 seconds. CPU system time: 0.07 seconds. Elapsed time: 18.41 seconds; current allocated memory: 1.044 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'encodedDataI' (tx_src/transmitter.cpp:268:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'encodedDataI' (tx_src/transmitter.cpp:269:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'qpskDataI' (tx_src/transmitter.cpp:98:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'qpskDataQ' (tx_src/transmitter.cpp:104:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'symbolsI' (tx_src/transmitter.cpp:138:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'symbolsQ' (tx_src/transmitter.cpp:139:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'symbolsI' (tx_src/transmitter.cpp:143:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'symbolsQ' (tx_src/transmitter.cpp:144:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'real_output' (tx_src/transmitter.cpp:227:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataPulseShapedI' (tx_src/transmitter.cpp:202:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataPulseShapedQ' (tx_src/transmitter.cpp:203:25)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 14.85 seconds. CPU system time: 0.06 seconds. Elapsed time: 14.92 seconds; current allocated memory: 1.135 GB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'transmitter' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'transmitter' 
+INFO: [HLS 200-42] -- Implementing module 'transmitter_Pipeline_VITIS_LOOP_182_8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_182_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 971, loop 'VITIS_LOOP_182_8'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.14 seconds; current allocated memory: 834.715 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 22.6 seconds. CPU system time: 0.1 seconds. Elapsed time: 22.71 seconds; current allocated memory: 1.251 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 834.715 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 730.19 seconds. CPU system time: 0.47 seconds. Elapsed time: 731.86 seconds; current allocated memory: 1.417 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'transmitter_Pipeline_VITIS_LOOP_214_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_214_10'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 95, loop 'VITIS_LOOP_214_10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 50.51 seconds. CPU system time: 0.13 seconds. Elapsed time: 50.67 seconds; current allocated memory: 1.437 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.42 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.437 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'transmitter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.6 seconds. CPU system time: 0 seconds. Elapsed time: 1.6 seconds; current allocated memory: 1.445 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 12.77 seconds. CPU system time: 0.02 seconds. Elapsed time: 12.85 seconds; current allocated memory: 1.467 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'transmitter_Pipeline_VITIS_LOOP_182_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'transmitter_Pipeline_VITIS_LOOP_182_8' pipeline 'VITIS_LOOP_182_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'transmitter_Pipeline_VITIS_LOOP_182_8' is 221293 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 5936 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 386 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_523313_32_1_1': 26 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'transmitter_Pipeline_VITIS_LOOP_182_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 83.66 seconds. CPU system time: 0.74 seconds. Elapsed time: 84.55 seconds; current allocated memory: 2.796 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'transmitter_Pipeline_VITIS_LOOP_214_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'transmitter_Pipeline_VITIS_LOOP_214_10' pipeline 'VITIS_LOOP_214_10' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_164_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'transmitter_Pipeline_VITIS_LOOP_214_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 311.13 seconds. CPU system time: 0.5 seconds. Elapsed time: 312.05 seconds; current allocated memory: 3.057 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'transmitter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'transmitter' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_i_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/input_q_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'transmitter/output_i_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'transmitter' to 's_axilite & ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Register 'encoder_state_1' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_506_32_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'transmitter'.
-INFO: [RTMG 210-279] Implementing memory 'transmitter_pnGenSequence_ROM_AUTO_1R' using auto ROMs.
-INFO: [RTMG 210-278] Implementing memory 'transmitter_scrambledDataI_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'transmitter_scrambledDataQ_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 834.715 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.38 seconds; current allocated memory: 836.723 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.2 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.23 seconds; current allocated memory: 842.160 MB.
+INFO: [RTMG 210-279] Implementing memory 'transmitter_preamble_bpskI_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'transmitter_real_sample_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'transmitter_real_output_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'transmitter_encodedDataI_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'transmitter_qpskDataI_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'transmitter_symbolsI_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'transmitter_dataPulseShapedI_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.33 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.35 seconds; current allocated memory: 3.057 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 45.97 seconds. CPU system time: 0.13 seconds. Elapsed time: 46.2 seconds; current allocated memory: 3.081 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.46 seconds. CPU system time: 0.07 seconds. Elapsed time: 2.53 seconds; current allocated memory: 3.141 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for transmitter.
 INFO: [VLOG 209-307] Generating Verilog RTL for transmitter.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 177.87 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 27.34 seconds. CPU system time: 1.15 seconds. Elapsed time: 28.54 seconds; current allocated memory: 85.910 MB.
-INFO: [HLS 200-112] Total CPU user time: 29.88 seconds. Total CPU system time: 1.5 seconds. Total elapsed time: 41.32 seconds; peak allocated memory: 842.270 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.82 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1387.33 seconds. CPU system time: 4.26 seconds. Elapsed time: 1394.59 seconds; current allocated memory: 2.403 GB.
+INFO: [HLS 200-112] Total CPU user time: 1391.81 seconds. Total CPU system time: 4.84 seconds. Total elapsed time: 1410.22 seconds; peak allocated memory: 3.141 GB.

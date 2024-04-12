@@ -12,7 +12,10 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'encoder_state_1' is power-on initialization." projectName="transmitter" solutionName="solution1" date="2024-04-02T19:49:47.697-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'encoder_state_1' is power-on initialization." projectName="transmitter" solutionName="solution1" date="2024-04-11T20:19:30.411-0700" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="transmitter" solutionName="solution1" date="2024-04-11T20:19:30.233-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (tx_src/transmitter.cpp:198:24)" projectName="transmitter" solutionName="solution1" date="2024-04-11T19:58:16.438-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (tx_src/transmitter.cpp:197:17)" projectName="transmitter" solutionName="solution1" date="2024-04-11T19:58:16.395-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

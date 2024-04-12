@@ -18,16 +18,114 @@
 using namespace std;
 
 // wrapc file define:
-#define AUTOTB_TVIN_input_i "../tv/cdatafile/c.transmitter.autotvin_input_i.dat"
-#define AUTOTB_TVOUT_input_i "../tv/cdatafile/c.transmitter.autotvout_input_i.dat"
-#define AUTOTB_TVIN_input_q "../tv/cdatafile/c.transmitter.autotvin_input_q.dat"
-#define AUTOTB_TVOUT_input_q "../tv/cdatafile/c.transmitter.autotvout_input_q.dat"
-#define AUTOTB_TVIN_output_i "../tv/cdatafile/c.transmitter.autotvin_output_i.dat"
-#define AUTOTB_TVOUT_output_i "../tv/cdatafile/c.transmitter.autotvout_output_i.dat"
+#define AUTOTB_TVIN_input_i_V_data_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_data_V.dat"
+#define AUTOTB_TVOUT_input_i_V_data_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_data_V.dat"
+#define AUTOTB_TVIN_input_i_V_keep_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_keep_V.dat"
+#define AUTOTB_TVOUT_input_i_V_keep_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_keep_V.dat"
+#define AUTOTB_TVIN_input_i_V_strb_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_strb_V.dat"
+#define AUTOTB_TVOUT_input_i_V_strb_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_strb_V.dat"
+#define AUTOTB_TVIN_input_i_V_user_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_user_V.dat"
+#define AUTOTB_TVOUT_input_i_V_user_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_user_V.dat"
+#define AUTOTB_TVIN_input_i_V_last_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_last_V.dat"
+#define AUTOTB_TVOUT_input_i_V_last_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_last_V.dat"
+#define AUTOTB_TVIN_input_i_V_id_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_id_V.dat"
+#define AUTOTB_TVOUT_input_i_V_id_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_id_V.dat"
+#define AUTOTB_TVIN_input_i_V_dest_V "../tv/cdatafile/c.transmitter.autotvin_input_i_V_dest_V.dat"
+#define AUTOTB_TVOUT_input_i_V_dest_V "../tv/cdatafile/c.transmitter.autotvout_input_i_V_dest_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_data_V "../tv/stream_size/stream_size_in_input_i_V_data_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_data_V "../tv/stream_size/stream_ingress_status_input_i_V_data_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_keep_V "../tv/stream_size/stream_size_in_input_i_V_keep_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_keep_V "../tv/stream_size/stream_ingress_status_input_i_V_keep_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_strb_V "../tv/stream_size/stream_size_in_input_i_V_strb_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_strb_V "../tv/stream_size/stream_ingress_status_input_i_V_strb_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_user_V "../tv/stream_size/stream_size_in_input_i_V_user_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_user_V "../tv/stream_size/stream_ingress_status_input_i_V_user_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_last_V "../tv/stream_size/stream_size_in_input_i_V_last_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_last_V "../tv/stream_size/stream_ingress_status_input_i_V_last_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_id_V "../tv/stream_size/stream_size_in_input_i_V_id_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_id_V "../tv/stream_size/stream_ingress_status_input_i_V_id_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_i_V_dest_V "../tv/stream_size/stream_size_in_input_i_V_dest_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_i_V_dest_V "../tv/stream_size/stream_ingress_status_input_i_V_dest_V.dat"
+#define AUTOTB_TVIN_input_q_V_data_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_data_V.dat"
+#define AUTOTB_TVOUT_input_q_V_data_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_data_V.dat"
+#define AUTOTB_TVIN_input_q_V_keep_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_keep_V.dat"
+#define AUTOTB_TVOUT_input_q_V_keep_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_keep_V.dat"
+#define AUTOTB_TVIN_input_q_V_strb_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_strb_V.dat"
+#define AUTOTB_TVOUT_input_q_V_strb_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_strb_V.dat"
+#define AUTOTB_TVIN_input_q_V_user_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_user_V.dat"
+#define AUTOTB_TVOUT_input_q_V_user_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_user_V.dat"
+#define AUTOTB_TVIN_input_q_V_last_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_last_V.dat"
+#define AUTOTB_TVOUT_input_q_V_last_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_last_V.dat"
+#define AUTOTB_TVIN_input_q_V_id_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_id_V.dat"
+#define AUTOTB_TVOUT_input_q_V_id_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_id_V.dat"
+#define AUTOTB_TVIN_input_q_V_dest_V "../tv/cdatafile/c.transmitter.autotvin_input_q_V_dest_V.dat"
+#define AUTOTB_TVOUT_input_q_V_dest_V "../tv/cdatafile/c.transmitter.autotvout_input_q_V_dest_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_data_V "../tv/stream_size/stream_size_in_input_q_V_data_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_data_V "../tv/stream_size/stream_ingress_status_input_q_V_data_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_keep_V "../tv/stream_size/stream_size_in_input_q_V_keep_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_keep_V "../tv/stream_size/stream_ingress_status_input_q_V_keep_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_strb_V "../tv/stream_size/stream_size_in_input_q_V_strb_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_strb_V "../tv/stream_size/stream_ingress_status_input_q_V_strb_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_user_V "../tv/stream_size/stream_size_in_input_q_V_user_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_user_V "../tv/stream_size/stream_ingress_status_input_q_V_user_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_last_V "../tv/stream_size/stream_size_in_input_q_V_last_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_last_V "../tv/stream_size/stream_ingress_status_input_q_V_last_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_id_V "../tv/stream_size/stream_size_in_input_q_V_id_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_id_V "../tv/stream_size/stream_ingress_status_input_q_V_id_V.dat"
+#define WRAPC_STREAM_SIZE_IN_input_q_V_dest_V "../tv/stream_size/stream_size_in_input_q_V_dest_V.dat"
+#define WRAPC_STREAM_INGRESS_STATUS_input_q_V_dest_V "../tv/stream_size/stream_ingress_status_input_q_V_dest_V.dat"
+#define AUTOTB_TVIN_output_i_V_data_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_data_V.dat"
+#define AUTOTB_TVOUT_output_i_V_data_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_data_V.dat"
+#define AUTOTB_TVIN_output_i_V_keep_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_keep_V.dat"
+#define AUTOTB_TVOUT_output_i_V_keep_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_keep_V.dat"
+#define AUTOTB_TVIN_output_i_V_strb_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_strb_V.dat"
+#define AUTOTB_TVOUT_output_i_V_strb_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_strb_V.dat"
+#define AUTOTB_TVIN_output_i_V_user_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_user_V.dat"
+#define AUTOTB_TVOUT_output_i_V_user_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_user_V.dat"
+#define AUTOTB_TVIN_output_i_V_last_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_last_V.dat"
+#define AUTOTB_TVOUT_output_i_V_last_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_last_V.dat"
+#define AUTOTB_TVIN_output_i_V_id_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_id_V.dat"
+#define AUTOTB_TVOUT_output_i_V_id_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_id_V.dat"
+#define AUTOTB_TVIN_output_i_V_dest_V "../tv/cdatafile/c.transmitter.autotvin_output_i_V_dest_V.dat"
+#define AUTOTB_TVOUT_output_i_V_dest_V "../tv/cdatafile/c.transmitter.autotvout_output_i_V_dest_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_data_V "../tv/stream_size/stream_size_out_output_i_V_data_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_data_V "../tv/stream_size/stream_egress_status_output_i_V_data_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_keep_V "../tv/stream_size/stream_size_out_output_i_V_keep_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_keep_V "../tv/stream_size/stream_egress_status_output_i_V_keep_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_strb_V "../tv/stream_size/stream_size_out_output_i_V_strb_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_strb_V "../tv/stream_size/stream_egress_status_output_i_V_strb_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_user_V "../tv/stream_size/stream_size_out_output_i_V_user_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_user_V "../tv/stream_size/stream_egress_status_output_i_V_user_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_last_V "../tv/stream_size/stream_size_out_output_i_V_last_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_last_V "../tv/stream_size/stream_egress_status_output_i_V_last_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_id_V "../tv/stream_size/stream_size_out_output_i_V_id_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_id_V "../tv/stream_size/stream_egress_status_output_i_V_id_V.dat"
+#define WRAPC_STREAM_SIZE_OUT_output_i_V_dest_V "../tv/stream_size/stream_size_out_output_i_V_dest_V.dat"
+#define WRAPC_STREAM_EGRESS_STATUS_output_i_V_dest_V "../tv/stream_size/stream_egress_status_output_i_V_dest_V.dat"
 
 
 // tvout file define:
-#define AUTOTB_TVOUT_PC_output_i "../tv/rtldatafile/rtl.transmitter.autotvout_output_i.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_data_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_data_V.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_keep_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_keep_V.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_strb_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_strb_V.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_user_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_user_V.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_last_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_last_V.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_id_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_id_V.dat"
+#define AUTOTB_TVOUT_PC_input_i_V_dest_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_i_V_dest_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_data_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_data_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_keep_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_keep_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_strb_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_strb_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_user_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_user_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_last_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_last_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_id_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_id_V.dat"
+#define AUTOTB_TVOUT_PC_input_q_V_dest_V "../tv/rtldatafile/rtl.transmitter.autotvout_input_q_V_dest_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_data_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_data_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_keep_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_keep_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_strb_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_strb_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_user_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_user_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_last_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_last_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_id_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_id_V.dat"
+#define AUTOTB_TVOUT_PC_output_i_V_dest_V "../tv/rtldatafile/rtl.transmitter.autotvout_output_i_V_dest_V.dat"
 
 
 namespace hls::sim
@@ -952,63 +1050,420 @@ namespace hls::sim
 
 
 extern "C"
-void transmitter_hw_stub_wrapper(void*, void*, void*);
+void transmitter_hw_stub_wrapper(void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_transmitter_hw(void* __xlx_apatb_param_input_i, void* __xlx_apatb_param_input_q, void* __xlx_apatb_param_output_i)
+void apatb_transmitter_hw(void* __xlx_apatb_param_input_i_V_data_V, void* __xlx_apatb_param_input_i_V_keep_V, void* __xlx_apatb_param_input_i_V_strb_V, void* __xlx_apatb_param_input_i_V_user_V, void* __xlx_apatb_param_input_i_V_last_V, void* __xlx_apatb_param_input_i_V_id_V, void* __xlx_apatb_param_input_i_V_dest_V, void* __xlx_apatb_param_input_q_V_data_V, void* __xlx_apatb_param_input_q_V_keep_V, void* __xlx_apatb_param_input_q_V_strb_V, void* __xlx_apatb_param_input_q_V_user_V, void* __xlx_apatb_param_input_q_V_last_V, void* __xlx_apatb_param_input_q_V_id_V, void* __xlx_apatb_param_input_q_V_dest_V, void* __xlx_apatb_param_output_i_V_data_V, void* __xlx_apatb_param_output_i_V_keep_V, void* __xlx_apatb_param_output_i_V_strb_V, void* __xlx_apatb_param_output_i_V_user_V, void* __xlx_apatb_param_output_i_V_last_V, void* __xlx_apatb_param_output_i_V_id_V, void* __xlx_apatb_param_output_i_V_dest_V)
 {
-  static hls::sim::Register port0 {
-    .name = "input_i",
+  static hls::sim::Stream<hls::sim::Byte<2>> port0 {
     .width = 16,
+    .name = "input_i_V_data_V",
 #ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_data_V),
 #else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_input_i),
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_data_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_data_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_data_V),
 #endif
   };
-  port0.param = __xlx_apatb_param_input_i;
+  port0.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_input_i_V_data_V;
+  port0.hasWrite = false;
 
-  static hls::sim::Register port1 {
-    .name = "input_q",
+  static hls::sim::Stream<hls::sim::Byte<1>> port1 {
+    .width = 2,
+    .name = "input_i_V_keep_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_keep_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_keep_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_keep_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_keep_V),
+#endif
+  };
+  port1.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_i_V_keep_V;
+  port1.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port2 {
+    .width = 2,
+    .name = "input_i_V_strb_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_strb_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_strb_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_strb_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_strb_V),
+#endif
+  };
+  port2.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_i_V_strb_V;
+  port2.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port3 {
+    .width = 2,
+    .name = "input_i_V_user_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_user_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_user_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_user_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_user_V),
+#endif
+  };
+  port3.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_i_V_user_V;
+  port3.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port4 {
+    .width = 1,
+    .name = "input_i_V_last_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_last_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_last_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_last_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_last_V),
+#endif
+  };
+  port4.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_i_V_last_V;
+  port4.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port5 {
+    .width = 5,
+    .name = "input_i_V_id_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_id_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_id_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_id_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_id_V),
+#endif
+  };
+  port5.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_i_V_id_V;
+  port5.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port6 {
+    .width = 6,
+    .name = "input_i_V_dest_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_i_V_dest_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_i_V_dest_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_i_V_dest_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_i_V_dest_V),
+#endif
+  };
+  port6.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_i_V_dest_V;
+  port6.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<2>> port7 {
     .width = 16,
+    .name = "input_q_V_data_V",
 #ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_data_V),
 #else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_input_q),
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_data_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_data_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_data_V),
 #endif
   };
-  port1.param = __xlx_apatb_param_input_q;
+  port7.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_input_q_V_data_V;
+  port7.hasWrite = false;
 
-  static hls::sim::Register port2 {
-    .name = "output_i",
-    .width = 64,
+  static hls::sim::Stream<hls::sim::Byte<1>> port8 {
+    .width = 2,
+    .name = "input_q_V_keep_V",
 #ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i),
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_keep_V),
 #else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_output_i),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_output_i),
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_keep_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_keep_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_keep_V),
 #endif
   };
-  port2.param = __xlx_apatb_param_output_i;
+  port8.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_q_V_keep_V;
+  port8.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port9 {
+    .width = 2,
+    .name = "input_q_V_strb_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_strb_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_strb_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_strb_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_strb_V),
+#endif
+  };
+  port9.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_q_V_strb_V;
+  port9.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port10 {
+    .width = 2,
+    .name = "input_q_V_user_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_user_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_user_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_user_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_user_V),
+#endif
+  };
+  port10.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_q_V_user_V;
+  port10.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port11 {
+    .width = 1,
+    .name = "input_q_V_last_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_last_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_last_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_last_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_last_V),
+#endif
+  };
+  port11.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_q_V_last_V;
+  port11.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port12 {
+    .width = 5,
+    .name = "input_q_V_id_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_id_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_id_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_id_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_id_V),
+#endif
+  };
+  port12.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_q_V_id_V;
+  port12.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port13 {
+    .width = 6,
+    .name = "input_q_V_dest_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(WRAPC_STREAM_SIZE_IN_input_q_V_dest_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVIN_input_q_V_dest_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_IN_input_q_V_dest_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_INGRESS_STATUS_input_q_V_dest_V),
+#endif
+  };
+  port13.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_input_q_V_dest_V;
+  port13.hasWrite = false;
+
+  static hls::sim::Stream<hls::sim::Byte<2>> port14 {
+    .width = 16,
+    .name = "output_i_V_data_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_data_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_data_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_data_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_data_V),
+#endif
+  };
+  port14.param = (hls::stream<hls::sim::Byte<2>>*)__xlx_apatb_param_output_i_V_data_V;
+  port14.hasWrite = true;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port15 {
+    .width = 2,
+    .name = "output_i_V_keep_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_keep_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_keep_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_keep_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_keep_V),
+#endif
+  };
+  port15.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_output_i_V_keep_V;
+  port15.hasWrite = true;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port16 {
+    .width = 2,
+    .name = "output_i_V_strb_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_strb_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_strb_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_strb_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_strb_V),
+#endif
+  };
+  port16.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_output_i_V_strb_V;
+  port16.hasWrite = true;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port17 {
+    .width = 2,
+    .name = "output_i_V_user_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_user_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_user_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_user_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_user_V),
+#endif
+  };
+  port17.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_output_i_V_user_V;
+  port17.hasWrite = true;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port18 {
+    .width = 1,
+    .name = "output_i_V_last_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_last_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_last_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_last_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_last_V),
+#endif
+  };
+  port18.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_output_i_V_last_V;
+  port18.hasWrite = true;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port19 {
+    .width = 5,
+    .name = "output_i_V_id_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_id_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_id_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_id_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_id_V),
+#endif
+  };
+  port19.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_output_i_V_id_V;
+  port19.hasWrite = true;
+
+  static hls::sim::Stream<hls::sim::Byte<1>> port20 {
+    .width = 6,
+    .name = "output_i_V_dest_V",
+#ifdef POST_CHECK
+    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_output_i_V_dest_V),
+#else
+    .writer = new hls::sim::Writer(AUTOTB_TVOUT_output_i_V_dest_V),
+    .swriter = new hls::sim::Writer(WRAPC_STREAM_SIZE_OUT_output_i_V_dest_V),
+    .gwriter = new hls::sim::Writer(WRAPC_STREAM_EGRESS_STATUS_output_i_V_dest_V),
+#endif
+  };
+  port20.param = (hls::stream<hls::sim::Byte<1>>*)__xlx_apatb_param_output_i_V_dest_V;
+  port20.hasWrite = true;
 
   refine_signal_handler();
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
+    check(port0);
+    check(port1);
     check(port2);
+    check(port3);
+    check(port4);
+    check(port5);
+    check(port6);
+    check(port7);
+    check(port8);
+    check(port9);
+    check(port10);
+    check(port11);
+    check(port12);
+    check(port13);
+    check(port14);
+    check(port15);
+    check(port16);
+    check(port17);
+    check(port18);
+    check(port19);
+    check(port20);
 #else
     static hls::sim::RefTCL tcl("../tv/cdatafile/ref.tcl");
     CodeState = DUMP_INPUTS;
-    dump(port0, port0.iwriter, tcl.AESL_transaction);
-    dump(port1, port1.iwriter, tcl.AESL_transaction);
-    dump(port2, port2.iwriter, tcl.AESL_transaction);
+    port0.markSize();
+    port1.markSize();
+    port2.markSize();
+    port3.markSize();
+    port4.markSize();
+    port5.markSize();
+    port6.markSize();
+    port7.markSize();
+    port8.markSize();
+    port9.markSize();
+    port10.markSize();
+    port11.markSize();
+    port12.markSize();
+    port13.markSize();
+    port0.buffer();
+    port1.buffer();
+    port2.buffer();
+    port3.buffer();
+    port4.buffer();
+    port5.buffer();
+    port6.buffer();
+    port7.buffer();
+    port8.buffer();
+    port9.buffer();
+    port10.buffer();
+    port11.buffer();
+    port12.buffer();
+    port13.buffer();
+    port14.markSize();
+    port15.markSize();
+    port16.markSize();
+    port17.markSize();
+    port18.markSize();
+    port19.markSize();
+    port20.markSize();
+    CodeState = CALL_C_DUT;
+    transmitter_hw_stub_wrapper(__xlx_apatb_param_input_i_V_data_V, __xlx_apatb_param_input_i_V_keep_V, __xlx_apatb_param_input_i_V_strb_V, __xlx_apatb_param_input_i_V_user_V, __xlx_apatb_param_input_i_V_last_V, __xlx_apatb_param_input_i_V_id_V, __xlx_apatb_param_input_i_V_dest_V, __xlx_apatb_param_input_q_V_data_V, __xlx_apatb_param_input_q_V_keep_V, __xlx_apatb_param_input_q_V_strb_V, __xlx_apatb_param_input_q_V_user_V, __xlx_apatb_param_input_q_V_last_V, __xlx_apatb_param_input_q_V_id_V, __xlx_apatb_param_input_q_V_dest_V, __xlx_apatb_param_output_i_V_data_V, __xlx_apatb_param_output_i_V_keep_V, __xlx_apatb_param_output_i_V_strb_V, __xlx_apatb_param_output_i_V_user_V, __xlx_apatb_param_output_i_V_last_V, __xlx_apatb_param_output_i_V_id_V, __xlx_apatb_param_output_i_V_dest_V);
+    port14.buffer();
+    port15.buffer();
+    port16.buffer();
+    port17.buffer();
+    port18.buffer();
+    port19.buffer();
+    port20.buffer();
+    dump(port0, tcl.AESL_transaction);
+    dump(port1, tcl.AESL_transaction);
+    dump(port2, tcl.AESL_transaction);
+    dump(port3, tcl.AESL_transaction);
+    dump(port4, tcl.AESL_transaction);
+    dump(port5, tcl.AESL_transaction);
+    dump(port6, tcl.AESL_transaction);
+    dump(port7, tcl.AESL_transaction);
+    dump(port8, tcl.AESL_transaction);
+    dump(port9, tcl.AESL_transaction);
+    dump(port10, tcl.AESL_transaction);
+    dump(port11, tcl.AESL_transaction);
+    dump(port12, tcl.AESL_transaction);
+    dump(port13, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
-    CodeState = CALL_C_DUT;
-    transmitter_hw_stub_wrapper(__xlx_apatb_param_input_i, __xlx_apatb_param_input_q, __xlx_apatb_param_output_i);
+    port3.doTCL(tcl);
+    port4.doTCL(tcl);
+    port5.doTCL(tcl);
+    port6.doTCL(tcl);
+    port7.doTCL(tcl);
+    port8.doTCL(tcl);
+    port9.doTCL(tcl);
+    port10.doTCL(tcl);
+    port11.doTCL(tcl);
+    port12.doTCL(tcl);
+    port13.doTCL(tcl);
     CodeState = DUMP_OUTPUTS;
-    dump(port2, port2.owriter, tcl.AESL_transaction);
+    dump(port14, tcl.AESL_transaction);
+    dump(port15, tcl.AESL_transaction);
+    dump(port16, tcl.AESL_transaction);
+    dump(port17, tcl.AESL_transaction);
+    dump(port18, tcl.AESL_transaction);
+    dump(port19, tcl.AESL_transaction);
+    dump(port20, tcl.AESL_transaction);
+    port14.doTCL(tcl);
+    port15.doTCL(tcl);
+    port16.doTCL(tcl);
+    port17.doTCL(tcl);
+    port18.doTCL(tcl);
+    port19.doTCL(tcl);
+    port20.doTCL(tcl);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {
