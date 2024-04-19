@@ -16,9 +16,15 @@ nsdec = 13;              % number of bits for soft decision decoding
 
 %% Transmitter
 
-% Create random binary data
-dataI = randi([0,1], 1, N/2);
-dataQ = randi([0,1], 1, N/2);
+% Input binary data
+%data = [0 1 0 0 1 0 0 0 0 1 1 0 0 1 0 1 0 1 1 0 1 1 0 0 0 1 1 0 1 1 0 0 0 1 1 0 1 1 1 1 0 0 1 0 0 0 0 0 0 1 0 1 0 1 1 1 0 1 1 0 1 1 1 1 0 1 1 1 0 0 1 0 0 1 1 0 1 1 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 1 1 0 1 0 0 0 1 0 1 1 0 1 0 0 1 0 1 0 0 1];
+%dataI = data(1:2:end);
+%dataQ = data(2:2:end);
+%dataI = randi([0,1], 1, N/2);
+%dataQ = randi([0,1], 1, N/2);
+y = load('data_errors.mat');
+dataI = y.dataI;
+dataQ = y.dataQ;
 
 % scramble with pngen to whiten data
 pnGen = pngen(M,length(dataI));
@@ -59,9 +65,9 @@ dataModQ = imag(dataPulseShaped).*carrierQ;
 dataMod = dataModI + dataModQ;
 
 % amplifier (will be analog)
-tx_power = sum(abs(dataMod).^2)/length(dataMod);
-amp_const = 10^(Tx_PowDB/10)/tx_power;
-dataMod = amp_const*dataMod;
+%tx_power = sum(abs(dataMod).^2)/length(dataMod);
+%amp_const = 10^(Tx_PowDB/10)/tx_power;
+%dataMod = amp_const*dataMod;
 
 
 %% Channel
@@ -127,33 +133,36 @@ for i=1:length(echo_idx)
     rake_symbols = rake_symbols + echoes(i,:);
 end
 
+
+start_idx = 1 + ceil(length(h)/2);
+sense_symbols = rake_symbols(start_idx:32:end);
 % symbol synchronization with gardner algorithm
-rake_abs = abs(rake_symbols);
-num_chunks = floor(length(rake_abs)/oversample);
-
-sense_symbols = zeros(1, num_chunks);
-sense_symbols_plot = zeros(1, length(rake_abs));
-
-sample = 1 + ceil(length(h)/2);
-i = 1;
-while sample < (length(rake_abs)-oversample)
-    sense_symbols(i) = rake_symbols(sample);
-    i = i+1;
-    sense_symbols_plot(sample) = rake_symbols(sample);
-
-    e = (rake_abs(sample+oversample) - rake_abs(sample)) * rake_abs(sample+oversample/2);
-    edec = (rake_abs(sample+oversample-1) - rake_abs(sample-1)) * rake_abs(sample+oversample/2 - 1);
-    einc = (rake_abs(sample+oversample+1) - rake_abs(sample+1)) * rake_abs(sample+oversample/2 + 1);
-
-    if abs(edec) < abs(e)
-        sample = sample + oversample - 1;
-    elseif abs(einc) < abs(e)
-        sample = sample + oversample + 1;
-    else
-        sample = sample + oversample;
-    end
-end
-sense_symbols(i) = rake_symbols(sample);
+% rake_abs = abs(rake_symbols);
+% num_chunks = floor(length(rake_abs)/oversample);
+% 
+% sense_symbols = zeros(1, num_chunks);
+% sense_symbols_plot = zeros(1, length(rake_abs));
+% 
+% sample = 1 + ceil(length(h)/2);
+% i = 1;
+% while sample < (length(rake_abs)-oversample)
+%     sense_symbols(i) = rake_symbols(sample);
+%     i = i+1;
+%     sense_symbols_plot(sample) = rake_symbols(sample);
+% 
+%     e = (rake_abs(sample+oversample) - rake_abs(sample)) * rake_abs(sample+oversample/2);
+%     edec = (rake_abs(sample+oversample-1) - rake_abs(sample-1)) * rake_abs(sample+oversample/2 - 1);
+%     einc = (rake_abs(sample+oversample+1) - rake_abs(sample+1)) * rake_abs(sample+oversample/2 + 1);
+% 
+%     if abs(edec) < abs(e)
+%         sample = sample + oversample - 1;
+%     elseif abs(einc) < abs(e)
+%         sample = sample + oversample + 1;
+%     else
+%         sample = sample + oversample;
+%     end
+% end
+% sense_symbols(i) = rake_symbols(sample);
 
 % separate preamble from payload
 preamble_symbols = sense_symbols(1:64);
@@ -212,11 +221,13 @@ subplot(2,1,1)
 hold on;
 plot(real(dataPulseShaped)./max(real(dataPulseShaped)))
 plot(matchedI(ceil(length(h)/2+1):end)./max(matchedI))
+stem(echo_idx(1), 1)
 legend("tx pulse", "rx pulse")
 subplot(2,1,2)
 hold on;
 plot(imag(dataPulseShaped)./max(imag(dataPulseShaped)))
 plot(matchedQ(ceil(length(h)/2+1):end)./max(matchedQ))
+stem(echo_idx(1), 1)
 
 % sent vs received with correction
 figure(3)
@@ -267,13 +278,14 @@ figure(8)
 subplot(2,1,1)
 hold on
 plot(real(symbols(97:end))/max(real(symbols(97:end))))
-plot(real(payload_symbols)/max(real(payload_symbols)))
+%plot(real(payload_symbols)/max(real(payload_symbols)))
 plot(real(equalized_symbols)/max(real(equalized_symbols)))
-legend("Tx", "Not Equalized", "Equalized")
+%legend("Tx", "Not Equalized", "Equalized")
+legend("Tx","Sensed Symbols")
 subplot(2,1,2)
 hold on
 plot(imag(symbols(97:end))/max(imag(symbols(97:end))))
-plot(imag(payload_symbols)/max(imag(payload_symbols)))
+%plot(imag(payload_symbols)/max(imag(payload_symbols)))
 plot(imag(equalized_symbols)/max(imag(equalized_symbols)))
 
 figure(12)
