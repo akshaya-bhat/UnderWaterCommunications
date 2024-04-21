@@ -1,0 +1,883 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Apr 14 17:16:01 2024
+# Process ID: 27456
+# Current directory: /home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1
+# Command line: vivado -log design_1_transmitter_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_transmitter_0_1.tcl
+# Log file: /home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/design_1_transmitter_0_1.vds
+# Journal file: /home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/vivado.jou
+# Running On: lilian, OS: Linux, CPU Frequency: 3143.422 MHz, CPU Physical cores: 4, Host memory: 33502 MB
+#-----------------------------------------------------------
+source design_1_transmitter_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1701.414 ; gain = 87.992 ; free physical = 14277 ; free virtual = 23490
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lilian/school/UnderWaterCommunications/HLS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_transmitter_0_1
+Command: synth_design -top design_1_transmitter_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27509
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2440.660 ; gain = 371.613 ; free physical = 13434 ; free virtual = 22656
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1894.131; parent = 1684.680; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3452.383; parent = 2452.570; children = 999.812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_transmitter_0_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_transmitter_0_1/synth/design_1_transmitter_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'transmitter' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_preamble_bpskI_ROM_AUTO_1R' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_preamble_bpskI_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './transmitter_preamble_bpskI_ROM_AUTO_1R.dat' is read successfully [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_preamble_bpskI_ROM_AUTO_1R.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_preamble_bpskI_ROM_AUTO_1R' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_preamble_bpskI_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_qpskDataI_ROM_AUTO_1R' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_qpskDataI_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-3876] $readmem data file './transmitter_qpskDataI_ROM_AUTO_1R.dat' is read successfully [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_qpskDataI_ROM_AUTO_1R.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_qpskDataI_ROM_AUTO_1R' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_qpskDataI_ROM_AUTO_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_real_sample_RAM_AUTO_1R1W' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_real_sample_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_real_sample_RAM_AUTO_1R1W' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_real_sample_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_real_output_RAM_AUTO_1R1W' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_real_output_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_real_output_RAM_AUTO_1R1W' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_real_output_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_symbolsI_V_RAM_AUTO_1R1W' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_symbolsI_V_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_symbolsI_V_RAM_AUTO_1R1W' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_symbolsI_V_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_9' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_9.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_mux_1938_16_1_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mux_1938_16_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_mux_1938_16_1_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mux_1938_16_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_mac_muladd_16s_16s_31ns_31_4_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:47]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_mac_muladd_16s_16s_31ns_31_4_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:47]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_flow_control_loop_pipe_sequential_init' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_flow_control_loop_pipe_sequential_init' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_9' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_9.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_215_10' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_215_10.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_215_10' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_215_10.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_91' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_91.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_91' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_91.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_92' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_92.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_92' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_92.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_93' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_93.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_93' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_93.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_94' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_94.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_94' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_94.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_95' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_95.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_95' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_95.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_96' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_96.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_96' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_96.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_97' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_97.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_97' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_97.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_98' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_98.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_98' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_98.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_99' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_99.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_99' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_99.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_910' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_910.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_910' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_910.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_911' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_911.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_911' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_911.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_912' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_912.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_912' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_912.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_913' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_913.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_913' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_913.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_914' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_914.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_914' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_914.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_915' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_915.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_transmitter_Pipeline_VITIS_LOOP_193_915' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_193_915.v:10]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_control_s_axi' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_control_s_axi.v:193]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_control_s_axi' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_mux_506_32_1_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mux_506_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_mux_506_32_1_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mux_506_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_regslice_both' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_regslice_both' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_regslice_both__parameterized0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_regslice_both__parameterized0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_regslice_both__parameterized1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_regslice_both__parameterized1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_regslice_both__parameterized2' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_regslice_both__parameterized2' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6157] synthesizing module 'transmitter_regslice_both__parameterized3' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter_regslice_both__parameterized3' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_regslice_both.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'transmitter' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_transmitter_0_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_transmitter_0_1/synth/design_1_transmitter_0_1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_control_s_axi.v:250]
+WARNING: [Synth 8-6014] Unused sequential element and38_i12581684_fu_652_reg was removed.  [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter.v:2490]
+WARNING: [Synth 8-6014] Unused sequential element encoder_state_1_reg was removed.  [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter.v:2562]
+WARNING: [Synth 8-7129] Port WDATA[31] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[15] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[14] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[13] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[12] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[11] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[10] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[9] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[8] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[6] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[5] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[4] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[3] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[2] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[1] in module transmitter_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module transmitter_real_output_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module transmitter_symbolsI_V_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module transmitter_real_sample_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module transmitter_qpskDataI_ROM_AUTO_1R is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module transmitter_preamble_bpskI_ROM_AUTO_1R is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2591.535 ; gain = 522.488 ; free physical = 13448 ; free virtual = 22685
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1894.131; parent = 1684.680; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3591.352; parent = 2591.539; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2609.348 ; gain = 540.301 ; free physical = 13447 ; free virtual = 22683
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1894.131; parent = 1684.680; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3609.164; parent = 2609.352; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2609.348 ; gain = 540.301 ; free physical = 13446 ; free virtual = 22683
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1894.131; parent = 1684.680; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3609.164; parent = 2609.352; children = 999.812
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.7 ; elapsed = 00:00:00.7 . Memory (MB): peak = 2609.348 ; gain = 0.000 ; free physical = 13381 ; free virtual = 22588
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_transmitter_0_1/constraints/transmitter_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_transmitter_0_1/constraints/transmitter_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2780.066 ; gain = 0.000 ; free physical = 12939 ; free virtual = 22186
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2789.973 ; gain = 9.906 ; free physical = 12952 ; free virtual = 22203
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12959 ; free virtual = 22262
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1924.082; parent = 1715.195; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12950 ; free virtual = 22254
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1924.082; parent = 1715.195; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12945 ; free virtual = 22249
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1924.082; parent = 1715.195; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-3936] Found unconnected internal register 'trunc_ln1049_reg_461_reg' and it is trimmed from '17' to '5' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_215_10.v:240]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'transmitter_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'transmitter_control_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3971] The signal "transmitter_symbolsI_V_RAM_AUTO_1R1W:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'transmitter_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'transmitter_control_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12883 ; free virtual = 22228
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1924.082; parent = 1715.195; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 4     
+	   3 Input   13 Bit       Adders := 16    
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 33    
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               64 Bit    Registers := 2     
+	               58 Bit    Registers := 1     
+	               57 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               18 Bit    Registers := 16    
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 32    
+	               13 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 33    
+	                7 Bit    Registers := 5     
+	                6 Bit    Registers := 11    
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 19    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 46    
+	                1 Bit    Registers := 172   
++---RAMs : 
+	              82K Bit	(5248 X 16 bit)          RAMs := 3     
+	               3K Bit	(50 X 64 bit)          RAMs := 2     
+	               2K Bit	(164 X 16 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  188 Bit        Muxes := 2     
+	   2 Input  187 Bit        Muxes := 1     
+	   2 Input  186 Bit        Muxes := 1     
+	   2 Input  185 Bit        Muxes := 1     
+	   2 Input  184 Bit        Muxes := 1     
+	   2 Input  183 Bit        Muxes := 1     
+	   2 Input  182 Bit        Muxes := 1     
+	   2 Input  181 Bit        Muxes := 1     
+	   2 Input  180 Bit        Muxes := 1     
+	   2 Input  179 Bit        Muxes := 1     
+	   2 Input  178 Bit        Muxes := 1     
+	   2 Input  177 Bit        Muxes := 1     
+	   2 Input  176 Bit        Muxes := 1     
+	   2 Input  175 Bit        Muxes := 1     
+	   2 Input  174 Bit        Muxes := 1     
+	   2 Input  173 Bit        Muxes := 1     
+	   2 Input  172 Bit        Muxes := 1     
+	   2 Input  171 Bit        Muxes := 1     
+	   2 Input  170 Bit        Muxes := 1     
+	   2 Input  169 Bit        Muxes := 1     
+	   2 Input  168 Bit        Muxes := 1     
+	   2 Input  167 Bit        Muxes := 1     
+	   2 Input  166 Bit        Muxes := 1     
+	   2 Input  165 Bit        Muxes := 1     
+	   2 Input  164 Bit        Muxes := 1     
+	   2 Input  163 Bit        Muxes := 1     
+	   2 Input  162 Bit        Muxes := 1     
+	   2 Input  161 Bit        Muxes := 1     
+	   2 Input  160 Bit        Muxes := 1     
+	   2 Input  159 Bit        Muxes := 1     
+	   2 Input  158 Bit        Muxes := 1     
+	   2 Input  157 Bit        Muxes := 1     
+	   2 Input  156 Bit        Muxes := 1     
+	   2 Input  155 Bit        Muxes := 1     
+	   2 Input  154 Bit        Muxes := 1     
+	   2 Input  153 Bit        Muxes := 1     
+	   2 Input  152 Bit        Muxes := 1     
+	   2 Input  151 Bit        Muxes := 1     
+	   2 Input  150 Bit        Muxes := 1     
+	   2 Input  149 Bit        Muxes := 1     
+	   2 Input  148 Bit        Muxes := 1     
+	   2 Input  147 Bit        Muxes := 1     
+	   2 Input  146 Bit        Muxes := 1     
+	   2 Input  145 Bit        Muxes := 1     
+	   2 Input  144 Bit        Muxes := 1     
+	   2 Input  143 Bit        Muxes := 1     
+	   2 Input  142 Bit        Muxes := 1     
+	   2 Input  141 Bit        Muxes := 1     
+	   2 Input  140 Bit        Muxes := 1     
+	   2 Input  139 Bit        Muxes := 1     
+	   2 Input  138 Bit        Muxes := 1     
+	   2 Input  137 Bit        Muxes := 1     
+	   2 Input  136 Bit        Muxes := 1     
+	   2 Input  135 Bit        Muxes := 1     
+	   2 Input  134 Bit        Muxes := 1     
+	   2 Input  133 Bit        Muxes := 1     
+	   2 Input  132 Bit        Muxes := 1     
+	   2 Input  131 Bit        Muxes := 1     
+	   2 Input  130 Bit        Muxes := 1     
+	   2 Input  129 Bit        Muxes := 1     
+	   2 Input  128 Bit        Muxes := 1     
+	   2 Input  127 Bit        Muxes := 1     
+	   2 Input  126 Bit        Muxes := 1     
+	   2 Input  125 Bit        Muxes := 1     
+	   2 Input  124 Bit        Muxes := 1     
+	   2 Input  123 Bit        Muxes := 1     
+	   2 Input  122 Bit        Muxes := 1     
+	   2 Input  121 Bit        Muxes := 1     
+	   2 Input  120 Bit        Muxes := 1     
+	   2 Input  119 Bit        Muxes := 1     
+	   2 Input  118 Bit        Muxes := 1     
+	   2 Input  117 Bit        Muxes := 1     
+	   2 Input  116 Bit        Muxes := 1     
+	   2 Input  115 Bit        Muxes := 1     
+	   2 Input  114 Bit        Muxes := 1     
+	   2 Input  113 Bit        Muxes := 1     
+	   2 Input  112 Bit        Muxes := 1     
+	   2 Input  111 Bit        Muxes := 1     
+	   2 Input  110 Bit        Muxes := 1     
+	   2 Input  109 Bit        Muxes := 1     
+	   2 Input  108 Bit        Muxes := 1     
+	   2 Input  107 Bit        Muxes := 1     
+	   2 Input  106 Bit        Muxes := 1     
+	   2 Input  105 Bit        Muxes := 1     
+	   2 Input  104 Bit        Muxes := 1     
+	   2 Input  103 Bit        Muxes := 1     
+	   2 Input  102 Bit        Muxes := 1     
+	   2 Input  101 Bit        Muxes := 1     
+	   2 Input  100 Bit        Muxes := 1     
+	   2 Input   99 Bit        Muxes := 1     
+	   2 Input   98 Bit        Muxes := 1     
+	   2 Input   97 Bit        Muxes := 1     
+	   2 Input   96 Bit        Muxes := 1     
+	   2 Input   95 Bit        Muxes := 1     
+	   2 Input   94 Bit        Muxes := 1     
+	   2 Input   93 Bit        Muxes := 1     
+	   2 Input   92 Bit        Muxes := 1     
+	   2 Input   91 Bit        Muxes := 1     
+	   2 Input   90 Bit        Muxes := 1     
+	   2 Input   89 Bit        Muxes := 1     
+	   2 Input   88 Bit        Muxes := 1     
+	   2 Input   87 Bit        Muxes := 1     
+	   2 Input   86 Bit        Muxes := 1     
+	   2 Input   85 Bit        Muxes := 1     
+	   2 Input   84 Bit        Muxes := 1     
+	   2 Input   83 Bit        Muxes := 1     
+	   2 Input   82 Bit        Muxes := 1     
+	   2 Input   81 Bit        Muxes := 1     
+	   2 Input   80 Bit        Muxes := 1     
+	   2 Input   79 Bit        Muxes := 1     
+	   2 Input   78 Bit        Muxes := 1     
+	   2 Input   77 Bit        Muxes := 1     
+	   2 Input   76 Bit        Muxes := 1     
+	   2 Input   75 Bit        Muxes := 1     
+	   2 Input   74 Bit        Muxes := 1     
+	   2 Input   73 Bit        Muxes := 1     
+	   2 Input   72 Bit        Muxes := 1     
+	   2 Input   71 Bit        Muxes := 1     
+	   2 Input   70 Bit        Muxes := 1     
+	   2 Input   69 Bit        Muxes := 1     
+	   2 Input   68 Bit        Muxes := 1     
+	   2 Input   67 Bit        Muxes := 1     
+	   2 Input   66 Bit        Muxes := 1     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 31    
+	   2 Input   63 Bit        Muxes := 1     
+	   2 Input   62 Bit        Muxes := 1     
+	   2 Input   61 Bit        Muxes := 1     
+	   3 Input   60 Bit        Muxes := 1     
+	   2 Input   59 Bit        Muxes := 1     
+	   2 Input   58 Bit        Muxes := 1     
+	   2 Input   57 Bit        Muxes := 1     
+	   2 Input   55 Bit        Muxes := 1     
+	   2 Input   53 Bit        Muxes := 1     
+	   2 Input   51 Bit        Muxes := 1     
+	   2 Input   49 Bit        Muxes := 1     
+	   2 Input   47 Bit        Muxes := 1     
+	   2 Input   45 Bit        Muxes := 1     
+	   2 Input   43 Bit        Muxes := 1     
+	   2 Input   41 Bit        Muxes := 1     
+	   2 Input   39 Bit        Muxes := 1     
+	   2 Input   37 Bit        Muxes := 1     
+	   2 Input   35 Bit        Muxes := 1     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 49    
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   29 Bit        Muxes := 1     
+	   2 Input   27 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 3078  
+	 101 Input   16 Bit        Muxes := 2     
+	  65 Input   16 Bit        Muxes := 2     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 4     
+	  33 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 16    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 16    
+	   2 Input    2 Bit        Muxes := 31    
+	   4 Input    2 Bit        Muxes := 22    
+	   2 Input    1 Bit        Muxes := 184   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U24/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U44/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U49/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U54/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U59/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U64/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U69/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U74/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_16s_31ns_31_4_1_U79/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_96_fu_2380/mac_muladd_16s_16s_31ns_31_4_1_U34/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_97_fu_2387/mac_muladd_16s_16s_31ns_31_4_1_U39/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_95_fu_2373/mac_muladd_16s_16s_31ns_31_4_1_U29/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:39]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '31' bits. [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_mac_muladd_16s_16s_31ns_31_4_1.v:32]
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_92_fu_2352/mac_muladd_16s_16s_31ns_31_4_1_U14/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_91_fu_2345/mac_muladd_16s_16s_31ns_31_4_1_U9/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C'+(A2*B2)')'.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_93_fu_2359/mac_muladd_16s_16s_31ns_31_4_1_U19/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/m is absorbed into DSP grp_transmitter_Pipeline_VITIS_LOOP_193_9_fu_2332/mac_muladd_16s_16s_31ns_31_4_1_U2/transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0_U/p_reg_reg.
+INFO: [Synth 8-3971] The signal "inst/symbolsI_V_U/ram_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-6014] Unused sequential element imag_sample_U/genblk1[0].q0_reg0_reg was removed.  [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_real_sample_RAM_AUTO_1R1W.v:47]
+WARNING: [Synth 8-6014] Unused sequential element imag_sample_U/genblk1[1].ram_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element real_sample_U/genblk1[0].q0_reg0_reg was removed.  [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d073/hdl/verilog/transmitter_real_sample_RAM_AUTO_1R1W.v:47]
+WARNING: [Synth 8-6014] Unused sequential element real_sample_U/genblk1[1].ram_reg was removed. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:46 ; elapsed = 00:02:49 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12804 ; free virtual = 22236
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2047.807; parent = 1839.035; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | dataUpsampledI_V_U/ram_reg   | 5 K x 16(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
+|inst        | dataPulseShapedI_V_U/ram_reg | 5 K x 16(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
+|inst        | symbolsI_V_U/ram_reg         | 164 x 16(NO_CHANGE)    | W |   | 164 x 16(READ_FIRST)   | W | R | Port A and B     | 1      | 0      | 
+|inst        | real_output_U/ram_reg        | 5 K x 16(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
++------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                        | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A2*B2)')' | 17     | 17     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
++---------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:53 ; elapsed = 00:02:55 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12706 ; free virtual = 22138
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2106.919; parent = 1898.146; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:06 ; elapsed = 00:03:09 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12652 ; free virtual = 22081
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                   | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | dataPulseShapedI_V_U/ram_reg | 5 K x 16(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
+|inst        | symbolsI_V_U/ram_reg         | 164 x 16(NO_CHANGE)    | W |   | 164 x 16(READ_FIRST)   | W | R | Port A and B     | 1      | 0      | 
+|inst        | real_output_U/ram_reg        | 5 K x 16(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
+|inst        | dataUpsampledI_V_U/ram_reg   | 5 K x 16(READ_FIRST)   | W | R |                        |   |   | Port A           | 0      | 4      | 
++------------+------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/dataPulseShapedI_V_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataPulseShapedI_V_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataPulseShapedI_V_U/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataPulseShapedI_V_U/ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/symbolsI_V_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/real_output_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/real_output_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/real_output_U/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/real_output_U/ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataUpsampledI_V_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataUpsampledI_V_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataUpsampledI_V_U/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dataUpsampledI_V_U/ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:09 ; elapsed = 00:03:12 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12669 ; free virtual = 22098
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:14 ; elapsed = 00:03:17 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12666 ; free virtual = 22097
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:14 ; elapsed = 00:03:17 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12666 ; free virtual = 22097
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12652 ; free virtual = 22100
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12652 ; free virtual = 22100
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12652 ; free virtual = 22100
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12652 ; free virtual = 22100
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                        | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
+|transmitter_mac_muladd_16s_16s_31ns_31_4_1_DSP48_0 | (C'+(A'*B')')' | 30     | 18     | 31     | -      | 31     | 1    | 1    | 1    | -    | -     | 1    | 1    | 
++---------------------------------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    68|
+|2     |DSP48E1  |    16|
+|3     |LUT1     |   122|
+|4     |LUT2     |   121|
+|5     |LUT3     |   359|
+|6     |LUT4     |   279|
+|7     |LUT5     |   510|
+|8     |LUT6     |  1145|
+|9     |MUXF7    |     6|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |    12|
+|12    |FDRE     |  1365|
+|13    |FDSE     |    18|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:14 ; elapsed = 00:03:18 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12652 ; free virtual = 22100
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2151.940; parent = 1943.168; children = 209.451
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3757.773; parent = 2757.961; children = 999.812
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 38 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:06 ; elapsed = 00:03:10 . Memory (MB): peak = 2789.973 ; gain = 540.301 ; free physical = 12715 ; free virtual = 22163
+Synthesis Optimization Complete : Time (s): cpu = 00:03:15 ; elapsed = 00:03:18 . Memory (MB): peak = 2789.973 ; gain = 720.926 ; free physical = 12716 ; free virtual = 22163
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2789.973 ; gain = 0.000 ; free physical = 12826 ; free virtual = 22272
+INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.973 ; gain = 0.000 ; free physical = 12796 ; free virtual = 22226
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 5c16d9db
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:23 ; elapsed = 00:03:26 . Memory (MB): peak = 2789.973 ; gain = 1051.871 ; free physical = 13007 ; free virtual = 22438
+INFO: [Common 17-1381] The checkpoint '/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/design_1_transmitter_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_transmitter_0_1, cache-ID = 78f91799f57df61d
+INFO: [Coretcl 2-1174] Renamed 94 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_transmitter_0_1_synth_1/design_1_transmitter_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_transmitter_0_1_utilization_synth.rpt -pb design_1_transmitter_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 14 17:19:43 2024...
