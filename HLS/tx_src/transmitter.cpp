@@ -7,16 +7,18 @@
 #include <ap_fixed.h>
 #include <ap_int.h>
 #include <iostream>
+#include <vector>
+#include <complex>
 using namespace std;
 
-int encoder_state = 0; //global variable
+int state[K] = {0}; //global variable
 
 //make sizes dynamic
 //make the input data 128
 //optimizations, bitstream, and connect to DAC
 
-//void transmitter (data_t* input_i, data_t* input_q, double* output_i)
-void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i)
+void transmitter (data_t* input_i, data_t* input_q, double* output_i)
+//void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i)
 {
 #pragma HLS PIPELINE off
 	#pragma HLS INTERFACE mode=axis port=input_i,input_q,output_i
@@ -27,216 +29,198 @@ void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q,
 	/**
 	 * DMA Streaming INPUT
 	 */
-	fp_int real_sample[NHalf], imag_sample[NHalf], real_output[upsampleSize];
-	transPkt real_sample_pkt, imag_sample_pkt;
+//	fp_int real_sample[50], imag_sample[50], real_output[5248];
+//	transPkt real_sample_pkt, imag_sample_pkt;
 
-	for (int i = 0; i < NHalf; i++)
-	{
-		real_sample_pkt = input_i.read();
-		imag_sample_pkt = input_q.read();
-
-		real_sample[i].i = real_sample_pkt.data;
-		imag_sample[i].i = imag_sample_pkt.data;
-
-	}
-
-
-#pragma HLS ARRAY_PARTITION variable=cos_coefficients_table complete
-#pragma HLS ARRAY_PARTITION variable=sin_coefficients_table complete
-#pragma HLS ARRAY_PARTITION variable=h complete
-#pragma HLS ARRAY_PARTITION variable=Ga complete
-#pragma HLS ARRAY_PARTITION variable=Gb complete
-#pragma HLS ARRAY_PARTITION variable=pnGenSequence complete
-
-	/**
-	 * Scrambler
-	 * 	xor with PN gen sequence LUT
-	 */
-data_t scrambledDataI[NHalf], scrambledDataQ[NHalf];
-data_t encodedDataI[N];
-data_t encodedDataQ[N];
-//#pragma HLS ARRAY_PARTITION variable=scrambledDataI type=complete
-//#pragma HLS ARRAY_PARTITION variable=scrambledDataQ type=complete
-
-	for (int i = 0; i < NHalf; i++) {
-//#pragma HLS PIPELINE II=2
-		scrambledDataI[i] = real_sample[i].ip ^ pnGenSequence[i];
-		scrambledDataQ[i] = imag_sample[i].ip ^ pnGenSequence[i];
-		encoder(scrambledDataI[i], &encodedDataI[i], &encodedDataI[i*2]);
-		encoder(scrambledDataQ[i], &encodedDataQ[i], &encodedDataQ[i*2]);
-	}
-
-
-	/**
-	 * Encoder
-	 * 	apply convolutional encoder (7 [171 133] code)
-	 */
-
-//#pragma HLS ARRAY_PARTITION variable=encodedDataI type=complete
-//#pragma HLS ARRAY_PARTITION variable=encodedDataQ type=complete
-
-
-//	for (int i = 0; i < NHalf; i++) {
-//#pragma HLS PIPELINE
+//	for (int i = 0; i < 50; i++)
+//	{
+//		real_sample_pkt = input_i.read();
+//		imag_sample_pkt = input_q.read();
+//
+//		real_sample[i].i = real_sample_pkt.data;
+//		imag_sample[i].i = imag_sample_pkt.data;
 //
 //	}
 
 
-	/**
-	 * Symbol Mapping
-	 * 	QPSK
-	 */
-	double_t qpskDataI[N];
-	double_t qpskDataQ[N];
-//#pragma HLS ARRAY_PARTITION variable=qpskDataI type=complete
-//#pragma HLS ARRAY_PARTITION variable=qpskDataQ type=complete
+//#pragma HLS ARRAY_PARTITION variable=cos_coefficients_table complete
+//#pragma HLS ARRAY_PARTITION variable=sin_coefficients_table complete
+//#pragma HLS ARRAY_PARTITION variable=h complete
+//#pragma HLS ARRAY_PARTITION variable=Ga complete
+//#pragma HLS ARRAY_PARTITION variable=Gb complete
+//#pragma HLS ARRAY_PARTITION variable=pnGenSequence complete
 
 
-	for (int i = 0; i < N; i++) {
-		#pragma HLS UNROLL factor=16
-		if (encodedDataI[i] == 0) {
-			qpskDataI[i] = -1.0;
-		}
-		else {
-			qpskDataI[i] = 1.0;
-		}
-		if (encodedDataQ[i] == 0) {
-			qpskDataQ[i] = -1.0;
-		}
-		else {
-			qpskDataQ[i] = 1.0;
-		}
-	}
+
 
 
 	/**
-	 * Golay Preamble
-	 */
-	double_t preamble_bpskI[preambleLen];
-	double_t preamble_bpskQ[preambleLen];
-//#pragma HLS ARRAY_PARTITION variable=preamble_bpskI type=complete
-//#pragma HLS ARRAY_PARTITION variable=preamble_bpskQ type=complete
+		 * Scrambler
+		 * 	xor with PN gen sequence LUT
+		 */
+		data_t scrambledDataI[50], scrambledDataQ[50];
+		for (int i = 0; i < N/2; i++) {
+			scrambledDataI[i] = input_i[i] ^ pnGenSequence[i];
+			scrambledDataQ[i] = input_q[i] ^ pnGenSequence[i];
+		}
 
-	for (int i = 0; i < preambleLenHalf; ++i) {
-//		#pragma HLS UNROLL factor=16
-		preamble_bpskI[i] = Ga[i];//*1.414;
-		preamble_bpskQ[i] = Ga[i];//*1.414;
+		/**
+		 * Encoder
+		 * 	apply convolutional encoder (7 [171 133] code)
+		 */
 
-		preamble_bpskI[(preambleLenHalf-1) + i] = Gb[i];//*1.414;
-		preamble_bpskQ[(preambleLenHalf-1) + i] = Gb[i];//*1.414;
+		//encoder output doesn't match matlab
+		data_t encodedDataI[100];
+		data_t encodedDataQ[100];
+		int z = 0;
+		for (int i = 0; i < 100; i+=2) {
+			encoder(scrambledDataI[z], &encodedDataI[i], &encodedDataI[i+1]);
+			z++;
+		}
 
-	}
+		for (int i = 0; i < K; ++i) {
+		    state[i] = 0;
+		}
 
-	double_t symbolsI[preambleLen+N];
-	double_t symbolsQ[preambleLen+N];
-//#pragma HLS ARRAY_PARTITION variable=symbolsI type=complete
-//#pragma HLS ARRAY_PARTITION variable=symbolsQ type=complete
-
-
-	for (int i = 0; i < preambleLen; ++i) {
-		#pragma HLS UNROLL factor=16
-		symbolsI[i] = preamble_bpskI[i];
-		symbolsQ[i] = preamble_bpskQ[i];
-	}
-	for (int i = 0; i < N; i++) {
-		#pragma HLS UNROLL factor=16
-		symbolsI[preambleLen+i] = qpskDataI[i];
-		symbolsQ[preambleLen+i] = qpskDataQ[i];
-	}
-
-
-	/**
-	 * Pulse Shaping
-	 * 	SRRC Filter
-	 */
-	//Upsample
-//	int upsampleSize = oversample*(preambleLen+N);
-	double_t dataUpsampledI[upsampleSize];
-	double_t dataUpsampledQ[upsampleSize];
-//#pragma HLS ARRAY_PARTITION variable=dataUpsampledI type=complete
-//#pragma HLS ARRAY_PARTITION variable=dataUpsampledQ type=complete
+		z = 0;
+		for (int i = 0; i < 100; i+=2) {
+			encoder(scrambledDataQ[z], &encodedDataQ[i], &encodedDataQ[i+1]);
+			z++;
+		}
 
 
-	int j = 0;
-	for (int i = 0; i < upsampleSize; i+=oversample) {
+		/**
+		 * Symbol Mapping
+		 * 	QPSK
+		 */
+		data_t qpskDataI[100];
+		data_t qpskDataQ[100];
 
-//		#pragma HLS UNROLL factor=64
-		dataUpsampledI[i] = symbolsI[j];
-		dataUpsampledQ[i] = symbolsQ[j];
-		j++;
-	}
+		for (int i = 0; i < 100; i++) {
 
-	double_t dataPulseShapedI[upsampleSize];
-	double_t dataPulseShapedQ[upsampleSize];
-	double_t theta;
-//#pragma HLS ARRAY_PARTITION variable=dataPulseShapedI type=cyclic
-//#pragma HLS ARRAY_PARTITION variable=dataPulseShapedQ type=cyclic
-
-
-	//Convolution
-#pragma HLS ARRAY_PARTITION variable=dataUpsampledI complete
-#pragma HLS ARRAY_PARTITION variable=dataUpsampledQ complete
-#pragma HLS ARRAY_PARTITION variable=dataPulseShapedI cyclic factor=16
-#pragma HLS ARRAY_PARTITION variable=dataPulseShapedQ cyclic factor=16
-
-for (int i = 0; i < upsampleSize; i++) {
-    #pragma HLS PIPELINE // Pipeline the outer loop
-
-    // Unroll the outer loop for parallelism
-    #pragma HLS UNROLL factor=16
-
-    // Initialize accumulator variables
-	double_t dataPSI_acc = 0;
-	double_t dataPSQ_acc = 0;
-
-    // Inner loop
-    for (int j = 0; j < 193; j++) {
-        #pragma HLS UNROLL factor=8 // Unroll the inner loop for parallelism
-
-        // Compute convolution
-        dataPSI_acc += dataUpsampledI[i-j] * h[j];
-        dataPSQ_acc += dataUpsampledQ[i-j] * h[j];
-    }
-
-    // Store results
-    dataPulseShapedI[i] = dataPSI_acc;
-    dataPulseShapedQ[i] = dataPSQ_acc;
-}
+			if (encodedDataI[i] == 0) {
+				qpskDataI[i] = -1;
+			}
+			else {
+				qpskDataI[i] = 1;
+			}
+			if (encodedDataQ[i] == 0) {
+				qpskDataQ[i] = -1;
+			}
+			else {
+				qpskDataQ[i] = 1;
+			}
+		}
 
 
-	/**
-	 * Modulation
-	 */
+		/**
+		 * Golay Preamble
+		 */
+//		std::complex<double> raw_symbols[100];
+//
+//			for (int i = 0; i < 100; i++) {
+//				raw_symbols[i] = std::complex<double>(qpskDataI[i], qpskDataQ[i]);
+//			}
+		//Theres a weird zero somewhere
+		double preamble_qpsk[64];
+			for (int i = 0; i < 32; ++i) {
+				preamble_qpsk[i] = Ga[i]*1.414;
+
+			}
+			int x = 0;
+			for (int i = 32; i < 64; ++i) {
+				preamble_qpsk[i] = Gb[x]*1.414;
+				x++;
+			}
 
 
-//	double dataMod[upsampleSize];
+		double symbolsI[164];
+		double symbolsQ[164];
+			for (int i = 0; i < 64; ++i) {
+				symbolsI[i] = preamble_qpsk[i];
+				symbolsQ[i] = 0.0;
+			}
+			x = 0;
+			for (int i = 64; i < 164; i++) {
+				symbolsI[i] = qpskDataI[x];
+				symbolsQ[i] = qpskDataQ[x];
+				x++;
+			}
 
-	for (int i = 0; i < upsampleSize; i++) {
-#pragma HLS PIPELINE II=2
-////modulation
-		double_t t = i / fs;
-		theta = fc * t;
+		/**
+		 * Pulse Shaping
+		 * 	SRRC Filter
+		 */
+		//Upsample
+		int upsampleSize = oversample*164;
+		double dataUpsampledI[upsampleSize];
+		double dataUpsampledQ[upsampleSize];
+		std::fill(dataUpsampledI, dataUpsampledI + upsampleSize, 0.0);
+		std::fill(dataUpsampledQ, dataUpsampledQ + upsampleSize, 0.0);
 
-		int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
+			int j = 0;
+			for (int i = 0; i < upsampleSize; i+=oversample) {
+				dataUpsampledI[i] = symbolsI[j];
+				dataUpsampledQ[i] = symbolsQ[j];
+				j++;
+			}
 
-		double_t cos = cos_coefficients_table[index];
-		double_t sin = -1 * sin_coefficients_table[index];
-		double_t modI = dataPulseShapedI[i] * cos;
-		double_t modQ = dataPulseShapedQ[i] * sin;
 
-		real_output[i].fp = modI + modQ;
-	}
+
+		double dataPulseShapedI[upsampleSize];
+		double dataPulseShapedQ[upsampleSize];
+			//Convolution
+			for (int i = 0; i < upsampleSize; i++) {
+				dataPulseShapedI[i] = 0.0;
+				dataPulseShapedQ[i] = 0.0;
+				for (int j = 0; j < 193; j++) {
+					dataPulseShapedI[i] += dataUpsampledI[i-j] * h[j];
+					dataPulseShapedQ[i] += dataUpsampledQ[i-j] * h[j];
+				}
+			}
+		cout << "pulse shapred " << endl;
+		FILE *fp2 = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS.bin","wb");
+			for (int i = 0; i < (upsampleSize); ++i) {
+				cout << i << " " << dataPulseShapedI[i] << " " << dataPulseShapedQ[i] << endl;
+				double realPart = dataPulseShapedI[i];
+				double imagPart = dataPulseShapedQ[i];
+				fwrite(&(realPart), sizeof(double),1, fp2);
+				fwrite(&(imagPart), sizeof(double),1, fp2);
+			}
+
+		fclose(fp2);
+
+		/**
+		 * Modulation
+		 */
+
+		double theta;
+		for (int i = 0; i < 5248; i++) {
+			double t = static_cast<double>(i) / fs;
+			theta = fc * t;
+			int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
+			double cos = cos_coefficients_table[index];
+			double sin = -1.0 * sin_coefficients_table[index];
+//			cout << "cos " << cos << endl;
+
+			double modI = dataPulseShapedI[i] * cos - dataPulseShapedQ[i] * sin;
+			double modQ = dataPulseShapedI[i] * sin + dataPulseShapedQ[i] * cos;
+
+			output_i[i] =  modI + modQ;
+		}
+
+
 
 	/**
 	 * DMA Streaming OUTPUT
 	 */
-	for (int i = 0; i < upsampleSize; i++)
-	{
-#pragma HLS UNROLL factor=128
-		real_sample_pkt.data = real_output[i].i;
-		real_sample_pkt.last = (i==upsampleSize-1) ? 1:0;
-		output_i.write(real_sample_pkt);
-	}
+//	for (int i = 0; i < 5248; i++)
+//	{
+////#pragma HLS UNROLL factor=64
+//		real_sample_pkt.data = real_output[i].i;
+//		real_sample_pkt.last = (i==5248-1) ? 1:0;
+//		output_i.write(real_sample_pkt);
+//	}
 
 }
 
@@ -245,28 +229,21 @@ for (int i = 0; i < upsampleSize; i++) {
  * Convolutional Encoder
  */
 void encoder(data_t bit, data_t *bit0, data_t *bit1) {
-	int feedback1 = 0;
-	int feedback2 = 0;
+	
+	 state[6] = state[5];
+	 state[5] = state[4];
+	 state[4] = state[3];
+	 state[3] = state[2];
+	 state[2] = state[1];
+	 state[1] = state[0];
+	 state[0] = bit;
 
-	feedback1 = ((encoder_state & G1[0]) >> 0) ^
-				((encoder_state & G1[1]) >> 1) ^
-				((encoder_state & G1[2]) >> 2) ^
-				((encoder_state & G1[3]) >> 3) ^
-				((encoder_state & G1[4]) >> 4) ^
-				((encoder_state & G1[5]) >> 5) ^
-				((encoder_state & G1[6]) >> 6);
+	 int feedback1 = (state[0] & G1[0]) ^ (state[1] & G1[1]) ^ (state[2] & G1[2]) ^ (state[3] & G1[3]) ^ (state[4] & G1[4]) ^ (state[5] & G1[5]) ^ (state[6] & G1[6]);
 
-	feedback2 = ((encoder_state & G2[0]) >> 0) ^
-				((encoder_state & G2[1]) >> 1) ^
-				((encoder_state & G2[2]) >> 2) ^
-				((encoder_state & G2[3]) >> 3) ^
-				((encoder_state & G2[4]) >> 4) ^
-				((encoder_state & G2[5]) >> 5) ^
-				((encoder_state & G2[6]) >> 6);
+	 int feedback2 = (state[0] & G2[0]) ^ (state[1] & G2[1]) ^ (state[2] & G2[2]) ^ (state[3] & G2[3]) ^ (state[4] & G2[4]) ^ (state[5] & G2[5]) ^ (state[6] & G2[6]);
 
-	encoder_state = ((encoder_state << 1) | bit) & 0x3F;
-	(*bit0) = feedback1;
-	(*bit1) = feedback2;
+	 (*bit0) = feedback1 % 2;
+	 (*bit1) = feedback2 % 2;
 
 }
 

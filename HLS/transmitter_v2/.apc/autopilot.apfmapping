@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="transmitter_v2.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter_v2.cpp"/>
+    <originFiles name="transmitter_v2.h" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter_v2.h"/>
+  </source>
+  <testbench>
+    <originFiles name="transmitter_v2_tb.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter_v2_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

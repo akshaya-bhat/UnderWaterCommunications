@@ -5,11 +5,6 @@
                 <option name="name" value="transmitter"/>
             </pragma>
         </directive>
-        <directive functionName="transmitter" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="transmitter"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

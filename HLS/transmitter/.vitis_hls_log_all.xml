@@ -6,17 +6,35 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:53:15.127-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:49:52.104-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:48:40.466-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:36:05.130-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:33:43.630-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:29:01.437-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:27:00.005-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:24:07.119-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:16:45.259-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:14:01.946-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:12:50.491-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:12:05.376-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:08:32.786-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:07:44.468-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:06:49.277-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:05:23.383-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:03:18.246-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="transmitter" solutionName="solution1" date="2024-04-22T21:02:25.630-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T20:59:12.453-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T20:57:06.367-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T20:54:37.777-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="transmitter" solutionName="solution1" date="2024-04-22T20:51:59.844-0700"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'encoder_state_1' is power-on initialization." projectName="transmitter" solutionName="solution1" date="2024-04-11T20:19:30.411-0700" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="transmitter" solutionName="solution1" date="2024-04-11T20:19:30.233-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (tx_src/transmitter.cpp:198:24)" projectName="transmitter" solutionName="solution1" date="2024-04-11T19:58:16.438-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (tx_src/transmitter.cpp:197:17)" projectName="transmitter" solutionName="solution1" date="2024-04-11T19:58:16.395-0700" type="Warning"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>

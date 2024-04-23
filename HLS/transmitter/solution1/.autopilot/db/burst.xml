@@ -1,4 +1,0 @@
-<VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="tx_src/transmitter.cpp:95:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="tx_src/transmitter.cpp:95:19" LoopName="VITIS_LOOP_95_3" ParentFunc="transmitter(hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_int&lt;16&gt;, 2ul, 5ul, 6ul&gt;, 0&gt;&amp;)"/>
-</VitisHLS:BurstInfo>
-
