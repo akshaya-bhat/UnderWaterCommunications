@@ -10,4 +10,7 @@
 ![touching container](https://github.com/akshaya-bhat/UnderWaterCommunications/assets/44793381/c1783ac2-596b-4976-aab9-0f52f3971712)
 ![just sitting in water](https://github.com/akshaya-bhat/UnderWaterCommunications/assets/44793381/6164ab6f-d6c8-4a1d-84e4-9049367e4f14)
 
+## PYNQ Rx and Arduino Tx Set up
+![PYNQ Rx and Arduino Tx Setup](https://github.com/akshaya-bhat/UnderWaterCommunications/assets/44793381/4e460e17-8681-451d-baa2-2179e5c6b8d1)
+
 
