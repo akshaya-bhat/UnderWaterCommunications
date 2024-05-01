@@ -12,7 +12,7 @@ Our project aims to develop an underwater communication device using a transmitt
 
 Given the limitations of RF transmission underwater, our approach utilizes ultrasonic waves for effective communication. 
 
-This type of underwater point-to-point communication is useful in many situations including scuba diving, underwater cave exploration, underwater robotics, and scientific research endeavors.
+This type of underwater point-to-point communication is useful in many situations including scuba diving, underwater cave exploration, underwater robotics, and scientific research.
 
 Our transmitter and receiver designs will use many of the same concepts as a regular radio, albeit adapted to accommodate ultrasonic transducers instead of RF antennas. 
 
