@@ -6,49 +6,48 @@
 #ifndef RECEIVER_H_
 #define RECEIVER_H_
 
-#include <ap_fixed.h>
-#include <ap_int.h>
-#include <iostream>
-#include "hls_stream.h"
 
 using namespace std;
 
 typedef int	coef_t;
-typedef int16_t data_t;
-typedef float double_t;
+typedef float float_t;
 
 /**
  * Parameters
  */
+#define CS 16 // length of cos and sin buffers
 #define oversample 32 //samples per symbol
 #define preambleLen 64
 #define preambleLenHalf 32
 #define K 7
 #define GOL_LEN 32
 #define upsamplePacketSize 7168
+#define buffer_len 7361
 #define downsamplePacketSize 224
-#define buflen 7360
 #define filtsize 193
 #define presize 2240
-#define threshold 3 // TODO: Change to the actual threshold
+#define threshold 10000 // TODO: Change to the actual threshold
 
 //int upsampleSize = oversample*(preambleLen+N); //5248
 
 extern int carrier_pos;
 extern int packet_start;
 extern int samples_in_packet;
-extern double_t samples_I[buflen];
-extern double_t samples_Q[buflen];
-extern double_t matched_I[buflen];
-extern double_t matched_Q[buflen];
-extern double_t delay_line_I[buflen];
-extern double_t delay_line_Q[buflen];
-extern double_t corr_I[buflen];
-extern double_t corr_Q[buflen];
-extern double_t corr_abs[buflen];
+extern float_t samples_I[buffer_len];
+extern float_t samples_Q[buffer_len];
+extern float_t matched_I[buffer_len];
+extern float_t matched_Q[buffer_len];
+extern float_t delay_line_I[filtsize];
+extern float_t delay_line_Q[filtsize];
+extern float_t corr_I_prev;
+extern float_t corr_Q_prev;
+extern float_t corr_abs_prev;
+extern float_t corr_I;
+extern float_t corr_Q;
+extern float_t corr_abs;
 
 //PULSE SHAPING
-const double_t h[193] = {0.000536001233313081, 7.06098136602443e-05, -0.000406007114139769, -0.000883634810045066, -0.00135159683852761,
+const float_t h[193] = {0.000536001233313081, 7.06098136602443e-05, -0.000406007114139769, -0.000883634810045066, -0.00135159683852761,
 	    				-0.00179895876703321, -0.00221474590344165, -0.00258817136986824, -0.00290887047441511, -0.00316713707124861,
 						-0.00335415739962686, -0.00346223677007767, -0.00348501442541717, -0.00341766194891276, -0.00325706072336525,
 						-0.00300195416341651, -0.00265307074760023, -0.00221321426357711, -0.00168731814508746, -0.00108246131634044,
@@ -88,7 +87,7 @@ const double_t h[193] = {0.000536001233313081, 7.06098136602443e-05, -0.00040600
 						-0.00258817136986824, -0.00221474590344165, -0.00179895876703321, -0.00135159683852761, -0.000883634810045066,
 						-0.000406007114139769, 7.06098136602443e-05, 0.000536001233313081};
 
-const double_t preamble_upsampled[presize] = {0.00075802,9.9857e-05,-0.00057418,-0.0012496,-0.0019114,-0.0025441,-0.0031321,
+const float_t preamble_upsampled[presize] = {0.00075802,9.9857e-05,-0.00057418,-0.0012496,-0.0019114,-0.0025441,-0.0031321,
                                               -0.0036602,-0.0041138,-0.004479,-0.0047435,-0.0048963,-0.0049286,-0.0048333,
                                               -0.0046062,-0.0042454,-0.003752,-0.00313,-0.0023862,-0.0015308,-0.00057678,
                                               0.00046002,0.0015609,0.0027046,0.0038678,0.0050249,0.006149,0.0072121,
@@ -288,12 +287,12 @@ const double_t preamble_upsampled[presize] = {0.00075802,9.9857e-05,-0.00057418,
                                               0.0012496,0.00057418,-9.9857e-05,-0.00075802,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 //SIN AND COS LUT
-const double_t cos_coefficients_table[]={1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090,0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,-0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785};
+const float_t cos_coefficients_table[CS]={1,-0.38268,-0.70711,0.92388,0,-0.92388,0.70711,0.38268,-1,0.38268,0.70711,-0.92388,0,0.92388,-0.70711,-0.38268};
 
-const double_t sin_coefficients_table[]={0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,-0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785,1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090};
+const float_t sin_coefficients_table[CS]={0,0.92388,-0.70711,-0.38268,1,-0.38268,-0.70711,0.92388,0,-0.92388,0.70711,0.38268,-1,0.38268,0.70711,-0.92388};
 
 
 //void transmitter (data_t* input_i, data_t* input_q, double* output_i);
-void receiver(double_t *result_I, double_t *result_Q, double_t new_sample);
+int receiver(float_t *result_I, float_t *result_Q, float_t new_sample);
 
 #endif
