@@ -5,11 +5,11 @@
 	(uuid "5bfd56d5-c28e-473d-8c6f-8780ca293668")
 	(paper "A4")
 	(lib_symbols
-		(symbol "CapstoneSymbols:Grover"
+		(symbol "CapstoneSymbols:Grover Shield"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Grover"
+			(property "Reference" "Grover Shield"
 				(at 0 1.016 0)
 				(effects
 					(font
@@ -52,7 +52,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Grover_0_1"
+			(symbol "Grover Shield_0_1"
 				(rectangle
 					(start -45.72 10.16)
 					(end 44.45 -36.83)
@@ -109,7 +109,7 @@
 					)
 				)
 			)
-			(symbol "Grover_1_1"
+			(symbol "Grover Shield_1_1"
 				(text "A0"
 					(at 30.988 -22.098 0)
 					(effects
@@ -1185,20 +1185,20 @@
 		)
 	)
 	(junction
-		(at 187.96 34.29)
+		(at 114.3 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "df0dd825-4f12-4fa3-8c7b-98e14b476be5")
+		(uuid "26ec6ece-f28f-471e-8076-eeac6c922b1e")
 	)
 	(junction
-		(at 187.96 41.91)
+		(at 114.3 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "efad636d-368b-4ec5-9141-8209375a358d")
+		(uuid "c1a917c8-40a5-401c-b11a-0060a3416518")
 	)
 	(wire
 		(pts
-			(xy 200.66 36.83) (xy 200.66 34.29)
+			(xy 127 40.64) (xy 127 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1208,17 +1208,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 41.91) (xy 187.96 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0fb853ed-a3b2-479d-8e73-ba62e05f81e8")
-	)
-	(wire
-		(pts
-			(xy 187.96 41.91) (xy 200.66 41.91)
+			(xy 114.3 45.72) (xy 127 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1228,7 +1218,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 39.37) (xy 200.66 41.91)
+			(xy 127 43.18) (xy 127 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1238,7 +1228,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 34.29) (xy 187.96 34.29)
+			(xy 127 38.1) (xy 114.3 38.1)
 		)
 		(stroke
 			(width 0)
@@ -1248,17 +1238,27 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 34.29) (xy 168.91 34.29)
+			(xy 101.6 38.1) (xy 114.3 38.1)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fd3eb8df-003e-45d8-ad47-6e77e9d887fe")
+		(uuid "bc85df59-aafe-4148-84f0-77c6cd89906e")
+	)
+	(wire
+		(pts
+			(xy 101.6 45.72) (xy 114.3 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8885242-bea2-4514-a141-a557cfa2e5cd")
 	)
 	(text "Rx"
 		(exclude_from_sim no)
-		(at 199.898 65.278 0)
+		(at 132.588 69.088 0)
 		(effects
 			(font
 				(size 5.08 5.08)
@@ -1268,7 +1268,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 187.96 38.1 0)
+		(at 114.3 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1277,7 +1277,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e4142a6-53a4-4ae1-945c-3b15e139435d")
 		(property "Reference" "R1"
-			(at 190.5 36.8299 0)
+			(at 116.84 40.6399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1286,7 +1286,7 @@
 			)
 		)
 		(property "Value" "10 ohms"
-			(at 190.5 39.3699 0)
+			(at 116.84 43.1799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1295,7 +1295,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.182 38.1 90)
+			(at 112.522 41.91 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1304,7 +1304,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 38.1 0)
+			(at 114.3 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1313,7 +1313,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 187.96 38.1 0)
+			(at 114.3 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1338,7 +1338,7 @@
 	)
 	(symbol
 		(lib_id "CapstoneSymbols:Ultrasonic_Piezoelectric_Transducer")
-		(at 207.01 33.02 0)
+		(at 133.35 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1347,7 +1347,7 @@
 		(fields_autoplaced yes)
 		(uuid "34d74705-1b1e-43e5-b164-36f7b368996d")
 		(property "Reference" "Ultrasonic Piezoelectric Transducer1"
-			(at 212.09 37.4649 0)
+			(at 138.43 41.2749 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1356,7 +1356,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 212.09 39.37 0)
+			(at 138.43 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1365,7 +1365,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 207.01 33.02 0)
+			(at 133.35 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1374,7 +1374,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 207.01 33.02 0)
+			(at 133.35 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1383,7 +1383,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 207.01 33.02 0)
+			(at 133.35 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1407,118 +1407,9 @@
 		)
 	)
 	(symbol
-		(lib_id "CapstoneSymbols:Grover")
-		(at 137.16 68.58 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "661870e5-a960-4d7c-ad0a-deff982360ae")
-		(property "Reference" "Grover1"
-			(at 150.495 19.05 90)
-			(effects
-				(font
-					(size 2.54 2.54)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 150.495 22.86 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin ""
-			(uuid "476eec62-d395-4af7-9109-a09e52c69183")
-		)
-		(pin ""
-			(uuid "2f13823f-c842-4d65-8733-f4504bd6e7a9")
-		)
-		(pin ""
-			(uuid "09f12b7c-e2e6-4bdb-8e3c-08367f866ee2")
-		)
-		(pin ""
-			(uuid "edff9dd5-cad1-43ed-9ec9-cc37691cb504")
-		)
-		(pin ""
-			(uuid "71e6f911-555a-4af4-adbf-d877f51d4ce0")
-		)
-		(pin ""
-			(uuid "666cd2b6-b137-457d-90a3-fc7176b32647")
-		)
-		(pin ""
-			(uuid "1bdd87ef-df67-4107-b3f0-9bcb27428474")
-		)
-		(pin ""
-			(uuid "2693c00b-5a25-40fe-8045-03a49abab2fb")
-		)
-		(pin ""
-			(uuid "34b91767-0403-4d59-a50c-68808274aebe")
-		)
-		(pin ""
-			(uuid "9e4f5326-af7f-4c64-91e1-afa77837344a")
-		)
-		(pin ""
-			(uuid "e6e0251d-c532-433d-b36d-7bbdb4c0a013")
-		)
-		(pin ""
-			(uuid "9015ff14-770d-405b-997c-9574dac07040")
-		)
-		(pin ""
-			(uuid "79241f28-c26f-4c61-b5af-b28a1a00c02e")
-		)
-		(pin ""
-			(uuid "25dd8619-cfd3-4eea-8ded-c54ca0d6a622")
-		)
-		(pin ""
-			(uuid "afddc09b-68c7-46d9-aa9e-fb4a928c1baa")
-		)
-		(pin ""
-			(uuid "de8accc4-3c86-478d-9fe8-048d49b44f4e")
-		)
-		(instances
-			(project "Rx"
-				(path "/5bfd56d5-c28e-473d-8c6f-8780ca293668"
-					(reference "Grover1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "CapstoneSymbols:PYNQ-Z2")
 		(at 63.5 69.85 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1526,7 +1417,7 @@
 		(dnp no)
 		(uuid "badc2d8f-292d-4b1d-ae02-84ef2a1497fe")
 		(property "Reference" "PYNQ1"
-			(at 62.992 25.4 0)
+			(at 38.1 32.766 0)
 			(effects
 				(font
 					(size 2.54 2.54)
@@ -1534,7 +1425,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 64.135 19.05 0)
+			(at 62.865 19.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1644,6 +1535,115 @@
 			(project "Rx"
 				(path "/5bfd56d5-c28e-473d-8c6f-8780ca293668"
 					(reference "PYNQ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CapstoneSymbols:Grover Shield")
+		(at 69.85 72.39 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "de8802e5-6ecb-43cb-bb02-8df7c00a924a")
+		(property "Reference" "Grover Shield1"
+			(at 76.454 32.512 90)
+			(effects
+				(font
+					(size 2.54 2.54)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 83.185 26.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin ""
+			(uuid "bfc161ab-9eff-4736-9845-1892c5f1f5fc")
+		)
+		(pin ""
+			(uuid "00f15e9f-b68b-474f-ad9b-6f96a6921395")
+		)
+		(pin ""
+			(uuid "f8e2e61b-8a85-4898-95d7-5718238a29c4")
+		)
+		(pin ""
+			(uuid "05b3919e-a5aa-45e9-afa4-7636ebfe325b")
+		)
+		(pin ""
+			(uuid "e581d09b-5d09-4d56-8a6b-13cd3073d9b5")
+		)
+		(pin ""
+			(uuid "e75c3888-35a0-4402-b9de-cc719d349ec3")
+		)
+		(pin ""
+			(uuid "e7fc8648-e6ad-4338-9b0d-e2843e146d4d")
+		)
+		(pin ""
+			(uuid "e842e785-68de-47e7-a1f2-2d8ce87f8c13")
+		)
+		(pin ""
+			(uuid "fe12c82f-7b79-40a9-80a4-8fa321469969")
+		)
+		(pin ""
+			(uuid "27ab1e38-7e70-420a-a151-a753edcaaace")
+		)
+		(pin ""
+			(uuid "03381bba-9aee-48e4-8a6d-6d16e4ad9523")
+		)
+		(pin ""
+			(uuid "1f879285-c69b-46a0-91cd-b1d9a1427963")
+		)
+		(pin ""
+			(uuid "b8897875-3d15-4279-8135-f1c3a8cce474")
+		)
+		(pin ""
+			(uuid "5e70ada4-5241-4d4c-b04b-46c93264b812")
+		)
+		(pin ""
+			(uuid "8f991ff5-c061-496f-aeb5-7274f30eb294")
+		)
+		(pin ""
+			(uuid "bb4b5160-0166-4424-b2a8-00683c15440d")
+		)
+		(instances
+			(project "Rx"
+				(path "/5bfd56d5-c28e-473d-8c6f-8780ca293668"
+					(reference "Grover Shield1")
 					(unit 1)
 				)
 			)
