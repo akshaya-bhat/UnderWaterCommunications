@@ -26,7 +26,7 @@ float_t corr_I = 0;
 float_t corr_Q = 0;
 
 
-int receiver(float_t *result_I, float_t *result_Q, float_t new_sample, ofstream &corrfile)
+int receiver(float_t *result_I, float_t *result_Q, float_t new_sample)
 {
     // The upsampled portion of the receiver. Returns a flag that is 0 if we don't have
     // a packet of symbols to equalize and decode, returns 1 if we do. Resulting symbols
@@ -47,15 +47,6 @@ int receiver(float_t *result_I, float_t *result_Q, float_t new_sample, ofstream 
     }
     samples_I[buffer_len-1] = new_sample_I;
     samples_Q[buffer_len-1] = new_sample_Q;
-
-    if (samples_I[0] != 0) {
-        ofstream myfile;
-        myfile.open ("samples.txt");
-        for(int i=0; i<buffer_len; i++) {
-            myfile << i << ": " << samples_I[i] << ", " << samples_Q[i] << "\n";
-        }
-        myfile.close();
-    }
 
     // apply the pulse shaping filter
 	float_t accum_I = 0.0;
@@ -79,15 +70,6 @@ int receiver(float_t *result_I, float_t *result_Q, float_t new_sample, ofstream 
     matched_I[buffer_len-1] = accum_I;   // TODO: am I doing this backwards? Have I lined up the correlation properly?
     matched_Q[buffer_len-1] = accum_Q;
 
-    if (samples_I[0] != 0) {
-        ofstream myfile;
-        myfile.open ("matched.txt");
-        for(int i=0; i<buffer_len; i++) {
-            myfile << i << ": " << matched_I[i] << ", " << matched_Q[i] << "\n";
-        }
-        myfile.close();
-    }
-
     // run a correlation for both I and Q (only final sample)
     accum_I = 0.0;
     accum_Q = 0.0;
@@ -102,23 +84,16 @@ int receiver(float_t *result_I, float_t *result_Q, float_t new_sample, ofstream 
     corr_Q = accum_Q;
     corr_abs = accum_I*accum_I + accum_Q*accum_Q;
 
-    corrfile << corr_Q << "\n";
-
     // have we reached the peak of our correlation?
     // e.g. are we at a local peak and above the threshold
     if ((corr_abs_prev > threshold) && (corr_abs_prev > corr_abs)) {
         // then we've identified the start of the packet!
-        cout << "I correlation: " << corr_I_prev << endl;
-        cout << "Q correlation: " << corr_Q_prev << endl;
-        cout << "Abs correlation squared: " << corr_abs_prev << endl;
         int j = 0;
         for (int i=(start_sample+filtsize/2); i<(downsamplePacketSize*oversample+start_sample+filtsize/2-1); i=i+32) {
             // rotate to get rid of phase offset, by -theta
             // use x and y directly instead of normalizing to get sin and cos
-            cout << "matched I: " << matched_I[i] << ", matched Q: " << matched_Q[i] << endl;
             result_I[j] = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];
             result_Q[j] = corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
-            cout << "results I: " << result_I[j] << ", results J: " << result_Q[j] << endl;
             j++;
         }
         return 1;
