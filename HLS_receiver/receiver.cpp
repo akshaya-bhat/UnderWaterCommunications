@@ -1,6 +1,4 @@
 #include "receiver.hpp"
-#include <iostream>
-#include <fstream>
 using namespace std;
 
 // TODO: figure out what format we'll receive ADC samples in. and convert them to meaningful decimal point values
@@ -28,7 +26,7 @@ float_t corr_I = 0;
 float_t corr_Q = 0;
 
 
-int receiver(float_t *result_I, float_t *result_Q, float_t new_sample)
+int receiver(float_t *result_I, float_t *result_Q, float_t new_sample, ofstream &corrfile)
 {
     // The upsampled portion of the receiver. Returns a flag that is 0 if we don't have
     // a packet of symbols to equalize and decode, returns 1 if we do. Resulting symbols
@@ -93,9 +91,9 @@ int receiver(float_t *result_I, float_t *result_Q, float_t new_sample)
     // run a correlation for both I and Q (only final sample)
     accum_I = 0.0;
     accum_Q = 0.0;
-    for (int i=1; i<=presize; i++) {
-        accum_I = accum_I + matched_I[i] * preamble_upsampled[i-1];
-        accum_Q = accum_Q + matched_Q[i] * preamble_upsampled[i-1];
+    for (int i=start_sample; i<start_sample+presize; i++) {
+        accum_I = accum_I + matched_I[i] * preamble_upsampled[i-start_sample];
+        accum_Q = accum_Q + matched_Q[i] * preamble_upsampled[i-start_sample];
     }
     corr_I_prev = corr_I;
     corr_Q_prev = corr_Q;
@@ -104,16 +102,24 @@ int receiver(float_t *result_I, float_t *result_Q, float_t new_sample)
     corr_Q = accum_Q;
     corr_abs = accum_I*accum_I + accum_Q*accum_Q;
 
+    corrfile << corr_Q << "\n";
+
     // have we reached the peak of our correlation?
     // e.g. are we at a local peak and above the threshold
     if ((corr_abs_prev > threshold) && (corr_abs_prev > corr_abs)) {
         // then we've identified the start of the packet!
+        cout << "I correlation: " << corr_I_prev << endl;
+        cout << "Q correlation: " << corr_Q_prev << endl;
+        cout << "Abs correlation squared: " << corr_abs_prev << endl;
         int j = 0;
-        for (int i=(1+filtsize/2); i<(downsamplePacketSize*oversample+filtsize/2); i=i+32) {
+        for (int i=(start_sample+filtsize/2); i<(downsamplePacketSize*oversample+start_sample+filtsize/2-1); i=i+32) {
             // rotate to get rid of phase offset, by -theta
             // use x and y directly instead of normalizing to get sin and cos
+            cout << "matched I: " << matched_I[i] << ", matched Q: " << matched_Q[i] << endl;
             result_I[j] = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];
             result_Q[j] = corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
+            cout << "results I: " << result_I[j] << ", results J: " << result_Q[j] << endl;
+            j++;
         }
         return 1;
     }

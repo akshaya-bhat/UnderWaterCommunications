@@ -6,6 +6,8 @@
 #ifndef RECEIVER_H_
 #define RECEIVER_H_
 
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -22,7 +24,8 @@ typedef float float_t;
 #define K 7
 #define GOL_LEN 32
 #define upsamplePacketSize 7168
-#define buffer_len 7361
+#define buffer_len 7500
+#define start_sample 140
 #define downsamplePacketSize 224
 #define filtsize 193
 #define presize 2240
@@ -293,6 +296,6 @@ const float_t sin_coefficients_table[CS]={0,0.92388,-0.70711,-0.38268,1,-0.38268
 
 
 //void transmitter (data_t* input_i, data_t* input_q, double* output_i);
-int receiver(float_t *result_I, float_t *result_Q, float_t new_sample);
+int receiver(float_t *result_I, float_t *result_Q, float_t new_sample, ofstream &corrfile);
 
 #endif
