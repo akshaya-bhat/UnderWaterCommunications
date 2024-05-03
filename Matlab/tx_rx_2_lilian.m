@@ -85,10 +85,10 @@ dataPulseShaped = conv(h,dataUpsampled);
 MOD_PREAMBLE = conv(h,upsample([Ga' Gb'],oversample));
 %% Read from HLS File PULSE SHAPRE
 fid = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS.bin", "r");
-out_all = fscanf(fid,"%f %f\n");
-out_i = out_all(1:2:end);
-out_q = out_all(2:2:end);
-figure; plot(out_i); hold on; plot(out_q); title("HLS");
+data_HLS = fread(fid, "float");
+realData = data_HLS(1:2:end);
+imagData = data_HLS(2:2:end);
+figure; plot(realData); hold on; plot(imagData); title("HLS");
 figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped)); title("Matlab");
 %%
 
@@ -105,7 +105,8 @@ dataMod = dataModI + dataModQ;
 
 %%
 fid = fopen("/home/lilian/school/UnderWaterCommunications/data/output.bin", "r");
-
+data_HLS1 = fread(fid, "float");
+realData1 = data_HLS1(1:end);
 % imagData1 = data_HLS1(2:2:end);
 figure; plot(data_HLS1); title("HLS");
 figure; plot(real(dataMod)); hold on; plot(imag(dataMod)); title("Matlab");
