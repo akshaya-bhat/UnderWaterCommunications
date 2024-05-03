@@ -18,14 +18,15 @@ using namespace std;
 
 typedef int	coef_t;
 typedef int16_t data_t;
-typedef double double_t;
+typedef float double_tt;
+typedef float double_ttt;
 
 //DMA
+
 union fp_int
 {
 	int i;
-	data_t ip;
-	double fp;
+	float fp;
 };
 
 typedef ap_axis<16,2,5,6> transPkt;
@@ -34,10 +35,10 @@ typedef hls::stream<transPkt> DTYPE;
 /**
  * Parameters
  */
-#define fs 128e3 //sampling frequency
-#define fc 40e3 //carrier frequency (40kHz)
-#define N 100 //length of data payload
-#define NHalf 50
+ //sampling frequency
+//#define fs 128e3 //carrier frequency (40kHz)
+#define N 128 //length of data payload
+#define NHalf 64
 #define oversample 32 //samples per symbol
 #define preambleLen 64
 #define preambleLenHalf 32
@@ -45,9 +46,10 @@ typedef hls::stream<transPkt> DTYPE;
 #define K 7
 
 #define GOL_LEN 32
-
+const double_ttt fc = 40000;
+const double_ttt fs = 128000;
 //PNGEN
-const int pnGenSequence[50] = {1, 1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0};
+const int pnGenSequence[64] = {1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	0};
 
 //CONVOLUTIONAL ENCODER
 const int G1[K] = {1, 0, 1, 1, 0, 1, 1};  // 171
@@ -59,7 +61,7 @@ const int Ga[GOL_LEN] = {1,1,1,1,-1,1,-1,-1,-1,1,1,1,-1,-1,1,1,1,-1,-1,1,-1,-1,1
 const int Gb[GOL_LEN] = {-1,-1,-1,-1,-1,1,-1,1,1,1,-1,-1,-1,1,1,-1,1,1,-1,-1,1,-1,-1,1,-1,-1,-1,-1,1,-1,1,-1};
 
 //PULSE SHAPING
-const double h[193] = {0.000536001233313081, 7.06098136602443e-05, -0.000406007114139769, -0.000883634810045066, -0.00135159683852761,
+const double_tt h[193] = {0.000536001233313081, 7.06098136602443e-05, -0.000406007114139769, -0.000883634810045066, -0.00135159683852761,
 	    				-0.00179895876703321, -0.00221474590344165, -0.00258817136986824, -0.00290887047441511, -0.00316713707124861,
 						-0.00335415739962686, -0.00346223677007767, -0.00348501442541717, -0.00341766194891276, -0.00325706072336525,
 						-0.00300195416341651, -0.00265307074760023, -0.00221321426357711, -0.00168731814508746, -0.00108246131634044,
@@ -100,13 +102,13 @@ const double h[193] = {0.000536001233313081, 7.06098136602443e-05, -0.0004060071
 						-0.000406007114139769, 7.06098136602443e-05, 0.000536001233313081};
 
 //SIN AND COS LUT
-const double cos_coefficients_table[]={1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090,0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785};
+const double_ttt cos_coefficients_table[]={1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090,0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785};
 
-const double sin_coefficients_table[]={0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785,1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090};
+const double_ttt sin_coefficients_table[]={0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785,1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090};
 
 
-void transmitter (data_t* input_i, data_t* input_q, double* output_i);
-//void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i);
+//void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q);
+void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q);
 void encoder(data_t bit, data_t *bit0, data_t *bit1);
 
 #endif

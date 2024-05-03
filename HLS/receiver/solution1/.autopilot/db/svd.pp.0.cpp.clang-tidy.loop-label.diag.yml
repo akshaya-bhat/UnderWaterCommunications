@@ -1,0 +1,49 @@
+---
+MainSourceFile:  /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_1:  '
+    FileOffset:      29
+    FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp
+        Offset:          209272
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp
+        Offset:          209378
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_3:  '
+    FileOffset:      36
+    FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp
+        Offset:          209413
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_39_4:  '
+    FileOffset:      39
+    FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp
+        Offset:          209545
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_39_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_72_1:  '
+    FileOffset:      72
+    FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp
+        Offset:          210173
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_72_1: '
+...

@@ -17,11 +17,11 @@ int state[K] = {0}; //global variable
 //make the input data 128
 //optimizations, bitstream, and connect to DAC
 
-void transmitter (data_t* input_i, data_t* input_q, double* output_i)
-//void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i)
+void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q)
+//void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q)
 {
 #pragma HLS PIPELINE off
-	#pragma HLS INTERFACE mode=axis port=input_i,input_q,output_i
+	#pragma HLS INTERFACE mode=axis port=input_i,input_q,output_i,output_q
 	#pragma HLS INTERFACE mode=s_axilite port=return
 
 
@@ -58,8 +58,8 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 		 * Scrambler
 		 * 	xor with PN gen sequence LUT
 		 */
-		data_t scrambledDataI[50], scrambledDataQ[50];
-		for (int i = 0; i < N/2; i++) {
+		data_t scrambledDataI[NHalf], scrambledDataQ[NHalf];
+		for (int i = 0; i < NHalf; i++) {
 			scrambledDataI[i] = input_i[i] ^ pnGenSequence[i];
 			scrambledDataQ[i] = input_q[i] ^ pnGenSequence[i];
 		}
@@ -70,10 +70,10 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 		 */
 
 		//encoder output doesn't match matlab
-		data_t encodedDataI[100];
-		data_t encodedDataQ[100];
+		data_t encodedDataI[N];
+		data_t encodedDataQ[N];
 		int z = 0;
-		for (int i = 0; i < 100; i+=2) {
+		for (int i = 0; i < N; i+=2) {
 			encoder(scrambledDataI[z], &encodedDataI[i], &encodedDataI[i+1]);
 			z++;
 		}
@@ -83,7 +83,7 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 		}
 
 		z = 0;
-		for (int i = 0; i < 100; i+=2) {
+		for (int i = 0; i < N; i+=2) {
 			encoder(scrambledDataQ[z], &encodedDataQ[i], &encodedDataQ[i+1]);
 			z++;
 		}
@@ -93,10 +93,10 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 		 * Symbol Mapping
 		 * 	QPSK
 		 */
-		data_t qpskDataI[100];
-		data_t qpskDataQ[100];
+		data_t qpskDataI[N];
+		data_t qpskDataQ[N];
 
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < N; i++) {
 
 			if (encodedDataI[i] == 0) {
 				qpskDataI[i] = -1;
@@ -122,26 +122,26 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 //				raw_symbols[i] = std::complex<double>(qpskDataI[i], qpskDataQ[i]);
 //			}
 		//Theres a weird zero somewhere
-		double preamble_qpsk[64];
-			for (int i = 0; i < 32; ++i) {
+		double preamble_qpsk[preambleLen];
+			for (int i = 0; i < preambleLenHalf; ++i) {
 				preamble_qpsk[i] = Ga[i]*1.414;
 
 			}
 			int x = 0;
-			for (int i = 32; i < 64; ++i) {
+			for (int i = preambleLenHalf; i < preambleLen; ++i) {
 				preamble_qpsk[i] = Gb[x]*1.414;
 				x++;
 			}
 
 
-		double symbolsI[164];
-		double symbolsQ[164];
-			for (int i = 0; i < 64; ++i) {
+		double symbolsI[N+preambleLen];
+		double symbolsQ[N+preambleLen];
+			for (int i = 0; i < preambleLen; ++i) {
 				symbolsI[i] = preamble_qpsk[i];
 				symbolsQ[i] = 0.0;
 			}
 			x = 0;
-			for (int i = 64; i < 164; i++) {
+			for (int i = preambleLen; i < (N+preambleLen); i++) {
 				symbolsI[i] = qpskDataI[x];
 				symbolsQ[i] = qpskDataQ[x];
 				x++;
@@ -152,7 +152,7 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 		 * 	SRRC Filter
 		 */
 		//Upsample
-		int upsampleSize = oversample*164;
+		int upsampleSize = oversample*(N+preambleLen);
 		double dataUpsampledI[upsampleSize];
 		double dataUpsampledQ[upsampleSize];
 		std::fill(dataUpsampledI, dataUpsampledI + upsampleSize, 0.0);
@@ -178,24 +178,24 @@ void transmitter (data_t* input_i, data_t* input_q, double* output_i)
 					dataPulseShapedQ[i] += dataUpsampledQ[i-j] * h[j];
 				}
 			}
-		cout << "pulse shapred " << endl;
-		FILE *fp2 = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS.bin","wb");
-			for (int i = 0; i < (upsampleSize); ++i) {
-				cout << i << " " << dataPulseShapedI[i] << " " << dataPulseShapedQ[i] << endl;
-				double realPart = dataPulseShapedI[i];
-				double imagPart = dataPulseShapedQ[i];
-				fwrite(&(realPart), sizeof(double),1, fp2);
-				fwrite(&(imagPart), sizeof(double),1, fp2);
-			}
+		//cout << "pulse shapred " << endl;
+		//FILE *fp2 = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS.bin","wb");
+		//	for (int i = 0; i < (upsampleSize); ++i) {
+		//		cout << i << " " << dataPulseShapedI[i] << " " << dataPulseShapedQ[i] << endl;
+		//		double realPart = dataPulseShapedI[i];
+		//		double imagPart = dataPulseShapedQ[i];
+		//		fwrite(&(realPart), sizeof(double),1, fp2);
+		//		fwrite(&(imagPart), sizeof(double),1, fp2);
+		//	}
 
-		fclose(fp2);
+		//fclose(fp2);
 
 		/**
 		 * Modulation
 		 */
 
 		double theta;
-		for (int i = 0; i < 5248; i++) {
+		for (int i = 0; i < upsampleSize; i++) {
 			double t = static_cast<double>(i) / fs;
 			theta = fc * t;
 			int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
@@ -246,4 +246,3 @@ void encoder(data_t bit, data_t *bit0, data_t *bit1) {
 	 (*bit1) = feedback2 % 2;
 
 }
-

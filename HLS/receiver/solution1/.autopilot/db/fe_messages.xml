@@ -1,0 +1,27 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-3329" msg_severity="ERROR" msg_loc="rx_src/./parity_table.h:38:21" msg_body="call to deleted constructor of 'ParityTable'">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4119" msg_severity="INFO" msg_loc="rx_src/./parity_table.h:32:5" msg_body="'ParityTable' has been explicitly marked deleted here">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4027" msg_severity="WARNING" msg_loc="rx_src/./viterbi_branch_table.h:37:29" msg_body="static_assert with no message is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4027" msg_severity="WARNING" msg_loc="rx_src/./viterbi_branch_table.h:38:29" msg_body="static_assert with no message is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4027" msg_severity="WARNING" msg_loc="rx_src/./viterbi_branch_table.h:39:56" msg_body="static_assert with no message is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4027" msg_severity="WARNING" msg_loc="rx_src/viterbi_decoder_core.h:33:56" msg_body="static_assert with no message is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4027" msg_severity="WARNING" msg_loc="rx_src/viterbi_decoder_core.h:173:30" msg_body="static_assert with no message is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4027" msg_severity="WARNING" msg_loc="rx_src/viterbi_decoder_core.h:174:30" msg_body="static_assert with no message is a C++17 extension">
+        <args ClangWarningOption="c++17-extensions"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

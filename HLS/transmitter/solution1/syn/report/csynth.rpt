@@ -1,0 +1,173 @@
+
+
+================================================================
+== Synthesis Summary Report of 'transmitter'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 25 14:09:02 2024
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        transmitter
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |                  Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |            |     |
+    |                  & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |     LUT    | URAM|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+    |+ transmitter                             |     -|  0.77|      931|  9.310e+03|         -|      932|     -|        no|  2 (~0%)|   -|  8267 (7%)|  8304 (15%)|    -|
+    | + transmitter_Pipeline_VITIS_LOOP_64_2   |     -|  3.89|       52|    520.000|         -|       52|     -|        no|        -|   -|  1608 (1%)|   268 (~0%)|    -|
+    |  o VITIS_LOOP_64_2                       |     -|  7.30|       50|    500.000|         1|        1|    50|       yes|        -|   -|          -|           -|    -|
+    | + transmitter_Pipeline_VITIS_LOOP_81_3   |     -|  2.17|       52|    520.000|         -|       52|     -|        no|        -|   -|  121 (~0%)|   368 (~0%)|    -|
+    |  o VITIS_LOOP_81_3                       |     -|  7.30|       50|    500.000|         1|        1|    50|       yes|        -|   -|          -|           -|    -|
+    | + transmitter_Pipeline_VITIS_LOOP_93_5   |     -|  2.17|       52|    520.000|         -|       52|     -|        no|        -|   -|  122 (~0%)|   368 (~0%)|    -|
+    |  o VITIS_LOOP_93_5                       |     -|  7.30|       50|    500.000|         1|        1|    50|       yes|        -|   -|          -|           -|    -|
+    | + transmitter_Pipeline_VITIS_LOOP_108_6  |     -|  0.77|      202|  2.020e+03|         -|      202|     -|        no|        -|   -|  3027 (2%)|   3095 (5%)|    -|
+    |  o VITIS_LOOP_108_6                      |     -|  7.30|      200|  2.000e+03|         2|        2|   100|       yes|        -|   -|          -|           -|    -|
+    | o VITIS_LOOP_36_1                        |     -|  7.30|       50|    500.000|         1|        -|    50|        no|        -|   -|          -|           -|    -|
+    | o VITIS_LOOP_173_12                      |     -|  7.30|      492|  4.920e+03|         3|        -|   164|        no|        -|   -|          -|           -|    -|
+    +------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| input_i   | both          | 16    | 6     | 5   | 2     | 1     | 1      | 2     | 2     | 1      |
+| input_q   | both          | 16    | 6     | 5   | 2     | 1     | 1      | 2     | 2     | 1      |
+| output_i  | both          | 16    | 6     | 5   | 2     | 1     | 1      | 2     | 2     | 1      |
+| output_q  | both          | 16    | 6     | 5   | 2     | 1     | 1      | 2     | 2     | 1      |
++-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+--------------------------------------------+
+| Argument | Direction | Datatype                                   |
++----------+-----------+--------------------------------------------+
+| input_i  | in        | stream<hls::axis<ap_int<16>, 2, 5, 6>, 0>& |
+| input_q  | in        | stream<hls::axis<ap_int<16>, 2, 5, 6>, 0>& |
+| output_i | out       | stream<hls::axis<ap_int<16>, 2, 5, 6>, 0>& |
+| output_q | out       | stream<hls::axis<ap_int<16>, 2, 5, 6>, 0>& |
++----------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input_i  | input_i      | interface |
+| input_q  | input_q      | interface |
+| output_i | output_i     | interface |
+| output_q | output_q     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                     | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + transmitter                            | 0   |        |           |     |        |         |
+|   add_ln36_fu_6181_p2                    | -   |        | add_ln36  | add | fabric | 0       |
+|   add_ln173_fu_10730_p2                  | -   |        | add_ln173 | add | fabric | 0       |
+|  + transmitter_Pipeline_VITIS_LOOP_64_2  | 0   |        |           |     |        |         |
+|    add_ln64_fu_1440_p2                   | -   |        | add_ln64  | add | fabric | 0       |
+|  + transmitter_Pipeline_VITIS_LOOP_81_3  | 0   |        |           |     |        |         |
+|    add_ln84_fu_1978_p2                   | -   |        | add_ln84  | add | fabric | 0       |
+|    add_ln81_fu_2644_p2                   | -   |        | add_ln81  | add | fabric | 0       |
+|  + transmitter_Pipeline_VITIS_LOOP_93_5  | 0   |        |           |     |        |         |
+|    add_ln96_fu_2009_p2                   | -   |        | add_ln96  | add | fabric | 0       |
+|    add_ln93_fu_2680_p2                   | -   |        | add_ln93  | add | fabric | 0       |
+|  + transmitter_Pipeline_VITIS_LOOP_108_6 | 0   |        |           |     |        |         |
+|    add_ln108_fu_4448_p2                  | -   |        | add_ln108 | add | fabric | 0       |
++------------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------+------+------+--------+-------------+---------+------+---------+
+| Name            | BRAM | URAM | Pragma | Variable    | Storage | Impl | Latency |
++-----------------+------+------+--------+-------------+---------+------+---------+
+| + transmitter   | 2    | 0    |        |             |         |      |         |
+|   real_output_U | 1    | -    |        | real_output | ram_t2p | auto | 1       |
+|   imag_output_U | 1    | -    |        | imag_output | ram_t2p | auto | 1       |
+|   state_U       | -    | -    |        | state       | ram_t2p | auto | 1       |
++-----------------+------+------+--------+-------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------------------+-----------------------------------------------------------------------------+
+| Type            | Options                                          | Location                                                                    |
++-----------------+--------------------------------------------------+-----------------------------------------------------------------------------+
+| pipeline        | off                                              | tx_src/transmitter.cpp:23 in transmitter                                    |
+| interface       | mode=axis port=input_i,input_q,output_i,output_q | tx_src/transmitter.cpp:24 in transmitter, input_i,input_q,output_i,output_q |
+| interface       | mode=s_axilite port=return                       | tx_src/transmitter.cpp:25 in transmitter, return                            |
+| array_partition | variable=cos_coefficients_table complete         | tx_src/transmitter.cpp:46 in transmitter, cos_coefficients_table            |
+| array_partition | variable=sin_coefficients_table complete         | tx_src/transmitter.cpp:47 in transmitter, sin_coefficients_table            |
+| array_partition | variable=h complete                              | tx_src/transmitter.cpp:48 in transmitter, h                                 |
+| array_partition | variable=Ga complete                             | tx_src/transmitter.cpp:49 in transmitter, Ga                                |
+| array_partition | variable=Gb complete                             | tx_src/transmitter.cpp:50 in transmitter, Gb                                |
+| array_partition | variable=pnGenSequence complete                  | tx_src/transmitter.cpp:51 in transmitter, pnGenSequence                     |
+| array_partition | variable=scrambledDataI complete                 | tx_src/transmitter.cpp:62 in transmitter, scrambledDataI                    |
+| array_partition | variable=scrambledDataQ complete                 | tx_src/transmitter.cpp:63 in transmitter, scrambledDataQ                    |
+| pipeline        | II=4                                             | tx_src/transmitter.cpp:65 in transmitter                                    |
+| array_partition | variable=encodedDataI complete                   | tx_src/transmitter.cpp:78 in transmitter, encodedDataI                      |
+| array_partition | variable=encodedDataQ complete                   | tx_src/transmitter.cpp:79 in transmitter, encodedDataQ                      |
+| pipeline        | II=4                                             | tx_src/transmitter.cpp:82 in transmitter                                    |
+| unroll          | factor=7                                         | tx_src/transmitter.cpp:88 in transmitter                                    |
+| pipeline        | II=4                                             | tx_src/transmitter.cpp:94 in transmitter                                    |
+| array_partition | variable=qpskDataI complete                      | tx_src/transmitter.cpp:106 in transmitter, qpskDataI                        |
+| array_partition | variable=qpskDataQ complete                      | tx_src/transmitter.cpp:107 in transmitter, qpskDataQ                        |
+| pipeline        | II=4                                             | tx_src/transmitter.cpp:109 in transmitter                                   |
+| array_partition | variable=preamble_qpsk complete                  | tx_src/transmitter.cpp:135 in transmitter, preamble_qpsk                    |
+| unroll          | factor=32                                        | tx_src/transmitter.cpp:137 in transmitter                                   |
+| unroll          | factor=32                                        | tx_src/transmitter.cpp:143 in transmitter                                   |
+| array_partition | variable=symbolsI complete                       | tx_src/transmitter.cpp:151 in transmitter, symbolsI                         |
+| array_partition | variable=symbolsQ complete                       | tx_src/transmitter.cpp:152 in transmitter, symbolsQ                         |
+| unroll          | factor=64                                        | tx_src/transmitter.cpp:154 in transmitter                                   |
+| unroll          | factor=128                                       | tx_src/transmitter.cpp:160 in transmitter                                   |
+| unroll          | factor=128                                       | tx_src/transmitter.cpp:168 in transmitter                                   |
++-----------------+--------------------------------------------------+-----------------------------------------------------------------------------+
+
+

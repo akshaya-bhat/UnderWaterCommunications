@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../rx_src/receiver.cpp in debug mode
+In file included from ../../../../rx_src/./viterbi_branch_table.h:10,
+                 from ../../../../rx_src/viterbi_decoder_core.h:10,
+                 from ../../../../rx_src/receiver.cpp:8:
+../../../../rx_src/././parity_table.h: In static member function ‘static ParityTable& ParityTable::get()’:
+../../../../rx_src/././parity_table.h:38:48: error: use of deleted function ‘ParityTable::ParityTable(ParityTable&&)’
+         static auto parity_table = ParityTable();
+                                                ^
+../../../../rx_src/././parity_table.h:32:5: note: declared here
+     ParityTable(ParityTable&&) = delete;
+     ^~~~~~~~~~~
+make: *** [csim.mk:90: obj/receiver.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

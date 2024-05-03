@@ -1,0 +1,526 @@
+
+
+================================================================
+== Vitis HLS Report for 'transmitter_Pipeline_VITIS_LOOP_93_5'
+================================================================
+* Date:           Thu Apr 25 14:08:58 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        transmitter
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.132 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       52|       52|  0.520 us|  0.520 us|   52|   52|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_93_5  |       50|       50|         1|          1|          4|    50|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     52|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|    217|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     99|    -|
+|Register         |        -|    -|     122|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     122|    368|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT | URAM|
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |mux_506_16_1_1_U261  |mux_506_16_1_1  |        0|   0|  0|  217|    0|
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |Total                |                |        0|   0|  0|  217|    0|
+    +---------------------+----------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |add_ln93_fu_2680_p2          |         +|   0|  0|  14|           7|           2|
+    |add_ln96_fu_2009_p2          |         +|   0|  0|  14|           6|           1|
+    |icmp_ln93_fu_2003_p2         |      icmp|   0|  0|  10|           6|           5|
+    |encodedDataQ_100_fu_2148_p2  |       xor|   0|  0|   2|           1|           1|
+    |encodedDataQ_101_fu_2170_p2  |       xor|   0|  0|   2|           1|           1|
+    |xor_ln284_1_fu_2136_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln284_2_fu_2142_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln284_fu_2130_p2         |       xor|   0|  0|   2|           1|           1|
+    |xor_ln285_1_fu_2164_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln285_fu_2158_p2         |       xor|   0|  0|   2|           1|           1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |Total                        |          |   0|  0|  52|          26|          15|
+    +-----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                            |   9|          2|    1|          2|
+    |ap_phi_mux_empty_phi_fu_1948_p4        |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_1_phi_fu_1935_p4  |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_2_phi_fu_1961_p4  |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_3_phi_fu_1974_p4  |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_phi_fu_1922_p4    |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln282_phi_fu_1910_p4    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1                   |   9|          2|    7|         14|
+    |ap_sig_allocacmp_z_1                   |   9|          2|    6|         12|
+    |i_fu_454                               |   9|          2|    7|         14|
+    |z_fu_450                               |   9|          2|    6|         12|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  99|         22|   33|         66|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+---+----+-----+-----------+
+    |          Name          | FF| LUT| Bits| Const Bits|
+    +------------------------+---+----+-----+-----------+
+    |ap_CS_fsm               |  1|   0|    1|          0|
+    |ap_done_reg             |  1|   0|    1|          0|
+    |empty_reg_1945          |  1|   0|    1|          0|
+    |encodedDataQ_10_fu_498  |  1|   0|   16|         15|
+    |encodedDataQ_11_fu_502  |  1|   0|   16|         15|
+    |encodedDataQ_12_fu_506  |  1|   0|   16|         15|
+    |encodedDataQ_13_fu_510  |  1|   0|   16|         15|
+    |encodedDataQ_14_fu_514  |  1|   0|   16|         15|
+    |encodedDataQ_15_fu_518  |  1|   0|   16|         15|
+    |encodedDataQ_16_fu_522  |  1|   0|   16|         15|
+    |encodedDataQ_17_fu_526  |  1|   0|   16|         15|
+    |encodedDataQ_18_fu_530  |  1|   0|   16|         15|
+    |encodedDataQ_19_fu_534  |  1|   0|   16|         15|
+    |encodedDataQ_1_fu_462   |  1|   0|   16|         15|
+    |encodedDataQ_20_fu_538  |  1|   0|   16|         15|
+    |encodedDataQ_21_fu_542  |  1|   0|   16|         15|
+    |encodedDataQ_22_fu_546  |  1|   0|   16|         15|
+    |encodedDataQ_23_fu_550  |  1|   0|   16|         15|
+    |encodedDataQ_24_fu_554  |  1|   0|   16|         15|
+    |encodedDataQ_25_fu_558  |  1|   0|   16|         15|
+    |encodedDataQ_26_fu_562  |  1|   0|   16|         15|
+    |encodedDataQ_27_fu_566  |  1|   0|   16|         15|
+    |encodedDataQ_28_fu_570  |  1|   0|   16|         15|
+    |encodedDataQ_29_fu_574  |  1|   0|   16|         15|
+    |encodedDataQ_2_fu_466   |  1|   0|   16|         15|
+    |encodedDataQ_30_fu_578  |  1|   0|   16|         15|
+    |encodedDataQ_31_fu_582  |  1|   0|   16|         15|
+    |encodedDataQ_32_fu_586  |  1|   0|   16|         15|
+    |encodedDataQ_33_fu_590  |  1|   0|   16|         15|
+    |encodedDataQ_34_fu_594  |  1|   0|   16|         15|
+    |encodedDataQ_35_fu_598  |  1|   0|   16|         15|
+    |encodedDataQ_36_fu_602  |  1|   0|   16|         15|
+    |encodedDataQ_37_fu_606  |  1|   0|   16|         15|
+    |encodedDataQ_38_fu_610  |  1|   0|   16|         15|
+    |encodedDataQ_39_fu_614  |  1|   0|   16|         15|
+    |encodedDataQ_3_fu_470   |  1|   0|   16|         15|
+    |encodedDataQ_40_fu_618  |  1|   0|   16|         15|
+    |encodedDataQ_41_fu_622  |  1|   0|   16|         15|
+    |encodedDataQ_42_fu_626  |  1|   0|   16|         15|
+    |encodedDataQ_43_fu_630  |  1|   0|   16|         15|
+    |encodedDataQ_44_fu_634  |  1|   0|   16|         15|
+    |encodedDataQ_45_fu_638  |  1|   0|   16|         15|
+    |encodedDataQ_46_fu_642  |  1|   0|   16|         15|
+    |encodedDataQ_47_fu_646  |  1|   0|   16|         15|
+    |encodedDataQ_48_fu_650  |  1|   0|   16|         15|
+    |encodedDataQ_49_fu_654  |  1|   0|   16|         15|
+    |encodedDataQ_4_fu_474   |  1|   0|   16|         15|
+    |encodedDataQ_50_fu_658  |  1|   0|   16|         15|
+    |encodedDataQ_51_fu_662  |  1|   0|   16|         15|
+    |encodedDataQ_52_fu_666  |  1|   0|   16|         15|
+    |encodedDataQ_53_fu_670  |  1|   0|   16|         15|
+    |encodedDataQ_54_fu_674  |  1|   0|   16|         15|
+    |encodedDataQ_55_fu_678  |  1|   0|   16|         15|
+    |encodedDataQ_56_fu_682  |  1|   0|   16|         15|
+    |encodedDataQ_57_fu_686  |  1|   0|   16|         15|
+    |encodedDataQ_58_fu_690  |  1|   0|   16|         15|
+    |encodedDataQ_59_fu_694  |  1|   0|   16|         15|
+    |encodedDataQ_5_fu_478   |  1|   0|   16|         15|
+    |encodedDataQ_60_fu_698  |  1|   0|   16|         15|
+    |encodedDataQ_61_fu_702  |  1|   0|   16|         15|
+    |encodedDataQ_62_fu_706  |  1|   0|   16|         15|
+    |encodedDataQ_63_fu_710  |  1|   0|   16|         15|
+    |encodedDataQ_64_fu_714  |  1|   0|   16|         15|
+    |encodedDataQ_65_fu_718  |  1|   0|   16|         15|
+    |encodedDataQ_66_fu_722  |  1|   0|   16|         15|
+    |encodedDataQ_67_fu_726  |  1|   0|   16|         15|
+    |encodedDataQ_68_fu_730  |  1|   0|   16|         15|
+    |encodedDataQ_69_fu_734  |  1|   0|   16|         15|
+    |encodedDataQ_6_fu_482   |  1|   0|   16|         15|
+    |encodedDataQ_70_fu_738  |  1|   0|   16|         15|
+    |encodedDataQ_71_fu_742  |  1|   0|   16|         15|
+    |encodedDataQ_72_fu_746  |  1|   0|   16|         15|
+    |encodedDataQ_73_fu_750  |  1|   0|   16|         15|
+    |encodedDataQ_74_fu_754  |  1|   0|   16|         15|
+    |encodedDataQ_75_fu_758  |  1|   0|   16|         15|
+    |encodedDataQ_76_fu_762  |  1|   0|   16|         15|
+    |encodedDataQ_77_fu_766  |  1|   0|   16|         15|
+    |encodedDataQ_78_fu_770  |  1|   0|   16|         15|
+    |encodedDataQ_79_fu_774  |  1|   0|   16|         15|
+    |encodedDataQ_7_fu_486   |  1|   0|   16|         15|
+    |encodedDataQ_80_fu_778  |  1|   0|   16|         15|
+    |encodedDataQ_81_fu_782  |  1|   0|   16|         15|
+    |encodedDataQ_82_fu_786  |  1|   0|   16|         15|
+    |encodedDataQ_83_fu_790  |  1|   0|   16|         15|
+    |encodedDataQ_84_fu_794  |  1|   0|   16|         15|
+    |encodedDataQ_85_fu_798  |  1|   0|   16|         15|
+    |encodedDataQ_86_fu_802  |  1|   0|   16|         15|
+    |encodedDataQ_87_fu_806  |  1|   0|   16|         15|
+    |encodedDataQ_88_fu_810  |  1|   0|   16|         15|
+    |encodedDataQ_89_fu_814  |  1|   0|   16|         15|
+    |encodedDataQ_8_fu_490   |  1|   0|   16|         15|
+    |encodedDataQ_90_fu_818  |  1|   0|   16|         15|
+    |encodedDataQ_91_fu_822  |  1|   0|   16|         15|
+    |encodedDataQ_92_fu_826  |  1|   0|   16|         15|
+    |encodedDataQ_93_fu_830  |  1|   0|   16|         15|
+    |encodedDataQ_94_fu_834  |  1|   0|   16|         15|
+    |encodedDataQ_95_fu_838  |  1|   0|   16|         15|
+    |encodedDataQ_96_fu_842  |  1|   0|   16|         15|
+    |encodedDataQ_97_fu_846  |  1|   0|   16|         15|
+    |encodedDataQ_98_fu_850  |  1|   0|   16|         15|
+    |encodedDataQ_99_fu_854  |  1|   0|   16|         15|
+    |encodedDataQ_9_fu_494   |  1|   0|   16|         15|
+    |encodedDataQ_fu_458     |  1|   0|   16|         15|
+    |i_fu_454                |  7|   0|    7|          0|
+    |p_phi_fu_446            |  1|   0|    1|          0|
+    |phi_ln280_1_reg_1932    |  1|   0|    1|          0|
+    |phi_ln280_2_reg_1958    |  1|   0|    1|          0|
+    |phi_ln280_3_reg_1971    |  1|   0|    1|          0|
+    |phi_ln280_reg_1919      |  1|   0|    1|          0|
+    |phi_ln282_reg_1907      |  1|   0|    1|          0|
+    |z_fu_450                |  6|   0|    6|          0|
+    +------------------------+---+----+-----+-----------+
+    |Total                   |122|   0| 1622|       1500|
+    +------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++----------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_93_5|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_93_5|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_93_5|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_93_5|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_93_5|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_93_5|  return value|
+|scrambledDataQ_reload       |   in|   16|     ap_none|                 scrambledDataQ_reload|        scalar|
+|scrambledDataQ_1_reload     |   in|   16|     ap_none|               scrambledDataQ_1_reload|        scalar|
+|scrambledDataQ_2_reload     |   in|   16|     ap_none|               scrambledDataQ_2_reload|        scalar|
+|scrambledDataQ_3_reload     |   in|   16|     ap_none|               scrambledDataQ_3_reload|        scalar|
+|scrambledDataQ_4_reload     |   in|   16|     ap_none|               scrambledDataQ_4_reload|        scalar|
+|scrambledDataQ_5_reload     |   in|   16|     ap_none|               scrambledDataQ_5_reload|        scalar|
+|scrambledDataQ_6_reload     |   in|   16|     ap_none|               scrambledDataQ_6_reload|        scalar|
+|scrambledDataQ_7_reload     |   in|   16|     ap_none|               scrambledDataQ_7_reload|        scalar|
+|scrambledDataQ_8_reload     |   in|   16|     ap_none|               scrambledDataQ_8_reload|        scalar|
+|scrambledDataQ_9_reload     |   in|   16|     ap_none|               scrambledDataQ_9_reload|        scalar|
+|scrambledDataQ_10_reload    |   in|   16|     ap_none|              scrambledDataQ_10_reload|        scalar|
+|scrambledDataQ_11_reload    |   in|   16|     ap_none|              scrambledDataQ_11_reload|        scalar|
+|scrambledDataQ_12_reload    |   in|   16|     ap_none|              scrambledDataQ_12_reload|        scalar|
+|scrambledDataQ_13_reload    |   in|   16|     ap_none|              scrambledDataQ_13_reload|        scalar|
+|scrambledDataQ_14_reload    |   in|   16|     ap_none|              scrambledDataQ_14_reload|        scalar|
+|scrambledDataQ_15_reload    |   in|   16|     ap_none|              scrambledDataQ_15_reload|        scalar|
+|scrambledDataQ_16_reload    |   in|   16|     ap_none|              scrambledDataQ_16_reload|        scalar|
+|scrambledDataQ_17_reload    |   in|   16|     ap_none|              scrambledDataQ_17_reload|        scalar|
+|scrambledDataQ_18_reload    |   in|   16|     ap_none|              scrambledDataQ_18_reload|        scalar|
+|scrambledDataQ_19_reload    |   in|   16|     ap_none|              scrambledDataQ_19_reload|        scalar|
+|scrambledDataQ_20_reload    |   in|   16|     ap_none|              scrambledDataQ_20_reload|        scalar|
+|scrambledDataQ_21_reload    |   in|   16|     ap_none|              scrambledDataQ_21_reload|        scalar|
+|scrambledDataQ_22_reload    |   in|   16|     ap_none|              scrambledDataQ_22_reload|        scalar|
+|scrambledDataQ_23_reload    |   in|   16|     ap_none|              scrambledDataQ_23_reload|        scalar|
+|scrambledDataQ_24_reload    |   in|   16|     ap_none|              scrambledDataQ_24_reload|        scalar|
+|scrambledDataQ_25_reload    |   in|   16|     ap_none|              scrambledDataQ_25_reload|        scalar|
+|scrambledDataQ_26_reload    |   in|   16|     ap_none|              scrambledDataQ_26_reload|        scalar|
+|scrambledDataQ_27_reload    |   in|   16|     ap_none|              scrambledDataQ_27_reload|        scalar|
+|scrambledDataQ_28_reload    |   in|   16|     ap_none|              scrambledDataQ_28_reload|        scalar|
+|scrambledDataQ_29_reload    |   in|   16|     ap_none|              scrambledDataQ_29_reload|        scalar|
+|scrambledDataQ_30_reload    |   in|   16|     ap_none|              scrambledDataQ_30_reload|        scalar|
+|scrambledDataQ_31_reload    |   in|   16|     ap_none|              scrambledDataQ_31_reload|        scalar|
+|scrambledDataQ_32_reload    |   in|   16|     ap_none|              scrambledDataQ_32_reload|        scalar|
+|scrambledDataQ_33_reload    |   in|   16|     ap_none|              scrambledDataQ_33_reload|        scalar|
+|scrambledDataQ_34_reload    |   in|   16|     ap_none|              scrambledDataQ_34_reload|        scalar|
+|scrambledDataQ_35_reload    |   in|   16|     ap_none|              scrambledDataQ_35_reload|        scalar|
+|scrambledDataQ_36_reload    |   in|   16|     ap_none|              scrambledDataQ_36_reload|        scalar|
+|scrambledDataQ_37_reload    |   in|   16|     ap_none|              scrambledDataQ_37_reload|        scalar|
+|scrambledDataQ_38_reload    |   in|   16|     ap_none|              scrambledDataQ_38_reload|        scalar|
+|scrambledDataQ_39_reload    |   in|   16|     ap_none|              scrambledDataQ_39_reload|        scalar|
+|scrambledDataQ_40_reload    |   in|   16|     ap_none|              scrambledDataQ_40_reload|        scalar|
+|scrambledDataQ_41_reload    |   in|   16|     ap_none|              scrambledDataQ_41_reload|        scalar|
+|scrambledDataQ_42_reload    |   in|   16|     ap_none|              scrambledDataQ_42_reload|        scalar|
+|scrambledDataQ_43_reload    |   in|   16|     ap_none|              scrambledDataQ_43_reload|        scalar|
+|scrambledDataQ_44_reload    |   in|   16|     ap_none|              scrambledDataQ_44_reload|        scalar|
+|scrambledDataQ_45_reload    |   in|   16|     ap_none|              scrambledDataQ_45_reload|        scalar|
+|scrambledDataQ_46_reload    |   in|   16|     ap_none|              scrambledDataQ_46_reload|        scalar|
+|scrambledDataQ_47_reload    |   in|   16|     ap_none|              scrambledDataQ_47_reload|        scalar|
+|scrambledDataQ_48_reload    |   in|   16|     ap_none|              scrambledDataQ_48_reload|        scalar|
+|scrambledDataQ_49_reload    |   in|   16|     ap_none|              scrambledDataQ_49_reload|        scalar|
+|encodedDataQ_99_out         |  out|   16|      ap_vld|                   encodedDataQ_99_out|       pointer|
+|encodedDataQ_99_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_99_out|       pointer|
+|encodedDataQ_98_out         |  out|   16|      ap_vld|                   encodedDataQ_98_out|       pointer|
+|encodedDataQ_98_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_98_out|       pointer|
+|encodedDataQ_97_out         |  out|   16|      ap_vld|                   encodedDataQ_97_out|       pointer|
+|encodedDataQ_97_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_97_out|       pointer|
+|encodedDataQ_96_out         |  out|   16|      ap_vld|                   encodedDataQ_96_out|       pointer|
+|encodedDataQ_96_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_96_out|       pointer|
+|encodedDataQ_95_out         |  out|   16|      ap_vld|                   encodedDataQ_95_out|       pointer|
+|encodedDataQ_95_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_95_out|       pointer|
+|encodedDataQ_94_out         |  out|   16|      ap_vld|                   encodedDataQ_94_out|       pointer|
+|encodedDataQ_94_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_94_out|       pointer|
+|encodedDataQ_93_out         |  out|   16|      ap_vld|                   encodedDataQ_93_out|       pointer|
+|encodedDataQ_93_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_93_out|       pointer|
+|encodedDataQ_92_out         |  out|   16|      ap_vld|                   encodedDataQ_92_out|       pointer|
+|encodedDataQ_92_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_92_out|       pointer|
+|encodedDataQ_91_out         |  out|   16|      ap_vld|                   encodedDataQ_91_out|       pointer|
+|encodedDataQ_91_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_91_out|       pointer|
+|encodedDataQ_90_out         |  out|   16|      ap_vld|                   encodedDataQ_90_out|       pointer|
+|encodedDataQ_90_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_90_out|       pointer|
+|encodedDataQ_89_out         |  out|   16|      ap_vld|                   encodedDataQ_89_out|       pointer|
+|encodedDataQ_89_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_89_out|       pointer|
+|encodedDataQ_88_out         |  out|   16|      ap_vld|                   encodedDataQ_88_out|       pointer|
+|encodedDataQ_88_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_88_out|       pointer|
+|encodedDataQ_87_out         |  out|   16|      ap_vld|                   encodedDataQ_87_out|       pointer|
+|encodedDataQ_87_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_87_out|       pointer|
+|encodedDataQ_86_out         |  out|   16|      ap_vld|                   encodedDataQ_86_out|       pointer|
+|encodedDataQ_86_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_86_out|       pointer|
+|encodedDataQ_85_out         |  out|   16|      ap_vld|                   encodedDataQ_85_out|       pointer|
+|encodedDataQ_85_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_85_out|       pointer|
+|encodedDataQ_84_out         |  out|   16|      ap_vld|                   encodedDataQ_84_out|       pointer|
+|encodedDataQ_84_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_84_out|       pointer|
+|encodedDataQ_83_out         |  out|   16|      ap_vld|                   encodedDataQ_83_out|       pointer|
+|encodedDataQ_83_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_83_out|       pointer|
+|encodedDataQ_82_out         |  out|   16|      ap_vld|                   encodedDataQ_82_out|       pointer|
+|encodedDataQ_82_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_82_out|       pointer|
+|encodedDataQ_81_out         |  out|   16|      ap_vld|                   encodedDataQ_81_out|       pointer|
+|encodedDataQ_81_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_81_out|       pointer|
+|encodedDataQ_80_out         |  out|   16|      ap_vld|                   encodedDataQ_80_out|       pointer|
+|encodedDataQ_80_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_80_out|       pointer|
+|encodedDataQ_79_out         |  out|   16|      ap_vld|                   encodedDataQ_79_out|       pointer|
+|encodedDataQ_79_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_79_out|       pointer|
+|encodedDataQ_78_out         |  out|   16|      ap_vld|                   encodedDataQ_78_out|       pointer|
+|encodedDataQ_78_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_78_out|       pointer|
+|encodedDataQ_77_out         |  out|   16|      ap_vld|                   encodedDataQ_77_out|       pointer|
+|encodedDataQ_77_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_77_out|       pointer|
+|encodedDataQ_76_out         |  out|   16|      ap_vld|                   encodedDataQ_76_out|       pointer|
+|encodedDataQ_76_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_76_out|       pointer|
+|encodedDataQ_75_out         |  out|   16|      ap_vld|                   encodedDataQ_75_out|       pointer|
+|encodedDataQ_75_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_75_out|       pointer|
+|encodedDataQ_74_out         |  out|   16|      ap_vld|                   encodedDataQ_74_out|       pointer|
+|encodedDataQ_74_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_74_out|       pointer|
+|encodedDataQ_73_out         |  out|   16|      ap_vld|                   encodedDataQ_73_out|       pointer|
+|encodedDataQ_73_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_73_out|       pointer|
+|encodedDataQ_72_out         |  out|   16|      ap_vld|                   encodedDataQ_72_out|       pointer|
+|encodedDataQ_72_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_72_out|       pointer|
+|encodedDataQ_71_out         |  out|   16|      ap_vld|                   encodedDataQ_71_out|       pointer|
+|encodedDataQ_71_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_71_out|       pointer|
+|encodedDataQ_70_out         |  out|   16|      ap_vld|                   encodedDataQ_70_out|       pointer|
+|encodedDataQ_70_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_70_out|       pointer|
+|encodedDataQ_69_out         |  out|   16|      ap_vld|                   encodedDataQ_69_out|       pointer|
+|encodedDataQ_69_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_69_out|       pointer|
+|encodedDataQ_68_out         |  out|   16|      ap_vld|                   encodedDataQ_68_out|       pointer|
+|encodedDataQ_68_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_68_out|       pointer|
+|encodedDataQ_67_out         |  out|   16|      ap_vld|                   encodedDataQ_67_out|       pointer|
+|encodedDataQ_67_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_67_out|       pointer|
+|encodedDataQ_66_out         |  out|   16|      ap_vld|                   encodedDataQ_66_out|       pointer|
+|encodedDataQ_66_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_66_out|       pointer|
+|encodedDataQ_65_out         |  out|   16|      ap_vld|                   encodedDataQ_65_out|       pointer|
+|encodedDataQ_65_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_65_out|       pointer|
+|encodedDataQ_64_out         |  out|   16|      ap_vld|                   encodedDataQ_64_out|       pointer|
+|encodedDataQ_64_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_64_out|       pointer|
+|encodedDataQ_63_out         |  out|   16|      ap_vld|                   encodedDataQ_63_out|       pointer|
+|encodedDataQ_63_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_63_out|       pointer|
+|encodedDataQ_62_out         |  out|   16|      ap_vld|                   encodedDataQ_62_out|       pointer|
+|encodedDataQ_62_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_62_out|       pointer|
+|encodedDataQ_61_out         |  out|   16|      ap_vld|                   encodedDataQ_61_out|       pointer|
+|encodedDataQ_61_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_61_out|       pointer|
+|encodedDataQ_60_out         |  out|   16|      ap_vld|                   encodedDataQ_60_out|       pointer|
+|encodedDataQ_60_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_60_out|       pointer|
+|encodedDataQ_59_out         |  out|   16|      ap_vld|                   encodedDataQ_59_out|       pointer|
+|encodedDataQ_59_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_59_out|       pointer|
+|encodedDataQ_58_out         |  out|   16|      ap_vld|                   encodedDataQ_58_out|       pointer|
+|encodedDataQ_58_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_58_out|       pointer|
+|encodedDataQ_57_out         |  out|   16|      ap_vld|                   encodedDataQ_57_out|       pointer|
+|encodedDataQ_57_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_57_out|       pointer|
+|encodedDataQ_56_out         |  out|   16|      ap_vld|                   encodedDataQ_56_out|       pointer|
+|encodedDataQ_56_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_56_out|       pointer|
+|encodedDataQ_55_out         |  out|   16|      ap_vld|                   encodedDataQ_55_out|       pointer|
+|encodedDataQ_55_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_55_out|       pointer|
+|encodedDataQ_54_out         |  out|   16|      ap_vld|                   encodedDataQ_54_out|       pointer|
+|encodedDataQ_54_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_54_out|       pointer|
+|encodedDataQ_53_out         |  out|   16|      ap_vld|                   encodedDataQ_53_out|       pointer|
+|encodedDataQ_53_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_53_out|       pointer|
+|encodedDataQ_52_out         |  out|   16|      ap_vld|                   encodedDataQ_52_out|       pointer|
+|encodedDataQ_52_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_52_out|       pointer|
+|encodedDataQ_51_out         |  out|   16|      ap_vld|                   encodedDataQ_51_out|       pointer|
+|encodedDataQ_51_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_51_out|       pointer|
+|encodedDataQ_50_out         |  out|   16|      ap_vld|                   encodedDataQ_50_out|       pointer|
+|encodedDataQ_50_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_50_out|       pointer|
+|encodedDataQ_49_out         |  out|   16|      ap_vld|                   encodedDataQ_49_out|       pointer|
+|encodedDataQ_49_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_49_out|       pointer|
+|encodedDataQ_48_out         |  out|   16|      ap_vld|                   encodedDataQ_48_out|       pointer|
+|encodedDataQ_48_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_48_out|       pointer|
+|encodedDataQ_47_out         |  out|   16|      ap_vld|                   encodedDataQ_47_out|       pointer|
+|encodedDataQ_47_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_47_out|       pointer|
+|encodedDataQ_46_out         |  out|   16|      ap_vld|                   encodedDataQ_46_out|       pointer|
+|encodedDataQ_46_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_46_out|       pointer|
+|encodedDataQ_45_out         |  out|   16|      ap_vld|                   encodedDataQ_45_out|       pointer|
+|encodedDataQ_45_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_45_out|       pointer|
+|encodedDataQ_44_out         |  out|   16|      ap_vld|                   encodedDataQ_44_out|       pointer|
+|encodedDataQ_44_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_44_out|       pointer|
+|encodedDataQ_43_out         |  out|   16|      ap_vld|                   encodedDataQ_43_out|       pointer|
+|encodedDataQ_43_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_43_out|       pointer|
+|encodedDataQ_42_out         |  out|   16|      ap_vld|                   encodedDataQ_42_out|       pointer|
+|encodedDataQ_42_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_42_out|       pointer|
+|encodedDataQ_41_out         |  out|   16|      ap_vld|                   encodedDataQ_41_out|       pointer|
+|encodedDataQ_41_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_41_out|       pointer|
+|encodedDataQ_40_out         |  out|   16|      ap_vld|                   encodedDataQ_40_out|       pointer|
+|encodedDataQ_40_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_40_out|       pointer|
+|encodedDataQ_39_out         |  out|   16|      ap_vld|                   encodedDataQ_39_out|       pointer|
+|encodedDataQ_39_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_39_out|       pointer|
+|encodedDataQ_38_out         |  out|   16|      ap_vld|                   encodedDataQ_38_out|       pointer|
+|encodedDataQ_38_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_38_out|       pointer|
+|encodedDataQ_37_out         |  out|   16|      ap_vld|                   encodedDataQ_37_out|       pointer|
+|encodedDataQ_37_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_37_out|       pointer|
+|encodedDataQ_36_out         |  out|   16|      ap_vld|                   encodedDataQ_36_out|       pointer|
+|encodedDataQ_36_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_36_out|       pointer|
+|encodedDataQ_35_out         |  out|   16|      ap_vld|                   encodedDataQ_35_out|       pointer|
+|encodedDataQ_35_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_35_out|       pointer|
+|encodedDataQ_34_out         |  out|   16|      ap_vld|                   encodedDataQ_34_out|       pointer|
+|encodedDataQ_34_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_34_out|       pointer|
+|encodedDataQ_33_out         |  out|   16|      ap_vld|                   encodedDataQ_33_out|       pointer|
+|encodedDataQ_33_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_33_out|       pointer|
+|encodedDataQ_32_out         |  out|   16|      ap_vld|                   encodedDataQ_32_out|       pointer|
+|encodedDataQ_32_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_32_out|       pointer|
+|encodedDataQ_31_out         |  out|   16|      ap_vld|                   encodedDataQ_31_out|       pointer|
+|encodedDataQ_31_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_31_out|       pointer|
+|encodedDataQ_30_out         |  out|   16|      ap_vld|                   encodedDataQ_30_out|       pointer|
+|encodedDataQ_30_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_30_out|       pointer|
+|encodedDataQ_29_out         |  out|   16|      ap_vld|                   encodedDataQ_29_out|       pointer|
+|encodedDataQ_29_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_29_out|       pointer|
+|encodedDataQ_28_out         |  out|   16|      ap_vld|                   encodedDataQ_28_out|       pointer|
+|encodedDataQ_28_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_28_out|       pointer|
+|encodedDataQ_27_out         |  out|   16|      ap_vld|                   encodedDataQ_27_out|       pointer|
+|encodedDataQ_27_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_27_out|       pointer|
+|encodedDataQ_26_out         |  out|   16|      ap_vld|                   encodedDataQ_26_out|       pointer|
+|encodedDataQ_26_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_26_out|       pointer|
+|encodedDataQ_25_out         |  out|   16|      ap_vld|                   encodedDataQ_25_out|       pointer|
+|encodedDataQ_25_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_25_out|       pointer|
+|encodedDataQ_24_out         |  out|   16|      ap_vld|                   encodedDataQ_24_out|       pointer|
+|encodedDataQ_24_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_24_out|       pointer|
+|encodedDataQ_23_out         |  out|   16|      ap_vld|                   encodedDataQ_23_out|       pointer|
+|encodedDataQ_23_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_23_out|       pointer|
+|encodedDataQ_22_out         |  out|   16|      ap_vld|                   encodedDataQ_22_out|       pointer|
+|encodedDataQ_22_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_22_out|       pointer|
+|encodedDataQ_21_out         |  out|   16|      ap_vld|                   encodedDataQ_21_out|       pointer|
+|encodedDataQ_21_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_21_out|       pointer|
+|encodedDataQ_20_out         |  out|   16|      ap_vld|                   encodedDataQ_20_out|       pointer|
+|encodedDataQ_20_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_20_out|       pointer|
+|encodedDataQ_19_out         |  out|   16|      ap_vld|                   encodedDataQ_19_out|       pointer|
+|encodedDataQ_19_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_19_out|       pointer|
+|encodedDataQ_18_out         |  out|   16|      ap_vld|                   encodedDataQ_18_out|       pointer|
+|encodedDataQ_18_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_18_out|       pointer|
+|encodedDataQ_17_out         |  out|   16|      ap_vld|                   encodedDataQ_17_out|       pointer|
+|encodedDataQ_17_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_17_out|       pointer|
+|encodedDataQ_16_out         |  out|   16|      ap_vld|                   encodedDataQ_16_out|       pointer|
+|encodedDataQ_16_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_16_out|       pointer|
+|encodedDataQ_15_out         |  out|   16|      ap_vld|                   encodedDataQ_15_out|       pointer|
+|encodedDataQ_15_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_15_out|       pointer|
+|encodedDataQ_14_out         |  out|   16|      ap_vld|                   encodedDataQ_14_out|       pointer|
+|encodedDataQ_14_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_14_out|       pointer|
+|encodedDataQ_13_out         |  out|   16|      ap_vld|                   encodedDataQ_13_out|       pointer|
+|encodedDataQ_13_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_13_out|       pointer|
+|encodedDataQ_12_out         |  out|   16|      ap_vld|                   encodedDataQ_12_out|       pointer|
+|encodedDataQ_12_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_12_out|       pointer|
+|encodedDataQ_11_out         |  out|   16|      ap_vld|                   encodedDataQ_11_out|       pointer|
+|encodedDataQ_11_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_11_out|       pointer|
+|encodedDataQ_10_out         |  out|   16|      ap_vld|                   encodedDataQ_10_out|       pointer|
+|encodedDataQ_10_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataQ_10_out|       pointer|
+|encodedDataQ_9_out          |  out|   16|      ap_vld|                    encodedDataQ_9_out|       pointer|
+|encodedDataQ_9_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_9_out|       pointer|
+|encodedDataQ_8_out          |  out|   16|      ap_vld|                    encodedDataQ_8_out|       pointer|
+|encodedDataQ_8_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_8_out|       pointer|
+|encodedDataQ_7_out          |  out|   16|      ap_vld|                    encodedDataQ_7_out|       pointer|
+|encodedDataQ_7_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_7_out|       pointer|
+|encodedDataQ_6_out          |  out|   16|      ap_vld|                    encodedDataQ_6_out|       pointer|
+|encodedDataQ_6_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_6_out|       pointer|
+|encodedDataQ_5_out          |  out|   16|      ap_vld|                    encodedDataQ_5_out|       pointer|
+|encodedDataQ_5_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_5_out|       pointer|
+|encodedDataQ_4_out          |  out|   16|      ap_vld|                    encodedDataQ_4_out|       pointer|
+|encodedDataQ_4_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_4_out|       pointer|
+|encodedDataQ_3_out          |  out|   16|      ap_vld|                    encodedDataQ_3_out|       pointer|
+|encodedDataQ_3_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_3_out|       pointer|
+|encodedDataQ_2_out          |  out|   16|      ap_vld|                    encodedDataQ_2_out|       pointer|
+|encodedDataQ_2_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_2_out|       pointer|
+|encodedDataQ_1_out          |  out|   16|      ap_vld|                    encodedDataQ_1_out|       pointer|
+|encodedDataQ_1_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataQ_1_out|       pointer|
+|encodedDataQ_out            |  out|   16|      ap_vld|                      encodedDataQ_out|       pointer|
+|encodedDataQ_out_ap_vld     |  out|    1|      ap_vld|                      encodedDataQ_out|       pointer|
+|phi_ln282_1_out             |  out|    1|      ap_vld|                       phi_ln282_1_out|       pointer|
+|phi_ln282_1_out_ap_vld      |  out|    1|      ap_vld|                       phi_ln282_1_out|       pointer|
+|phi_ln280_4_out             |  out|    1|      ap_vld|                       phi_ln280_4_out|       pointer|
+|phi_ln280_4_out_ap_vld      |  out|    1|      ap_vld|                       phi_ln280_4_out|       pointer|
+|phi_ln280_5_out             |  out|    1|      ap_vld|                       phi_ln280_5_out|       pointer|
+|phi_ln280_5_out_ap_vld      |  out|    1|      ap_vld|                       phi_ln280_5_out|       pointer|
+|p_out                       |  out|    1|      ap_vld|                                 p_out|       pointer|
+|p_out_ap_vld                |  out|    1|      ap_vld|                                 p_out|       pointer|
+|phi_ln280_6_out             |  out|    1|      ap_vld|                       phi_ln280_6_out|       pointer|
+|phi_ln280_6_out_ap_vld      |  out|    1|      ap_vld|                       phi_ln280_6_out|       pointer|
+|phi_ln280_7_out             |  out|    1|      ap_vld|                       phi_ln280_7_out|       pointer|
+|phi_ln280_7_out_ap_vld      |  out|    1|      ap_vld|                       phi_ln280_7_out|       pointer|
+|p_phi_out                   |  out|    1|      ap_vld|                             p_phi_out|       pointer|
+|p_phi_out_ap_vld            |  out|    1|      ap_vld|                             p_phi_out|       pointer|
++----------------------------+-----+-----+------------+--------------------------------------+--------------+
+

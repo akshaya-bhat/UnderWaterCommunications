@@ -1,0 +1,40 @@
+name: x86-windows
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master", "dev" ]
+
+env:
+  BUILD_TYPE: Debug
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: x64
+
+    - name: Configure CMake
+      working-directory: ./examples
+      run: cmake . -B build --preset windows-msvc -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+
+    - name: Build
+      working-directory: ./examples
+      run: cmake --build build --config ${{env.BUILD_TYPE}}
+
+    - name: Run simple example
+      working-directory: ./examples
+      run: ./build/run_simple
+
+    - name: Run punctured decoder example 
+      working-directory: ./examples
+      run: ./build/run_punctured_decoder
+
+    - name: Run tests
+      working-directory: ./examples
+      run: ./build/run_tests

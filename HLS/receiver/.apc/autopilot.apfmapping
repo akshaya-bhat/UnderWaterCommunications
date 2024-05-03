@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="svd.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.h"/>
+    <originFiles name="svd.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.cpp"/>
+    <originFiles name="receiver.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/receiver.h"/>
+    <originFiles name="receiver.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/receiver.cpp"/>
+    <originFiles name="matrixOperations.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/matrixOperations.h"/>
+    <originFiles name="matrixOperations.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/matrixOperations.cpp"/>
+    <originFiles name="eigen.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/eigen.h"/>
+    <originFiles name="eigen.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/eigen.cpp"/>
+    <originFiles name="QR.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/QR.h"/>
+    <originFiles name="QR.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/QR.cpp"/>
+    <originFiles name="alignment.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/alignment.h"/>
+    <originFiles name="convolutional_encoder.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/convolutional_encoder.h"/>
+    <originFiles name="convolutional_encoder_lookup.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/convolutional_encoder_lookup.h"/>
+    <originFiles name="convolutional_encoder_shift_register.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/convolutional_encoder_shift_register.h"/>
+    <originFiles name="viterbi_branch_table.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/viterbi_branch_table.h"/>
+    <originFiles name="viterbi_decoder_config.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/viterbi_decoder_config.h"/>
+    <originFiles name="viterbi_decoder_core.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/viterbi_decoder_core.h"/>
+    <originFiles name="viterbi_decoder_scalar.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/viterbi_decoder_scalar.h"/>
+    <originFiles name="parity_table.h" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/parity_table.h"/>
+  </source>
+  <testbench>
+    <originFiles name="receiver_tb.cpp" path="/home/lilian/school/UnderWaterCommunications/HLS/rx_src/receiver_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

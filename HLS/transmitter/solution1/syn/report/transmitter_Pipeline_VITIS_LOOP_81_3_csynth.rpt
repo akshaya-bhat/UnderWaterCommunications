@@ -1,0 +1,517 @@
+
+
+================================================================
+== Vitis HLS Report for 'transmitter_Pipeline_VITIS_LOOP_81_3'
+================================================================
+* Date:           Thu Apr 25 14:08:58 2024
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        transmitter
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.132 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       52|       52|  0.520 us|  0.520 us|   52|   52|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_81_3  |       50|       50|         1|          1|          4|    50|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     52|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|    217|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     99|    -|
+|Register         |        -|    -|     121|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     121|    368|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT | URAM|
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |mux_506_16_1_1_U103  |mux_506_16_1_1  |        0|   0|  0|  217|    0|
+    +---------------------+----------------+---------+----+---+-----+-----+
+    |Total                |                |        0|   0|  0|  217|    0|
+    +---------------------+----------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |add_ln81_fu_2644_p2          |         +|   0|  0|  14|           7|           2|
+    |add_ln84_fu_1978_p2          |         +|   0|  0|  14|           6|           1|
+    |icmp_ln81_fu_1972_p2         |      icmp|   0|  0|  10|           6|           5|
+    |encodedDataI_100_fu_2112_p2  |       xor|   0|  0|   2|           1|           1|
+    |encodedDataI_101_fu_2134_p2  |       xor|   0|  0|   2|           1|           1|
+    |xor_ln284_1_fu_2094_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln284_2_fu_2100_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln284_3_fu_2106_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln285_1_fu_2122_p2       |       xor|   0|  0|   2|           1|           1|
+    |xor_ln285_2_fu_2128_p2       |       xor|   0|  0|   2|           1|           1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |Total                        |          |   0|  0|  52|          26|          15|
+    +-----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                            |   9|          2|    1|          2|
+    |ap_phi_mux_empty_phi_fu_1924_p4        |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_1_phi_fu_1912_p4  |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_2_phi_fu_1936_p4  |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_3_phi_fu_1948_p4  |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln280_phi_fu_1900_p4    |   9|          2|    1|          2|
+    |ap_phi_mux_phi_ln282_phi_fu_1889_p4    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2                   |   9|          2|    7|         14|
+    |ap_sig_allocacmp_z_2                   |   9|          2|    6|         12|
+    |i_fu_446                               |   9|          2|    7|         14|
+    |z_fu_442                               |   9|          2|    6|         12|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  99|         22|   33|         66|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+---+----+-----+-----------+
+    |          Name          | FF| LUT| Bits| Const Bits|
+    +------------------------+---+----+-----+-----------+
+    |ap_CS_fsm               |  1|   0|    1|          0|
+    |ap_done_reg             |  1|   0|    1|          0|
+    |empty_reg_1921          |  1|   0|    1|          0|
+    |encodedDataI_10_fu_490  |  1|   0|   16|         15|
+    |encodedDataI_11_fu_494  |  1|   0|   16|         15|
+    |encodedDataI_12_fu_498  |  1|   0|   16|         15|
+    |encodedDataI_13_fu_502  |  1|   0|   16|         15|
+    |encodedDataI_14_fu_506  |  1|   0|   16|         15|
+    |encodedDataI_15_fu_510  |  1|   0|   16|         15|
+    |encodedDataI_16_fu_514  |  1|   0|   16|         15|
+    |encodedDataI_17_fu_518  |  1|   0|   16|         15|
+    |encodedDataI_18_fu_522  |  1|   0|   16|         15|
+    |encodedDataI_19_fu_526  |  1|   0|   16|         15|
+    |encodedDataI_1_fu_454   |  1|   0|   16|         15|
+    |encodedDataI_20_fu_530  |  1|   0|   16|         15|
+    |encodedDataI_21_fu_534  |  1|   0|   16|         15|
+    |encodedDataI_22_fu_538  |  1|   0|   16|         15|
+    |encodedDataI_23_fu_542  |  1|   0|   16|         15|
+    |encodedDataI_24_fu_546  |  1|   0|   16|         15|
+    |encodedDataI_25_fu_550  |  1|   0|   16|         15|
+    |encodedDataI_26_fu_554  |  1|   0|   16|         15|
+    |encodedDataI_27_fu_558  |  1|   0|   16|         15|
+    |encodedDataI_28_fu_562  |  1|   0|   16|         15|
+    |encodedDataI_29_fu_566  |  1|   0|   16|         15|
+    |encodedDataI_2_fu_458   |  1|   0|   16|         15|
+    |encodedDataI_30_fu_570  |  1|   0|   16|         15|
+    |encodedDataI_31_fu_574  |  1|   0|   16|         15|
+    |encodedDataI_32_fu_578  |  1|   0|   16|         15|
+    |encodedDataI_33_fu_582  |  1|   0|   16|         15|
+    |encodedDataI_34_fu_586  |  1|   0|   16|         15|
+    |encodedDataI_35_fu_590  |  1|   0|   16|         15|
+    |encodedDataI_36_fu_594  |  1|   0|   16|         15|
+    |encodedDataI_37_fu_598  |  1|   0|   16|         15|
+    |encodedDataI_38_fu_602  |  1|   0|   16|         15|
+    |encodedDataI_39_fu_606  |  1|   0|   16|         15|
+    |encodedDataI_3_fu_462   |  1|   0|   16|         15|
+    |encodedDataI_40_fu_610  |  1|   0|   16|         15|
+    |encodedDataI_41_fu_614  |  1|   0|   16|         15|
+    |encodedDataI_42_fu_618  |  1|   0|   16|         15|
+    |encodedDataI_43_fu_622  |  1|   0|   16|         15|
+    |encodedDataI_44_fu_626  |  1|   0|   16|         15|
+    |encodedDataI_45_fu_630  |  1|   0|   16|         15|
+    |encodedDataI_46_fu_634  |  1|   0|   16|         15|
+    |encodedDataI_47_fu_638  |  1|   0|   16|         15|
+    |encodedDataI_48_fu_642  |  1|   0|   16|         15|
+    |encodedDataI_49_fu_646  |  1|   0|   16|         15|
+    |encodedDataI_4_fu_466   |  1|   0|   16|         15|
+    |encodedDataI_50_fu_650  |  1|   0|   16|         15|
+    |encodedDataI_51_fu_654  |  1|   0|   16|         15|
+    |encodedDataI_52_fu_658  |  1|   0|   16|         15|
+    |encodedDataI_53_fu_662  |  1|   0|   16|         15|
+    |encodedDataI_54_fu_666  |  1|   0|   16|         15|
+    |encodedDataI_55_fu_670  |  1|   0|   16|         15|
+    |encodedDataI_56_fu_674  |  1|   0|   16|         15|
+    |encodedDataI_57_fu_678  |  1|   0|   16|         15|
+    |encodedDataI_58_fu_682  |  1|   0|   16|         15|
+    |encodedDataI_59_fu_686  |  1|   0|   16|         15|
+    |encodedDataI_5_fu_470   |  1|   0|   16|         15|
+    |encodedDataI_60_fu_690  |  1|   0|   16|         15|
+    |encodedDataI_61_fu_694  |  1|   0|   16|         15|
+    |encodedDataI_62_fu_698  |  1|   0|   16|         15|
+    |encodedDataI_63_fu_702  |  1|   0|   16|         15|
+    |encodedDataI_64_fu_706  |  1|   0|   16|         15|
+    |encodedDataI_65_fu_710  |  1|   0|   16|         15|
+    |encodedDataI_66_fu_714  |  1|   0|   16|         15|
+    |encodedDataI_67_fu_718  |  1|   0|   16|         15|
+    |encodedDataI_68_fu_722  |  1|   0|   16|         15|
+    |encodedDataI_69_fu_726  |  1|   0|   16|         15|
+    |encodedDataI_6_fu_474   |  1|   0|   16|         15|
+    |encodedDataI_70_fu_730  |  1|   0|   16|         15|
+    |encodedDataI_71_fu_734  |  1|   0|   16|         15|
+    |encodedDataI_72_fu_738  |  1|   0|   16|         15|
+    |encodedDataI_73_fu_742  |  1|   0|   16|         15|
+    |encodedDataI_74_fu_746  |  1|   0|   16|         15|
+    |encodedDataI_75_fu_750  |  1|   0|   16|         15|
+    |encodedDataI_76_fu_754  |  1|   0|   16|         15|
+    |encodedDataI_77_fu_758  |  1|   0|   16|         15|
+    |encodedDataI_78_fu_762  |  1|   0|   16|         15|
+    |encodedDataI_79_fu_766  |  1|   0|   16|         15|
+    |encodedDataI_7_fu_478   |  1|   0|   16|         15|
+    |encodedDataI_80_fu_770  |  1|   0|   16|         15|
+    |encodedDataI_81_fu_774  |  1|   0|   16|         15|
+    |encodedDataI_82_fu_778  |  1|   0|   16|         15|
+    |encodedDataI_83_fu_782  |  1|   0|   16|         15|
+    |encodedDataI_84_fu_786  |  1|   0|   16|         15|
+    |encodedDataI_85_fu_790  |  1|   0|   16|         15|
+    |encodedDataI_86_fu_794  |  1|   0|   16|         15|
+    |encodedDataI_87_fu_798  |  1|   0|   16|         15|
+    |encodedDataI_88_fu_802  |  1|   0|   16|         15|
+    |encodedDataI_89_fu_806  |  1|   0|   16|         15|
+    |encodedDataI_8_fu_482   |  1|   0|   16|         15|
+    |encodedDataI_90_fu_810  |  1|   0|   16|         15|
+    |encodedDataI_91_fu_814  |  1|   0|   16|         15|
+    |encodedDataI_92_fu_818  |  1|   0|   16|         15|
+    |encodedDataI_93_fu_822  |  1|   0|   16|         15|
+    |encodedDataI_94_fu_826  |  1|   0|   16|         15|
+    |encodedDataI_95_fu_830  |  1|   0|   16|         15|
+    |encodedDataI_96_fu_834  |  1|   0|   16|         15|
+    |encodedDataI_97_fu_838  |  1|   0|   16|         15|
+    |encodedDataI_98_fu_842  |  1|   0|   16|         15|
+    |encodedDataI_99_fu_846  |  1|   0|   16|         15|
+    |encodedDataI_9_fu_486   |  1|   0|   16|         15|
+    |encodedDataI_fu_450     |  1|   0|   16|         15|
+    |i_fu_446                |  7|   0|    7|          0|
+    |phi_ln280_1_reg_1909    |  1|   0|    1|          0|
+    |phi_ln280_2_reg_1933    |  1|   0|    1|          0|
+    |phi_ln280_3_reg_1945    |  1|   0|    1|          0|
+    |phi_ln280_reg_1897      |  1|   0|    1|          0|
+    |phi_ln282_reg_1886      |  1|   0|    1|          0|
+    |z_fu_442                |  6|   0|    6|          0|
+    +------------------------+---+----+-----+-----------+
+    |Total                   |121|   0| 1621|       1500|
+    +------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++----------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_81_3|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_81_3|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_81_3|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_81_3|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_81_3|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  transmitter_Pipeline_VITIS_LOOP_81_3|  return value|
+|state_load_5                |   in|    1|     ap_none|                          state_load_5|        scalar|
+|state_load_4                |   in|    1|     ap_none|                          state_load_4|        scalar|
+|state_load_3                |   in|    1|     ap_none|                          state_load_3|        scalar|
+|state_load_2                |   in|    1|     ap_none|                          state_load_2|        scalar|
+|state_load_1                |   in|    1|     ap_none|                          state_load_1|        scalar|
+|state_load                  |   in|    1|     ap_none|                            state_load|        scalar|
+|scrambledDataI_reload       |   in|   16|     ap_none|                 scrambledDataI_reload|        scalar|
+|scrambledDataI_1_reload     |   in|   16|     ap_none|               scrambledDataI_1_reload|        scalar|
+|scrambledDataI_2_reload     |   in|   16|     ap_none|               scrambledDataI_2_reload|        scalar|
+|scrambledDataI_3_reload     |   in|   16|     ap_none|               scrambledDataI_3_reload|        scalar|
+|scrambledDataI_4_reload     |   in|   16|     ap_none|               scrambledDataI_4_reload|        scalar|
+|scrambledDataI_5_reload     |   in|   16|     ap_none|               scrambledDataI_5_reload|        scalar|
+|scrambledDataI_6_reload     |   in|   16|     ap_none|               scrambledDataI_6_reload|        scalar|
+|scrambledDataI_7_reload     |   in|   16|     ap_none|               scrambledDataI_7_reload|        scalar|
+|scrambledDataI_8_reload     |   in|   16|     ap_none|               scrambledDataI_8_reload|        scalar|
+|scrambledDataI_9_reload     |   in|   16|     ap_none|               scrambledDataI_9_reload|        scalar|
+|scrambledDataI_10_reload    |   in|   16|     ap_none|              scrambledDataI_10_reload|        scalar|
+|scrambledDataI_11_reload    |   in|   16|     ap_none|              scrambledDataI_11_reload|        scalar|
+|scrambledDataI_12_reload    |   in|   16|     ap_none|              scrambledDataI_12_reload|        scalar|
+|scrambledDataI_13_reload    |   in|   16|     ap_none|              scrambledDataI_13_reload|        scalar|
+|scrambledDataI_14_reload    |   in|   16|     ap_none|              scrambledDataI_14_reload|        scalar|
+|scrambledDataI_15_reload    |   in|   16|     ap_none|              scrambledDataI_15_reload|        scalar|
+|scrambledDataI_16_reload    |   in|   16|     ap_none|              scrambledDataI_16_reload|        scalar|
+|scrambledDataI_17_reload    |   in|   16|     ap_none|              scrambledDataI_17_reload|        scalar|
+|scrambledDataI_18_reload    |   in|   16|     ap_none|              scrambledDataI_18_reload|        scalar|
+|scrambledDataI_19_reload    |   in|   16|     ap_none|              scrambledDataI_19_reload|        scalar|
+|scrambledDataI_20_reload    |   in|   16|     ap_none|              scrambledDataI_20_reload|        scalar|
+|scrambledDataI_21_reload    |   in|   16|     ap_none|              scrambledDataI_21_reload|        scalar|
+|scrambledDataI_22_reload    |   in|   16|     ap_none|              scrambledDataI_22_reload|        scalar|
+|scrambledDataI_23_reload    |   in|   16|     ap_none|              scrambledDataI_23_reload|        scalar|
+|scrambledDataI_24_reload    |   in|   16|     ap_none|              scrambledDataI_24_reload|        scalar|
+|scrambledDataI_25_reload    |   in|   16|     ap_none|              scrambledDataI_25_reload|        scalar|
+|scrambledDataI_26_reload    |   in|   16|     ap_none|              scrambledDataI_26_reload|        scalar|
+|scrambledDataI_27_reload    |   in|   16|     ap_none|              scrambledDataI_27_reload|        scalar|
+|scrambledDataI_28_reload    |   in|   16|     ap_none|              scrambledDataI_28_reload|        scalar|
+|scrambledDataI_29_reload    |   in|   16|     ap_none|              scrambledDataI_29_reload|        scalar|
+|scrambledDataI_30_reload    |   in|   16|     ap_none|              scrambledDataI_30_reload|        scalar|
+|scrambledDataI_31_reload    |   in|   16|     ap_none|              scrambledDataI_31_reload|        scalar|
+|scrambledDataI_32_reload    |   in|   16|     ap_none|              scrambledDataI_32_reload|        scalar|
+|scrambledDataI_33_reload    |   in|   16|     ap_none|              scrambledDataI_33_reload|        scalar|
+|scrambledDataI_34_reload    |   in|   16|     ap_none|              scrambledDataI_34_reload|        scalar|
+|scrambledDataI_35_reload    |   in|   16|     ap_none|              scrambledDataI_35_reload|        scalar|
+|scrambledDataI_36_reload    |   in|   16|     ap_none|              scrambledDataI_36_reload|        scalar|
+|scrambledDataI_37_reload    |   in|   16|     ap_none|              scrambledDataI_37_reload|        scalar|
+|scrambledDataI_38_reload    |   in|   16|     ap_none|              scrambledDataI_38_reload|        scalar|
+|scrambledDataI_39_reload    |   in|   16|     ap_none|              scrambledDataI_39_reload|        scalar|
+|scrambledDataI_40_reload    |   in|   16|     ap_none|              scrambledDataI_40_reload|        scalar|
+|scrambledDataI_41_reload    |   in|   16|     ap_none|              scrambledDataI_41_reload|        scalar|
+|scrambledDataI_42_reload    |   in|   16|     ap_none|              scrambledDataI_42_reload|        scalar|
+|scrambledDataI_43_reload    |   in|   16|     ap_none|              scrambledDataI_43_reload|        scalar|
+|scrambledDataI_44_reload    |   in|   16|     ap_none|              scrambledDataI_44_reload|        scalar|
+|scrambledDataI_45_reload    |   in|   16|     ap_none|              scrambledDataI_45_reload|        scalar|
+|scrambledDataI_46_reload    |   in|   16|     ap_none|              scrambledDataI_46_reload|        scalar|
+|scrambledDataI_47_reload    |   in|   16|     ap_none|              scrambledDataI_47_reload|        scalar|
+|scrambledDataI_48_reload    |   in|   16|     ap_none|              scrambledDataI_48_reload|        scalar|
+|scrambledDataI_49_reload    |   in|   16|     ap_none|              scrambledDataI_49_reload|        scalar|
+|encodedDataI_99_out         |  out|   16|      ap_vld|                   encodedDataI_99_out|       pointer|
+|encodedDataI_99_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_99_out|       pointer|
+|encodedDataI_98_out         |  out|   16|      ap_vld|                   encodedDataI_98_out|       pointer|
+|encodedDataI_98_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_98_out|       pointer|
+|encodedDataI_97_out         |  out|   16|      ap_vld|                   encodedDataI_97_out|       pointer|
+|encodedDataI_97_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_97_out|       pointer|
+|encodedDataI_96_out         |  out|   16|      ap_vld|                   encodedDataI_96_out|       pointer|
+|encodedDataI_96_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_96_out|       pointer|
+|encodedDataI_95_out         |  out|   16|      ap_vld|                   encodedDataI_95_out|       pointer|
+|encodedDataI_95_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_95_out|       pointer|
+|encodedDataI_94_out         |  out|   16|      ap_vld|                   encodedDataI_94_out|       pointer|
+|encodedDataI_94_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_94_out|       pointer|
+|encodedDataI_93_out         |  out|   16|      ap_vld|                   encodedDataI_93_out|       pointer|
+|encodedDataI_93_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_93_out|       pointer|
+|encodedDataI_92_out         |  out|   16|      ap_vld|                   encodedDataI_92_out|       pointer|
+|encodedDataI_92_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_92_out|       pointer|
+|encodedDataI_91_out         |  out|   16|      ap_vld|                   encodedDataI_91_out|       pointer|
+|encodedDataI_91_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_91_out|       pointer|
+|encodedDataI_90_out         |  out|   16|      ap_vld|                   encodedDataI_90_out|       pointer|
+|encodedDataI_90_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_90_out|       pointer|
+|encodedDataI_89_out         |  out|   16|      ap_vld|                   encodedDataI_89_out|       pointer|
+|encodedDataI_89_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_89_out|       pointer|
+|encodedDataI_88_out         |  out|   16|      ap_vld|                   encodedDataI_88_out|       pointer|
+|encodedDataI_88_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_88_out|       pointer|
+|encodedDataI_87_out         |  out|   16|      ap_vld|                   encodedDataI_87_out|       pointer|
+|encodedDataI_87_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_87_out|       pointer|
+|encodedDataI_86_out         |  out|   16|      ap_vld|                   encodedDataI_86_out|       pointer|
+|encodedDataI_86_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_86_out|       pointer|
+|encodedDataI_85_out         |  out|   16|      ap_vld|                   encodedDataI_85_out|       pointer|
+|encodedDataI_85_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_85_out|       pointer|
+|encodedDataI_84_out         |  out|   16|      ap_vld|                   encodedDataI_84_out|       pointer|
+|encodedDataI_84_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_84_out|       pointer|
+|encodedDataI_83_out         |  out|   16|      ap_vld|                   encodedDataI_83_out|       pointer|
+|encodedDataI_83_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_83_out|       pointer|
+|encodedDataI_82_out         |  out|   16|      ap_vld|                   encodedDataI_82_out|       pointer|
+|encodedDataI_82_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_82_out|       pointer|
+|encodedDataI_81_out         |  out|   16|      ap_vld|                   encodedDataI_81_out|       pointer|
+|encodedDataI_81_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_81_out|       pointer|
+|encodedDataI_80_out         |  out|   16|      ap_vld|                   encodedDataI_80_out|       pointer|
+|encodedDataI_80_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_80_out|       pointer|
+|encodedDataI_79_out         |  out|   16|      ap_vld|                   encodedDataI_79_out|       pointer|
+|encodedDataI_79_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_79_out|       pointer|
+|encodedDataI_78_out         |  out|   16|      ap_vld|                   encodedDataI_78_out|       pointer|
+|encodedDataI_78_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_78_out|       pointer|
+|encodedDataI_77_out         |  out|   16|      ap_vld|                   encodedDataI_77_out|       pointer|
+|encodedDataI_77_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_77_out|       pointer|
+|encodedDataI_76_out         |  out|   16|      ap_vld|                   encodedDataI_76_out|       pointer|
+|encodedDataI_76_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_76_out|       pointer|
+|encodedDataI_75_out         |  out|   16|      ap_vld|                   encodedDataI_75_out|       pointer|
+|encodedDataI_75_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_75_out|       pointer|
+|encodedDataI_74_out         |  out|   16|      ap_vld|                   encodedDataI_74_out|       pointer|
+|encodedDataI_74_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_74_out|       pointer|
+|encodedDataI_73_out         |  out|   16|      ap_vld|                   encodedDataI_73_out|       pointer|
+|encodedDataI_73_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_73_out|       pointer|
+|encodedDataI_72_out         |  out|   16|      ap_vld|                   encodedDataI_72_out|       pointer|
+|encodedDataI_72_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_72_out|       pointer|
+|encodedDataI_71_out         |  out|   16|      ap_vld|                   encodedDataI_71_out|       pointer|
+|encodedDataI_71_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_71_out|       pointer|
+|encodedDataI_70_out         |  out|   16|      ap_vld|                   encodedDataI_70_out|       pointer|
+|encodedDataI_70_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_70_out|       pointer|
+|encodedDataI_69_out         |  out|   16|      ap_vld|                   encodedDataI_69_out|       pointer|
+|encodedDataI_69_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_69_out|       pointer|
+|encodedDataI_68_out         |  out|   16|      ap_vld|                   encodedDataI_68_out|       pointer|
+|encodedDataI_68_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_68_out|       pointer|
+|encodedDataI_67_out         |  out|   16|      ap_vld|                   encodedDataI_67_out|       pointer|
+|encodedDataI_67_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_67_out|       pointer|
+|encodedDataI_66_out         |  out|   16|      ap_vld|                   encodedDataI_66_out|       pointer|
+|encodedDataI_66_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_66_out|       pointer|
+|encodedDataI_65_out         |  out|   16|      ap_vld|                   encodedDataI_65_out|       pointer|
+|encodedDataI_65_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_65_out|       pointer|
+|encodedDataI_64_out         |  out|   16|      ap_vld|                   encodedDataI_64_out|       pointer|
+|encodedDataI_64_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_64_out|       pointer|
+|encodedDataI_63_out         |  out|   16|      ap_vld|                   encodedDataI_63_out|       pointer|
+|encodedDataI_63_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_63_out|       pointer|
+|encodedDataI_62_out         |  out|   16|      ap_vld|                   encodedDataI_62_out|       pointer|
+|encodedDataI_62_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_62_out|       pointer|
+|encodedDataI_61_out         |  out|   16|      ap_vld|                   encodedDataI_61_out|       pointer|
+|encodedDataI_61_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_61_out|       pointer|
+|encodedDataI_60_out         |  out|   16|      ap_vld|                   encodedDataI_60_out|       pointer|
+|encodedDataI_60_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_60_out|       pointer|
+|encodedDataI_59_out         |  out|   16|      ap_vld|                   encodedDataI_59_out|       pointer|
+|encodedDataI_59_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_59_out|       pointer|
+|encodedDataI_58_out         |  out|   16|      ap_vld|                   encodedDataI_58_out|       pointer|
+|encodedDataI_58_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_58_out|       pointer|
+|encodedDataI_57_out         |  out|   16|      ap_vld|                   encodedDataI_57_out|       pointer|
+|encodedDataI_57_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_57_out|       pointer|
+|encodedDataI_56_out         |  out|   16|      ap_vld|                   encodedDataI_56_out|       pointer|
+|encodedDataI_56_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_56_out|       pointer|
+|encodedDataI_55_out         |  out|   16|      ap_vld|                   encodedDataI_55_out|       pointer|
+|encodedDataI_55_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_55_out|       pointer|
+|encodedDataI_54_out         |  out|   16|      ap_vld|                   encodedDataI_54_out|       pointer|
+|encodedDataI_54_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_54_out|       pointer|
+|encodedDataI_53_out         |  out|   16|      ap_vld|                   encodedDataI_53_out|       pointer|
+|encodedDataI_53_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_53_out|       pointer|
+|encodedDataI_52_out         |  out|   16|      ap_vld|                   encodedDataI_52_out|       pointer|
+|encodedDataI_52_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_52_out|       pointer|
+|encodedDataI_51_out         |  out|   16|      ap_vld|                   encodedDataI_51_out|       pointer|
+|encodedDataI_51_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_51_out|       pointer|
+|encodedDataI_50_out         |  out|   16|      ap_vld|                   encodedDataI_50_out|       pointer|
+|encodedDataI_50_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_50_out|       pointer|
+|encodedDataI_49_out         |  out|   16|      ap_vld|                   encodedDataI_49_out|       pointer|
+|encodedDataI_49_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_49_out|       pointer|
+|encodedDataI_48_out         |  out|   16|      ap_vld|                   encodedDataI_48_out|       pointer|
+|encodedDataI_48_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_48_out|       pointer|
+|encodedDataI_47_out         |  out|   16|      ap_vld|                   encodedDataI_47_out|       pointer|
+|encodedDataI_47_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_47_out|       pointer|
+|encodedDataI_46_out         |  out|   16|      ap_vld|                   encodedDataI_46_out|       pointer|
+|encodedDataI_46_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_46_out|       pointer|
+|encodedDataI_45_out         |  out|   16|      ap_vld|                   encodedDataI_45_out|       pointer|
+|encodedDataI_45_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_45_out|       pointer|
+|encodedDataI_44_out         |  out|   16|      ap_vld|                   encodedDataI_44_out|       pointer|
+|encodedDataI_44_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_44_out|       pointer|
+|encodedDataI_43_out         |  out|   16|      ap_vld|                   encodedDataI_43_out|       pointer|
+|encodedDataI_43_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_43_out|       pointer|
+|encodedDataI_42_out         |  out|   16|      ap_vld|                   encodedDataI_42_out|       pointer|
+|encodedDataI_42_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_42_out|       pointer|
+|encodedDataI_41_out         |  out|   16|      ap_vld|                   encodedDataI_41_out|       pointer|
+|encodedDataI_41_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_41_out|       pointer|
+|encodedDataI_40_out         |  out|   16|      ap_vld|                   encodedDataI_40_out|       pointer|
+|encodedDataI_40_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_40_out|       pointer|
+|encodedDataI_39_out         |  out|   16|      ap_vld|                   encodedDataI_39_out|       pointer|
+|encodedDataI_39_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_39_out|       pointer|
+|encodedDataI_38_out         |  out|   16|      ap_vld|                   encodedDataI_38_out|       pointer|
+|encodedDataI_38_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_38_out|       pointer|
+|encodedDataI_37_out         |  out|   16|      ap_vld|                   encodedDataI_37_out|       pointer|
+|encodedDataI_37_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_37_out|       pointer|
+|encodedDataI_36_out         |  out|   16|      ap_vld|                   encodedDataI_36_out|       pointer|
+|encodedDataI_36_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_36_out|       pointer|
+|encodedDataI_35_out         |  out|   16|      ap_vld|                   encodedDataI_35_out|       pointer|
+|encodedDataI_35_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_35_out|       pointer|
+|encodedDataI_34_out         |  out|   16|      ap_vld|                   encodedDataI_34_out|       pointer|
+|encodedDataI_34_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_34_out|       pointer|
+|encodedDataI_33_out         |  out|   16|      ap_vld|                   encodedDataI_33_out|       pointer|
+|encodedDataI_33_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_33_out|       pointer|
+|encodedDataI_32_out         |  out|   16|      ap_vld|                   encodedDataI_32_out|       pointer|
+|encodedDataI_32_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_32_out|       pointer|
+|encodedDataI_31_out         |  out|   16|      ap_vld|                   encodedDataI_31_out|       pointer|
+|encodedDataI_31_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_31_out|       pointer|
+|encodedDataI_30_out         |  out|   16|      ap_vld|                   encodedDataI_30_out|       pointer|
+|encodedDataI_30_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_30_out|       pointer|
+|encodedDataI_29_out         |  out|   16|      ap_vld|                   encodedDataI_29_out|       pointer|
+|encodedDataI_29_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_29_out|       pointer|
+|encodedDataI_28_out         |  out|   16|      ap_vld|                   encodedDataI_28_out|       pointer|
+|encodedDataI_28_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_28_out|       pointer|
+|encodedDataI_27_out         |  out|   16|      ap_vld|                   encodedDataI_27_out|       pointer|
+|encodedDataI_27_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_27_out|       pointer|
+|encodedDataI_26_out         |  out|   16|      ap_vld|                   encodedDataI_26_out|       pointer|
+|encodedDataI_26_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_26_out|       pointer|
+|encodedDataI_25_out         |  out|   16|      ap_vld|                   encodedDataI_25_out|       pointer|
+|encodedDataI_25_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_25_out|       pointer|
+|encodedDataI_24_out         |  out|   16|      ap_vld|                   encodedDataI_24_out|       pointer|
+|encodedDataI_24_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_24_out|       pointer|
+|encodedDataI_23_out         |  out|   16|      ap_vld|                   encodedDataI_23_out|       pointer|
+|encodedDataI_23_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_23_out|       pointer|
+|encodedDataI_22_out         |  out|   16|      ap_vld|                   encodedDataI_22_out|       pointer|
+|encodedDataI_22_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_22_out|       pointer|
+|encodedDataI_21_out         |  out|   16|      ap_vld|                   encodedDataI_21_out|       pointer|
+|encodedDataI_21_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_21_out|       pointer|
+|encodedDataI_20_out         |  out|   16|      ap_vld|                   encodedDataI_20_out|       pointer|
+|encodedDataI_20_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_20_out|       pointer|
+|encodedDataI_19_out         |  out|   16|      ap_vld|                   encodedDataI_19_out|       pointer|
+|encodedDataI_19_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_19_out|       pointer|
+|encodedDataI_18_out         |  out|   16|      ap_vld|                   encodedDataI_18_out|       pointer|
+|encodedDataI_18_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_18_out|       pointer|
+|encodedDataI_17_out         |  out|   16|      ap_vld|                   encodedDataI_17_out|       pointer|
+|encodedDataI_17_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_17_out|       pointer|
+|encodedDataI_16_out         |  out|   16|      ap_vld|                   encodedDataI_16_out|       pointer|
+|encodedDataI_16_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_16_out|       pointer|
+|encodedDataI_15_out         |  out|   16|      ap_vld|                   encodedDataI_15_out|       pointer|
+|encodedDataI_15_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_15_out|       pointer|
+|encodedDataI_14_out         |  out|   16|      ap_vld|                   encodedDataI_14_out|       pointer|
+|encodedDataI_14_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_14_out|       pointer|
+|encodedDataI_13_out         |  out|   16|      ap_vld|                   encodedDataI_13_out|       pointer|
+|encodedDataI_13_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_13_out|       pointer|
+|encodedDataI_12_out         |  out|   16|      ap_vld|                   encodedDataI_12_out|       pointer|
+|encodedDataI_12_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_12_out|       pointer|
+|encodedDataI_11_out         |  out|   16|      ap_vld|                   encodedDataI_11_out|       pointer|
+|encodedDataI_11_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_11_out|       pointer|
+|encodedDataI_10_out         |  out|   16|      ap_vld|                   encodedDataI_10_out|       pointer|
+|encodedDataI_10_out_ap_vld  |  out|    1|      ap_vld|                   encodedDataI_10_out|       pointer|
+|encodedDataI_9_out          |  out|   16|      ap_vld|                    encodedDataI_9_out|       pointer|
+|encodedDataI_9_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_9_out|       pointer|
+|encodedDataI_8_out          |  out|   16|      ap_vld|                    encodedDataI_8_out|       pointer|
+|encodedDataI_8_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_8_out|       pointer|
+|encodedDataI_7_out          |  out|   16|      ap_vld|                    encodedDataI_7_out|       pointer|
+|encodedDataI_7_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_7_out|       pointer|
+|encodedDataI_6_out          |  out|   16|      ap_vld|                    encodedDataI_6_out|       pointer|
+|encodedDataI_6_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_6_out|       pointer|
+|encodedDataI_5_out          |  out|   16|      ap_vld|                    encodedDataI_5_out|       pointer|
+|encodedDataI_5_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_5_out|       pointer|
+|encodedDataI_4_out          |  out|   16|      ap_vld|                    encodedDataI_4_out|       pointer|
+|encodedDataI_4_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_4_out|       pointer|
+|encodedDataI_3_out          |  out|   16|      ap_vld|                    encodedDataI_3_out|       pointer|
+|encodedDataI_3_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_3_out|       pointer|
+|encodedDataI_2_out          |  out|   16|      ap_vld|                    encodedDataI_2_out|       pointer|
+|encodedDataI_2_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_2_out|       pointer|
+|encodedDataI_1_out          |  out|   16|      ap_vld|                    encodedDataI_1_out|       pointer|
+|encodedDataI_1_out_ap_vld   |  out|    1|      ap_vld|                    encodedDataI_1_out|       pointer|
+|encodedDataI_out            |  out|   16|      ap_vld|                      encodedDataI_out|       pointer|
+|encodedDataI_out_ap_vld     |  out|    1|      ap_vld|                      encodedDataI_out|       pointer|
++----------------------------+-----+-----+------------+--------------------------------------+--------------+
+

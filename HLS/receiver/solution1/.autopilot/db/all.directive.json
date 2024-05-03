@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "receiver",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/lilian\/school\/UnderWaterCommunications\/HLS\/receiver\/solution1\/csynth.tcl",
+          "sourceLine": "32",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "receiver"
+              }]
+          }
+        },
+        {
+          "functionName": "receiver",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "\/home\/lilian\/school\/UnderWaterCommunications\/HLS\/receiver\/solution1\/csynth.tcl",
+          "sourceLine": "32",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "receiver"
+              }]
+          }
+        }
+      ]
+    }]}

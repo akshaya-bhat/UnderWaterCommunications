@@ -1,0 +1,37 @@
+In file included from rx_src/receiver.cpp:8:
+In file included from rx_src/viterbi_decoder_core.h:10:
+In file included from rx_src/./viterbi_branch_table.h:10:
+rx_src/./parity_table.h:38:21: error: call to deleted constructor of 'ParityTable'
+        static auto parity_table = ParityTable();
+                    ^              ~~~~~~~~~~~~~
+rx_src/./parity_table.h:32:5: note: 'ParityTable' has been explicitly marked deleted here
+    ParityTable(ParityTable&&) = delete;
+    ^
+In file included from rx_src/receiver.cpp:8:
+In file included from rx_src/viterbi_decoder_core.h:10:
+rx_src/./viterbi_branch_table.h:37:29: warning: static_assert with no message is a C++17 extension [-Wc++17-extensions]
+        static_assert(K > 1u);
+                            ^
+                            , ""
+rx_src/./viterbi_branch_table.h:38:29: warning: static_assert with no message is a C++17 extension [-Wc++17-extensions]
+        static_assert(R > 1u);
+                            ^
+                            , ""
+rx_src/./viterbi_branch_table.h:39:56: warning: static_assert with no message is a C++17 extension [-Wc++17-extensions]
+        static_assert(sizeof(branch_t) % ALIGNMENT == 0);
+                                                       ^
+                                                       , ""
+In file included from rx_src/receiver.cpp:8:
+rx_src/viterbi_decoder_core.h:33:56: warning: static_assert with no message is a C++17 extension [-Wc++17-extensions]
+        static_assert(sizeof(metric_t) % ALIGNMENT == 0);
+                                                       ^
+                                                       , ""
+rx_src/viterbi_decoder_core.h:173:30: warning: static_assert with no message is a C++17 extension [-Wc++17-extensions]
+        static_assert(K >= 2u);
+                             ^
+                             , ""
+rx_src/viterbi_decoder_core.h:174:30: warning: static_assert with no message is a C++17 extension [-Wc++17-extensions]
+        static_assert(R >= 1u);
+                             ^
+                             , ""
+6 warnings and 1 error generated.

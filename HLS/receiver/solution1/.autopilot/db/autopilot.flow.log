@@ -1,0 +1,265 @@
+INFO-FLOW: Workspace /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1 opened at Thu May 02 22:01:16 PDT 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xcvu11p-flga2577-1-e 
+Execute       create_platform xcvu11p-flga2577-1-e -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+Command       create_platform done; 1.82 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.95 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 2.03 sec.
+Execute   set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+Execute     create_platform xcvu11p-flga2577-1-e -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.16 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.04 seconds; current allocated memory: 751.312 MB.
+INFO: [HLS 200-10] Analyzing design file 'rx_src/svd.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling rx_src/svd.cpp as C++
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang rx_src/svd.cpp -foptimization-record-file=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.cpp.clang.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.cpp.clang.err.log 
+Command       ap_eval done; 0.22 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute       set_directive_top receiver -name=receiver 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/clang.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.19 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/.systemc_flag -fix-errors /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/all.directive.json -fix-errors /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.1 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 0.11 sec.
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.14 sec.
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.clang.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/svd.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.25 sec.
+INFO: [HLS 200-10] Analyzing design file 'rx_src/receiver.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling rx_src/receiver.cpp as C++
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang rx_src/receiver.cpp -foptimization-record-file=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/receiver.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/receiver.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/receiver.cpp.clang.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/receiver.cpp.clang.err.log 
+Command       ap_eval done; 0.26 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+Execute       set_directive_top receiver -name=receiver 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/receiver.pp.0.cpp -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_slow -device-resource-info=BRAM_4032.000000_DSP_9216.000000_FF_2592000.000000_LUT_1296000.000000_SLICE_162000.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcvu11p-flga2577-1-e > /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/clang.out.log 2> /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; error code: 1; 0.82 sec.
+ERROR: [HLS 207-3329] call to deleted constructor of 'ParityTable' (rx_src/./parity_table.h:38:21)
+INFO: [HLS 207-4119] 'ParityTable' has been explicitly marked deleted here (rx_src/./parity_table.h:32:5)
+WARNING: [HLS 207-4027] static_assert with no message is a C++17 extension (rx_src/./viterbi_branch_table.h:37:29)
+WARNING: [HLS 207-4027] static_assert with no message is a C++17 extension (rx_src/./viterbi_branch_table.h:38:29)
+WARNING: [HLS 207-4027] static_assert with no message is a C++17 extension (rx_src/./viterbi_branch_table.h:39:56)
+WARNING: [HLS 207-4027] static_assert with no message is a C++17 extension (rx_src/viterbi_decoder_core.h:33:56)
+WARNING: [HLS 207-4027] static_assert with no message is a C++17 extension (rx_src/viterbi_decoder_core.h:173:30)
+WARNING: [HLS 207-4027] static_assert with no message is a C++17 extension (rx_src/viterbi_decoder_core.h:174:30)
+INFO-FLOW: Error in clang_39_open_source : 
+INFO-FLOW: Caught error in elaborate:  
+    while executing
+"ap_compile_CCPP $srcf $skip_transform CFLAGS $skip_cdt $objdir $is_xip"
+    (procedure "AP::ap_compile_one_tu_39" line 48)
+    invoked from within
+"AP::ap_compile_one_tu_39 $srcfile $skip_transform $dbgInfo $skip_cdt "$cflags""
+    ("foreach" body line 10)
+    invoked from within
+"foreach fentry $dut_files {
+        #puts "file: $fentry"
+        set fatt [lindex $fentry 1]
+        array set opt $fatt
+        set srcfile $opt(nam..."
+    (procedure "AP::compile_dut_files_39" line 4)
+    invoked from within
+"AP::compile_dut_files_39 $dut_files $dbgInfo $skip_cdt $skip_transform"
+    (procedure "AP::compile" line 103)
+    invoked from within
+"AP::compile 1 $skip_cdt $skip_transform"
+    (procedure "ap_internal_elaborate" line 83)
+    invoked from within
+"ap_internal_elaborate "
+Command     elaborate done; error code: 2; 2.31 sec.
+INFO-FLOW: Caught error in csynth_design:  
+    while executing
+"ap_internal_csynth_design "
+Command   csynth_design done; error code: 2; 2.32 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1.67 seconds. CPU system time: 0.63 seconds. Elapsed time: 2.32 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; error code: 1; 14.59 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1 opened at Thu May 02 22:02:07 PDT 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xcvu11p-flga2577-1-e 
+Execute       create_platform xcvu11p-flga2577-1-e -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+Command       create_platform done; 1.87 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.01 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 2.09 sec.
+Execute   set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+Execute     create_platform xcvu11p-flga2577-1-e -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.17 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 2.68 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 2.34 seconds. CPU system time: 0.34 seconds. Elapsed time: 2.68 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; error code: 1; 15.03 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/lilian/school/UnderWaterCommunications/HLS/receiver/solution1 opened at Thu May 02 22:02:47 PDT 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xcvu11p-flga2577-1-e 
+Execute       create_platform xcvu11p-flga2577-1-e -board  
+DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+Command       create_platform done; 1.83 sec.
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.95 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 2.06 sec.
+Execute   set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+Execute     create_platform xcvu11p-flga2577-1-e -board  
+Execute     source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.14 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   csim_design -quiet 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     ap_part_info -name xcvu11p-flga2577-1-e -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command   csim_design done; error code: 2; 1.59 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.36 seconds. CPU system time: 0.24 seconds. Elapsed time: 1.59 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; error code: 1; 13.89 sec.
+Execute cleanup_all 
