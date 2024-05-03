@@ -1,0 +1,5 @@
+In file included from receiver.cpp:1:
+./receiver.hpp:9:17: warning: using directive refers to implicitly-defined namespace 'std'
+using namespace std;
+                ^
+1 warning generated.
