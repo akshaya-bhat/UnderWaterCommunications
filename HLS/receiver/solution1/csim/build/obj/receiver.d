@@ -32,4 +32,6 @@ obj/receiver.o: ../../../../rx_src/receiver.cpp \
  ../../../../rx_src/./viterbi_decoder_config.h \
  ../../../../rx_src/viterbi_decoder_scalar.h \
  ../../../../rx_src/convolutional_encoder_lookup.h \
- ../../../../rx_src/./convolutional_encoder.h
+ ../../../../rx_src/./convolutional_encoder.h \
+ ../../../../rx_src/test_helpers.h ../../../../rx_src/basic_ops.h \
+ ../../../../rx_src/bitcount_table.h

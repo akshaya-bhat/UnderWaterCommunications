@@ -1,87 +1,141 @@
-#include <cmath>
-#include <cstring>
+/**
+* @file svd.cpp
+* @author Melih Altun @2015
+**/
 #include "svd.h"
 
+/*Singular Value Decomposition
+Parameters: (outputs) 1st eigen vector set, diagonal singular values, 2nd eigenvector set, (inputs) input matrix, row count, col count */
 void svd(float UU[], float S[], float VV[], float X[], int N, int M)
 {
-    int i, j;
-    bool transposed = false;
-    float *V = VV, *U = UU;
+	int i, j;
+	bool transposed = false;
+	float *V = VV, *U = UU;
+	if (N < M) { //transpose if rows are less than columns
+		int tmp = N;
+		float *Xnew;
+		Xnew = new float[M*N];
+		transpose(Xnew, X, N, M);
+		N = M;
+		M = tmp;
+		copy_matrix(X, Xnew, N, M);
+		V = UU;
+		U = VV;
+		transposed = true;
+		delete[] Xnew;
+	}
 
-    float Xtr[64 * 32], Xtr_X[32 * 32], D[32], U0[64], V0[32];
+	float *Xtr, *Xtr_X, *D, *V0, *U0;
+	Xtr_X = new float[M*M];
+	Xtr = new float[N*M];
+	D = new float[M];
+	U0 = new float[N];
+	V0 = new float[M];
 
-    if (N < M) { //transpose if rows are less than columns
-        int tmp = N;
-        transpose(Xtr, X, 64, 32);
-        N = M;
-        M = tmp;
-        copy_matrix(X, Xtr, 64, 32);
-        V = UU;
-        U = VV;
-        transposed = true;
-    }
 
-    transpose(Xtr, X, 64, 32);  //X'
-    multiply_matrices(Xtr_X, Xtr, X, 32, 64, 32);   //X'*X
+	transpose(Xtr, X, N, M);  //X'
+	multiply_matrices(Xtr_X, Xtr, X, M, N, M);   //X'*X
 
-    eig_symetric(V, D, Xtr_X, 32, 0); //[V,D]=eig(X'*X)
+	eig_symetric(V, D, Xtr_X, M, 0); //[V,D]=eig(X'*X)
+	
+	for (i = 0; i < M; i++) {
+		if (D[i] >= 0)
+			D[i] = sqrt(D[i]);
+		else
+			D[i] = sqrt(-D[i]);  // Something is wrong if X'*X produces negative eigenvalues.
+	}
 
-    for (i = 0; i < 32; i++) {
-        D[i] = sqrt(fabs(D[i]));  // Using fabs for absolute value
-    }
+	vector_to_diagonal(S, D, M);
 
-    vector_to_diagonal(S, D, 32);
+	for (i = 0; i < M; i++) {
+		for (j = 0; j < M; j++)
+			V0[j] = V[lin_index(j, i, M)];
+		multiply_matrix_with_vector(U0, X, V0, N, M);
+		for (j = 0; j < N; j++)
+			U[lin_index(j, i, M)] = U0[j] / D[i];
+	}
 
-    for (i = 0; i < 32; i++) {
-        for (j = 0; j < 32; j++)
-            V0[j] = V[lin_index(j, i, 32)];
-        multiply_matrix_with_vector(U0, X, V0, 64, 32);
-        for (j = 0; j < 64; j++)
-            U[lin_index(j, i, 32)] = U0[j] / D[i];
-    }
+	if (transposed)
+	{
+		float *Xnew;
+		Xnew = new float[M*N];
+		transpose(Xnew, X, N, M);
+		copy_matrix(X, Xnew, M, N);
+		delete[] Xnew;
+	}
 
-    if (transposed)
-    {
-        transpose(Xtr, X, 64, 32);
-        copy_matrix(X, Xtr, 32, 64);
-    }
+	delete[] Xtr;
+	Xtr = NULL;
+	delete[] Xtr_X;
+	Xtr_X = NULL;
+	delete[] D;
+	D = NULL;
+	delete[] V0;
+	V0 = NULL;
+	delete[] U0;
+	U0 = NULL;
 }
 
+/* Computes Pseudo Inverse of a matrix using SVD
+Parameters: (output) inverted matrix, (inputs) matrix, row count, col count*/
 void psInv(float Y[], float X[], int N, int M)
 {
-    int i;
+	int i;
 
-    float Utr[64 * 32], V_Sinv[32 * 32]; // Declare Utr and V_Sinv as fixed-size arrays
-    bool transposed = false;
+	float *U, *V, *S, *Sinv, *Utr, *V_Sinv;
+	bool transposed = false;
+	if (N < M) { //transpose if rows are less than columns
+		int tmp = N;
+		float* Xnew;
+		Xnew = new float[M * N];
+		transpose(Xnew, X, N, M);
+		N = M;
+		M = tmp;
+		copy_matrix(X, Xnew, N, M);
+		transposed = true;
+		delete[] Xnew;
+	}
 
-    float Xnew[32 * 64], S[32 * 32], Sinv[32 * 32], U0[64 * 32], V0[32 * 32];
+	S = new float[M*M];
+	Sinv = new float[M*M];
+	U = new float[N*M];
+	V = new float[M*M];
+	Utr = new float[N*M];
+	V_Sinv = new float[M*M];
 
-    if (N < M) { //transpose if rows are less than columns
-        int tmp = N;
-        transpose(Xnew, X, N, M);
-        N = M;
-        M = tmp;
-        copy_matrix(X, Xnew, N, M);
-        transposed = true;
-    }
+	svd(U, S, V, X, N, M);
 
-    float D[32]; // Define D here
+	memset(Sinv, 0, M*M*sizeof(float));
 
-    svd(U0, D, V0, X, 64, 32);
+	for (i = 0; i < M; i++)
+		Sinv[lin_index(i, i, M)] = 1 / S[lin_index(i, i, M)];
 
-    for (i = 0; i < 32; i++)
-        S[i * 32 + i] = 1 / D[i]; // Update S with inverse of D
+	multiply_square_matrices(V_Sinv, V, Sinv, M);
 
-    multiply_square_matrices(V_Sinv, V0, Sinv, 32);
+	transpose(Utr, U, N, M);
 
-    transpose(Utr, U0, 64, 32);
+	multiply_matrices(Y, V_Sinv, Utr, M, M, N);
 
-    multiply_matrices(Y, V_Sinv, Utr, 32, 32, 64);
+	if (transposed) {
+		float* Xnew;
+		Xnew = new float[M * N];
+		transpose(Xnew, X, N, M);
+		copy_matrix(X, Xnew, N, M);
+		transpose(Xnew, Y, M, N );
+		copy_matrix(Y, Xnew, M, N);
+		delete[] Xnew;
+	}
 
-    if (transposed) {
-        transpose(Xnew, X, 64, 32);
-        copy_matrix(X, Xnew, 64, 32);
-        transpose(Xnew, Y, 32, 64);
-        copy_matrix(Y, Xnew, 32, 64);
-    }
+	delete[] S;
+	S = NULL;
+	delete[] Sinv;
+	Sinv = NULL;
+	delete[] U;
+	U = NULL;
+	delete[] V;
+	V = NULL;
+	delete[] Utr;
+	Utr = NULL;
+	delete[] V_Sinv;
+	V_Sinv = NULL;
 }

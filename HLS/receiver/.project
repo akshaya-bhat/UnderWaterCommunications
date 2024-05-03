@@ -57,6 +57,16 @@
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/rx_src/alignment.h</location>
 		</link>
 		<link>
+			<name>source/basic_ops.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/rx_src/basic_ops.h</location>
+		</link>
+		<link>
+			<name>source/bitcount_table.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/rx_src/bitcount_table.h</location>
+		</link>
+		<link>
 			<name>source/convolutional_encoder.h</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/rx_src/convolutional_encoder.h</location>
@@ -115,6 +125,11 @@
 			<name>source/svd.h</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/rx_src/svd.h</location>
+		</link>
+		<link>
+			<name>source/test_helpers.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/rx_src/test_helpers.h</location>
 		</link>
 		<link>
 			<name>source/viterbi_branch_table.h</name>
