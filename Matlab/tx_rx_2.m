@@ -100,69 +100,15 @@ correlationI = tempI(L:end);
 correlationQ = tempQ(L:end);
 % take the amplitude of the correlation, as this should be phase neutral
 correlationAbs = sqrt(abs(correlationI).^2 + abs(correlationQ).^2);
-
-% find local maxima of absolute value of correlation
-is_max = islocalmax(correlationAbs);
-threshold = correlation_threshold*max(correlationAbs);
-i = 1;
-% rake receiver uses echoes where correlation exceeds the threshold
-for idx=1:length(correlationAbs)
-    if is_max(idx) == 1
-        if correlationAbs(idx) > threshold
-            echo_amp(i) = correlationAbs(idx);
-            echo_phase(i) = atan2(correlationQ(idx), correlationI(idx));
-            echo_idx(i) = idx;
-
-            i = i+1;
-        end
-    end
-end
-
-% apply the phase rotation & amplitude cancellation to each echo
-echoes = zeros(length(echo_idx), length(dataPulseShaped));
-matched_extended = [matchedI+1j*matchedQ zeros(1,10000)];
-for i=1:length(echo_idx)
-    start = echo_idx(i);
-    finish = start + length(dataPulseShaped) - 1;
-    echoes(i,:) = matched_extended(start:finish).*exp(-1j*echo_phase(i));
-end
-
-% sum up all of the echoes
-rake_symbols = zeros(1, length(dataPulseShaped));
-for i=1:length(echo_idx)
-    rake_symbols = rake_symbols + echoes(i,:);
-end
-
-
+        
+% find the max of the correlation
+[max_corr, max_index] = max(correlationAbs);
+peak_phase = atan2(correlationQ(max_index), correlationI(max_index));
+matched_symbols = matchedI+1j*matchedQ;
+rotated_symbols = matched_symbols(max_index:max_index+length(dataPulseShaped)-1).*exp(-1j*peak_phase);
+        
 start_idx = 1 + ceil(length(h)/2);
-sense_symbols = rake_symbols(start_idx:32:end);
-% symbol synchronization with gardner algorithm
-% rake_abs = abs(rake_symbols);
-% num_chunks = floor(length(rake_abs)/oversample);
-% 
-% sense_symbols = zeros(1, num_chunks);
-% sense_symbols_plot = zeros(1, length(rake_abs));
-% 
-% sample = 1 + ceil(length(h)/2);
-% i = 1;
-% while sample < (length(rake_abs)-oversample)
-%     sense_symbols(i) = rake_symbols(sample);
-%     i = i+1;
-%     sense_symbols_plot(sample) = rake_symbols(sample);
-% 
-%     e = (rake_abs(sample+oversample) - rake_abs(sample)) * rake_abs(sample+oversample/2);
-%     edec = (rake_abs(sample+oversample-1) - rake_abs(sample-1)) * rake_abs(sample+oversample/2 - 1);
-%     einc = (rake_abs(sample+oversample+1) - rake_abs(sample+1)) * rake_abs(sample+oversample/2 + 1);
-% 
-%     if abs(edec) < abs(e)
-%         sample = sample + oversample - 1;
-%     elseif abs(einc) < abs(e)
-%         sample = sample + oversample + 1;
-%     else
-%         sample = sample + oversample;
-%     end
-% end
-% sense_symbols(i) = rake_symbols(sample);
+sense_symbols = rotated_symbols(start_idx:32:end);
 
 % separate preamble from payload
 preamble_symbols = sense_symbols(1:64);
@@ -221,44 +167,17 @@ subplot(2,1,1)
 hold on;
 plot(real(dataPulseShaped)./max(real(dataPulseShaped)))
 plot(matchedI(ceil(length(h)/2+1):end)./max(matchedI))
-stem(echo_idx(1), 1)
 legend("tx pulse", "rx pulse")
 subplot(2,1,2)
 hold on;
 plot(imag(dataPulseShaped)./max(imag(dataPulseShaped)))
 plot(matchedQ(ceil(length(h)/2+1):end)./max(matchedQ))
-stem(echo_idx(1), 1)
-
-% sent vs received with correction
-figure(3)
-sgtitle("Tx/Rx pulses With Correction")
-subplot(2,1,1)
-hold on;
-plot(real(dataPulseShaped)./max(real(dataPulseShaped)))
-plot(real(rake_symbols)./max(real(rake_symbols)))
-legend("tx pulse", "corrected rx pulse")
-subplot(2,1,2)
-hold on;
-plot(imag(dataPulseShaped)./max(imag(dataPulseShaped)))
-plot(imag(rake_symbols)./max(imag(rake_symbols)))
 
 % correlation with training sequence
 figure(4)
 plot(correlationAbs)
 grid on
 title("Absolute Value Correlation with Golay Preamble")
-
-% chosen sampling points
-figure(5)
-sgtitle("I and Q optimal sampling points")
-subplot(2,1,1)
-hold on;
-plot(real(rake_symbols))
-plot(real(sense_symbols_plot))
-subplot(2,1,2)
-hold on;
-plot(imag(rake_symbols))
-plot(imag(sense_symbols_plot))
 
 % compare channel estimate to power spectrum of received
 figure(6)
