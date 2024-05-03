@@ -6026,8 +6026,8 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 #pragma HLS array_partition variable=matched_Q type=cyclic factor=32
 #pragma HLS array_partition variable=delay_line_I type=cyclic factor=8
 #pragma HLS array_partition variable=delay_line_Q type=cyclic factor=8
-#pragma HLS array_partition variable=result_I type=cyclic factor=8
-#pragma HLS array_partition variable=result_Q type=cyclic factor=8
+#pragma HLS array_partition variable=result_I type=cyclic factor=16
+#pragma HLS array_partition variable=result_Q type=cyclic factor=16
 
 
 
@@ -6136,10 +6136,10 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 
     data_t arr_I[2240] = {0};
     data_t arr_Q[2240] = {0};
-#pragma HLS array_partition variable=arr_I type=cyclic factor=16
-#pragma HLS array_partition variable=arr_Q type=cyclic factor=16
+#pragma HLS array_partition variable=arr_I type=cyclic factor=64
+#pragma HLS array_partition variable=arr_Q type=cyclic factor=64
  VITIS_LOOP_149_11: for (int i=140; i<140 +2240; i++) {
-#pragma HLS UNROLL factor=16
+#pragma HLS UNROLL factor=64
  arr_I[i-140] = matched_I[i] * preamble_upsampled[i-140];
         arr_Q[i-140] = matched_Q[i] * preamble_upsampled[i-140];
     }
@@ -6254,7 +6254,7 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 
         int i = 140 +193/2;
         VITIS_LOOP_264_22: for (int j=0; j<224; j++) {
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
 
 
  result_I[j] = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];

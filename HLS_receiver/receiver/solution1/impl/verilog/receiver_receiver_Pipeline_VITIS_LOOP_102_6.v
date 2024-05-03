@@ -172,26 +172,26 @@ wire   [0:0] icmp_ln102_fu_320_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg   [5:0] i_reg_481;
+reg   [5:0] i_reg_483;
 wire    ap_block_pp0_stage0_11001;
-wire   [17:0] tmp_fu_370_p9;
-reg   [17:0] tmp_reg_571;
-wire   [17:0] tmp_1_fu_390_p9;
-reg   [17:0] tmp_1_reg_576;
-reg   [4:0] lshr_ln9_reg_581;
-wire   [17:0] tmp_2_fu_419_p9;
-reg   [17:0] tmp_2_reg_586;
-wire   [17:0] tmp_3_fu_439_p9;
-reg   [17:0] tmp_3_reg_591;
+wire   [17:0] add_ln103_fu_410_p2;
+reg   [17:0] add_ln103_reg_573;
+reg   [4:0] lshr_ln9_reg_578;
+wire   [17:0] add_ln104_fu_465_p2;
+reg   [17:0] add_ln104_reg_583;
 wire   [63:0] zext_ln102_fu_336_p1;
 wire    ap_block_pp0_stage0;
-wire   [63:0] zext_ln103_fu_464_p1;
+wire   [63:0] zext_ln103_fu_471_p1;
 reg   [5:0] i_5_fu_74;
 wire   [5:0] add_ln102_fu_356_p2;
 wire    ap_loop_init;
 reg   [5:0] ap_sig_allocacmp_i;
 wire   [2:0] lshr_ln8_fu_326_p4;
 wire   [2:0] empty_fu_367_p1;
+wire   [17:0] tmp_1_fu_390_p9;
+wire   [17:0] tmp_fu_370_p9;
+wire   [17:0] tmp_3_fu_445_p9;
+wire   [17:0] tmp_2_fu_425_p9;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -278,7 +278,7 @@ mux_7_3_18_1_1_U137(
     .din5(18'd0),
     .din6(filt_2_Q_6_q0),
     .din7(empty_fu_367_p1),
-    .dout(tmp_2_fu_419_p9)
+    .dout(tmp_2_fu_425_p9)
 );
 
 receiver_mux_7_3_18_1_1 #(
@@ -302,7 +302,7 @@ mux_7_3_18_1_1_U138(
     .din5(18'd0),
     .din6(filt_2_Q_7_q0),
     .din7(empty_fu_367_p1),
-    .dout(tmp_3_fu_439_p9)
+    .dout(tmp_3_fu_445_p9)
 );
 
 receiver_flow_control_loop_pipe_sequential_init flow_control_loop_pipe_sequential_init_U(
@@ -374,13 +374,11 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        add_ln103_reg_573 <= add_ln103_fu_410_p2;
+        add_ln104_reg_583 <= add_ln104_fu_465_p2;
         ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
-        i_reg_481 <= ap_sig_allocacmp_i;
-        lshr_ln9_reg_581 <= {{i_reg_481[5:1]}};
-        tmp_1_reg_576 <= tmp_1_fu_390_p9;
-        tmp_2_reg_586 <= tmp_2_fu_419_p9;
-        tmp_3_reg_591 <= tmp_3_fu_439_p9;
-        tmp_reg_571 <= tmp_fu_370_p9;
+        i_reg_483 <= ap_sig_allocacmp_i;
+        lshr_ln9_reg_578 <= {{i_reg_483[5:1]}};
     end
 end
 
@@ -605,6 +603,10 @@ end
 
 assign add_ln102_fu_356_p2 = (ap_sig_allocacmp_i + 6'd2);
 
+assign add_ln103_fu_410_p2 = (tmp_1_fu_390_p9 + tmp_fu_370_p9);
+
+assign add_ln104_fu_465_p2 = (tmp_3_fu_445_p9 + tmp_2_fu_425_p9);
+
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
@@ -625,7 +627,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_fu_367_p1 = i_reg_481[2:0];
+assign empty_fu_367_p1 = i_reg_483[2:0];
 
 assign filt_2_I_1_address0 = zext_ln102_fu_336_p1;
 
@@ -659,13 +661,13 @@ assign filt_2_Q_7_address0 = zext_ln102_fu_336_p1;
 
 assign filt_2_Q_address0 = zext_ln102_fu_336_p1;
 
-assign filt_3_I_address0 = zext_ln103_fu_464_p1;
+assign filt_3_I_address0 = zext_ln103_fu_471_p1;
 
-assign filt_3_I_d0 = (tmp_1_reg_576 + tmp_reg_571);
+assign filt_3_I_d0 = add_ln103_reg_573;
 
-assign filt_3_Q_address0 = zext_ln103_fu_464_p1;
+assign filt_3_Q_address0 = zext_ln103_fu_471_p1;
 
-assign filt_3_Q_d0 = (tmp_3_reg_591 + tmp_2_reg_586);
+assign filt_3_Q_d0 = add_ln104_reg_583;
 
 assign icmp_ln102_fu_320_p2 = ((ap_sig_allocacmp_i < 6'd48) ? 1'b1 : 1'b0);
 
@@ -673,6 +675,6 @@ assign lshr_ln8_fu_326_p4 = {{ap_sig_allocacmp_i[5:3]}};
 
 assign zext_ln102_fu_336_p1 = lshr_ln8_fu_326_p4;
 
-assign zext_ln103_fu_464_p1 = lshr_ln9_reg_581;
+assign zext_ln103_fu_471_p1 = lshr_ln9_reg_578;
 
 endmodule //receiver_receiver_Pipeline_VITIS_LOOP_102_6

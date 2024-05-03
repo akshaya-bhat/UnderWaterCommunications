@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714712994853">
-  <ports id="1" name="arr_6_I" type="PortType" coreName="RAM" coreId="1688558272" bitwidth="29" iftype="IfTypeRegister" arraysize="18">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714719465197">
+  <ports id="1" name="arr_6_I" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="29" iftype="IfTypeRegister" arraysize="18">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
   <ports id="2" name="arr_6_I_1" type="PortType" coreName="RAM" coreId="0" bitwidth="29" iftype="IfTypeRegister" arraysize="18">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="3" name="arr_7_I" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="30" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
+  <ports id="3" name="arr_7_I" type="PortType" coreName="RAM" coreId="1885548146" bitwidth="30" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <ports id="4" name="arr_6_Q" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="29" iftype="IfTypeRegister" arraysize="18">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="5" name="arr_6_Q_1" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="29" iftype="IfTypeRegister" arraysize="18">
+  <ports id="5" name="arr_6_Q_1" type="PortType" coreName="RAM" coreId="0" bitwidth="29" iftype="IfTypeRegister" arraysize="18">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="6" name="arr_7_Q" type="PortType" coreName="RAM" coreId="0" bitwidth="30" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
+  <ports id="6" name="arr_7_Q" type="PortType" coreName="RAM" coreId="1852793695" bitwidth="30" direction="DirOut" iftype="IfTypeRegister" arraysize="17">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <edges id="48" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -68,26 +68,26 @@
   <edges id="131" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
   <blocks id="10" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body657</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1936942336" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1819113472" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_write_ln0" coreId="1819113472" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="i_write_ln0" coreId="2436505144" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="1397508096" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln0" coreId="2436509624" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body657</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="43" name="_ZN13ap_fixed_baseILi31ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i1205.exitStub" type="BlockType">
     <controlInputObjs>for.body657</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="_ln0" coreId="0" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="_ln0" coreId="2436540984" opcode="ret" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1"/>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="155" pipe_depth="3" RegionName="VITIS_LOOP_219_18">
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="153" pipe_depth="2" RegionName="VITIS_LOOP_219_18">
     <basic_blocks id="15" name="for.body657" type="BlockType">
       <controlInputObjs>newFuncRoot</controlInputObjs>
       <controlInputObjs>for.body657.split</controlInputObjs>
@@ -108,7 +108,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." coreId="1688578832" contextFuncName="receiver" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." coreId="2436520272" contextFuncName="receiver" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="219" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>_ZN13ap_fixed_baseILi31ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i1205.exitStub</controlInputObjs>
@@ -128,7 +128,7 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." rtlName="zext_ln219_fu_148_p1" coreId="1688584976" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="zext_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." rtlName="zext_ln219_fu_148_p1" coreId="0" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="219" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -138,7 +138,7 @@
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="arr_6_I_addr" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." coreId="1688588816" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="arr_6_I_addr" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="220" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>arr_6_I</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -150,7 +150,7 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="sext_ln220" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln220_fu_167_p1" coreId="0" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="sext_ln220" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln220_fu_167_p1" coreId="2436524752" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="220" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
@@ -167,25 +167,25 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln220_1" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln220_1_fu_171_p1" coreId="1532979456" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="sext_ln220_1" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln220_1_fu_171_p1" coreId="0" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="220" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="add_ln220" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." rtlName="add_ln220_fu_175_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="30" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.46" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="add_ln220" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_7_I_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="30" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.46" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="220" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>sext</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arr_7_I_addr_1" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." coreId="7955712" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arr_7_I_addr_1" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." coreId="2436664016" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="220" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>arr_7_I</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="arr_7_I_addr_1_write_ln220" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="receiver" opcode="store" nodeLabel="2.0" m_display="0" m_delay="2.32" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="arr_7_I_addr_1_write_ln220" lineNumber="220" fileName="receiver.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="2.32" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="220" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
@@ -202,12 +202,12 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln221" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln221_fu_181_p1" coreId="0" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sext_ln221" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln221_fu_182_p1" coreId="0" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="221" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="arr_6_Q_1_addr" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="arr_6_Q_1_addr" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." coreId="1869833472" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="221" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>arr_6_Q_1</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -219,25 +219,25 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>sext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sext_ln221_1" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln221_1_fu_185_p1" coreId="1689519712" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sext_ln221_1" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." rtlName="sext_ln221_1_fu_186_p1" coreId="2436427264" contextFuncName="receiver" bitwidth="30" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="221" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="add_ln221" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." rtlName="add_ln221_fu_189_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="30" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.46" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="add_ln221" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_7_Q_d0" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="30" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.46" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="221" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>sext</dataInputObjs>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="arr_7_Q_addr_1" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." coreId="1688575120" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="arr_7_Q_addr_1" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="5" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="221" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>arr_7_Q</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="arr_7_Q_addr_1_write_ln221" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="receiver" opcode="store" nodeLabel="2.0" m_display="0" m_delay="2.32" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="arr_7_Q_addr_1_write_ln221" lineNumber="221" fileName="receiver.cpp" fileDirectory="../." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="2.32" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="221" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
@@ -248,12 +248,12 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="i_write_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="i_write_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." coreId="2436545464" contextFuncName="receiver" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="219" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="br_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." coreId="1717924352" contextFuncName="receiver" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="br_ln219" lineNumber="219" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="219" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <controlInputObjs>for.body657</controlInputObjs>
       </node_objs>
@@ -266,33 +266,23 @@
   </regions>
   <ScheduleInfo time="0"/>
   <ScheduleInfo time="1"/>
-  <ScheduleInfo time="2"/>
-  <regnodes realName="arr_6_I_addr_reg_212">
-    <nodeIds>20</nodeIds>
-  </regnodes>
-  <regnodes realName="arr_6_Q_1_addr_reg_227">
+  <regnodes realName="arr_6_Q_1_addr_reg_228">
     <nodeIds>32</nodeIds>
   </regnodes>
-  <regnodes realName="add_ln220_reg_232">
-    <nodeIds>26</nodeIds>
-  </regnodes>
-  <regnodes realName="zext_ln219_reg_206">
+  <regnodes realName="zext_ln219_reg_207">
     <nodeIds>19</nodeIds>
   </regnodes>
-  <regnodes realName="i_reg_195">
+  <regnodes realName="i_reg_197">
     <nodeIds>7</nodeIds>
   </regnodes>
-  <regnodes realName="add_ln221_reg_237">
-    <nodeIds>35</nodeIds>
-  </regnodes>
-  <regnodes realName="icmp_ln219_reg_202">
-    <nodeIds>13</nodeIds>
-  </regnodes>
-  <regnodes realName="arr_6_I_1_addr_reg_217">
+  <regnodes realName="arr_6_I_1_addr_reg_218">
     <nodeIds>23</nodeIds>
   </regnodes>
-  <regnodes realName="arr_6_Q_addr_reg_222">
+  <regnodes realName="arr_6_Q_addr_reg_223">
     <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_6_I_addr_reg_213">
+    <nodeIds>20</nodeIds>
   </regnodes>
   <expressionNodes realName="add_ln219_fu_156">
     <nodeIds>38</nodeIds>
@@ -303,14 +293,11 @@
   <expressionNodes realName="icmp_ln219_fu_132">
     <nodeIds>13</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln221_fu_189">
-    <nodeIds>35</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="sext_ln221_1_fu_185">
-    <nodeIds>34</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="sext_ln221_fu_181">
+  <expressionNodes realName="sext_ln221_fu_182">
     <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln221_1_fu_186">
+    <nodeIds>34</nodeIds>
   </expressionNodes>
   <expressionNodes realName="arr_6_I_1_addr_gep_fu_59">
     <nodeIds>23</nodeIds>
@@ -338,6 +325,9 @@
   </expressionNodes>
   <expressionNodes realName="zext_ln219_fu_148">
     <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln221_fu_190">
+    <nodeIds>35</nodeIds>
   </expressionNodes>
   <expressionNodes realName="sext_ln220_1_fu_171">
     <nodeIds>25</nodeIds>
@@ -423,38 +413,33 @@
       <operations id="33" stage="2" latency="2"/>
       <operations id="38" stage="1" latency="1"/>
       <operations id="39" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
     </states>
     <states id="2">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
       <operations id="21" stage="1" latency="2"/>
       <operations id="22" stage="1" latency="1"/>
       <operations id="24" stage="1" latency="2"/>
       <operations id="25" stage="1" latency="1"/>
       <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
       <operations id="30" stage="1" latency="2"/>
       <operations id="31" stage="1" latency="1"/>
       <operations id="33" stage="1" latency="2"/>
       <operations id="34" stage="1" latency="1"/>
       <operations id="35" stage="1" latency="1"/>
-      <operations id="42" stage="1" latency="1"/>
-    </states>
-    <states id="3">
-      <operations id="16" stage="1" latency="1"/>
-      <operations id="17" stage="1" latency="1"/>
-      <operations id="27" stage="1" latency="1"/>
-      <operations id="28" stage="1" latency="1"/>
       <operations id="36" stage="1" latency="1"/>
       <operations id="37" stage="1" latency="1"/>
       <operations id="40" stage="1" latency="1"/>
     </states>
-    <transitions inState="2" outState="3">
-      <condition id="-1"/>
-    </transitions>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="receiver_Pipeline_VITIS_LOOP_219_18" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="20" mMaxLatency="20">
+    <cfgRegions mId="1" mTag="receiver_Pipeline_VITIS_LOOP_219_18" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="19" mMaxLatency="19">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
       <subRegions>4</subRegions>
@@ -464,7 +449,7 @@
       <basicBlocks>10</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_219_18" mII="1" mDepth="3" mMinTripCount="17" mMaxTripCount="17" mMinLatency="18" mMaxLatency="18" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_219_18" mII="1" mDepth="2" mMinTripCount="17" mMaxTripCount="17" mMinLatency="17" mMaxLatency="17" mType="1">
       <basicBlocks>15</basicBlocks>
       <basicBlocks>41</basicBlocks>
       <mDfPipe/>

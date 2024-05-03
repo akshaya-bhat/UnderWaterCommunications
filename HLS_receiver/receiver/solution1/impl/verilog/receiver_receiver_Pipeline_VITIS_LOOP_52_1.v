@@ -64,13 +64,11 @@ reg samples_Q_11_ce1;
 wire    ap_CS_fsm_pp0_stage0;
 wire    ap_enable_reg_pp0_iter0;
 reg    ap_enable_reg_pp0_iter1;
-reg    ap_enable_reg_pp0_iter2;
 reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
-wire    ap_block_state3_pp0_stage0_iter2;
 wire    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln52_fu_1362_p2;
+wire   [0:0] icmp_ln52_fu_1426_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -386,214 +384,85 @@ reg    samples_Q_31_we0;
 wire   [7:0] samples_Q_31_address1;
 reg    samples_Q_31_ce1;
 wire   [17:0] samples_Q_31_q1;
-wire   [63:0] zext_ln52_fu_1290_p1;
-reg   [63:0] zext_ln52_reg_1398;
+wire   [63:0] zext_ln52_fu_1354_p1;
+reg   [63:0] zext_ln52_reg_1462;
 wire    ap_block_pp0_stage0_11001;
-reg   [63:0] zext_ln52_reg_1398_pp0_iter1_reg;
-reg   [7:0] samples_I_1_addr_reg_1404;
-reg   [7:0] samples_I_1_addr_reg_1404_pp0_iter1_reg;
-reg   [7:0] samples_Q_1_addr_reg_1410;
-reg   [7:0] samples_Q_1_addr_reg_1410_pp0_iter1_reg;
-reg   [7:0] samples_I_2_addr_reg_1416;
-reg   [7:0] samples_I_2_addr_reg_1416_pp0_iter1_reg;
-reg   [7:0] samples_Q_2_addr_reg_1422;
-reg   [7:0] samples_Q_2_addr_reg_1422_pp0_iter1_reg;
-reg   [7:0] samples_I_3_addr_reg_1428;
-reg   [7:0] samples_I_3_addr_reg_1428_pp0_iter1_reg;
-reg   [7:0] samples_Q_3_addr_reg_1434;
-reg   [7:0] samples_Q_3_addr_reg_1434_pp0_iter1_reg;
-reg   [7:0] samples_I_4_addr_reg_1440;
-reg   [7:0] samples_I_4_addr_reg_1440_pp0_iter1_reg;
-reg   [7:0] samples_Q_4_addr_reg_1446;
-reg   [7:0] samples_Q_4_addr_reg_1446_pp0_iter1_reg;
-reg   [7:0] samples_I_5_addr_reg_1452;
-reg   [7:0] samples_I_5_addr_reg_1452_pp0_iter1_reg;
-reg   [7:0] samples_Q_5_addr_reg_1458;
-reg   [7:0] samples_Q_5_addr_reg_1458_pp0_iter1_reg;
-reg   [7:0] samples_I_6_addr_reg_1464;
-reg   [7:0] samples_I_6_addr_reg_1464_pp0_iter1_reg;
-reg   [7:0] samples_Q_6_addr_reg_1470;
-reg   [7:0] samples_Q_6_addr_reg_1470_pp0_iter1_reg;
-reg   [7:0] samples_I_7_addr_reg_1476;
-reg   [7:0] samples_I_7_addr_reg_1476_pp0_iter1_reg;
-reg   [7:0] samples_Q_7_addr_reg_1482;
-reg   [7:0] samples_Q_7_addr_reg_1482_pp0_iter1_reg;
-reg   [7:0] samples_I_8_addr_reg_1488;
-reg   [7:0] samples_I_8_addr_reg_1488_pp0_iter1_reg;
-reg   [7:0] samples_Q_8_addr_reg_1494;
-reg   [7:0] samples_Q_8_addr_reg_1494_pp0_iter1_reg;
-reg   [7:0] samples_I_9_addr_reg_1500;
-reg   [7:0] samples_I_9_addr_reg_1500_pp0_iter1_reg;
-reg   [7:0] samples_Q_9_addr_reg_1506;
-reg   [7:0] samples_Q_9_addr_reg_1506_pp0_iter1_reg;
-reg   [7:0] samples_I_10_addr_reg_1512;
-reg   [7:0] samples_I_10_addr_reg_1512_pp0_iter1_reg;
-reg   [7:0] samples_Q_10_addr_reg_1518;
-reg   [7:0] samples_Q_10_addr_reg_1518_pp0_iter1_reg;
-reg   [7:0] samples_I_11_addr_reg_1524;
-reg   [7:0] samples_I_11_addr_reg_1524_pp0_iter1_reg;
-reg   [7:0] samples_Q_11_addr_reg_1530;
-reg   [7:0] samples_Q_11_addr_reg_1530_pp0_iter1_reg;
-reg   [0:0] icmp_ln52_reg_1536;
-reg   [0:0] icmp_ln52_reg_1536_pp0_iter1_reg;
-reg   [7:0] samples_I_12_addr_reg_1540;
-reg   [7:0] samples_I_12_addr_reg_1540_pp0_iter1_reg;
-reg   [7:0] samples_Q_12_addr_reg_1546;
-reg   [7:0] samples_Q_12_addr_reg_1546_pp0_iter1_reg;
-reg   [7:0] samples_I_13_addr_reg_1552;
-reg   [7:0] samples_I_13_addr_reg_1552_pp0_iter1_reg;
-reg   [7:0] samples_Q_13_addr_reg_1558;
-reg   [7:0] samples_Q_13_addr_reg_1558_pp0_iter1_reg;
-reg   [7:0] samples_I_14_addr_reg_1564;
-reg   [7:0] samples_I_14_addr_reg_1564_pp0_iter1_reg;
-reg   [7:0] samples_Q_14_addr_reg_1570;
-reg   [7:0] samples_Q_14_addr_reg_1570_pp0_iter1_reg;
-reg   [7:0] samples_I_15_addr_reg_1576;
-reg   [7:0] samples_I_15_addr_reg_1576_pp0_iter1_reg;
-reg   [7:0] samples_Q_15_addr_reg_1582;
-reg   [7:0] samples_Q_15_addr_reg_1582_pp0_iter1_reg;
-reg   [7:0] samples_I_16_addr_reg_1588;
-reg   [7:0] samples_I_16_addr_reg_1588_pp0_iter1_reg;
-reg   [7:0] samples_Q_16_addr_reg_1594;
-reg   [7:0] samples_Q_16_addr_reg_1594_pp0_iter1_reg;
-reg   [7:0] samples_I_17_addr_reg_1600;
-reg   [7:0] samples_I_17_addr_reg_1600_pp0_iter1_reg;
-reg   [7:0] samples_Q_17_addr_reg_1606;
-reg   [7:0] samples_Q_17_addr_reg_1606_pp0_iter1_reg;
-reg   [7:0] samples_I_18_addr_reg_1612;
-reg   [7:0] samples_I_18_addr_reg_1612_pp0_iter1_reg;
-reg   [7:0] samples_Q_18_addr_reg_1618;
-reg   [7:0] samples_Q_18_addr_reg_1618_pp0_iter1_reg;
-reg   [7:0] samples_I_19_addr_reg_1624;
-reg   [7:0] samples_I_19_addr_reg_1624_pp0_iter1_reg;
-reg   [7:0] samples_Q_19_addr_reg_1630;
-reg   [7:0] samples_Q_19_addr_reg_1630_pp0_iter1_reg;
-reg   [7:0] samples_I_20_addr_reg_1636;
-reg   [7:0] samples_I_20_addr_reg_1636_pp0_iter1_reg;
-reg   [7:0] samples_Q_20_addr_reg_1642;
-reg   [7:0] samples_Q_20_addr_reg_1642_pp0_iter1_reg;
-reg   [7:0] samples_I_21_addr_reg_1648;
-reg   [7:0] samples_I_21_addr_reg_1648_pp0_iter1_reg;
-reg   [7:0] samples_Q_21_addr_reg_1654;
-reg   [7:0] samples_Q_21_addr_reg_1654_pp0_iter1_reg;
-reg   [7:0] samples_I_22_addr_reg_1660;
-reg   [7:0] samples_I_22_addr_reg_1660_pp0_iter1_reg;
-reg   [7:0] samples_Q_22_addr_reg_1666;
-reg   [7:0] samples_Q_22_addr_reg_1666_pp0_iter1_reg;
-reg   [7:0] samples_I_23_addr_reg_1672;
-reg   [7:0] samples_I_23_addr_reg_1672_pp0_iter1_reg;
-reg   [7:0] samples_Q_23_addr_reg_1678;
-reg   [7:0] samples_Q_23_addr_reg_1678_pp0_iter1_reg;
-reg   [7:0] samples_I_24_addr_reg_1684;
-reg   [7:0] samples_I_24_addr_reg_1684_pp0_iter1_reg;
-reg   [7:0] samples_Q_24_addr_reg_1690;
-reg   [7:0] samples_Q_24_addr_reg_1690_pp0_iter1_reg;
-reg   [7:0] samples_I_25_addr_reg_1696;
-reg   [7:0] samples_I_25_addr_reg_1696_pp0_iter1_reg;
-reg   [7:0] samples_Q_25_addr_reg_1702;
-reg   [7:0] samples_Q_25_addr_reg_1702_pp0_iter1_reg;
-reg   [7:0] samples_I_26_addr_reg_1708;
-reg   [7:0] samples_I_26_addr_reg_1708_pp0_iter1_reg;
-reg   [7:0] samples_Q_26_addr_reg_1714;
-reg   [7:0] samples_Q_26_addr_reg_1714_pp0_iter1_reg;
-reg   [7:0] samples_I_27_addr_reg_1720;
-reg   [7:0] samples_I_27_addr_reg_1720_pp0_iter1_reg;
-reg   [7:0] samples_Q_27_addr_reg_1726;
-reg   [7:0] samples_Q_27_addr_reg_1726_pp0_iter1_reg;
-reg   [7:0] samples_I_28_addr_reg_1732;
-reg   [7:0] samples_I_28_addr_reg_1732_pp0_iter1_reg;
-reg   [7:0] samples_Q_28_addr_reg_1738;
-reg   [7:0] samples_Q_28_addr_reg_1738_pp0_iter1_reg;
-reg   [7:0] samples_I_29_addr_reg_1744;
-reg   [7:0] samples_I_29_addr_reg_1744_pp0_iter1_reg;
-reg   [7:0] samples_Q_29_addr_reg_1750;
-reg   [7:0] samples_Q_29_addr_reg_1750_pp0_iter1_reg;
-reg   [7:0] samples_I_30_addr_reg_1756;
-reg   [7:0] samples_I_30_addr_reg_1756_pp0_iter1_reg;
-reg   [7:0] samples_Q_30_addr_reg_1762;
-reg   [7:0] samples_Q_30_addr_reg_1762_pp0_iter1_reg;
-reg   [7:0] samples_I_31_addr_reg_1768;
-reg   [7:0] samples_I_31_addr_reg_1768_pp0_iter1_reg;
-reg   [7:0] samples_Q_31_addr_reg_1774;
-reg   [7:0] samples_Q_31_addr_reg_1774_pp0_iter1_reg;
-reg   [17:0] samples_I_1_load_reg_1790;
-reg   [17:0] samples_I_2_load_reg_1795;
-reg   [17:0] samples_I_3_load_reg_1800;
-reg   [17:0] samples_I_4_load_reg_1805;
-reg   [17:0] samples_I_5_load_reg_1810;
-reg   [17:0] samples_I_6_load_reg_1815;
-reg   [17:0] samples_I_7_load_reg_1820;
-reg   [17:0] samples_I_8_load_reg_1825;
-reg   [17:0] samples_I_9_load_reg_1830;
-reg   [17:0] samples_I_10_load_reg_1835;
-reg   [17:0] samples_I_11_load_reg_1840;
-reg   [17:0] samples_Q_11_load_reg_1845;
-reg   [17:0] samples_Q_1_load_reg_1850;
-reg   [17:0] samples_Q_2_load_reg_1855;
-reg   [17:0] samples_Q_3_load_reg_1860;
-reg   [17:0] samples_Q_4_load_reg_1865;
-reg   [17:0] samples_Q_5_load_reg_1870;
-reg   [17:0] samples_Q_6_load_reg_1875;
-reg   [17:0] samples_Q_7_load_reg_1880;
-reg   [17:0] samples_Q_8_load_reg_1885;
-reg   [17:0] samples_Q_9_load_reg_1890;
-reg   [17:0] samples_Q_10_load_reg_1895;
-reg   [17:0] samples_I_12_load_reg_1900;
-reg   [17:0] samples_I_13_load_reg_1905;
-reg   [17:0] samples_I_14_load_reg_1910;
-reg   [17:0] samples_I_15_load_reg_1915;
-reg   [17:0] samples_I_16_load_reg_1920;
-reg   [17:0] samples_I_17_load_reg_1925;
-reg   [17:0] samples_I_18_load_reg_1930;
-reg   [17:0] samples_I_19_load_reg_1935;
-reg   [17:0] samples_I_20_load_reg_1940;
-reg   [17:0] samples_I_21_load_reg_1945;
-reg   [17:0] samples_I_22_load_reg_1950;
-reg   [17:0] samples_I_23_load_reg_1955;
-reg   [17:0] samples_I_24_load_reg_1960;
-reg   [17:0] samples_I_25_load_reg_1965;
-reg   [17:0] samples_I_26_load_reg_1970;
-reg   [17:0] samples_I_27_load_reg_1975;
-reg   [17:0] samples_I_28_load_reg_1980;
-reg   [17:0] samples_I_29_load_reg_1985;
-reg   [17:0] samples_I_30_load_reg_1990;
-reg   [17:0] samples_I_31_load_reg_1995;
-reg   [17:0] samples_I_0_load_reg_2000;
-reg   [17:0] samples_Q_0_load_reg_2005;
-reg   [17:0] samples_Q_12_load_reg_2010;
-reg   [17:0] samples_Q_13_load_reg_2015;
-reg   [17:0] samples_Q_14_load_reg_2020;
-reg   [17:0] samples_Q_15_load_reg_2025;
-reg   [17:0] samples_Q_16_load_reg_2030;
-reg   [17:0] samples_Q_17_load_reg_2035;
-reg   [17:0] samples_Q_18_load_reg_2040;
-reg   [17:0] samples_Q_19_load_reg_2045;
-reg   [17:0] samples_Q_20_load_reg_2050;
-reg   [17:0] samples_Q_21_load_reg_2055;
-reg   [17:0] samples_Q_22_load_reg_2060;
-reg   [17:0] samples_Q_23_load_reg_2065;
-reg   [17:0] samples_Q_24_load_reg_2070;
-reg   [17:0] samples_Q_25_load_reg_2075;
-reg   [17:0] samples_Q_26_load_reg_2080;
-reg   [17:0] samples_Q_27_load_reg_2085;
-reg   [17:0] samples_Q_28_load_reg_2090;
-reg   [17:0] samples_Q_29_load_reg_2095;
-reg   [17:0] samples_Q_30_load_reg_2100;
-reg   [17:0] samples_Q_31_load_reg_2105;
+reg   [7:0] samples_I_1_addr_reg_1468;
+reg   [7:0] samples_Q_1_addr_reg_1474;
+reg   [7:0] samples_I_2_addr_reg_1480;
+reg   [7:0] samples_Q_2_addr_reg_1486;
+reg   [7:0] samples_I_3_addr_reg_1492;
+reg   [7:0] samples_Q_3_addr_reg_1498;
+reg   [7:0] samples_I_4_addr_reg_1504;
+reg   [7:0] samples_Q_4_addr_reg_1510;
+reg   [7:0] samples_I_5_addr_reg_1516;
+reg   [7:0] samples_Q_5_addr_reg_1522;
+reg   [7:0] samples_I_6_addr_reg_1528;
+reg   [7:0] samples_Q_6_addr_reg_1534;
+reg   [7:0] samples_I_7_addr_reg_1540;
+reg   [7:0] samples_Q_7_addr_reg_1546;
+reg   [7:0] samples_I_8_addr_reg_1552;
+reg   [7:0] samples_Q_8_addr_reg_1558;
+reg   [7:0] samples_I_9_addr_reg_1564;
+reg   [7:0] samples_Q_9_addr_reg_1570;
+reg   [7:0] samples_I_10_addr_reg_1576;
+reg   [7:0] samples_Q_10_addr_reg_1582;
+reg   [7:0] samples_I_11_addr_reg_1588;
+reg   [7:0] samples_Q_11_addr_reg_1594;
+reg   [0:0] icmp_ln52_reg_1600;
+reg   [7:0] samples_I_12_addr_reg_1604;
+reg   [7:0] samples_Q_12_addr_reg_1610;
+reg   [7:0] samples_I_13_addr_reg_1616;
+reg   [7:0] samples_Q_13_addr_reg_1622;
+reg   [7:0] samples_I_14_addr_reg_1628;
+reg   [7:0] samples_Q_14_addr_reg_1634;
+reg   [7:0] samples_I_15_addr_reg_1640;
+reg   [7:0] samples_Q_15_addr_reg_1646;
+reg   [7:0] samples_I_16_addr_reg_1652;
+reg   [7:0] samples_Q_16_addr_reg_1658;
+reg   [7:0] samples_I_17_addr_reg_1664;
+reg   [7:0] samples_Q_17_addr_reg_1670;
+reg   [7:0] samples_I_18_addr_reg_1676;
+reg   [7:0] samples_Q_18_addr_reg_1682;
+reg   [7:0] samples_I_19_addr_reg_1688;
+reg   [7:0] samples_Q_19_addr_reg_1694;
+reg   [7:0] samples_I_20_addr_reg_1700;
+reg   [7:0] samples_Q_20_addr_reg_1706;
+reg   [7:0] samples_I_21_addr_reg_1712;
+reg   [7:0] samples_Q_21_addr_reg_1718;
+reg   [7:0] samples_I_22_addr_reg_1724;
+reg   [7:0] samples_Q_22_addr_reg_1730;
+reg   [7:0] samples_I_23_addr_reg_1736;
+reg   [7:0] samples_Q_23_addr_reg_1742;
+reg   [7:0] samples_I_24_addr_reg_1748;
+reg   [7:0] samples_Q_24_addr_reg_1754;
+reg   [7:0] samples_I_25_addr_reg_1760;
+reg   [7:0] samples_Q_25_addr_reg_1766;
+reg   [7:0] samples_I_26_addr_reg_1772;
+reg   [7:0] samples_Q_26_addr_reg_1778;
+reg   [7:0] samples_I_27_addr_reg_1784;
+reg   [7:0] samples_Q_27_addr_reg_1790;
+reg   [7:0] samples_I_28_addr_reg_1796;
+reg   [7:0] samples_Q_28_addr_reg_1802;
+reg   [7:0] samples_I_29_addr_reg_1808;
+reg   [7:0] samples_Q_29_addr_reg_1814;
+reg   [7:0] samples_I_30_addr_reg_1820;
+reg   [7:0] samples_Q_30_addr_reg_1826;
+reg   [7:0] samples_I_31_addr_reg_1832;
+reg   [7:0] samples_Q_31_addr_reg_1838;
 wire    ap_block_pp0_stage0;
-wire   [63:0] zext_ln54_fu_1380_p1;
+wire   [63:0] zext_ln54_fu_1444_p1;
 reg   [12:0] i_fu_164;
-wire   [12:0] add_ln54_fu_1368_p2;
+wire   [12:0] add_ln54_fu_1432_p2;
 wire    ap_loop_init;
 reg   [12:0] ap_sig_allocacmp_i_3;
-wire   [7:0] lshr_ln_fu_1280_p4;
-wire   [12:0] or_ln54_fu_1356_p2;
-wire   [7:0] add_ln54_1_fu_1374_p2;
+wire   [7:0] lshr_ln_fu_1344_p4;
+wire   [12:0] or_ln54_fu_1420_p2;
+wire   [7:0] add_ln54_1_fu_1438_p2;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
 reg    ap_loop_exit_ready_pp0_iter1_reg;
-reg    ap_loop_exit_ready_pp0_iter2_reg;
 reg   [0:0] ap_NS_fsm;
 wire    ap_enable_pp0;
 wire    ap_start_int;
@@ -603,7 +472,6 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_CS_fsm = 1'd1;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
-#0 ap_enable_reg_pp0_iter2 = 1'b0;
 #0 ap_done_reg = 1'b0;
 end
 
@@ -614,10 +482,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_1_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_1_addr_reg_1404_pp0_iter1_reg),
+    .address0(samples_I_1_addr_reg_1468),
     .ce0(samples_I_1_ce0),
     .we0(samples_I_1_we0),
-    .d0(samples_I_2_load_reg_1795),
+    .d0(samples_I_2_q1),
     .address1(samples_I_1_address1),
     .ce1(samples_I_1_ce1),
     .q1(samples_I_1_q1)
@@ -630,10 +498,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_2_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_2_addr_reg_1416_pp0_iter1_reg),
+    .address0(samples_I_2_addr_reg_1480),
     .ce0(samples_I_2_ce0),
     .we0(samples_I_2_we0),
-    .d0(samples_I_3_load_reg_1800),
+    .d0(samples_I_3_q1),
     .address1(samples_I_2_address1),
     .ce1(samples_I_2_ce1),
     .q1(samples_I_2_q1)
@@ -646,10 +514,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_3_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_3_addr_reg_1428_pp0_iter1_reg),
+    .address0(samples_I_3_addr_reg_1492),
     .ce0(samples_I_3_ce0),
     .we0(samples_I_3_we0),
-    .d0(samples_I_4_load_reg_1805),
+    .d0(samples_I_4_q1),
     .address1(samples_I_3_address1),
     .ce1(samples_I_3_ce1),
     .q1(samples_I_3_q1)
@@ -662,10 +530,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_4_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_4_addr_reg_1440_pp0_iter1_reg),
+    .address0(samples_I_4_addr_reg_1504),
     .ce0(samples_I_4_ce0),
     .we0(samples_I_4_we0),
-    .d0(samples_I_5_load_reg_1810),
+    .d0(samples_I_5_q1),
     .address1(samples_I_4_address1),
     .ce1(samples_I_4_ce1),
     .q1(samples_I_4_q1)
@@ -678,10 +546,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_5_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_5_addr_reg_1452_pp0_iter1_reg),
+    .address0(samples_I_5_addr_reg_1516),
     .ce0(samples_I_5_ce0),
     .we0(samples_I_5_we0),
-    .d0(samples_I_6_load_reg_1815),
+    .d0(samples_I_6_q1),
     .address1(samples_I_5_address1),
     .ce1(samples_I_5_ce1),
     .q1(samples_I_5_q1)
@@ -694,10 +562,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_6_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_6_addr_reg_1464_pp0_iter1_reg),
+    .address0(samples_I_6_addr_reg_1528),
     .ce0(samples_I_6_ce0),
     .we0(samples_I_6_we0),
-    .d0(samples_I_7_load_reg_1820),
+    .d0(samples_I_7_q1),
     .address1(samples_I_6_address1),
     .ce1(samples_I_6_ce1),
     .q1(samples_I_6_q1)
@@ -710,10 +578,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_7_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_7_addr_reg_1476_pp0_iter1_reg),
+    .address0(samples_I_7_addr_reg_1540),
     .ce0(samples_I_7_ce0),
     .we0(samples_I_7_we0),
-    .d0(samples_I_8_load_reg_1825),
+    .d0(samples_I_8_q1),
     .address1(samples_I_7_address1),
     .ce1(samples_I_7_ce1),
     .q1(samples_I_7_q1)
@@ -726,10 +594,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_8_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_8_addr_reg_1488_pp0_iter1_reg),
+    .address0(samples_I_8_addr_reg_1552),
     .ce0(samples_I_8_ce0),
     .we0(samples_I_8_we0),
-    .d0(samples_I_9_load_reg_1830),
+    .d0(samples_I_9_q1),
     .address1(samples_I_8_address1),
     .ce1(samples_I_8_ce1),
     .q1(samples_I_8_q1)
@@ -742,10 +610,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_9_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_9_addr_reg_1500_pp0_iter1_reg),
+    .address0(samples_I_9_addr_reg_1564),
     .ce0(samples_I_9_ce0),
     .we0(samples_I_9_we0),
-    .d0(samples_I_10_load_reg_1835),
+    .d0(samples_I_10_q1),
     .address1(samples_I_9_address1),
     .ce1(samples_I_9_ce1),
     .q1(samples_I_9_q1)
@@ -758,10 +626,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_10_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_10_addr_reg_1512_pp0_iter1_reg),
+    .address0(samples_I_10_addr_reg_1576),
     .ce0(samples_I_10_ce0),
     .we0(samples_I_10_we0),
-    .d0(samples_I_11_load_reg_1840),
+    .d0(samples_I_11_q1),
     .address1(samples_I_10_address1),
     .ce1(samples_I_10_ce1),
     .q1(samples_I_10_q1)
@@ -777,7 +645,7 @@ samples_I_0_U(
     .address0(samples_I_0_address0),
     .ce0(samples_I_0_ce0),
     .we0(samples_I_0_we0),
-    .d0(samples_I_1_load_reg_1790),
+    .d0(samples_I_1_q1),
     .address1(samples_I_0_address1),
     .ce1(samples_I_0_ce1),
     .q1(samples_I_0_q1)
@@ -790,10 +658,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_1_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_1_addr_reg_1410_pp0_iter1_reg),
+    .address0(samples_Q_1_addr_reg_1474),
     .ce0(samples_Q_1_ce0),
     .we0(samples_Q_1_we0),
-    .d0(samples_Q_2_load_reg_1855),
+    .d0(samples_Q_2_q1),
     .address1(samples_Q_1_address1),
     .ce1(samples_Q_1_ce1),
     .q1(samples_Q_1_q1)
@@ -809,7 +677,7 @@ samples_Q_0_U(
     .address0(samples_Q_0_address0),
     .ce0(samples_Q_0_ce0),
     .we0(samples_Q_0_we0),
-    .d0(samples_Q_1_load_reg_1850),
+    .d0(samples_Q_1_q1),
     .address1(samples_Q_0_address1),
     .ce1(samples_Q_0_ce1),
     .q1(samples_Q_0_q1)
@@ -822,10 +690,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_2_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_2_addr_reg_1422_pp0_iter1_reg),
+    .address0(samples_Q_2_addr_reg_1486),
     .ce0(samples_Q_2_ce0),
     .we0(samples_Q_2_we0),
-    .d0(samples_Q_3_load_reg_1860),
+    .d0(samples_Q_3_q1),
     .address1(samples_Q_2_address1),
     .ce1(samples_Q_2_ce1),
     .q1(samples_Q_2_q1)
@@ -838,10 +706,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_3_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_3_addr_reg_1434_pp0_iter1_reg),
+    .address0(samples_Q_3_addr_reg_1498),
     .ce0(samples_Q_3_ce0),
     .we0(samples_Q_3_we0),
-    .d0(samples_Q_4_load_reg_1865),
+    .d0(samples_Q_4_q1),
     .address1(samples_Q_3_address1),
     .ce1(samples_Q_3_ce1),
     .q1(samples_Q_3_q1)
@@ -854,10 +722,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_4_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_4_addr_reg_1446_pp0_iter1_reg),
+    .address0(samples_Q_4_addr_reg_1510),
     .ce0(samples_Q_4_ce0),
     .we0(samples_Q_4_we0),
-    .d0(samples_Q_5_load_reg_1870),
+    .d0(samples_Q_5_q1),
     .address1(samples_Q_4_address1),
     .ce1(samples_Q_4_ce1),
     .q1(samples_Q_4_q1)
@@ -870,10 +738,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_5_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_5_addr_reg_1458_pp0_iter1_reg),
+    .address0(samples_Q_5_addr_reg_1522),
     .ce0(samples_Q_5_ce0),
     .we0(samples_Q_5_we0),
-    .d0(samples_Q_6_load_reg_1875),
+    .d0(samples_Q_6_q1),
     .address1(samples_Q_5_address1),
     .ce1(samples_Q_5_ce1),
     .q1(samples_Q_5_q1)
@@ -886,10 +754,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_6_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_6_addr_reg_1470_pp0_iter1_reg),
+    .address0(samples_Q_6_addr_reg_1534),
     .ce0(samples_Q_6_ce0),
     .we0(samples_Q_6_we0),
-    .d0(samples_Q_7_load_reg_1880),
+    .d0(samples_Q_7_q1),
     .address1(samples_Q_6_address1),
     .ce1(samples_Q_6_ce1),
     .q1(samples_Q_6_q1)
@@ -902,10 +770,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_7_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_7_addr_reg_1482_pp0_iter1_reg),
+    .address0(samples_Q_7_addr_reg_1546),
     .ce0(samples_Q_7_ce0),
     .we0(samples_Q_7_we0),
-    .d0(samples_Q_8_load_reg_1885),
+    .d0(samples_Q_8_q1),
     .address1(samples_Q_7_address1),
     .ce1(samples_Q_7_ce1),
     .q1(samples_Q_7_q1)
@@ -918,10 +786,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_8_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_8_addr_reg_1494_pp0_iter1_reg),
+    .address0(samples_Q_8_addr_reg_1558),
     .ce0(samples_Q_8_ce0),
     .we0(samples_Q_8_we0),
-    .d0(samples_Q_9_load_reg_1890),
+    .d0(samples_Q_9_q1),
     .address1(samples_Q_8_address1),
     .ce1(samples_Q_8_ce1),
     .q1(samples_Q_8_q1)
@@ -934,10 +802,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_9_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_9_addr_reg_1506_pp0_iter1_reg),
+    .address0(samples_Q_9_addr_reg_1570),
     .ce0(samples_Q_9_ce0),
     .we0(samples_Q_9_we0),
-    .d0(samples_Q_10_load_reg_1895),
+    .d0(samples_Q_10_q1),
     .address1(samples_Q_9_address1),
     .ce1(samples_Q_9_ce1),
     .q1(samples_Q_9_q1)
@@ -950,10 +818,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_10_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_10_addr_reg_1518_pp0_iter1_reg),
+    .address0(samples_Q_10_addr_reg_1582),
     .ce0(samples_Q_10_ce0),
     .we0(samples_Q_10_we0),
-    .d0(samples_Q_11_load_reg_1845),
+    .d0(samples_Q_11_q1),
     .address1(samples_Q_10_address1),
     .ce1(samples_Q_10_ce1),
     .q1(samples_Q_10_q1)
@@ -966,10 +834,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_12_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_12_addr_reg_1540_pp0_iter1_reg),
+    .address0(samples_I_12_addr_reg_1604),
     .ce0(samples_I_12_ce0),
     .we0(samples_I_12_we0),
-    .d0(samples_I_13_load_reg_1905),
+    .d0(samples_I_13_q1),
     .address1(samples_I_12_address1),
     .ce1(samples_I_12_ce1),
     .q1(samples_I_12_q1)
@@ -982,10 +850,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_13_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_13_addr_reg_1552_pp0_iter1_reg),
+    .address0(samples_I_13_addr_reg_1616),
     .ce0(samples_I_13_ce0),
     .we0(samples_I_13_we0),
-    .d0(samples_I_14_load_reg_1910),
+    .d0(samples_I_14_q1),
     .address1(samples_I_13_address1),
     .ce1(samples_I_13_ce1),
     .q1(samples_I_13_q1)
@@ -998,10 +866,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_14_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_14_addr_reg_1564_pp0_iter1_reg),
+    .address0(samples_I_14_addr_reg_1628),
     .ce0(samples_I_14_ce0),
     .we0(samples_I_14_we0),
-    .d0(samples_I_15_load_reg_1915),
+    .d0(samples_I_15_q1),
     .address1(samples_I_14_address1),
     .ce1(samples_I_14_ce1),
     .q1(samples_I_14_q1)
@@ -1014,10 +882,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_15_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_15_addr_reg_1576_pp0_iter1_reg),
+    .address0(samples_I_15_addr_reg_1640),
     .ce0(samples_I_15_ce0),
     .we0(samples_I_15_we0),
-    .d0(samples_I_16_load_reg_1920),
+    .d0(samples_I_16_q1),
     .address1(samples_I_15_address1),
     .ce1(samples_I_15_ce1),
     .q1(samples_I_15_q1)
@@ -1030,10 +898,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_16_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_16_addr_reg_1588_pp0_iter1_reg),
+    .address0(samples_I_16_addr_reg_1652),
     .ce0(samples_I_16_ce0),
     .we0(samples_I_16_we0),
-    .d0(samples_I_17_load_reg_1925),
+    .d0(samples_I_17_q1),
     .address1(samples_I_16_address1),
     .ce1(samples_I_16_ce1),
     .q1(samples_I_16_q1)
@@ -1046,10 +914,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_17_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_17_addr_reg_1600_pp0_iter1_reg),
+    .address0(samples_I_17_addr_reg_1664),
     .ce0(samples_I_17_ce0),
     .we0(samples_I_17_we0),
-    .d0(samples_I_18_load_reg_1930),
+    .d0(samples_I_18_q1),
     .address1(samples_I_17_address1),
     .ce1(samples_I_17_ce1),
     .q1(samples_I_17_q1)
@@ -1062,10 +930,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_18_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_18_addr_reg_1612_pp0_iter1_reg),
+    .address0(samples_I_18_addr_reg_1676),
     .ce0(samples_I_18_ce0),
     .we0(samples_I_18_we0),
-    .d0(samples_I_19_load_reg_1935),
+    .d0(samples_I_19_q1),
     .address1(samples_I_18_address1),
     .ce1(samples_I_18_ce1),
     .q1(samples_I_18_q1)
@@ -1078,10 +946,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_19_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_19_addr_reg_1624_pp0_iter1_reg),
+    .address0(samples_I_19_addr_reg_1688),
     .ce0(samples_I_19_ce0),
     .we0(samples_I_19_we0),
-    .d0(samples_I_20_load_reg_1940),
+    .d0(samples_I_20_q1),
     .address1(samples_I_19_address1),
     .ce1(samples_I_19_ce1),
     .q1(samples_I_19_q1)
@@ -1094,10 +962,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_20_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_20_addr_reg_1636_pp0_iter1_reg),
+    .address0(samples_I_20_addr_reg_1700),
     .ce0(samples_I_20_ce0),
     .we0(samples_I_20_we0),
-    .d0(samples_I_21_load_reg_1945),
+    .d0(samples_I_21_q1),
     .address1(samples_I_20_address1),
     .ce1(samples_I_20_ce1),
     .q1(samples_I_20_q1)
@@ -1110,10 +978,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_21_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_21_addr_reg_1648_pp0_iter1_reg),
+    .address0(samples_I_21_addr_reg_1712),
     .ce0(samples_I_21_ce0),
     .we0(samples_I_21_we0),
-    .d0(samples_I_22_load_reg_1950),
+    .d0(samples_I_22_q1),
     .address1(samples_I_21_address1),
     .ce1(samples_I_21_ce1),
     .q1(samples_I_21_q1)
@@ -1126,10 +994,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_22_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_22_addr_reg_1660_pp0_iter1_reg),
+    .address0(samples_I_22_addr_reg_1724),
     .ce0(samples_I_22_ce0),
     .we0(samples_I_22_we0),
-    .d0(samples_I_23_load_reg_1955),
+    .d0(samples_I_23_q1),
     .address1(samples_I_22_address1),
     .ce1(samples_I_22_ce1),
     .q1(samples_I_22_q1)
@@ -1142,10 +1010,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_23_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_23_addr_reg_1672_pp0_iter1_reg),
+    .address0(samples_I_23_addr_reg_1736),
     .ce0(samples_I_23_ce0),
     .we0(samples_I_23_we0),
-    .d0(samples_I_24_load_reg_1960),
+    .d0(samples_I_24_q1),
     .address1(samples_I_23_address1),
     .ce1(samples_I_23_ce1),
     .q1(samples_I_23_q1)
@@ -1158,10 +1026,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_24_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_24_addr_reg_1684_pp0_iter1_reg),
+    .address0(samples_I_24_addr_reg_1748),
     .ce0(samples_I_24_ce0),
     .we0(samples_I_24_we0),
-    .d0(samples_I_25_load_reg_1965),
+    .d0(samples_I_25_q1),
     .address1(samples_I_24_address1),
     .ce1(samples_I_24_ce1),
     .q1(samples_I_24_q1)
@@ -1174,10 +1042,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_25_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_25_addr_reg_1696_pp0_iter1_reg),
+    .address0(samples_I_25_addr_reg_1760),
     .ce0(samples_I_25_ce0),
     .we0(samples_I_25_we0),
-    .d0(samples_I_26_load_reg_1970),
+    .d0(samples_I_26_q1),
     .address1(samples_I_25_address1),
     .ce1(samples_I_25_ce1),
     .q1(samples_I_25_q1)
@@ -1190,10 +1058,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_26_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_26_addr_reg_1708_pp0_iter1_reg),
+    .address0(samples_I_26_addr_reg_1772),
     .ce0(samples_I_26_ce0),
     .we0(samples_I_26_we0),
-    .d0(samples_I_27_load_reg_1975),
+    .d0(samples_I_27_q1),
     .address1(samples_I_26_address1),
     .ce1(samples_I_26_ce1),
     .q1(samples_I_26_q1)
@@ -1206,10 +1074,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_27_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_27_addr_reg_1720_pp0_iter1_reg),
+    .address0(samples_I_27_addr_reg_1784),
     .ce0(samples_I_27_ce0),
     .we0(samples_I_27_we0),
-    .d0(samples_I_28_load_reg_1980),
+    .d0(samples_I_28_q1),
     .address1(samples_I_27_address1),
     .ce1(samples_I_27_ce1),
     .q1(samples_I_27_q1)
@@ -1222,10 +1090,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_28_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_28_addr_reg_1732_pp0_iter1_reg),
+    .address0(samples_I_28_addr_reg_1796),
     .ce0(samples_I_28_ce0),
     .we0(samples_I_28_we0),
-    .d0(samples_I_29_load_reg_1985),
+    .d0(samples_I_29_q1),
     .address1(samples_I_28_address1),
     .ce1(samples_I_28_ce1),
     .q1(samples_I_28_q1)
@@ -1238,10 +1106,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_29_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_29_addr_reg_1744_pp0_iter1_reg),
+    .address0(samples_I_29_addr_reg_1808),
     .ce0(samples_I_29_ce0),
     .we0(samples_I_29_we0),
-    .d0(samples_I_30_load_reg_1990),
+    .d0(samples_I_30_q1),
     .address1(samples_I_29_address1),
     .ce1(samples_I_29_ce1),
     .q1(samples_I_29_q1)
@@ -1254,10 +1122,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_30_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_30_addr_reg_1756_pp0_iter1_reg),
+    .address0(samples_I_30_addr_reg_1820),
     .ce0(samples_I_30_ce0),
     .we0(samples_I_30_we0),
-    .d0(samples_I_31_load_reg_1995),
+    .d0(samples_I_31_q1),
     .address1(samples_I_30_address1),
     .ce1(samples_I_30_ce1),
     .q1(samples_I_30_q1)
@@ -1270,10 +1138,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_I_31_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_I_31_addr_reg_1768_pp0_iter1_reg),
+    .address0(samples_I_31_addr_reg_1832),
     .ce0(samples_I_31_ce0),
     .we0(samples_I_31_we0),
-    .d0(samples_I_0_load_reg_2000),
+    .d0(samples_I_0_q1),
     .address1(samples_I_31_address1),
     .ce1(samples_I_31_ce1),
     .q1(samples_I_31_q1)
@@ -1286,10 +1154,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_12_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_12_addr_reg_1546_pp0_iter1_reg),
+    .address0(samples_Q_12_addr_reg_1610),
     .ce0(samples_Q_12_ce0),
     .we0(samples_Q_12_we0),
-    .d0(samples_Q_13_load_reg_2015),
+    .d0(samples_Q_13_q1),
     .address1(samples_Q_12_address1),
     .ce1(samples_Q_12_ce1),
     .q1(samples_Q_12_q1)
@@ -1302,10 +1170,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_13_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_13_addr_reg_1558_pp0_iter1_reg),
+    .address0(samples_Q_13_addr_reg_1622),
     .ce0(samples_Q_13_ce0),
     .we0(samples_Q_13_we0),
-    .d0(samples_Q_14_load_reg_2020),
+    .d0(samples_Q_14_q1),
     .address1(samples_Q_13_address1),
     .ce1(samples_Q_13_ce1),
     .q1(samples_Q_13_q1)
@@ -1318,10 +1186,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_14_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_14_addr_reg_1570_pp0_iter1_reg),
+    .address0(samples_Q_14_addr_reg_1634),
     .ce0(samples_Q_14_ce0),
     .we0(samples_Q_14_we0),
-    .d0(samples_Q_15_load_reg_2025),
+    .d0(samples_Q_15_q1),
     .address1(samples_Q_14_address1),
     .ce1(samples_Q_14_ce1),
     .q1(samples_Q_14_q1)
@@ -1334,10 +1202,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_15_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_15_addr_reg_1582_pp0_iter1_reg),
+    .address0(samples_Q_15_addr_reg_1646),
     .ce0(samples_Q_15_ce0),
     .we0(samples_Q_15_we0),
-    .d0(samples_Q_16_load_reg_2030),
+    .d0(samples_Q_16_q1),
     .address1(samples_Q_15_address1),
     .ce1(samples_Q_15_ce1),
     .q1(samples_Q_15_q1)
@@ -1350,10 +1218,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_16_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_16_addr_reg_1594_pp0_iter1_reg),
+    .address0(samples_Q_16_addr_reg_1658),
     .ce0(samples_Q_16_ce0),
     .we0(samples_Q_16_we0),
-    .d0(samples_Q_17_load_reg_2035),
+    .d0(samples_Q_17_q1),
     .address1(samples_Q_16_address1),
     .ce1(samples_Q_16_ce1),
     .q1(samples_Q_16_q1)
@@ -1366,10 +1234,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_17_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_17_addr_reg_1606_pp0_iter1_reg),
+    .address0(samples_Q_17_addr_reg_1670),
     .ce0(samples_Q_17_ce0),
     .we0(samples_Q_17_we0),
-    .d0(samples_Q_18_load_reg_2040),
+    .d0(samples_Q_18_q1),
     .address1(samples_Q_17_address1),
     .ce1(samples_Q_17_ce1),
     .q1(samples_Q_17_q1)
@@ -1382,10 +1250,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_18_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_18_addr_reg_1618_pp0_iter1_reg),
+    .address0(samples_Q_18_addr_reg_1682),
     .ce0(samples_Q_18_ce0),
     .we0(samples_Q_18_we0),
-    .d0(samples_Q_19_load_reg_2045),
+    .d0(samples_Q_19_q1),
     .address1(samples_Q_18_address1),
     .ce1(samples_Q_18_ce1),
     .q1(samples_Q_18_q1)
@@ -1398,10 +1266,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_19_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_19_addr_reg_1630_pp0_iter1_reg),
+    .address0(samples_Q_19_addr_reg_1694),
     .ce0(samples_Q_19_ce0),
     .we0(samples_Q_19_we0),
-    .d0(samples_Q_20_load_reg_2050),
+    .d0(samples_Q_20_q1),
     .address1(samples_Q_19_address1),
     .ce1(samples_Q_19_ce1),
     .q1(samples_Q_19_q1)
@@ -1414,10 +1282,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_20_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_20_addr_reg_1642_pp0_iter1_reg),
+    .address0(samples_Q_20_addr_reg_1706),
     .ce0(samples_Q_20_ce0),
     .we0(samples_Q_20_we0),
-    .d0(samples_Q_21_load_reg_2055),
+    .d0(samples_Q_21_q1),
     .address1(samples_Q_20_address1),
     .ce1(samples_Q_20_ce1),
     .q1(samples_Q_20_q1)
@@ -1430,10 +1298,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_21_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_21_addr_reg_1654_pp0_iter1_reg),
+    .address0(samples_Q_21_addr_reg_1718),
     .ce0(samples_Q_21_ce0),
     .we0(samples_Q_21_we0),
-    .d0(samples_Q_22_load_reg_2060),
+    .d0(samples_Q_22_q1),
     .address1(samples_Q_21_address1),
     .ce1(samples_Q_21_ce1),
     .q1(samples_Q_21_q1)
@@ -1446,10 +1314,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_22_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_22_addr_reg_1666_pp0_iter1_reg),
+    .address0(samples_Q_22_addr_reg_1730),
     .ce0(samples_Q_22_ce0),
     .we0(samples_Q_22_we0),
-    .d0(samples_Q_23_load_reg_2065),
+    .d0(samples_Q_23_q1),
     .address1(samples_Q_22_address1),
     .ce1(samples_Q_22_ce1),
     .q1(samples_Q_22_q1)
@@ -1462,10 +1330,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_23_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_23_addr_reg_1678_pp0_iter1_reg),
+    .address0(samples_Q_23_addr_reg_1742),
     .ce0(samples_Q_23_ce0),
     .we0(samples_Q_23_we0),
-    .d0(samples_Q_24_load_reg_2070),
+    .d0(samples_Q_24_q1),
     .address1(samples_Q_23_address1),
     .ce1(samples_Q_23_ce1),
     .q1(samples_Q_23_q1)
@@ -1478,10 +1346,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_24_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_24_addr_reg_1690_pp0_iter1_reg),
+    .address0(samples_Q_24_addr_reg_1754),
     .ce0(samples_Q_24_ce0),
     .we0(samples_Q_24_we0),
-    .d0(samples_Q_25_load_reg_2075),
+    .d0(samples_Q_25_q1),
     .address1(samples_Q_24_address1),
     .ce1(samples_Q_24_ce1),
     .q1(samples_Q_24_q1)
@@ -1494,10 +1362,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_25_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_25_addr_reg_1702_pp0_iter1_reg),
+    .address0(samples_Q_25_addr_reg_1766),
     .ce0(samples_Q_25_ce0),
     .we0(samples_Q_25_we0),
-    .d0(samples_Q_26_load_reg_2080),
+    .d0(samples_Q_26_q1),
     .address1(samples_Q_25_address1),
     .ce1(samples_Q_25_ce1),
     .q1(samples_Q_25_q1)
@@ -1510,10 +1378,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_26_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_26_addr_reg_1714_pp0_iter1_reg),
+    .address0(samples_Q_26_addr_reg_1778),
     .ce0(samples_Q_26_ce0),
     .we0(samples_Q_26_we0),
-    .d0(samples_Q_27_load_reg_2085),
+    .d0(samples_Q_27_q1),
     .address1(samples_Q_26_address1),
     .ce1(samples_Q_26_ce1),
     .q1(samples_Q_26_q1)
@@ -1526,10 +1394,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_27_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_27_addr_reg_1726_pp0_iter1_reg),
+    .address0(samples_Q_27_addr_reg_1790),
     .ce0(samples_Q_27_ce0),
     .we0(samples_Q_27_we0),
-    .d0(samples_Q_28_load_reg_2090),
+    .d0(samples_Q_28_q1),
     .address1(samples_Q_27_address1),
     .ce1(samples_Q_27_ce1),
     .q1(samples_Q_27_q1)
@@ -1542,10 +1410,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_28_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_28_addr_reg_1738_pp0_iter1_reg),
+    .address0(samples_Q_28_addr_reg_1802),
     .ce0(samples_Q_28_ce0),
     .we0(samples_Q_28_we0),
-    .d0(samples_Q_29_load_reg_2095),
+    .d0(samples_Q_29_q1),
     .address1(samples_Q_28_address1),
     .ce1(samples_Q_28_ce1),
     .q1(samples_Q_28_q1)
@@ -1558,10 +1426,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_29_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_29_addr_reg_1750_pp0_iter1_reg),
+    .address0(samples_Q_29_addr_reg_1814),
     .ce0(samples_Q_29_ce0),
     .we0(samples_Q_29_we0),
-    .d0(samples_Q_30_load_reg_2100),
+    .d0(samples_Q_30_q1),
     .address1(samples_Q_29_address1),
     .ce1(samples_Q_29_ce1),
     .q1(samples_Q_29_q1)
@@ -1574,10 +1442,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_30_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_30_addr_reg_1762_pp0_iter1_reg),
+    .address0(samples_Q_30_addr_reg_1826),
     .ce0(samples_Q_30_ce0),
     .we0(samples_Q_30_we0),
-    .d0(samples_Q_31_load_reg_2105),
+    .d0(samples_Q_31_q1),
     .address1(samples_Q_30_address1),
     .ce1(samples_Q_30_ce1),
     .q1(samples_Q_30_q1)
@@ -1590,10 +1458,10 @@ receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W #(
 samples_Q_31_U(
     .clk(ap_clk),
     .reset(ap_rst),
-    .address0(samples_Q_31_addr_reg_1774_pp0_iter1_reg),
+    .address0(samples_Q_31_addr_reg_1838),
     .ce0(samples_Q_31_ce0),
     .we0(samples_Q_31_we0),
-    .d0(samples_Q_0_load_reg_2005),
+    .d0(samples_Q_0_q1),
     .address1(samples_Q_31_address1),
     .ce1(samples_Q_31_ce1),
     .q1(samples_Q_31_q1)
@@ -1628,7 +1496,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue_int == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_loop_exit_ready_pp0_iter2_reg == 1'b1))) begin
+        end else if (((ap_loop_exit_ready_pp0_iter1_reg == 1'b1) & (1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -1645,27 +1513,19 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_enable_reg_pp0_iter2 <= 1'b0;
-    end else begin
-        if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
-            ap_enable_reg_pp0_iter2 <= ap_enable_reg_pp0_iter1;
+    if ((1'b1 == ap_CS_fsm_pp0_stage0)) begin
+        if (((ap_loop_exit_ready == 1'b0) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+            ap_loop_exit_ready_pp0_iter1_reg <= 1'b0;
+        end else if ((1'b0 == ap_block_pp0_stage0_11001)) begin
+            ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_loop_exit_ready_pp0_iter1_reg == 1'b0))) begin
-        ap_loop_exit_ready_pp0_iter2_reg <= 1'b0;
-    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_loop_exit_ready_pp0_iter2_reg <= ap_loop_exit_ready_pp0_iter1_reg;
-    end
-end
-
-always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln52_fu_1362_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_164 <= add_ln54_fu_1368_p2;
+        if (((icmp_ln52_fu_1426_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            i_fu_164 <= add_ln54_fu_1432_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_fu_164 <= 13'd0;
         end
@@ -1674,219 +1534,80 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_loop_exit_ready_pp0_iter1_reg <= ap_loop_exit_ready;
-        icmp_ln52_reg_1536 <= icmp_ln52_fu_1362_p2;
-        icmp_ln52_reg_1536_pp0_iter1_reg <= icmp_ln52_reg_1536;
-        samples_I_10_addr_reg_1512 <= zext_ln52_fu_1290_p1;
-        samples_I_10_addr_reg_1512_pp0_iter1_reg <= samples_I_10_addr_reg_1512;
-        samples_I_11_addr_reg_1524 <= zext_ln52_fu_1290_p1;
-        samples_I_11_addr_reg_1524_pp0_iter1_reg <= samples_I_11_addr_reg_1524;
-        samples_I_12_addr_reg_1540_pp0_iter1_reg <= samples_I_12_addr_reg_1540;
-        samples_I_13_addr_reg_1552_pp0_iter1_reg <= samples_I_13_addr_reg_1552;
-        samples_I_14_addr_reg_1564_pp0_iter1_reg <= samples_I_14_addr_reg_1564;
-        samples_I_15_addr_reg_1576_pp0_iter1_reg <= samples_I_15_addr_reg_1576;
-        samples_I_16_addr_reg_1588_pp0_iter1_reg <= samples_I_16_addr_reg_1588;
-        samples_I_17_addr_reg_1600_pp0_iter1_reg <= samples_I_17_addr_reg_1600;
-        samples_I_18_addr_reg_1612_pp0_iter1_reg <= samples_I_18_addr_reg_1612;
-        samples_I_19_addr_reg_1624_pp0_iter1_reg <= samples_I_19_addr_reg_1624;
-        samples_I_1_addr_reg_1404 <= zext_ln52_fu_1290_p1;
-        samples_I_1_addr_reg_1404_pp0_iter1_reg <= samples_I_1_addr_reg_1404;
-        samples_I_20_addr_reg_1636_pp0_iter1_reg <= samples_I_20_addr_reg_1636;
-        samples_I_21_addr_reg_1648_pp0_iter1_reg <= samples_I_21_addr_reg_1648;
-        samples_I_22_addr_reg_1660_pp0_iter1_reg <= samples_I_22_addr_reg_1660;
-        samples_I_23_addr_reg_1672_pp0_iter1_reg <= samples_I_23_addr_reg_1672;
-        samples_I_24_addr_reg_1684_pp0_iter1_reg <= samples_I_24_addr_reg_1684;
-        samples_I_25_addr_reg_1696_pp0_iter1_reg <= samples_I_25_addr_reg_1696;
-        samples_I_26_addr_reg_1708_pp0_iter1_reg <= samples_I_26_addr_reg_1708;
-        samples_I_27_addr_reg_1720_pp0_iter1_reg <= samples_I_27_addr_reg_1720;
-        samples_I_28_addr_reg_1732_pp0_iter1_reg <= samples_I_28_addr_reg_1732;
-        samples_I_29_addr_reg_1744_pp0_iter1_reg <= samples_I_29_addr_reg_1744;
-        samples_I_2_addr_reg_1416 <= zext_ln52_fu_1290_p1;
-        samples_I_2_addr_reg_1416_pp0_iter1_reg <= samples_I_2_addr_reg_1416;
-        samples_I_30_addr_reg_1756_pp0_iter1_reg <= samples_I_30_addr_reg_1756;
-        samples_I_31_addr_reg_1768_pp0_iter1_reg <= samples_I_31_addr_reg_1768;
-        samples_I_3_addr_reg_1428 <= zext_ln52_fu_1290_p1;
-        samples_I_3_addr_reg_1428_pp0_iter1_reg <= samples_I_3_addr_reg_1428;
-        samples_I_4_addr_reg_1440 <= zext_ln52_fu_1290_p1;
-        samples_I_4_addr_reg_1440_pp0_iter1_reg <= samples_I_4_addr_reg_1440;
-        samples_I_5_addr_reg_1452 <= zext_ln52_fu_1290_p1;
-        samples_I_5_addr_reg_1452_pp0_iter1_reg <= samples_I_5_addr_reg_1452;
-        samples_I_6_addr_reg_1464 <= zext_ln52_fu_1290_p1;
-        samples_I_6_addr_reg_1464_pp0_iter1_reg <= samples_I_6_addr_reg_1464;
-        samples_I_7_addr_reg_1476 <= zext_ln52_fu_1290_p1;
-        samples_I_7_addr_reg_1476_pp0_iter1_reg <= samples_I_7_addr_reg_1476;
-        samples_I_8_addr_reg_1488 <= zext_ln52_fu_1290_p1;
-        samples_I_8_addr_reg_1488_pp0_iter1_reg <= samples_I_8_addr_reg_1488;
-        samples_I_9_addr_reg_1500 <= zext_ln52_fu_1290_p1;
-        samples_I_9_addr_reg_1500_pp0_iter1_reg <= samples_I_9_addr_reg_1500;
-        samples_Q_10_addr_reg_1518 <= zext_ln52_fu_1290_p1;
-        samples_Q_10_addr_reg_1518_pp0_iter1_reg <= samples_Q_10_addr_reg_1518;
-        samples_Q_11_addr_reg_1530 <= zext_ln52_fu_1290_p1;
-        samples_Q_11_addr_reg_1530_pp0_iter1_reg <= samples_Q_11_addr_reg_1530;
-        samples_Q_12_addr_reg_1546_pp0_iter1_reg <= samples_Q_12_addr_reg_1546;
-        samples_Q_13_addr_reg_1558_pp0_iter1_reg <= samples_Q_13_addr_reg_1558;
-        samples_Q_14_addr_reg_1570_pp0_iter1_reg <= samples_Q_14_addr_reg_1570;
-        samples_Q_15_addr_reg_1582_pp0_iter1_reg <= samples_Q_15_addr_reg_1582;
-        samples_Q_16_addr_reg_1594_pp0_iter1_reg <= samples_Q_16_addr_reg_1594;
-        samples_Q_17_addr_reg_1606_pp0_iter1_reg <= samples_Q_17_addr_reg_1606;
-        samples_Q_18_addr_reg_1618_pp0_iter1_reg <= samples_Q_18_addr_reg_1618;
-        samples_Q_19_addr_reg_1630_pp0_iter1_reg <= samples_Q_19_addr_reg_1630;
-        samples_Q_1_addr_reg_1410 <= zext_ln52_fu_1290_p1;
-        samples_Q_1_addr_reg_1410_pp0_iter1_reg <= samples_Q_1_addr_reg_1410;
-        samples_Q_20_addr_reg_1642_pp0_iter1_reg <= samples_Q_20_addr_reg_1642;
-        samples_Q_21_addr_reg_1654_pp0_iter1_reg <= samples_Q_21_addr_reg_1654;
-        samples_Q_22_addr_reg_1666_pp0_iter1_reg <= samples_Q_22_addr_reg_1666;
-        samples_Q_23_addr_reg_1678_pp0_iter1_reg <= samples_Q_23_addr_reg_1678;
-        samples_Q_24_addr_reg_1690_pp0_iter1_reg <= samples_Q_24_addr_reg_1690;
-        samples_Q_25_addr_reg_1702_pp0_iter1_reg <= samples_Q_25_addr_reg_1702;
-        samples_Q_26_addr_reg_1714_pp0_iter1_reg <= samples_Q_26_addr_reg_1714;
-        samples_Q_27_addr_reg_1726_pp0_iter1_reg <= samples_Q_27_addr_reg_1726;
-        samples_Q_28_addr_reg_1738_pp0_iter1_reg <= samples_Q_28_addr_reg_1738;
-        samples_Q_29_addr_reg_1750_pp0_iter1_reg <= samples_Q_29_addr_reg_1750;
-        samples_Q_2_addr_reg_1422 <= zext_ln52_fu_1290_p1;
-        samples_Q_2_addr_reg_1422_pp0_iter1_reg <= samples_Q_2_addr_reg_1422;
-        samples_Q_30_addr_reg_1762_pp0_iter1_reg <= samples_Q_30_addr_reg_1762;
-        samples_Q_31_addr_reg_1774_pp0_iter1_reg <= samples_Q_31_addr_reg_1774;
-        samples_Q_3_addr_reg_1434 <= zext_ln52_fu_1290_p1;
-        samples_Q_3_addr_reg_1434_pp0_iter1_reg <= samples_Q_3_addr_reg_1434;
-        samples_Q_4_addr_reg_1446 <= zext_ln52_fu_1290_p1;
-        samples_Q_4_addr_reg_1446_pp0_iter1_reg <= samples_Q_4_addr_reg_1446;
-        samples_Q_5_addr_reg_1458 <= zext_ln52_fu_1290_p1;
-        samples_Q_5_addr_reg_1458_pp0_iter1_reg <= samples_Q_5_addr_reg_1458;
-        samples_Q_6_addr_reg_1470 <= zext_ln52_fu_1290_p1;
-        samples_Q_6_addr_reg_1470_pp0_iter1_reg <= samples_Q_6_addr_reg_1470;
-        samples_Q_7_addr_reg_1482 <= zext_ln52_fu_1290_p1;
-        samples_Q_7_addr_reg_1482_pp0_iter1_reg <= samples_Q_7_addr_reg_1482;
-        samples_Q_8_addr_reg_1494 <= zext_ln52_fu_1290_p1;
-        samples_Q_8_addr_reg_1494_pp0_iter1_reg <= samples_Q_8_addr_reg_1494;
-        samples_Q_9_addr_reg_1506 <= zext_ln52_fu_1290_p1;
-        samples_Q_9_addr_reg_1506_pp0_iter1_reg <= samples_Q_9_addr_reg_1506;
-        zext_ln52_reg_1398[7 : 0] <= zext_ln52_fu_1290_p1[7 : 0];
-        zext_ln52_reg_1398_pp0_iter1_reg[7 : 0] <= zext_ln52_reg_1398[7 : 0];
+        icmp_ln52_reg_1600 <= icmp_ln52_fu_1426_p2;
+        samples_I_10_addr_reg_1576 <= zext_ln52_fu_1354_p1;
+        samples_I_11_addr_reg_1588 <= zext_ln52_fu_1354_p1;
+        samples_I_1_addr_reg_1468 <= zext_ln52_fu_1354_p1;
+        samples_I_2_addr_reg_1480 <= zext_ln52_fu_1354_p1;
+        samples_I_3_addr_reg_1492 <= zext_ln52_fu_1354_p1;
+        samples_I_4_addr_reg_1504 <= zext_ln52_fu_1354_p1;
+        samples_I_5_addr_reg_1516 <= zext_ln52_fu_1354_p1;
+        samples_I_6_addr_reg_1528 <= zext_ln52_fu_1354_p1;
+        samples_I_7_addr_reg_1540 <= zext_ln52_fu_1354_p1;
+        samples_I_8_addr_reg_1552 <= zext_ln52_fu_1354_p1;
+        samples_I_9_addr_reg_1564 <= zext_ln52_fu_1354_p1;
+        samples_Q_10_addr_reg_1582 <= zext_ln52_fu_1354_p1;
+        samples_Q_11_addr_reg_1594 <= zext_ln52_fu_1354_p1;
+        samples_Q_1_addr_reg_1474 <= zext_ln52_fu_1354_p1;
+        samples_Q_2_addr_reg_1486 <= zext_ln52_fu_1354_p1;
+        samples_Q_3_addr_reg_1498 <= zext_ln52_fu_1354_p1;
+        samples_Q_4_addr_reg_1510 <= zext_ln52_fu_1354_p1;
+        samples_Q_5_addr_reg_1522 <= zext_ln52_fu_1354_p1;
+        samples_Q_6_addr_reg_1534 <= zext_ln52_fu_1354_p1;
+        samples_Q_7_addr_reg_1546 <= zext_ln52_fu_1354_p1;
+        samples_Q_8_addr_reg_1558 <= zext_ln52_fu_1354_p1;
+        samples_Q_9_addr_reg_1570 <= zext_ln52_fu_1354_p1;
+        zext_ln52_reg_1462[7 : 0] <= zext_ln52_fu_1354_p1[7 : 0];
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln52_reg_1536 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        samples_I_0_load_reg_2000 <= samples_I_0_q1;
-        samples_I_12_load_reg_1900 <= samples_I_12_q1;
-        samples_I_13_load_reg_1905 <= samples_I_13_q1;
-        samples_I_14_load_reg_1910 <= samples_I_14_q1;
-        samples_I_15_load_reg_1915 <= samples_I_15_q1;
-        samples_I_16_load_reg_1920 <= samples_I_16_q1;
-        samples_I_17_load_reg_1925 <= samples_I_17_q1;
-        samples_I_18_load_reg_1930 <= samples_I_18_q1;
-        samples_I_19_load_reg_1935 <= samples_I_19_q1;
-        samples_I_20_load_reg_1940 <= samples_I_20_q1;
-        samples_I_21_load_reg_1945 <= samples_I_21_q1;
-        samples_I_22_load_reg_1950 <= samples_I_22_q1;
-        samples_I_23_load_reg_1955 <= samples_I_23_q1;
-        samples_I_24_load_reg_1960 <= samples_I_24_q1;
-        samples_I_25_load_reg_1965 <= samples_I_25_q1;
-        samples_I_26_load_reg_1970 <= samples_I_26_q1;
-        samples_I_27_load_reg_1975 <= samples_I_27_q1;
-        samples_I_28_load_reg_1980 <= samples_I_28_q1;
-        samples_I_29_load_reg_1985 <= samples_I_29_q1;
-        samples_I_30_load_reg_1990 <= samples_I_30_q1;
-        samples_I_31_load_reg_1995 <= samples_I_31_q1;
-        samples_Q_0_load_reg_2005 <= samples_Q_0_q1;
-        samples_Q_12_load_reg_2010 <= samples_Q_12_q1;
-        samples_Q_13_load_reg_2015 <= samples_Q_13_q1;
-        samples_Q_14_load_reg_2020 <= samples_Q_14_q1;
-        samples_Q_15_load_reg_2025 <= samples_Q_15_q1;
-        samples_Q_16_load_reg_2030 <= samples_Q_16_q1;
-        samples_Q_17_load_reg_2035 <= samples_Q_17_q1;
-        samples_Q_18_load_reg_2040 <= samples_Q_18_q1;
-        samples_Q_19_load_reg_2045 <= samples_Q_19_q1;
-        samples_Q_20_load_reg_2050 <= samples_Q_20_q1;
-        samples_Q_21_load_reg_2055 <= samples_Q_21_q1;
-        samples_Q_22_load_reg_2060 <= samples_Q_22_q1;
-        samples_Q_23_load_reg_2065 <= samples_Q_23_q1;
-        samples_Q_24_load_reg_2070 <= samples_Q_24_q1;
-        samples_Q_25_load_reg_2075 <= samples_Q_25_q1;
-        samples_Q_26_load_reg_2080 <= samples_Q_26_q1;
-        samples_Q_27_load_reg_2085 <= samples_Q_27_q1;
-        samples_Q_28_load_reg_2090 <= samples_Q_28_q1;
-        samples_Q_29_load_reg_2095 <= samples_Q_29_q1;
-        samples_Q_30_load_reg_2100 <= samples_Q_30_q1;
-        samples_Q_31_load_reg_2105 <= samples_Q_31_q1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        samples_I_10_load_reg_1835 <= samples_I_10_q1;
-        samples_I_11_load_reg_1840 <= samples_I_11_q1;
-        samples_I_1_load_reg_1790 <= samples_I_1_q1;
-        samples_I_2_load_reg_1795 <= samples_I_2_q1;
-        samples_I_3_load_reg_1800 <= samples_I_3_q1;
-        samples_I_4_load_reg_1805 <= samples_I_4_q1;
-        samples_I_5_load_reg_1810 <= samples_I_5_q1;
-        samples_I_6_load_reg_1815 <= samples_I_6_q1;
-        samples_I_7_load_reg_1820 <= samples_I_7_q1;
-        samples_I_8_load_reg_1825 <= samples_I_8_q1;
-        samples_I_9_load_reg_1830 <= samples_I_9_q1;
-        samples_Q_10_load_reg_1895 <= samples_Q_10_q1;
-        samples_Q_11_load_reg_1845 <= samples_Q_11_q1;
-        samples_Q_1_load_reg_1850 <= samples_Q_1_q1;
-        samples_Q_2_load_reg_1855 <= samples_Q_2_q1;
-        samples_Q_3_load_reg_1860 <= samples_Q_3_q1;
-        samples_Q_4_load_reg_1865 <= samples_Q_4_q1;
-        samples_Q_5_load_reg_1870 <= samples_Q_5_q1;
-        samples_Q_6_load_reg_1875 <= samples_Q_6_q1;
-        samples_Q_7_load_reg_1880 <= samples_Q_7_q1;
-        samples_Q_8_load_reg_1885 <= samples_Q_8_q1;
-        samples_Q_9_load_reg_1890 <= samples_Q_9_q1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((icmp_ln52_fu_1362_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        samples_I_12_addr_reg_1540 <= zext_ln52_fu_1290_p1;
-        samples_I_13_addr_reg_1552 <= zext_ln52_fu_1290_p1;
-        samples_I_14_addr_reg_1564 <= zext_ln52_fu_1290_p1;
-        samples_I_15_addr_reg_1576 <= zext_ln52_fu_1290_p1;
-        samples_I_16_addr_reg_1588 <= zext_ln52_fu_1290_p1;
-        samples_I_17_addr_reg_1600 <= zext_ln52_fu_1290_p1;
-        samples_I_18_addr_reg_1612 <= zext_ln52_fu_1290_p1;
-        samples_I_19_addr_reg_1624 <= zext_ln52_fu_1290_p1;
-        samples_I_20_addr_reg_1636 <= zext_ln52_fu_1290_p1;
-        samples_I_21_addr_reg_1648 <= zext_ln52_fu_1290_p1;
-        samples_I_22_addr_reg_1660 <= zext_ln52_fu_1290_p1;
-        samples_I_23_addr_reg_1672 <= zext_ln52_fu_1290_p1;
-        samples_I_24_addr_reg_1684 <= zext_ln52_fu_1290_p1;
-        samples_I_25_addr_reg_1696 <= zext_ln52_fu_1290_p1;
-        samples_I_26_addr_reg_1708 <= zext_ln52_fu_1290_p1;
-        samples_I_27_addr_reg_1720 <= zext_ln52_fu_1290_p1;
-        samples_I_28_addr_reg_1732 <= zext_ln52_fu_1290_p1;
-        samples_I_29_addr_reg_1744 <= zext_ln52_fu_1290_p1;
-        samples_I_30_addr_reg_1756 <= zext_ln52_fu_1290_p1;
-        samples_I_31_addr_reg_1768 <= zext_ln52_fu_1290_p1;
-        samples_Q_12_addr_reg_1546 <= zext_ln52_fu_1290_p1;
-        samples_Q_13_addr_reg_1558 <= zext_ln52_fu_1290_p1;
-        samples_Q_14_addr_reg_1570 <= zext_ln52_fu_1290_p1;
-        samples_Q_15_addr_reg_1582 <= zext_ln52_fu_1290_p1;
-        samples_Q_16_addr_reg_1594 <= zext_ln52_fu_1290_p1;
-        samples_Q_17_addr_reg_1606 <= zext_ln52_fu_1290_p1;
-        samples_Q_18_addr_reg_1618 <= zext_ln52_fu_1290_p1;
-        samples_Q_19_addr_reg_1630 <= zext_ln52_fu_1290_p1;
-        samples_Q_20_addr_reg_1642 <= zext_ln52_fu_1290_p1;
-        samples_Q_21_addr_reg_1654 <= zext_ln52_fu_1290_p1;
-        samples_Q_22_addr_reg_1666 <= zext_ln52_fu_1290_p1;
-        samples_Q_23_addr_reg_1678 <= zext_ln52_fu_1290_p1;
-        samples_Q_24_addr_reg_1690 <= zext_ln52_fu_1290_p1;
-        samples_Q_25_addr_reg_1702 <= zext_ln52_fu_1290_p1;
-        samples_Q_26_addr_reg_1714 <= zext_ln52_fu_1290_p1;
-        samples_Q_27_addr_reg_1726 <= zext_ln52_fu_1290_p1;
-        samples_Q_28_addr_reg_1738 <= zext_ln52_fu_1290_p1;
-        samples_Q_29_addr_reg_1750 <= zext_ln52_fu_1290_p1;
-        samples_Q_30_addr_reg_1762 <= zext_ln52_fu_1290_p1;
-        samples_Q_31_addr_reg_1774 <= zext_ln52_fu_1290_p1;
+    if (((icmp_ln52_fu_1426_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        samples_I_12_addr_reg_1604 <= zext_ln52_fu_1354_p1;
+        samples_I_13_addr_reg_1616 <= zext_ln52_fu_1354_p1;
+        samples_I_14_addr_reg_1628 <= zext_ln52_fu_1354_p1;
+        samples_I_15_addr_reg_1640 <= zext_ln52_fu_1354_p1;
+        samples_I_16_addr_reg_1652 <= zext_ln52_fu_1354_p1;
+        samples_I_17_addr_reg_1664 <= zext_ln52_fu_1354_p1;
+        samples_I_18_addr_reg_1676 <= zext_ln52_fu_1354_p1;
+        samples_I_19_addr_reg_1688 <= zext_ln52_fu_1354_p1;
+        samples_I_20_addr_reg_1700 <= zext_ln52_fu_1354_p1;
+        samples_I_21_addr_reg_1712 <= zext_ln52_fu_1354_p1;
+        samples_I_22_addr_reg_1724 <= zext_ln52_fu_1354_p1;
+        samples_I_23_addr_reg_1736 <= zext_ln52_fu_1354_p1;
+        samples_I_24_addr_reg_1748 <= zext_ln52_fu_1354_p1;
+        samples_I_25_addr_reg_1760 <= zext_ln52_fu_1354_p1;
+        samples_I_26_addr_reg_1772 <= zext_ln52_fu_1354_p1;
+        samples_I_27_addr_reg_1784 <= zext_ln52_fu_1354_p1;
+        samples_I_28_addr_reg_1796 <= zext_ln52_fu_1354_p1;
+        samples_I_29_addr_reg_1808 <= zext_ln52_fu_1354_p1;
+        samples_I_30_addr_reg_1820 <= zext_ln52_fu_1354_p1;
+        samples_I_31_addr_reg_1832 <= zext_ln52_fu_1354_p1;
+        samples_Q_12_addr_reg_1610 <= zext_ln52_fu_1354_p1;
+        samples_Q_13_addr_reg_1622 <= zext_ln52_fu_1354_p1;
+        samples_Q_14_addr_reg_1634 <= zext_ln52_fu_1354_p1;
+        samples_Q_15_addr_reg_1646 <= zext_ln52_fu_1354_p1;
+        samples_Q_16_addr_reg_1658 <= zext_ln52_fu_1354_p1;
+        samples_Q_17_addr_reg_1670 <= zext_ln52_fu_1354_p1;
+        samples_Q_18_addr_reg_1682 <= zext_ln52_fu_1354_p1;
+        samples_Q_19_addr_reg_1694 <= zext_ln52_fu_1354_p1;
+        samples_Q_20_addr_reg_1706 <= zext_ln52_fu_1354_p1;
+        samples_Q_21_addr_reg_1718 <= zext_ln52_fu_1354_p1;
+        samples_Q_22_addr_reg_1730 <= zext_ln52_fu_1354_p1;
+        samples_Q_23_addr_reg_1742 <= zext_ln52_fu_1354_p1;
+        samples_Q_24_addr_reg_1754 <= zext_ln52_fu_1354_p1;
+        samples_Q_25_addr_reg_1766 <= zext_ln52_fu_1354_p1;
+        samples_Q_26_addr_reg_1778 <= zext_ln52_fu_1354_p1;
+        samples_Q_27_addr_reg_1790 <= zext_ln52_fu_1354_p1;
+        samples_Q_28_addr_reg_1802 <= zext_ln52_fu_1354_p1;
+        samples_Q_29_addr_reg_1814 <= zext_ln52_fu_1354_p1;
+        samples_Q_30_addr_reg_1826 <= zext_ln52_fu_1354_p1;
+        samples_Q_31_addr_reg_1838 <= zext_ln52_fu_1354_p1;
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln52_fu_1362_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln52_fu_1426_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -1894,7 +1615,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_loop_exit_ready_pp0_iter2_reg == 1'b1))) begin
+    if (((ap_loop_exit_ready_pp0_iter1_reg == 1'b1) & (1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_done_int = 1'b1;
     end else begin
         ap_done_int = ap_done_reg;
@@ -1902,7 +1623,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_start_int == 1'b0))) begin
+    if (((ap_start_int == 1'b0) & (ap_idle_pp0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_idle = 1'b1;
     end else begin
         ap_idle = 1'b0;
@@ -1910,7 +1631,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter2 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -1926,7 +1647,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
+    if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_sig_allocacmp_i_3 = 13'd0;
     end else begin
         ap_sig_allocacmp_i_3 = i_fu_164;
@@ -1934,7 +1655,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_0_ce0 = 1'b1;
     end else begin
         samples_I_0_ce0 = 1'b0;
@@ -1950,7 +1671,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_0_we0 = 1'b1;
     end else begin
         samples_I_0_we0 = 1'b0;
@@ -1958,7 +1679,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_10_ce0 = 1'b1;
     end else begin
         samples_I_10_ce0 = 1'b0;
@@ -1974,7 +1695,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_10_we0 = 1'b1;
     end else begin
         samples_I_10_we0 = 1'b0;
@@ -1982,7 +1703,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_11_ce0 = 1'b1;
     end else begin
         samples_I_11_ce0 = 1'b0;
@@ -1998,7 +1719,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_11_we0 = 1'b1;
     end else begin
         samples_I_11_we0 = 1'b0;
@@ -2006,7 +1727,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_12_ce0 = 1'b1;
     end else begin
         samples_I_12_ce0 = 1'b0;
@@ -2022,7 +1743,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_12_we0 = 1'b1;
     end else begin
         samples_I_12_we0 = 1'b0;
@@ -2030,7 +1751,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_13_ce0 = 1'b1;
     end else begin
         samples_I_13_ce0 = 1'b0;
@@ -2046,7 +1767,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_13_we0 = 1'b1;
     end else begin
         samples_I_13_we0 = 1'b0;
@@ -2054,7 +1775,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_14_ce0 = 1'b1;
     end else begin
         samples_I_14_ce0 = 1'b0;
@@ -2070,7 +1791,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_14_we0 = 1'b1;
     end else begin
         samples_I_14_we0 = 1'b0;
@@ -2078,7 +1799,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_15_ce0 = 1'b1;
     end else begin
         samples_I_15_ce0 = 1'b0;
@@ -2094,7 +1815,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_15_we0 = 1'b1;
     end else begin
         samples_I_15_we0 = 1'b0;
@@ -2102,7 +1823,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_16_ce0 = 1'b1;
     end else begin
         samples_I_16_ce0 = 1'b0;
@@ -2118,7 +1839,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_16_we0 = 1'b1;
     end else begin
         samples_I_16_we0 = 1'b0;
@@ -2126,7 +1847,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_17_ce0 = 1'b1;
     end else begin
         samples_I_17_ce0 = 1'b0;
@@ -2142,7 +1863,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_17_we0 = 1'b1;
     end else begin
         samples_I_17_we0 = 1'b0;
@@ -2150,7 +1871,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_18_ce0 = 1'b1;
     end else begin
         samples_I_18_ce0 = 1'b0;
@@ -2166,7 +1887,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_18_we0 = 1'b1;
     end else begin
         samples_I_18_we0 = 1'b0;
@@ -2174,7 +1895,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_19_ce0 = 1'b1;
     end else begin
         samples_I_19_ce0 = 1'b0;
@@ -2190,7 +1911,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_19_we0 = 1'b1;
     end else begin
         samples_I_19_we0 = 1'b0;
@@ -2198,7 +1919,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_1_ce0 = 1'b1;
     end else begin
         samples_I_1_ce0 = 1'b0;
@@ -2214,7 +1935,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_1_we0 = 1'b1;
     end else begin
         samples_I_1_we0 = 1'b0;
@@ -2222,7 +1943,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_20_ce0 = 1'b1;
     end else begin
         samples_I_20_ce0 = 1'b0;
@@ -2238,7 +1959,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_20_we0 = 1'b1;
     end else begin
         samples_I_20_we0 = 1'b0;
@@ -2246,7 +1967,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_21_ce0 = 1'b1;
     end else begin
         samples_I_21_ce0 = 1'b0;
@@ -2262,7 +1983,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_21_we0 = 1'b1;
     end else begin
         samples_I_21_we0 = 1'b0;
@@ -2270,7 +1991,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_22_ce0 = 1'b1;
     end else begin
         samples_I_22_ce0 = 1'b0;
@@ -2286,7 +2007,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_22_we0 = 1'b1;
     end else begin
         samples_I_22_we0 = 1'b0;
@@ -2294,7 +2015,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_23_ce0 = 1'b1;
     end else begin
         samples_I_23_ce0 = 1'b0;
@@ -2310,7 +2031,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_23_we0 = 1'b1;
     end else begin
         samples_I_23_we0 = 1'b0;
@@ -2318,7 +2039,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_24_ce0 = 1'b1;
     end else begin
         samples_I_24_ce0 = 1'b0;
@@ -2334,7 +2055,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_24_we0 = 1'b1;
     end else begin
         samples_I_24_we0 = 1'b0;
@@ -2342,7 +2063,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_25_ce0 = 1'b1;
     end else begin
         samples_I_25_ce0 = 1'b0;
@@ -2358,7 +2079,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_25_we0 = 1'b1;
     end else begin
         samples_I_25_we0 = 1'b0;
@@ -2366,7 +2087,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_26_ce0 = 1'b1;
     end else begin
         samples_I_26_ce0 = 1'b0;
@@ -2382,7 +2103,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_26_we0 = 1'b1;
     end else begin
         samples_I_26_we0 = 1'b0;
@@ -2390,7 +2111,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_27_ce0 = 1'b1;
     end else begin
         samples_I_27_ce0 = 1'b0;
@@ -2406,7 +2127,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_27_we0 = 1'b1;
     end else begin
         samples_I_27_we0 = 1'b0;
@@ -2414,7 +2135,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_28_ce0 = 1'b1;
     end else begin
         samples_I_28_ce0 = 1'b0;
@@ -2430,7 +2151,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_28_we0 = 1'b1;
     end else begin
         samples_I_28_we0 = 1'b0;
@@ -2438,7 +2159,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_29_ce0 = 1'b1;
     end else begin
         samples_I_29_ce0 = 1'b0;
@@ -2454,7 +2175,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_29_we0 = 1'b1;
     end else begin
         samples_I_29_we0 = 1'b0;
@@ -2462,7 +2183,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_2_ce0 = 1'b1;
     end else begin
         samples_I_2_ce0 = 1'b0;
@@ -2478,7 +2199,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_2_we0 = 1'b1;
     end else begin
         samples_I_2_we0 = 1'b0;
@@ -2486,7 +2207,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_30_ce0 = 1'b1;
     end else begin
         samples_I_30_ce0 = 1'b0;
@@ -2502,7 +2223,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_30_we0 = 1'b1;
     end else begin
         samples_I_30_we0 = 1'b0;
@@ -2510,7 +2231,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_31_ce0 = 1'b1;
     end else begin
         samples_I_31_ce0 = 1'b0;
@@ -2526,7 +2247,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_31_we0 = 1'b1;
     end else begin
         samples_I_31_we0 = 1'b0;
@@ -2534,7 +2255,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_3_ce0 = 1'b1;
     end else begin
         samples_I_3_ce0 = 1'b0;
@@ -2550,7 +2271,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_3_we0 = 1'b1;
     end else begin
         samples_I_3_we0 = 1'b0;
@@ -2558,7 +2279,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_4_ce0 = 1'b1;
     end else begin
         samples_I_4_ce0 = 1'b0;
@@ -2574,7 +2295,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_4_we0 = 1'b1;
     end else begin
         samples_I_4_we0 = 1'b0;
@@ -2582,7 +2303,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_5_ce0 = 1'b1;
     end else begin
         samples_I_5_ce0 = 1'b0;
@@ -2598,7 +2319,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_5_we0 = 1'b1;
     end else begin
         samples_I_5_we0 = 1'b0;
@@ -2606,7 +2327,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_6_ce0 = 1'b1;
     end else begin
         samples_I_6_ce0 = 1'b0;
@@ -2622,7 +2343,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_6_we0 = 1'b1;
     end else begin
         samples_I_6_we0 = 1'b0;
@@ -2630,7 +2351,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_7_ce0 = 1'b1;
     end else begin
         samples_I_7_ce0 = 1'b0;
@@ -2646,7 +2367,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_7_we0 = 1'b1;
     end else begin
         samples_I_7_we0 = 1'b0;
@@ -2654,7 +2375,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_8_ce0 = 1'b1;
     end else begin
         samples_I_8_ce0 = 1'b0;
@@ -2670,7 +2391,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_8_we0 = 1'b1;
     end else begin
         samples_I_8_we0 = 1'b0;
@@ -2678,7 +2399,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_9_ce0 = 1'b1;
     end else begin
         samples_I_9_ce0 = 1'b0;
@@ -2694,7 +2415,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_I_9_we0 = 1'b1;
     end else begin
         samples_I_9_we0 = 1'b0;
@@ -2702,7 +2423,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_0_ce0 = 1'b1;
     end else begin
         samples_Q_0_ce0 = 1'b0;
@@ -2718,7 +2439,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_0_we0 = 1'b1;
     end else begin
         samples_Q_0_we0 = 1'b0;
@@ -2726,7 +2447,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_10_ce0 = 1'b1;
     end else begin
         samples_Q_10_ce0 = 1'b0;
@@ -2742,7 +2463,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_10_we0 = 1'b1;
     end else begin
         samples_Q_10_we0 = 1'b0;
@@ -2750,7 +2471,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_11_ce0 = 1'b1;
     end else begin
         samples_Q_11_ce0 = 1'b0;
@@ -2766,7 +2487,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_11_we0 = 1'b1;
     end else begin
         samples_Q_11_we0 = 1'b0;
@@ -2774,7 +2495,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_12_ce0 = 1'b1;
     end else begin
         samples_Q_12_ce0 = 1'b0;
@@ -2790,7 +2511,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_12_we0 = 1'b1;
     end else begin
         samples_Q_12_we0 = 1'b0;
@@ -2798,7 +2519,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_13_ce0 = 1'b1;
     end else begin
         samples_Q_13_ce0 = 1'b0;
@@ -2814,7 +2535,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_13_we0 = 1'b1;
     end else begin
         samples_Q_13_we0 = 1'b0;
@@ -2822,7 +2543,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_14_ce0 = 1'b1;
     end else begin
         samples_Q_14_ce0 = 1'b0;
@@ -2838,7 +2559,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_14_we0 = 1'b1;
     end else begin
         samples_Q_14_we0 = 1'b0;
@@ -2846,7 +2567,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_15_ce0 = 1'b1;
     end else begin
         samples_Q_15_ce0 = 1'b0;
@@ -2862,7 +2583,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_15_we0 = 1'b1;
     end else begin
         samples_Q_15_we0 = 1'b0;
@@ -2870,7 +2591,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_16_ce0 = 1'b1;
     end else begin
         samples_Q_16_ce0 = 1'b0;
@@ -2886,7 +2607,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_16_we0 = 1'b1;
     end else begin
         samples_Q_16_we0 = 1'b0;
@@ -2894,7 +2615,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_17_ce0 = 1'b1;
     end else begin
         samples_Q_17_ce0 = 1'b0;
@@ -2910,7 +2631,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_17_we0 = 1'b1;
     end else begin
         samples_Q_17_we0 = 1'b0;
@@ -2918,7 +2639,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_18_ce0 = 1'b1;
     end else begin
         samples_Q_18_ce0 = 1'b0;
@@ -2934,7 +2655,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_18_we0 = 1'b1;
     end else begin
         samples_Q_18_we0 = 1'b0;
@@ -2942,7 +2663,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_19_ce0 = 1'b1;
     end else begin
         samples_Q_19_ce0 = 1'b0;
@@ -2958,7 +2679,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_19_we0 = 1'b1;
     end else begin
         samples_Q_19_we0 = 1'b0;
@@ -2966,7 +2687,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_1_ce0 = 1'b1;
     end else begin
         samples_Q_1_ce0 = 1'b0;
@@ -2982,7 +2703,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_1_we0 = 1'b1;
     end else begin
         samples_Q_1_we0 = 1'b0;
@@ -2990,7 +2711,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_20_ce0 = 1'b1;
     end else begin
         samples_Q_20_ce0 = 1'b0;
@@ -3006,7 +2727,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_20_we0 = 1'b1;
     end else begin
         samples_Q_20_we0 = 1'b0;
@@ -3014,7 +2735,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_21_ce0 = 1'b1;
     end else begin
         samples_Q_21_ce0 = 1'b0;
@@ -3030,7 +2751,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_21_we0 = 1'b1;
     end else begin
         samples_Q_21_we0 = 1'b0;
@@ -3038,7 +2759,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_22_ce0 = 1'b1;
     end else begin
         samples_Q_22_ce0 = 1'b0;
@@ -3054,7 +2775,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_22_we0 = 1'b1;
     end else begin
         samples_Q_22_we0 = 1'b0;
@@ -3062,7 +2783,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_23_ce0 = 1'b1;
     end else begin
         samples_Q_23_ce0 = 1'b0;
@@ -3078,7 +2799,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_23_we0 = 1'b1;
     end else begin
         samples_Q_23_we0 = 1'b0;
@@ -3086,7 +2807,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_24_ce0 = 1'b1;
     end else begin
         samples_Q_24_ce0 = 1'b0;
@@ -3102,7 +2823,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_24_we0 = 1'b1;
     end else begin
         samples_Q_24_we0 = 1'b0;
@@ -3110,7 +2831,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_25_ce0 = 1'b1;
     end else begin
         samples_Q_25_ce0 = 1'b0;
@@ -3126,7 +2847,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_25_we0 = 1'b1;
     end else begin
         samples_Q_25_we0 = 1'b0;
@@ -3134,7 +2855,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_26_ce0 = 1'b1;
     end else begin
         samples_Q_26_ce0 = 1'b0;
@@ -3150,7 +2871,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_26_we0 = 1'b1;
     end else begin
         samples_Q_26_we0 = 1'b0;
@@ -3158,7 +2879,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_27_ce0 = 1'b1;
     end else begin
         samples_Q_27_ce0 = 1'b0;
@@ -3174,7 +2895,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_27_we0 = 1'b1;
     end else begin
         samples_Q_27_we0 = 1'b0;
@@ -3182,7 +2903,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_28_ce0 = 1'b1;
     end else begin
         samples_Q_28_ce0 = 1'b0;
@@ -3198,7 +2919,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_28_we0 = 1'b1;
     end else begin
         samples_Q_28_we0 = 1'b0;
@@ -3206,7 +2927,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_29_ce0 = 1'b1;
     end else begin
         samples_Q_29_ce0 = 1'b0;
@@ -3222,7 +2943,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_29_we0 = 1'b1;
     end else begin
         samples_Q_29_we0 = 1'b0;
@@ -3230,7 +2951,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_2_ce0 = 1'b1;
     end else begin
         samples_Q_2_ce0 = 1'b0;
@@ -3246,7 +2967,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_2_we0 = 1'b1;
     end else begin
         samples_Q_2_we0 = 1'b0;
@@ -3254,7 +2975,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_30_ce0 = 1'b1;
     end else begin
         samples_Q_30_ce0 = 1'b0;
@@ -3270,7 +2991,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_30_we0 = 1'b1;
     end else begin
         samples_Q_30_we0 = 1'b0;
@@ -3278,7 +2999,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_31_ce0 = 1'b1;
     end else begin
         samples_Q_31_ce0 = 1'b0;
@@ -3294,7 +3015,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln52_reg_1536_pp0_iter1_reg == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((icmp_ln52_reg_1600 == 1'd1) & (1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_31_we0 = 1'b1;
     end else begin
         samples_Q_31_we0 = 1'b0;
@@ -3302,7 +3023,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_3_ce0 = 1'b1;
     end else begin
         samples_Q_3_ce0 = 1'b0;
@@ -3318,7 +3039,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_3_we0 = 1'b1;
     end else begin
         samples_Q_3_we0 = 1'b0;
@@ -3326,7 +3047,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_4_ce0 = 1'b1;
     end else begin
         samples_Q_4_ce0 = 1'b0;
@@ -3342,7 +3063,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_4_we0 = 1'b1;
     end else begin
         samples_Q_4_we0 = 1'b0;
@@ -3350,7 +3071,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_5_ce0 = 1'b1;
     end else begin
         samples_Q_5_ce0 = 1'b0;
@@ -3366,7 +3087,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_5_we0 = 1'b1;
     end else begin
         samples_Q_5_we0 = 1'b0;
@@ -3374,7 +3095,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_6_ce0 = 1'b1;
     end else begin
         samples_Q_6_ce0 = 1'b0;
@@ -3390,7 +3111,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_6_we0 = 1'b1;
     end else begin
         samples_Q_6_we0 = 1'b0;
@@ -3398,7 +3119,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_7_ce0 = 1'b1;
     end else begin
         samples_Q_7_ce0 = 1'b0;
@@ -3414,7 +3135,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_7_we0 = 1'b1;
     end else begin
         samples_Q_7_we0 = 1'b0;
@@ -3422,7 +3143,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_8_ce0 = 1'b1;
     end else begin
         samples_Q_8_ce0 = 1'b0;
@@ -3438,7 +3159,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_8_we0 = 1'b1;
     end else begin
         samples_Q_8_we0 = 1'b0;
@@ -3446,7 +3167,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_9_ce0 = 1'b1;
     end else begin
         samples_Q_9_ce0 = 1'b0;
@@ -3462,7 +3183,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter2 == 1'b1))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         samples_Q_9_we0 = 1'b1;
     end else begin
         samples_Q_9_we0 = 1'b0;
@@ -3480,9 +3201,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln54_1_fu_1374_p2 = (lshr_ln_fu_1280_p4 + 8'd1);
+assign add_ln54_1_fu_1438_p2 = (lshr_ln_fu_1344_p4 + 8'd1);
 
-assign add_ln54_fu_1368_p2 = (ap_sig_allocacmp_i_3 + 13'd32);
+assign add_ln54_fu_1432_p2 = (ap_sig_allocacmp_i_3 + 13'd32);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -3496,167 +3217,164 @@ assign ap_block_state1_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
 assign ap_block_state2_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
-assign ap_block_state3_pp0_stage0_iter2 = ~(1'b1 == 1'b1);
-
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
 assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln52_fu_1362_p2 = ((or_ln54_fu_1356_p2 < 13'd7499) ? 1'b1 : 1'b0);
+assign icmp_ln52_fu_1426_p2 = ((or_ln54_fu_1420_p2 < 13'd7499) ? 1'b1 : 1'b0);
 
-assign lshr_ln_fu_1280_p4 = {{ap_sig_allocacmp_i_3[12:5]}};
+assign lshr_ln_fu_1344_p4 = {{ap_sig_allocacmp_i_3[12:5]}};
 
-assign or_ln54_fu_1356_p2 = (ap_sig_allocacmp_i_3 | 13'd11);
+assign or_ln54_fu_1420_p2 = (ap_sig_allocacmp_i_3 | 13'd11);
 
-assign samples_I_0_address0 = zext_ln52_reg_1398_pp0_iter1_reg;
+assign samples_I_0_address0 = zext_ln52_reg_1462;
 
-assign samples_I_0_address1 = zext_ln54_fu_1380_p1;
+assign samples_I_0_address1 = zext_ln54_fu_1444_p1;
 
-assign samples_I_10_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_10_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_11_address0 = samples_I_11_addr_reg_1524_pp0_iter1_reg;
+assign samples_I_11_address0 = samples_I_11_addr_reg_1588;
 
-assign samples_I_11_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_11_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_11_d0 = samples_I_12_load_reg_1900;
+assign samples_I_11_d0 = samples_I_12_q1;
 
-assign samples_I_12_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_12_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_13_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_13_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_14_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_14_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_15_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_15_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_16_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_16_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_17_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_17_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_18_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_18_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_19_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_19_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_1_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_1_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_20_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_20_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_21_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_21_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_22_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_22_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_23_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_23_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_24_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_24_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_25_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_25_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_26_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_26_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_27_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_27_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_28_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_28_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_29_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_29_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_2_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_2_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_30_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_30_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_31_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_31_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_3_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_3_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_4_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_4_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_5_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_5_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_6_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_6_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_7_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_7_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_8_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_8_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_I_9_address1 = zext_ln52_fu_1290_p1;
+assign samples_I_9_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_0_address0 = zext_ln52_reg_1398_pp0_iter1_reg;
+assign samples_Q_0_address0 = zext_ln52_reg_1462;
 
-assign samples_Q_0_address1 = zext_ln54_fu_1380_p1;
+assign samples_Q_0_address1 = zext_ln54_fu_1444_p1;
 
-assign samples_Q_10_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_10_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_11_address0 = samples_Q_11_addr_reg_1530_pp0_iter1_reg;
+assign samples_Q_11_address0 = samples_Q_11_addr_reg_1594;
 
-assign samples_Q_11_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_11_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_11_d0 = samples_Q_12_load_reg_2010;
+assign samples_Q_11_d0 = samples_Q_12_q1;
 
-assign samples_Q_12_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_12_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_13_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_13_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_14_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_14_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_15_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_15_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_16_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_16_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_17_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_17_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_18_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_18_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_19_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_19_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_1_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_1_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_20_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_20_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_21_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_21_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_22_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_22_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_23_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_23_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_24_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_24_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_25_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_25_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_26_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_26_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_27_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_27_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_28_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_28_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_29_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_29_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_2_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_2_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_30_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_30_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_31_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_31_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_3_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_3_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_4_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_4_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_5_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_5_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_6_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_6_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_7_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_7_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_8_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_8_address1 = zext_ln52_fu_1354_p1;
 
-assign samples_Q_9_address1 = zext_ln52_fu_1290_p1;
+assign samples_Q_9_address1 = zext_ln52_fu_1354_p1;
 
-assign zext_ln52_fu_1290_p1 = lshr_ln_fu_1280_p4;
+assign zext_ln52_fu_1354_p1 = lshr_ln_fu_1344_p4;
 
-assign zext_ln54_fu_1380_p1 = add_ln54_1_fu_1374_p2;
+assign zext_ln54_fu_1444_p1 = add_ln54_1_fu_1438_p2;
 
 always @ (posedge ap_clk) begin
-    zext_ln52_reg_1398[63:8] <= 56'b00000000000000000000000000000000000000000000000000000000;
-    zext_ln52_reg_1398_pp0_iter1_reg[63:8] <= 56'b00000000000000000000000000000000000000000000000000000000;
+    zext_ln52_reg_1462[63:8] <= 56'b00000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //receiver_receiver_Pipeline_VITIS_LOOP_52_1

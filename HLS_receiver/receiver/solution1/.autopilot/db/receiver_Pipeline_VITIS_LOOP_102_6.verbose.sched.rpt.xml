@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_102_6'" level="0">
-<item name = "Date">Thu May  2 22:09:26 2024
+<item name = "Date">Thu May  2 23:56:16 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00 ns, 4.506 ns, 2.16 ns</column>
+<column name="ap_clk">10.00 ns, 6.643 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">27, 27, 0.216 us, 0.216 us, 27, 27, no</column>
+<column name="">27, 27, 0.270 us, 0.270 us, 27, 27, no</column>
 </table>
 </item>
 <item name = "Detail">

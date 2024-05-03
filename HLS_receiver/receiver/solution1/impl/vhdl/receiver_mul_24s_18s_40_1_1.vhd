@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 
-entity receiver_mul_24s_24s_48_3_1 is
+entity receiver_mul_24s_18s_40_1_1 is
 generic (
     ID : INTEGER := 1;
     NUM_STAGE : INTEGER := 0;
@@ -12,10 +12,6 @@ generic (
     din1_WIDTH : INTEGER := 12;
     dout_WIDTH : INTEGER := 26);
 port (
-
-    clk: in std_logic;
-    ce: in std_logic;
-    reset: in std_logic;
 
     din0: in std_logic_vector(din0_WIDTH - 1 downto 0);
     din1: in std_logic_vector(din1_WIDTH - 1 downto 0);
@@ -25,16 +21,11 @@ port (
 
 end entity;
 
-architecture behav of receiver_mul_24s_24s_48_3_1 is
+architecture behav of receiver_mul_24s_18s_40_1_1 is
     signal tmp_product : std_logic_vector(dout_WIDTH - 1 downto 0);
     signal a_i : std_logic_vector(din0_WIDTH - 1 downto 0);
     signal b_i : std_logic_vector(din1_WIDTH - 1 downto 0);
     
-    signal buff0 : std_logic_vector(dout_WIDTH - 1 downto 0);
-    
-    
-    signal a_reg : std_logic_vector(din0_WIDTH - 1 downto 0);
-    signal b_reg : std_logic_vector(din1_WIDTH - 1 downto 0);
     
     
     
@@ -49,38 +40,21 @@ begin
 
 
 
-
-
-    tmp_product <= std_logic_vector(resize(unsigned(std_logic_vector(signed(a_reg) * signed(b_reg))), dout_WIDTH));
-
-
-
-
-
-
-    dout <= buff0;
+    tmp_product <= std_logic_vector(resize(unsigned(std_logic_vector(signed(a_i) * signed(b_i))), dout_WIDTH));
 
 
 
 
 
 
-
-    process(clk)
-    begin
-        if (clk'event and clk = '1') then
-            if (ce = '1') then
-                buff0 <= tmp_product;
-
-                a_reg <= a_i;
-                b_reg <= b_i;
+    dout <= tmp_product;
 
 
 
 
 
-            end if;
-        end if;
-    end process;
+
+
+
 
 end architecture;

@@ -427,7 +427,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "15", "EstimateLatencyMax" : "15",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "14", "EstimateLatencyMax" : "14",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -470,7 +470,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "filt_1_Q_7", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_84_4", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -478,42 +478,42 @@ set ArgLastReadFirstWriteLatency {
 	receiver_Pipeline_VITIS_LOOP_84_4 {
 		filt_I {Type I LastRead 1 FirstWrite -1}
 		filt_I_1 {Type I LastRead 1 FirstWrite -1}
-		filt_1_I {Type O LastRead -1 FirstWrite 2}
+		filt_1_I {Type O LastRead -1 FirstWrite 1}
 		filt_Q {Type I LastRead 1 FirstWrite -1}
 		filt_Q_1 {Type I LastRead 1 FirstWrite -1}
-		filt_1_Q {Type O LastRead -1 FirstWrite 2}
+		filt_1_Q {Type O LastRead -1 FirstWrite 1}
 		filt_I_2 {Type I LastRead 1 FirstWrite -1}
 		filt_I_3 {Type I LastRead 1 FirstWrite -1}
-		filt_1_I_1 {Type O LastRead -1 FirstWrite 2}
+		filt_1_I_1 {Type O LastRead -1 FirstWrite 1}
 		filt_Q_2 {Type I LastRead 1 FirstWrite -1}
 		filt_Q_3 {Type I LastRead 1 FirstWrite -1}
-		filt_1_Q_1 {Type O LastRead -1 FirstWrite 2}
+		filt_1_Q_1 {Type O LastRead -1 FirstWrite 1}
 		filt_I_4 {Type I LastRead 1 FirstWrite -1}
 		filt_I_5 {Type I LastRead 1 FirstWrite -1}
-		filt_1_I_2 {Type O LastRead -1 FirstWrite 2}
+		filt_1_I_2 {Type O LastRead -1 FirstWrite 1}
 		filt_Q_4 {Type I LastRead 1 FirstWrite -1}
 		filt_Q_5 {Type I LastRead 1 FirstWrite -1}
-		filt_1_Q_2 {Type O LastRead -1 FirstWrite 2}
+		filt_1_Q_2 {Type O LastRead -1 FirstWrite 1}
 		filt_I_6 {Type I LastRead 1 FirstWrite -1}
 		filt_I_7 {Type I LastRead 1 FirstWrite -1}
-		filt_1_I_3 {Type O LastRead -1 FirstWrite 2}
+		filt_1_I_3 {Type O LastRead -1 FirstWrite 1}
 		filt_Q_6 {Type I LastRead 1 FirstWrite -1}
 		filt_Q_7 {Type I LastRead 1 FirstWrite -1}
-		filt_1_Q_3 {Type O LastRead -1 FirstWrite 2}
-		filt_1_I_4 {Type O LastRead -1 FirstWrite 2}
-		filt_1_Q_4 {Type O LastRead -1 FirstWrite 2}
-		filt_1_I_5 {Type O LastRead -1 FirstWrite 2}
-		filt_1_Q_5 {Type O LastRead -1 FirstWrite 2}
-		filt_1_I_6 {Type O LastRead -1 FirstWrite 2}
-		filt_1_Q_6 {Type O LastRead -1 FirstWrite 2}
-		filt_1_I_7 {Type O LastRead -1 FirstWrite 2}
-		filt_1_Q_7 {Type O LastRead -1 FirstWrite 2}}}
+		filt_1_Q_3 {Type O LastRead -1 FirstWrite 1}
+		filt_1_I_4 {Type O LastRead -1 FirstWrite 1}
+		filt_1_Q_4 {Type O LastRead -1 FirstWrite 1}
+		filt_1_I_5 {Type O LastRead -1 FirstWrite 1}
+		filt_1_Q_5 {Type O LastRead -1 FirstWrite 1}
+		filt_1_I_6 {Type O LastRead -1 FirstWrite 1}
+		filt_1_Q_6 {Type O LastRead -1 FirstWrite 1}
+		filt_1_I_7 {Type O LastRead -1 FirstWrite 1}
+		filt_1_Q_7 {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "15", "Max" : "15"}
-	, {"Name" : "Interval", "Min" : "15", "Max" : "15"}
+	{"Name" : "Latency", "Min" : "14", "Max" : "14"}
+	, {"Name" : "Interval", "Min" : "14", "Max" : "14"}
 ]}
 
 set PipelineEnableSignalInfo {[

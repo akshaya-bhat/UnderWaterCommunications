@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_132_10'
 ================================================================
-* Date:           Thu May  2 22:09:46 2024
+* Date:           Thu May  2 23:57:21 2024
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        receiver
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  8.00 ns|  5.169 ns|     2.16 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.508 ns|     2.70 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      238|      238|  1.904 us|  1.904 us|  238|  238|       no|
+    |      237|      237|  2.370 us|  2.370 us|  237|  237|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_132_10  |      236|      236|         3|          1|          1|   234|       yes|
+        |- VITIS_LOOP_132_10  |      235|      235|         2|          1|          1|   234|       yes|
         +---------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -59,13 +59,13 @@
 |Instance         |        -|    -|       -|      -|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     36|    -|
-|Register         |        -|    -|    2181|      -|    -|
+|Register         |        -|    -|     522|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|    2181|     94|    0|
+|Total            |        0|    0|     522|     94|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    0|       2|     ~0|    0|
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -85,10 +85,10 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln134_1_fu_1374_p2  |         +|   0|  0|  15|           8|           1|
-    |add_ln134_fu_1368_p2    |         +|   0|  0|  14|          13|           6|
-    |icmp_ln132_fu_1362_p2   |      icmp|   0|  0|  14|          13|          11|
-    |or_ln134_fu_1356_p2     |        or|   0|  0|  13|          13|           4|
+    |add_ln134_1_fu_1438_p2  |         +|   0|  0|  15|           8|           1|
+    |add_ln134_fu_1432_p2    |         +|   0|  0|  14|          13|           6|
+    |icmp_ln132_fu_1426_p2   |      icmp|   0|  0|  14|          13|          11|
+    |or_ln134_fu_1420_p2     |        or|   0|  0|  13|          13|           4|
     |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
     +------------------------+----------+----+---+----+------------+------------+
     |Total                   |          |   0|  0|  58|          48|          24|
@@ -99,7 +99,7 @@
     |               Name               | LUT| Input Size| Bits| Total Bits|
     +----------------------------------+----+-----------+-----+-----------+
     |ap_done_int                       |   9|          2|    1|          2|
-    |ap_loop_exit_ready_pp0_iter2_reg  |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   9|          2|    1|          2|
     |ap_sig_allocacmp_i                |   9|          2|   13|         26|
     |i_9_fu_164                        |   9|          2|   13|         26|
     +----------------------------------+----+-----------+-----+-----------+
@@ -107,211 +107,81 @@
     +----------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +------------------------------------------+----+----+-----+-----------+
-    |                   Name                   | FF | LUT| Bits| Const Bits|
-    +------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                 |   1|   0|    1|          0|
-    |ap_done_reg                               |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1                   |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2                   |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter1_reg          |   1|   0|    1|          0|
-    |ap_loop_exit_ready_pp0_iter2_reg          |   1|   0|    1|          0|
-    |i_9_fu_164                                |  13|   0|   13|          0|
-    |icmp_ln132_reg_1536                       |   1|   0|    1|          0|
-    |icmp_ln132_reg_1536_pp0_iter1_reg         |   1|   0|    1|          0|
-    |matched_I_0_load_reg_2000                 |  18|   0|   18|          0|
-    |matched_I_10_addr_reg_1512                |   8|   0|    8|          0|
-    |matched_I_10_addr_reg_1512_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_10_load_reg_1835                |  18|   0|   18|          0|
-    |matched_I_11_addr_reg_1524                |   8|   0|    8|          0|
-    |matched_I_11_addr_reg_1524_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_11_load_reg_1840                |  18|   0|   18|          0|
-    |matched_I_12_addr_reg_1540                |   8|   0|    8|          0|
-    |matched_I_12_addr_reg_1540_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_12_load_reg_1900                |  18|   0|   18|          0|
-    |matched_I_13_addr_reg_1552                |   8|   0|    8|          0|
-    |matched_I_13_addr_reg_1552_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_13_load_reg_1905                |  18|   0|   18|          0|
-    |matched_I_14_addr_reg_1564                |   8|   0|    8|          0|
-    |matched_I_14_addr_reg_1564_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_14_load_reg_1910                |  18|   0|   18|          0|
-    |matched_I_15_addr_reg_1576                |   8|   0|    8|          0|
-    |matched_I_15_addr_reg_1576_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_15_load_reg_1915                |  18|   0|   18|          0|
-    |matched_I_16_addr_reg_1588                |   8|   0|    8|          0|
-    |matched_I_16_addr_reg_1588_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_16_load_reg_1920                |  18|   0|   18|          0|
-    |matched_I_17_addr_reg_1600                |   8|   0|    8|          0|
-    |matched_I_17_addr_reg_1600_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_17_load_reg_1925                |  18|   0|   18|          0|
-    |matched_I_18_addr_reg_1612                |   8|   0|    8|          0|
-    |matched_I_18_addr_reg_1612_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_18_load_reg_1930                |  18|   0|   18|          0|
-    |matched_I_19_addr_reg_1624                |   8|   0|    8|          0|
-    |matched_I_19_addr_reg_1624_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_19_load_reg_1935                |  18|   0|   18|          0|
-    |matched_I_1_addr_reg_1404                 |   8|   0|    8|          0|
-    |matched_I_1_addr_reg_1404_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_1_load_reg_1790                 |  18|   0|   18|          0|
-    |matched_I_20_addr_reg_1636                |   8|   0|    8|          0|
-    |matched_I_20_addr_reg_1636_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_20_load_reg_1940                |  18|   0|   18|          0|
-    |matched_I_21_addr_reg_1648                |   8|   0|    8|          0|
-    |matched_I_21_addr_reg_1648_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_21_load_reg_1945                |  18|   0|   18|          0|
-    |matched_I_22_addr_reg_1660                |   8|   0|    8|          0|
-    |matched_I_22_addr_reg_1660_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_22_load_reg_1950                |  18|   0|   18|          0|
-    |matched_I_23_addr_reg_1672                |   8|   0|    8|          0|
-    |matched_I_23_addr_reg_1672_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_23_load_reg_1955                |  18|   0|   18|          0|
-    |matched_I_24_addr_reg_1684                |   8|   0|    8|          0|
-    |matched_I_24_addr_reg_1684_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_24_load_reg_1960                |  18|   0|   18|          0|
-    |matched_I_25_addr_reg_1696                |   8|   0|    8|          0|
-    |matched_I_25_addr_reg_1696_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_25_load_reg_1965                |  18|   0|   18|          0|
-    |matched_I_26_addr_reg_1708                |   8|   0|    8|          0|
-    |matched_I_26_addr_reg_1708_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_26_load_reg_1970                |  18|   0|   18|          0|
-    |matched_I_27_addr_reg_1720                |   8|   0|    8|          0|
-    |matched_I_27_addr_reg_1720_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_27_load_reg_1975                |  18|   0|   18|          0|
-    |matched_I_28_addr_reg_1732                |   8|   0|    8|          0|
-    |matched_I_28_addr_reg_1732_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_28_load_reg_1980                |  18|   0|   18|          0|
-    |matched_I_29_addr_reg_1744                |   8|   0|    8|          0|
-    |matched_I_29_addr_reg_1744_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_29_load_reg_1985                |  18|   0|   18|          0|
-    |matched_I_2_addr_reg_1416                 |   8|   0|    8|          0|
-    |matched_I_2_addr_reg_1416_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_2_load_reg_1795                 |  18|   0|   18|          0|
-    |matched_I_30_addr_reg_1756                |   8|   0|    8|          0|
-    |matched_I_30_addr_reg_1756_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_30_load_reg_1990                |  18|   0|   18|          0|
-    |matched_I_31_addr_reg_1768                |   8|   0|    8|          0|
-    |matched_I_31_addr_reg_1768_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_I_31_load_reg_1995                |  18|   0|   18|          0|
-    |matched_I_3_addr_reg_1428                 |   8|   0|    8|          0|
-    |matched_I_3_addr_reg_1428_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_3_load_reg_1800                 |  18|   0|   18|          0|
-    |matched_I_4_addr_reg_1440                 |   8|   0|    8|          0|
-    |matched_I_4_addr_reg_1440_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_4_load_reg_1805                 |  18|   0|   18|          0|
-    |matched_I_5_addr_reg_1452                 |   8|   0|    8|          0|
-    |matched_I_5_addr_reg_1452_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_5_load_reg_1810                 |  18|   0|   18|          0|
-    |matched_I_6_addr_reg_1464                 |   8|   0|    8|          0|
-    |matched_I_6_addr_reg_1464_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_6_load_reg_1815                 |  18|   0|   18|          0|
-    |matched_I_7_addr_reg_1476                 |   8|   0|    8|          0|
-    |matched_I_7_addr_reg_1476_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_7_load_reg_1820                 |  18|   0|   18|          0|
-    |matched_I_8_addr_reg_1488                 |   8|   0|    8|          0|
-    |matched_I_8_addr_reg_1488_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_8_load_reg_1825                 |  18|   0|   18|          0|
-    |matched_I_9_addr_reg_1500                 |   8|   0|    8|          0|
-    |matched_I_9_addr_reg_1500_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_I_9_load_reg_1830                 |  18|   0|   18|          0|
-    |matched_Q_0_load_reg_2005                 |  18|   0|   18|          0|
-    |matched_Q_10_addr_reg_1518                |   8|   0|    8|          0|
-    |matched_Q_10_addr_reg_1518_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_10_load_reg_1895                |  18|   0|   18|          0|
-    |matched_Q_11_addr_reg_1530                |   8|   0|    8|          0|
-    |matched_Q_11_addr_reg_1530_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_11_load_reg_1845                |  18|   0|   18|          0|
-    |matched_Q_12_addr_reg_1546                |   8|   0|    8|          0|
-    |matched_Q_12_addr_reg_1546_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_12_load_reg_2010                |  18|   0|   18|          0|
-    |matched_Q_13_addr_reg_1558                |   8|   0|    8|          0|
-    |matched_Q_13_addr_reg_1558_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_13_load_reg_2015                |  18|   0|   18|          0|
-    |matched_Q_14_addr_reg_1570                |   8|   0|    8|          0|
-    |matched_Q_14_addr_reg_1570_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_14_load_reg_2020                |  18|   0|   18|          0|
-    |matched_Q_15_addr_reg_1582                |   8|   0|    8|          0|
-    |matched_Q_15_addr_reg_1582_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_15_load_reg_2025                |  18|   0|   18|          0|
-    |matched_Q_16_addr_reg_1594                |   8|   0|    8|          0|
-    |matched_Q_16_addr_reg_1594_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_16_load_reg_2030                |  18|   0|   18|          0|
-    |matched_Q_17_addr_reg_1606                |   8|   0|    8|          0|
-    |matched_Q_17_addr_reg_1606_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_17_load_reg_2035                |  18|   0|   18|          0|
-    |matched_Q_18_addr_reg_1618                |   8|   0|    8|          0|
-    |matched_Q_18_addr_reg_1618_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_18_load_reg_2040                |  18|   0|   18|          0|
-    |matched_Q_19_addr_reg_1630                |   8|   0|    8|          0|
-    |matched_Q_19_addr_reg_1630_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_19_load_reg_2045                |  18|   0|   18|          0|
-    |matched_Q_1_addr_reg_1410                 |   8|   0|    8|          0|
-    |matched_Q_1_addr_reg_1410_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_1_load_reg_1850                 |  18|   0|   18|          0|
-    |matched_Q_20_addr_reg_1642                |   8|   0|    8|          0|
-    |matched_Q_20_addr_reg_1642_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_20_load_reg_2050                |  18|   0|   18|          0|
-    |matched_Q_21_addr_reg_1654                |   8|   0|    8|          0|
-    |matched_Q_21_addr_reg_1654_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_21_load_reg_2055                |  18|   0|   18|          0|
-    |matched_Q_22_addr_reg_1666                |   8|   0|    8|          0|
-    |matched_Q_22_addr_reg_1666_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_22_load_reg_2060                |  18|   0|   18|          0|
-    |matched_Q_23_addr_reg_1678                |   8|   0|    8|          0|
-    |matched_Q_23_addr_reg_1678_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_23_load_reg_2065                |  18|   0|   18|          0|
-    |matched_Q_24_addr_reg_1690                |   8|   0|    8|          0|
-    |matched_Q_24_addr_reg_1690_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_24_load_reg_2070                |  18|   0|   18|          0|
-    |matched_Q_25_addr_reg_1702                |   8|   0|    8|          0|
-    |matched_Q_25_addr_reg_1702_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_25_load_reg_2075                |  18|   0|   18|          0|
-    |matched_Q_26_addr_reg_1714                |   8|   0|    8|          0|
-    |matched_Q_26_addr_reg_1714_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_26_load_reg_2080                |  18|   0|   18|          0|
-    |matched_Q_27_addr_reg_1726                |   8|   0|    8|          0|
-    |matched_Q_27_addr_reg_1726_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_27_load_reg_2085                |  18|   0|   18|          0|
-    |matched_Q_28_addr_reg_1738                |   8|   0|    8|          0|
-    |matched_Q_28_addr_reg_1738_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_28_load_reg_2090                |  18|   0|   18|          0|
-    |matched_Q_29_addr_reg_1750                |   8|   0|    8|          0|
-    |matched_Q_29_addr_reg_1750_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_29_load_reg_2095                |  18|   0|   18|          0|
-    |matched_Q_2_addr_reg_1422                 |   8|   0|    8|          0|
-    |matched_Q_2_addr_reg_1422_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_2_load_reg_1855                 |  18|   0|   18|          0|
-    |matched_Q_30_addr_reg_1762                |   8|   0|    8|          0|
-    |matched_Q_30_addr_reg_1762_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_30_load_reg_2100                |  18|   0|   18|          0|
-    |matched_Q_31_addr_reg_1774                |   8|   0|    8|          0|
-    |matched_Q_31_addr_reg_1774_pp0_iter1_reg  |   8|   0|    8|          0|
-    |matched_Q_31_load_reg_2105                |  18|   0|   18|          0|
-    |matched_Q_3_addr_reg_1434                 |   8|   0|    8|          0|
-    |matched_Q_3_addr_reg_1434_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_3_load_reg_1860                 |  18|   0|   18|          0|
-    |matched_Q_4_addr_reg_1446                 |   8|   0|    8|          0|
-    |matched_Q_4_addr_reg_1446_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_4_load_reg_1865                 |  18|   0|   18|          0|
-    |matched_Q_5_addr_reg_1458                 |   8|   0|    8|          0|
-    |matched_Q_5_addr_reg_1458_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_5_load_reg_1870                 |  18|   0|   18|          0|
-    |matched_Q_6_addr_reg_1470                 |   8|   0|    8|          0|
-    |matched_Q_6_addr_reg_1470_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_6_load_reg_1875                 |  18|   0|   18|          0|
-    |matched_Q_7_addr_reg_1482                 |   8|   0|    8|          0|
-    |matched_Q_7_addr_reg_1482_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_7_load_reg_1880                 |  18|   0|   18|          0|
-    |matched_Q_8_addr_reg_1494                 |   8|   0|    8|          0|
-    |matched_Q_8_addr_reg_1494_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_8_load_reg_1885                 |  18|   0|   18|          0|
-    |matched_Q_9_addr_reg_1506                 |   8|   0|    8|          0|
-    |matched_Q_9_addr_reg_1506_pp0_iter1_reg   |   8|   0|    8|          0|
-    |matched_Q_9_load_reg_1890                 |  18|   0|   18|          0|
-    |zext_ln132_reg_1398                       |   8|   0|   64|         56|
-    |zext_ln132_reg_1398_pp0_iter1_reg         |   8|   0|   64|         56|
-    +------------------------------------------+----+----+-----+-----------+
-    |Total                                     |2181|   0| 2293|        112|
-    +------------------------------------------+----+----+-----+-----------+
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg  |   1|   0|    1|          0|
+    |i_9_fu_164                        |  13|   0|   13|          0|
+    |icmp_ln132_reg_1600               |   1|   0|    1|          0|
+    |matched_I_10_addr_reg_1576        |   8|   0|    8|          0|
+    |matched_I_11_addr_reg_1588        |   8|   0|    8|          0|
+    |matched_I_12_addr_reg_1604        |   8|   0|    8|          0|
+    |matched_I_13_addr_reg_1616        |   8|   0|    8|          0|
+    |matched_I_14_addr_reg_1628        |   8|   0|    8|          0|
+    |matched_I_15_addr_reg_1640        |   8|   0|    8|          0|
+    |matched_I_16_addr_reg_1652        |   8|   0|    8|          0|
+    |matched_I_17_addr_reg_1664        |   8|   0|    8|          0|
+    |matched_I_18_addr_reg_1676        |   8|   0|    8|          0|
+    |matched_I_19_addr_reg_1688        |   8|   0|    8|          0|
+    |matched_I_1_addr_reg_1468         |   8|   0|    8|          0|
+    |matched_I_20_addr_reg_1700        |   8|   0|    8|          0|
+    |matched_I_21_addr_reg_1712        |   8|   0|    8|          0|
+    |matched_I_22_addr_reg_1724        |   8|   0|    8|          0|
+    |matched_I_23_addr_reg_1736        |   8|   0|    8|          0|
+    |matched_I_24_addr_reg_1748        |   8|   0|    8|          0|
+    |matched_I_25_addr_reg_1760        |   8|   0|    8|          0|
+    |matched_I_26_addr_reg_1772        |   8|   0|    8|          0|
+    |matched_I_27_addr_reg_1784        |   8|   0|    8|          0|
+    |matched_I_28_addr_reg_1796        |   8|   0|    8|          0|
+    |matched_I_29_addr_reg_1808        |   8|   0|    8|          0|
+    |matched_I_2_addr_reg_1480         |   8|   0|    8|          0|
+    |matched_I_30_addr_reg_1820        |   8|   0|    8|          0|
+    |matched_I_31_addr_reg_1832        |   8|   0|    8|          0|
+    |matched_I_3_addr_reg_1492         |   8|   0|    8|          0|
+    |matched_I_4_addr_reg_1504         |   8|   0|    8|          0|
+    |matched_I_5_addr_reg_1516         |   8|   0|    8|          0|
+    |matched_I_6_addr_reg_1528         |   8|   0|    8|          0|
+    |matched_I_7_addr_reg_1540         |   8|   0|    8|          0|
+    |matched_I_8_addr_reg_1552         |   8|   0|    8|          0|
+    |matched_I_9_addr_reg_1564         |   8|   0|    8|          0|
+    |matched_Q_10_addr_reg_1582        |   8|   0|    8|          0|
+    |matched_Q_11_addr_reg_1594        |   8|   0|    8|          0|
+    |matched_Q_12_addr_reg_1610        |   8|   0|    8|          0|
+    |matched_Q_13_addr_reg_1622        |   8|   0|    8|          0|
+    |matched_Q_14_addr_reg_1634        |   8|   0|    8|          0|
+    |matched_Q_15_addr_reg_1646        |   8|   0|    8|          0|
+    |matched_Q_16_addr_reg_1658        |   8|   0|    8|          0|
+    |matched_Q_17_addr_reg_1670        |   8|   0|    8|          0|
+    |matched_Q_18_addr_reg_1682        |   8|   0|    8|          0|
+    |matched_Q_19_addr_reg_1694        |   8|   0|    8|          0|
+    |matched_Q_1_addr_reg_1474         |   8|   0|    8|          0|
+    |matched_Q_20_addr_reg_1706        |   8|   0|    8|          0|
+    |matched_Q_21_addr_reg_1718        |   8|   0|    8|          0|
+    |matched_Q_22_addr_reg_1730        |   8|   0|    8|          0|
+    |matched_Q_23_addr_reg_1742        |   8|   0|    8|          0|
+    |matched_Q_24_addr_reg_1754        |   8|   0|    8|          0|
+    |matched_Q_25_addr_reg_1766        |   8|   0|    8|          0|
+    |matched_Q_26_addr_reg_1778        |   8|   0|    8|          0|
+    |matched_Q_27_addr_reg_1790        |   8|   0|    8|          0|
+    |matched_Q_28_addr_reg_1802        |   8|   0|    8|          0|
+    |matched_Q_29_addr_reg_1814        |   8|   0|    8|          0|
+    |matched_Q_2_addr_reg_1486         |   8|   0|    8|          0|
+    |matched_Q_30_addr_reg_1826        |   8|   0|    8|          0|
+    |matched_Q_31_addr_reg_1838        |   8|   0|    8|          0|
+    |matched_Q_3_addr_reg_1498         |   8|   0|    8|          0|
+    |matched_Q_4_addr_reg_1510         |   8|   0|    8|          0|
+    |matched_Q_5_addr_reg_1522         |   8|   0|    8|          0|
+    |matched_Q_6_addr_reg_1534         |   8|   0|    8|          0|
+    |matched_Q_7_addr_reg_1546         |   8|   0|    8|          0|
+    |matched_Q_8_addr_reg_1558         |   8|   0|    8|          0|
+    |matched_Q_9_addr_reg_1570         |   8|   0|    8|          0|
+    |zext_ln132_reg_1462               |   8|   0|   64|         56|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 522|   0|  578|         56|
+    +----------------------------------+----+----+-----+-----------+
 
 
 

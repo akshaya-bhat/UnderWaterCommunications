@@ -14,7 +14,7 @@ Args:
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -140,7 +140,7 @@ Args:
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '16'
+  - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -505,7 +505,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '16'
+  - Factor:          '64'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -525,7 +525,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '16'
+  - Factor:          '64'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -785,7 +785,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -805,7 +805,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '8'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -870,6 +870,134 @@ Args:
 Pass:            reflow-syncheck
 Name:            WarningOutOfBoundArrayAccess
 DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
+Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Args:            
+  - String:          The program may have out of bound array access
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            WarningOutOfBoundArrayAccess
+DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
 Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
 Args:            
   - String:          The program may have out of bound array access

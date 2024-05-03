@@ -26,9 +26,8 @@ set SynModuleInfo {
   {SRCNAME receiver_Pipeline_VITIS_LOOP_132_10 MODELNAME receiver_Pipeline_VITIS_LOOP_132_10 RTLNAME receiver_receiver_Pipeline_VITIS_LOOP_132_10}
   {SRCNAME receiver_Pipeline_VITIS_LOOP_149_11 MODELNAME receiver_Pipeline_VITIS_LOOP_149_11 RTLNAME receiver_receiver_Pipeline_VITIS_LOOP_149_11
     SUBMODULES {
-      {MODELNAME receiver_mux_29_5_18_1_1 RTLNAME receiver_mux_29_5_18_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME receiver_mul_18s_16s_34_1_1 RTLNAME receiver_mul_18s_16s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_mul_16s_18s_34_1_1 RTLNAME receiver_mul_16s_18s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME receiver_mul_18s_16s_34_1_1 RTLNAME receiver_mul_18s_16s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_receiver_Pipeline_VITIS_LOOP_149_11_preamble_upsampled_ROM_AUTO_1R RTLNAME receiver_receiver_Pipeline_VITIS_LOOP_149_11_preamble_upsampled_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
@@ -44,7 +43,7 @@ set SynModuleInfo {
   {SRCNAME receiver_Pipeline_VITIS_LOOP_244_21 MODELNAME receiver_Pipeline_VITIS_LOOP_244_21 RTLNAME receiver_receiver_Pipeline_VITIS_LOOP_244_21}
   {SRCNAME receiver_Pipeline_VITIS_LOOP_264_22 MODELNAME receiver_Pipeline_VITIS_LOOP_264_22 RTLNAME receiver_receiver_Pipeline_VITIS_LOOP_264_22
     SUBMODULES {
-      {MODELNAME receiver_mul_24s_18s_40_3_1 RTLNAME receiver_mul_24s_18s_40_3_1 BINDTYPE op TYPE mul IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME receiver_mul_24s_18s_40_1_1 RTLNAME receiver_mul_24s_18s_40_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_mac_mulsub_24s_18s_40s_40_4_1 RTLNAME receiver_mac_mulsub_24s_18s_40s_40_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME receiver_mac_muladd_24s_18s_40s_40_4_1 RTLNAME receiver_mac_muladd_24s_18s_40s_40_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
     }
@@ -52,7 +51,7 @@ set SynModuleInfo {
   {SRCNAME receiver MODELNAME receiver RTLNAME receiver IS_TOP 1
     SUBMODULES {
       {MODELNAME receiver_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME receiver_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
-      {MODELNAME receiver_mul_24s_24s_48_3_1 RTLNAME receiver_mul_24s_24s_48_3_1 BINDTYPE op TYPE mul IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME receiver_mul_24s_24s_48_1_1 RTLNAME receiver_mul_24s_24s_48_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_mul_18s_18s_34_1_1 RTLNAME receiver_mul_18s_18s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_cos_coefficients_table_ROM_AUTO_1R RTLNAME receiver_cos_coefficients_table_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_sin_coefficients_table_ROM_AUTO_1R RTLNAME receiver_sin_coefficients_table_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
@@ -63,7 +62,7 @@ set SynModuleInfo {
       {MODELNAME receiver_filt_2_I_RAM_AUTO_1R1W RTLNAME receiver_filt_2_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_filt_3_I_RAM_AUTO_1R1W RTLNAME receiver_filt_3_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_filt_5_I_RAM_AUTO_1R1W RTLNAME receiver_filt_5_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME receiver_arr_I_RAM_1WNR_AUTO_1R1W RTLNAME receiver_arr_I_RAM_1WNR_AUTO_1R1W BINDTYPE storage TYPE ram_1wnr IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME receiver_arr_I_RAM_AUTO_1R1W RTLNAME receiver_arr_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_arr_1_I_RAM_AUTO_1R1W RTLNAME receiver_arr_1_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_arr_2_I_RAM_AUTO_1R1W RTLNAME receiver_arr_2_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_arr_3_I_RAM_AUTO_1R1W RTLNAME receiver_arr_3_I_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

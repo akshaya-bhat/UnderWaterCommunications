@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg400-1</Part>
 <TopModelName>receiver_Pipeline_VITIS_LOOP_211_17</TopModelName>
-<TargetClockPeriod>8.00</TargetClockPeriod>
-<ClockUncertainty>2.16</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,27 +18,27 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>4.755</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.077</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>21</Best-caseLatency>
-<Average-caseLatency>21</Average-caseLatency>
-<Worst-caseLatency>21</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.168 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.168 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.168 us</Worst-caseRealTimeLatency>
-<Interval-min>21</Interval-min>
-<Interval-max>21</Interval-max>
+<Best-caseLatency>20</Best-caseLatency>
+<Average-caseLatency>20</Average-caseLatency>
+<Worst-caseLatency>20</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+<Interval-min>20</Interval-min>
+<Interval-max>20</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_211_17>
-<Slack>5.84</Slack>
+<Slack>7.30</Slack>
 <TripCount>17</TripCount>
-<Latency>19</Latency>
-<AbsoluteTimeLatency>152</AbsoluteTimeLatency>
+<Latency>18</Latency>
+<AbsoluteTimeLatency>180</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>3</PipelineDepth>
+<PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_211_17>
@@ -47,7 +47,7 @@
 
 <AreaEstimates>
 <Resources>
-<FF>141</FF>
+<FF>17</FF>
 <LUT>217</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>

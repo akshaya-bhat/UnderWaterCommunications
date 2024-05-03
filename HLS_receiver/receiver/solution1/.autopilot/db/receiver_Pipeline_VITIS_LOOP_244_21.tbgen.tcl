@@ -122,7 +122,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "arr_10_I_0_0_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_244_21", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -136,10 +136,10 @@ set ArgLastReadFirstWriteLatency {
 		arr_9_Q_2_0124_reload {Type I LastRead 0 FirstWrite -1}
 		arr_9_Q_1_0123_reload {Type I LastRead 0 FirstWrite -1}
 		arr_9_Q_3_0125_reload {Type I LastRead 0 FirstWrite -1}
-		arr_10_Q_1_0127_out {Type O LastRead -1 FirstWrite 0}
-		arr_10_Q_0_0_out {Type O LastRead -1 FirstWrite 0}
-		arr_10_I_1_0126_out {Type O LastRead -1 FirstWrite 0}
-		arr_10_I_0_0_out {Type O LastRead -1 FirstWrite 0}}}
+		arr_10_Q_1_0127_out {Type O LastRead -1 FirstWrite 1}
+		arr_10_Q_0_0_out {Type O LastRead -1 FirstWrite 1}
+		arr_10_I_1_0126_out {Type O LastRead -1 FirstWrite 1}
+		arr_10_I_0_0_out {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
