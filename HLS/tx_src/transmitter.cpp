@@ -17,7 +17,7 @@ int state[K] = {0}; //global variable
 //make the input data 128
 //optimizations, bitstream, and connect to DAC
 
-void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q)
+void transmitter (UTYPE* input_i, UTYPE* input_q, double_ttt* output_i, double_ttt* output_q)
 //void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q)
 {
 #pragma HLS PIPELINE off
@@ -70,23 +70,63 @@ void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double
 		 */
 
 		//encoder output doesn't match matlab
-		data_t encodedDataI[N];
-		data_t encodedDataQ[N];
-		int z = 0;
-		for (int i = 0; i < N; i+=2) {
-			encoder(scrambledDataI[z], &encodedDataI[i], &encodedDataI[i+1]);
-			z++;
-		}
+//		data_t encodedDataI[N];
+//		data_t encodedDataQ[N];
+//		int z = 0;
+//		for (int i = 0; i < N; i+=2) {
+//			encoder(scrambledDataI[z], &encodedDataI[i], &encodedDataI[i+1]);
+//			z++;
+//		}
+//
+//		for (int i = 0; i < K; ++i) {
+//		    state[i] = 0;
+//		}
+//
+//		z = 0;
+//		for (int i = 0; i < N; i+=2) {
+//			encoder(scrambledDataQ[z], &encodedDataQ[i], &encodedDataQ[i+1]);
+//			z++;
+//		}
 
-		for (int i = 0; i < K; ++i) {
-		    state[i] = 0;
-		}
 
-		z = 0;
-		for (int i = 0; i < N; i+=2) {
-			encoder(scrambledDataQ[z], &encodedDataQ[i], &encodedDataQ[i+1]);
-			z++;
-		}
+		const size_t total_input_bytes = 8;
+		    const size_t total_input_bits = total_input_bytes*8u; //128
+		    const size_t noise_level = 0;
+		    auto enc = ConvolutionalEncoder_Lookup(K, R, G);
+		    std::vector<uint8_t> tx_input_bytes({104, 101, 108, 108, 111, 32, 119, 111});
+		//    std::vector<uint8_t> tx_input_bytes;
+		    std::vector<int16_t> output_symbols;//(array, array+140);
+		    tx_input_bytes.resize(total_input_bytes);
+		    {
+		        const size_t total_tail_bits = K-1u;
+		        const size_t total_data_bits = total_input_bytes*8;
+		        const size_t total_bits = total_data_bits + total_tail_bits;
+		        const size_t total_symbols = total_bits * R;
+		        output_symbols.resize(total_symbols);
+		    }
+		//    generate_random_bytes(tx_input_bytes.data(), tx_input_bytes.size());
+		    std::cout << "tx_input_bytes data: ";
+		            for (int byte : tx_input_bytes) {
+		                std::cout << byte << endl;
+
+		            }
+		            cout << endl;
+		           cout << tx_input_bytes.size() << endl;
+		    encode_data(
+		        &enc,
+		        tx_input_bytes.data(), tx_input_bytes.size(),
+		        output_symbols.data(), output_symbols.size(),
+		        soft_decision_high, soft_decision_low
+		    );
+		    std::cout << "output_symbols data: ";
+		                for (auto byte : output_symbols) {
+		                    std::cout << byte << endl;
+
+		                }
+		                cout << endl;
+		               cout << output_symbols.size() << endl;
+		//    add_noise(output_symbols.data(), output_symbols.size(), noise_level);
+		    clamp_vector(output_symbols.data(), output_symbols.size(), soft_decision_low, soft_decision_high);
 
 
 		/**
@@ -122,6 +162,7 @@ void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double
 //				raw_symbols[i] = std::complex<double>(qpskDataI[i], qpskDataQ[i]);
 //			}
 		//Theres a weird zero somewhere
+		//put in zeros in the middle
 		double preamble_qpsk[preambleLen];
 			for (int i = 0; i < preambleLenHalf; ++i) {
 				preamble_qpsk[i] = Ga[i]*1.414;
@@ -152,6 +193,7 @@ void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double
 		 * 	SRRC Filter
 		 */
 		//Upsample
+
 		int upsampleSize = oversample*(N+preambleLen);
 		double dataUpsampledI[upsampleSize];
 		double dataUpsampledQ[upsampleSize];

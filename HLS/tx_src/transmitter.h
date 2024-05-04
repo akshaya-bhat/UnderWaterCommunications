@@ -18,6 +18,7 @@ using namespace std;
 
 typedef int	coef_t;
 typedef int16_t data_t;
+typedef uint8_t UTYPE;
 typedef float double_tt;
 typedef float double_ttt;
 
@@ -37,8 +38,8 @@ typedef hls::stream<transPkt> DTYPE;
  */
  //sampling frequency
 //#define fs 128e3 //carrier frequency (40kHz)
-#define N 128 //length of data payload
-#define NHalf 64
+#define N 140 //length of data payload
+#define NHalf 70
 #define oversample 32 //samples per symbol
 #define preambleLen 64
 #define preambleLenHalf 32
@@ -49,8 +50,8 @@ typedef hls::stream<transPkt> DTYPE;
 const double_ttt fc = 40000;
 const double_ttt fs = 128000;
 //PNGEN
-const int pnGenSequence[64] = {1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	0};
-
+//const int pnGenSequence[64] = {1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	0};
+const UTYPE pnGenSequence[8] = {245, 145, 235, 35, 214, 71, 172, 142};
 //CONVOLUTIONAL ENCODER
 const int G1[K] = {1, 0, 1, 1, 0, 1, 1};  // 171
 const int G2[K] = {1, 1, 1, 1, 0, 0, 1};  // 133

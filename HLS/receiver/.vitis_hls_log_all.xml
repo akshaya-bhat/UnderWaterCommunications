@@ -9,6 +9,14 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="receiver" solutionName="solution1" date="2024-05-04T10:55:23.281-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T10:12:44.974-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T10:10:57.448-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T10:02:33.198-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T10:00:12.642-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T09:57:17.197-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T09:50:11.356-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-04T09:47:18.566-0700"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-03T13:32:29.213-0700"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="receiver" solutionName="solution1" date="2024-05-03T13:28:57.652-0700"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="receiver" solutionName="solution1" date="2024-05-03T13:26:08.173-0700"/>

@@ -33,8 +33,8 @@ int main () {
 
 //	typedef float fixed1;
 
-	data_t input_i[N];
-	data_t input_q[N];
+	UTYPE input_i[N];
+	UTYPE input_q[N];
 	double_ttt output_i[164];
 	double_ttt output_q[164];
 

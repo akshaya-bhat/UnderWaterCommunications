@@ -42,6 +42,31 @@
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/transmitter/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/alignment.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/alignment.h</location>
+		</link>
+		<link>
+			<name>source/convolutional_encoder.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/convolutional_encoder.h</location>
+		</link>
+		<link>
+			<name>source/convolutional_encoder_lookup.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/convolutional_encoder_lookup.h</location>
+		</link>
+		<link>
+			<name>source/convolutional_encoder_shift_register.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/convolutional_encoder_shift_register.h</location>
+		</link>
+		<link>
+			<name>source/parity_table.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/parity_table.h</location>
+		</link>
+		<link>
 			<name>source/transmitter.cpp</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter.cpp</location>
@@ -50,6 +75,26 @@
 			<name>source/transmitter.h</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter.h</location>
+		</link>
+		<link>
+			<name>source/viterbi_branch_table.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_branch_table.h</location>
+		</link>
+		<link>
+			<name>source/viterbi_decoder_config.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_decoder_config.h</location>
+		</link>
+		<link>
+			<name>source/viterbi_decoder_core.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_decoder_core.h</location>
+		</link>
+		<link>
+			<name>source/viterbi_decoder_scalar.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_decoder_scalar.h</location>
 		</link>
 		<link>
 			<name>testbench/transmitter_tb.cpp</name>

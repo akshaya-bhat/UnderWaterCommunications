@@ -8,7 +8,7 @@
 #include "basic_ops.h"
 #include "bitcount_table.h"
 
-void generate_random_bytes(uint8_t* data, const size_t N) {
+void generate_random_bytes(uint8_t* data,  const size_t N) {
     for (size_t i = 0u; i < N; i++) {
         data[i] = uint8_t(std::rand() % 256);
     }

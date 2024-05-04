@@ -192,17 +192,19 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 
 	std::transform(payload_symbolsQQ, payload_symbolsQQ + 128, payload_symbolsQQ, [](const data_t& val) { return std::abs(val); });
 	data_t max_valQ = *std::max_element(payload_symbolsQQ_abs, payload_symbolsQQ_abs + 128);
-	int nsdec = 13;
+	int nsdec = 8;
 
 	for (int i = 0; i < 128; i++)
 	{
 		normI_simplest[i] = payload_symbolsII[i] / max_valI;
 		normQ_simplest[i] = payload_symbolsQQ[i] / max_valQ;
-		shiftedI_simplest[i] = (normI_simplest[i] + 1) / 2 * ((1 << nsdec) - 1);
-		shiftedQ_simplest[i] = (normQ_simplest[i] + 1) / 2 * ((1 << nsdec) - 1);
+		shiftedI_simplest[i] = (normI_simplest[i]) / 2 * ((1 << nsdec) - 1);
+		shiftedQ_simplest[i] = (normQ_simplest[i]) / 2 * ((1 << nsdec) - 1);
 	}
 
-
+	for (int i = 0; i < 128; i++) {
+			cout << "normI_simplest " << normI_simplest[i] << endl;
+		}
 	for (int i = 0; i < 128; i++) {
 		cout << "shiftedI_simplest " << shiftedI_simplest[i] << endl;
 	}
@@ -284,12 +286,62 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 
 // Generate our data
 			        //data needs to be in bytes
-    const size_t total_input_bytes = 16;
+int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,0,0,0,0,0,0,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1};
+//
+// 	 for (int i = 0; i < 64; i++)
+// 	 {
+//
+//			        		if (message[i] > 0)
+//			        			        				{
+//			        			        					array[i] = +127;
+//			        			        				}
+//			        			        				else {
+//			        			        					array[i] = -127;
+//			        			        				}
+//
+//
+//			        			        		}
+
+//
+//			        for (int i = 128; i < 140; i++)
+//			        		{
+//
+//			        				array[i] = +127;
+//
+//			        		}
+//			        for (int i = 150; i < 300; i++)
+//			        {
+//			        	array[i] = -127;
+//			        }
+
+
+
+
+
+
+/**Viterbi soft:
+ * - needs 140 bits
+ * - range -127 to +127
+ * - what are the tail bits
+ * - decision algorithm not accurate to matlab
+ * - zero-tailed encoding vs tail-biting
+ * - matlab uses tail-biting
+ *
+ * - adjust transmitter to 140 bits
+ * - change the convolution encoder for zero-tailed
+ * - user input has to be uint8 (bytes)
+ * - scrambler LUT can be in bytes
+ * - descrambler can be in bytes
+ */
+
+
+    const size_t total_input_bytes = 8;
     const size_t total_input_bits = total_input_bytes*8u; //128
     const size_t noise_level = 0;
     auto enc = ConvolutionalEncoder_Lookup(K, R, G);
-    std::vector<uint8_t> tx_input_bytes;
-    std::vector<int16_t> output_symbols(shiftedI_simplest, shiftedI_simplest+128);
+    std::vector<uint8_t> tx_input_bytes({104, 101, 108, 108, 111, 32, 119, 111});
+//    std::vector<uint8_t> tx_input_bytes;
+    std::vector<int16_t> output_symbols;//(array, array+140);
     tx_input_bytes.resize(total_input_bytes);
     {
         const size_t total_tail_bits = K-1u;
@@ -298,9 +350,9 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
         const size_t total_symbols = total_bits * R;
         output_symbols.resize(total_symbols);
     }
-    generate_random_bytes(tx_input_bytes.data(), tx_input_bytes.size());
+//    generate_random_bytes(tx_input_bytes.data(), tx_input_bytes.size());
     std::cout << "tx_input_bytes data: ";
-            for (int16_t byte : tx_input_bytes) {
+            for (int byte : tx_input_bytes) {
                 std::cout << byte << endl;
 
             }
@@ -312,7 +364,14 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
         output_symbols.data(), output_symbols.size(),
         soft_decision_high, soft_decision_low
     );
-    add_noise(output_symbols.data(), output_symbols.size(), noise_level);
+    std::cout << "output_symbols data: ";
+                for (auto byte : output_symbols) {
+                    std::cout << byte << endl;
+
+                }
+                cout << endl;
+               cout << output_symbols.size() << endl;
+//    add_noise(output_symbols.data(), output_symbols.size(), noise_level);
     clamp_vector(output_symbols.data(), output_symbols.size(), soft_decision_low, soft_decision_high);
 
     std::cout << "output_symbols data: ";
@@ -441,5 +500,21 @@ void matrixMult(float matrix[], const data_t vector[], int m, int n, data_t resu
     }
 }
 
+
+void pack(ap_uint<1> *input, uint8_t *output, unsigned int in_len) {
+
+    for (int i = 0; i < in_len>>4; i++) {
+#pragma HLS PIPELINE II=4
+        // for each integer
+        UTYPE acc = 0;
+        for (int j = 0; j < 8; j++) {
+#pragma HLS UNROLL
+            if (input[i*8 +j] == 1) {
+                acc += (1 << (8-j));
+            }
+        }
+        output[i] = acc;
+    }
+}
 
 
