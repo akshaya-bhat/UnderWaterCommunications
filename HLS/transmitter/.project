@@ -47,6 +47,16 @@
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/alignment.h</location>
 		</link>
 		<link>
+			<name>source/basic_ops.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/basic_ops.h</location>
+		</link>
+		<link>
+			<name>source/bitcount_table.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/bitcount_table.h</location>
+		</link>
+		<link>
 			<name>source/convolutional_encoder.h</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/convolutional_encoder.h</location>
@@ -65,6 +75,11 @@
 			<name>source/parity_table.h</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/parity_table.h</location>
+		</link>
+		<link>
+			<name>source/test_helpers.h</name>
+			<type>1</type>
+			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/test_helpers.h</location>
 		</link>
 		<link>
 			<name>source/transmitter.cpp</name>

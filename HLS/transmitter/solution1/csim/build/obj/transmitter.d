@@ -23,4 +23,13 @@ obj/transmitter.o: ../../../../tx_src/transmitter.cpp \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_fixed_special.h \
  /tools/Xilinx/Vitis_HLS/2022.2/include/hls_stream.h \
  /tools/Xilinx/Vitis_HLS/2022.2/include/ap_axi_sdata.h \
- /tools/Xilinx/Vitis_HLS/2022.2/include/ap_int.h
+ /tools/Xilinx/Vitis_HLS/2022.2/include/ap_int.h \
+ ../../../../tx_src/viterbi_decoder_core.h \
+ ../../../../tx_src/./viterbi_branch_table.h \
+ ../../../../tx_src/././parity_table.h ../../../../tx_src/././alignment.h \
+ ../../../../tx_src/./viterbi_decoder_config.h \
+ ../../../../tx_src/viterbi_decoder_scalar.h \
+ ../../../../tx_src/convolutional_encoder_lookup.h \
+ ../../../../tx_src/./convolutional_encoder.h \
+ ../../../../tx_src/test_helpers.h ../../../../tx_src/basic_ops.h \
+ ../../../../tx_src/bitcount_table.h

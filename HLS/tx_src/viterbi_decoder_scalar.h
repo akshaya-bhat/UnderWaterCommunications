@@ -37,6 +37,9 @@ public:
         assert(N % Base::R == 0);
         const size_t total_decoded_bits = N / Base::R;
         const size_t max_decoded_bits = base.get_traceback_length() + Base::TOTAL_STATE_BITS;
+        cout << "total decoded bits " << total_decoded_bits << endl;
+        cout << "base m curr decoded bit " << base.m_current_decoded_bit << endl;
+        cout << "max_decoded_bits " << max_decoded_bits << endl;
         assert((total_decoded_bits + base.m_current_decoded_bit) <= max_decoded_bits);
 
         sum_error_t total_error = 0;
@@ -71,6 +74,7 @@ private:
                 const error_t abs_error = error_t(get_abs(error));
                 total_error += abs_error;
             }
+            cout << "total_error " << total_error << endl;
             assert(total_error <= base.m_config.soft_decision_max_error);
 
             // We only store half the states in the branch table, but here we expand it out to explore the other unstored half

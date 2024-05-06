@@ -38,24 +38,24 @@ typedef hls::stream<transPkt> DTYPE;
  */
  //sampling frequency
 //#define fs 128e3 //carrier frequency (40kHz)
-#define N 140 //length of data payload
+#define NN 140 //length of data payload
 #define NHalf 70
 #define oversample 32 //samples per symbol
 #define preambleLen 64
 #define preambleLenHalf 32
 
-#define K 7
+//#define KK 7
 
 #define GOL_LEN 32
 const double_ttt fc = 40000;
 const double_ttt fs = 128000;
 //PNGEN
 //const int pnGenSequence[64] = {1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	1,	0,	1,	0,	1,	1,	0,	0,	1,	0,	0,	0,	1,	1,	1,	0};
-const UTYPE pnGenSequence[8] = {245, 145, 235, 35, 214, 71, 172, 142};
+const int16_t pnGenSequence[8] = {245, 145, 235, 35, 214, 71, 172, 142};
 //CONVOLUTIONAL ENCODER
-const int G1[K] = {1, 0, 1, 1, 0, 1, 1};  // 171
-const int G2[K] = {1, 1, 1, 1, 0, 0, 1};  // 133
-extern int encoder_state;
+//const int G1[KK] = {1, 0, 1, 1, 0, 1, 1};  // 171
+//const int G2[KK] = {1, 1, 1, 1, 0, 0, 1};  // 133
+//extern int encoder_state;
 
 //GOLAY PREAMBLE
 const int Ga[GOL_LEN] = {1,1,1,1,-1,1,-1,-1,-1,1,1,1,-1,-1,1,1,1,-1,-1,1,-1,-1,1,-1,-1,-1,-1,1,-1,1,-1};
@@ -108,8 +108,8 @@ const double_ttt cos_coefficients_table[]={1.000000,0.980785,0.923880,0.831470,0
 const double_ttt sin_coefficients_table[]={0.000000,-0.195090,-0.382683,-0.555570,-0.707107,-0.831470,-0.923880,-0.980785,-1.000000,-0.980785,-0.923880,-0.831470,-0.707107,-0.555570,-0.382683,-0.195090,0.000000,0.195090,0.382683,0.555570,0.707107,0.831470,0.923880,0.980785,1.000000,0.980785,0.923880,0.831470,0.707107,0.555570,0.382683,0.195090};
 
 
-//void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q);
-void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q);
-void encoder(data_t bit, data_t *bit0, data_t *bit1);
+void transmitter (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q);
+//void transmitter(hls::stream<transPkt> &input_i, hls::stream<transPkt> &input_q, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q);
+//void encoder(data_t bit, data_t *bit0, data_t *bit1);
 
 #endif

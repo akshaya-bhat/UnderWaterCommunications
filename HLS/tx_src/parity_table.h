@@ -35,7 +35,7 @@ private:
 public:
     static 
     ParityTable& get() {
-        static auto parity_table = ParityTable();
+        static ParityTable parity_table;
         return parity_table;
     }
 

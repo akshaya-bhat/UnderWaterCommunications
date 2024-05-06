@@ -33,9 +33,9 @@ int main () {
 
 //	typedef float fixed1;
 
-	UTYPE input_i[N];
-	UTYPE input_q[N];
-	double_ttt output_i[164];
+	data_t input_i[8]= {104, 101, 108, 108, 111, 32, 119, 111};
+	data_t input_q[8]= {114, 108, 100, 104, 101, 108, 108, 111};
+	double_ttt output_i[oversample*(NN+preambleLen)];
 	double_ttt output_q[164];
 
   double gold_R, gold_I;
@@ -45,13 +45,13 @@ int main () {
   FILE *fp2= fopen("/home/lilian/school/UnderWaterCommunications/data/output.bin","w");
   FILE *fp_gold = fopen("/home/lilian/school/UnderWaterCommunications/data/tx_gold.dat", "rb");
 
-for (int i = 0; i < N/2; i++) {
-	fread(&input_i[i], sizeof(int16_t), 1, fid);
-	fread(&input_q[i], sizeof(int16_t), 1, fid);
-
-//	printf("inputs actual: %0.15f %0.15f\n", (float)input_i[i], (float)input_q[i]);
-
-}
+//for (int i = 0; i < NN/2; i++) {
+//	fread(&input_i[i], sizeof(int16_t), 1, fid);
+//	fread(&input_q[i], sizeof(int16_t), 1, fid);
+//
+////	printf("inputs actual: %0.15f %0.15f\n", (float)input_i[i], (float)input_q[i]);
+//
+//}
 
 transmitter(input_i, input_q, output_i, output_q);
 cout << "Hi\n";
@@ -61,7 +61,7 @@ cout << "Hi\n";
    		printf("output: %f \n", (float)output_i[i]);
    		printf("gold: %f \n", gold_R);
    		fwrite(&(output_i[i]), sizeof(double_ttt),1, fp2);
-   		fwrite(&(output_q[i]), sizeof(double_ttt),1, fp2);
+//   		fwrite(&(output_q[i]), sizeof(double_ttt),1, fp2);
 //   		fprintf(fp2, "%f\n", (float)output_i[i]);
 //   				fwrite(&(imagPart), sizeof(double),1, fp3);
 //   		rmse_R.add_value((double)output_i[i] - gold_R);

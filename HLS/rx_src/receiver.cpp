@@ -420,11 +420,11 @@ int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1
 
 
 		///////////////////////////////////////////////////////
-		for (int i = 0; i < 128; i++)
-		{
-			output_i[i] = shiftedI_equalizer[i];
-			output_q[i] = shiftedQ_equalizer[i];
-		}
+//		for (int i = 0; i < 128; i++)
+//		{
+//			output_i[i] = shiftedI_equalizer[i];
+//			output_q[i] = shiftedQ_equalizer[i];
+//		}
 		/**
 		 *  DEscramble the decoded data
 		 */
@@ -432,6 +432,13 @@ int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1
 //		        descrambledQ_simplest = +xor(decodedQ_simplest,pnGen);
 //		        descrambledI_equalizer = +xor(decodedI_equalizer,pnGen);
 //		        descrambledQ_equalizer = +xor(decodedQ_equalizer,pnGen);
+
+       //in bytes
+		data_t descrambledDataI[8], descrambledDataQ[8];
+				for (int i = 0; i < 8; i++) {
+					descrambledDataI[i] = rx_input_bytes[i] ^ pnGenSequence[i];
+					descrambledDataQ[i] = rx_input_bytes[i] ^ pnGenSequence[i];
+				}
 
 }
 
