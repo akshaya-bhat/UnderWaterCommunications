@@ -5,20 +5,16 @@
 ############################################################
 open_project transmitter
 set_top transmitter
-add_files tx_src/viterbi_decoder_scalar.h
-add_files tx_src/viterbi_decoder_core.h
-add_files tx_src/viterbi_decoder_config.h
-add_files tx_src/viterbi_branch_table.h
-add_files tx_src/transmitter.h
-add_files tx_src/transmitter.cpp
-add_files tx_src/test_helpers.h
-add_files tx_src/parity_table.h
-add_files tx_src/convolutional_encoder_shift_register.h
-add_files tx_src/convolutional_encoder_lookup.h
-add_files tx_src/convolutional_encoder.h
-add_files tx_src/bitcount_table.h
-add_files tx_src/basic_ops.h
 add_files tx_src/alignment.h
+add_files tx_src/basic_ops.h
+add_files tx_src/bitcount_table.h
+add_files tx_src/convolutional_encoder.h
+add_files tx_src/convolutional_encoder_lookup.h
+add_files tx_src/convolutional_encoder_shift_register.h
+add_files tx_src/parity_table.h
+add_files tx_src/test_helpers.h
+add_files tx_src/transmitter.cpp
+add_files tx_src/transmitter.h
 add_files -tb tx_src/transmitter_tb.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}

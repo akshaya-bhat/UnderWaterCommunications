@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../rx_src/receiver_tb.cpp ../../../../rx_src/QR.cpp ../../../../rx_src/eigen.cpp ../../../../rx_src/matrixOperations.cpp ../../../../rx_src/receiver.cpp ../../../../rx_src/svd.cpp
+HLS_SOURCES = ../../../../rx_src/receiver_tb.cpp ../../../../rx_src/svd.cpp ../../../../rx_src/receiver.cpp ../../../../rx_src/matrixOperations.cpp ../../../../rx_src/eigen.cpp ../../../../rx_src/QR.cpp
 
 override TARGET := csim.exe
 
@@ -75,27 +75,15 @@ all: $(TARGET)
 
 $(ObjDir)/receiver_tb.o: ../../../../rx_src/receiver_tb.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../rx_src/receiver_tb.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/receiver_tb.d
 
-$(ObjDir)/QR.o: ../../../../rx_src/QR.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../rx_src/QR.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/svd.o: ../../../../rx_src/svd.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../rx_src/svd.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/QR.d
-
-$(ObjDir)/eigen.o: ../../../../rx_src/eigen.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../rx_src/eigen.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/eigen.d
-
-$(ObjDir)/matrixOperations.o: ../../../../rx_src/matrixOperations.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../rx_src/matrixOperations.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/matrixOperations.d
+-include $(ObjDir)/svd.d
 
 $(ObjDir)/receiver.o: ../../../../rx_src/receiver.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../rx_src/receiver.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -103,8 +91,20 @@ $(ObjDir)/receiver.o: ../../../../rx_src/receiver.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/receiver.d
 
-$(ObjDir)/svd.o: ../../../../rx_src/svd.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../rx_src/svd.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/matrixOperations.o: ../../../../rx_src/matrixOperations.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../rx_src/matrixOperations.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/svd.d
+-include $(ObjDir)/matrixOperations.d
+
+$(ObjDir)/eigen.o: ../../../../rx_src/eigen.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../rx_src/eigen.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/eigen.d
+
+$(ObjDir)/QR.o: ../../../../rx_src/QR.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../rx_src/QR.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/QR.d

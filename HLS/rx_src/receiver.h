@@ -60,6 +60,5 @@ void teoplitz(int m, int n, data_t* c, data_t* r, data_t t[][32]);
 void convertTo1D(const data_t Rmat[][32], int m, int n, float Rmmat[]);
 void convert1DTo2D(const float input[], int m, int n, data_t output[][64]);
 void matrixMult(float matrix[], const data_t vector[], int m, int n, data_t result[]);
-void pack(ap_uint<1> *input, unsigned int *output, unsigned int in_len);
 
 #endif

@@ -92,26 +92,6 @@
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter.h</location>
 		</link>
 		<link>
-			<name>source/viterbi_branch_table.h</name>
-			<type>1</type>
-			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_branch_table.h</location>
-		</link>
-		<link>
-			<name>source/viterbi_decoder_config.h</name>
-			<type>1</type>
-			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_decoder_config.h</location>
-		</link>
-		<link>
-			<name>source/viterbi_decoder_core.h</name>
-			<type>1</type>
-			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_decoder_core.h</location>
-		</link>
-		<link>
-			<name>source/viterbi_decoder_scalar.h</name>
-			<type>1</type>
-			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/viterbi_decoder_scalar.h</location>
-		</link>
-		<link>
 			<name>testbench/transmitter_tb.cpp</name>
 			<type>1</type>
 			<location>/home/lilian/school/UnderWaterCommunications/HLS/tx_src/transmitter_tb.cpp</location>

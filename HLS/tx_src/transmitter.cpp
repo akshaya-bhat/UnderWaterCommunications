@@ -244,14 +244,20 @@ cout << "qpsk\n";
 			}
 
 
-		double symbolsI[NN+preambleLen];
-		double symbolsQ[NN+preambleLen];
+		double symbolsI[NN+preambleLen+32];
+		double symbolsQ[NN+preambleLen+32];
 			for (int i = 0; i < preambleLen; ++i) {
 				symbolsI[i] = preamble_qpsk[i];
 				symbolsQ[i] = 0.0;
 			}
+
+			for (int i = preambleLen; i < preambleLen+32; ++i) {
+					symbolsI[i] = 0.0;
+					symbolsQ[i] = 0.0;
+			}
+
 			x = 0;
-			for (int i = preambleLen; i < (NN+preambleLen); i++) {
+			for (int i = preambleLen+32; i < (NN+preambleLen+32); i++) {
 				symbolsI[i] = qpskDataI[x];
 				symbolsQ[i] = qpskDataQ[x];
 				x++;
@@ -271,7 +277,7 @@ cout << "qpsk\n";
 		 */
 		//Upsample
 
-		int upsampleSize = oversample*(NN+preambleLen);
+		int upsampleSize = oversample*(NN+preambleLen+32);
 		double dataUpsampledI[upsampleSize];
 		double dataUpsampledQ[upsampleSize];
 		std::fill(dataUpsampledI, dataUpsampledI + upsampleSize, 0.0);

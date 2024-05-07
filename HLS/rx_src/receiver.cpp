@@ -24,7 +24,7 @@ using namespace std;
 
 
 //make sizes dynamic
-//make the input data 128
+//make the input data 140
 //optimizations, bitstream, and connect to DAC
 //data_t is double
 
@@ -83,7 +83,7 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 //	}
 
 	for (int i = 0; i < payloadSize; i++) {
-		cout << "payload_symbolsI " << payload_symbolsI[i] << endl;
+		cout << "payload_symbolsQ " << payload_symbolsQ[i] << endl;
 	}
 
 	data_t top_rowI[32];
@@ -132,7 +132,7 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 	cout << "pInv\n";
 	for (int i = 0; i < n; ++i) {
 		        for (int j = 0; j < m; ++j) {
-		            std::cout << pI[i*m +j] << " ";
+		            std::cout << pQ[i*m +j] << " ";
 		        }
 		        std::cout << std::endl;
 		    }
@@ -150,9 +150,9 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 		}
 
 	//Convolution
-	data_t equalized_symbolsI[128];
-	data_t equalized_symbolsQ[128];
-				for (int i = 0; i < 128; i++) {
+	data_t equalized_symbolsI[140];
+	data_t equalized_symbolsQ[140];
+				for (int i = 0; i < 140; i++) {
 					equalized_symbolsI[i] = 0.0;
 					equalized_symbolsQ[i] = 0.0;
 					for (int j = 0; j < 32; j++) {
@@ -161,40 +161,40 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 					}
 				}
 
-				for (int i = 0; i < 128; i++) {
+				for (int i = 0; i < 140; i++) {
 							cout << "equalized_symbolsI " << equalized_symbolsI[i] << endl;
 						}
 
-	data_t normI_simplest[128];
-	data_t normQ_simplest[128];
-	int shiftedI_simplest[128];
-	int shiftedQ_simplest[128];
-	data_t payload_symbolsII[128];
-	data_t payload_symbolsQQ[128];
-	data_t payload_symbolsII_abs[128];
-	data_t payload_symbolsQQ_abs[128];
-//	std::copy(payload_symbolsI, payload_symbolsI + 128, payload_symbolsII);
+	data_t normI_simplest[140];
+	data_t normQ_simplest[140];
+	int shiftedI_simplest[140];
+	int shiftedQ_simplest[140];
+	data_t payload_symbolsII[140];
+	data_t payload_symbolsQQ[140];
+	data_t payload_symbolsII_abs[140];
+	data_t payload_symbolsQQ_abs[140];
+//	std::copy(payload_symbolsI, payload_symbolsI + 140, payload_symbolsII);
 
-	for (int i = 0; i < 128; i++)
+	for (int i = 0; i < 140; i++)
 	{
 		payload_symbolsII[i] = payload_symbolsI[i];
 		payload_symbolsQQ[i] = payload_symbolsQ[i];
 
 	}
 
-	std::transform(payload_symbolsII, payload_symbolsII + 128, payload_symbolsII_abs, [](const data_t& val) { return std::abs(val); });
+	std::transform(payload_symbolsII, payload_symbolsII + 140, payload_symbolsII_abs, [](const data_t& val) { return std::abs(val); });
 
-//	std::copy(payload_symbolsQ, payload_symbolsQ + 128, payload_symbolsQQ);
+//	std::copy(payload_symbolsQ, payload_symbolsQ + 140, payload_symbolsQQ);
 
-	std::transform(payload_symbolsQQ, payload_symbolsQQ + 128, payload_symbolsQQ_abs, [](const data_t& val) { return std::abs(val); });
-	data_t max_valI = *std::max_element(payload_symbolsII_abs, payload_symbolsII_abs + 128);
+	std::transform(payload_symbolsQQ, payload_symbolsQQ + 140, payload_symbolsQQ_abs, [](const data_t& val) { return std::abs(val); });
+	data_t max_valI = *std::max_element(payload_symbolsII_abs, payload_symbolsII_abs + 140);
 	cout << "max_valI " << max_valI << endl;
 
-	std::transform(payload_symbolsQQ, payload_symbolsQQ + 128, payload_symbolsQQ, [](const data_t& val) { return std::abs(val); });
-	data_t max_valQ = *std::max_element(payload_symbolsQQ_abs, payload_symbolsQQ_abs + 128);
+	data_t max_valQ = *std::max_element(payload_symbolsQQ_abs, payload_symbolsQQ_abs + 140);
+	cout << "max_valI " << max_valI << endl;
 	int nsdec = 8;
 
-	for (int i = 0; i < 128; i++)
+	for (int i = 0; i < 140; i++)
 	{
 		normI_simplest[i] = payload_symbolsII[i] / max_valI;
 		normQ_simplest[i] = payload_symbolsQQ[i] / max_valQ;
@@ -202,61 +202,98 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 		shiftedQ_simplest[i] = (normQ_simplest[i]) / 2 * ((1 << nsdec) - 1);
 	}
 
-	for (int i = 0; i < 128; i++) {
-			cout << "normI_simplest " << normI_simplest[i] << endl;
+	for (int i = 0; i < 140; i++) {
+			cout << "normQ_simplest " << normQ_simplest[i] << endl;
 		}
-	for (int i = 0; i < 128; i++) {
-		cout << "shiftedI_simplest " << shiftedI_simplest[i] << endl;
+	for (int i = 0; i < 140; i++) {
+		cout << "shiftedQ_simplest " << shiftedQ_simplest[i] << endl;
 	}
 
 
-		data_t normI_equalizer[128];
-		data_t normQ_equalizer[128];
-		int shiftedI_equalizer[128];
-		int shiftedQ_equalizer[128];
-		data_t equalized_symbolsII[128];
-		data_t equalized_symbolsQQ[128];
-		data_t equalized_symbolsII_abs[128];
-		data_t equalized_symbolsQQ_abs[128];
+		data_t normI_equalizer[140];
+		data_t normQ_equalizer[140];
+		int shiftedI_equalizer[140];
+		int shiftedQ_equalizer[140];
+		data_t equalized_symbolsII[140];
+		data_t equalized_symbolsQQ[140];
+		data_t equalized_symbolsII_abs[140];
+		data_t equalized_symbolsQQ_abs[140];
 
-		for (int i = 0; i < 128; i++)
+		for (int i = 0; i < 140; i++)
 		{
 			equalized_symbolsII[i] = equalized_symbolsI[i];
 			equalized_symbolsQQ[i] = equalized_symbolsQ[i];
 
 		}
-//		std::copy(equalized_symbolsI, equalized_symbolsI + 128, equalized_symbolsII);
-		std::transform(equalized_symbolsII, equalized_symbolsII + 128, equalized_symbolsII_abs, [](const data_t& val) { return std::abs(val); });
+//		std::copy(equalized_symbolsI, equalized_symbolsI + 140, equalized_symbolsII);
+		std::transform(equalized_symbolsII, equalized_symbolsII + 140, equalized_symbolsII_abs, [](const data_t& val) { return std::abs(val); });
 
-//		std::copy(equalized_symbolsQ, equalized_symbolsQ + 128, equalized_symbolsQQ);
+//		std::copy(equalized_symbolsQ, equalized_symbolsQ + 140, equalized_symbolsQQ);
 
-		std::transform(equalized_symbolsQQ, equalized_symbolsQQ + 128, equalized_symbolsQQ_abs, [](const data_t& val) { return std::abs(val); });
-		max_valI = *std::max_element(equalized_symbolsII_abs, equalized_symbolsII_abs + 128);
+		std::transform(equalized_symbolsQQ, equalized_symbolsQQ + 140, equalized_symbolsQQ_abs, [](const data_t& val) { return std::abs(val); });
+		max_valI = *std::max_element(equalized_symbolsII_abs, equalized_symbolsII_abs + 140);
 		cout << "max_valI " << max_valI << endl;
 
-		std::transform(equalized_symbolsQQ, equalized_symbolsQQ + 128, equalized_symbolsQQ, [](const data_t& val) { return std::abs(val); });
-		max_valQ = *std::max_element(equalized_symbolsQQ_abs, equalized_symbolsQQ_abs + 128);
+		std::transform(equalized_symbolsQQ, equalized_symbolsQQ + 140, equalized_symbolsQQ, [](const data_t& val) { return std::abs(val); });
+		max_valQ = *std::max_element(equalized_symbolsQQ_abs, equalized_symbolsQQ_abs + 140);
 
 
-		for (int i = 0; i < 128; i++)
+		for (int i = 0; i < 140; i++)
 		{
 			normI_equalizer[i] = equalized_symbolsII[i] / max_valI;
 			normQ_equalizer[i] = equalized_symbolsQQ[i] / max_valQ;
-			shiftedI_equalizer[i] = (normI_equalizer[i] + 1) / 2 * ((1 << nsdec) - 1);
-			shiftedQ_equalizer[i] = (normQ_equalizer[i] + 1) / 2 * ((1 << nsdec) - 1);
+			shiftedI_equalizer[i] = (normI_equalizer[i]) / 2 * ((1 << nsdec) - 1);
+			shiftedQ_equalizer[i] = (normQ_equalizer[i]) / 2 * ((1 << nsdec) - 1);
 		}
 
-		for (int i = 0; i < 128; i++) {
+		for (int i = 0; i < 140; i++) {
 						cout << "normI_equalizer " << normI_equalizer[i] << endl;
 					}
-		for (int i = 0; i < 128; i++) {
-				cout << "shiftedI_equalizer " << shiftedI_equalizer[i] << endl;
+		for (int i = 0; i < 140; i++) {
+				cout << "shiftedQ_equalizer " << shiftedQ_equalizer[i] << endl;
 			}
 
 		/**
 		 * Viterbi Decoder
 		 */
+		for (int i = 0; i < 140; i++)
+		{
+			if (shiftedI_simplest[i] > 0)
+			{
+				shiftedI_simplest[i] = +127;
+			}
+			else
+			{
+				shiftedI_simplest[i] = -127;
+			}
 
+			if (shiftedQ_simplest[i] > 0)
+						{
+							shiftedQ_simplest[i] = +127;
+						}
+						else
+						{
+							shiftedQ_simplest[i] = -127;
+						}
+
+			if (shiftedI_equalizer[i] > 0)
+						{
+				shiftedI_equalizer[i] = +127;
+						}
+						else
+						{
+							shiftedI_equalizer[i] = -127;
+						}
+
+			if (shiftedQ_equalizer[i] > 0)
+						{
+				shiftedQ_equalizer[i] = +127;
+						}
+						else
+						{
+							shiftedQ_equalizer[i] = -127;
+						}
+		}
 		//decodedI_equalizer = vitdec(integerI_equalizer,trellis,30,'trunc','soft', nsdec);
 		constexpr size_t K = 7;
 		    constexpr size_t R = 2;
@@ -284,41 +321,6 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 			        decoder_config.renormalisation_threshold = std::numeric_limits<uint16_t>::max() - error_margin;
 
 
-// Generate our data
-			        //data needs to be in bytes
-int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,0,0,0,0,0,0,1,1,1,0,1,1,1,0,1,1,0,1,1,1,1};
-//
-// 	 for (int i = 0; i < 64; i++)
-// 	 {
-//
-//			        		if (message[i] > 0)
-//			        			        				{
-//			        			        					array[i] = +127;
-//			        			        				}
-//			        			        				else {
-//			        			        					array[i] = -127;
-//			        			        				}
-//
-//
-//			        			        		}
-
-//
-//			        for (int i = 128; i < 140; i++)
-//			        		{
-//
-//			        				array[i] = +127;
-//
-//			        		}
-//			        for (int i = 150; i < 300; i++)
-//			        {
-//			        	array[i] = -127;
-//			        }
-
-
-
-
-
-
 /**Viterbi soft:
  * - needs 140 bits
  * - range -127 to +127
@@ -336,43 +338,43 @@ int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1
 
 
     const size_t total_input_bytes = 8;
-    const size_t total_input_bits = total_input_bytes*8u; //128
-    const size_t noise_level = 0;
-    auto enc = ConvolutionalEncoder_Lookup(K, R, G);
-    std::vector<uint8_t> tx_input_bytes({104, 101, 108, 108, 111, 32, 119, 111});
+    const size_t total_input_bits = total_input_bytes*8u; //140
+//    const size_t noise_level = 0;
+//    auto enc = ConvolutionalEncoder_Lookup(K, R, G);
+//    std::vector<uint8_t> tx_input_bytes({104, 101, 108, 108, 111, 32, 119, 111});
 //    std::vector<uint8_t> tx_input_bytes;
-    std::vector<int16_t> output_symbols;//(array, array+140);
-    tx_input_bytes.resize(total_input_bytes);
-    {
-        const size_t total_tail_bits = K-1u;
-        const size_t total_data_bits = total_input_bytes*8;
-        const size_t total_bits = total_data_bits + total_tail_bits;
-        const size_t total_symbols = total_bits * R;
-        output_symbols.resize(total_symbols);
-    }
+    std::vector<int16_t> output_symbols(shiftedI_simplest,shiftedI_simplest+140);//(array, array+140);
+//    tx_input_bytes.resize(total_input_bytes);
+//    {
+//        const size_t total_tail_bits = K-1u;
+//        const size_t total_data_bits = total_input_bytes*8;
+//        const size_t total_bits = total_data_bits + total_tail_bits;
+//        const size_t total_symbols = total_bits * R;
+//        output_symbols.resize(total_symbols);
+//    }
 //    generate_random_bytes(tx_input_bytes.data(), tx_input_bytes.size());
-    std::cout << "tx_input_bytes data: ";
-            for (int byte : tx_input_bytes) {
-                std::cout << byte << endl;
-
-            }
-            cout << endl;
-           cout << tx_input_bytes.size() << endl;
-    encode_data(
-        &enc,
-        tx_input_bytes.data(), tx_input_bytes.size(),
-        output_symbols.data(), output_symbols.size(),
-        soft_decision_high, soft_decision_low
-    );
-    std::cout << "output_symbols data: ";
-                for (auto byte : output_symbols) {
-                    std::cout << byte << endl;
-
-                }
-                cout << endl;
-               cout << output_symbols.size() << endl;
-//    add_noise(output_symbols.data(), output_symbols.size(), noise_level);
-    clamp_vector(output_symbols.data(), output_symbols.size(), soft_decision_low, soft_decision_high);
+//    std::cout << "tx_input_bytes data: ";
+//            for (int byte : tx_input_bytes) {
+//                std::cout << byte << endl;
+//
+//            }
+//            cout << endl;
+//           cout << tx_input_bytes.size() << endl;
+//    encode_data(
+//        &enc,
+//        tx_input_bytes.data(), tx_input_bytes.size(),
+//        output_symbols.data(), output_symbols.size(),
+//        soft_decision_high, soft_decision_low
+//    );
+//    std::cout << "output_symbols data: ";
+//                for (auto byte : output_symbols) {
+//                    std::cout << byte << endl;
+//
+//                }
+//                cout << endl;
+//               cout << output_symbols.size() << endl;
+////    add_noise(output_symbols.data(), output_symbols.size(), noise_level);
+//    clamp_vector(output_symbols.data(), output_symbols.size(), soft_decision_low, soft_decision_high);
 
     std::cout << "output_symbols data: ";
             for (int16_t byte : output_symbols) {
@@ -408,19 +410,47 @@ int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1
         }
         cout << endl;
        cout << rx_input_bytes.size() << endl;
-//    printf("error_metric=%" PRIu64 "\n", error);
-//
-//
-//    // Show decoding results
-//    const size_t total_errors = get_total_bit_errors(tx_input_bytes.data(), rx_input_bytes.data(), total_input_bytes);
-//    const float bit_error_rate = (float)total_errors / (float)total_input_bits * 100.0f;
-//    printf("bit_error_rate=%.2f%%\n", bit_error_rate);
-//    printf("%zu/%zu incorrect bits\n", total_errors, total_input_bits);
 
 
+       ////////////////////////////////// VITERBI DECODER Q
+           std::vector<int16_t> output_symbolsQ(shiftedQ_simplest,shiftedQ_simplest+140);//(array, array+140);
+       std::cout << "output_symbols data: ";
+               for (int16_t byte : output_symbolsQ) {
+                   std::cout << byte << endl;
+
+               }
+               cout << endl;
+              cout << output_symbolsQ.size() << endl;
+       // Decode the data
+       std::vector<uint8_t> rx_input_bytesQ;
+       rx_input_bytesQ.resize(total_input_bytes);
+//       auto branch_tableQ = ViterbiBranchTable<K,R,int16_t>(G, soft_decision_high, soft_decision_low);
+//       auto vitdecQ = ViterbiDecoder_Core<K,R,uint16_t,int16_t>(branch_tableQ, decoder_config);
+
+       // NOTE: Up to you to choose your desired decoder type
+       // using Decoder = typename ViterbiDecoder_AVX_u16<K,R>;
+       // using Decoder = typename ViterbiDecoder_SSE_u16<K,R>;
+       // using Decoder = typename ViterbiDecoder_NEON_u16<K,R>;
+       using Decoder = ViterbiDecoder_Scalar<K,R,uint16_t,int16_t>;
+
+       vitdec.set_traceback_length(total_input_bits);
+       vitdec.reset();
+       const uint64_t accumulated_errorQ = Decoder::template update<uint64_t>(vitdec, output_symbolsQ.data(), output_symbolsQ.size());
+       const uint64_t errorQ = accumulated_error + uint64_t(vitdec.get_error());
+       vitdec.chainback(rx_input_bytesQ.data(), total_input_bits);
+       std::cout << "Vector data: ";
+           for (uint8_t byte : rx_input_bytesQ) {
+               std::cout << static_cast<int>(byte) << endl;
+               for (int i = 7; i >= 0; --i) {
+                       std::cout << ((byte >> i) & 1);
+                   }
+                   std::cout << std::endl;
+           }
+           cout << endl;
+          cout << rx_input_bytesQ.size() << endl;
 
 		///////////////////////////////////////////////////////
-//		for (int i = 0; i < 128; i++)
+//		for (int i = 0; i < 140; i++)
 //		{
 //			output_i[i] = shiftedI_equalizer[i];
 //			output_q[i] = shiftedQ_equalizer[i];
@@ -437,9 +467,12 @@ int16_t message[64] = {0,1,1,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1
 		data_t descrambledDataI[8], descrambledDataQ[8];
 				for (int i = 0; i < 8; i++) {
 					descrambledDataI[i] = rx_input_bytes[i] ^ pnGenSequence[i];
-					descrambledDataQ[i] = rx_input_bytes[i] ^ pnGenSequence[i];
+					descrambledDataQ[i] = rx_input_bytesQ[i] ^ pnGenSequence[i];
 				}
 
+				for (int i = 0; i < 8; i++) {
+										cout << "descrambledDataI " << descrambledDataI[i] << endl;
+									}
 }
 
 void teoplitz(int m, int n, data_t* c, data_t* r, data_t t[][32])
@@ -507,21 +540,5 @@ void matrixMult(float matrix[], const data_t vector[], int m, int n, data_t resu
     }
 }
 
-
-void pack(ap_uint<1> *input, uint8_t *output, unsigned int in_len) {
-
-    for (int i = 0; i < in_len>>4; i++) {
-#pragma HLS PIPELINE II=4
-        // for each integer
-        UTYPE acc = 0;
-        for (int j = 0; j < 8; j++) {
-#pragma HLS UNROLL
-            if (input[i*8 +j] == 1) {
-                acc += (1 << (8-j));
-            }
-        }
-        output[i] = acc;
-    }
-}
 
 

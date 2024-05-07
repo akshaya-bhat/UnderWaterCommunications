@@ -35,7 +35,7 @@ int main () {
 
 	data_t input_i[8]= {104, 101, 108, 108, 111, 32, 119, 111};
 	data_t input_q[8]= {114, 108, 100, 104, 101, 108, 108, 111};
-	double_ttt output_i[oversample*(NN+preambleLen)];
+	double_ttt output_i[oversample*(NN+preambleLen+32)];
 	double_ttt output_q[164];
 
   double gold_R, gold_I;

@@ -7,6 +7,7 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-05-06T15:58:53.285-0700"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-05-05T21:13:55.711-0700"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-05-05T21:12:25.603-0700"/>
         <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="transmitter" solutionName="solution1" date="2024-05-05T21:09:05.061-0700"/>

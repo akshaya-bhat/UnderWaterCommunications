@@ -295,137 +295,137 @@ preamble_symbolsI 0.260313
 preamble_symbolsI 0.468102
 preamble_symbolsI -0.534484
 payloadSize 131
-payload_symbolsI -0.0122197
-payload_symbolsI -0.00771389
-payload_symbolsI -0.746952
-payload_symbolsI -0.421312
-payload_symbolsI 0.692517
-payload_symbolsI 0.303808
-payload_symbolsI -0.326446
-payload_symbolsI 1.00163
-payload_symbolsI 0.0598723
-payload_symbolsI -0.38409
-payload_symbolsI -0.24176
-payload_symbolsI 0.384732
-payload_symbolsI -0.367272
-payload_symbolsI -0.220941
-payload_symbolsI 0.953124
-payload_symbolsI -0.440372
-payload_symbolsI 0.540606
-payload_symbolsI -0.225521
-payload_symbolsI -0.13795
-payload_symbolsI 0.0134092
-payload_symbolsI 0.057101
-payload_symbolsI 0.179344
-payload_symbolsI 0.03416
-payload_symbolsI 0.397356
-payload_symbolsI 0.298355
-payload_symbolsI -0.24906
-payload_symbolsI -0.775498
-payload_symbolsI 0.500356
-payload_symbolsI 0.352411
-payload_symbolsI -0.09277
-payload_symbolsI 0.783698
-payload_symbolsI -0.200059
-payload_symbolsI 0.00835594
-payload_symbolsI 0.418973
-payload_symbolsI 0.0576779
-payload_symbolsI -0.154757
-payload_symbolsI -0.103588
-payload_symbolsI 0.542322
-payload_symbolsI 0.55351
-payload_symbolsI 0.0665913
-payload_symbolsI -0.749084
-payload_symbolsI -0.0297032
-payload_symbolsI 0.751488
-payload_symbolsI -0.682231
-payload_symbolsI -0.0361841
-payload_symbolsI 0.138016
-payload_symbolsI -0.400475
-payload_symbolsI -0.268631
-payload_symbolsI 0.367042
-payload_symbolsI -0.0935976
-payload_symbolsI -1.0888
-payload_symbolsI 1.37761
-payload_symbolsI 0.508029
-payload_symbolsI 0.270013
-payload_symbolsI -0.0154607
-payload_symbolsI 0.465238
-payload_symbolsI -0.660832
-payload_symbolsI -0.222036
-payload_symbolsI 0.062533
-payload_symbolsI 0.290094
-payload_symbolsI 0.25068
-payload_symbolsI -0.38335
-payload_symbolsI 0.329724
-payload_symbolsI 0.648109
-payload_symbolsI 0.129667
-payload_symbolsI -0.886668
-payload_symbolsI -0.253568
-payload_symbolsI 0.400877
-payload_symbolsI 1.14705
-payload_symbolsI -0.265157
-payload_symbolsI -0.743743
-payload_symbolsI 0.144134
-payload_symbolsI 0.174005
-payload_symbolsI -0.818807
-payload_symbolsI 0.304164
-payload_symbolsI -0.199009
-payload_symbolsI -0.659832
-payload_symbolsI 0.497207
-payload_symbolsI 0.529115
-payload_symbolsI -0.136465
-payload_symbolsI 0.523015
-payload_symbolsI 0.120097
-payload_symbolsI -1.34911
-payload_symbolsI 0.0592418
-payload_symbolsI -0.133249
-payload_symbolsI 0.0873688
-payload_symbolsI 0.271067
-payload_symbolsI -0.389369
-payload_symbolsI -0.512941
-payload_symbolsI -0.182694
-payload_symbolsI 0.574166
-payload_symbolsI -0.372028
-payload_symbolsI -0.133724
-payload_symbolsI -0.443771
-payload_symbolsI 0.636965
-payload_symbolsI 0.103882
-payload_symbolsI -0.4712
-payload_symbolsI -0.0637135
-payload_symbolsI 0.0628485
-payload_symbolsI 0.195006
-payload_symbolsI -0.560168
-payload_symbolsI 0.287416
-payload_symbolsI -0.851572
-payload_symbolsI 0.332758
-payload_symbolsI 0.144149
-payload_symbolsI -1.22833
-payload_symbolsI 0.333119
-payload_symbolsI 0.857616
-payload_symbolsI -0.510133
-payload_symbolsI 0.775811
-payload_symbolsI -0.272634
-payload_symbolsI 0.161924
-payload_symbolsI 0.101654
-payload_symbolsI -0.228647
-payload_symbolsI 0.566113
-payload_symbolsI -0.721282
-payload_symbolsI -0.144087
-payload_symbolsI 0.250047
-payload_symbolsI 0.627545
-payload_symbolsI -1.3341
-payload_symbolsI 0.650096
-payload_symbolsI 0.439855
-payload_symbolsI -0.58636
-payload_symbolsI 0.101128
-payload_symbolsI -0.815923
-payload_symbolsI 0.612107
-payload_symbolsI 0.0279778
-payload_symbolsI 0.0345297
-payload_symbolsI -0.554794
-payload_symbolsI 0.0898304
-payload_symbolsI 0.421513
+payload_symbolsQ -0.113167
+payload_symbolsQ 0.234751
+payload_symbolsQ -0.0371017
+payload_symbolsQ -0.0479721
+payload_symbolsQ -0.433112
+payload_symbolsQ -0.760792
+payload_symbolsQ 0.591224
+payload_symbolsQ 0.175366
+payload_symbolsQ 0.444934
+payload_symbolsQ 0.653878
+payload_symbolsQ 0.30702
+payload_symbolsQ -0.214666
+payload_symbolsQ 0.526306
+payload_symbolsQ -0.259031
+payload_symbolsQ -0.64176
+payload_symbolsQ -0.412523
+payload_symbolsQ 0.111416
+payload_symbolsQ 0.188593
+payload_symbolsQ 0.139436
+payload_symbolsQ 0.681504
+payload_symbolsQ 0.100682
+payload_symbolsQ -0.585077
+payload_symbolsQ 0.228499
+payload_symbolsQ -0.204107
+payload_symbolsQ -0.387313
+payload_symbolsQ -0.42248
+payload_symbolsQ 0.53186
+payload_symbolsQ 0.00932517
+payload_symbolsQ 0.283096
+payload_symbolsQ -0.261546
+payload_symbolsQ 0.021968
+payload_symbolsQ 0.00979068
+payload_symbolsQ -1.07492
+payload_symbolsQ -0.269726
+payload_symbolsQ 0.412731
+payload_symbolsQ 0.236842
+payload_symbolsQ -0.694233
+payload_symbolsQ 0.363685
+payload_symbolsQ 1.07897
+payload_symbolsQ -0.11152
+payload_symbolsQ -0.196856
+payload_symbolsQ -0.0837155
+payload_symbolsQ 0.399064
+payload_symbolsQ -0.150001
+payload_symbolsQ 0.72075
+payload_symbolsQ -0.0973191
+payload_symbolsQ -0.821805
+payload_symbolsQ 0.322769
+payload_symbolsQ 1.07287
+payload_symbolsQ -0.45585
+payload_symbolsQ -0.478657
+payload_symbolsQ 0.784246
+payload_symbolsQ -0.0104584
+payload_symbolsQ 0.15519
+payload_symbolsQ 0.186293
+payload_symbolsQ -0.504927
+payload_symbolsQ 0.8471
+payload_symbolsQ 0.0530422
+payload_symbolsQ 0.0499311
+payload_symbolsQ 0.376961
+payload_symbolsQ -0.662897
+payload_symbolsQ 0.277717
+payload_symbolsQ 0.603139
+payload_symbolsQ -0.805884
+payload_symbolsQ -0.696216
+payload_symbolsQ 1.18142
+payload_symbolsQ -0.379232
+payload_symbolsQ -0.348155
+payload_symbolsQ 0.0772777
+payload_symbolsQ 0.139155
+payload_symbolsQ 0.313001
+payload_symbolsQ 0.297448
+payload_symbolsQ 0.217279
+payload_symbolsQ -0.221638
+payload_symbolsQ -0.629281
+payload_symbolsQ 0.473485
+payload_symbolsQ 0.4094
+payload_symbolsQ -1.1677
+payload_symbolsQ -0.10559
+payload_symbolsQ 0.869298
+payload_symbolsQ -0.731026
+payload_symbolsQ -0.260721
+payload_symbolsQ 0.190299
+payload_symbolsQ -0.244115
+payload_symbolsQ 1.04517
+payload_symbolsQ 0.198604
+payload_symbolsQ -0.742867
+payload_symbolsQ -0.128942
+payload_symbolsQ 0.97497
+payload_symbolsQ -0.460513
+payload_symbolsQ -0.562892
+payload_symbolsQ -0.240677
+payload_symbolsQ 0.69723
+payload_symbolsQ -0.0108547
+payload_symbolsQ -0.850222
+payload_symbolsQ -0.052745
+payload_symbolsQ -0.0478985
+payload_symbolsQ -0.354436
+payload_symbolsQ 0.986309
+payload_symbolsQ -0.760532
+payload_symbolsQ -0.40576
+payload_symbolsQ 1.25567
+payload_symbolsQ -0.488113
+payload_symbolsQ 0.196891
+payload_symbolsQ -0.712861
+payload_symbolsQ -0.42225
+payload_symbolsQ -1.01236
+payload_symbolsQ 1.04684
+payload_symbolsQ 0.655063
+payload_symbolsQ -0.958717
+payload_symbolsQ -0.299786
+payload_symbolsQ 1.02016
+payload_symbolsQ 1.01277
+payload_symbolsQ -0.623617
+payload_symbolsQ -0.280173
+payload_symbolsQ 0.488109
+payload_symbolsQ -0.245581
+payload_symbolsQ -0.185372
+payload_symbolsQ -0.198629
+payload_symbolsQ 0.500458
+payload_symbolsQ 0.386207
+payload_symbolsQ -0.770099
+payload_symbolsQ 0.177726
+payload_symbolsQ 0.10817
+payload_symbolsQ -0.653105
+payload_symbolsQ 0.630945
+payload_symbolsQ -0.191153
+payload_symbolsQ -0.629674
+payload_symbolsQ 0.368525
+payload_symbolsQ 0.226113
+payload_symbolsQ -0.215568
 m 64
 n 32
 m 64
@@ -687,263 +687,300 @@ equalized_symbolsI -0.363619
 equalized_symbolsI 1.65222
 equalized_symbolsI 1.31343
 equalized_symbolsI 0.0755504
+equalized_symbolsI 0.615785
+equalized_symbolsI 0.0365916
+equalized_symbolsI 1.09804
+equalized_symbolsI 0.289478
+equalized_symbolsI 0.420069
+equalized_symbolsI -0.306921
+equalized_symbolsI 0.135625
+equalized_symbolsI -1.13328
+equalized_symbolsI 0.222642
+equalized_symbolsI -0.571021
+equalized_symbolsI -0.497473
+equalized_symbolsI 0.204731
 max_valI 1.37761
-normI_simplest -0.00887022
-normI_simplest -0.00559946
-normI_simplest -0.542207
-normI_simplest -0.305828
-normI_simplest 0.502693
-normI_simplest 0.220532
-normI_simplest -0.236965
-normI_simplest 0.727077
-normI_simplest 0.0434609
-normI_simplest -0.278809
-normI_simplest -0.175492
-normI_simplest 0.279275
-normI_simplest -0.266601
-normI_simplest -0.16038
-normI_simplest 0.691867
-normI_simplest -0.319663
-normI_simplest 0.392422
-normI_simplest -0.163704
-normI_simplest -0.100137
-normI_simplest 0.00973367
-normI_simplest 0.0414492
-normI_simplest 0.130184
-normI_simplest 0.0247965
-normI_simplest 0.288438
-normI_simplest 0.216574
-normI_simplest -0.180791
-normI_simplest -0.562929
-normI_simplest 0.363205
-normI_simplest 0.255813
-normI_simplest -0.0673411
-normI_simplest 0.568882
-normI_simplest -0.145221
-normI_simplest 0.00606552
-normI_simplest 0.30413
-normI_simplest 0.041868
-normI_simplest -0.112337
-normI_simplest -0.0751937
-normI_simplest 0.393668
-normI_simplest 0.401789
-normI_simplest 0.0483382
-normI_simplest -0.543755
-normI_simplest -0.0215614
-normI_simplest 0.5455
-normI_simplest -0.495227
-normI_simplest -0.0262658
-normI_simplest 0.100185
-normI_simplest -0.290702
-normI_simplest -0.194997
-normI_simplest 0.266433
-normI_simplest -0.0679419
-normI_simplest -0.790355
-normI_simplest 1
-normI_simplest 0.368775
-normI_simplest 0.196001
-normI_simplest -0.0112228
-normI_simplest 0.337713
-normI_simplest -0.479694
-normI_simplest -0.161175
-normI_simplest 0.0453923
-normI_simplest 0.210577
-normI_simplest 0.181967
-normI_simplest -0.278271
-normI_simplest 0.239344
-normI_simplest 0.470458
-normI_simplest 0.0941243
-normI_simplest -0.643627
-normI_simplest -0.184063
-normI_simplest 0.290994
-normI_simplest 0.832638
-normI_simplest -0.192476
-normI_simplest -0.539878
-normI_simplest 0.104626
-normI_simplest 0.126309
-normI_simplest -0.594367
-normI_simplest 0.22079
-normI_simplest -0.144459
-normI_simplest -0.478968
-normI_simplest 0.36092
-normI_simplest 0.384081
-normI_simplest -0.0990593
-normI_simplest 0.379653
-normI_simplest 0.0871776
-normI_simplest -0.979312
-normI_simplest 0.0430033
-normI_simplest -0.0967243
-normI_simplest 0.0634205
-normI_simplest 0.196766
-normI_simplest -0.28264
-normI_simplest -0.37234
-normI_simplest -0.132616
-normI_simplest 0.416783
-normI_simplest -0.270053
-normI_simplest -0.0970696
-normI_simplest -0.322131
-normI_simplest 0.462369
-normI_simplest 0.0754076
-normI_simplest -0.342041
-normI_simplest -0.0462492
-normI_simplest 0.0456213
-normI_simplest 0.141554
-normI_simplest -0.406622
-normI_simplest 0.208633
-normI_simplest -0.618151
-normI_simplest 0.241546
-normI_simplest 0.104637
-normI_simplest -0.891635
-normI_simplest 0.241809
-normI_simplest 0.622538
-normI_simplest -0.370302
-normI_simplest 0.563156
-normI_simplest -0.197903
-normI_simplest 0.11754
-normI_simplest 0.0737901
-normI_simplest -0.165974
-normI_simplest 0.410938
-normI_simplest -0.523574
-normI_simplest -0.104592
-normI_simplest 0.181508
-normI_simplest 0.455531
-normI_simplest -0.968417
-normI_simplest 0.471901
-normI_simplest 0.319288
-normI_simplest -0.425635
-normI_simplest 0.0734081
-normI_simplest -0.592273
-normI_simplest 0.444325
-normI_simplest 0.0203089
-normI_simplest 0.0250649
-shiftedI_simplest -1
-shiftedI_simplest 0
-shiftedI_simplest -69
-shiftedI_simplest -38
-shiftedI_simplest 64
-shiftedI_simplest 28
-shiftedI_simplest -30
-shiftedI_simplest 92
-shiftedI_simplest 5
-shiftedI_simplest -35
-shiftedI_simplest -22
-shiftedI_simplest 35
-shiftedI_simplest -33
-shiftedI_simplest -20
-shiftedI_simplest 88
-shiftedI_simplest -40
-shiftedI_simplest 50
-shiftedI_simplest -20
-shiftedI_simplest -12
-shiftedI_simplest 1
-shiftedI_simplest 5
-shiftedI_simplest 16
-shiftedI_simplest 3
-shiftedI_simplest 36
-shiftedI_simplest 27
-shiftedI_simplest -23
-shiftedI_simplest -71
-shiftedI_simplest 46
-shiftedI_simplest 32
-shiftedI_simplest -8
-shiftedI_simplest 72
-shiftedI_simplest -18
-shiftedI_simplest 0
-shiftedI_simplest 38
-shiftedI_simplest 5
-shiftedI_simplest -14
-shiftedI_simplest -9
-shiftedI_simplest 50
-shiftedI_simplest 51
-shiftedI_simplest 6
-shiftedI_simplest -69
-shiftedI_simplest -2
-shiftedI_simplest 69
-shiftedI_simplest -63
-shiftedI_simplest -3
-shiftedI_simplest 12
-shiftedI_simplest -37
-shiftedI_simplest -24
-shiftedI_simplest 33
-shiftedI_simplest -8
-shiftedI_simplest -100
-shiftedI_simplest 127
-shiftedI_simplest 47
-shiftedI_simplest 24
-shiftedI_simplest -1
-shiftedI_simplest 43
-shiftedI_simplest -61
-shiftedI_simplest -20
-shiftedI_simplest 5
-shiftedI_simplest 26
-shiftedI_simplest 23
-shiftedI_simplest -35
-shiftedI_simplest 30
-shiftedI_simplest 59
-shiftedI_simplest 12
-shiftedI_simplest -82
-shiftedI_simplest -23
-shiftedI_simplest 37
-shiftedI_simplest 106
-shiftedI_simplest -24
-shiftedI_simplest -68
-shiftedI_simplest 13
-shiftedI_simplest 16
-shiftedI_simplest -75
-shiftedI_simplest 28
-shiftedI_simplest -18
-shiftedI_simplest -61
-shiftedI_simplest 46
-shiftedI_simplest 48
-shiftedI_simplest -12
-shiftedI_simplest 48
-shiftedI_simplest 11
-shiftedI_simplest -124
-shiftedI_simplest 5
-shiftedI_simplest -12
-shiftedI_simplest 8
-shiftedI_simplest 25
-shiftedI_simplest -36
-shiftedI_simplest -47
-shiftedI_simplest -16
-shiftedI_simplest 53
-shiftedI_simplest -34
-shiftedI_simplest -12
-shiftedI_simplest -41
-shiftedI_simplest 58
-shiftedI_simplest 9
-shiftedI_simplest -43
-shiftedI_simplest -5
-shiftedI_simplest 5
-shiftedI_simplest 18
-shiftedI_simplest -51
-shiftedI_simplest 26
-shiftedI_simplest -78
-shiftedI_simplest 30
-shiftedI_simplest 13
-shiftedI_simplest -113
-shiftedI_simplest 30
-shiftedI_simplest 79
-shiftedI_simplest -47
-shiftedI_simplest 71
-shiftedI_simplest -25
-shiftedI_simplest 14
-shiftedI_simplest 9
-shiftedI_simplest -21
-shiftedI_simplest 52
-shiftedI_simplest -66
-shiftedI_simplest -13
-shiftedI_simplest 23
-shiftedI_simplest 58
-shiftedI_simplest -123
-shiftedI_simplest 60
-shiftedI_simplest 40
-shiftedI_simplest -54
-shiftedI_simplest 9
-shiftedI_simplest -75
-shiftedI_simplest 56
-shiftedI_simplest 2
-shiftedI_simplest 3
+max_valI 1.37761
+normQ_simplest -0.0901245
+normQ_simplest 0.186952
+normQ_simplest -0.0295472
+normQ_simplest -0.0382043
+normQ_simplest -0.344924
+normQ_simplest -0.605883
+normQ_simplest 0.470842
+normQ_simplest 0.139659
+normQ_simplest 0.354339
+normQ_simplest 0.520739
+normQ_simplest 0.244506
+normQ_simplest -0.170957
+normQ_simplest 0.419142
+normQ_simplest -0.206289
+normQ_simplest -0.511088
+normQ_simplest -0.328527
+normQ_simplest 0.08873
+normQ_simplest 0.150193
+normQ_simplest 0.111044
+normQ_simplest 0.542739
+normQ_simplest 0.0801814
+normQ_simplest -0.465947
+normQ_simplest 0.181973
+normQ_simplest -0.162548
+normQ_simplest -0.308451
+normQ_simplest -0.336456
+normQ_simplest 0.423565
+normQ_simplest 0.00742642
+normQ_simplest 0.225453
+normQ_simplest -0.208291
+normQ_simplest 0.0174949
+normQ_simplest 0.00779715
+normQ_simplest -0.856046
+normQ_simplest -0.214806
+normQ_simplest 0.328693
+normQ_simplest 0.188618
+normQ_simplest -0.552876
+normQ_simplest 0.289633
+normQ_simplest 0.859271
+normQ_simplest -0.0888126
+normQ_simplest -0.156773
+normQ_simplest -0.0666697
+normQ_simplest 0.317808
+normQ_simplest -0.119458
+normQ_simplest 0.573994
+normQ_simplest -0.0775035
+normQ_simplest -0.654473
+normQ_simplest 0.257048
+normQ_simplest 0.854415
+normQ_simplest -0.363032
+normQ_simplest -0.381195
+normQ_simplest 0.624562
+normQ_simplest -0.00832893
+normQ_simplest 0.123591
+normQ_simplest 0.148361
+normQ_simplest -0.402117
+normQ_simplest 0.674618
+normQ_simplest 0.042242
+normQ_simplest 0.0397644
+normQ_simplest 0.300206
+normQ_simplest -0.527921
+normQ_simplest 0.22117
+normQ_simplest 0.480331
+normQ_simplest -0.641793
+normQ_simplest -0.554456
+normQ_simplest 0.940867
+normQ_simplest -0.302014
+normQ_simplest -0.277265
+normQ_simplest 0.0615428
+normQ_simplest 0.110821
+normQ_simplest 0.249269
+normQ_simplest 0.236883
+normQ_simplest 0.173038
+normQ_simplest -0.176509
+normQ_simplest -0.50115
+normQ_simplest 0.377076
+normQ_simplest 0.32604
+normQ_simplest -0.929938
+normQ_simplest -0.0840903
+normQ_simplest 0.692296
+normQ_simplest -0.582178
+normQ_simplest -0.207634
+normQ_simplest 0.151551
+normQ_simplest -0.194409
+normQ_simplest 0.832357
+normQ_simplest 0.158165
+normQ_simplest -0.591608
+normQ_simplest -0.102688
+normQ_simplest 0.776452
+normQ_simplest -0.366745
+normQ_simplest -0.448279
+normQ_simplest -0.191671
+normQ_simplest 0.555263
+normQ_simplest -0.00864449
+normQ_simplest -0.677104
+normQ_simplest -0.0420053
+normQ_simplest -0.0381456
+normQ_simplest -0.282268
+normQ_simplest 0.785481
+normQ_simplest -0.605676
+normQ_simplest -0.323141
+normQ_simplest 1
+normQ_simplest -0.388726
+normQ_simplest 0.156801
+normQ_simplest -0.567712
+normQ_simplest -0.336274
+normQ_simplest -0.806229
+normQ_simplest 0.83369
+normQ_simplest 0.521682
+normQ_simplest -0.763507
+normQ_simplest -0.238745
+normQ_simplest 0.81244
+normQ_simplest 0.806555
+normQ_simplest -0.496639
+normQ_simplest -0.223126
+normQ_simplest 0.388723
+normQ_simplest -0.195577
+normQ_simplest -0.147628
+normQ_simplest -0.158185
+normQ_simplest 0.398557
+normQ_simplest 0.307569
+normQ_simplest -0.613295
+normQ_simplest 0.141538
+normQ_simplest 0.0861451
+normQ_simplest -0.520123
+normQ_simplest 0.502475
+normQ_simplest -0.152231
+normQ_simplest -0.501463
+normQ_simplest 0.293488
+normQ_simplest 0.180073
+normQ_simplest -0.171675
+normQ_simplest 1.65543e-317
+normQ_simplest -0.0097316
+normQ_simplest -0.00614322
+normQ_simplest -0.594861
+normQ_simplest -0.335527
+normQ_simplest 0.55151
+normQ_simplest 0.241948
+normQ_simplest -0.259977
+normQ_simplest 0.797683
+shiftedQ_simplest -11
+shiftedQ_simplest 23
+shiftedQ_simplest -3
+shiftedQ_simplest -4
+shiftedQ_simplest -43
+shiftedQ_simplest -77
+shiftedQ_simplest 60
+shiftedQ_simplest 17
+shiftedQ_simplest 45
+shiftedQ_simplest 66
+shiftedQ_simplest 31
+shiftedQ_simplest -21
+shiftedQ_simplest 53
+shiftedQ_simplest -26
+shiftedQ_simplest -65
+shiftedQ_simplest -41
+shiftedQ_simplest 11
+shiftedQ_simplest 19
+shiftedQ_simplest 14
+shiftedQ_simplest 69
+shiftedQ_simplest 10
+shiftedQ_simplest -59
+shiftedQ_simplest 23
+shiftedQ_simplest -20
+shiftedQ_simplest -39
+shiftedQ_simplest -42
+shiftedQ_simplest 54
+shiftedQ_simplest 0
+shiftedQ_simplest 28
+shiftedQ_simplest -26
+shiftedQ_simplest 2
+shiftedQ_simplest 0
+shiftedQ_simplest -109
+shiftedQ_simplest -27
+shiftedQ_simplest 41
+shiftedQ_simplest 24
+shiftedQ_simplest -70
+shiftedQ_simplest 36
+shiftedQ_simplest 109
+shiftedQ_simplest -11
+shiftedQ_simplest -19
+shiftedQ_simplest -8
+shiftedQ_simplest 40
+shiftedQ_simplest -15
+shiftedQ_simplest 73
+shiftedQ_simplest -9
+shiftedQ_simplest -83
+shiftedQ_simplest 32
+shiftedQ_simplest 108
+shiftedQ_simplest -46
+shiftedQ_simplest -48
+shiftedQ_simplest 79
+shiftedQ_simplest -1
+shiftedQ_simplest 15
+shiftedQ_simplest 18
+shiftedQ_simplest -51
+shiftedQ_simplest 86
+shiftedQ_simplest 5
+shiftedQ_simplest 5
+shiftedQ_simplest 38
+shiftedQ_simplest -67
+shiftedQ_simplest 28
+shiftedQ_simplest 61
+shiftedQ_simplest -81
+shiftedQ_simplest -70
+shiftedQ_simplest 119
+shiftedQ_simplest -38
+shiftedQ_simplest -35
+shiftedQ_simplest 7
+shiftedQ_simplest 14
+shiftedQ_simplest 31
+shiftedQ_simplest 30
+shiftedQ_simplest 22
+shiftedQ_simplest -22
+shiftedQ_simplest -63
+shiftedQ_simplest 48
+shiftedQ_simplest 41
+shiftedQ_simplest -118
+shiftedQ_simplest -10
+shiftedQ_simplest 88
+shiftedQ_simplest -74
+shiftedQ_simplest -26
+shiftedQ_simplest 19
+shiftedQ_simplest -24
+shiftedQ_simplest 106
+shiftedQ_simplest 20
+shiftedQ_simplest -75
+shiftedQ_simplest -13
+shiftedQ_simplest 98
+shiftedQ_simplest -46
+shiftedQ_simplest -57
+shiftedQ_simplest -24
+shiftedQ_simplest 70
+shiftedQ_simplest -1
+shiftedQ_simplest -86
+shiftedQ_simplest -5
+shiftedQ_simplest -4
+shiftedQ_simplest -35
+shiftedQ_simplest 100
+shiftedQ_simplest -77
+shiftedQ_simplest -41
+shiftedQ_simplest 127
+shiftedQ_simplest -49
+shiftedQ_simplest 19
+shiftedQ_simplest -72
+shiftedQ_simplest -42
+shiftedQ_simplest -102
+shiftedQ_simplest 106
+shiftedQ_simplest 66
+shiftedQ_simplest -97
+shiftedQ_simplest -30
+shiftedQ_simplest 103
+shiftedQ_simplest 102
+shiftedQ_simplest -63
+shiftedQ_simplest -28
+shiftedQ_simplest 49
+shiftedQ_simplest -24
+shiftedQ_simplest -18
+shiftedQ_simplest -20
+shiftedQ_simplest 50
+shiftedQ_simplest 39
+shiftedQ_simplest -78
+shiftedQ_simplest 18
+shiftedQ_simplest 10
+shiftedQ_simplest -66
+shiftedQ_simplest 64
+shiftedQ_simplest -19
+shiftedQ_simplest -63
+shiftedQ_simplest 37
+shiftedQ_simplest 22
+shiftedQ_simplest -21
+shiftedQ_simplest 0
+shiftedQ_simplest -1
+shiftedQ_simplest 0
+shiftedQ_simplest -75
+shiftedQ_simplest -42
+shiftedQ_simplest 70
+shiftedQ_simplest 30
+shiftedQ_simplest -33
+shiftedQ_simplest 101
 max_valI 3.47316
 normI_equalizer -0.0155838
 normI_equalizer 0.143891
@@ -1073,173 +1110,327 @@ normI_equalizer -0.104694
 normI_equalizer 0.475711
 normI_equalizer 0.378164
 normI_equalizer 0.0217526
-shiftedI_equalizer 125
-shiftedI_equalizer 145
-shiftedI_equalizer 117
-shiftedI_equalizer 111
-shiftedI_equalizer 207
-shiftedI_equalizer 142
-shiftedI_equalizer 78
-shiftedI_equalizer 130
-shiftedI_equalizer 130
-shiftedI_equalizer 32
-shiftedI_equalizer 91
-shiftedI_equalizer 127
-shiftedI_equalizer 178
-shiftedI_equalizer 71
-shiftedI_equalizer 169
-shiftedI_equalizer 107
-shiftedI_equalizer 107
-shiftedI_equalizer 106
-shiftedI_equalizer 109
-shiftedI_equalizer 152
-shiftedI_equalizer 148
-shiftedI_equalizer 142
-shiftedI_equalizer 136
-shiftedI_equalizer 140
-shiftedI_equalizer 109
-shiftedI_equalizer 133
-shiftedI_equalizer 77
-shiftedI_equalizer 159
-shiftedI_equalizer 183
-shiftedI_equalizer 112
-shiftedI_equalizer 142
-shiftedI_equalizer 97
-shiftedI_equalizer 88
-shiftedI_equalizer 121
-shiftedI_equalizer 101
-shiftedI_equalizer 129
-shiftedI_equalizer 84
-shiftedI_equalizer 134
-shiftedI_equalizer 110
-shiftedI_equalizer 110
-shiftedI_equalizer 44
-shiftedI_equalizer 133
-shiftedI_equalizer 154
-shiftedI_equalizer 114
-shiftedI_equalizer 104
-shiftedI_equalizer 142
-shiftedI_equalizer 112
-shiftedI_equalizer 100
-shiftedI_equalizer 164
-shiftedI_equalizer 162
-shiftedI_equalizer 94
-shiftedI_equalizer 179
-shiftedI_equalizer 168
-shiftedI_equalizer 89
-shiftedI_equalizer 85
-shiftedI_equalizer 78
-shiftedI_equalizer 103
-shiftedI_equalizer 55
-shiftedI_equalizer 135
-shiftedI_equalizer 96
-shiftedI_equalizer 157
-shiftedI_equalizer 0
-shiftedI_equalizer 132
-shiftedI_equalizer 114
-shiftedI_equalizer 115
-shiftedI_equalizer 66
-shiftedI_equalizer 144
-shiftedI_equalizer 151
-shiftedI_equalizer 173
-shiftedI_equalizer 114
-shiftedI_equalizer 79
-shiftedI_equalizer 130
-shiftedI_equalizer 161
-shiftedI_equalizer 86
-shiftedI_equalizer 180
-shiftedI_equalizer 173
-shiftedI_equalizer 102
-shiftedI_equalizer 125
-shiftedI_equalizer 149
-shiftedI_equalizer 131
-shiftedI_equalizer 119
-shiftedI_equalizer 124
-shiftedI_equalizer 19
-shiftedI_equalizer 128
-shiftedI_equalizer 132
-shiftedI_equalizer 162
-shiftedI_equalizer 157
-shiftedI_equalizer 109
-shiftedI_equalizer 73
-shiftedI_equalizer 119
-shiftedI_equalizer 142
-shiftedI_equalizer 164
-shiftedI_equalizer 136
-shiftedI_equalizer 119
-shiftedI_equalizer 123
-shiftedI_equalizer 172
-shiftedI_equalizer 89
-shiftedI_equalizer 146
-shiftedI_equalizer 132
-shiftedI_equalizer 154
-shiftedI_equalizer 93
-shiftedI_equalizer 158
-shiftedI_equalizer 123
-shiftedI_equalizer 114
-shiftedI_equalizer 192
-shiftedI_equalizer 75
-shiftedI_equalizer 168
-shiftedI_equalizer 195
-shiftedI_equalizer 119
-shiftedI_equalizer 125
-shiftedI_equalizer 159
-shiftedI_equalizer 86
-shiftedI_equalizer 185
-shiftedI_equalizer 102
-shiftedI_equalizer 172
-shiftedI_equalizer 119
-shiftedI_equalizer 71
-shiftedI_equalizer 156
-shiftedI_equalizer 173
-shiftedI_equalizer 70
-shiftedI_equalizer 145
-shiftedI_equalizer 174
-shiftedI_equalizer 120
-shiftedI_equalizer 129
-shiftedI_equalizer 114
-shiftedI_equalizer 188
-shiftedI_equalizer 175
-shiftedI_equalizer 130
+normI_equalizer 0.177298
+normI_equalizer 0.0105355
+normI_equalizer 0.316149
+normI_equalizer 0.083347
+normI_equalizer 0.120947
+normI_equalizer -0.0883693
+normI_equalizer 0.0390493
+normI_equalizer -0.326296
+normI_equalizer 0.0641037
+normI_equalizer -0.16441
+normI_equalizer -0.143233
+normI_equalizer 0.0589466
+shiftedQ_equalizer 4
+shiftedQ_equalizer 10
+shiftedQ_equalizer 7
+shiftedQ_equalizer 19
+shiftedQ_equalizer 13
+shiftedQ_equalizer 41
+shiftedQ_equalizer 67
+shiftedQ_equalizer 71
+shiftedQ_equalizer 10
+shiftedQ_equalizer 37
+shiftedQ_equalizer 48
+shiftedQ_equalizer 76
+shiftedQ_equalizer 36
+shiftedQ_equalizer 9
+shiftedQ_equalizer 67
+shiftedQ_equalizer 11
+shiftedQ_equalizer 25
+shiftedQ_equalizer 60
+shiftedQ_equalizer 35
+shiftedQ_equalizer 34
+shiftedQ_equalizer 12
+shiftedQ_equalizer 54
+shiftedQ_equalizer 18
+shiftedQ_equalizer 56
+shiftedQ_equalizer 9
+shiftedQ_equalizer 49
+shiftedQ_equalizer 20
+shiftedQ_equalizer 80
+shiftedQ_equalizer 48
+shiftedQ_equalizer 10
+shiftedQ_equalizer 43
+shiftedQ_equalizer 75
+shiftedQ_equalizer 125
+shiftedQ_equalizer 56
+shiftedQ_equalizer 52
+shiftedQ_equalizer 65
+shiftedQ_equalizer 85
+shiftedQ_equalizer 8
+shiftedQ_equalizer 36
+shiftedQ_equalizer 26
+shiftedQ_equalizer 90
+shiftedQ_equalizer 1
+shiftedQ_equalizer 17
+shiftedQ_equalizer 12
+shiftedQ_equalizer 28
+shiftedQ_equalizer 21
+shiftedQ_equalizer 127
+shiftedQ_equalizer 9
+shiftedQ_equalizer 0
+shiftedQ_equalizer 26
+shiftedQ_equalizer 110
+shiftedQ_equalizer 80
+shiftedQ_equalizer 1
+shiftedQ_equalizer 0
+shiftedQ_equalizer 2
+shiftedQ_equalizer 7
+shiftedQ_equalizer 61
+shiftedQ_equalizer 1
+shiftedQ_equalizer 50
+shiftedQ_equalizer 70
+shiftedQ_equalizer 82
+shiftedQ_equalizer 1
+shiftedQ_equalizer 69
+shiftedQ_equalizer 31
+shiftedQ_equalizer 102
+shiftedQ_equalizer 100
+shiftedQ_equalizer 34
+shiftedQ_equalizer 46
+shiftedQ_equalizer 14
+shiftedQ_equalizer 4
+shiftedQ_equalizer 52
+shiftedQ_equalizer 31
+shiftedQ_equalizer 17
+shiftedQ_equalizer 61
+shiftedQ_equalizer 75
+shiftedQ_equalizer 30
+shiftedQ_equalizer 82
+shiftedQ_equalizer 92
+shiftedQ_equalizer 55
+shiftedQ_equalizer 40
+shiftedQ_equalizer 24
+shiftedQ_equalizer 73
+shiftedQ_equalizer 22
+shiftedQ_equalizer 7
+shiftedQ_equalizer 81
+shiftedQ_equalizer 35
+shiftedQ_equalizer 54
+shiftedQ_equalizer 52
+shiftedQ_equalizer 40
+shiftedQ_equalizer 4
+shiftedQ_equalizer 38
+shiftedQ_equalizer 0
+shiftedQ_equalizer 30
+shiftedQ_equalizer 27
+shiftedQ_equalizer 119
+shiftedQ_equalizer 33
+shiftedQ_equalizer 9
+shiftedQ_equalizer 29
+shiftedQ_equalizer 34
+shiftedQ_equalizer 52
+shiftedQ_equalizer 82
+shiftedQ_equalizer 102
+shiftedQ_equalizer 46
+shiftedQ_equalizer 43
+shiftedQ_equalizer 5
+shiftedQ_equalizer 40
+shiftedQ_equalizer 22
+shiftedQ_equalizer 71
+shiftedQ_equalizer 123
+shiftedQ_equalizer 54
+shiftedQ_equalizer 93
+shiftedQ_equalizer 49
+shiftedQ_equalizer 106
+shiftedQ_equalizer 117
+shiftedQ_equalizer 39
+shiftedQ_equalizer 5
+shiftedQ_equalizer 26
+shiftedQ_equalizer 91
+shiftedQ_equalizer 5
+shiftedQ_equalizer 64
+shiftedQ_equalizer 59
+shiftedQ_equalizer 115
+shiftedQ_equalizer 16
+shiftedQ_equalizer 25
+shiftedQ_equalizer 2
+shiftedQ_equalizer 43
+shiftedQ_equalizer 121
+shiftedQ_equalizer 102
+shiftedQ_equalizer 104
+shiftedQ_equalizer 18
+shiftedQ_equalizer 56
+shiftedQ_equalizer 33
+shiftedQ_equalizer 2
+shiftedQ_equalizer 26
+shiftedQ_equalizer 14
+shiftedQ_equalizer 22
+shiftedQ_equalizer 118
+shiftedQ_equalizer 21
+shiftedQ_equalizer 71
+shiftedQ_equalizer 4
 max error 508
-tx_input_bytes data: 104
-101
-108
-108
-111
-32
-119
-111
+output_symbols data: -127
+-127
+-127
+-127
+127
+127
+-127
+127
+127
+-127
+-127
+127
+-127
+-127
+127
+-127
+127
+-127
+-127
+127
+127
+127
+127
+127
+127
+-127
+-127
+127
+127
+-127
+127
+-127
+-127
+127
+127
+-127
+-127
+127
+127
+127
+-127
+-127
+127
+-127
+-127
+127
+-127
+-127
+127
+-127
+-127
+127
+127
+127
+-127
+127
+-127
+-127
+127
+127
+127
+-127
+127
+127
+127
+-127
+-127
+127
+127
+-127
+-127
+127
+127
+-127
+127
+-127
+-127
+127
+127
+-127
+127
+127
+-127
+127
+-127
+127
+127
+-127
+-127
+-127
+127
+-127
+-127
+-127
+127
+127
+-127
+-127
+127
+127
+-127
+127
+-127
+127
+127
+-127
+127
+127
+-127
+127
+-127
+127
+127
+-127
+127
+-127
+-127
+127
+127
+-127
+127
+127
+-127
+127
+-127
+127
+127
+127
+-127
+127
+127
+-127
+-127
+-127
+-127
+-127
+-127
+-127
+-127
+-127
+
+140
+Vector data: 61
+00111101
+11
+00001011
+114
+01110010
+192
+11000000
+247
+11110111
+148
+10010100
+19
+00010011
+208
+11010000
 
 8
 output_symbols data: -127
--127
-127
-127
--127
-127
--127
-127
-127
-127
--127
-127
-127
--127
--127
-127
-127
-127
-127
--127
-127
--127
--127
 127
 -127
 -127
 -127
 -127
+127
+127
 127
 127
 127
@@ -1251,12 +1442,8 @@ output_symbols data: -127
 127
 127
 127
--127
 127
--127
--127
 127
--127
 -127
 127
 -127
@@ -1265,34 +1452,12 @@ output_symbols data: -127
 127
 -127
 127
-127
-127
--127
-127
-127
-127
--127
--127
 -127
 127
 -127
 -127
 -127
 127
--127
-127
-127
-127
--127
-127
-127
-127
--127
-127
-127
-127
-127
--127
 127
 -127
 127
@@ -1300,14 +1465,20 @@ output_symbols data: -127
 -127
 -127
 -127
+127
 -127
 127
 -127
 -127
--127
+127
+127
 -127
 -127
 127
+-127
+127
+127
+-127
 127
 127
 127
@@ -1316,24 +1487,9 @@ output_symbols data: -127
 127
 127
 -127
-127
 -127
 127
-127
-127
-127
 -127
--127
--127
--127
--127
--127
-127
-127
-127
-127
--127
-127
 -127
 127
 127
@@ -1341,2425 +1497,100 @@ output_symbols data: -127
 127
 127
 -127
+-127
 127
+127
+-127
+-127
+127
+-127
 -127
 127
 -127
 127
 127
 -127
+-127
+127
+-127
+-127
+-127
+127
+-127
+-127
+-127
+-127
+-127
+127
+-127
+-127
 127
 -127
 127
+-127
+-127
+-127
+127
+127
+-127
+-127
+127
+127
+-127
+-127
+127
+-127
+-127
+-127
+127
+127
+-127
+127
+127
+-127
+127
+-127
+-127
+127
+127
+-127
+-127
+-127
+-127
+-127
+-127
+127
+127
+-127
 127
 
 140
-output_symbols data: -127
--127
-127
-127
--127
-127
--127
-127
-127
-127
--127
-127
-127
--127
--127
-127
-127
-127
-127
--127
-127
--127
--127
-127
--127
--127
--127
--127
-127
-127
-127
--127
-127
--127
--127
--127
-127
-127
-127
--127
-127
--127
--127
-127
--127
--127
-127
--127
--127
--127
-127
--127
-127
-127
-127
--127
-127
-127
-127
--127
--127
--127
-127
--127
--127
--127
-127
--127
-127
-127
-127
--127
-127
-127
-127
--127
-127
-127
-127
-127
--127
-127
--127
-127
-127
--127
--127
--127
--127
-127
--127
--127
--127
--127
--127
-127
-127
-127
-127
-127
--127
-127
-127
--127
-127
--127
-127
-127
-127
-127
--127
--127
--127
--127
--127
--127
-127
-127
-127
-127
--127
-127
--127
-127
-127
-127
-127
-127
--127
-127
--127
-127
--127
-127
-127
--127
-127
--127
-127
-127
-
-140
-total decoded bits 70
-base m curr decoded bit 0
-max_decoded_bits 70
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-total_error 254
-total_error 0
-total_error 254
-total_error 508
-total_error 254
-total_error 508
-total_error 254
-total_error 0
-m_current_decoded_bit 70
-total state bits 6
-totl bits 64
-Vector data: 104
-01101000
-101
-01100101
-108
-01101100
-108
-01101100
-111
-01101111
-32
-00100000
-119
-01110111
-111
-01101111
+Vector data: 28
+00011100
+4
+00000100
+172
+10101100
+52
+00110100
+91
+01011011
+57
+00111001
+109
+01101101
+114
+01110010
 
 8
+descrambledDataI -201
+descrambledDataI -155
+descrambledDataI -154
+descrambledDataI -228
+descrambledDataI -34
+descrambledDataI -212
+descrambledDataI -192
+descrambledDataI -95
 I am done
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************
