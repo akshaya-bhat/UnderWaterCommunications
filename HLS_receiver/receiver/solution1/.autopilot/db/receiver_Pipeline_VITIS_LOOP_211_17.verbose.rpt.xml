@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_211_17'" level="0">
-<item name = "Date">Thu May  2 22:09:54 2024
+<item name = "Date">Tue May  7 17:59:33 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00 ns, 4.755 ns, 2.16 ns</column>
+<column name="ap_clk">10.00 ns, 7.077 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">21, 21, 0.168 us, 0.168 us, 21, 21, no</column>
+<column name="">20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_211_17">19, 19, 3, 1, 1, 17, yes</column>
+<column name="- VITIS_LOOP_211_17">18, 18, 2, 1, 1, 17, yes</column>
 </table>
 </item>
 </section>
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 36, -</column>
-<column name="Register">-, -, 141, -, -</column>
+<column name="Register">-, -, 17, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -79,10 +79,10 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln211_fu_260_p2">+, 0, 0, 14, 7, 3</column>
-<column name="add_ln213_1_fu_307_p2">+, 0, 0, 36, 29, 29</column>
-<column name="add_ln213_fu_279_p2">+, 0, 0, 36, 29, 29</column>
-<column name="add_ln214_1_fu_321_p2">+, 0, 0, 36, 29, 29</column>
-<column name="add_ln214_fu_293_p2">+, 0, 0, 36, 29, 29</column>
+<column name="arr_6_I_1_d0">+, 0, 0, 36, 29, 29</column>
+<column name="arr_6_I_d0">+, 0, 0, 36, 29, 29</column>
+<column name="arr_6_Q_1_d0">+, 0, 0, 36, 29, 29</column>
+<column name="arr_6_Q_d0">+, 0, 0, 36, 29, 29</column>
 <column name="icmp_ln211_fu_254_p2">icmp, 0, 0, 14, 7, 7</column>
 <column name="or_ln211_fu_248_p2">or, 0, 0, 7, 7, 2</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
@@ -91,28 +91,20 @@
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_loop_exit_ready_pp0_iter2_reg">9, 2, 1, 2</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_i_8">9, 2, 7, 14</column>
 <column name="i_fu_58">9, 2, 7, 14</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln213_1_reg_396">29, 0, 29, 0</column>
-<column name="add_ln213_reg_386">29, 0, 29, 0</column>
-<column name="add_ln214_1_reg_401">29, 0, 29, 0</column>
-<column name="add_ln214_reg_391">29, 0, 29, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="i_fu_58">7, 0, 7, 0</column>
-<column name="icmp_ln211_reg_362">1, 0, 1, 0</column>
-<column name="icmp_ln211_reg_362_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="zext_ln211_reg_334">5, 0, 64, 59</column>
-<column name="zext_ln211_reg_334_pp0_iter1_reg">5, 0, 64, 59</column>
+<column name="icmp_ln211_reg_366">1, 0, 1, 0</column>
+<column name="zext_ln211_reg_338">5, 0, 64, 59</column>
 </table>
 </item>
 </section>

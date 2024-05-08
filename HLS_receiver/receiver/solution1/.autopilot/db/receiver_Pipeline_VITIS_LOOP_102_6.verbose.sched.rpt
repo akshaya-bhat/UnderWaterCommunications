@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_102_6'
 ================================================================
-* Date:           Thu May  2 22:09:26 2024
+* Date:           Tue May  7 17:59:03 2024
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        receiver
@@ -17,11 +17,11 @@
 ================================================================
 + Timing: 
     * Summary: 
-    +--------+---------+----------+------------+
-    |  Clock |  Target | Estimated| Uncertainty|
-    +--------+---------+----------+------------+
-    |ap_clk  |  8.00 ns|  4.506 ns|     2.16 ns|
-    +--------+---------+----------+------------+
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.643 ns|     2.70 ns|
+    +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |       27|       27|  0.216 us|  0.216 us|   27|   27|       no|
+    |       27|       27|  0.270 us|  0.270 us|   27|   27|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -130,7 +130,7 @@ ST_1 : Operation 46 [2/2] (2.32ns)   --->   "%filt_2_Q_7_load = load i3 %filt_2_
 ST_1 : Operation 47 [1/1] (1.82ns)   --->   "%add_ln102 = add i6 %i, i6 2" [receiver.cpp:102]   --->   Operation 47 'add' 'add_ln102' <Predicate = (icmp_ln102)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 48 [1/1] (1.58ns)   --->   "%store_ln102 = store i6 %add_ln102, i6 %i_5" [receiver.cpp:102]   --->   Operation 48 'store' 'store_ln102' <Predicate = (icmp_ln102)> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 4.50>
+State 2 <SV = 1> <Delay = 6.64>
 ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%empty = trunc i6 %i"   --->   Operation 49 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 50 [1/2] (2.32ns)   --->   "%filt_2_I_load = load i3 %filt_2_I_addr" [receiver.cpp:103]   --->   Operation 50 'load' 'filt_2_I_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
 ST_2 : Operation 51 [1/2] (2.32ns)   --->   "%filt_2_I_2_load = load i3 %filt_2_I_2_addr" [receiver.cpp:103]   --->   Operation 51 'load' 'filt_2_I_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
@@ -142,27 +142,27 @@ ST_2 : Operation 56 [1/2] (2.32ns)   --->   "%filt_2_I_3_load = load i3 %filt_2_
 ST_2 : Operation 57 [1/2] (2.32ns)   --->   "%filt_2_I_5_load = load i3 %filt_2_I_5_addr" [receiver.cpp:103]   --->   Operation 57 'load' 'filt_2_I_5_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
 ST_2 : Operation 58 [1/2] (2.32ns)   --->   "%filt_2_I_7_load = load i3 %filt_2_I_7_addr" [receiver.cpp:103]   --->   Operation 58 'load' 'filt_2_I_7_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
 ST_2 : Operation 59 [1/1] (2.18ns)   --->   "%tmp_1 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2_I_1_load, i18 0, i18 %filt_2_I_3_load, i18 0, i18 %filt_2_I_5_load, i18 0, i18 %filt_2_I_7_load, i3 %empty" [receiver.cpp:103]   --->   Operation 59 'mux' 'tmp_1' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%lshr_ln9 = partselect i5 @_ssdm_op_PartSelect.i5.i6.i32.i32, i6 %i, i32 1, i32 5" [receiver.cpp:103]   --->   Operation 60 'partselect' 'lshr_ln9' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 61 [1/2] (2.32ns)   --->   "%filt_2_Q_load = load i3 %filt_2_Q_addr" [receiver.cpp:104]   --->   Operation 61 'load' 'filt_2_Q_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 62 [1/2] (2.32ns)   --->   "%filt_2_Q_2_load = load i3 %filt_2_Q_2_addr" [receiver.cpp:104]   --->   Operation 62 'load' 'filt_2_Q_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 63 [1/2] (2.32ns)   --->   "%filt_2_Q_4_load = load i3 %filt_2_Q_4_addr" [receiver.cpp:104]   --->   Operation 63 'load' 'filt_2_Q_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 64 [1/2] (2.32ns)   --->   "%filt_2_Q_6_load = load i3 %filt_2_Q_6_addr" [receiver.cpp:104]   --->   Operation 64 'load' 'filt_2_Q_6_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 65 [1/1] (2.18ns)   --->   "%tmp_2 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2_Q_load, i18 0, i18 %filt_2_Q_2_load, i18 0, i18 %filt_2_Q_4_load, i18 0, i18 %filt_2_Q_6_load, i3 %empty" [receiver.cpp:104]   --->   Operation 65 'mux' 'tmp_2' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 66 [1/2] (2.32ns)   --->   "%filt_2_Q_1_load = load i3 %filt_2_Q_1_addr" [receiver.cpp:104]   --->   Operation 66 'load' 'filt_2_Q_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 67 [1/2] (2.32ns)   --->   "%filt_2_Q_3_load = load i3 %filt_2_Q_3_addr" [receiver.cpp:104]   --->   Operation 67 'load' 'filt_2_Q_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 68 [1/2] (2.32ns)   --->   "%filt_2_Q_5_load = load i3 %filt_2_Q_5_addr" [receiver.cpp:104]   --->   Operation 68 'load' 'filt_2_Q_5_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 69 [1/2] (2.32ns)   --->   "%filt_2_Q_7_load = load i3 %filt_2_Q_7_addr" [receiver.cpp:104]   --->   Operation 69 'load' 'filt_2_Q_7_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
-ST_2 : Operation 70 [1/1] (2.18ns)   --->   "%tmp_3 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2_Q_1_load, i18 0, i18 %filt_2_Q_3_load, i18 0, i18 %filt_2_Q_5_load, i18 0, i18 %filt_2_Q_7_load, i3 %empty" [receiver.cpp:104]   --->   Operation 70 'mux' 'tmp_3' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (2.13ns)   --->   "%add_ln103 = add i18 %tmp_1, i18 %tmp" [receiver.cpp:103]   --->   Operation 60 'add' 'add_ln103' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%lshr_ln9 = partselect i5 @_ssdm_op_PartSelect.i5.i6.i32.i32, i6 %i, i32 1, i32 5" [receiver.cpp:103]   --->   Operation 61 'partselect' 'lshr_ln9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/2] (2.32ns)   --->   "%filt_2_Q_load = load i3 %filt_2_Q_addr" [receiver.cpp:104]   --->   Operation 62 'load' 'filt_2_Q_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 63 [1/2] (2.32ns)   --->   "%filt_2_Q_2_load = load i3 %filt_2_Q_2_addr" [receiver.cpp:104]   --->   Operation 63 'load' 'filt_2_Q_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 64 [1/2] (2.32ns)   --->   "%filt_2_Q_4_load = load i3 %filt_2_Q_4_addr" [receiver.cpp:104]   --->   Operation 64 'load' 'filt_2_Q_4_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 65 [1/2] (2.32ns)   --->   "%filt_2_Q_6_load = load i3 %filt_2_Q_6_addr" [receiver.cpp:104]   --->   Operation 65 'load' 'filt_2_Q_6_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 66 [1/1] (2.18ns)   --->   "%tmp_2 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2_Q_load, i18 0, i18 %filt_2_Q_2_load, i18 0, i18 %filt_2_Q_4_load, i18 0, i18 %filt_2_Q_6_load, i3 %empty" [receiver.cpp:104]   --->   Operation 66 'mux' 'tmp_2' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 67 [1/2] (2.32ns)   --->   "%filt_2_Q_1_load = load i3 %filt_2_Q_1_addr" [receiver.cpp:104]   --->   Operation 67 'load' 'filt_2_Q_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 68 [1/2] (2.32ns)   --->   "%filt_2_Q_3_load = load i3 %filt_2_Q_3_addr" [receiver.cpp:104]   --->   Operation 68 'load' 'filt_2_Q_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 69 [1/2] (2.32ns)   --->   "%filt_2_Q_5_load = load i3 %filt_2_Q_5_addr" [receiver.cpp:104]   --->   Operation 69 'load' 'filt_2_Q_5_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 70 [1/2] (2.32ns)   --->   "%filt_2_Q_7_load = load i3 %filt_2_Q_7_addr" [receiver.cpp:104]   --->   Operation 70 'load' 'filt_2_Q_7_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 6> <RAM>
+ST_2 : Operation 71 [1/1] (2.18ns)   --->   "%tmp_3 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2_Q_1_load, i18 0, i18 %filt_2_Q_3_load, i18 0, i18 %filt_2_Q_5_load, i18 0, i18 %filt_2_Q_7_load, i3 %empty" [receiver.cpp:104]   --->   Operation 71 'mux' 'tmp_3' <Predicate = true> <Delay = 2.18> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.18> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (2.13ns)   --->   "%add_ln104 = add i18 %tmp_3, i18 %tmp_2" [receiver.cpp:104]   --->   Operation 72 'add' 'add_ln104' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 81 'ret' 'ret_ln0' <Predicate = (!icmp_ln102)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 4.45>
-ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%speclooptripcount_ln102 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 24, i64 24, i64 24" [receiver.cpp:102]   --->   Operation 71 'speclooptripcount' 'speclooptripcount_ln102' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%specloopname_ln102 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [receiver.cpp:102]   --->   Operation 72 'specloopname' 'specloopname_ln102' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 73 [1/1] (2.13ns)   --->   "%add_ln103 = add i18 %tmp_1, i18 %tmp" [receiver.cpp:103]   --->   Operation 73 'add' 'add_ln103' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln103 = zext i5 %lshr_ln9" [receiver.cpp:103]   --->   Operation 74 'zext' 'zext_ln103' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%filt_3_I_addr_1 = getelementptr i18 %filt_3_I, i64 0, i64 %zext_ln103" [receiver.cpp:103]   --->   Operation 75 'getelementptr' 'filt_3_I_addr_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 76 [1/1] (2.32ns)   --->   "%store_ln103 = store i18 %add_ln103, i5 %filt_3_I_addr_1" [receiver.cpp:103]   --->   Operation 76 'store' 'store_ln103' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 24> <RAM>
-ST_3 : Operation 77 [1/1] (2.13ns)   --->   "%add_ln104 = add i18 %tmp_3, i18 %tmp_2" [receiver.cpp:104]   --->   Operation 77 'add' 'add_ln104' <Predicate = true> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%speclooptripcount_ln102 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 24, i64 24, i64 24" [receiver.cpp:102]   --->   Operation 73 'speclooptripcount' 'speclooptripcount_ln102' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%specloopname_ln102 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [receiver.cpp:102]   --->   Operation 74 'specloopname' 'specloopname_ln102' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln103 = zext i5 %lshr_ln9" [receiver.cpp:103]   --->   Operation 75 'zext' 'zext_ln103' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%filt_3_I_addr_1 = getelementptr i18 %filt_3_I, i64 0, i64 %zext_ln103" [receiver.cpp:103]   --->   Operation 76 'getelementptr' 'filt_3_I_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (2.32ns)   --->   "%store_ln103 = store i18 %add_ln103, i5 %filt_3_I_addr_1" [receiver.cpp:103]   --->   Operation 77 'store' 'store_ln103' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 24> <RAM>
 ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%filt_3_Q_addr_1 = getelementptr i18 %filt_3_Q, i64 0, i64 %zext_ln103" [receiver.cpp:104]   --->   Operation 78 'getelementptr' 'filt_3_Q_addr_1' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 79 [1/1] (2.32ns)   --->   "%store_ln104 = store i18 %add_ln104, i5 %filt_3_Q_addr_1" [receiver.cpp:104]   --->   Operation 79 'store' 'store_ln104' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 18> <Depth = 24> <RAM>
 ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln102 = br void %for.body174" [receiver.cpp:102]   --->   Operation 80 'br' 'br_ln102' <Predicate = true> <Delay = 0.00>
@@ -171,7 +171,7 @@ ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln102 = br void %for.body174" [
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 8.000ns, clock uncertainty: 2.160ns.
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
  <State 1>: 3.413ns
 The critical path consists of the following:
@@ -180,14 +180,15 @@ The critical path consists of the following:
 	'add' operation ('add_ln102', receiver.cpp:102) [77]  (1.825 ns)
 	'store' operation ('store_ln102', receiver.cpp:102) of variable 'add_ln102', receiver.cpp:102 on local variable 'i' [78]  (1.588 ns)
 
- <State 2>: 4.506ns
+ <State 2>: 6.643ns
 The critical path consists of the following:
 	'load' operation ('filt_2_I_load', receiver.cpp:103) on array 'filt_2_I' [37]  (2.322 ns)
 	'mux' operation ('tmp', receiver.cpp:103) [41]  (2.184 ns)
-
- <State 3>: 4.458ns
-The critical path consists of the following:
 	'add' operation ('add_ln103', receiver.cpp:103) [51]  (2.136 ns)
+
+ <State 3>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation ('filt_3_I_addr_1', receiver.cpp:103) [54]  (0.000 ns)
 	'store' operation ('store_ln103', receiver.cpp:103) of variable 'add_ln103', receiver.cpp:103 on array 'filt_3_I' [55]  (2.322 ns)
 
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_191_15'" level="0">
-<item name = "Date">Thu May  2 22:09:53 2024
+<item name = "Date">Tue May  7 17:59:32 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00 ns, 4.696 ns, 2.16 ns</column>
+<column name="ap_clk">10.00 ns, 7.018 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">21, 21, 0.168 us, 0.168 us, 21, 21, no</column>
+<column name="">20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_191_15">19, 19, 3, 1, 1, 17, yes</column>
+<column name="- VITIS_LOOP_191_15">18, 18, 2, 1, 1, 17, yes</column>
 </table>
 </item>
 </section>
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 36, -</column>
-<column name="Register">-, -, 459, -, -</column>
+<column name="Register">-, -, 19, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
 </table>
@@ -79,22 +79,22 @@
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln191_fu_802_p2">+, 0, 0, 14, 9, 5</column>
-<column name="add_ln193_1_fu_835_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_2_fu_849_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_3_fu_863_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_4_fu_933_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_5_fu_947_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_6_fu_961_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_7_fu_975_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln193_fu_821_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_1_fu_891_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_2_fu_905_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_3_fu_919_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_4_fu_989_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_5_fu_1003_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_6_fu_1017_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_7_fu_1031_p2">+, 0, 0, 34, 27, 27</column>
-<column name="add_ln194_fu_877_p2">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_1_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_2_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_3_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_4_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_5_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_6_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_7_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_I_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_1_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_2_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_3_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_4_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_5_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_6_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_7_d0">+, 0, 0, 34, 27, 27</column>
+<column name="arr_4_Q_d0">+, 0, 0, 34, 27, 27</column>
 <column name="icmp_ln191_fu_770_p2">icmp, 0, 0, 14, 9, 9</column>
 <column name="or_ln191_1_fu_776_p2">or, 0, 0, 6, 6, 1</column>
 <column name="or_ln191_fu_764_p2">or, 0, 0, 9, 9, 4</column>
@@ -104,40 +104,20 @@
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_loop_exit_ready_pp0_iter2_reg">9, 2, 1, 2</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_i_10">9, 2, 9, 18</column>
 <column name="i_fu_104">9, 2, 9, 18</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln193_1_reg_1237">27, 0, 27, 0</column>
-<column name="add_ln193_2_reg_1242">27, 0, 27, 0</column>
-<column name="add_ln193_3_reg_1247">27, 0, 27, 0</column>
-<column name="add_ln193_4_reg_1272">27, 0, 27, 0</column>
-<column name="add_ln193_5_reg_1277">27, 0, 27, 0</column>
-<column name="add_ln193_6_reg_1282">27, 0, 27, 0</column>
-<column name="add_ln193_7_reg_1287">27, 0, 27, 0</column>
-<column name="add_ln193_reg_1232">27, 0, 27, 0</column>
-<column name="add_ln194_1_reg_1257">27, 0, 27, 0</column>
-<column name="add_ln194_2_reg_1262">27, 0, 27, 0</column>
-<column name="add_ln194_3_reg_1267">27, 0, 27, 0</column>
-<column name="add_ln194_4_reg_1292">27, 0, 27, 0</column>
-<column name="add_ln194_5_reg_1297">27, 0, 27, 0</column>
-<column name="add_ln194_6_reg_1302">27, 0, 27, 0</column>
-<column name="add_ln194_7_reg_1307">27, 0, 27, 0</column>
-<column name="add_ln194_reg_1252">27, 0, 27, 0</column>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
 <column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
 <column name="i_fu_104">9, 0, 9, 0</column>
-<column name="icmp_ln191_reg_1148">1, 0, 1, 0</column>
-<column name="icmp_ln191_reg_1148_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="lshr_ln1_reg_1073">5, 0, 5, 0</column>
-<column name="lshr_ln1_reg_1073_pp0_iter1_reg">5, 0, 5, 0</column>
+<column name="icmp_ln191_reg_1164">1, 0, 1, 0</column>
+<column name="lshr_ln1_reg_1089">5, 0, 5, 0</column>
 </table>
 </item>
 </section>

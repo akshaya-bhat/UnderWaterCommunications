@@ -872,6 +872,21 @@ for.body174.split:22 %tmp_1 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2
 </operation>
 
 <operation id="60" st_id="2" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="18" op_0_bw="18" op_1_bw="18">
+<![CDATA[
+for.body174.split:23 %add_ln103 = add i18 %tmp_1, i18 %tmp
+
+]]></Node>
+<StgValue><ssdm name="add_ln103"/></StgValue>
+</operation>
+
+<operation id="61" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -886,7 +901,7 @@ for.body174.split:24 %lshr_ln9 = partselect i5 @_ssdm_op_PartSelect.i5.i6.i32.i3
 <StgValue><ssdm name="lshr_ln9"/></StgValue>
 </operation>
 
-<operation id="61" st_id="2" stage="1" lat="2">
+<operation id="62" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -901,7 +916,7 @@ for.body174.split:32 %filt_2_Q_load = load i3 %filt_2_Q_addr
 <StgValue><ssdm name="filt_2_Q_load"/></StgValue>
 </operation>
 
-<operation id="62" st_id="2" stage="1" lat="2">
+<operation id="63" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -916,7 +931,7 @@ for.body174.split:33 %filt_2_Q_2_load = load i3 %filt_2_Q_2_addr
 <StgValue><ssdm name="filt_2_Q_2_load"/></StgValue>
 </operation>
 
-<operation id="63" st_id="2" stage="1" lat="2">
+<operation id="64" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -931,7 +946,7 @@ for.body174.split:34 %filt_2_Q_4_load = load i3 %filt_2_Q_4_addr
 <StgValue><ssdm name="filt_2_Q_4_load"/></StgValue>
 </operation>
 
-<operation id="64" st_id="2" stage="1" lat="2">
+<operation id="65" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -946,7 +961,7 @@ for.body174.split:35 %filt_2_Q_6_load = load i3 %filt_2_Q_6_addr
 <StgValue><ssdm name="filt_2_Q_6_load"/></StgValue>
 </operation>
 
-<operation id="65" st_id="2" stage="1" lat="1">
+<operation id="66" st_id="2" stage="1" lat="1">
 <core>Multiplexer</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -961,7 +976,7 @@ for.body174.split:36 %tmp_2 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2
 <StgValue><ssdm name="tmp_2"/></StgValue>
 </operation>
 
-<operation id="66" st_id="2" stage="1" lat="2">
+<operation id="67" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -976,7 +991,7 @@ for.body174.split:41 %filt_2_Q_1_load = load i3 %filt_2_Q_1_addr
 <StgValue><ssdm name="filt_2_Q_1_load"/></StgValue>
 </operation>
 
-<operation id="67" st_id="2" stage="1" lat="2">
+<operation id="68" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -991,7 +1006,7 @@ for.body174.split:42 %filt_2_Q_3_load = load i3 %filt_2_Q_3_addr
 <StgValue><ssdm name="filt_2_Q_3_load"/></StgValue>
 </operation>
 
-<operation id="68" st_id="2" stage="1" lat="2">
+<operation id="69" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1006,7 +1021,7 @@ for.body174.split:43 %filt_2_Q_5_load = load i3 %filt_2_Q_5_addr
 <StgValue><ssdm name="filt_2_Q_5_load"/></StgValue>
 </operation>
 
-<operation id="69" st_id="2" stage="1" lat="2">
+<operation id="70" st_id="2" stage="1" lat="2">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1021,7 +1036,7 @@ for.body174.split:44 %filt_2_Q_7_load = load i3 %filt_2_Q_7_addr
 <StgValue><ssdm name="filt_2_Q_7_load"/></StgValue>
 </operation>
 
-<operation id="70" st_id="2" stage="1" lat="1">
+<operation id="71" st_id="2" stage="1" lat="1">
 <core>Multiplexer</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1034,6 +1049,21 @@ for.body174.split:45 %tmp_3 = mux i18 @_ssdm_op_Mux.ap_auto.7i18.i3, i18 %filt_2
 
 ]]></Node>
 <StgValue><ssdm name="tmp_3"/></StgValue>
+</operation>
+
+<operation id="72" st_id="2" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="74" bw="18" op_0_bw="18" op_1_bw="18">
+<![CDATA[
+for.body174.split:46 %add_ln104 = add i18 %tmp_3, i18 %tmp_2
+
+]]></Node>
+<StgValue><ssdm name="add_ln104"/></StgValue>
 </operation>
 
 <operation id="81" st_id="2" stage="1" lat="1">
@@ -1055,7 +1085,7 @@ for.end197.exitStub:0 %ret_ln0 = ret
 
 <state id="3" st_id="4">
 
-<operation id="71" st_id="3" stage="1" lat="1">
+<operation id="73" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1070,7 +1100,7 @@ for.body174.split:1 %speclooptripcount_ln102 = speclooptripcount void @_ssdm_op_
 <StgValue><ssdm name="speclooptripcount_ln102"/></StgValue>
 </operation>
 
-<operation id="72" st_id="3" stage="1" lat="1">
+<operation id="74" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1085,22 +1115,7 @@ for.body174.split:2 %specloopname_ln102 = specloopname void @_ssdm_op_SpecLoopNa
 <StgValue><ssdm name="specloopname_ln102"/></StgValue>
 </operation>
 
-<operation id="73" st_id="3" stage="1" lat="1">
-<core>Adder</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="51" bw="18" op_0_bw="18" op_1_bw="18">
-<![CDATA[
-for.body174.split:23 %add_ln103 = add i18 %tmp_1, i18 %tmp
-
-]]></Node>
-<StgValue><ssdm name="add_ln103"/></StgValue>
-</operation>
-
-<operation id="74" st_id="3" stage="1" lat="1">
+<operation id="75" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1115,7 +1130,7 @@ for.body174.split:25 %zext_ln103 = zext i5 %lshr_ln9
 <StgValue><ssdm name="zext_ln103"/></StgValue>
 </operation>
 
-<operation id="75" st_id="3" stage="1" lat="1">
+<operation id="76" st_id="3" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1130,7 +1145,7 @@ for.body174.split:26 %filt_3_I_addr_1 = getelementptr i18 %filt_3_I, i64 0, i64 
 <StgValue><ssdm name="filt_3_I_addr_1"/></StgValue>
 </operation>
 
-<operation id="76" st_id="3" stage="1" lat="1">
+<operation id="77" st_id="3" stage="1" lat="1">
 <core>RAM</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1143,21 +1158,6 @@ for.body174.split:27 %store_ln103 = store i18 %add_ln103, i5 %filt_3_I_addr_1
 
 ]]></Node>
 <StgValue><ssdm name="store_ln103"/></StgValue>
-</operation>
-
-<operation id="77" st_id="3" stage="1" lat="1">
-<core>Adder</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="74" bw="18" op_0_bw="18" op_1_bw="18">
-<![CDATA[
-for.body174.split:46 %add_ln104 = add i18 %tmp_3, i18 %tmp_2
-
-]]></Node>
-<StgValue><ssdm name="add_ln104"/></StgValue>
 </operation>
 
 <operation id="78" st_id="3" stage="1" lat="1">

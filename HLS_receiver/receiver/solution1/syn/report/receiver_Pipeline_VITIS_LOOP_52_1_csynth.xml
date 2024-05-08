@@ -9,8 +9,8 @@
 <ProductFamily>zynq</ProductFamily>
 <Part>xc7z020-clg400-1</Part>
 <TopModelName>receiver_Pipeline_VITIS_LOOP_52_1</TopModelName>
-<TargetClockPeriod>8.00</TargetClockPeriod>
-<ClockUncertainty>2.16</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,27 +18,27 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.169</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.508</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>238</Best-caseLatency>
-<Average-caseLatency>238</Average-caseLatency>
-<Worst-caseLatency>238</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.904 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.904 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.904 us</Worst-caseRealTimeLatency>
-<Interval-min>238</Interval-min>
-<Interval-max>238</Interval-max>
+<Best-caseLatency>243</Best-caseLatency>
+<Average-caseLatency>243</Average-caseLatency>
+<Worst-caseLatency>243</Worst-caseLatency>
+<Best-caseRealTimeLatency>2.430 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>2.430 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>2.430 us</Worst-caseRealTimeLatency>
+<Interval-min>243</Interval-min>
+<Interval-max>243</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_52_1>
-<Slack>5.84</Slack>
-<TripCount>234</TripCount>
-<Latency>236</Latency>
-<AbsoluteTimeLatency>1888</AbsoluteTimeLatency>
+<Slack>7.30</Slack>
+<TripCount>240</TripCount>
+<Latency>241</Latency>
+<AbsoluteTimeLatency>2410</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>3</PipelineDepth>
+<PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
 </VITIS_LOOP_52_1>
@@ -48,7 +48,7 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>62</BRAM_18K>
-<FF>2181</FF>
+<FF>522</FF>
 <LUT>94</LUT>
 <URAM>0</URAM>
 <DSP>0</DSP>

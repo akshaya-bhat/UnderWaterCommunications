@@ -9,8 +9,8 @@ module receiver_cos_coefficients_table_ROM_AUTO_1R (
     reset, clk);
 
 parameter DataWidth = 18;
-parameter AddressWidth = 4;
-parameter AddressRange = 16;
+parameter AddressWidth = 5;
+parameter AddressRange = 23;
  
 input[AddressWidth-1:0] address0;
 input ce0;

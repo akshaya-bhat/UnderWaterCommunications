@@ -34,8 +34,8 @@ int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
 #pragma HLS array_partition variable=matched_Q type=cyclic factor=32
 #pragma HLS array_partition variable=delay_line_I type=cyclic factor=8
 #pragma HLS array_partition variable=delay_line_Q type=cyclic factor=8
-#pragma HLS array_partition variable=result_I type=cyclic factor=8
-#pragma HLS array_partition variable=result_Q type=cyclic factor=8
+#pragma HLS array_partition variable=result_I type=cyclic factor=16
+#pragma HLS array_partition variable=result_Q type=cyclic factor=16
     // The upsampled portion of the receiver. Returns a flag that is 0 if we don't have
     // a packet of symbols to equalize and decode, returns 1 if we do. Resulting symbols
     // will be written to result_I for I values, result_Q for Q values
@@ -144,10 +144,10 @@ int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
     // then we accumulate the results
     data_t arr_I[presize] = {0};
     data_t arr_Q[presize] = {0};
-#pragma HLS array_partition variable=arr_I type=cyclic factor=16
-#pragma HLS array_partition variable=arr_Q type=cyclic factor=16
+#pragma HLS array_partition variable=arr_I type=cyclic factor=64
+#pragma HLS array_partition variable=arr_Q type=cyclic factor=64
     for (int i=start_sample; i<start_sample+presize; i++) {
-#pragma HLS UNROLL factor=16
+#pragma HLS UNROLL factor=64
         arr_I[i-start_sample] = matched_I[i] * preamble_upsampled[i-start_sample];
         arr_Q[i-start_sample] = matched_Q[i] * preamble_upsampled[i-start_sample];
     }
@@ -262,7 +262,7 @@ int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
         // then we've identified the start of the packet!
         int i = start_sample+filtsize/2;
         for (int j=0; j<224; j++) {
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
         	// rotate to get rid of phase offset, by -theta
             // use x and y directly instead of normalizing to get sin and cos
             result_I[j] = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];

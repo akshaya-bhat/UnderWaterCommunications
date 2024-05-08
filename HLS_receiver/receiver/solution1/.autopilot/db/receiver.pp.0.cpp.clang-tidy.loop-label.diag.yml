@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          968946
+        Offset:          969286
         Length:          0
         ReplacementText: 'VITIS_LOOP_52_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          969213
+        Offset:          969553
         Length:          0
         ReplacementText: 'VITIS_LOOP_63_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          969623
+        Offset:          969963
         Length:          0
         ReplacementText: 'VITIS_LOOP_75_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -79,7 +79,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          969962
+        Offset:          970302
         Length:          0
         ReplacementText: 'VITIS_LOOP_84_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -88,7 +88,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          970410
+        Offset:          970750
         Length:          0
         ReplacementText: 'VITIS_LOOP_95_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -97,7 +97,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          970640
+        Offset:          970980
         Length:          0
         ReplacementText: 'VITIS_LOOP_102_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -106,7 +106,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          970849
+        Offset:          971189
         Length:          0
         ReplacementText: 'VITIS_LOOP_108_7: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -115,7 +115,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          971056
+        Offset:          971396
         Length:          0
         ReplacementText: 'VITIS_LOOP_114_8: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -124,7 +124,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          971263
+        Offset:          971603
         Length:          0
         ReplacementText: 'VITIS_LOOP_120_9: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -133,7 +133,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          971525
+        Offset:          971865
         Length:          0
         ReplacementText: 'VITIS_LOOP_132_10: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -142,7 +142,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          971987
+        Offset:          972327
         Length:          0
         ReplacementText: 'VITIS_LOOP_149_11: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -151,7 +151,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          972389
+        Offset:          972729
         Length:          0
         ReplacementText: 'VITIS_LOOP_161_12: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -160,7 +160,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          972766
+        Offset:          973106
         Length:          0
         ReplacementText: 'VITIS_LOOP_171_13: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -169,7 +169,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          973152
+        Offset:          973492
         Length:          0
         ReplacementText: 'VITIS_LOOP_181_14: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -178,7 +178,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          973537
+        Offset:          973877
         Length:          0
         ReplacementText: 'VITIS_LOOP_191_15: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -187,7 +187,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          973922
+        Offset:          974262
         Length:          0
         ReplacementText: 'VITIS_LOOP_201_16: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -196,7 +196,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          974307
+        Offset:          974647
         Length:          0
         ReplacementText: 'VITIS_LOOP_211_17: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -205,7 +205,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          974553
+        Offset:          974893
         Length:          0
         ReplacementText: 'VITIS_LOOP_219_18: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -214,7 +214,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          974861
+        Offset:          975201
         Length:          0
         ReplacementText: 'VITIS_LOOP_228_19: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -223,7 +223,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          975147
+        Offset:          975487
         Length:          0
         ReplacementText: 'VITIS_LOOP_237_20: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -232,7 +232,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          975348
+        Offset:          975688
         Length:          0
         ReplacementText: 'VITIS_LOOP_244_21: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -241,7 +241,7 @@ Diagnostics:
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        'C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp'
-        Offset:          975891
+        Offset:          976231
         Length:          0
         ReplacementText: 'VITIS_LOOP_264_22: '
 ...

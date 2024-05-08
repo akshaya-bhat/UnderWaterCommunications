@@ -715,7 +715,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "38", "EstimateLatencyMax" : "38",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "37", "EstimateLatencyMax" : "37",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -806,7 +806,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "arr_3_Q_7", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_181_14", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -816,88 +816,88 @@ set ArgLastReadFirstWriteLatency {
 		arr_2_I_16 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_1 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_17 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I {Type O LastRead -1 FirstWrite 2}
+		arr_3_I {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_16 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_1 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_17 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_2 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_18 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_3 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_19 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_1 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_1 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_2 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_18 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_3 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_19 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_1 {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q_1 {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_4 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_20 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_5 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_21 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_2 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_2 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_4 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_20 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_5 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_21 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_2 {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q_2 {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_6 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_22 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_7 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_23 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_3 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_3 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_6 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_22 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_7 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_23 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_3 {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q_3 {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_8 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_24 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_9 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_25 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_4 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_4 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_8 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_24 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_9 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_25 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_4 {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q_4 {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_10 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_26 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_11 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_27 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_5 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_5 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_10 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_26 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_11 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_27 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_5 {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q_5 {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_12 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_28 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_13 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_29 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_6 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_6 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_12 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_28 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_13 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_29 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_6 {Type O LastRead -1 FirstWrite 2}
+		arr_3_Q_6 {Type O LastRead -1 FirstWrite 1}
 		arr_2_I_14 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_30 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_15 {Type I LastRead 0 FirstWrite -1}
 		arr_2_I_31 {Type I LastRead 0 FirstWrite -1}
-		arr_3_I_7 {Type O LastRead -1 FirstWrite 2}
+		arr_3_I_7 {Type O LastRead -1 FirstWrite 1}
 		arr_2_Q_14 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_30 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_15 {Type I LastRead 0 FirstWrite -1}
 		arr_2_Q_31 {Type I LastRead 0 FirstWrite -1}
-		arr_3_Q_7 {Type O LastRead -1 FirstWrite 2}}}
+		arr_3_Q_7 {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "38", "Max" : "38"}
-	, {"Name" : "Interval", "Min" : "38", "Max" : "38"}
+	{"Name" : "Latency", "Min" : "37", "Max" : "37"}
+	, {"Name" : "Interval", "Min" : "37", "Max" : "37"}
 ]}
 
 set PipelineEnableSignalInfo {[

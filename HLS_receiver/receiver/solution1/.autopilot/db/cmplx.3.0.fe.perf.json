@@ -4,17 +4,17 @@
     "calls": "",
     "file": "receiver.cpp",
     "fileloc": 29,
-    "instructions": 7104,
+    "instructions": 8806,
     "loads": {
-      "G": 302,
+      "G": 398,
       "L": 504
     },
     "name": "receiver",
     "stores": {
       "G": 154,
-      "L": 310,
-      "T": 16
+      "L": 406,
+      "T": 32
     },
-    "total_instructions": 7104
+    "total_instructions": 8806
   }
 }

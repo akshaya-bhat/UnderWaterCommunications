@@ -5725,10 +5725,10 @@ typedef ap_fixed<24, 10> corr_t;
 extern int carrier_pos;
 extern int packet_start;
 extern int samples_in_packet;
-extern data_t samples_I[7500];
-extern data_t samples_Q[7500];
-extern data_t matched_I[7500];
-extern data_t matched_Q[7500];
+extern data_t samples_I[7692];
+extern data_t samples_Q[7692];
+extern data_t matched_I[7692];
+extern data_t matched_Q[7692];
 extern data_t delay_line_I[193];
 extern data_t delay_line_Q[193];
 extern corr_t corr_I_prev;
@@ -5979,9 +5979,9 @@ const data_t preamble_upsampled[2240] = {0.00075802,9.9857e-05,-0.00057418,-0.00
                                               0.0012496,0.00057418,-9.9857e-05,-0.00075802,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 
-const data_t cos_coefficients_table[16]={1,-0.38268,-0.70711,0.92388,0,-0.92388,0.70711,0.38268,-1,0.38268,0.70711,-0.92388,0,0.92388,-0.70711,-0.38268};
+const data_t cos_coefficients_table[23]={1,-0.57668,-0.33488,0.96292,-0.77571,-0.068242,0.85442,-0.91721,0.20346,0.68255,-0.99069,0.46007,0.46007,-0.99069,0.68255,0.20346,-0.91721,0.85442,-0.068242,-0.77571,0.96292,-0.33488,-0.57668};
 
-const data_t sin_coefficients_table[16]={0,0.92388,-0.70711,-0.38268,1,-0.38268,-0.70711,0.92388,0,-0.92388,0.70711,0.38268,-1,0.38268,0.70711,-0.92388};
+const data_t sin_coefficients_table[23]={0,0.81697,-0.94226,0.2698,0.63109,-0.99767,0.51958,0.3984,-0.97908,0.73084,0.13617,-0.88789,0.88789,-0.13617,-0.73084,0.97908,-0.3984,-0.51958,0.99767,-0.63109,-0.2698,0.94226,-0.81697};
 
 
 
@@ -5996,12 +5996,12 @@ using namespace std;
 int carrier_pos = 0;
 
 
-data_t samples_I[7500] = {0};
-data_t samples_Q[7500] = {0};
+data_t samples_I[7692] = {0};
+data_t samples_Q[7692] = {0};
 
 
-data_t matched_I[7500] = {0};
-data_t matched_Q[7500] = {0};
+data_t matched_I[7692] = {0};
+data_t matched_Q[7692] = {0};
 data_t delay_line_I[193] = {0};
 data_t delay_line_Q[193] = {0};
 
@@ -6020,14 +6020,18 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 #pragma HLSDIRECTIVE TOP name=receiver
 # 30 "receiver.cpp"
 
+#line 7 "C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=receiver
+# 30 "receiver.cpp"
+
 #pragma HLS array_partition variable=samples_I type=cyclic factor=32
 #pragma HLS array_partition variable=samples_Q type=cyclic factor=32
 #pragma HLS array_partition variable=matched_I type=cyclic factor=32
 #pragma HLS array_partition variable=matched_Q type=cyclic factor=32
 #pragma HLS array_partition variable=delay_line_I type=cyclic factor=8
 #pragma HLS array_partition variable=delay_line_Q type=cyclic factor=8
-#pragma HLS array_partition variable=result_I type=cyclic factor=8
-#pragma HLS array_partition variable=result_Q type=cyclic factor=8
+#pragma HLS array_partition variable=result_I type=cyclic factor=16
+#pragma HLS array_partition variable=result_Q type=cyclic factor=16
 
 
 
@@ -6036,18 +6040,18 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
  data_t new_sample_I = new_sample * cos_coefficients_table[carrier_pos];
     data_t new_sample_Q = new_sample * sin_coefficients_table[carrier_pos];
     carrier_pos++;
-    if(carrier_pos >= 16) {
+    if(carrier_pos >= 23) {
         carrier_pos = 0;
     }
 
 
-    VITIS_LOOP_52_1: for(int i=0; i<7500 -1; i++) {
+    VITIS_LOOP_52_1: for(int i=0; i<7692 -1; i++) {
 #pragma HLS UNROLL factor=32
  samples_I[i] = samples_I[i+1];
         samples_Q[i] = samples_Q[i+1];
     }
-    samples_I[7500 -1] = new_sample_I;
-    samples_Q[7500 -1] = new_sample_Q;
+    samples_I[7692 -1] = new_sample_I;
+    samples_Q[7692 -1] = new_sample_Q;
 
 
  data_t accum_I = 0.0;
@@ -6121,13 +6125,13 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 
 
 
-    VITIS_LOOP_132_10: for(int i=0; i<7500 -1; i++) {
+    VITIS_LOOP_132_10: for(int i=0; i<7692 -1; i++) {
 #pragma HLS UNROLL factor=32
  matched_I[i] = matched_I[i+1];
         matched_Q[i] = matched_Q[i+1];
     }
-    matched_I[7500 -1] = accum_I;
-    matched_Q[7500 -1] = accum_Q;
+    matched_I[7692 -1] = accum_I;
+    matched_Q[7692 -1] = accum_Q;
 
 
     corr_t corr_accum_I = 0.0;
@@ -6136,10 +6140,10 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 
     data_t arr_I[2240] = {0};
     data_t arr_Q[2240] = {0};
-#pragma HLS array_partition variable=arr_I type=cyclic factor=16
-#pragma HLS array_partition variable=arr_Q type=cyclic factor=16
+#pragma HLS array_partition variable=arr_I type=cyclic factor=64
+#pragma HLS array_partition variable=arr_Q type=cyclic factor=64
  VITIS_LOOP_149_11: for (int i=140; i<140 +2240; i++) {
-#pragma HLS UNROLL factor=16
+#pragma HLS UNROLL factor=64
  arr_I[i-140] = matched_I[i] * preamble_upsampled[i-140];
         arr_Q[i-140] = matched_Q[i] * preamble_upsampled[i-140];
     }
@@ -6254,7 +6258,7 @@ __attribute__((sdx_kernel("receiver", 0))) int receiver(corr_t *result_I, corr_t
 
         int i = 140 +193/2;
         VITIS_LOOP_264_22: for (int j=0; j<224; j++) {
-#pragma HLS UNROLL factor=8
+#pragma HLS UNROLL factor=16
 
 
  result_I[j] = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];

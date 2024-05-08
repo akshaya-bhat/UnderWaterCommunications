@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_237_20'" level="0">
-<item name = "Date">Thu May  2 22:09:55 2024
+<item name = "Date">Tue May  7 17:59:34 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00 ns, 4.844 ns, 2.16 ns</column>
+<column name="ap_clk">10.00 ns, 6.432 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">7, 7, 56.000 ns, 56.000 ns, 7, 7, no</column>
+<column name="">6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_237_20">5, 5, 3, 1, 1, 4, yes</column>
+<column name="- VITIS_LOOP_237_20">4, 4, 2, 1, 1, 4, yes</column>
 </table>
 </item>
 </section>
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 54, -</column>
-<column name="Register">-, -, 254, -, -</column>
+<column name="Register">-, -, 201, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -80,7 +80,7 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln237_fu_270_p2">+, 0, 0, 13, 4, 2</column>
 <column name="add_ln238_fu_289_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln239_fu_328_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln239_fu_333_p2">+, 0, 0, 39, 32, 32</column>
 <column name="or_ln238_fu_248_p2">or, 0, 0, 3, 3, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
@@ -100,22 +100,16 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
 <column name="arr_9_I_1_1_fu_78">24, 0, 24, 0</column>
 <column name="arr_9_I_1_2_fu_82">24, 0, 24, 0</column>
 <column name="arr_9_I_1_3_fu_86">24, 0, 24, 0</column>
-<column name="arr_9_I_1_5_reg_484">24, 0, 24, 0</column>
 <column name="arr_9_I_1_fu_74">24, 0, 24, 0</column>
 <column name="arr_9_Q_1_1_fu_94">24, 0, 24, 0</column>
 <column name="arr_9_Q_1_2_fu_98">24, 0, 24, 0</column>
 <column name="arr_9_Q_1_3_fu_102">24, 0, 24, 0</column>
-<column name="arr_9_Q_1_5_reg_489">24, 0, 24, 0</column>
 <column name="arr_9_Q_1_fu_90">24, 0, 24, 0</column>
 <column name="i_fu_70">4, 0, 4, 0</column>
-<column name="tmp_reg_456">1, 0, 1, 0</column>
-<column name="trunc_ln8_reg_470">2, 0, 2, 0</column>
-<column name="trunc_ln8_reg_470_pp0_iter1_reg">2, 0, 2, 0</column>
+<column name="trunc_ln8_reg_471">2, 0, 2, 0</column>
 </table>
 </item>
 </section>

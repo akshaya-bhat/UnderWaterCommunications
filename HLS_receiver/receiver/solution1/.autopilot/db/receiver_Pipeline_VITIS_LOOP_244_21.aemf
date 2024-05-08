@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714712995797">
-  <ports id="1" name="arr_9_I_0_0_reload" type="PortType" coreId="544433525" bitwidth="24">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1715129974555">
+  <ports id="1" name="arr_9_I_0_0_reload" type="PortType" coreId="1852793695" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="2" name="arr_9_I_2_0121_reload" type="PortType" coreId="1953391988" bitwidth="24">
+  <ports id="2" name="arr_9_I_2_0121_reload" type="PortType" coreId="544433525" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="arr_9_I_1_0120_reload" type="PortType" coreId="1953391988" bitwidth="24">
+  <ports id="3" name="arr_9_I_1_0120_reload" type="PortType" coreId="1717920800" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="arr_9_I_3_0122_reload" type="PortType" coreId="0" bitwidth="24">
+  <ports id="4" name="arr_9_I_3_0122_reload" type="PortType" coreId="1953391988" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="5" name="arr_9_Q_0_0_reload" type="PortType" coreId="1953391988" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="arr_9_Q_2_0124_reload" type="PortType" coreId="1953391988" bitwidth="24">
+  <ports id="6" name="arr_9_Q_2_0124_reload" type="PortType" coreId="544433525" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="7" name="arr_9_Q_1_0123_reload" type="PortType" coreId="1953391988" bitwidth="24">
+  <ports id="7" name="arr_9_Q_1_0123_reload" type="PortType" coreId="1717920800" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="8" name="arr_9_Q_3_0125_reload" type="PortType" coreId="1717920800" bitwidth="24">
+  <ports id="8" name="arr_9_Q_3_0125_reload" type="PortType" coreId="1634300513" bitwidth="24">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <ports id="9" name="arr_10_Q_1_0127_out" type="PortType" coreId="1953391988" bitwidth="24" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="10" name="arr_10_Q_0_0_out" type="PortType" coreId="0" bitwidth="24" direction="DirOut">
+  <ports id="10" name="arr_10_Q_0_0_out" type="PortType" coreId="1953391988" bitwidth="24" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="11" name="arr_10_I_1_0126_out" type="PortType" coreId="1953391988" bitwidth="24" direction="DirOut">
+  <ports id="11" name="arr_10_I_1_0126_out" type="PortType" coreId="0" bitwidth="24" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
-  <ports id="12" name="arr_10_I_0_0_out" type="PortType" coreId="1931485194" bitwidth="24" direction="DirOut">
+  <ports id="12" name="arr_10_I_0_0_out" type="PortType" coreId="0" bitwidth="24" direction="DirOut">
     <dataInputObjs>write</dataInputObjs>
   </ports>
   <edges id="83" source_obj="//@ports.7" sink_obj="//@blocks.0/@node_objs.5"/>
@@ -133,7 +133,7 @@
   <edges id="227" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
   <blocks id="30" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.body799</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i" originalName="i" coreId="1330007552" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i" originalName="i" coreId="16843010" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -146,13 +146,13 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="arr_10_I_1_3" originalName="arr_10_I[1]" coreId="0" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="arr_10_I_1_3" originalName="arr_10_I[1]" coreId="135798592" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="arr_10_Q_1" originalName="arr_10_Q[1]" coreId="1688644216" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="arr_10_Q_1" originalName="arr_10_Q[1]" coreId="1936942336" bitwidth="24" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
@@ -165,92 +165,92 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="arr_9_Q_3_0125_reload_read" coreId="1314013440" bitwidth="24" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="arr_9_Q_3_0125_reload_read" coreId="1397508096" bitwidth="24" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_Q_3_0125_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="arr_9_Q_1_0123_reload_read" coreId="1688637712" bitwidth="24" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="arr_9_Q_1_0123_reload_read" coreId="0" bitwidth="24" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_Q_1_0123_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="arr_9_Q_2_0124_reload_read" coreId="1314013440" bitwidth="24" opcode="read" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="arr_9_Q_2_0124_reload_read" coreId="135799360" bitwidth="24" opcode="read" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_Q_2_0124_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="arr_9_Q_0_0_reload_read" coreId="1688653176" bitwidth="24" opcode="read" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="arr_9_Q_0_0_reload_read" coreId="135853864" bitwidth="24" opcode="read" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_Q_0_0_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="arr_9_I_3_0122_reload_read" coreId="1936942336" bitwidth="24" opcode="read" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="arr_9_I_3_0122_reload_read" coreId="0" bitwidth="24" opcode="read" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_I_3_0122_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="arr_9_I_1_0120_reload_read" coreId="0" bitwidth="24" opcode="read" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="arr_9_I_1_0120_reload_read" coreId="135852968" bitwidth="24" opcode="read" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_I_1_0120_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="arr_9_I_2_0121_reload_read" coreId="1688656400" bitwidth="24" opcode="read" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="arr_9_I_2_0121_reload_read" coreId="2004196864" bitwidth="24" opcode="read" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_I_2_0121_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="arr_9_I_0_0_reload_read" coreId="1671043104" bitwidth="24" opcode="read" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="arr_9_I_0_0_reload_read" coreId="7955712" bitwidth="24" opcode="read" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <dataInputObjs>arr_9_I_0_0_reload</dataInputObjs>
       <dataOutputObjs>select</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="arr_10_Q_1_write_ln0" coreId="1688642936" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="arr_10_Q_1_write_ln0" coreId="1717924352" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arr_10_I_1_write_ln0" coreId="1687869824" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arr_10_I_1_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="15" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_write_ln0" coreId="7955712" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_write_ln0" coreId="136873232" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="16" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln0" coreId="1717924352" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln0" coreId="135835560" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <controlInputObjs>for.body799</controlInputObjs>
     </node_objs>
   </blocks>
   <blocks id="74" name="_ZN13ap_fixed_baseILi25ELi11ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i472_ifconv.exitStub" type="BlockType">
     <controlInputObjs>for.body799</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="arr_10_I_1_load" coreId="1701980192" bitwidth="24" opcode="load" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="arr_10_I_1_load" coreId="0" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="arr_10_I_1_3_load" coreId="1689504400" bitwidth="24" opcode="load" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="arr_10_I_1_3_load" coreId="135837120" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="arr_10_Q_1_load" coreId="1689193664" bitwidth="24" opcode="load" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="arr_10_Q_1_load" coreId="135570240" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="arr_10_Q_1_3_load" coreId="0" bitwidth="24" opcode="load" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="68" name="arr_10_Q_1_3_load" coreId="1397508096" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="arr_10_Q_1_0127_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="arr_10_Q_1_0127_out_write_ln0" coreId="0" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>arr_10_Q_1_0127_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="arr_10_Q_0_0_out_write_ln0" coreId="691090482" opcode="write" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="70" name="arr_10_Q_0_0_out_write_ln0" coreId="135186352" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>arr_10_Q_0_0_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="arr_10_I_1_0126_out_write_ln0" coreId="1599294464" opcode="write" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="arr_10_I_1_0126_out_write_ln0" coreId="135826600" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>arr_10_I_1_0126_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="arr_10_I_0_0_out_write_ln0" coreId="1688668688" opcode="write" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="arr_10_I_0_0_out_write_ln0" coreId="1717924352" opcode="write" nodeLabel="1.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>arr_10_I_0_0_out</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="73" name="_ln0" coreId="136141824" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1"/>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="255" pipe_depth="2" RegionName="VITIS_LOOP_244_21">
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="255" pipe_depth="1" RegionName="VITIS_LOOP_244_21">
     <basic_blocks id="35" name="for.body799" type="BlockType">
       <controlInputObjs>newFuncRoot</controlInputObjs>
       <controlInputObjs>for.body799.split</controlInputObjs>
@@ -258,7 +258,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>_ZN13ap_fixed_baseILi25ELi11ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC2Ei.exit.i472_ifconv.exitStub</controlOutputObjs>
       <controlOutputObjs>for.body799.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="i_4" lineNumber="245" originalName="i" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="3" opcode="load" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="i_4" lineNumber="245" originalName="i" fileName="receiver.cpp" fileDirectory="../." coreId="136871552" contextFuncName="receiver" bitwidth="3" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>bitselect</dataOutputObjs>
@@ -266,13 +266,13 @@
         <dataOutputObjs>bitselect</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." rtlName="tmp_fu_174_p3" coreId="1688663184" contextFuncName="receiver" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="tmp" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." rtlName="tmp_fu_174_p3" coreId="135189184" contextFuncName="receiver" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="br" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <controlInputObjs>for.body799.split</controlInputObjs>
@@ -287,74 +287,74 @@
       <controlInputObjs>for.body799</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body799</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="arr_10_I_1_load_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." coreId="1688646928" contextFuncName="receiver" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="arr_10_I_1_load_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." coreId="135841728" contextFuncName="receiver" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="arr_10_I_1_3_load_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." coreId="1689497632" contextFuncName="receiver" bitwidth="24" opcode="load" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="arr_10_I_1_3_load_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="arr_10_Q_1_load_1" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." coreId="7955712" contextFuncName="receiver" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="arr_10_Q_1_load_1" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." coreId="135853376" contextFuncName="receiver" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="arr_10_Q_1_3_load_1" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." coreId="1688281488" contextFuncName="receiver" bitwidth="24" opcode="load" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="arr_10_Q_1_3_load_1" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." coreId="1936942336" contextFuncName="receiver" bitwidth="24" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="empty" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="empty_fu_188_p1" coreId="0" contextFuncName="receiver" bitwidth="2" opcode="trunc" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="empty" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="empty_fu_194_p1" coreId="1819113472" contextFuncName="receiver" bitwidth="2" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>or</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln245" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="icmp_ln245_fu_192_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="receiver" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.56" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="icmp_ln245" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="icmp_ln245_fu_198_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="receiver" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.56" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="select_ln245" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln245_fu_198_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" m_display="0" m_topoIndex="25" m_clusterGroupNumber="1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="select_ln245" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln245_fu_204_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="or_ln245" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="or_ln245_fu_206_p2" coreId="0" contextFuncName="receiver" bitwidth="2" opcode="or" m_display="0" m_topoIndex="26" m_clusterGroupNumber="2">
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="or_ln245" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="or_ln245_fu_210_p2" coreId="0" contextFuncName="receiver" bitwidth="2" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="2">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>trunc</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="icmp_ln245_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="icmp_ln245_1_fu_212_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="receiver" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.56" m_topoIndex="27" m_clusterGroupNumber="2">
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="icmp_ln245_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="icmp_ln245_1_fu_216_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="receiver" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.56" m_topoIndex="29" m_clusterGroupNumber="2">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>or</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="select_ln245_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln245_1_fu_218_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" m_display="0" m_topoIndex="28" m_clusterGroupNumber="1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="select_ln245_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln245_1_fu_222_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="arr_10_I_0" lineNumber="245" originalName="arr_10_I[0]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_I_0_fu_226_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="24" opcode="add" m_display="0" m_delay="2.31" m_topoIndex="29" m_clusterGroupNumber="1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="arr_10_I_0" lineNumber="245" originalName="arr_10_I[0]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_I_0_fu_228_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="24" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.31" m_topoIndex="31" m_clusterGroupNumber="1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="tmp_1_reg_388" coreId="0" contextFuncName="receiver" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="tmp_1" lineNumber="245" fileName="receiver.cpp" fileDirectory="../." rtlName="tmp_1_fu_234_p3" coreId="134450848" contextFuncName="receiver" bitwidth="1" opcode="bitselect" nodeLabel="1.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
@@ -363,87 +363,87 @@
         <dataOutputObjs>select</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="arr_10_I_1_5" lineNumber="245" originalName="arr_10_I[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_I_1_5_fu_240_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" m_display="0" m_delay="0.69" m_topoIndex="31" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="arr_10_I_1_5" lineNumber="245" originalName="arr_10_I[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_I_1_5_fu_242_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.69" m_topoIndex="33" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="arr_10_I_1_6" lineNumber="245" originalName="arr_10_I[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_I_1_6_fu_305_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.69" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="arr_10_I_1_6" lineNumber="245" originalName="arr_10_I[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_I_1_6_fu_250_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.69" m_topoIndex="34" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="245" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="select_ln246" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln246_fu_248_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" m_display="0" m_topoIndex="32" m_clusterGroupNumber="3">
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="select_ln246" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln246_fu_258_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="3">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="select_ln246_1" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln246_1_fu_256_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" m_display="0" m_topoIndex="33" m_clusterGroupNumber="3">
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="select_ln246_1" lineNumber="246" fileName="receiver.cpp" fileDirectory="../." rtlName="select_ln246_1_fu_264_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="3">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>icmp</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="arr_10_Q_0" lineNumber="246" originalName="arr_10_Q[0]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_Q_0_fu_264_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="24" opcode="add" m_display="0" m_delay="2.31" m_topoIndex="34" m_clusterGroupNumber="3">
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="arr_10_Q_0" lineNumber="246" originalName="arr_10_Q[0]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_Q_0_fu_270_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="24" opcode="add" nodeLabel="1.0" m_display="0" m_delay="2.31" m_topoIndex="37" m_clusterGroupNumber="3">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>select</dataInputObjs>
         <dataOutputObjs>select</dataOutputObjs>
         <dataOutputObjs>select</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="arr_10_Q_1_5" lineNumber="246" originalName="arr_10_Q[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_Q_1_5_fu_270_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" m_display="0" m_delay="0.69" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="arr_10_Q_1_5" lineNumber="246" originalName="arr_10_Q[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_Q_1_5_fu_276_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.69" m_topoIndex="38" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="arr_10_Q_1_6" lineNumber="246" originalName="arr_10_Q[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_Q_1_6_fu_311_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.69" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="arr_10_Q_1_6" lineNumber="246" originalName="arr_10_Q[1]" fileName="receiver.cpp" fileDirectory="../." rtlName="arr_10_Q_1_6_fu_284_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="receiver" bitwidth="24" opcode="select" nodeLabel="1.0" m_display="0" m_delay="0.69" m_topoIndex="39" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="246" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>bitselect</dataInputObjs>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="add_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." rtlName="add_ln244_fu_278_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="3" opcode="add" m_display="0" m_delay="1.65" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="add_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." rtlName="add_ln244_fu_292_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="receiver" bitwidth="3" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.65" m_topoIndex="40" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="arr_10_Q_1_3_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="1688687504" contextFuncName="receiver" opcode="store" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="arr_10_Q_1_3_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="1702257920" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="arr_10_Q_1_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="arr_10_Q_1_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="82331648" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="42" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="arr_10_I_1_3_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="store" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="arr_10_I_1_3_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="arr_10_I_1_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="1688695312" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="arr_10_I_1_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="44" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>select</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="i_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="i_write_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="135857960" contextFuncName="receiver" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="45" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="br_ln244" lineNumber="244" fileName="receiver.cpp" fileDirectory="../." coreId="1330007552" contextFuncName="receiver" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="244" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <controlInputObjs>for.body799</controlInputObjs>
       </node_objs>
@@ -456,47 +456,71 @@
   </regions>
   <ScheduleInfo time="0"/>
   <ScheduleInfo time="1"/>
-  <regnodes realName="arr_10_I_1_3_reg_358">
-    <nodeIds>15</nodeIds>
-  </regnodes>
-  <regnodes realName="arr_10_Q_1_reg_365">
-    <nodeIds>16</nodeIds>
-  </regnodes>
-  <regnodes realName="arr_10_Q_0_reg_394">
-    <nodeIds>54</nodeIds>
-  </regnodes>
-  <regnodes realName="tmp_1_reg_388">
-    <nodeIds>49</nodeIds>
-  </regnodes>
-  <regnodes realName="i_reg_343">
+  <regnodes realName="i_reg_339">
     <nodeIds>13</nodeIds>
   </regnodes>
-  <regnodes realName="arr_10_Q_1_3_reg_373">
+  <regnodes realName="arr_10_Q_1_3_reg_369">
     <nodeIds>17</nodeIds>
   </regnodes>
-  <regnodes realName="arr_10_I_1_reg_350">
+  <regnodes realName="arr_9_Q_1_0123_reload_read_reg_381">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_9_Q_3_0125_reload_read_reg_376">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_10_I_1_reg_346">
     <nodeIds>14</nodeIds>
   </regnodes>
-  <regnodes realName="arr_10_I_0_reg_383">
-    <nodeIds>48</nodeIds>
+  <regnodes realName="arr_9_I_0_0_reload_read_reg_411">
+    <nodeIds>25</nodeIds>
   </regnodes>
-  <expressionNodes realName="select_ln246_fu_248">
-    <nodeIds>52</nodeIds>
+  <regnodes realName="arr_9_I_2_0121_reload_read_reg_406">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_9_I_3_0122_reload_read_reg_396">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_9_Q_0_0_reload_read_reg_391">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_9_I_1_0120_reload_read_reg_401">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_10_I_1_3_reg_354">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_10_Q_1_reg_361">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="arr_9_Q_2_0124_reload_read_reg_386">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <expressionNodes realName="add_ln244_fu_292">
+    <nodeIds>57</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="arr_10_I_1_6_fu_305">
-    <nodeIds>51</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="arr_10_Q_1_5_fu_270">
-    <nodeIds>55</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln245_fu_198">
+  <expressionNodes realName="select_ln245_fu_204">
     <nodeIds>44</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="or_ln245_fu_206">
-    <nodeIds>45</nodeIds>
+  <expressionNodes realName="select_ln246_fu_258">
+    <nodeIds>52</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="arr_10_Q_1_6_fu_311">
+  <expressionNodes realName="tmp_1_fu_234">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arr_10_I_1_5_fu_242">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln245_1_fu_222">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arr_10_Q_1_6_fu_284">
     <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln245_fu_198">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arr_10_Q_1_5_fu_276">
+    <nodeIds>55</nodeIds>
   </expressionNodes>
   <expressionNodes realName="i_fu_60">
     <nodeIds>13</nodeIds>
@@ -504,50 +528,50 @@
   <expressionNodes realName="arr_10_I_1_3_fu_68">
     <nodeIds>15</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="arr_10_I_0_fu_226">
+  <expressionNodes realName="empty_fu_194">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arr_10_I_0_fu_228">
     <nodeIds>48</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="tmp_1_fu_232">
-    <nodeIds>49</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln245_1_fu_218">
-    <nodeIds>47</nodeIds>
+  <expressionNodes realName="select_ln246_1_fu_264">
+    <nodeIds>53</nodeIds>
   </expressionNodes>
   <expressionNodes realName="tmp_fu_174">
     <nodeIds>33</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="empty_fu_188">
-    <nodeIds>40</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="select_ln246_1_fu_256">
-    <nodeIds>53</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln245_1_fu_212">
-    <nodeIds>46</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="arr_10_Q_0_fu_264">
-    <nodeIds>54</nodeIds>
-  </expressionNodes>
   <expressionNodes realName="arr_10_Q_1_fu_72">
     <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln245_1_fu_216">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arr_10_Q_0_fu_270">
+    <nodeIds>54</nodeIds>
   </expressionNodes>
   <expressionNodes realName="arr_10_Q_1_3_fu_76">
     <nodeIds>17</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="add_ln244_fu_278">
-    <nodeIds>57</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="arr_10_I_1_5_fu_240">
-    <nodeIds>50</nodeIds>
+  <expressionNodes realName="arr_10_I_1_6_fu_250">
+    <nodeIds>51</nodeIds>
   </expressionNodes>
   <expressionNodes realName="arr_10_I_1_fu_64">
     <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="icmp_ln245_fu_192">
-    <nodeIds>43</nodeIds>
+  <expressionNodes realName="or_ln245_fu_210">
+    <nodeIds>45</nodeIds>
   </expressionNodes>
+  <ioNodes realName="arr_10_Q_1_3_load_1_load_fu_191">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arr_10_Q_1_3_load_load_fu_335">
+    <nodeIds>68</nodeIds>
+  </ioNodes>
   <ioNodes realName="write_ln0_write_fu_128">
     <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln244_store_fu_298">
+    <nodeIds>58</nodeIds>
   </ioNodes>
   <ioNodes realName="arr_9_I_3_0122_reload_read_read_fu_104">
     <nodeIds>22</nodeIds>
@@ -555,23 +579,23 @@
   <ioNodes realName="arr_9_Q_0_0_reload_read_read_fu_98">
     <nodeIds>21</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln244_store_fu_294">
-    <nodeIds>62</nodeIds>
-  </ioNodes>
-  <ioNodes realName="arr_10_I_1_load_1_load_fu_299">
-    <nodeIds>36</nodeIds>
+  <ioNodes realName="arr_10_I_1_load_load_fu_323">
+    <nodeIds>65</nodeIds>
   </ioNodes>
   <ioNodes realName="write_ln0_write_fu_142">
     <nodeIds>71</nodeIds>
   </ioNodes>
-  <ioNodes realName="arr_10_I_1_load_load_fu_327">
-    <nodeIds>65</nodeIds>
+  <ioNodes realName="arr_10_I_1_3_load_1_load_fu_185">
+    <nodeIds>37</nodeIds>
   </ioNodes>
   <ioNodes realName="arr_9_Q_2_0124_reload_read_read_fu_92">
     <nodeIds>20</nodeIds>
   </ioNodes>
   <ioNodes realName="write_ln0_write_fu_149">
     <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arr_10_Q_1_load_load_fu_331">
+    <nodeIds>67</nodeIds>
   </ioNodes>
   <ioNodes realName="store_ln0_store_fu_166">
     <nodeIds>28</nodeIds>
@@ -582,26 +606,23 @@
   <ioNodes realName="arr_9_I_0_0_reload_read_read_fu_122">
     <nodeIds>25</nodeIds>
   </ioNodes>
+  <ioNodes realName="store_ln244_store_fu_318">
+    <nodeIds>62</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arr_10_I_1_3_load_load_fu_327">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
   <ioNodes realName="i_4_load_fu_171">
     <nodeIds>31</nodeIds>
   </ioNodes>
-  <ioNodes realName="store_ln244_store_fu_317">
-    <nodeIds>59</nodeIds>
+  <ioNodes realName="store_ln244_store_fu_313">
+    <nodeIds>61</nodeIds>
   </ioNodes>
-  <ioNodes realName="arr_10_Q_1_3_load_load_fu_339">
-    <nodeIds>68</nodeIds>
+  <ioNodes realName="arr_10_I_1_load_1_load_fu_182">
+    <nodeIds>36</nodeIds>
   </ioNodes>
   <ioNodes realName="arr_9_Q_3_0125_reload_read_read_fu_80">
     <nodeIds>18</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln244_store_fu_289">
-    <nodeIds>60</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln244_store_fu_322">
-    <nodeIds>61</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln244_store_fu_284">
-    <nodeIds>58</nodeIds>
   </ioNodes>
   <ioNodes realName="write_ln0_write_fu_135">
     <nodeIds>70</nodeIds>
@@ -609,29 +630,23 @@
   <ioNodes realName="arr_9_I_2_0121_reload_read_read_fu_116">
     <nodeIds>24</nodeIds>
   </ioNodes>
-  <ioNodes realName="arr_10_Q_1_3_load_1_load_fu_185">
-    <nodeIds>39</nodeIds>
-  </ioNodes>
-  <ioNodes realName="arr_10_I_1_3_load_load_fu_331">
-    <nodeIds>66</nodeIds>
+  <ioNodes realName="arr_10_Q_1_load_1_load_fu_188">
+    <nodeIds>38</nodeIds>
   </ioNodes>
   <ioNodes realName="store_ln0_store_fu_156">
     <nodeIds>26</nodeIds>
   </ioNodes>
-  <ioNodes realName="arr_10_Q_1_load_load_fu_335">
-    <nodeIds>67</nodeIds>
-  </ioNodes>
   <ioNodes realName="arr_9_I_1_0120_reload_read_read_fu_110">
     <nodeIds>23</nodeIds>
   </ioNodes>
-  <ioNodes realName="arr_10_Q_1_load_1_load_fu_302">
-    <nodeIds>38</nodeIds>
-  </ioNodes>
-  <ioNodes realName="arr_10_I_1_3_load_1_load_fu_182">
-    <nodeIds>37</nodeIds>
+  <ioNodes realName="store_ln244_store_fu_308">
+    <nodeIds>60</nodeIds>
   </ioNodes>
   <ioNodes realName="arr_9_Q_1_0123_reload_read_read_fu_86">
     <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln244_store_fu_303">
+    <nodeIds>59</nodeIds>
   </ioNodes>
   <ioPorts name="arr_10_I_0_0_out">
     <contents name="write">
@@ -712,13 +727,19 @@
       <operations id="27" stage="1" latency="1"/>
       <operations id="28" stage="1" latency="1"/>
       <operations id="29" stage="1" latency="1"/>
+    </states>
+    <states id="2">
       <operations id="31" stage="1" latency="1"/>
       <operations id="32" stage="1" latency="1"/>
       <operations id="33" stage="1" latency="1"/>
       <operations id="34" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
       <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
       <operations id="39" stage="1" latency="1"/>
       <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
       <operations id="43" stage="1" latency="1"/>
       <operations id="44" stage="1" latency="1"/>
       <operations id="45" stage="1" latency="1"/>
@@ -727,14 +748,19 @@
       <operations id="48" stage="1" latency="1"/>
       <operations id="49" stage="1" latency="1"/>
       <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
       <operations id="52" stage="1" latency="1"/>
       <operations id="53" stage="1" latency="1"/>
       <operations id="54" stage="1" latency="1"/>
       <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
       <operations id="57" stage="1" latency="1"/>
       <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
       <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
       <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
       <operations id="65" stage="1" latency="1"/>
       <operations id="66" stage="1" latency="1"/>
       <operations id="67" stage="1" latency="1"/>
@@ -744,17 +770,6 @@
       <operations id="71" stage="1" latency="1"/>
       <operations id="72" stage="1" latency="1"/>
       <operations id="73" stage="1" latency="1"/>
-    </states>
-    <states id="2">
-      <operations id="36" stage="1" latency="1"/>
-      <operations id="38" stage="1" latency="1"/>
-      <operations id="41" stage="1" latency="1"/>
-      <operations id="42" stage="1" latency="1"/>
-      <operations id="51" stage="1" latency="1"/>
-      <operations id="56" stage="1" latency="1"/>
-      <operations id="59" stage="1" latency="1"/>
-      <operations id="61" stage="1" latency="1"/>
-      <operations id="63" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
@@ -771,7 +786,7 @@
       <basicBlocks>30</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_244_21" mII="1" mDepth="2" mMinTripCount="2" mMaxTripCount="2" mMinLatency="2" mMaxLatency="2" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_244_21" mII="1" mDepth="1" mMinTripCount="2" mMaxTripCount="2" mMinLatency="2" mMaxLatency="2" mType="1">
       <basicBlocks>35</basicBlocks>
       <basicBlocks>64</basicBlocks>
       <mDfPipe/>

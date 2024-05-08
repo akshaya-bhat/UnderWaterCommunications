@@ -15,8 +15,8 @@ set DLRegItemOffset 0
 set C_modelName {receiver_Pipeline_VITIS_LOOP_52_1}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ samples_I_11 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ samples_Q_11 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
+	{ samples_I_11 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ samples_Q_11 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
@@ -75,7 +75,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "238", "EstimateLatencyMax" : "238",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "243", "EstimateLatencyMax" : "243",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -150,7 +150,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "samples_Q_31", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_52_1", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.samples_I_1_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.samples_I_2_U", "Parent" : "0"},
 	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.samples_I_3_U", "Parent" : "0"},
@@ -228,9 +228,9 @@ set ArgLastReadFirstWriteLatency {
 		samples_I_8 {Type IO LastRead -1 FirstWrite -1}
 		samples_I_9 {Type IO LastRead -1 FirstWrite -1}
 		samples_I_10 {Type IO LastRead -1 FirstWrite -1}
-		samples_I_11 {Type IO LastRead 0 FirstWrite 2}
+		samples_I_11 {Type IO LastRead 0 FirstWrite 1}
 		samples_I_0 {Type IO LastRead -1 FirstWrite -1}
-		samples_Q_11 {Type IO LastRead 0 FirstWrite 2}
+		samples_Q_11 {Type IO LastRead 0 FirstWrite 1}
 		samples_Q_1 {Type IO LastRead -1 FirstWrite -1}
 		samples_Q_0 {Type IO LastRead -1 FirstWrite -1}
 		samples_Q_2 {Type IO LastRead -1 FirstWrite -1}
@@ -286,8 +286,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "238", "Max" : "238"}
-	, {"Name" : "Interval", "Min" : "238", "Max" : "238"}
+	{"Name" : "Latency", "Min" : "243", "Max" : "243"}
+	, {"Name" : "Interval", "Min" : "243", "Max" : "243"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -295,6 +295,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	samples_I_11 { ap_memory {  { samples_I_11_address0 mem_address 1 8 }  { samples_I_11_ce0 mem_ce 1 1 }  { samples_I_11_we0 mem_we 1 1 }  { samples_I_11_d0 mem_din 1 18 }  { samples_I_11_address1 MemPortADDR2 1 8 }  { samples_I_11_ce1 MemPortCE2 1 1 }  { samples_I_11_q1 MemPortDOUT2 0 18 } } }
-	samples_Q_11 { ap_memory {  { samples_Q_11_address0 mem_address 1 8 }  { samples_Q_11_ce0 mem_ce 1 1 }  { samples_Q_11_we0 mem_we 1 1 }  { samples_Q_11_d0 mem_din 1 18 }  { samples_Q_11_address1 MemPortADDR2 1 8 }  { samples_Q_11_ce1 MemPortCE2 1 1 }  { samples_Q_11_q1 MemPortDOUT2 0 18 } } }
+	samples_I_11 { ap_memory {  { samples_I_11_address0 mem_address 1 8 }  { samples_I_11_ce0 mem_ce 1 1 }  { samples_I_11_we0 mem_we 1 1 }  { samples_I_11_d0 mem_din 1 18 }  { samples_I_11_address1 MemPortADDR2 1 8 }  { samples_I_11_ce1 MemPortCE2 1 1 }  { samples_I_11_q1 in_data 0 18 } } }
+	samples_Q_11 { ap_memory {  { samples_Q_11_address0 mem_address 1 8 }  { samples_Q_11_ce0 mem_ce 1 1 }  { samples_Q_11_we0 mem_we 1 1 }  { samples_Q_11_d0 mem_din 1 18 }  { samples_Q_11_address1 MemPortADDR2 1 8 }  { samples_Q_11_ce1 MemPortCE2 1 1 }  { samples_Q_11_q1 in_data 0 18 } } }
 }
