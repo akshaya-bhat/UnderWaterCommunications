@@ -88,7 +88,7 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_block_pp0_stage0_11001;
 reg   [2:0] lshr_ln_reg_236;
-wire   [63:0] i_18_cast21_fu_138_p1;
+wire   [63:0] i_18_cast22_fu_138_p1;
 wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln229_fu_154_p1;
 wire   [63:0] zext_ln229_1_fu_196_p1;
@@ -325,11 +325,11 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign arr_7_I_address0 = zext_ln229_fu_154_p1;
 
-assign arr_7_I_address1 = i_18_cast21_fu_138_p1;
+assign arr_7_I_address1 = i_18_cast22_fu_138_p1;
 
 assign arr_7_Q_address0 = zext_ln229_fu_154_p1;
 
-assign arr_7_Q_address1 = i_18_cast21_fu_138_p1;
+assign arr_7_Q_address1 = i_18_cast22_fu_138_p1;
 
 assign arr_8_I_address0 = zext_ln229_1_fu_196_p1;
 
@@ -341,7 +341,7 @@ assign arr_8_Q_d0 = ($signed(sext_ln230_1_fu_205_p1) + $signed(sext_ln230_fu_201
 
 assign empty_fu_144_p1 = ap_sig_allocacmp_i_6[3:0];
 
-assign i_18_cast21_fu_138_p1 = ap_sig_allocacmp_i_6;
+assign i_18_cast22_fu_138_p1 = ap_sig_allocacmp_i_6;
 
 assign or_ln229_fu_148_p2 = (empty_fu_144_p1 | 4'd1);
 

@@ -790,7 +790,7 @@ for.inc350.0.split:71 %matched_Q_10_load = load i8 %matched_Q_10_addr
 
 <Node id="143" bw="1" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-for.inc350.0.split:74 %icmp_ln132 = icmp_ult  i13 %or_ln134, i13 7499
+for.inc350.0.split:74 %icmp_ln132 = icmp_ult  i13 %or_ln134, i13 7691
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln132"/></StgValue>
@@ -2951,7 +2951,7 @@ for.inc350.0.split:73 %store_ln135 = store i18 %matched_Q_11_load, i8 %matched_Q
 
 <Node id="144" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc350.0.split:75 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 234, i64 234, i64 234
+for.inc350.0.split:75 %speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 240, i64 240, i64 240
 
 ]]></Node>
 <StgValue><ssdm name="speclooptripcount_ln0"/></StgValue>

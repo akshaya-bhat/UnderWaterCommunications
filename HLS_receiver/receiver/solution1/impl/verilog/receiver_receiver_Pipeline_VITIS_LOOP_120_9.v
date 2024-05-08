@@ -98,7 +98,7 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_block_pp0_stage0_11001;
 reg   [1:0] trunc_ln4_reg_363;
-wire   [63:0] i_8_cast16_fu_200_p1;
+wire   [63:0] i_8_cast17_fu_200_p1;
 wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln121_fu_212_p1;
 reg   [2:0] i_8_fu_56;
@@ -390,11 +390,11 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign filt_5_I_address0 = zext_ln121_fu_212_p1;
 
-assign filt_5_I_address1 = i_8_cast16_fu_200_p1;
+assign filt_5_I_address1 = i_8_cast17_fu_200_p1;
 
 assign filt_5_Q_address0 = zext_ln121_fu_212_p1;
 
-assign filt_5_Q_address1 = i_8_cast16_fu_200_p1;
+assign filt_5_Q_address1 = i_8_cast17_fu_200_p1;
 
 assign filt_6_I_0_0_out = filt_6_I_1_fu_60;
 
@@ -412,7 +412,7 @@ assign filt_6_Q_1_4_fu_260_p2 = (filt_5_Q_q0 + filt_5_Q_q1);
 
 assign filt_6_Q_2_0119_out = filt_6_Q_1_2_fu_80;
 
-assign i_8_cast16_fu_200_p1 = ap_sig_allocacmp_i;
+assign i_8_cast17_fu_200_p1 = ap_sig_allocacmp_i;
 
 assign icmp_ln120_fu_194_p2 = ((ap_sig_allocacmp_i == 3'd6) ? 1'b1 : 1'b0);
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714719436939">
-  <ports id="1" name="filt_3_I" type="PortType" coreName="RAM" coreId="4294967295" bitwidth="18" iftype="IfTypeRegister" arraysize="24">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1715129963464">
+  <ports id="1" name="filt_3_I" type="PortType" coreName="RAM" coreId="1931485194" bitwidth="18" iftype="IfTypeRegister" arraysize="24">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="filt_4_I" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="18" direction="DirOut" iftype="IfTypeRegister" arraysize="12">
+  <ports id="2" name="filt_4_I" type="PortType" coreName="RAM" coreId="1852793695" bitwidth="18" direction="DirOut" iftype="IfTypeRegister" arraysize="12">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="3" name="filt_3_Q" type="PortType" coreName="RAM" coreId="1432579701" bitwidth="18" iftype="IfTypeRegister" arraysize="24">
+  <ports id="3" name="filt_3_Q" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="18" iftype="IfTypeRegister" arraysize="24">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="4" name="filt_4_Q" type="PortType" coreName="RAM" coreId="1432579701" bitwidth="18" direction="DirOut" iftype="IfTypeRegister" arraysize="12">
+  <ports id="4" name="filt_4_Q" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="18" direction="DirOut" iftype="IfTypeRegister" arraysize="12">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
   <edges id="45" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -119,7 +119,7 @@
       <controlInputObjs>for.body216</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body216</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_6_cast14" lineNumber="108" fileName="receiver.cpp" fileDirectory="../." rtlName="i_6_cast14_fu_134_p1" coreId="0" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="i_6_cast15" lineNumber="108" fileName="receiver.cpp" fileDirectory="../." rtlName="i_6_cast15_fu_134_p1" coreId="0" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="108" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -287,6 +287,9 @@
   <expressionNodes realName="filt_4_Q_addr_1_gep_fu_107">
     <nodeIds>33</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="i_6_cast15_fu_134">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="filt_4_I_addr_1_gep_fu_94">
     <nodeIds>26</nodeIds>
   </expressionNodes>
@@ -301,9 +304,6 @@
   </expressionNodes>
   <expressionNodes realName="zext_ln109_fu_146">
     <nodeIds>18</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_6_cast14_fu_134">
-    <nodeIds>14</nodeIds>
   </expressionNodes>
   <expressionNodes realName="filt_3_Q_addr_1_gep_fu_86">
     <nodeIds>30</nodeIds>

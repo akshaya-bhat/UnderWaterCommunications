@@ -19,22 +19,22 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>631</Best-caseLatency>
-            <Average-caseLatency>690</Average-caseLatency>
-            <Worst-caseLatency>748</Worst-caseLatency>
-            <Best-caseRealTimeLatency>6.310 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>6.900 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>7.480 us</Worst-caseRealTimeLatency>
-            <Interval-min>632</Interval-min>
-            <Interval-max>749</Interval-max>
+            <Best-caseLatency>637</Best-caseLatency>
+            <Average-caseLatency>696</Average-caseLatency>
+            <Worst-caseLatency>754</Worst-caseLatency>
+            <Best-caseRealTimeLatency>6.370 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>6.960 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>7.540 us</Worst-caseRealTimeLatency>
+            <Interval-min>638</Interval-min>
+            <Interval-max>755</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>260</BRAM_18K>
             <DSP>214</DSP>
-            <FF>27749</FF>
-            <LUT>42346</LUT>
+            <FF>27747</FF>
+            <LUT>42354</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -1677,161 +1677,161 @@
             <ModuleName>receiver</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_52_1_fu_2678</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_52_1_fu_2676</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_52_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>2678</ID>
+                    <ID>2676</ID>
                     <BindInstances>add_ln54_fu_1432_p2 add_ln54_1_fu_1438_p2 samples_I_1_U samples_I_2_U samples_I_3_U samples_I_4_U samples_I_5_U samples_I_6_U samples_I_7_U samples_I_8_U samples_I_9_U samples_I_10_U samples_I_0_U samples_Q_1_U samples_Q_0_U samples_Q_2_U samples_Q_3_U samples_Q_4_U samples_Q_5_U samples_Q_6_U samples_Q_7_U samples_Q_8_U samples_Q_9_U samples_Q_10_U samples_I_12_U samples_I_13_U samples_I_14_U samples_I_15_U samples_I_16_U samples_I_17_U samples_I_18_U samples_I_19_U samples_I_20_U samples_I_21_U samples_I_22_U samples_I_23_U samples_I_24_U samples_I_25_U samples_I_26_U samples_I_27_U samples_I_28_U samples_I_29_U samples_I_30_U samples_I_31_U samples_Q_12_U samples_Q_13_U samples_Q_14_U samples_Q_15_U samples_Q_16_U samples_Q_17_U samples_Q_18_U samples_Q_19_U samples_Q_20_U samples_Q_21_U samples_Q_22_U samples_Q_23_U samples_Q_24_U samples_Q_25_U samples_Q_26_U samples_Q_27_U samples_Q_28_U samples_Q_29_U samples_Q_30_U samples_Q_31_U</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_63_2_fu_2810</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_63_2_fu_2808</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_63_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>2810</ID>
+                    <ID>2808</ID>
                     <BindInstances>add_ln65_fu_652_p2 add_ln65_1_fu_683_p2 add_ln65_2_fu_705_p2 add_ln65_3_fu_727_p2 add_ln65_4_fu_749_p2 add_ln65_5_fu_771_p2 add_ln65_6_fu_793_p2 add_ln65_7_fu_815_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_132_10_fu_2846</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_132_10_fu_2844</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_132_10</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>2846</ID>
+                    <ID>2844</ID>
                     <BindInstances>add_ln134_fu_1432_p2 add_ln134_1_fu_1438_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_75_3_fu_2978</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_75_3_fu_2976</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_75_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>2978</ID>
+                    <ID>2976</ID>
                     <BindInstances>mul_15s_18s_33_1_1_U20 mul_18s_15s_33_1_1_U21 mul_15s_18s_33_1_1_U22 mul_18s_15s_33_1_1_U23 mul_18s_15s_33_1_1_U24 mul_18s_15s_33_1_1_U25 mul_18s_15s_33_1_1_U26 mul_18s_15s_33_1_1_U27 mul_15s_18s_33_1_1_U28 mul_18s_15s_33_1_1_U29 mul_18s_15s_33_1_1_U30 mul_18s_15s_33_1_1_U31 mul_18s_15s_33_1_1_U32 mul_18s_15s_33_1_1_U33 mul_18s_15s_33_1_1_U34 mul_18s_15s_33_1_1_U35 add_ln75_fu_761_p2 h_U</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_84_4_fu_3032</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_84_4_fu_3030</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_84_4</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3032</ID>
+                    <ID>3030</ID>
                     <BindInstances>filt_1_I_d0 filt_1_I_1_d0 filt_1_I_2_d0 filt_1_I_3_d0 filt_1_I_4_d0 filt_1_I_5_d0 filt_1_I_6_d0 filt_1_I_7_d0 filt_1_Q_d0 filt_1_Q_4_d0 filt_1_Q_1_d0 filt_1_Q_5_d0 filt_1_Q_2_d0 filt_1_Q_6_d0 filt_1_Q_3_d0 filt_1_Q_7_d0 add_ln84_fu_794_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_95_5_fu_3068</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_95_5_fu_3066</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_95_5</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3068</ID>
+                    <ID>3066</ID>
                     <BindInstances>filt_2_I_d0 filt_2_I_1_d0 filt_2_I_2_d0 filt_2_I_3_d0 filt_2_I_4_d0 filt_2_I_5_d0 filt_2_I_6_d0 filt_2_I_7_d0 filt_2_Q_d0 filt_2_Q_4_d0 filt_2_Q_1_d0 filt_2_Q_5_d0 filt_2_Q_2_d0 filt_2_Q_6_d0 filt_2_Q_3_d0 filt_2_Q_7_d0 add_ln95_fu_794_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_102_6_fu_3104</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_102_6_fu_3102</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_102_6</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3104</ID>
+                    <ID>3102</ID>
                     <BindInstances>add_ln103_fu_410_p2 add_ln104_fu_465_p2 add_ln102_fu_356_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_108_7_fu_3126</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_108_7_fu_3124</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_108_7</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3126</ID>
+                    <ID>3124</ID>
                     <BindInstances>filt_4_I_d0 filt_4_Q_d0 add_ln108_fu_162_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_114_8_fu_3134</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_114_8_fu_3132</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_114_8</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3134</ID>
+                    <ID>3132</ID>
                     <BindInstances>filt_5_I_d0 filt_5_Q_d0 add_ln114_fu_162_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_120_9_fu_3142</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_120_9_fu_3140</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_120_9</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3142</ID>
+                    <ID>3140</ID>
                     <BindInstances>filt_6_I_1_4_fu_239_p2 filt_6_Q_1_4_fu_260_p2 add_ln120_fu_228_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_149_11_fu_3154</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_149_11_fu_3152</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_149_11</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3154</ID>
+                    <ID>3152</ID>
                     <BindInstances>add_ln151_fu_4749_p2 mul_16s_18s_34_1_1_U238 mul_18s_16s_34_1_1_U239 add_ln151_1_fu_4770_p2 mul_16s_18s_34_1_1_U240 mul_18s_16s_34_1_1_U241 add_ln151_2_fu_4791_p2 mul_16s_18s_34_1_1_U242 mul_18s_16s_34_1_1_U243 add_ln151_3_fu_4812_p2 mul_16s_18s_34_1_1_U244 mul_18s_16s_34_1_1_U245 add_ln151_4_fu_4833_p2 mul_16s_18s_34_1_1_U246 mul_18s_16s_34_1_1_U247 add_ln151_5_fu_4854_p2 mul_16s_18s_34_1_1_U248 mul_18s_16s_34_1_1_U249 add_ln151_6_fu_4875_p2 mul_16s_18s_34_1_1_U250 mul_18s_16s_34_1_1_U251 add_ln151_7_fu_4896_p2 mul_16s_18s_34_1_1_U252 mul_18s_16s_34_1_1_U253 add_ln151_8_fu_4917_p2 mul_16s_18s_34_1_1_U254 mul_18s_16s_34_1_1_U255 add_ln151_9_fu_4938_p2 mul_16s_18s_34_1_1_U256 mul_18s_16s_34_1_1_U257 add_ln151_10_fu_4959_p2 mul_16s_18s_34_1_1_U258 mul_18s_16s_34_1_1_U259 add_ln151_11_fu_4980_p2 mul_16s_18s_34_1_1_U260 mul_18s_16s_34_1_1_U261 add_ln151_12_fu_5001_p2 mul_16s_18s_34_1_1_U262 mul_18s_16s_34_1_1_U263 add_ln151_13_fu_5022_p2 mul_16s_18s_34_1_1_U264 mul_18s_16s_34_1_1_U265 add_ln151_14_fu_5043_p2 mul_16s_18s_34_1_1_U266 mul_18s_16s_34_1_1_U267 add_ln151_15_fu_5064_p2 mul_16s_18s_34_1_1_U268 mul_18s_16s_34_1_1_U269 add_ln151_16_fu_5085_p2 mul_16s_18s_34_1_1_U270 mul_18s_16s_34_1_1_U271 add_ln151_17_fu_5106_p2 mul_16s_18s_34_1_1_U272 mul_18s_16s_34_1_1_U273 add_ln151_18_fu_5127_p2 mul_16s_18s_34_1_1_U274 mul_18s_16s_34_1_1_U275 add_ln151_19_fu_5148_p2 mul_16s_18s_34_1_1_U276 mul_18s_16s_34_1_1_U277 add_ln149_fu_5169_p2 add_ln151_20_fu_5191_p2 mul_16s_18s_34_1_1_U278 mul_18s_16s_34_1_1_U279 add_ln149_1_fu_5212_p2 add_ln151_21_fu_5234_p2 mul_16s_18s_34_1_1_U280 mul_18s_16s_34_1_1_U281 add_ln149_2_fu_5255_p2 add_ln151_22_fu_5277_p2 mul_16s_18s_34_1_1_U282 mul_18s_16s_34_1_1_U283 add_ln149_3_fu_5298_p2 add_ln151_23_fu_5320_p2 mul_16s_18s_34_1_1_U284 mul_18s_16s_34_1_1_U285 add_ln149_4_fu_5341_p2 add_ln151_24_fu_5363_p2 mul_16s_18s_34_1_1_U286 mul_18s_16s_34_1_1_U287 add_ln149_5_fu_5384_p2 add_ln151_25_fu_5406_p2 mul_16s_18s_34_1_1_U288 mul_18s_16s_34_1_1_U289 add_ln149_6_fu_5427_p2 add_ln151_26_fu_5449_p2 mul_16s_18s_34_1_1_U290 mul_18s_16s_34_1_1_U291 add_ln149_7_fu_5470_p2 add_ln151_27_fu_5492_p2 mul_16s_18s_34_1_1_U292 mul_18s_16s_34_1_1_U293 add_ln149_8_fu_5513_p2 add_ln151_28_fu_5535_p2 mul_16s_18s_34_1_1_U294 mul_18s_16s_34_1_1_U295 add_ln149_9_fu_5556_p2 add_ln151_29_fu_5578_p2 mul_16s_18s_34_1_1_U296 mul_18s_16s_34_1_1_U297 add_ln149_10_fu_5599_p2 add_ln151_30_fu_5621_p2 mul_16s_18s_34_1_1_U298 mul_18s_16s_34_1_1_U299 add_ln149_11_fu_5642_p2 add_ln151_31_fu_5664_p2 mul_16s_18s_34_1_1_U300 mul_18s_16s_34_1_1_U301 add_ln151_32_fu_5685_p2 add_ln151_33_fu_5697_p2 mul_16s_18s_34_1_1_U302 mul_18s_16s_34_1_1_U303 add_ln149_12_fu_5718_p2 add_ln151_34_fu_5740_p2 mul_16s_18s_34_1_1_U304 mul_18s_16s_34_1_1_U305 add_ln149_13_fu_5761_p2 add_ln151_35_fu_5783_p2 mul_16s_18s_34_1_1_U306 mul_18s_16s_34_1_1_U307 add_ln149_14_fu_5804_p2 add_ln151_36_fu_5826_p2 mul_16s_18s_34_1_1_U308 mul_18s_16s_34_1_1_U309 add_ln149_15_fu_5847_p2 add_ln151_37_fu_5869_p2 mul_16s_18s_34_1_1_U310 mul_18s_16s_34_1_1_U311 add_ln149_16_fu_5890_p2 add_ln151_38_fu_5912_p2 mul_16s_18s_34_1_1_U312 mul_18s_16s_34_1_1_U313 add_ln149_17_fu_5933_p2 add_ln151_39_fu_5955_p2 mul_16s_18s_34_1_1_U314 mul_18s_16s_34_1_1_U315 add_ln149_18_fu_5976_p2 add_ln151_40_fu_5998_p2 mul_16s_18s_34_1_1_U316 mul_18s_16s_34_1_1_U317 add_ln149_19_fu_6019_p2 add_ln151_41_fu_6041_p2 mul_16s_18s_34_1_1_U318 mul_18s_16s_34_1_1_U319 add_ln149_20_fu_6062_p2 add_ln151_42_fu_6084_p2 mul_16s_18s_34_1_1_U320 mul_18s_16s_34_1_1_U321 add_ln149_21_fu_6105_p2 add_ln151_43_fu_6127_p2 mul_16s_18s_34_1_1_U322 mul_18s_16s_34_1_1_U323 add_ln149_22_fu_6148_p2 add_ln151_44_fu_6170_p2 mul_16s_18s_34_1_1_U324 mul_18s_16s_34_1_1_U325 add_ln149_23_fu_6191_p2 add_ln151_45_fu_6213_p2 mul_16s_18s_34_1_1_U326 mul_18s_16s_34_1_1_U327 add_ln149_24_fu_6234_p2 add_ln151_46_fu_6256_p2 mul_16s_18s_34_1_1_U328 mul_18s_16s_34_1_1_U329 add_ln149_25_fu_6277_p2 add_ln151_47_fu_6299_p2 mul_16s_18s_34_1_1_U330 mul_18s_16s_34_1_1_U331 add_ln149_26_fu_6320_p2 add_ln151_48_fu_6342_p2 mul_16s_18s_34_1_1_U332 mul_18s_16s_34_1_1_U333 add_ln149_27_fu_6363_p2 add_ln151_49_fu_6385_p2 mul_16s_18s_34_1_1_U334 mul_18s_16s_34_1_1_U335 add_ln149_28_fu_6406_p2 add_ln151_50_fu_6428_p2 mul_16s_18s_34_1_1_U336 mul_18s_16s_34_1_1_U337 add_ln149_29_fu_6449_p2 add_ln151_51_fu_6471_p2 mul_16s_18s_34_1_1_U338 mul_18s_16s_34_1_1_U339 add_ln149_30_fu_6492_p2 add_ln151_52_fu_6514_p2 mul_16s_18s_34_1_1_U340 mul_18s_16s_34_1_1_U341 add_ln149_31_fu_6535_p2 add_ln151_53_fu_6557_p2 mul_16s_18s_34_1_1_U342 mul_18s_16s_34_1_1_U343 add_ln149_32_fu_6578_p2 add_ln151_54_fu_6600_p2 mul_16s_18s_34_1_1_U344 mul_18s_16s_34_1_1_U345 add_ln149_33_fu_6621_p2 add_ln151_55_fu_6643_p2 mul_16s_18s_34_1_1_U346 mul_18s_16s_34_1_1_U347 add_ln149_34_fu_6664_p2 add_ln151_56_fu_6686_p2 mul_16s_18s_34_1_1_U348 mul_18s_16s_34_1_1_U349 add_ln149_35_fu_6707_p2 add_ln151_57_fu_6729_p2 mul_16s_18s_34_1_1_U350 mul_18s_16s_34_1_1_U351 add_ln149_36_fu_6750_p2 add_ln151_58_fu_6772_p2 mul_16s_18s_34_1_1_U352 mul_18s_16s_34_1_1_U353 add_ln149_37_fu_6793_p2 add_ln151_59_fu_6815_p2 mul_16s_18s_34_1_1_U354 mul_18s_16s_34_1_1_U355 add_ln149_38_fu_6836_p2 add_ln151_60_fu_6858_p2 mul_16s_18s_34_1_1_U356 mul_18s_16s_34_1_1_U357 add_ln149_39_fu_6879_p2 add_ln151_61_fu_6901_p2 mul_16s_18s_34_1_1_U358 mul_18s_16s_34_1_1_U359 add_ln149_40_fu_6922_p2 add_ln151_62_fu_6944_p2 mul_16s_18s_34_1_1_U360 mul_18s_16s_34_1_1_U361 add_ln149_41_fu_6965_p2 add_ln151_63_fu_6987_p2 mul_16s_18s_34_1_1_U362 mul_18s_16s_34_1_1_U363 add_ln149_42_fu_7008_p2 add_ln151_64_fu_7030_p2 mul_16s_18s_34_1_1_U364 mul_18s_16s_34_1_1_U365 add_ln149_43_fu_7051_p2 preamble_upsampled_U</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_161_12_fu_3416</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_161_12_fu_3414</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_161_12</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3416</ID>
+                    <ID>3414</ID>
                     <BindInstances>arr_1_I_d0 arr_1_I_1_d0 arr_1_I_2_d0 arr_1_I_3_d0 arr_1_I_4_d0 arr_1_I_5_d0 arr_1_I_6_d0 arr_1_I_7_d0 arr_1_I_8_d0 arr_1_I_9_d0 arr_1_I_10_d0 arr_1_I_11_d0 arr_1_I_12_d0 arr_1_I_13_d0 arr_1_I_14_d0 arr_1_I_15_d0 arr_1_I_16_d0 arr_1_I_17_d0 arr_1_I_18_d0 arr_1_I_19_d0 arr_1_I_20_d0 arr_1_I_21_d0 arr_1_I_22_d0 arr_1_I_23_d0 arr_1_I_24_d0 arr_1_I_25_d0 arr_1_I_26_d0 arr_1_I_27_d0 arr_1_I_28_d0 arr_1_I_29_d0 arr_1_I_30_d0 arr_1_I_31_d0 arr_1_Q_d0 arr_1_Q_1_d0 arr_1_Q_2_d0 arr_1_Q_3_d0 arr_1_Q_4_d0 arr_1_Q_5_d0 arr_1_Q_6_d0 arr_1_Q_7_d0 arr_1_Q_8_d0 arr_1_Q_9_d0 arr_1_Q_10_d0 arr_1_Q_11_d0 arr_1_Q_12_d0 arr_1_Q_13_d0 arr_1_Q_14_d0 arr_1_Q_15_d0 arr_1_Q_16_d0 arr_1_Q_17_d0 arr_1_Q_18_d0 arr_1_Q_19_d0 arr_1_Q_20_d0 arr_1_Q_21_d0 arr_1_Q_22_d0 arr_1_Q_23_d0 arr_1_Q_24_d0 arr_1_Q_25_d0 arr_1_Q_26_d0 arr_1_Q_27_d0 arr_1_Q_28_d0 arr_1_Q_29_d0 arr_1_Q_30_d0 arr_1_Q_31_d0 add_ln161_fu_3072_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_171_13_fu_3612</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_171_13_fu_3610</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_171_13</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3612</ID>
+                    <ID>3610</ID>
                     <BindInstances>add_ln173_fu_2937_p2 add_ln173_1_fu_3027_p2 add_ln173_2_fu_3050_p2 add_ln173_3_fu_3073_p2 add_ln173_4_fu_3096_p2 add_ln173_5_fu_3119_p2 add_ln173_6_fu_3142_p2 add_ln173_7_fu_3165_p2 add_ln173_8_fu_3188_p2 add_ln173_9_fu_3211_p2 add_ln173_10_fu_3234_p2 add_ln173_11_fu_3257_p2 add_ln173_12_fu_3280_p2 add_ln173_13_fu_3303_p2 add_ln173_14_fu_3326_p2 add_ln173_15_fu_3349_p2 add_ln174_fu_3372_p2 add_ln174_1_fu_3395_p2 add_ln174_2_fu_3418_p2 add_ln174_3_fu_3441_p2 add_ln174_4_fu_3464_p2 add_ln174_5_fu_3487_p2 add_ln174_6_fu_3510_p2 add_ln174_7_fu_3533_p2 add_ln174_8_fu_3556_p2 add_ln174_9_fu_3579_p2 add_ln174_10_fu_3602_p2 add_ln174_11_fu_3625_p2 add_ln174_12_fu_3648_p2 add_ln174_13_fu_3671_p2 add_ln174_14_fu_3694_p2 add_ln174_15_fu_3717_p2 add_ln173_16_fu_3740_p2 add_ln173_17_fu_3763_p2 add_ln173_18_fu_3786_p2 add_ln173_19_fu_3809_p2 add_ln173_20_fu_3832_p2 add_ln173_21_fu_3855_p2 add_ln173_22_fu_3878_p2 add_ln173_23_fu_3901_p2 add_ln173_24_fu_3924_p2 add_ln173_25_fu_3947_p2 add_ln173_26_fu_3970_p2 add_ln173_27_fu_3993_p2 add_ln173_28_fu_4016_p2 add_ln173_29_fu_4039_p2 add_ln173_30_fu_4062_p2 add_ln173_31_fu_4085_p2 add_ln174_16_fu_4108_p2 add_ln174_17_fu_4131_p2 add_ln174_18_fu_4154_p2 add_ln174_19_fu_4177_p2 add_ln174_20_fu_4200_p2 add_ln174_21_fu_4223_p2 add_ln174_22_fu_4246_p2 add_ln174_23_fu_4269_p2 add_ln174_24_fu_4292_p2 add_ln174_25_fu_4315_p2 add_ln174_26_fu_4338_p2 add_ln174_27_fu_4361_p2 add_ln174_28_fu_4384_p2 add_ln174_29_fu_4407_p2 add_ln174_30_fu_4430_p2 add_ln174_31_fu_4453_p2 add_ln171_fu_2918_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_181_14_fu_3744</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_181_14_fu_3742</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_181_14</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3744</ID>
+                    <ID>3742</ID>
                     <BindInstances>arr_3_I_d0 arr_3_I_1_d0 arr_3_I_2_d0 arr_3_I_3_d0 arr_3_I_4_d0 arr_3_I_5_d0 arr_3_I_6_d0 arr_3_I_7_d0 arr_3_Q_d0 arr_3_Q_1_d0 arr_3_Q_2_d0 arr_3_Q_3_d0 arr_3_Q_4_d0 arr_3_Q_5_d0 arr_3_Q_6_d0 arr_3_Q_7_d0 add_ln181_fu_1354_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_191_15_fu_3828</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_191_15_fu_3826</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_191_15</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3828</ID>
+                    <ID>3826</ID>
                     <BindInstances>arr_4_I_d0 arr_4_I_1_d0 arr_4_I_2_d0 arr_4_I_3_d0 arr_4_Q_d0 arr_4_Q_1_d0 arr_4_Q_2_d0 arr_4_Q_3_d0 arr_4_I_4_d0 arr_4_I_5_d0 arr_4_I_6_d0 arr_4_I_7_d0 arr_4_Q_4_d0 arr_4_Q_5_d0 arr_4_Q_6_d0 arr_4_Q_7_d0 add_ln191_fu_802_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_201_16_fu_3864</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_201_16_fu_3862</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_201_16</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3864</ID>
+                    <ID>3862</ID>
                     <BindInstances>arr_5_I_d0 arr_5_I_1_d0 arr_5_Q_d0 arr_5_Q_1_d0 arr_5_I_2_d0 arr_5_I_3_d0 arr_5_Q_2_d0 arr_5_Q_3_d0 add_ln201_fu_448_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_211_17_fu_3892</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_211_17_fu_3890</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_211_17</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3892</ID>
+                    <ID>3890</ID>
                     <BindInstances>arr_6_I_d0 arr_6_Q_d0 arr_6_I_1_d0 arr_6_Q_1_d0 add_ln211_fu_260_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_219_18_fu_3908</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_219_18_fu_3906</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_219_18</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3908</ID>
+                    <ID>3906</ID>
                     <BindInstances>arr_7_I_d0 arr_7_Q_d0 add_ln219_fu_156_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_228_19_fu_3918</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_228_19_fu_3916</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_228_19</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3918</ID>
+                    <ID>3916</ID>
                     <BindInstances>arr_8_I_d0 arr_8_Q_d0 add_ln228_fu_170_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_237_20_fu_3926</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_237_20_fu_3924</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_237_20</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3926</ID>
+                    <ID>3924</ID>
                     <BindInstances>add_ln238_fu_289_p2 add_ln239_fu_333_p2 add_ln237_fu_270_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_244_21_fu_3940</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_244_21_fu_3938</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_244_21</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3940</ID>
+                    <ID>3938</ID>
                     <BindInstances>arr_10_I_0_fu_228_p2 arr_10_Q_0_fu_270_p2 add_ln244_fu_292_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_264_22_fu_3956</InstName>
+                    <InstName>grp_receiver_Pipeline_VITIS_LOOP_264_22_fu_3954</InstName>
                     <ModuleName>receiver_Pipeline_VITIS_LOOP_264_22</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>3956</ID>
+                    <ID>3954</ID>
                     <BindInstances>mul_24s_18s_40_1_1_U1061 mac_mulsub_24s_18s_40s_40_4_1_U1093 mac_mulsub_24s_18s_40s_40_4_1_U1093 mac_muladd_24s_18s_40s_40_4_1_U1094 mul_24s_18s_40_1_1_U1062 mac_muladd_24s_18s_40s_40_4_1_U1094 add_ln264_fu_912_p2 add_ln264_1_fu_932_p2 add_ln264_2_fu_943_p2 add_ln264_3_fu_970_p2 add_ln264_4_fu_981_p2 add_ln264_5_fu_1016_p2 add_ln264_6_fu_1027_p2 add_ln264_7_fu_1105_p2 add_ln264_8_fu_1116_p2 add_ln264_9_fu_1179_p2 add_ln264_10_fu_1190_p2 add_ln264_11_fu_1273_p2 add_ln264_12_fu_1284_p2 add_ln264_13_fu_1367_p2 add_ln264_14_fu_1378_p2 mul_24s_18s_40_1_1_U1063 mac_muladd_24s_18s_40s_40_4_1_U1095 mul_24s_18s_40_1_1_U1065 mac_muladd_24s_18s_40s_40_4_1_U1097 mul_24s_18s_40_1_1_U1066 mac_muladd_24s_18s_40s_40_4_1_U1098 mul_24s_18s_40_1_1_U1069 mac_muladd_24s_18s_40s_40_4_1_U1101 mul_24s_18s_40_1_1_U1070 mac_muladd_24s_18s_40s_40_4_1_U1102 mul_24s_18s_40_1_1_U1073 mac_muladd_24s_18s_40s_40_4_1_U1105 mul_24s_18s_40_1_1_U1074 mac_muladd_24s_18s_40s_40_4_1_U1106 mul_24s_18s_40_1_1_U1077 mac_muladd_24s_18s_40s_40_4_1_U1109 mul_24s_18s_40_1_1_U1078 mac_muladd_24s_18s_40s_40_4_1_U1110 mul_24s_18s_40_1_1_U1081 mac_muladd_24s_18s_40s_40_4_1_U1113 mul_24s_18s_40_1_1_U1082 mac_muladd_24s_18s_40s_40_4_1_U1114 mul_24s_18s_40_1_1_U1085 mac_muladd_24s_18s_40s_40_4_1_U1117 mul_24s_18s_40_1_1_U1086 mac_muladd_24s_18s_40s_40_4_1_U1118 mul_24s_18s_40_1_1_U1089 mac_muladd_24s_18s_40s_40_4_1_U1121 mac_mulsub_24s_18s_40s_40_4_1_U1096 mac_mulsub_24s_18s_40s_40_4_1_U1096 mul_24s_18s_40_1_1_U1064 mac_muladd_24s_18s_40s_40_4_1_U1095 mac_mulsub_24s_18s_40s_40_4_1_U1099 mac_mulsub_24s_18s_40s_40_4_1_U1099 mul_24s_18s_40_1_1_U1067 mac_muladd_24s_18s_40s_40_4_1_U1097 mac_mulsub_24s_18s_40s_40_4_1_U1100 mac_mulsub_24s_18s_40s_40_4_1_U1100 mul_24s_18s_40_1_1_U1068 mac_muladd_24s_18s_40s_40_4_1_U1098 mac_mulsub_24s_18s_40s_40_4_1_U1103 mac_mulsub_24s_18s_40s_40_4_1_U1103 mul_24s_18s_40_1_1_U1071 mac_muladd_24s_18s_40s_40_4_1_U1101 mac_mulsub_24s_18s_40s_40_4_1_U1104 mac_mulsub_24s_18s_40s_40_4_1_U1104 mul_24s_18s_40_1_1_U1072 mac_muladd_24s_18s_40s_40_4_1_U1102 mac_mulsub_24s_18s_40s_40_4_1_U1107 mac_mulsub_24s_18s_40s_40_4_1_U1107 mul_24s_18s_40_1_1_U1075 mac_muladd_24s_18s_40s_40_4_1_U1105 mac_mulsub_24s_18s_40s_40_4_1_U1108 mac_mulsub_24s_18s_40s_40_4_1_U1108 mul_24s_18s_40_1_1_U1076 mac_muladd_24s_18s_40s_40_4_1_U1106 mac_mulsub_24s_18s_40s_40_4_1_U1111 mac_mulsub_24s_18s_40s_40_4_1_U1111 mul_24s_18s_40_1_1_U1079 mac_muladd_24s_18s_40s_40_4_1_U1109 mac_mulsub_24s_18s_40s_40_4_1_U1112 mac_mulsub_24s_18s_40s_40_4_1_U1112 mul_24s_18s_40_1_1_U1080 mac_muladd_24s_18s_40s_40_4_1_U1110 mac_mulsub_24s_18s_40s_40_4_1_U1115 mac_mulsub_24s_18s_40s_40_4_1_U1115 mul_24s_18s_40_1_1_U1083 mac_muladd_24s_18s_40s_40_4_1_U1113 mac_mulsub_24s_18s_40s_40_4_1_U1116 mac_mulsub_24s_18s_40s_40_4_1_U1116 mul_24s_18s_40_1_1_U1084 mac_muladd_24s_18s_40s_40_4_1_U1114 mac_mulsub_24s_18s_40s_40_4_1_U1119 mac_mulsub_24s_18s_40s_40_4_1_U1119 mul_24s_18s_40_1_1_U1087 mac_muladd_24s_18s_40s_40_4_1_U1117 mac_mulsub_24s_18s_40s_40_4_1_U1120 mac_mulsub_24s_18s_40s_40_4_1_U1120 mul_24s_18s_40_1_1_U1088 mac_muladd_24s_18s_40s_40_4_1_U1118 mac_mulsub_24s_18s_40s_40_4_1_U1122 mac_mulsub_24s_18s_40s_40_4_1_U1122 mul_24s_18s_40_1_1_U1090 mac_muladd_24s_18s_40s_40_4_1_U1121 mul_24s_18s_40_1_1_U1091 mac_mulsub_24s_18s_40s_40_4_1_U1123 mac_mulsub_24s_18s_40s_40_4_1_U1123 mac_muladd_24s_18s_40s_40_4_1_U1124 mul_24s_18s_40_1_1_U1092 mac_muladd_24s_18s_40s_40_4_1_U1124 add_ln270_fu_1461_p2 add_ln264_15_fu_1466_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>filt_I_U filt_I_1_U filt_I_2_U filt_I_3_U filt_I_4_U filt_I_5_U filt_I_6_U filt_I_7_U filt_Q_U filt_Q_1_U filt_Q_2_U filt_Q_3_U filt_Q_4_U filt_Q_5_U filt_Q_6_U filt_Q_7_U filt_1_I_U filt_1_I_1_U filt_1_I_2_U filt_1_I_3_U filt_1_I_4_U filt_1_I_5_U filt_1_I_6_U filt_1_I_7_U filt_1_Q_U filt_1_Q_1_U filt_1_Q_2_U filt_1_Q_3_U filt_1_Q_4_U filt_1_Q_5_U filt_1_Q_6_U filt_1_Q_7_U filt_2_I_U filt_2_I_1_U filt_2_I_2_U filt_2_I_3_U filt_2_I_4_U filt_2_I_5_U filt_2_I_6_U filt_2_I_7_U filt_2_Q_U filt_2_Q_1_U filt_2_Q_2_U filt_2_Q_3_U filt_2_Q_4_U filt_2_Q_5_U filt_2_Q_6_U filt_2_Q_7_U filt_3_I_U filt_3_Q_U filt_4_I_U filt_4_Q_U filt_5_I_U filt_5_Q_U arr_I_U arr_I_1_U arr_I_2_U arr_I_3_U arr_I_4_U arr_I_5_U arr_I_6_U arr_I_7_U arr_I_8_U arr_I_9_U arr_I_10_U arr_I_11_U arr_I_12_U arr_I_13_U arr_I_14_U arr_I_15_U arr_I_16_U arr_I_17_U arr_I_18_U arr_I_19_U arr_I_20_U arr_I_21_U arr_I_22_U arr_I_23_U arr_I_24_U arr_I_25_U arr_I_26_U arr_I_27_U arr_I_28_U arr_I_29_U arr_I_30_U arr_I_31_U arr_I_32_U arr_I_33_U arr_I_34_U arr_I_35_U arr_I_36_U arr_I_37_U arr_I_38_U arr_I_39_U arr_I_40_U arr_I_41_U arr_I_42_U arr_I_43_U arr_I_44_U arr_I_45_U arr_I_46_U arr_I_47_U arr_I_48_U arr_I_49_U arr_I_50_U arr_I_51_U arr_I_52_U arr_I_53_U arr_I_54_U arr_I_55_U arr_I_56_U arr_I_57_U arr_I_58_U arr_I_59_U arr_I_60_U arr_I_61_U arr_I_62_U arr_I_63_U arr_Q_U arr_Q_1_U arr_Q_2_U arr_Q_3_U arr_Q_4_U arr_Q_5_U arr_Q_6_U arr_Q_7_U arr_Q_8_U arr_Q_9_U arr_Q_10_U arr_Q_11_U arr_Q_12_U arr_Q_13_U arr_Q_14_U arr_Q_15_U arr_Q_16_U arr_Q_17_U arr_Q_18_U arr_Q_19_U arr_Q_20_U arr_Q_21_U arr_Q_22_U arr_Q_23_U arr_Q_24_U arr_Q_25_U arr_Q_26_U arr_Q_27_U arr_Q_28_U arr_Q_29_U arr_Q_30_U arr_Q_31_U arr_Q_32_U arr_Q_33_U arr_Q_34_U arr_Q_35_U arr_Q_36_U arr_Q_37_U arr_Q_38_U arr_Q_39_U arr_Q_40_U arr_Q_41_U arr_Q_42_U arr_Q_43_U arr_Q_44_U arr_Q_45_U arr_Q_46_U arr_Q_47_U arr_Q_48_U arr_Q_49_U arr_Q_50_U arr_Q_51_U arr_Q_52_U arr_Q_53_U arr_Q_54_U arr_Q_55_U arr_Q_56_U arr_Q_57_U arr_Q_58_U arr_Q_59_U arr_Q_60_U arr_Q_61_U arr_Q_62_U arr_Q_63_U arr_1_I_U arr_1_I_1_U arr_1_I_2_U arr_1_I_3_U arr_1_I_4_U arr_1_I_5_U arr_1_I_6_U arr_1_I_7_U arr_1_I_8_U arr_1_I_9_U arr_1_I_10_U arr_1_I_11_U arr_1_I_12_U arr_1_I_13_U arr_1_I_14_U arr_1_I_15_U arr_1_I_16_U arr_1_I_17_U arr_1_I_18_U arr_1_I_19_U arr_1_I_20_U arr_1_I_21_U arr_1_I_22_U arr_1_I_23_U arr_1_I_24_U arr_1_I_25_U arr_1_I_26_U arr_1_I_27_U arr_1_I_28_U arr_1_I_29_U arr_1_I_30_U arr_1_I_31_U arr_1_Q_U arr_1_Q_1_U arr_1_Q_2_U arr_1_Q_3_U arr_1_Q_4_U arr_1_Q_5_U arr_1_Q_6_U arr_1_Q_7_U arr_1_Q_8_U arr_1_Q_9_U arr_1_Q_10_U arr_1_Q_11_U arr_1_Q_12_U arr_1_Q_13_U arr_1_Q_14_U arr_1_Q_15_U arr_1_Q_16_U arr_1_Q_17_U arr_1_Q_18_U arr_1_Q_19_U arr_1_Q_20_U arr_1_Q_21_U arr_1_Q_22_U arr_1_Q_23_U arr_1_Q_24_U arr_1_Q_25_U arr_1_Q_26_U arr_1_Q_27_U arr_1_Q_28_U arr_1_Q_29_U arr_1_Q_30_U arr_1_Q_31_U arr_2_I_U arr_2_I_1_U arr_2_I_2_U arr_2_I_3_U arr_2_I_4_U arr_2_I_5_U arr_2_I_6_U arr_2_I_7_U arr_2_I_8_U arr_2_I_9_U arr_2_I_10_U arr_2_I_11_U arr_2_I_12_U arr_2_I_13_U arr_2_I_14_U arr_2_I_15_U arr_2_I_16_U arr_2_I_17_U arr_2_I_18_U arr_2_I_19_U arr_2_I_20_U arr_2_I_21_U arr_2_I_22_U arr_2_I_23_U arr_2_I_24_U arr_2_I_25_U arr_2_I_26_U arr_2_I_27_U arr_2_I_28_U arr_2_I_29_U arr_2_I_30_U arr_2_I_31_U arr_2_Q_U arr_2_Q_1_U arr_2_Q_2_U arr_2_Q_3_U arr_2_Q_4_U arr_2_Q_5_U arr_2_Q_6_U arr_2_Q_7_U arr_2_Q_8_U arr_2_Q_9_U arr_2_Q_10_U arr_2_Q_11_U arr_2_Q_12_U arr_2_Q_13_U arr_2_Q_14_U arr_2_Q_15_U arr_2_Q_16_U arr_2_Q_17_U arr_2_Q_18_U arr_2_Q_19_U arr_2_Q_20_U arr_2_Q_21_U arr_2_Q_22_U arr_2_Q_23_U arr_2_Q_24_U arr_2_Q_25_U arr_2_Q_26_U arr_2_Q_27_U arr_2_Q_28_U arr_2_Q_29_U arr_2_Q_30_U arr_2_Q_31_U arr_3_I_U arr_3_I_1_U arr_3_I_2_U arr_3_I_3_U arr_3_I_4_U arr_3_I_5_U arr_3_I_6_U arr_3_I_7_U arr_3_Q_U arr_3_Q_1_U arr_3_Q_2_U arr_3_Q_3_U arr_3_Q_4_U arr_3_Q_5_U arr_3_Q_6_U arr_3_Q_7_U arr_4_I_U arr_4_I_1_U arr_4_I_2_U arr_4_I_3_U arr_4_I_4_U arr_4_I_5_U arr_4_I_6_U arr_4_I_7_U arr_4_Q_U arr_4_Q_1_U arr_4_Q_2_U arr_4_Q_3_U arr_4_Q_4_U arr_4_Q_5_U arr_4_Q_6_U arr_4_Q_7_U arr_5_I_U arr_5_I_1_U arr_5_I_2_U arr_5_I_3_U arr_5_Q_U arr_5_Q_1_U arr_5_Q_2_U arr_5_Q_3_U arr_6_I_U arr_6_I_1_U arr_6_Q_U arr_6_Q_1_U arr_7_I_U arr_7_Q_U arr_8_I_U arr_8_Q_U mul_18s_18s_34_1_1_U1168 mul_18s_18s_34_1_1_U1169 add_ln46_fu_4057_p2 add_ln89_fu_4139_p2 add_ln90_fu_4150_p2 add_ln223_fu_4205_p2 add_ln224_fu_4216_p2 add_ln232_fu_4226_p2 add_ln233_fu_4236_p2 corr_accum_I_fu_4287_p2 corr_accum_Q_fu_4293_p2 mul_24s_24s_48_1_1_U1166 mul_24s_24s_48_1_1_U1167 add_ln257_fu_4315_p2 sub_ln257_fu_4359_p2 add_ln257_1_fu_4379_p2 sub_ln257_3_fu_4368_p2 add_ln257_2_fu_4473_p2 sub_ln257_1_fu_4487_p2 add_ln257_3_fu_4513_p2 cos_coefficients_table_U sin_coefficients_table_U samples_I_11_U samples_Q_11_U delay_line_I_7_U delay_line_I_6_U delay_line_I_5_U delay_line_I_4_U delay_line_I_3_U delay_line_I_2_U delay_line_I_1_U delay_line_I_0_U delay_line_Q_7_U delay_line_Q_6_U delay_line_Q_5_U delay_line_Q_4_U delay_line_Q_3_U delay_line_Q_2_U delay_line_Q_1_U delay_line_Q_0_U matched_I_1_U matched_I_2_U matched_I_3_U matched_I_4_U matched_I_5_U matched_I_6_U matched_I_7_U matched_I_8_U matched_I_9_U matched_I_10_U matched_I_11_U matched_I_0_U matched_Q_11_U matched_Q_1_U matched_Q_0_U matched_Q_2_U matched_Q_3_U matched_Q_4_U matched_Q_5_U matched_Q_6_U matched_Q_7_U matched_Q_8_U matched_Q_9_U matched_Q_10_U matched_I_12_U matched_I_13_U matched_I_14_U matched_I_15_U matched_I_16_U matched_I_17_U matched_I_18_U matched_I_19_U matched_I_20_U matched_I_21_U matched_I_22_U matched_I_23_U matched_I_24_U matched_I_25_U matched_I_26_U matched_I_27_U matched_I_28_U matched_I_29_U matched_I_30_U matched_I_31_U matched_Q_12_U matched_Q_13_U matched_Q_14_U matched_Q_15_U matched_Q_16_U matched_Q_17_U matched_Q_18_U matched_Q_19_U matched_Q_20_U matched_Q_21_U matched_Q_22_U matched_Q_23_U matched_Q_24_U matched_Q_25_U matched_Q_26_U matched_Q_27_U matched_Q_28_U matched_Q_29_U matched_Q_30_U matched_Q_31_U</BindInstances>
+            <BindInstances>filt_I_U filt_I_1_U filt_I_2_U filt_I_3_U filt_I_4_U filt_I_5_U filt_I_6_U filt_I_7_U filt_Q_U filt_Q_1_U filt_Q_2_U filt_Q_3_U filt_Q_4_U filt_Q_5_U filt_Q_6_U filt_Q_7_U filt_1_I_U filt_1_I_1_U filt_1_I_2_U filt_1_I_3_U filt_1_I_4_U filt_1_I_5_U filt_1_I_6_U filt_1_I_7_U filt_1_Q_U filt_1_Q_1_U filt_1_Q_2_U filt_1_Q_3_U filt_1_Q_4_U filt_1_Q_5_U filt_1_Q_6_U filt_1_Q_7_U filt_2_I_U filt_2_I_1_U filt_2_I_2_U filt_2_I_3_U filt_2_I_4_U filt_2_I_5_U filt_2_I_6_U filt_2_I_7_U filt_2_Q_U filt_2_Q_1_U filt_2_Q_2_U filt_2_Q_3_U filt_2_Q_4_U filt_2_Q_5_U filt_2_Q_6_U filt_2_Q_7_U filt_3_I_U filt_3_Q_U filt_4_I_U filt_4_Q_U filt_5_I_U filt_5_Q_U arr_I_U arr_I_1_U arr_I_2_U arr_I_3_U arr_I_4_U arr_I_5_U arr_I_6_U arr_I_7_U arr_I_8_U arr_I_9_U arr_I_10_U arr_I_11_U arr_I_12_U arr_I_13_U arr_I_14_U arr_I_15_U arr_I_16_U arr_I_17_U arr_I_18_U arr_I_19_U arr_I_20_U arr_I_21_U arr_I_22_U arr_I_23_U arr_I_24_U arr_I_25_U arr_I_26_U arr_I_27_U arr_I_28_U arr_I_29_U arr_I_30_U arr_I_31_U arr_I_32_U arr_I_33_U arr_I_34_U arr_I_35_U arr_I_36_U arr_I_37_U arr_I_38_U arr_I_39_U arr_I_40_U arr_I_41_U arr_I_42_U arr_I_43_U arr_I_44_U arr_I_45_U arr_I_46_U arr_I_47_U arr_I_48_U arr_I_49_U arr_I_50_U arr_I_51_U arr_I_52_U arr_I_53_U arr_I_54_U arr_I_55_U arr_I_56_U arr_I_57_U arr_I_58_U arr_I_59_U arr_I_60_U arr_I_61_U arr_I_62_U arr_I_63_U arr_Q_U arr_Q_1_U arr_Q_2_U arr_Q_3_U arr_Q_4_U arr_Q_5_U arr_Q_6_U arr_Q_7_U arr_Q_8_U arr_Q_9_U arr_Q_10_U arr_Q_11_U arr_Q_12_U arr_Q_13_U arr_Q_14_U arr_Q_15_U arr_Q_16_U arr_Q_17_U arr_Q_18_U arr_Q_19_U arr_Q_20_U arr_Q_21_U arr_Q_22_U arr_Q_23_U arr_Q_24_U arr_Q_25_U arr_Q_26_U arr_Q_27_U arr_Q_28_U arr_Q_29_U arr_Q_30_U arr_Q_31_U arr_Q_32_U arr_Q_33_U arr_Q_34_U arr_Q_35_U arr_Q_36_U arr_Q_37_U arr_Q_38_U arr_Q_39_U arr_Q_40_U arr_Q_41_U arr_Q_42_U arr_Q_43_U arr_Q_44_U arr_Q_45_U arr_Q_46_U arr_Q_47_U arr_Q_48_U arr_Q_49_U arr_Q_50_U arr_Q_51_U arr_Q_52_U arr_Q_53_U arr_Q_54_U arr_Q_55_U arr_Q_56_U arr_Q_57_U arr_Q_58_U arr_Q_59_U arr_Q_60_U arr_Q_61_U arr_Q_62_U arr_Q_63_U arr_1_I_U arr_1_I_1_U arr_1_I_2_U arr_1_I_3_U arr_1_I_4_U arr_1_I_5_U arr_1_I_6_U arr_1_I_7_U arr_1_I_8_U arr_1_I_9_U arr_1_I_10_U arr_1_I_11_U arr_1_I_12_U arr_1_I_13_U arr_1_I_14_U arr_1_I_15_U arr_1_I_16_U arr_1_I_17_U arr_1_I_18_U arr_1_I_19_U arr_1_I_20_U arr_1_I_21_U arr_1_I_22_U arr_1_I_23_U arr_1_I_24_U arr_1_I_25_U arr_1_I_26_U arr_1_I_27_U arr_1_I_28_U arr_1_I_29_U arr_1_I_30_U arr_1_I_31_U arr_1_Q_U arr_1_Q_1_U arr_1_Q_2_U arr_1_Q_3_U arr_1_Q_4_U arr_1_Q_5_U arr_1_Q_6_U arr_1_Q_7_U arr_1_Q_8_U arr_1_Q_9_U arr_1_Q_10_U arr_1_Q_11_U arr_1_Q_12_U arr_1_Q_13_U arr_1_Q_14_U arr_1_Q_15_U arr_1_Q_16_U arr_1_Q_17_U arr_1_Q_18_U arr_1_Q_19_U arr_1_Q_20_U arr_1_Q_21_U arr_1_Q_22_U arr_1_Q_23_U arr_1_Q_24_U arr_1_Q_25_U arr_1_Q_26_U arr_1_Q_27_U arr_1_Q_28_U arr_1_Q_29_U arr_1_Q_30_U arr_1_Q_31_U arr_2_I_U arr_2_I_1_U arr_2_I_2_U arr_2_I_3_U arr_2_I_4_U arr_2_I_5_U arr_2_I_6_U arr_2_I_7_U arr_2_I_8_U arr_2_I_9_U arr_2_I_10_U arr_2_I_11_U arr_2_I_12_U arr_2_I_13_U arr_2_I_14_U arr_2_I_15_U arr_2_I_16_U arr_2_I_17_U arr_2_I_18_U arr_2_I_19_U arr_2_I_20_U arr_2_I_21_U arr_2_I_22_U arr_2_I_23_U arr_2_I_24_U arr_2_I_25_U arr_2_I_26_U arr_2_I_27_U arr_2_I_28_U arr_2_I_29_U arr_2_I_30_U arr_2_I_31_U arr_2_Q_U arr_2_Q_1_U arr_2_Q_2_U arr_2_Q_3_U arr_2_Q_4_U arr_2_Q_5_U arr_2_Q_6_U arr_2_Q_7_U arr_2_Q_8_U arr_2_Q_9_U arr_2_Q_10_U arr_2_Q_11_U arr_2_Q_12_U arr_2_Q_13_U arr_2_Q_14_U arr_2_Q_15_U arr_2_Q_16_U arr_2_Q_17_U arr_2_Q_18_U arr_2_Q_19_U arr_2_Q_20_U arr_2_Q_21_U arr_2_Q_22_U arr_2_Q_23_U arr_2_Q_24_U arr_2_Q_25_U arr_2_Q_26_U arr_2_Q_27_U arr_2_Q_28_U arr_2_Q_29_U arr_2_Q_30_U arr_2_Q_31_U arr_3_I_U arr_3_I_1_U arr_3_I_2_U arr_3_I_3_U arr_3_I_4_U arr_3_I_5_U arr_3_I_6_U arr_3_I_7_U arr_3_Q_U arr_3_Q_1_U arr_3_Q_2_U arr_3_Q_3_U arr_3_Q_4_U arr_3_Q_5_U arr_3_Q_6_U arr_3_Q_7_U arr_4_I_U arr_4_I_1_U arr_4_I_2_U arr_4_I_3_U arr_4_I_4_U arr_4_I_5_U arr_4_I_6_U arr_4_I_7_U arr_4_Q_U arr_4_Q_1_U arr_4_Q_2_U arr_4_Q_3_U arr_4_Q_4_U arr_4_Q_5_U arr_4_Q_6_U arr_4_Q_7_U arr_5_I_U arr_5_I_1_U arr_5_I_2_U arr_5_I_3_U arr_5_Q_U arr_5_Q_1_U arr_5_Q_2_U arr_5_Q_3_U arr_6_I_U arr_6_I_1_U arr_6_Q_U arr_6_Q_1_U arr_7_I_U arr_7_Q_U arr_8_I_U arr_8_Q_U mul_18s_18s_34_1_1_U1168 mul_17s_18s_34_1_1_U1169 add_ln46_fu_4055_p2 add_ln89_fu_4127_p2 add_ln90_fu_4138_p2 add_ln223_fu_4193_p2 add_ln224_fu_4204_p2 add_ln232_fu_4214_p2 add_ln233_fu_4224_p2 corr_accum_I_fu_4275_p2 corr_accum_Q_fu_4281_p2 mul_24s_24s_48_1_1_U1166 mul_24s_24s_48_1_1_U1167 add_ln257_fu_4303_p2 sub_ln257_fu_4347_p2 add_ln257_1_fu_4367_p2 sub_ln257_3_fu_4356_p2 add_ln257_2_fu_4461_p2 sub_ln257_1_fu_4475_p2 add_ln257_3_fu_4501_p2 cos_coefficients_table_U sin_coefficients_table_U samples_I_11_U samples_Q_11_U delay_line_I_7_U delay_line_I_6_U delay_line_I_5_U delay_line_I_4_U delay_line_I_3_U delay_line_I_2_U delay_line_I_1_U delay_line_I_0_U delay_line_Q_7_U delay_line_Q_6_U delay_line_Q_5_U delay_line_Q_4_U delay_line_Q_3_U delay_line_Q_2_U delay_line_Q_1_U delay_line_Q_0_U matched_I_1_U matched_I_2_U matched_I_3_U matched_I_4_U matched_I_5_U matched_I_6_U matched_I_7_U matched_I_8_U matched_I_9_U matched_I_10_U matched_I_11_U matched_I_0_U matched_Q_11_U matched_Q_1_U matched_Q_0_U matched_Q_2_U matched_Q_3_U matched_Q_4_U matched_Q_5_U matched_Q_6_U matched_Q_7_U matched_Q_8_U matched_Q_9_U matched_Q_10_U matched_I_12_U matched_I_13_U matched_I_14_U matched_I_15_U matched_I_16_U matched_I_17_U matched_I_18_U matched_I_19_U matched_I_20_U matched_I_21_U matched_I_22_U matched_I_23_U matched_I_24_U matched_I_25_U matched_I_26_U matched_I_27_U matched_I_28_U matched_I_29_U matched_I_30_U matched_I_31_U matched_Q_12_U matched_Q_13_U matched_Q_14_U matched_Q_15_U matched_Q_16_U matched_Q_17_U matched_Q_18_U matched_Q_19_U matched_Q_20_U matched_Q_21_U matched_Q_22_U matched_Q_23_U matched_Q_24_U matched_Q_25_U matched_Q_26_U matched_Q_27_U matched_Q_28_U matched_Q_29_U matched_Q_30_U matched_Q_31_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -1847,22 +1847,22 @@
                     <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>237</Best-caseLatency>
-                    <Average-caseLatency>237</Average-caseLatency>
-                    <Worst-caseLatency>237</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.370 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.370 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.370 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>237</PipelineInitiationInterval>
+                    <Best-caseLatency>243</Best-caseLatency>
+                    <Average-caseLatency>243</Average-caseLatency>
+                    <Worst-caseLatency>243</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.430 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.430 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.430 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>243</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_52_1>
                         <Name>VITIS_LOOP_52_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>234</TripCount>
-                        <Latency>235</Latency>
-                        <AbsoluteTimeLatency>2.350 us</AbsoluteTimeLatency>
+                        <TripCount>240</TripCount>
+                        <Latency>241</Latency>
+                        <AbsoluteTimeLatency>2.410 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -2496,22 +2496,22 @@
                     <EstimatedClockPeriod>6.508</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>237</Best-caseLatency>
-                    <Average-caseLatency>237</Average-caseLatency>
-                    <Worst-caseLatency>237</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>2.370 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>2.370 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.370 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>237</PipelineInitiationInterval>
+                    <Best-caseLatency>243</Best-caseLatency>
+                    <Average-caseLatency>243</Average-caseLatency>
+                    <Worst-caseLatency>243</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.430 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.430 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.430 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>243</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_132_10>
                         <Name>VITIS_LOOP_132_10</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>234</TripCount>
-                        <Latency>235</Latency>
-                        <AbsoluteTimeLatency>2.350 us</AbsoluteTimeLatency>
+                        <TripCount>240</TripCount>
+                        <Latency>241</Latency>
+                        <AbsoluteTimeLatency>2.410 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -3777,13 +3777,13 @@
                     <EstimatedClockPeriod>7.216</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>631</Best-caseLatency>
-                    <Average-caseLatency>690</Average-caseLatency>
-                    <Worst-caseLatency>748</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>6.310 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>6.900 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>7.480 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>632 ~ 749</PipelineInitiationInterval>
+                    <Best-caseLatency>637</Best-caseLatency>
+                    <Average-caseLatency>696</Average-caseLatency>
+                    <Worst-caseLatency>754</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>6.370 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>6.960 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>7.540 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>638 ~ 755</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -3795,10 +3795,10 @@
                     <DSP>214</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>97</UTIL_DSP>
-                    <FF>27749</FF>
+                    <FF>27747</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>26</UTIL_FF>
-                    <LUT>42346</LUT>
+                    <LUT>42354</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
                     <UTIL_LUT>79</UTIL_LUT>
                     <URAM>0</URAM>
@@ -4166,25 +4166,25 @@
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="arr_8_I_U" SOURCE="receiver.cpp:225" URAM="0" VARIABLE="arr_8_I"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="arr_8_Q_U" SOURCE="receiver.cpp:226" URAM="0" VARIABLE="arr_8_Q"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_18s_18s_34_1_1_U1168" SOURCE="receiver.cpp:44" URAM="0" VARIABLE="mul_ln44"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_18s_18s_34_1_1_U1169" SOURCE="receiver.cpp:45" URAM="0" VARIABLE="mul_ln45"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_4057_p2" SOURCE="receiver.cpp:46" URAM="0" VARIABLE="add_ln46"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_4139_p2" SOURCE="receiver.cpp:89" URAM="0" VARIABLE="add_ln89"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln90_fu_4150_p2" SOURCE="receiver.cpp:90" URAM="0" VARIABLE="add_ln90"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln223_fu_4205_p2" SOURCE="receiver.cpp:223" URAM="0" VARIABLE="add_ln223"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln224_fu_4216_p2" SOURCE="receiver.cpp:224" URAM="0" VARIABLE="add_ln224"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln232_fu_4226_p2" SOURCE="receiver.cpp:232" URAM="0" VARIABLE="add_ln232"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln233_fu_4236_p2" SOURCE="receiver.cpp:233" URAM="0" VARIABLE="add_ln233"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="corr_accum_I_fu_4287_p2" SOURCE="receiver.cpp:249" URAM="0" VARIABLE="corr_accum_I"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="corr_accum_Q_fu_4293_p2" SOURCE="receiver.cpp:250" URAM="0" VARIABLE="corr_accum_Q"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_17s_18s_34_1_1_U1169" SOURCE="receiver.cpp:45" URAM="0" VARIABLE="mul_ln45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_4055_p2" SOURCE="receiver.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln89_fu_4127_p2" SOURCE="receiver.cpp:89" URAM="0" VARIABLE="add_ln89"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln90_fu_4138_p2" SOURCE="receiver.cpp:90" URAM="0" VARIABLE="add_ln90"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln223_fu_4193_p2" SOURCE="receiver.cpp:223" URAM="0" VARIABLE="add_ln223"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln224_fu_4204_p2" SOURCE="receiver.cpp:224" URAM="0" VARIABLE="add_ln224"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln232_fu_4214_p2" SOURCE="receiver.cpp:232" URAM="0" VARIABLE="add_ln232"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln233_fu_4224_p2" SOURCE="receiver.cpp:233" URAM="0" VARIABLE="add_ln233"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="corr_accum_I_fu_4275_p2" SOURCE="receiver.cpp:249" URAM="0" VARIABLE="corr_accum_I"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="corr_accum_Q_fu_4281_p2" SOURCE="receiver.cpp:250" URAM="0" VARIABLE="corr_accum_Q"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_24s_24s_48_1_1_U1166" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="mul_ln257"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_24s_24s_48_1_1_U1167" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="mul_ln257_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_fu_4315_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln257_fu_4359_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="sub_ln257"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_1_fu_4379_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln257_3_fu_4368_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="sub_ln257_3"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_2_fu_4473_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln257_1_fu_4487_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="sub_ln257_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_3_fu_4513_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_fu_4303_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln257_fu_4347_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="sub_ln257"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_1_fu_4367_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln257_3_fu_4356_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="sub_ln257_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_2_fu_4461_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln257_1_fu_4475_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="sub_ln257_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln257_3_fu_4501_p2" SOURCE="receiver.cpp:257" URAM="0" VARIABLE="add_ln257_3"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="cos_coefficients_table_U" SOURCE="" URAM="0" VARIABLE="cos_coefficients_table"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="sin_coefficients_table_U" SOURCE="" URAM="0" VARIABLE="sin_coefficients_table"/>
                 <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="samples_I_11_U" SOURCE="" URAM="0" VARIABLE="samples_I_11"/>

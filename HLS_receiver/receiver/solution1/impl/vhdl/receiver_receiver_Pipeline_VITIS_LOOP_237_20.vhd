@@ -88,7 +88,7 @@ attribute shreg_extract : string;
     signal ap_ready_int : STD_LOGIC;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal trunc_ln8_reg_471 : STD_LOGIC_VECTOR (1 downto 0);
-    signal i_19_cast22_fu_238_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal i_19_cast23_fu_238_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal zext_ln238_fu_254_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal i_fu_70 : STD_LOGIC_VECTOR (3 downto 0);
@@ -359,7 +359,7 @@ begin
     end process;
 
     arr_8_I_address0 <= zext_ln238_fu_254_p1(3 - 1 downto 0);
-    arr_8_I_address1 <= i_19_cast22_fu_238_p1(3 - 1 downto 0);
+    arr_8_I_address1 <= i_19_cast23_fu_238_p1(3 - 1 downto 0);
 
     arr_8_I_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
     begin
@@ -381,7 +381,7 @@ begin
     end process;
 
     arr_8_Q_address0 <= zext_ln238_fu_254_p1(3 - 1 downto 0);
-    arr_8_Q_address1 <= i_19_cast22_fu_238_p1(3 - 1 downto 0);
+    arr_8_Q_address1 <= i_19_cast23_fu_238_p1(3 - 1 downto 0);
 
     arr_8_Q_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
     begin
@@ -491,7 +491,7 @@ begin
     end process;
 
     empty_fu_244_p1 <= ap_sig_allocacmp_i_5(3 - 1 downto 0);
-    i_19_cast22_fu_238_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_i_5),64));
+    i_19_cast23_fu_238_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_i_5),64));
     or_ln238_fu_248_p2 <= (empty_fu_244_p1 or ap_const_lv3_1);
         sext_ln238_1_fu_285_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(arr_8_I_q0),32));
 

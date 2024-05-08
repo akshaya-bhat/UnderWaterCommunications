@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_132_10'" level="0">
-<item name = "Date">Thu May  2 23:57:21 2024
+<item name = "Date">Tue May  7 17:59:24 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">237, 237, 2.370 us, 2.370 us, 237, 237, no</column>
+<column name="">243, 243, 2.430 us, 2.430 us, 243, 243, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_132_10">235, 235, 2, 1, 1, 234, yes</column>
+<column name="- VITIS_LOOP_132_10">241, 241, 2, 1, 1, 240, yes</column>
 </table>
 </item>
 </section>
@@ -80,7 +80,7 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln134_1_fu_1438_p2">+, 0, 0, 15, 8, 1</column>
 <column name="add_ln134_fu_1432_p2">+, 0, 0, 14, 13, 6</column>
-<column name="icmp_ln132_fu_1426_p2">icmp, 0, 0, 14, 13, 11</column>
+<column name="icmp_ln132_fu_1426_p2">icmp, 0, 0, 14, 13, 10</column>
 <column name="or_ln134_fu_1420_p2">or, 0, 0, 13, 13, 4</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>

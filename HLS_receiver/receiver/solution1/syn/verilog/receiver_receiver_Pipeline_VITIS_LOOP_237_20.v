@@ -108,7 +108,7 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_block_pp0_stage0_11001;
 reg   [1:0] trunc_ln8_reg_471;
-wire   [63:0] i_19_cast22_fu_238_p1;
+wire   [63:0] i_19_cast23_fu_238_p1;
 wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln238_fu_254_p1;
 reg   [3:0] i_fu_70;
@@ -434,11 +434,11 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign arr_8_I_address0 = zext_ln238_fu_254_p1;
 
-assign arr_8_I_address1 = i_19_cast22_fu_238_p1;
+assign arr_8_I_address1 = i_19_cast23_fu_238_p1;
 
 assign arr_8_Q_address0 = zext_ln238_fu_254_p1;
 
-assign arr_8_Q_address1 = i_19_cast22_fu_238_p1;
+assign arr_8_Q_address1 = i_19_cast23_fu_238_p1;
 
 assign arr_9_I_0_0_out = arr_9_I_1_fu_74;
 
@@ -458,7 +458,7 @@ assign arr_9_Q_3_0125_out = arr_9_Q_1_3_fu_102;
 
 assign empty_fu_244_p1 = ap_sig_allocacmp_i_5[2:0];
 
-assign i_19_cast22_fu_238_p1 = ap_sig_allocacmp_i_5;
+assign i_19_cast23_fu_238_p1 = ap_sig_allocacmp_i_5;
 
 assign or_ln238_fu_248_p2 = (empty_fu_244_p1 | 3'd1);
 

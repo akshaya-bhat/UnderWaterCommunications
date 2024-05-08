@@ -15,70 +15,70 @@ set DLRegItemOffset 0
 set C_modelName {receiver_Pipeline_VITIS_LOOP_132_10}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ matched_I_1 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_2 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_3 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_4 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_5 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_6 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_7 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_8 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_9 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_10 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_11 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_0 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_11 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_1 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_0 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_2 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_3 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_4 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_5 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_6 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_7 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_8 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_9 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_10 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_12 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_13 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_14 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_15 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_16 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_17 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_18 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_19 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_20 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_21 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_22 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_23 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_24 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_25 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_26 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_27 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_28 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_29 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_30 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_I_31 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_12 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_13 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_14 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_15 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_16 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_17 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_18 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_19 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_20 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_21 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_22 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_23 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_24 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_25 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_26 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_27 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_28 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_29 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_30 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ matched_Q_31 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_1 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_2 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_3 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_4 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_5 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_6 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_7 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_8 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_9 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_10 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_11 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_0 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_11 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_1 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_0 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_2 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_3 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_4 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_5 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_6 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_7 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_8 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_9 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_10 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_12 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_13 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_14 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_15 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_16 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_17 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_18 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_19 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_20 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_21 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_22 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_23 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_24 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_25 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_26 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_27 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_28 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_29 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_30 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_I_31 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_12 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_13 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_14 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_15 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_16 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_17 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_18 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_19 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_20 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_21 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_22 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_23 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_24 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_25 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_26 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_27 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_28 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_29 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_30 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ matched_Q_31 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
@@ -1067,7 +1067,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "237", "EstimateLatencyMax" : "237",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "243", "EstimateLatencyMax" : "243",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -1216,8 +1216,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "237", "Max" : "237"}
-	, {"Name" : "Interval", "Min" : "237", "Max" : "237"}
+	{"Name" : "Latency", "Min" : "243", "Max" : "243"}
+	, {"Name" : "Interval", "Min" : "243", "Max" : "243"}
 ]}
 
 set PipelineEnableSignalInfo {[

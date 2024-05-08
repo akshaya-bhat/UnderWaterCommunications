@@ -251,10 +251,10 @@ for.body300:3 %br_ln120 = br i1 %icmp_ln120, void %for.body300.split, void %_ZN1
 
 <Node id="26" bw="64" op_0_bw="3">
 <![CDATA[
-for.body300.split:0 %i_8_cast16 = zext i3 %i
+for.body300.split:0 %i_8_cast17 = zext i3 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_8_cast16"/></StgValue>
+<StgValue><ssdm name="i_8_cast17"/></StgValue>
 </operation>
 
 <operation id="21" st_id="1" stage="1" lat="1">
@@ -299,7 +299,7 @@ for.body300.split:4 %zext_ln121 = zext i3 %or_ln121
 
 <Node id="31" bw="3" op_0_bw="18" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body300.split:5 %filt_5_I_addr = getelementptr i18 %filt_5_I, i64 0, i64 %i_8_cast16
+for.body300.split:5 %filt_5_I_addr = getelementptr i18 %filt_5_I, i64 0, i64 %i_8_cast17
 
 ]]></Node>
 <StgValue><ssdm name="filt_5_I_addr"/></StgValue>
@@ -395,7 +395,7 @@ for.body300.split:11 %switch_ln121 = switch i2 %trunc_ln4, void %branch2, i2 0, 
 
 <Node id="48" bw="3" op_0_bw="18" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body300.split11:0 %filt_5_Q_addr = getelementptr i18 %filt_5_Q, i64 0, i64 %i_8_cast16
+for.body300.split11:0 %filt_5_Q_addr = getelementptr i18 %filt_5_Q, i64 0, i64 %i_8_cast17
 
 ]]></Node>
 <StgValue><ssdm name="filt_5_Q_addr"/></StgValue>
@@ -1120,7 +1120,7 @@ branch5:1 %br_ln122 = br void %for.body300.split1128
 </dataflow>
 <dataflow id="118" from="icmp_ln120" to="br_ln120" fromId="18" toId="19">
 </dataflow>
-<dataflow id="119" from="i" to="i_8_cast16" fromId="16" toId="20">
+<dataflow id="119" from="i" to="i_8_cast17" fromId="16" toId="20">
 </dataflow>
 <dataflow id="120" from="i" to="or_ln121" fromId="16" toId="21">
 </dataflow>
@@ -1132,7 +1132,7 @@ branch5:1 %br_ln122 = br void %for.body300.split1128
 </dataflow>
 <dataflow id="126" from="StgValue_125" to="filt_5_I_addr" fromId="125" toId="23">
 </dataflow>
-<dataflow id="127" from="i_8_cast16" to="filt_5_I_addr" fromId="20" toId="23">
+<dataflow id="127" from="i_8_cast17" to="filt_5_I_addr" fromId="20" toId="23">
 </dataflow>
 <dataflow id="128" from="filt_5_I_addr" to="filt_5_I_load" fromId="23" toId="24">
 </dataflow>
@@ -1162,7 +1162,7 @@ branch5:1 %br_ln122 = br void %for.body300.split1128
 </dataflow>
 <dataflow id="145" from="StgValue_125" to="filt_5_Q_addr" fromId="125" toId="29">
 </dataflow>
-<dataflow id="146" from="i_8_cast16" to="filt_5_Q_addr" fromId="20" toId="29">
+<dataflow id="146" from="i_8_cast17" to="filt_5_Q_addr" fromId="20" toId="29">
 </dataflow>
 <dataflow id="147" from="filt_5_Q_addr" to="filt_5_Q_load" fromId="29" toId="30">
 </dataflow>

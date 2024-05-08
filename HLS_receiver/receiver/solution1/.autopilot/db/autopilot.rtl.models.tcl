@@ -53,6 +53,7 @@ set SynModuleInfo {
       {MODELNAME receiver_fcmp_32ns_32ns_1_2_no_dsp_1 RTLNAME receiver_fcmp_32ns_32ns_1_2_no_dsp_1 BINDTYPE op TYPE fcmp IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
       {MODELNAME receiver_mul_24s_24s_48_1_1 RTLNAME receiver_mul_24s_24s_48_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_mul_18s_18s_34_1_1 RTLNAME receiver_mul_18s_18s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME receiver_mul_17s_18s_34_1_1 RTLNAME receiver_mul_17s_18s_34_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME receiver_cos_coefficients_table_ROM_AUTO_1R RTLNAME receiver_cos_coefficients_table_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_sin_coefficients_table_ROM_AUTO_1R RTLNAME receiver_sin_coefficients_table_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
       {MODELNAME receiver_delay_line_I_7_RAM_AUTO_1R1W RTLNAME receiver_delay_line_I_7_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

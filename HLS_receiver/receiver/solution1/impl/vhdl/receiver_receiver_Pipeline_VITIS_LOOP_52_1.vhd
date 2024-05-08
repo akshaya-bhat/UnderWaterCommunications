@@ -46,7 +46,7 @@ architecture behav of receiver_receiver_Pipeline_VITIS_LOOP_52_1 is
     constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
     constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
     constant ap_const_lv13_B : STD_LOGIC_VECTOR (12 downto 0) := "0000000001011";
-    constant ap_const_lv13_1D4B : STD_LOGIC_VECTOR (12 downto 0) := "1110101001011";
+    constant ap_const_lv13_1E0B : STD_LOGIC_VECTOR (12 downto 0) := "1111000001011";
     constant ap_const_lv13_20 : STD_LOGIC_VECTOR (12 downto 0) := "0000000100000";
     constant ap_const_lv8_1 : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
 
@@ -502,7 +502,7 @@ begin
     samples_I_1_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -518,7 +518,7 @@ begin
     samples_I_2_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -534,7 +534,7 @@ begin
     samples_I_3_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -550,7 +550,7 @@ begin
     samples_I_4_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -566,7 +566,7 @@ begin
     samples_I_5_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -582,7 +582,7 @@ begin
     samples_I_6_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -598,7 +598,7 @@ begin
     samples_I_7_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -614,7 +614,7 @@ begin
     samples_I_8_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -630,7 +630,7 @@ begin
     samples_I_9_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -646,7 +646,7 @@ begin
     samples_I_10_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -662,7 +662,7 @@ begin
     samples_I_0_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -678,7 +678,7 @@ begin
     samples_Q_1_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -694,7 +694,7 @@ begin
     samples_Q_0_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -710,7 +710,7 @@ begin
     samples_Q_2_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -726,7 +726,7 @@ begin
     samples_Q_3_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -742,7 +742,7 @@ begin
     samples_Q_4_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -758,7 +758,7 @@ begin
     samples_Q_5_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -774,7 +774,7 @@ begin
     samples_Q_6_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -790,7 +790,7 @@ begin
     samples_Q_7_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -806,7 +806,7 @@ begin
     samples_Q_8_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -822,7 +822,7 @@ begin
     samples_Q_9_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -838,7 +838,7 @@ begin
     samples_Q_10_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -854,7 +854,7 @@ begin
     samples_I_12_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -870,7 +870,7 @@ begin
     samples_I_13_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -886,7 +886,7 @@ begin
     samples_I_14_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -902,7 +902,7 @@ begin
     samples_I_15_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -918,7 +918,7 @@ begin
     samples_I_16_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -934,7 +934,7 @@ begin
     samples_I_17_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -950,7 +950,7 @@ begin
     samples_I_18_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -966,7 +966,7 @@ begin
     samples_I_19_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -982,7 +982,7 @@ begin
     samples_I_20_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -998,7 +998,7 @@ begin
     samples_I_21_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1014,7 +1014,7 @@ begin
     samples_I_22_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1030,7 +1030,7 @@ begin
     samples_I_23_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1046,7 +1046,7 @@ begin
     samples_I_24_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1062,7 +1062,7 @@ begin
     samples_I_25_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1078,7 +1078,7 @@ begin
     samples_I_26_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1094,7 +1094,7 @@ begin
     samples_I_27_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1110,7 +1110,7 @@ begin
     samples_I_28_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1126,7 +1126,7 @@ begin
     samples_I_29_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1142,7 +1142,7 @@ begin
     samples_I_30_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1158,7 +1158,7 @@ begin
     samples_I_31_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1174,7 +1174,7 @@ begin
     samples_Q_12_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1190,7 +1190,7 @@ begin
     samples_Q_13_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1206,7 +1206,7 @@ begin
     samples_Q_14_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1222,7 +1222,7 @@ begin
     samples_Q_15_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1238,7 +1238,7 @@ begin
     samples_Q_16_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1254,7 +1254,7 @@ begin
     samples_Q_17_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1270,7 +1270,7 @@ begin
     samples_Q_18_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1286,7 +1286,7 @@ begin
     samples_Q_19_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1302,7 +1302,7 @@ begin
     samples_Q_20_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1318,7 +1318,7 @@ begin
     samples_Q_21_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1334,7 +1334,7 @@ begin
     samples_Q_22_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1350,7 +1350,7 @@ begin
     samples_Q_23_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1366,7 +1366,7 @@ begin
     samples_Q_24_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1382,7 +1382,7 @@ begin
     samples_Q_25_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1398,7 +1398,7 @@ begin
     samples_Q_26_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1414,7 +1414,7 @@ begin
     samples_Q_27_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1430,7 +1430,7 @@ begin
     samples_Q_28_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1446,7 +1446,7 @@ begin
     samples_Q_29_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1462,7 +1462,7 @@ begin
     samples_Q_30_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1478,7 +1478,7 @@ begin
     samples_Q_31_U : component receiver_receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W
     generic map (
         DataWidth => 18,
-        AddressRange => 235,
+        AddressRange => 241,
         AddressWidth => 8)
     port map (
         clk => ap_clk,
@@ -1737,7 +1737,7 @@ begin
         end if; 
     end process;
 
-    icmp_ln52_fu_1426_p2 <= "1" when (unsigned(or_ln54_fu_1420_p2) < unsigned(ap_const_lv13_1D4B)) else "0";
+    icmp_ln52_fu_1426_p2 <= "1" when (unsigned(or_ln54_fu_1420_p2) < unsigned(ap_const_lv13_1E0B)) else "0";
     lshr_ln_fu_1344_p4 <= ap_sig_allocacmp_i_3(12 downto 5);
     or_ln54_fu_1420_p2 <= (ap_sig_allocacmp_i_3 or ap_const_lv13_B);
     samples_I_0_address0 <= zext_ln52_reg_1462(8 - 1 downto 0);

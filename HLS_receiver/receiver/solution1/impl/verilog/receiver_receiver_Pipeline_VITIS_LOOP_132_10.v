@@ -2973,7 +2973,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln132_fu_1426_p2 = ((or_ln134_fu_1420_p2 < 13'd7499) ? 1'b1 : 1'b0);
+assign icmp_ln132_fu_1426_p2 = ((or_ln134_fu_1420_p2 < 13'd7691) ? 1'b1 : 1'b0);
 
 assign lshr_ln_fu_1344_p4 = {{ap_sig_allocacmp_i[12:5]}};
 

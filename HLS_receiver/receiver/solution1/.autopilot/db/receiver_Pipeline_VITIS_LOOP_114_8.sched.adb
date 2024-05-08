@@ -34,7 +34,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>1953391988</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>18</bitwidth>
@@ -463,7 +463,7 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>i_7_cast15</name>
+						<name>i_7_cast16</name>
 						<fileName>receiver.cpp</fileName>
 						<fileDirectory>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</fileDirectory>
 						<lineNumber>114</lineNumber>
@@ -495,7 +495,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>778530409</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1782,7 +1782,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>544108320</coreId>
+						<coreId>543434016</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1813,7 +1813,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1886351212</coreId>
+						<coreId>1936028192</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1844,7 +1844,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1768257280</coreId>
+						<coreId>1919833378</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1875,7 +1875,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1885414944</coreId>
+						<coreId>740910117</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1906,7 +1906,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>825368659</coreId>
+						<coreId>875703604</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1937,7 +1937,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1886351212</coreId>
+						<coreId>997420912</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1968,7 +1968,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1769104758</coreId>
+						<coreId>1031040613</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -2002,7 +2002,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1768838499</coreId>
+					<coreId>1432579701</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2035,7 +2035,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>137</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2068,7 +2068,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2712613</coreId>
+					<coreId>4294967295</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2120,7 +2120,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>543434016</coreId>
+					<coreId>13</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>

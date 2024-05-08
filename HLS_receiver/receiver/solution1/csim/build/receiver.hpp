@@ -19,14 +19,14 @@ typedef ap_fixed<24, 10> corr_t;
 /**
  * Parameters
  */
-#define CS 16 // length of cos and sin buffers
+#define CS 23 // length of cos and sin buffers
 #define oversample 32 //samples per symbol
 #define preambleLen 64
 #define preambleLenHalf 32
 #define K 7
 #define GOL_LEN 32
 #define upsamplePacketSize 7168
-#define buffer_len 7500
+#define buffer_len 7692
 #define start_sample 140
 #define downsamplePacketSize 224
 #define filtsize 193
@@ -292,9 +292,9 @@ const data_t preamble_upsampled[presize] = {0.00075802,9.9857e-05,-0.00057418,-0
                                               0.0012496,0.00057418,-9.9857e-05,-0.00075802,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
 //SIN AND COS LUT
-const data_t cos_coefficients_table[CS]={1,-0.38268,-0.70711,0.92388,0,-0.92388,0.70711,0.38268,-1,0.38268,0.70711,-0.92388,0,0.92388,-0.70711,-0.38268};
+const data_t cos_coefficients_table[CS]={1,-0.57668,-0.33488,0.96292,-0.77571,-0.068242,0.85442,-0.91721,0.20346,0.68255,-0.99069,0.46007,0.46007,-0.99069,0.68255,0.20346,-0.91721,0.85442,-0.068242,-0.77571,0.96292,-0.33488,-0.57668};
 
-const data_t sin_coefficients_table[CS]={0,0.92388,-0.70711,-0.38268,1,-0.38268,-0.70711,0.92388,0,-0.92388,0.70711,0.38268,-1,0.38268,0.70711,-0.92388};
+const data_t sin_coefficients_table[CS]={0,0.81697,-0.94226,0.2698,0.63109,-0.99767,0.51958,0.3984,-0.97908,0.73084,0.13617,-0.88789,0.88789,-0.13617,-0.73084,0.97908,-0.3984,-0.51958,0.99767,-0.63109,-0.2698,0.94226,-0.81697};
 
 
 //void transmitter (data_t* input_i, data_t* input_q, double* output_i);

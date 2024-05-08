@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'receiver'
 ================================================================
 + General Information: 
-    * Date:           Thu May  2 23:58:06 2024
+    * Date:           Tue May  7 17:59:41 2024
     * Version:        2023.1 (Build 3854077 on May  4 2023)
     * Project:        receiver
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,13 +19,13 @@
     |                 Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |           |             |             |     |
     |                 & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |    DSP    |      FF     |     LUT     | URAM|
     +----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+-----------+-------------+-------------+-----+
-    |+ receiver                              |     -|  0.08|      748|  7.480e+03|         -|      749|     -|        no|  260 (92%)|  214 (97%)|  27749 (26%)|  42346 (79%)|    -|
-    | + receiver_Pipeline_VITIS_LOOP_52_1    |     -|  0.79|      237|  2.370e+03|         -|      237|     -|        no|   62 (22%)|          -|    522 (~0%)|     94 (~0%)|    -|
-    |  o VITIS_LOOP_52_1                     |     -|  7.30|      235|  2.350e+03|         2|        1|   234|       yes|          -|          -|            -|            -|    -|
+    |+ receiver                              |     -|  0.08|      754|  7.540e+03|         -|      755|     -|        no|  260 (92%)|  214 (97%)|  27747 (26%)|  42354 (79%)|    -|
+    | + receiver_Pipeline_VITIS_LOOP_52_1    |     -|  0.79|      243|  2.430e+03|         -|      243|     -|        no|   62 (22%)|          -|    522 (~0%)|     94 (~0%)|    -|
+    |  o VITIS_LOOP_52_1                     |     -|  7.30|      241|  2.410e+03|         2|        1|   240|       yes|          -|          -|            -|            -|    -|
     | + receiver_Pipeline_VITIS_LOOP_63_2    |     -|  1.87|       26|    260.000|         -|       26|     -|        no|          -|          -|    1249 (1%)|    1671 (3%)|    -|
     |  o VITIS_LOOP_63_2                     |     -|  7.30|       24|    240.000|         2|        1|    24|       yes|          -|          -|            -|            -|    -|
-    | + receiver_Pipeline_VITIS_LOOP_132_10  |     -|  0.79|      237|  2.370e+03|         -|      237|     -|        no|          -|          -|    522 (~0%)|     94 (~0%)|    -|
-    |  o VITIS_LOOP_132_10                   |     -|  7.30|      235|  2.350e+03|         2|        1|   234|       yes|          -|          -|            -|            -|    -|
+    | + receiver_Pipeline_VITIS_LOOP_132_10  |     -|  0.79|      243|  2.430e+03|         -|      243|     -|        no|          -|          -|    522 (~0%)|     94 (~0%)|    -|
+    |  o VITIS_LOOP_132_10                   |     -|  7.30|      241|  2.410e+03|         2|        1|   240|       yes|          -|          -|            -|            -|    -|
     | + receiver_Pipeline_VITIS_LOOP_75_3    |     -|  1.71|       29|    290.000|         -|       29|     -|        no|     4 (1%)|    16 (7%)|    830 (~0%)|    284 (~0%)|    -|
     |  o VITIS_LOOP_75_3                     |     -|  7.30|       27|    270.000|         4|        1|    24|       yes|          -|          -|            -|            -|    -|
     | + receiver_Pipeline_VITIS_LOOP_84_4    |     -|  0.55|       14|    140.000|         -|       14|     -|        no|          -|          -|     15 (~0%)|    473 (~0%)|    -|
@@ -316,25 +316,25 @@
 +----------------------------------------+-----+--------+--------------+-----+--------+---------+
 | + receiver                             | 214 |        |              |     |        |         |
 |   mul_18s_18s_34_1_1_U1168             | 1   |        | mul_ln44     | mul | auto   | 0       |
-|   mul_18s_18s_34_1_1_U1169             | 1   |        | mul_ln45     | mul | auto   | 0       |
-|   add_ln46_fu_4057_p2                  | -   |        | add_ln46     | add | fabric | 0       |
-|   add_ln89_fu_4139_p2                  | -   |        | add_ln89     | add | fabric | 0       |
-|   add_ln90_fu_4150_p2                  | -   |        | add_ln90     | add | fabric | 0       |
-|   add_ln223_fu_4205_p2                 | -   |        | add_ln223    | add | fabric | 0       |
-|   add_ln224_fu_4216_p2                 | -   |        | add_ln224    | add | fabric | 0       |
-|   add_ln232_fu_4226_p2                 | -   |        | add_ln232    | add | fabric | 0       |
-|   add_ln233_fu_4236_p2                 | -   |        | add_ln233    | add | fabric | 0       |
-|   corr_accum_I_fu_4287_p2              | -   |        | corr_accum_I | add | fabric | 0       |
-|   corr_accum_Q_fu_4293_p2              | -   |        | corr_accum_Q | add | fabric | 0       |
+|   mul_17s_18s_34_1_1_U1169             | 1   |        | mul_ln45     | mul | auto   | 0       |
+|   add_ln46_fu_4055_p2                  | -   |        | add_ln46     | add | fabric | 0       |
+|   add_ln89_fu_4127_p2                  | -   |        | add_ln89     | add | fabric | 0       |
+|   add_ln90_fu_4138_p2                  | -   |        | add_ln90     | add | fabric | 0       |
+|   add_ln223_fu_4193_p2                 | -   |        | add_ln223    | add | fabric | 0       |
+|   add_ln224_fu_4204_p2                 | -   |        | add_ln224    | add | fabric | 0       |
+|   add_ln232_fu_4214_p2                 | -   |        | add_ln232    | add | fabric | 0       |
+|   add_ln233_fu_4224_p2                 | -   |        | add_ln233    | add | fabric | 0       |
+|   corr_accum_I_fu_4275_p2              | -   |        | corr_accum_I | add | fabric | 0       |
+|   corr_accum_Q_fu_4281_p2              | -   |        | corr_accum_Q | add | fabric | 0       |
 |   mul_24s_24s_48_1_1_U1166             | 2   |        | mul_ln257    | mul | auto   | 0       |
 |   mul_24s_24s_48_1_1_U1167             | 2   |        | mul_ln257_1  | mul | auto   | 0       |
-|   add_ln257_fu_4315_p2                 | -   |        | add_ln257    | add | fabric | 0       |
-|   sub_ln257_fu_4359_p2                 | -   |        | sub_ln257    | sub | fabric | 0       |
-|   add_ln257_1_fu_4379_p2               | -   |        | add_ln257_1  | add | fabric | 0       |
-|   sub_ln257_3_fu_4368_p2               | -   |        | sub_ln257_3  | sub | fabric | 0       |
-|   add_ln257_2_fu_4473_p2               | -   |        | add_ln257_2  | add | fabric | 0       |
-|   sub_ln257_1_fu_4487_p2               | -   |        | sub_ln257_1  | sub | fabric | 0       |
-|   add_ln257_3_fu_4513_p2               | -   |        | add_ln257_3  | add | fabric | 0       |
+|   add_ln257_fu_4303_p2                 | -   |        | add_ln257    | add | fabric | 0       |
+|   sub_ln257_fu_4347_p2                 | -   |        | sub_ln257    | sub | fabric | 0       |
+|   add_ln257_1_fu_4367_p2               | -   |        | add_ln257_1  | add | fabric | 0       |
+|   sub_ln257_3_fu_4356_p2               | -   |        | sub_ln257_3  | sub | fabric | 0       |
+|   add_ln257_2_fu_4461_p2               | -   |        | add_ln257_2  | add | fabric | 0       |
+|   sub_ln257_1_fu_4475_p2               | -   |        | sub_ln257_1  | sub | fabric | 0       |
+|   add_ln257_3_fu_4501_p2               | -   |        | add_ln257_3  | add | fabric | 0       |
 |  + receiver_Pipeline_VITIS_LOOP_52_1   | 0   |        |              |     |        |         |
 |    add_ln54_fu_1432_p2                 | -   |        | add_ln54     | add | fabric | 0       |
 |    add_ln54_1_fu_1438_p2               | -   |        | add_ln54_1   | add | fabric | 0       |

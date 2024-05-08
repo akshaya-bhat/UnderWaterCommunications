@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1714719427882">
-  <ports id="11" name="samples_I_11" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="18" direction="DirInOut" iftype="IfTypeRegister" arraysize="235">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1715129960639">
+  <ports id="11" name="samples_I_11" type="PortType" coreName="RAM" coreId="33686018" bitwidth="18" direction="DirInOut" iftype="IfTypeRegister" arraysize="241">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="13" name="samples_Q_11" type="PortType" coreName="RAM" coreId="33686018" bitwidth="18" direction="DirInOut" iftype="IfTypeRegister" arraysize="235">
+  <ports id="13" name="samples_Q_11" type="PortType" coreName="RAM" coreId="1953391988" bitwidth="18" direction="DirInOut" iftype="IfTypeRegister" arraysize="241">
     <dataInputObjs>getelementptr</dataInputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
@@ -421,17 +421,17 @@
   <edges id="-370" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@ports.1"/>
   <blocks id="68" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.inc.0.split</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="i" originalName="i" coreId="3995862104" bitwidth="13" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="65" name="i" originalName="i" coreId="811089048" bitwidth="13" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="i_write_ln0" coreId="3995861544" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="i_write_ln0" coreId="811089608" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln0" coreId="2157882704" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln0" coreId="811087928" opcode="br" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <controlInputObjs>for.inc.0.split</controlInputObjs>
     </node_objs>
   </blocks>
@@ -448,21 +448,21 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.11</controlOutputObjs>
       <controlOutputObjs>for.end.exitStub</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="i_3" lineNumber="54" originalName="i" fileName="receiver.cpp" fileDirectory="../." coreId="3995867704" contextFuncName="receiver" bitwidth="13" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="i_3" lineNumber="54" originalName="i" fileName="receiver.cpp" fileDirectory="../." coreId="811093528" contextFuncName="receiver" bitwidth="13" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>partselect</dataOutputObjs>
         <dataOutputObjs>or</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="lshr_ln" lineNumber="52" fileName="receiver.cpp" fileDirectory="../." rtlName="lshr_ln_fu_1344_p4" coreId="3995866584" contextFuncName="receiver" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="lshr_ln" lineNumber="52" fileName="receiver.cpp" fileDirectory="../." rtlName="lshr_ln_fu_1344_p4" coreId="811091288" contextFuncName="receiver" bitwidth="8" opcode="partselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="52" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln52" lineNumber="52" fileName="receiver.cpp" fileDirectory="../." rtlName="zext_ln52_fu_1354_p1" coreId="3995868264" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln52" lineNumber="52" fileName="receiver.cpp" fileDirectory="../." rtlName="zext_ln52_fu_1354_p1" coreId="811090168" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="52" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>partselect</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -530,14 +530,14 @@
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="samples_I_1_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="3995866024" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="samples_I_1_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="811091848" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="samples_I_0_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="3995862664" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="samples_I_0_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="811092968" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="142" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
@@ -548,152 +548,152 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="samples_Q_1_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="3995863784" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="samples_Q_1_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1869182051" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="samples_Q_0_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="3995864904" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="143" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="samples_Q_0_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="811086808" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="143" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="samples_I_2_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="2151793672" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="samples_I_2_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="811087368" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="samples_Q_2_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="3995867144" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="samples_Q_2_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1768252261" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="samples_I_3_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="2036689696" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="samples_I_3_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="539123000" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="samples_Q_3_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="691352122" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="samples_Q_3_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1919252069" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="samples_I_4_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1852142702" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="samples_I_4_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="samples_Q_4_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1869182057" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="samples_Q_4_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="samples_I_5_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="976237370" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="samples_I_5_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="997420912" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="samples_Q_5_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1126185531" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="samples_Q_5_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="857764463" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="samples_I_6_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="875703604" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="samples_I_6_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="samples_Q_6_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1936683105" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="samples_Q_6_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="5113" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="samples_I_7_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1769104758" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="samples_I_7_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="samples_Q_7_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1735289198" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="samples_Q_7_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="875706930" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="samples_I_8_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1563964466" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="samples_I_8_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="926365485" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="samples_Q_8_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="539570739" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="samples_Q_8_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1919252073" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="samples_I_9_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="544370548" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="samples_I_9_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="151666223" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="samples_Q_9_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1919252069" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="samples_Q_9_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1701980192" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="samples_I_10_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1663988325" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="samples_I_10_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="samples_Q_10_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1717924464" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="samples_Q_10_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="or_ln54" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." rtlName="or_ln54_fu_1420_p2" coreId="544108393" contextFuncName="receiver" bitwidth="13" opcode="or" m_display="0" m_topoIndex="28" m_clusterGroupNumber="1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="or_ln54" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." rtlName="or_ln54_fu_1420_p2" coreId="540687219" contextFuncName="receiver" bitwidth="13" opcode="or" m_display="0" m_topoIndex="28" m_clusterGroupNumber="1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="samples_I_11_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1663050274" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="samples_I_11_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="574453865" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>samples_I_11</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -702,7 +702,7 @@
         <dataOutputObjs>samples_I_11</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="samples_Q_11_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="2037148769" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="samples_Q_11_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>samples_Q_11</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
@@ -932,7 +932,7 @@
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="br_ln52" lineNumber="52" fileName="receiver.cpp" fileDirectory="../." coreId="385" contextFuncName="receiver" opcode="br" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="br_ln52" lineNumber="52" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" opcode="br" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="52" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.end.exitStub</controlInputObjs>
@@ -948,7 +948,7 @@
       <controlInputObjs>for.inc.0.split</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.0.split</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="samples_I_12_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="samples_I_12_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
@@ -960,14 +960,14 @@
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="149" name="samples_Q_12_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="149" name="samples_Q_12_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="150" name="samples_I_13_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="441" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="150" name="samples_I_13_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
@@ -981,35 +981,35 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="samples_I_14_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1068" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="samples_I_14_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="samples_Q_14_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="samples_Q_14_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1948262962" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="samples_I_15_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="samples_I_15_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="samples_Q_15_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1028" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="samples_Q_15_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="156" name="samples_I_16_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="156" name="samples_I_16_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
@@ -1023,210 +1023,210 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="158" name="samples_I_17_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="558" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="158" name="samples_I_17_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="825384784" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="159" name="samples_Q_17_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="159" name="samples_Q_17_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="160" name="samples_I_18_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="160" name="samples_I_18_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="572669294" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="161" name="samples_Q_18_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="533" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="161" name="samples_Q_18_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="162" name="samples_I_19_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="162" name="samples_I_19_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="163" name="samples_Q_19_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="163" name="samples_Q_19_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="samples_I_20_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="samples_I_20_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="165" name="samples_Q_20_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="70" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="165" name="samples_Q_20_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="166" name="samples_I_21_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="593" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="166" name="samples_I_21_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="samples_Q_21_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="316" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="samples_Q_21_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="168" name="samples_I_22_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="637" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="168" name="samples_I_22_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="169" name="samples_Q_22_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="169" name="samples_Q_22_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1634082920" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="samples_I_23_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="samples_I_23_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="825913456" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="171" name="samples_Q_23_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="747" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="171" name="samples_Q_23_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="926365485" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="172" name="samples_I_24_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="172" name="samples_I_24_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1344405620" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="173" name="samples_Q_24_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="173" name="samples_Q_24_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="570456169" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="174" name="samples_I_25_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="174" name="samples_I_25_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1819243118" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="175" name="samples_Q_25_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="175" name="samples_Q_25_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="997420912" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="samples_I_26_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="2296604913" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="samples_I_26_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1768252261" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="177" name="samples_Q_26_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="177" name="samples_Q_26_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1212370521" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="178" name="samples_I_27_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="178" name="samples_I_27_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1952673397" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="samples_Q_27_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="samples_Q_27_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="151666223" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="180" name="samples_I_28_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="180" name="samples_I_28_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="825368659" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="181" name="samples_Q_28_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="2355199472" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="181" name="samples_Q_28_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1986360064" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="182" name="samples_I_29_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="9" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="182" name="samples_I_29_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1663041570" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="183" name="samples_Q_29_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="4" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="183" name="samples_Q_29_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1919252069" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="184" name="samples_I_30_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="184" name="samples_I_30_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="997420912" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="samples_Q_30_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="samples_Q_30_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="691026480" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="186" name="samples_I_31_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="186" name="samples_I_31_addr" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1768252261" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="187" name="samples_Q_31_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="9" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="187" name="samples_Q_31_addr" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1701980160" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
@@ -1245,19 +1245,19 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="190" name="zext_ln54" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." rtlName="zext_ln54_fu_1444_p1" coreId="0" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="190" name="zext_ln54" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." rtlName="zext_ln54_fu_1444_p1" coreId="536894776" contextFuncName="receiver" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="97" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>add</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="191" name="samples_I_0_addr_1" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="191" name="samples_I_0_addr_1" lineNumber="54" fileName="receiver.cpp" fileDirectory="../." coreId="1702129263" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="54" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="192" name="samples_Q_0_addr_1" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="0" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="192" name="samples_Q_0_addr_1" lineNumber="55" fileName="receiver.cpp" fileDirectory="../." coreId="1918988320" contextFuncName="receiver" bitwidth="8" opcode="getelementptr" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="receiver.cpp" linenumber="55" fileDirectory="C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver" functionName="receiver"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
@@ -2819,7 +2819,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="receiver_Pipeline_VITIS_LOOP_52_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="237" mMaxLatency="237">
+    <cfgRegions mId="1" mTag="receiver_Pipeline_VITIS_LOOP_52_1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="243" mMaxLatency="243">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
       <subRegions>4</subRegions>
@@ -2829,7 +2829,7 @@
       <basicBlocks>68</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_52_1" mII="1" mDepth="2" mMinTripCount="234" mMaxTripCount="234" mMinLatency="235" mMaxLatency="235" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_52_1" mII="1" mDepth="2" mMinTripCount="240" mMaxTripCount="240" mMinLatency="241" mMaxLatency="241" mType="1">
       <basicBlocks>146</basicBlocks>
       <basicBlocks>278</basicBlocks>
       <mDfPipe/>

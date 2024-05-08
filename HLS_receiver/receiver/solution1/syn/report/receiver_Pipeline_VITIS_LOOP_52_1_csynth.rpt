@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_52_1'
 ================================================================
-* Date:           Thu May  2 23:57:06 2024
+* Date:           Tue May  7 17:59:20 2024
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        receiver
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      237|      237|  2.370 us|  2.370 us|  237|  237|       no|
+    |      243|      243|  2.430 us|  2.430 us|  243|  243|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_52_1  |      235|      235|         2|          1|          1|   234|       yes|
+        |- VITIS_LOOP_52_1  |      241|      241|         2|          1|          1|   240|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -79,70 +79,70 @@
     +----------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
     |     Memory     |                            Module                           | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
     +----------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |samples_I_1_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_2_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_3_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_4_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_5_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_6_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_7_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_8_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_9_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_10_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_0_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_1_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_0_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_2_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_3_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_4_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_5_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_6_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_7_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_8_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_9_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_10_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_12_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_13_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_14_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_15_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_16_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_17_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_18_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_19_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_20_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_21_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_22_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_23_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_24_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_25_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_26_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_27_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_28_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_29_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_30_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_I_31_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_12_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_13_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_14_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_15_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_16_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_17_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_18_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_19_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_20_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_21_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_22_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_23_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_24_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_25_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_26_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_27_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_28_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_29_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_30_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
-    |samples_Q_31_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   235|   18|     1|         4230|
+    |samples_I_1_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_2_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_3_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_4_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_5_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_6_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_7_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_8_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_9_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_10_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_0_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_1_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_0_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_2_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_3_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_4_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_5_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_6_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_7_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_8_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_9_U   |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_10_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_12_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_13_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_14_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_15_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_16_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_17_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_18_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_19_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_20_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_21_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_22_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_23_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_24_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_25_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_26_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_27_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_28_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_29_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_30_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_I_31_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_12_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_13_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_14_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_15_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_16_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_17_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_18_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_19_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_20_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_21_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_22_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_23_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_24_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_25_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_26_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_27_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_28_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_29_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_30_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
+    |samples_Q_31_U  |receiver_Pipeline_VITIS_LOOP_52_1_samples_I_1_RAM_AUTO_1R1W  |        1|  0|   0|    0|   241|   18|     1|         4338|
     +----------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
-    |Total           |                                                             |       62|  0|   0|    0| 14570| 1116|    62|       262260|
+    |Total           |                                                             |       62|  0|   0|    0| 14942| 1116|    62|       268956|
     +----------------+-------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
 
     * FIFO: 
@@ -154,11 +154,11 @@
     +-----------------------+----------+----+---+----+------------+------------+
     |add_ln54_1_fu_1438_p2  |         +|   0|  0|  15|           8|           1|
     |add_ln54_fu_1432_p2    |         +|   0|  0|  14|          13|           6|
-    |icmp_ln52_fu_1426_p2   |      icmp|   0|  0|  14|          13|          11|
+    |icmp_ln52_fu_1426_p2   |      icmp|   0|  0|  14|          13|          10|
     |or_ln54_fu_1420_p2     |        or|   0|  0|  13|          13|           4|
     |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
     +-----------------------+----------+----+---+----+------------+------------+
-    |Total                  |          |   0|  0|  58|          48|          24|
+    |Total                  |          |   0|  0|  58|          48|          23|
     +-----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 

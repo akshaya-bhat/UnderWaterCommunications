@@ -152,11 +152,43 @@ entry:
   ret i32 %2
 }
 
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a32struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"([32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %dst, [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* readonly %src, i64 %num) local_unnamed_addr #2 {
+entry:
+  %0 = icmp eq [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %src, null
+  %1 = icmp eq [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond7 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %src.addr.0.0.05 = getelementptr [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"], [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %src, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %dst.addr.0.0.06 = getelementptr [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"], [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %dst, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %3 = load i24, i24* %src.addr.0.0.05, align 4
+  store i24 %3, i24* %dst.addr.0.0.06, align 4
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
 ; Function Attrs: nounwind
-declare void @llvm.assume(i1) #2
+declare void @llvm.assume(i1) #3
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a32struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>.37"([2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.0" %dst_0, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.1" %dst_1, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.2" %dst_2, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.3" %dst_3, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.4" %dst_4, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.5" %dst_5, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.6" %dst_6, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.7" %dst_7, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.8" %dst_8, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.9" %dst_9, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.10" %dst_10, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.11" %dst_11, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.12" %dst_12, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.13" %dst_13, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.14" %dst_14, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.15" %dst_15, [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* readonly "orig.arg.no"="1" "unpacked"="1" %src, i64 "orig.arg.no"="2" "unpacked"="2" %num) #3 {
+define void @"arraycpy_hls.p0a32struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>.37"([2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.0" %dst_0, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.1" %dst_1, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.2" %dst_2, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.3" %dst_3, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.4" %dst_4, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.5" %dst_5, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.6" %dst_6, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.7" %dst_7, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.8" %dst_8, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.9" %dst_9, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.10" %dst_10, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.11" %dst_11, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.12" %dst_12, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.13" %dst_13, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.14" %dst_14, [2 x i24]* nocapture "orig.arg.no"="0" "unpacked"="0.0.15" %dst_15, [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* readonly "orig.arg.no"="1" "unpacked"="1" %src, i64 "orig.arg.no"="2" "unpacked"="2" %num) #2 {
 entry:
   %0 = icmp eq [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %src, null
   br i1 %0, label %ret, label %copy
@@ -309,7 +341,7 @@ entry:
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a32struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>.30"([32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* "orig.arg.no"="0" "unpacked"="0" %dst, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.0" %src_0, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.1" %src_1, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.2" %src_2, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.3" %src_3, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.4" %src_4, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.5" %src_5, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.6" %src_6, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.7" %src_7, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.8" %src_8, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.9" %src_9, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.10" %src_10, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.11" %src_11, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.12" %src_12, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.13" %src_13, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.14" %src_14, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.15" %src_15, i64 "orig.arg.no"="2" "unpacked"="2" %num) #3 {
+define void @"arraycpy_hls.p0a32struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>.30"([32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* "orig.arg.no"="0" "unpacked"="0" %dst, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.0" %src_0, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.1" %src_1, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.2" %src_2, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.3" %src_3, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.4" %src_4, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.5" %src_5, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.6" %src_6, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.7" %src_7, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.8" %src_8, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.9" %src_9, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.10" %src_10, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.11" %src_11, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.12" %src_12, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.13" %src_13, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.14" %src_14, [2 x i24]* nocapture readonly "orig.arg.no"="1" "unpacked"="1.0.15" %src_15, i64 "orig.arg.no"="2" "unpacked"="2" %num) #2 {
 entry:
   %0 = icmp eq [32 x %"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"]* %dst, null
   br i1 %0, label %ret, label %copy
@@ -488,8 +520,8 @@ declare i32 @receiver_hw_stub(%"struct.ap_fixed<24, 10, AP_TRN, AP_WRAP, 0>"*, %
 
 attributes #0 = { inaccessiblememonly nounwind }
 attributes #1 = { noinline "fpga.wrapper.func"="wrapper" }
-attributes #2 = { nounwind }
-attributes #3 = { argmemonly noinline norecurse "fpga.wrapper.func"="arraycpy_hls" }
+attributes #2 = { argmemonly noinline norecurse "fpga.wrapper.func"="arraycpy_hls" }
+attributes #3 = { nounwind }
 attributes #4 = { argmemonly noinline norecurse "fpga.wrapper.func"="onebyonecpy_hls" }
 attributes #5 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyin" }
 attributes #6 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyout" }
@@ -704,18 +736,18 @@ attributes #8 = { inaccessiblememonly nounwind "xlx.source"="user" }
 !199 = !DISubrange(count: 2240)
 !200 = !DIGlobalVariableExpression(var: !201, expr: !DIExpression())
 !201 = distinct !DIGlobalVariable(name: "cos_coefficients_table", linkageName: "cos_coefficients_table", scope: !153, file: !55, line: 295, type: !202, isLocal: true, isDefinition: true)
-!202 = !DICompositeType(tag: DW_TAG_array_type, baseType: !122, size: 512, align: 4, elements: !203)
+!202 = !DICompositeType(tag: DW_TAG_array_type, baseType: !122, size: 736, align: 4, elements: !203)
 !203 = !{!204}
-!204 = !DISubrange(count: 16)
+!204 = !DISubrange(count: 23)
 !205 = !DIGlobalVariableExpression(var: !206, expr: !DIExpression())
 !206 = distinct !DIGlobalVariable(name: "sin_coefficients_table", linkageName: "sin_coefficients_table", scope: !153, file: !55, line: 297, type: !202, isLocal: true, isDefinition: true)
 !207 = !DIGlobalVariableExpression(var: !208, expr: !DIExpression())
 !208 = distinct !DIGlobalVariable(name: "carrier_pos", scope: !153, file: !49, line: 8, type: !52, isLocal: false, isDefinition: true)
 !209 = !DIGlobalVariableExpression(var: !210, expr: !DIExpression())
 !210 = distinct !DIGlobalVariable(name: "samples_I", linkageName: "samples_I", scope: !153, file: !49, line: 11, type: !211, isLocal: false, isDefinition: true)
-!211 = !DICompositeType(tag: DW_TAG_array_type, baseType: !122, size: 240000, align: 4, elements: !212)
+!211 = !DICompositeType(tag: DW_TAG_array_type, baseType: !122, size: 246144, align: 4, elements: !212)
 !212 = !{!213}
-!213 = !DISubrange(count: 7500)
+!213 = !DISubrange(count: 7692)
 !214 = !DIGlobalVariableExpression(var: !215, expr: !DIExpression())
 !215 = distinct !DIGlobalVariable(name: "samples_Q", linkageName: "samples_Q", scope: !153, file: !49, line: 12, type: !211, isLocal: false, isDefinition: true)
 !216 = !DIGlobalVariableExpression(var: !217, expr: !DIExpression())

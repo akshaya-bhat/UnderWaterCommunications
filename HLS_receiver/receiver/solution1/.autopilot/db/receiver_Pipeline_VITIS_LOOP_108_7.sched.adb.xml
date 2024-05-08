@@ -131,10 +131,10 @@ for.body216:3 %br_ln108 = br i1 %icmp_ln108, void %for.end239.exitStub, void %fo
 
 <Node id="14" bw="64" op_0_bw="5">
 <![CDATA[
-for.body216.split:0 %i_6_cast14 = zext i5 %i
+for.body216.split:0 %i_6_cast15 = zext i5 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_6_cast14"/></StgValue>
+<StgValue><ssdm name="i_6_cast15"/></StgValue>
 </operation>
 
 <operation id="13" st_id="1" stage="1" lat="1">
@@ -179,7 +179,7 @@ for.body216.split:4 %zext_ln109 = zext i5 %or_ln109
 
 <Node id="19" bw="5" op_0_bw="18" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body216.split:5 %filt_3_I_addr = getelementptr i18 %filt_3_I, i64 0, i64 %i_6_cast14
+for.body216.split:5 %filt_3_I_addr = getelementptr i18 %filt_3_I, i64 0, i64 %i_6_cast15
 
 ]]></Node>
 <StgValue><ssdm name="filt_3_I_addr"/></StgValue>
@@ -259,7 +259,7 @@ for.body216.split:10 %lshr_ln = partselect i4 @_ssdm_op_PartSelect.i4.i5.i32.i32
 
 <Node id="28" bw="5" op_0_bw="18" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body216.split:14 %filt_3_Q_addr = getelementptr i18 %filt_3_Q, i64 0, i64 %i_6_cast14
+for.body216.split:14 %filt_3_Q_addr = getelementptr i18 %filt_3_Q, i64 0, i64 %i_6_cast15
 
 ]]></Node>
 <StgValue><ssdm name="filt_3_Q_addr"/></StgValue>

@@ -281,10 +281,10 @@ for.body757:3 %br_ln237 = br i1 %tmp, void %for.body757.split, void %for.body799
 
 <Node id="30" bw="64" op_0_bw="4">
 <![CDATA[
-for.body757.split:0 %i_19_cast22 = zext i4 %i_5
+for.body757.split:0 %i_19_cast23 = zext i4 %i_5
 
 ]]></Node>
-<StgValue><ssdm name="i_19_cast22"/></StgValue>
+<StgValue><ssdm name="i_19_cast23"/></StgValue>
 </operation>
 
 <operation id="23" st_id="1" stage="1" lat="1">
@@ -345,7 +345,7 @@ for.body757.split:5 %zext_ln238 = zext i3 %or_ln238
 
 <Node id="36" bw="3" op_0_bw="31" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body757.split:6 %arr_8_I_addr = getelementptr i31 %arr_8_I, i64 0, i64 %i_19_cast22
+for.body757.split:6 %arr_8_I_addr = getelementptr i31 %arr_8_I, i64 0, i64 %i_19_cast23
 
 ]]></Node>
 <StgValue><ssdm name="arr_8_I_addr"/></StgValue>
@@ -441,7 +441,7 @@ for.body757.split:15 %switch_ln238 = switch i2 %trunc_ln8, void %branch17, i2 0,
 
 <Node id="59" bw="3" op_0_bw="31" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.body757.split55:0 %arr_8_Q_addr = getelementptr i31 %arr_8_Q, i64 0, i64 %i_19_cast22
+for.body757.split55:0 %arr_8_Q_addr = getelementptr i31 %arr_8_Q, i64 0, i64 %i_19_cast23
 
 ]]></Node>
 <StgValue><ssdm name="arr_8_Q_addr"/></StgValue>
@@ -1392,7 +1392,7 @@ branch29:1 %br_ln239 = br void %for.body757.split5586
 </dataflow>
 <dataflow id="141" from="tmp" to="br_ln237" fromId="20" toId="21">
 </dataflow>
-<dataflow id="142" from="i_5" to="i_19_cast22" fromId="18" toId="22">
+<dataflow id="142" from="i_5" to="i_19_cast23" fromId="18" toId="22">
 </dataflow>
 <dataflow id="143" from="i_5" to="empty" fromId="18" toId="23">
 </dataflow>
@@ -1406,7 +1406,7 @@ branch29:1 %br_ln239 = br void %for.body757.split5586
 </dataflow>
 <dataflow id="150" from="StgValue_149" to="arr_8_I_addr" fromId="149" toId="26">
 </dataflow>
-<dataflow id="151" from="i_19_cast22" to="arr_8_I_addr" fromId="22" toId="26">
+<dataflow id="151" from="i_19_cast23" to="arr_8_I_addr" fromId="22" toId="26">
 </dataflow>
 <dataflow id="152" from="arr_8_I_addr" to="arr_8_I_load" fromId="26" toId="27">
 </dataflow>
@@ -1438,7 +1438,7 @@ branch29:1 %br_ln239 = br void %for.body757.split5586
 </dataflow>
 <dataflow id="171" from="StgValue_149" to="arr_8_Q_addr" fromId="149" toId="32">
 </dataflow>
-<dataflow id="172" from="i_19_cast22" to="arr_8_Q_addr" fromId="22" toId="32">
+<dataflow id="172" from="i_19_cast23" to="arr_8_Q_addr" fromId="22" toId="32">
 </dataflow>
 <dataflow id="173" from="arr_8_Q_addr" to="arr_8_Q_load" fromId="32" toId="33">
 </dataflow>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver'" level="0">
-<item name = "Date">Thu May  2 23:57:05 2024
+<item name = "Date">Tue May  7 17:59:19 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
@@ -24,35 +24,35 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">631, 748, 6.310 us, 7.480 us, 632, 749, no</column>
+<column name="">637, 754, 6.370 us, 7.540 us, 638, 755, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_52_1_fu_2678">receiver_Pipeline_VITIS_LOOP_52_1, 237, 237, 2.370 us, 2.370 us, 237, 237, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_63_2_fu_2810">receiver_Pipeline_VITIS_LOOP_63_2, 26, 26, 0.260 us, 0.260 us, 26, 26, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_132_10_fu_2846">receiver_Pipeline_VITIS_LOOP_132_10, 237, 237, 2.370 us, 2.370 us, 237, 237, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_75_3_fu_2978">receiver_Pipeline_VITIS_LOOP_75_3, 29, 29, 0.290 us, 0.290 us, 29, 29, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_84_4_fu_3032">receiver_Pipeline_VITIS_LOOP_84_4, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_95_5_fu_3068">receiver_Pipeline_VITIS_LOOP_95_5, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_102_6_fu_3104">receiver_Pipeline_VITIS_LOOP_102_6, 27, 27, 0.270 us, 0.270 us, 27, 27, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_108_7_fu_3126">receiver_Pipeline_VITIS_LOOP_108_7, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_114_8_fu_3134">receiver_Pipeline_VITIS_LOOP_114_8, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_120_9_fu_3142">receiver_Pipeline_VITIS_LOOP_120_9, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_149_11_fu_3154">receiver_Pipeline_VITIS_LOOP_149_11, 39, 39, 0.390 us, 0.390 us, 39, 39, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_161_12_fu_3416">receiver_Pipeline_VITIS_LOOP_161_12, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_171_13_fu_3612">receiver_Pipeline_VITIS_LOOP_171_13, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_181_14_fu_3744">receiver_Pipeline_VITIS_LOOP_181_14, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_191_15_fu_3828">receiver_Pipeline_VITIS_LOOP_191_15, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_201_16_fu_3864">receiver_Pipeline_VITIS_LOOP_201_16, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_211_17_fu_3892">receiver_Pipeline_VITIS_LOOP_211_17, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_219_18_fu_3908">receiver_Pipeline_VITIS_LOOP_219_18, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_228_19_fu_3918">receiver_Pipeline_VITIS_LOOP_228_19, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_237_20_fu_3926">receiver_Pipeline_VITIS_LOOP_237_20, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_244_21_fu_3940">receiver_Pipeline_VITIS_LOOP_244_21, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
-<column name="grp_receiver_Pipeline_VITIS_LOOP_264_22_fu_3956">receiver_Pipeline_VITIS_LOOP_264_22, 117, 117, 1.170 us, 1.170 us, 117, 117, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_52_1_fu_2676">receiver_Pipeline_VITIS_LOOP_52_1, 243, 243, 2.430 us, 2.430 us, 243, 243, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_63_2_fu_2808">receiver_Pipeline_VITIS_LOOP_63_2, 26, 26, 0.260 us, 0.260 us, 26, 26, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_132_10_fu_2844">receiver_Pipeline_VITIS_LOOP_132_10, 243, 243, 2.430 us, 2.430 us, 243, 243, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_75_3_fu_2976">receiver_Pipeline_VITIS_LOOP_75_3, 29, 29, 0.290 us, 0.290 us, 29, 29, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_84_4_fu_3030">receiver_Pipeline_VITIS_LOOP_84_4, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_95_5_fu_3066">receiver_Pipeline_VITIS_LOOP_95_5, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_102_6_fu_3102">receiver_Pipeline_VITIS_LOOP_102_6, 27, 27, 0.270 us, 0.270 us, 27, 27, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_108_7_fu_3124">receiver_Pipeline_VITIS_LOOP_108_7, 14, 14, 0.140 us, 0.140 us, 14, 14, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_114_8_fu_3132">receiver_Pipeline_VITIS_LOOP_114_8, 8, 8, 80.000 ns, 80.000 ns, 8, 8, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_120_9_fu_3140">receiver_Pipeline_VITIS_LOOP_120_9, 5, 5, 50.000 ns, 50.000 ns, 5, 5, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_149_11_fu_3152">receiver_Pipeline_VITIS_LOOP_149_11, 39, 39, 0.390 us, 0.390 us, 39, 39, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_161_12_fu_3414">receiver_Pipeline_VITIS_LOOP_161_12, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_171_13_fu_3610">receiver_Pipeline_VITIS_LOOP_171_13, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_181_14_fu_3742">receiver_Pipeline_VITIS_LOOP_181_14, 37, 37, 0.370 us, 0.370 us, 37, 37, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_191_15_fu_3826">receiver_Pipeline_VITIS_LOOP_191_15, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_201_16_fu_3862">receiver_Pipeline_VITIS_LOOP_201_16, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_211_17_fu_3890">receiver_Pipeline_VITIS_LOOP_211_17, 20, 20, 0.200 us, 0.200 us, 20, 20, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_219_18_fu_3906">receiver_Pipeline_VITIS_LOOP_219_18, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_228_19_fu_3916">receiver_Pipeline_VITIS_LOOP_228_19, 10, 10, 0.100 us, 0.100 us, 10, 10, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_237_20_fu_3924">receiver_Pipeline_VITIS_LOOP_237_20, 6, 6, 60.000 ns, 60.000 ns, 6, 6, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_244_21_fu_3938">receiver_Pipeline_VITIS_LOOP_244_21, 4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+<column name="grp_receiver_Pipeline_VITIS_LOOP_264_22_fu_3954">receiver_Pipeline_VITIS_LOOP_264_22, 117, 117, 1.170 us, 1.170 us, 117, 117, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

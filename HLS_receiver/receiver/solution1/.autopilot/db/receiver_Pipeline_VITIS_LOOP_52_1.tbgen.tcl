@@ -15,8 +15,8 @@ set DLRegItemOffset 0
 set C_modelName {receiver_Pipeline_VITIS_LOOP_52_1}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ samples_I_11 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
-	{ samples_Q_11 int 18 regular {array 235 { 0 1 } 1 1 } {global 2}  }
+	{ samples_I_11 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
+	{ samples_Q_11 int 18 regular {array 241 { 0 1 } 1 1 } {global 2}  }
 }
 set hasAXIMCache 0
 set C_modelArgMapList {[ 
@@ -75,7 +75,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "237", "EstimateLatencyMax" : "237",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "243", "EstimateLatencyMax" : "243",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -286,8 +286,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "237", "Max" : "237"}
-	, {"Name" : "Interval", "Min" : "237", "Max" : "237"}
+	{"Name" : "Latency", "Min" : "243", "Max" : "243"}
+	, {"Name" : "Interval", "Min" : "243", "Max" : "243"}
 ]}
 
 set PipelineEnableSignalInfo {[

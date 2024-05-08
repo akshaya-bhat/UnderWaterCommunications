@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_244_21'
 ================================================================
-* Date:           Thu May  2 23:56:57 2024
+* Date:           Tue May  7 17:59:14 2024
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        receiver
@@ -160,9 +160,8 @@ The critical path consists of the following:
  <State 2>: 6.161ns
 The critical path consists of the following:
 	'load' operation ('i', receiver.cpp:245) on local variable 'i' [31]  (0.000 ns)
-	'or' operation ('or_ln245', receiver.cpp:245) [45]  (0.000 ns)
-	'icmp' operation ('icmp_ln245_1', receiver.cpp:245) [46]  (1.565 ns)
-	'select' operation ('select_ln246_1', receiver.cpp:246) [53]  (0.000 ns)
+	'icmp' operation ('icmp_ln245', receiver.cpp:245) [43]  (1.565 ns)
+	'select' operation ('select_ln246', receiver.cpp:246) [52]  (0.000 ns)
 	'add' operation ('arr_10_Q[0]', receiver.cpp:246) [54]  (2.314 ns)
 	'select' operation ('arr_10_Q[1]', receiver.cpp:246) [56]  (0.694 ns)
 	'store' operation ('store_ln244', receiver.cpp:244) of variable 'arr_10_Q[1]', receiver.cpp:246 on local variable 'arr_10_Q[1]' [59]  (1.588 ns)

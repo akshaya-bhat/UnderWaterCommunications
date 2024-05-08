@@ -480,7 +480,7 @@ architecture behav of receiver_receiver_Pipeline_VITIS_LOOP_132_10 is
     constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
     constant ap_const_lv32_C : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001100";
     constant ap_const_lv13_B : STD_LOGIC_VECTOR (12 downto 0) := "0000000001011";
-    constant ap_const_lv13_1D4B : STD_LOGIC_VECTOR (12 downto 0) := "1110101001011";
+    constant ap_const_lv13_1E0B : STD_LOGIC_VECTOR (12 downto 0) := "1111000001011";
     constant ap_const_lv13_20 : STD_LOGIC_VECTOR (12 downto 0) := "0000000100000";
     constant ap_const_lv8_1 : STD_LOGIC_VECTOR (7 downto 0) := "00000001";
 
@@ -849,7 +849,7 @@ begin
         end if; 
     end process;
 
-    icmp_ln132_fu_1426_p2 <= "1" when (unsigned(or_ln134_fu_1420_p2) < unsigned(ap_const_lv13_1D4B)) else "0";
+    icmp_ln132_fu_1426_p2 <= "1" when (unsigned(or_ln134_fu_1420_p2) < unsigned(ap_const_lv13_1E0B)) else "0";
     lshr_ln_fu_1344_p4 <= ap_sig_allocacmp_i(12 downto 5);
     matched_I_0_address0 <= zext_ln132_reg_1462(8 - 1 downto 0);
     matched_I_0_address1 <= zext_ln134_fu_1444_p1(8 - 1 downto 0);
