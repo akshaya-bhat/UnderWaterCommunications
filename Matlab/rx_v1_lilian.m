@@ -179,8 +179,8 @@ sense_symbols = senseI + 1i*senseQ;
         shiftedQ_simplest = (normQ_simplest + 1)./2 .*(2^(nsdec) - 1);
         integerI_simplest = round(shiftedI_simplest);
         integerQ_simplest = round(shiftedQ_simplest);
-        decodedI_simplest = vitdec(integerI_simplest,trellis,30,'trunc','soft', nsdec);
-        decodedQ_simplest = vitdec(integerQ_simplest,trellis,30,'trunc','soft', nsdec);
+        decodedI_simplest = vitdec(integerI_simplest,trellis,30,'term','soft', nsdec);
+        decodedQ_simplest = vitdec(integerQ_simplest,trellis,30,'term','soft', nsdec);
         % equalizer
         maxxx = max(abs(real(equalized_symbols)));
         normI_equalizer = real(equalized_symbols)/max(abs(real(equalized_symbols)));

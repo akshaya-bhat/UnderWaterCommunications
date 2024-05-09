@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:transmitter:1.0
-// IP Revision: 2113514287
+// IP Revision: 2113529949
 
 (* X_CORE_INFO = "transmitter,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_transmitter_0_1,transmitter,{}" *)
-(* CORE_GENERATION_INFO = "design_1_transmitter_0_1,transmitter,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=transmitter,x_ipVersion=1.0,x_ipCoreRevision=2113514287,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=4,C_S_AXI_CONTROL_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "design_1_transmitter_0_1,transmitter,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=transmitter,x_ipVersion=1.0,x_ipCoreRevision=2113529949,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_CONTROL_ADDR_WIDTH=4,C_S_AXI_CONTROL_DATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_transmitter_0_1 (
@@ -102,7 +102,16 @@ module design_1_transmitter_0_1 (
   output_i_TSTRB,
   output_i_TUSER,
   output_i_TLAST,
-  output_i_TID
+  output_i_TID,
+  output_q_TVALID,
+  output_q_TREADY,
+  output_q_TDATA,
+  output_q_TDEST,
+  output_q_TKEEP,
+  output_q_TSTRB,
+  output_q_TUSER,
+  output_q_TLAST,
+  output_q_TID
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control AWADDR" *)
@@ -141,7 +150,7 @@ output wire s_axi_control_RVALID;
 READS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_control RREADY" *)
 input wire s_axi_control_RREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_control:input_i:input_q:output_i, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_control:input_i:input_q:output_i:output_q, ASSOCIATED_RESET ap_rst_n, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
 input wire ap_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -207,6 +216,25 @@ output wire [0 : 0] output_i_TLAST;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_i, TDATA_NUM_BYTES 2, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_i TID" *)
 output wire [4 : 0] output_i_TID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TVALID" *)
+output wire output_q_TVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TREADY" *)
+input wire output_q_TREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TDATA" *)
+output wire [15 : 0] output_q_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TDEST" *)
+output wire [5 : 0] output_q_TDEST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TKEEP" *)
+output wire [1 : 0] output_q_TKEEP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TSTRB" *)
+output wire [1 : 0] output_q_TSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TUSER" *)
+output wire [1 : 0] output_q_TUSER;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TLAST" *)
+output wire [0 : 0] output_q_TLAST;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME output_q, TDATA_NUM_BYTES 2, TDEST_WIDTH 6, TID_WIDTH 5, TUSER_WIDTH 2, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 output_q TID" *)
+output wire [4 : 0] output_q_TID;
 
 (* SDX_KERNEL = "true" *)
 (* SDX_KERNEL_TYPE = "hls" *)
@@ -261,6 +289,15 @@ output wire [4 : 0] output_i_TID;
     .output_i_TSTRB(output_i_TSTRB),
     .output_i_TUSER(output_i_TUSER),
     .output_i_TLAST(output_i_TLAST),
-    .output_i_TID(output_i_TID)
+    .output_i_TID(output_i_TID),
+    .output_q_TVALID(output_q_TVALID),
+    .output_q_TREADY(output_q_TREADY),
+    .output_q_TDATA(output_q_TDATA),
+    .output_q_TDEST(output_q_TDEST),
+    .output_q_TKEEP(output_q_TKEEP),
+    .output_q_TSTRB(output_q_TSTRB),
+    .output_q_TUSER(output_q_TUSER),
+    .output_q_TLAST(output_q_TLAST),
+    .output_q_TID(output_q_TID)
   );
 endmodule

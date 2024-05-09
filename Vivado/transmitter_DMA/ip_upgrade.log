@@ -1,0 +1,634 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 14:10:10 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529927) to (Rev. 2113529949)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 13:47:56 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529889) to (Rev. 2113529927)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 13:10:01 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529870) to (Rev. 2113529889)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 12:51:40 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529850) to (Rev. 2113529870)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'output_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TSTRB' width 2 differs from original width 4
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 12:32:43 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529825) to (Rev. 2113529850)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'output_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TSTRB' width 4 differs from original width 2
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 12:06:33 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529808) to (Rev. 2113529825)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 11:51:34 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529793) to (Rev. 2113529808)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 11:34:12 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529768) to (Rev. 2113529793)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'input_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'input_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'input_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'input_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'input_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'input_q_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TSTRB' width 2 differs from original width 4
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 11:11:42 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529744) to (Rev. 2113529768)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'input_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'input_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'input_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'input_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'input_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'input_q_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TSTRB' width 4 differs from original width 2
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 10:45:09 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529732) to (Rev. 2113529744)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 10:33:49 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529719) to (Rev. 2113529732)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 10:19:53 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529706) to (Rev. 2113529719)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'input_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'input_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'input_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'input_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'input_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'input_q_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TSTRB' width 2 differs from original width 4
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 10:06:30 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529140) to (Rev. 2113529706)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 00:41:03 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529127) to (Rev. 2113529140)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 00:28:13 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529115) to (Rev. 2113529127)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'input_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'input_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'input_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'input_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'input_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'input_q_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TSTRB' width 4 differs from original width 2
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Thu Apr 25 00:17:38 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529085) to (Rev. 2113529115)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Apr 24 23:47:48 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113529056) to (Rev. 2113529085)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'input_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'input_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'input_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'input_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'input_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'input_q_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_i_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_i_TSTRB' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TDATA' width 16 differs from original width 32
+
+-Upgraded port 'output_q_TKEEP' width 2 differs from original width 4
+
+-Upgraded port 'output_q_TSTRB' width 2 differs from original width 4
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Apr 24 23:17:42 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113527438) to (Rev. 2113529056)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_transmitter_0_1'. These changes may impact your design.
+
+
+-Upgraded port 'input_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'input_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'input_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'input_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'input_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'input_q_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_i_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_i_TSTRB' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TDATA' width 32 differs from original width 16
+
+-Upgraded port 'output_q_TKEEP' width 4 differs from original width 2
+
+-Upgraded port 'output_q_TSTRB' width 4 differs from original width 2
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Tue Apr 23 20:18:39 2024
+| Host         : lilian running 64-bit Ubuntu 20.04.6 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_transmitter_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_transmitter_0_1 (xilinx.com:hls:transmitter:1.0) from (Rev. 2113527347) to (Rev. 2113527438)
+

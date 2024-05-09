@@ -84,7 +84,7 @@ h = rcosdesign(rolloff,6,oversample,'sqrt');
 dataPulseShaped = conv(h,dataUpsampled);
 MOD_PREAMBLE = conv(h,upsample([Ga' Gb'],oversample));
 %% Read from HLS File PULSE SHAPRE
-fid = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS.bin", "r");
+fid = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS_new.bin", "rb");
 data_HLS = fread(fid, "float");
 realData = data_HLS(1:2:end);
 imagData = data_HLS(2:2:end);

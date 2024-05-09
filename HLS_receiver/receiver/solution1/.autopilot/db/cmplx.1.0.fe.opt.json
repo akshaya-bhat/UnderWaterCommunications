@@ -1,0 +1,155 @@
+{
+  "0": {
+    "basicblocks": 211,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 29,
+    "instructions": 1980,
+    "loads": {
+      "G": 16,
+      "L": 56
+    },
+    "name": "receiver",
+    "stores": {
+      "G": 20,
+      "L": 47,
+      "T": 2
+    },
+    "total_instructions": 18038
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.hpp",
+    "fileloc": 95,
+    "instructions": 2241,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 903071
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.hpp",
+    "fileloc": 295,
+    "instructions": 24,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 9035
+  },
+  "11": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 16,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.7",
+    "total_instructions": 73
+  },
+  "12": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 17,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.8",
+    "total_instructions": 73
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 22,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.10",
+    "total_instructions": 59
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 25,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.12",
+    "total_instructions": 59
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 26,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.13",
+    "total_instructions": 59
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.hpp",
+    "fileloc": 297,
+    "instructions": 24,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 9035
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 18,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.9",
+    "total_instructions": 73
+  },
+  "4": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 15,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.6",
+    "total_instructions": 73
+  },
+  "5": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 12,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.5",
+    "total_instructions": 73
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 23,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.11",
+    "total_instructions": 59
+  },
+  "7": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 11,
+    "instructions": 9,
+    "name": "__cxx_global_var_init.4",
+    "total_instructions": 73
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "9 1 10 2 7 5 4 11 12 3 13 6 14 15",
+    "file": "receiver.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 15,
+    "name": "",
+    "total_instructions": 1000575
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "receiver.hpp",
+    "fileloc": 55,
+    "instructions": 194,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 78745
+  }
+}

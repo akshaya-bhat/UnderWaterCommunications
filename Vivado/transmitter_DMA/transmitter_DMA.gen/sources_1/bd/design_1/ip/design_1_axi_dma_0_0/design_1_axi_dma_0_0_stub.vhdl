@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Sun Apr 14 12:50:13 2024
+-- Date        : Thu Apr 25 10:23:06 2024
 -- Host        : lilian running 64-bit Ubuntu 20.04.6 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_dma_0_0 -prefix
 --               design_1_axi_dma_0_0_ design_1_axi_dma_0_0_stub.vhdl

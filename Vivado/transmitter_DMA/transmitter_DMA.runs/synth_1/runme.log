@@ -24,100 +24,114 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28131
+INFO: [Synth 8-7075] Helper process launched with PID 153989
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2463.449 ; gain = 372.613 ; free physical = 12943 ; free virtual = 22282
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3469.203; parent = 2469.391; children = 999.812
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2463.762 ; gain = 372.582 ; free physical = 15052 ; free virtual = 23843
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3470.512; parent = 2470.703; children = 999.809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_axi_dma_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_axi_dma_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:265]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:265]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:265]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:265]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:265]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 59 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:265]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_1_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_axi_dma_1_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_1_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_axi_dma_1_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:325]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:325]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:325]
-WARNING: [Synth 8-7023] instance 'axi_dma_1' of module 'design_1_axi_dma_1_1' has 40 connections declared, but only 37 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:325]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:710]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2204]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_pc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2204]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2866]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_us_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_us_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2993]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_0' has 34 connections declared, but only 33 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2993]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2866]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3334]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_us_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_us_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3485]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_1' has 40 connections declared, but only 39 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3485]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3334]
-INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_8NCF02' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3527]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_2' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_us_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_2' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_us_2_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_2' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3654]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_2' has 34 connections declared, but only 33 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3654]
-INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_8NCF02' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3527]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_xbar_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_xbar_1_stub.v:5]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_awready' does not match port width (3) of module 'design_1_xbar_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1401]
-WARNING: [Synth 8-689] width (4) of port connection 's_axi_bresp' does not match port width (6) of module 'design_1_xbar_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1405]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_bvalid' does not match port width (3) of module 'design_1_xbar_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1406]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_wready' does not match port width (3) of module 'design_1_xbar_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1414]
-WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1340]
-WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_1' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1340]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_1' has 78 connections declared, but only 76 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1340]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:710]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:454]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:454]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:454]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:454]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:454]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_processing_system7_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:461]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:461]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:461]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:461]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 108 connections declared, but only 104 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:461]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1419]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2079]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2079]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2609]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2609]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2734]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2734]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3029]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3029]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_xbar_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2038]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2038]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2038]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1419]
-INFO: [Synth 8-6157] synthesizing module 'design_1_transmitter_0_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_transmitter_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_transmitter_0_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-28064-lilian/realtime/design_1_transmitter_0_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'output_i_TDEST' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:664]
-WARNING: [Synth 8-7071] port 'output_i_TSTRB' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:664]
-WARNING: [Synth 8-7071] port 'output_i_TUSER' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:664]
-WARNING: [Synth 8-7071] port 'output_i_TID' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:664]
-WARNING: [Synth 8-7023] instance 'transmitter_0' of module 'design_1_transmitter_0_1' has 47 connections declared, but only 43 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:664]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_axi_dma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_axi_dma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:285]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:285]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:285]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:285]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:285]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 59 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:285]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_1_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_axi_dma_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_1_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_axi_dma_1_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_1_1' is unconnected for instance 'axi_dma_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7023] instance 'axi_dma_1' of module 'design_1_axi_dma_1_1' has 64 connections declared, but only 59 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:345]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:773]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2392]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_pc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2392]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3054]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3181]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_0' has 34 connections declared, but only 33 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3181]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3054]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1F69D31' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3522]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3673]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_1' has 40 connections declared, but only 39 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3673]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1F69D31' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3522]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_N071UN' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3715]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_2' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_2' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_2_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_2' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3842]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_2' has 34 connections declared, but only 33 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3842]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_N071UN' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3715]
+INFO: [Synth 8-6157] synthesizing module 's03_couplers_imp_1GN6L8E' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3878]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_3' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_3' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_us_3_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_3' is unconnected for instance 'auto_us' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:4029]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_3' has 40 connections declared, but only 39 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:4029]
+INFO: [Synth 8-6155] done synthesizing module 's03_couplers_imp_1GN6L8E' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3878]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_4' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_xbar_4_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_4' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_xbar_4_stub.v:5]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_arready' does not match port width (4) of module 'design_1_xbar_4' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1578]
+WARNING: [Synth 8-689] width (192) of port connection 's_axi_rdata' does not match port width (256) of module 'design_1_xbar_4' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1595]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_rlast' does not match port width (4) of module 'design_1_xbar_4' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1596]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_rresp' does not match port width (8) of module 'design_1_xbar_4' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1598]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_rvalid' does not match port width (4) of module 'design_1_xbar_4' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1599]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_4' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1528]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_4' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1528]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_4' has 78 connections declared, but only 76 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1528]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:773]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_proc_sys_reset_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:514]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:514]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:514]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:514]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:514]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_processing_system7_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:521]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:521]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:521]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:521]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 107 connections declared, but only 103 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:521]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1607]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2267]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2267]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2797]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2797]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2922]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2922]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3217]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:3217]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2226]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2226]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:2226]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:1607]
+INFO: [Synth 8-6157] synthesizing module 'design_1_transmitter_0_1' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_transmitter_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_transmitter_0_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/.Xil/Vivado-153958-lilian/realtime/design_1_transmitter_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_i_TDEST' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_i_TSTRB' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_i_TUSER' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_i_TID' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_q_TDEST' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_q_TSTRB' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_q_TUSER' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7071] port 'output_q_TID' of module 'design_1_transmitter_0_1' is unconnected for instance 'transmitter_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
+WARNING: [Synth 8-7023] instance 'transmitter_0' of module 'design_1_transmitter_0_1' has 56 connections declared, but only 47 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:723]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/synth/design_1.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_UYSKKA is either unconnected or has no load
@@ -142,49 +156,53 @@ WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_ps7_0_axi_periph_0 is e
 WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module s02_couplers_imp_8NCF02 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module s02_couplers_imp_8NCF02 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_7HNO1D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_7HNO1D is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_bid[5] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_bid[4] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_bid[3] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_bid[2] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_rid[5] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_rid[4] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_rid[3] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M_AXI_rid[2] in module m00_couplers_imp_1R706YB is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S02_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S02_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s03_couplers_imp_1GN6L8E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s03_couplers_imp_1GN6L8E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s02_couplers_imp_N071UN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s02_couplers_imp_N071UN is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1F69D31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1F69D31 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_O7FAN0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_O7FAN0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[5] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[4] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[3] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[2] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[5] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[4] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[3] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[2] in module m00_couplers_imp_1CA5Z32 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S02_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S02_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S03_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S03_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2548.355 ; gain = 457.520 ; free physical = 13030 ; free virtual = 22362
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3548.172; parent = 2548.359; children = 999.812
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2549.668 ; gain = 458.488 ; free physical = 15138 ; free virtual = 23930
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3549.480; parent = 2549.672; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2566.168 ; gain = 475.332 ; free physical = 13029 ; free virtual = 22361
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3565.984; parent = 2566.172; children = 999.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2567.480 ; gain = 476.301 ; free physical = 15137 ; free virtual = 23929
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3567.293; parent = 2567.484; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2566.168 ; gain = 475.332 ; free physical = 13029 ; free virtual = 22361
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3565.984; parent = 2566.172; children = 999.812
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2567.480 ; gain = 476.301 ; free physical = 15137 ; free virtual = 23929
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3567.293; parent = 2567.484; children = 999.809
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2566.168 ; gain = 0.000 ; free physical = 13024 ; free virtual = 22356
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2567.480 ; gain = 0.000 ; free physical = 15132 ; free virtual = 23925
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -195,49 +213,51 @@ Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitte
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_0'
 Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
-Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_1/design_1_axi_dma_1_1/design_1_axi_dma_1_1_in_context.xdc] for cell 'design_1_i/axi_dma_1'
-Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_1/design_1_axi_dma_1_1/design_1_axi_dma_1_1_in_context.xdc] for cell 'design_1_i/axi_dma_1'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_1/design_1_axi_dma_1_1/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_1'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_axi_dma_1_1/design_1_axi_dma_1_1/design_1_axi_dma_0_0_in_context.xdc] for cell 'design_1_i/axi_dma_1'
 Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
-Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
-Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
-Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
-Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us'
-Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s01_couplers/auto_us'
-Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s02_couplers/auto_us'
-Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s02_couplers/auto_us'
-Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
-Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_xbar_4/design_1_xbar_4/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_xbar_4/design_1_xbar_4/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_us'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_us'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s02_couplers/auto_us'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s02_couplers/auto_us'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s03_couplers/auto_us'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3/design_1_auto_us_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/s03_couplers/auto_us'
+Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
+Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m00_couplers/auto_pc'
 Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_transmitter_0_1/design_1_transmitter_0_1/design_1_transmitter_0_1_in_context.xdc] for cell 'design_1_i/transmitter_0'
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_transmitter_0_1/design_1_transmitter_0_1/design_1_transmitter_0_1_in_context.xdc] for cell 'design_1_i/transmitter_0'
 Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2639.105 ; gain = 0.000 ; free physical = 12936 ; free virtual = 22267
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.418 ; gain = 0.000 ; free physical = 15047 ; free virtual = 23839
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2639.105 ; gain = 0.000 ; free physical = 12936 ; free virtual = 22267
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.418 ; gain = 0.000 ; free physical = 15047 ; free virtual = 23839
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12993 ; free virtual = 22325
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15112 ; free virtual = 23904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12993 ; free virtual = 22325
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15112 ; free virtual = 23904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -510,22 +530,23 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_dma_1. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s01_couplers/auto_us. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/s02_couplers/auto_us. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_mem_intercon. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s00_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s01_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s02_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/s03_couplers/auto_us. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0/m00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/transmitter_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12993 ; free virtual = 22325
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15112 ; free virtual = 23904
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12993 ; free virtual = 22326
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15110 ; free virtual = 23903
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -555,50 +576,52 @@ WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_ps7_0_axi_periph_0 is e
 WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_bid[5] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_bid[4] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_bid[3] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_bid[2] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_rid[5] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_rid[4] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_rid[3] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port M00_AXI_rid[2] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S02_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S02_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[5] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[4] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[3] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[2] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[5] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[4] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[3] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[2] in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S02_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S02_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S03_ACLK in module design_1_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S03_ARESETN in module design_1_axi_interconnect_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12987 ; free virtual = 22324
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1910.858; parent = 1700.086; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15100 ; free virtual = 23897
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1908.715; parent = 1699.016; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12888 ; free virtual = 22225
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1994.223; parent = 1784.123; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15006 ; free virtual = 23804
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.087; parent = 1782.881; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12888 ; free virtual = 22225
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1994.631; parent = 1784.533; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15006 ; free virtual = 23804
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.087; parent = 1782.881; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12885 ; free virtual = 22221
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1995.826; parent = 1785.729; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14997 ; free virtual = 23795
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.126; parent = 1782.920; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -616,49 +639,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.008; parent = 1785.910; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.259; parent = 1783.053; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.008; parent = 1785.910; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.274; parent = 1783.068; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.094; parent = 1785.996; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.345; parent = 1783.139; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.156; parent = 1786.059; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.407; parent = 1783.201; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.156; parent = 1786.059; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.407; parent = 1783.201; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.156; parent = 1786.059; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.423; parent = 1783.217; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -668,18 +691,19 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |      |BlackBox name                   |Instances |
 +------+--------------------------------+----------+
-|1     |design_1_xbar_1                 |         1|
+|1     |design_1_xbar_4                 |         1|
 |2     |design_1_auto_pc_1              |         1|
 |3     |design_1_auto_us_0              |         1|
 |4     |design_1_auto_us_1              |         1|
 |5     |design_1_auto_us_2              |         1|
-|6     |design_1_xbar_0                 |         1|
-|7     |design_1_auto_pc_0              |         1|
-|8     |design_1_axi_dma_0_0            |         1|
-|9     |design_1_axi_dma_1_1            |         1|
-|10    |design_1_proc_sys_reset_0_0     |         1|
-|11    |design_1_processing_system7_0_0 |         1|
-|12    |design_1_transmitter_0_1        |         1|
+|6     |design_1_auto_us_3              |         1|
+|7     |design_1_xbar_0                 |         1|
+|8     |design_1_auto_pc_0              |         1|
+|9     |design_1_axi_dma_0_0            |         1|
+|10    |design_1_axi_dma_1_1            |         1|
+|11    |design_1_proc_sys_reset_0_0     |         1|
+|12    |design_1_processing_system7_0_0 |         1|
+|13    |design_1_transmitter_0_1        |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -687,35 +711,35 @@ Report Cell Usage:
 |      |Cell                          |Count |
 +------+------------------------------+------+
 |1     |design_1_auto_pc              |     2|
-|3     |design_1_auto_us              |     3|
-|6     |design_1_axi_dma_0            |     1|
-|7     |design_1_axi_dma_1            |     1|
-|8     |design_1_proc_sys_reset_0     |     1|
-|9     |design_1_processing_system7_0 |     1|
-|10    |design_1_transmitter_0        |     1|
-|11    |design_1_xbar                 |     2|
+|3     |design_1_auto_us              |     4|
+|7     |design_1_axi_dma_0            |     1|
+|8     |design_1_axi_dma_1            |     1|
+|9     |design_1_proc_sys_reset_0     |     1|
+|10    |design_1_processing_system7_0 |     1|
+|11    |design_1_transmitter_0        |     1|
+|12    |design_1_xbar                 |     2|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12881 ; free virtual = 22218
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1996.203; parent = 1786.105; children = 210.772
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3606.906; parent = 2607.094; children = 999.812
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 14983 ; free virtual = 23781
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1992.454; parent = 1783.248; children = 209.699
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3608.215; parent = 2608.406; children = 999.809
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2639.105 ; gain = 475.332 ; free physical = 12944 ; free virtual = 22282
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2639.105 ; gain = 548.270 ; free physical = 12944 ; free virtual = 22282
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2640.418 ; gain = 476.301 ; free physical = 15036 ; free virtual = 23834
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2640.418 ; gain = 549.238 ; free physical = 15036 ; free virtual = 23834
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2639.105 ; gain = 0.000 ; free physical = 13039 ; free virtual = 22376
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2640.418 ; gain = 0.000 ; free physical = 15151 ; free virtual = 23949
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2639.105 ; gain = 0.000 ; free physical = 12971 ; free virtual = 22309
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.418 ; gain = 0.000 ; free physical = 15085 ; free virtual = 23882
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: a48e1f5
+Synth Design complete, checksum: 2a55dccb
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+75 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2639.105 ; gain = 885.152 ; free physical = 13174 ; free virtual = 22511
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2640.418 ; gain = 886.090 ; free physical = 15281 ; free virtual = 24079
 INFO: [Common 17-1381] The checkpoint '/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 14 17:20:34 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 25 14:13:43 2024...

@@ -152,7 +152,6 @@ processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_n
         ,S_AXI_HP0_ACLK("S_AXI_HP0_ACLK")
         ,S_AXI_HP0_RDISSUECAP1_EN("S_AXI_HP0_RDISSUECAP1_EN")
         ,S_AXI_HP0_WRISSUECAP1_EN("S_AXI_HP0_WRISSUECAP1_EN")
-        ,IRQ_F2P("IRQ_F2P")
         ,FCLK_CLK0("FCLK_CLK0")
         ,FCLK_RESET0_N("FCLK_RESET0_N")
         ,MIO("MIO")

@@ -9,7 +9,6 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_processing_system7_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1701.855 ; gain = 87.992 ; free physical = 2809 ; free virtual = 11839
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lilian/school/UnderWaterCommunications/HLS'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
@@ -20,12 +19,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19637
+INFO: [Synth 8-7075] Helper process launched with PID 163352
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 2446.008 ; gain = 370.613 ; free physical = 250 ; free virtual = 5055
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1668.645; parent = 1538.627; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3403.535; parent = 2452.949; children = 950.586
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2448.914 ; gain = 373.582 ; free physical = 10623 ; free virtual = 19767
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3454.668; parent = 2454.855; children = 999.812
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
@@ -36,20 +35,20 @@ INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [/tools/Xilinx/Vivad
 INFO: [Synth 8-6157] synthesizing module 'PS7' [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:109424]
 INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:456]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:452]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
 WARNING: [Synth 8-7129] Port ENET0_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET0_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -131,24 +130,24 @@ WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2533.914 ; gain = 458.520 ; free physical = 551 ; free virtual = 4675
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3484.504; parent = 2533.918; children = 950.586
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2533.820 ; gain = 458.488 ; free physical = 10708 ; free virtual = 19854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3533.637; parent = 2533.824; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2551.727 ; gain = 476.332 ; free physical = 536 ; free virtual = 4659
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3502.316; parent = 2551.730; children = 950.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2551.633 ; gain = 476.301 ; free physical = 10708 ; free virtual = 19854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3551.449; parent = 2551.637; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2551.727 ; gain = 476.332 ; free physical = 528 ; free virtual = 4651
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3502.316; parent = 2551.730; children = 950.586
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2551.633 ; gain = 476.301 ; free physical = 10708 ; free virtual = 19854
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3551.449; parent = 2551.637; children = 999.812
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2557.664 ; gain = 0.000 ; free physical = 475 ; free virtual = 4600
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2557.570 ; gain = 0.000 ; free physical = 10699 ; free virtual = 19844
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -161,40 +160,40 @@ Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitte
 Finished Parsing XDC File [/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2636.570 ; gain = 0.000 ; free physical = 251 ; free virtual = 4063
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2631.508 ; gain = 0.000 ; free physical = 10624 ; free virtual = 19769
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2636.570 ; gain = 0.000 ; free physical = 280 ; free virtual = 4093
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2631.508 ; gain = 0.000 ; free physical = 10624 ; free virtual = 19769
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 2636.570 ; gain = 561.176 ; free physical = 663 ; free virtual = 3930
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3555.145; parent = 2604.559; children = 950.586
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2631.508 ; gain = 556.176 ; free physical = 10687 ; free virtual = 19833
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3599.309; parent = 2599.496; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:43 . Memory (MB): peak = 2636.570 ; gain = 561.176 ; free physical = 626 ; free virtual = 3894
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3555.145; parent = 2604.559; children = 950.586
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2631.508 ; gain = 556.176 ; free physical = 10687 ; free virtual = 19833
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3599.309; parent = 2599.496; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:44 . Memory (MB): peak = 2636.570 ; gain = 561.176 ; free physical = 604 ; free virtual = 3862
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3555.145; parent = 2604.559; children = 950.586
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2631.508 ; gain = 556.176 ; free physical = 10687 ; free virtual = 19833
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3599.309; parent = 2599.496; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 2636.570 ; gain = 561.176 ; free physical = 438 ; free virtual = 3698
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3555.145; parent = 2604.559; children = 950.586
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2631.508 ; gain = 556.176 ; free physical = 10683 ; free virtual = 19830
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3599.309; parent = 2599.496; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -239,33 +238,33 @@ WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[4] in module processing_system7_v5_5
 WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:51 . Memory (MB): peak = 2636.570 ; gain = 561.176 ; free physical = 315 ; free virtual = 3293
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1745.600; parent = 1615.585; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3555.145; parent = 2604.559; children = 950.586
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2631.508 ; gain = 556.176 ; free physical = 10683 ; free virtual = 19834
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1783.500; parent = 1612.032; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3599.309; parent = 2599.496; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:06 . Memory (MB): peak = 2680.555 ; gain = 605.160 ; free physical = 271 ; free virtual = 2884
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1866.159; parent = 1739.174; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3631.145; parent = 2680.559; children = 950.586
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2680.492 ; gain = 605.160 ; free physical = 10416 ; free virtual = 19566
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2003.752; parent = 1832.495; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3680.309; parent = 2680.496; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:06 . Memory (MB): peak = 2699.562 ; gain = 624.168 ; free physical = 284 ; free virtual = 2875
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1877.904; parent = 1750.919; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3650.152; parent = 2699.566; children = 950.586
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2699.500 ; gain = 624.168 ; free physical = 10396 ; free virtual = 19547
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2015.674; parent = 1844.417; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3699.316; parent = 2699.504; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:01:06 . Memory (MB): peak = 2715.578 ; gain = 640.184 ; free physical = 261 ; free virtual = 2822
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.211; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3666.168; parent = 2715.582; children = 950.586
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2715.516 ; gain = 640.184 ; free physical = 10394 ; free virtual = 19545
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.287; parent = 1845.030; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3715.332; parent = 2715.520; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -283,49 +282,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 312 ; free virtual = 2677
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.211; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.546; parent = 1845.288; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 303 ; free virtual = 2674
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.211; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.562; parent = 1845.304; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 296 ; free virtual = 2673
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.211; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.577; parent = 1845.319; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 287 ; free virtual = 2673
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.211; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.640; parent = 1845.382; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 282 ; free virtual = 2671
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.211; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.640; parent = 1845.382; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:16 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 273 ; free virtual = 2665
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1878.782; parent = 1751.226; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.671; parent = 1845.413; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -347,26 +346,26 @@ Report Cell Usage:
 |4     |PS7   |     1|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 2718.547 ; gain = 643.152 ; free physical = 374 ; free virtual = 2766
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1879.665; parent = 1751.975; children = 130.018
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3669.137; parent = 2718.551; children = 950.586
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.484 ; gain = 643.152 ; free physical = 10409 ; free virtual = 19560
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2016.702; parent = 1845.444; children = 171.468
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3718.301; parent = 2718.488; children = 999.812
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 80 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:11 . Memory (MB): peak = 2718.547 ; gain = 558.309 ; free physical = 407 ; free virtual = 2800
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:17 . Memory (MB): peak = 2718.555 ; gain = 643.152 ; free physical = 398 ; free virtual = 2792
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2718.484 ; gain = 563.277 ; free physical = 10463 ; free virtual = 19613
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2718.492 ; gain = 643.152 ; free physical = 10463 ; free virtual = 19613
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2718.555 ; gain = 0.000 ; free physical = 386 ; free virtual = 2780
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2718.492 ; gain = 0.000 ; free physical = 10570 ; free virtual = 19721
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2735.391 ; gain = 0.000 ; free physical = 522 ; free virtual = 2922
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2736.328 ; gain = 0.000 ; free physical = 10504 ; free virtual = 19654
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: b3fa6a2d
+Synth Design complete, checksum: f087ea17
 INFO: [Common 17-83] Releasing license: Synthesis
 30 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:29 . Memory (MB): peak = 2735.391 ; gain = 992.879 ; free physical = 844 ; free virtual = 3245
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2736.328 ; gain = 994.910 ; free physical = 10845 ; free virtual = 19996
 INFO: [Common 17-1381] The checkpoint '/home/lilian/school/UnderWaterCommunications/Vivado/transmitter_DMA/transmitter_DMA.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_processing_system7_0_0_utilization_synth.rpt -pb design_1_processing_system7_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 14 12:49:14 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 23 20:29:34 2024...

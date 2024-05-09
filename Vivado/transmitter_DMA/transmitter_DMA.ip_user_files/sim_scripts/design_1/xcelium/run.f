@@ -29,71 +29,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
 -endlib
--makelib xcelium_lib/xbip_utils_v3_0_10 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/364f/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/axi_utils_v2_0_6 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1971/hdl/axi_utils_v2_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_pipe_v3_0_6 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_dsp48_wrapper_v3_0_4 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/cdbf/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_dsp48_addsub_v3_0_6 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/910d/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_dsp48_multadd_v3_0_6 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/b0ac/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xbip_bram18k_v3_0_6 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d367/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/mult_gen_v12_0_18 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/ab19/hdl/mult_gen_v12_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/floating_point_v7_1_15 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/22f8/hdl/floating_point_v7_1_rfs.vhd" \
--endlib
--makelib xcelium_lib/floating_point_v7_1_15 \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/22f8/hdl/floating_point_v7_1_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_control_s_axi.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_dataPulseShapedI_RAM_AUTO_1R1W.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_ddiv_64ns_64ns_64_59_no_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_dmul_64ns_64ns_64_7_max_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_encodedDataI_RAM_AUTO_1R1W.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_fadd_32ns_32ns_32_5_full_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_flow_control_loop_pipe_sequential_init.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_fmul_32ns_32ns_32_4_max_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_fpext_32ns_64_2_no_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_fptrunc_64ns_32_2_no_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_hls_deadlock_idx0_monitor.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_mux_164_32_1_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_mux_325_32_1_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_mux_506_32_1_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_mux_523313_32_1_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_preamble_bpskI_ROM_AUTO_1R.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_qpskDataI_RAM_AUTO_1R1W.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_real_output_RAM_AUTO_1R1W.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_real_sample_RAM_AUTO_1R1W.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_regslice_both.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_sitodp_32ns_64_6_no_dsp_1.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_symbolsI_RAM_AUTO_1R1W.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_182_8.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_214_10.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/verilog/transmitter.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_dmul_64ns_64ns_64_7_max_dsp_1_ip.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_fpext_32ns_64_2_no_dsp_1_ip.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_ddiv_64ns_64ns_64_59_no_dsp_1_ip.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_fptrunc_64ns_32_2_no_dsp_1_ip.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_fmul_32ns_32ns_32_4_max_dsp_1_ip.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_fadd_32ns_32ns_32_5_full_dsp_1_ip.v" \
-  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1085/hdl/ip/transmitter_sitodp_32ns_64_6_no_dsp_1_ip.v" \
-  "../../../bd/design_1/ip/design_1_transmitter_0_0/sim/design_1_transmitter_0_0.v" \
--endlib
 -makelib xcelium_lib/lib_pkg_v1_0_2 \
   "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
 -endlib
@@ -148,13 +83,62 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
+  "../../../bd/design_1/ip/design_1_xbar_4/sim/design_1_xbar_4.v" \
+-endlib
+-makelib xcelium_lib/xbip_utils_v3_0_10 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/364f/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_utils_v2_0_6 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/1971/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_pipe_v3_0_6 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/7468/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_dsp48_wrapper_v3_0_4 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/cdbf/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_dsp48_addsub_v3_0_6 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/910d/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_dsp48_multadd_v3_0_6 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/b0ac/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xbip_bram18k_v3_0_6 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/d367/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/mult_gen_v12_0_18 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/ab19/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/floating_point_v7_1_15 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/22f8/hdl/floating_point_v7_1_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/floating_point_v7_1_15 \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/22f8/hdl/floating_point_v7_1_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_control_s_axi.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_flow_control_loop_pipe_sequential_init.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_hls_deadlock_idx0_monitor.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_mux_506_16_1_1.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_mux_506_32_1_1.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_mux_1007_16_1_1.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_real_output_RAM_AUTO_1R1W.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_regslice_both.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_sitofp_32s_32_6_no_dsp_1.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_state_RAM_AUTO_1R1W.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_64_2.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_81_3.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_93_5.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter_transmitter_Pipeline_VITIS_LOOP_108_6.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/verilog/transmitter.v" \
+  "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/bb1d/hdl/ip/transmitter_sitofp_32s_32_6_no_dsp_1_ip.v" \
+  "../../../bd/design_1/ip/design_1_transmitter_0_1/sim/design_1_transmitter_0_1.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_27 \
   "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
-  "../../../bd/design_1/ip/design_1_xbar_1/sim/design_1_xbar_1.v" \
 -endlib
 -makelib xcelium_lib/axi_clock_converter_v2_1_26 \
   "../../../../transmitter_DMA.gen/sources_1/bd/design_1/ipshared/b8be/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
@@ -169,6 +153,7 @@
   "../../../bd/design_1/ip/design_1_auto_us_0/sim/design_1_auto_us_0.v" \
   "../../../bd/design_1/ip/design_1_auto_us_1/sim/design_1_auto_us_1.v" \
   "../../../bd/design_1/ip/design_1_auto_us_2/sim/design_1_auto_us_2.v" \
+  "../../../bd/design_1/ip/design_1_auto_us_3/sim/design_1_auto_us_3.v" \
   "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
   "../../../bd/design_1/sim/design_1.v" \
 -endlib

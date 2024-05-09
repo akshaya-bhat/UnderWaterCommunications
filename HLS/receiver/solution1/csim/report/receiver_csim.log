@@ -1583,14 +1583,14 @@ Vector data: 28
 01110010
 
 8
-descrambledDataI -201
-descrambledDataI -155
-descrambledDataI -154
-descrambledDataI -228
-descrambledDataI -34
-descrambledDataI -212
-descrambledDataI -192
-descrambledDataI -95
+descrambledDataI 200
+descrambledDataI 154
+descrambledDataI 153
+descrambledDataI 227
+descrambledDataI 33
+descrambledDataI 211
+descrambledDataI 191
+descrambledDataI 94
 I am done
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

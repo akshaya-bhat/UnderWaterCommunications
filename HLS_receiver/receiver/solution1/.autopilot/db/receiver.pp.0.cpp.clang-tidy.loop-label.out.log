@@ -1,0 +1,135 @@
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:1343:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:1343:7: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:2317:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:2317:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:2331:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:2331:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:2345:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:2345:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:3944:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:3944:7: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6048:5: warning: Added loop label VITIS_LOOP_52_1:   [xilinx-label-all-loops]
+    for(int i=0; i<7692 -1; i++) {
+    ^~~
+    VITIS_LOOP_52_1: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6048:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6059:2: warning: Added loop label VITIS_LOOP_63_2:   [xilinx-label-all-loops]
+ for (int i = 193 -1; i > 0; i--) {
+ ^~~
+ VITIS_LOOP_63_2: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6059:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6071:2: warning: Added loop label VITIS_LOOP_75_3:   [xilinx-label-all-loops]
+ for (int i=0; i < 193; i++) {
+ ^~~
+ VITIS_LOOP_75_3: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6071:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6080:2: warning: Added loop label VITIS_LOOP_84_4:   [xilinx-label-all-loops]
+ for (int i=0; i<192; i=i+2) {
+ ^~~
+ VITIS_LOOP_84_4: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6080:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6091:2: warning: Added loop label VITIS_LOOP_95_5:   [xilinx-label-all-loops]
+ for (int i=0; i<96; i=i+2) {
+ ^~~
+ VITIS_LOOP_95_5: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6091:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6098:5: warning: Added loop label VITIS_LOOP_102_6:   [xilinx-label-all-loops]
+    for (int i=0; i<48; i=i+2) {
+    ^~~
+    VITIS_LOOP_102_6: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6098:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6104:5: warning: Added loop label VITIS_LOOP_108_7:   [xilinx-label-all-loops]
+    for (int i=0; i<24; i=i+2) {
+    ^~~
+    VITIS_LOOP_108_7: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6104:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6110:5: warning: Added loop label VITIS_LOOP_114_8:   [xilinx-label-all-loops]
+    for (int i=0; i<12; i=i+2) {
+    ^~~
+    VITIS_LOOP_114_8: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6110:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6116:5: warning: Added loop label VITIS_LOOP_120_9:   [xilinx-label-all-loops]
+    for (int i=0; i<6; i=i+2) {
+    ^~~
+    VITIS_LOOP_120_9: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6116:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6128:5: warning: Added loop label VITIS_LOOP_132_10:   [xilinx-label-all-loops]
+    for(int i=0; i<7692 -1; i++) {
+    ^~~
+    VITIS_LOOP_132_10: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6128:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6145:2: warning: Added loop label VITIS_LOOP_149_11:   [xilinx-label-all-loops]
+ for (int i=140; i<140 +2240; i++) {
+ ^~~
+ VITIS_LOOP_149_11: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6145:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6157:2: warning: Added loop label VITIS_LOOP_161_12:   [xilinx-label-all-loops]
+ for (int i=0; i<2240; i=i+2) {
+ ^~~
+ VITIS_LOOP_161_12: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6157:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6167:2: warning: Added loop label VITIS_LOOP_171_13:   [xilinx-label-all-loops]
+ for (int i=0; i<2240>>1; i=i+2) {
+ ^~~
+ VITIS_LOOP_171_13: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6167:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6177:2: warning: Added loop label VITIS_LOOP_181_14:   [xilinx-label-all-loops]
+ for (int i=0; i<2240>>2; i=i+2) {
+ ^~~
+ VITIS_LOOP_181_14: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6177:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6187:2: warning: Added loop label VITIS_LOOP_191_15:   [xilinx-label-all-loops]
+ for (int i=0; i<2240>>3; i=i+2) {
+ ^~~
+ VITIS_LOOP_191_15: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6187:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6197:2: warning: Added loop label VITIS_LOOP_201_16:   [xilinx-label-all-loops]
+ for (int i=0; i<2240>>4; i=i+2) {
+ ^~~
+ VITIS_LOOP_201_16: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6197:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6207:2: warning: Added loop label VITIS_LOOP_211_17:   [xilinx-label-all-loops]
+ for (int i=0; i<2240>>5; i=i+2) {
+ ^~~
+ VITIS_LOOP_211_17: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6207:2: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6215:5: warning: Added loop label VITIS_LOOP_219_18:   [xilinx-label-all-loops]
+    for (int i=0; i<34; i=i+2) {
+    ^~~
+    VITIS_LOOP_219_18: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6215:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6224:5: warning: Added loop label VITIS_LOOP_228_19:   [xilinx-label-all-loops]
+    for (int i=0; i<16; i=i+2) {
+    ^~~
+    VITIS_LOOP_228_19: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6224:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6233:5: warning: Added loop label VITIS_LOOP_237_20:   [xilinx-label-all-loops]
+    for (int i=0; i<8; i=i+2) {
+    ^~~
+    VITIS_LOOP_237_20: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6233:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6240:5: warning: Added loop label VITIS_LOOP_244_21:   [xilinx-label-all-loops]
+    for (int i=0; i<4; i=i+2) {
+    ^~~
+    VITIS_LOOP_244_21: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6240:5: note: FIX-IT applied suggested code changes
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6260:9: warning: Added loop label VITIS_LOOP_264_22:   [xilinx-label-all-loops]
+        for (int j=0; j<224; j++) {
+        ^~~
+        VITIS_LOOP_264_22: 
+C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver\receiver\solution1\.autopilot\db\receiver.pp.0.cpp:6260:9: note: FIX-IT applied suggested code changes
