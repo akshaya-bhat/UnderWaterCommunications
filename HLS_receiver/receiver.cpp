@@ -1,5 +1,5 @@
-#include "receiver.hpp"
-using namespace std;
+#include "receiver.h"
+//using namespace std;
 
 // TODO: figure out what format we'll receive ADC samples in. and convert them to meaningful decimal point values
 // TODO: write the FIFO logic to feed the buffer this program operates on
@@ -26,7 +26,8 @@ corr_t corr_I = 0;
 corr_t corr_Q = 0;
 
 
-int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
+//int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
+void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q)
 {
 #pragma HLS array_partition variable=samples_I type=cyclic factor=32
 #pragma HLS array_partition variable=samples_Q type=cyclic factor=32
@@ -34,15 +35,30 @@ int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
 #pragma HLS array_partition variable=matched_Q type=cyclic factor=32
 #pragma HLS array_partition variable=delay_line_I type=cyclic factor=8
 #pragma HLS array_partition variable=delay_line_Q type=cyclic factor=8
-#pragma HLS array_partition variable=result_I type=cyclic factor=16
-#pragma HLS array_partition variable=result_Q type=cyclic factor=16
-    // The upsampled portion of the receiver. Returns a flag that is 0 if we don't have
+//#pragma HLS array_partition variable=result_I type=cyclic factor=16
+//#pragma HLS array_partition variable=result_Q type=cyclic factor=16
+#pragma HLS INTERFACE mode=axis port=input_r,output_i,output_q
+#pragma HLS INTERFACE mode=s_axilite port=return
+	// The upsampled portion of the receiver. Returns a flag that is 0 if we don't have
     // a packet of symbols to equalize and decode, returns 1 if we do. Resulting symbols
     // will be written to result_I for I values, result_Q for Q values
     
+	/**
+		 * DMA Streaming INPUT
+		 */
+		fp_int real_sample;
+		fp_int real_output[236];
+		fp_int imag_output[236];
+		transPkt real_sample_pkt, imag_sample_pkt;
+
+		real_sample_pkt = input_r.read();
+
+		real_sample.i = real_sample_pkt.data;
+
+
     // Multiply our new sample by our I and Q carrier
-    data_t new_sample_I = new_sample * cos_coefficients_table[carrier_pos];
-    data_t new_sample_Q = new_sample * sin_coefficients_table[carrier_pos];
+    data_t new_sample_I = (data_t)real_sample.fp * cos_coefficients_table[carrier_pos];
+    data_t new_sample_Q = (data_t)real_sample.fp * sin_coefficients_table[carrier_pos];
     carrier_pos++;
     if(carrier_pos >= CS) {
         carrier_pos = 0;
@@ -259,19 +275,33 @@ int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
     // have we reached the peak of our correlation?
     // e.g. are we at a local peak and above the threshold
     if ((corr_abs_prev > threshold) && (corr_abs_prev > corr_abs)) {
+
         // then we've identified the start of the packet!
         int i = start_sample+filtsize/2;
-        for (int j=0; j<224; j++) {
+        for (int j=0; j<236; j++) {
 #pragma HLS UNROLL factor=16
         	// rotate to get rid of phase offset, by -theta
             // use x and y directly instead of normalizing to get sin and cos
-            result_I[j] = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];
-            result_Q[j] = corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
+            real_output[j].ffp = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];
+            imag_output[j].ffp = corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
             i = i+32;
         }
-        return 1;
+        /**
+    	 * DMA Streaming OUTPUT
+    	 */
+    	for (int i = 0; i < 224; i++)
+    	{
+    //#pragma HLS UNROLL factor=64
+    		real_sample_pkt.data = real_output[i].i;
+    		real_sample_pkt.last = (i==236-1) ? 1:0;
+    		output_i.write(real_sample_pkt);
+
+    		imag_sample_pkt.data = imag_output[i].i;
+    		imag_sample_pkt.last = (i==236-1) ? 1:0;
+    		output_q.write(imag_sample_pkt);
+    	}
     }
 
-    return 0;
+
 }
 

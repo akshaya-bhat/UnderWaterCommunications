@@ -1,27 +1,605 @@
 <dict>
   <key>main-file</key>
-  <string>C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp</string>
+  <string>/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>./receiver.hpp</string>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</string>
       <key>line</key>
-      <integer>9</integer>
+      <integer>678</integer>
       <key>column</key>
-      <integer>17</integer>
+      <integer>9</integer>
       <key>message</key>
-      <string>using directive refers to implicitly-defined namespace &apos;std&apos;</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
-      <integer>4072</integer>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
     </dict>
     <dict>
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl</string>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</string>
+      <key>line</key>
+      <integer>692</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h</string>
+      <key>line</key>
+      <integer>706</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>76</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_user_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>80</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_id_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>84</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_dest_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>114</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_strb_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>118</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_user_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>122</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_id_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>126</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_dest_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>132</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_data_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>136</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_keep_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>140</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_last_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>145</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_data_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>149</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_keep_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>153</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_last_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>157</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=keep_all_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>163</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis&lt;WData, 0, 0, 0&gt;_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>167</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis&lt;WData, 0, 0, 0&gt;_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>171</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis&lt;WData, 0, 0, 0&gt;_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>176</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis&lt;WData, 0, 0, 0&gt;_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>181</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis&lt;WData, 0, 0, 0&gt;_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>185</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator=_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>220</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=empty_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>227</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=full_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>235</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>245</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>256</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>266</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>281</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>317</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=empty_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>324</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=full_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>332</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>342</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>353</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>363</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h</string>
+      <key>line</key>
+      <integer>379</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl</string>
       <key>line</key>
       <integer>16</integer>
       <key>column</key>
@@ -37,9 +615,9 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/directives.tcl</string>
+      <string>/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/directives.tcl</string>
       <key>line</key>
-      <integer>7</integer>
+      <integer>6</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -55,7 +633,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>31</integer>
+      <integer>32</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -71,7 +649,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>32</integer>
+      <integer>33</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -87,7 +665,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>33</integer>
+      <integer>34</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -103,7 +681,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>34</integer>
+      <integer>35</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -119,7 +697,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>35</integer>
+      <integer>36</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -135,7 +713,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>36</integer>
+      <integer>37</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -151,11 +729,11 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>37</integer>
+      <integer>40</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=result_I type=cyclic factor=16_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=mode=axis port=input_r,output_i,output_q_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -167,11 +745,11 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>38</integer>
+      <integer>41</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=result_Q type=cyclic factor=16_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=mode=s_axilite port=return_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -183,7 +761,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>53</integer>
+      <integer>69</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -199,7 +777,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>64</integer>
+      <integer>80</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -215,7 +793,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>73</integer>
+      <integer>89</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -231,7 +809,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>74</integer>
+      <integer>90</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -247,7 +825,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>76</integer>
+      <integer>92</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -263,7 +841,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>82</integer>
+      <integer>98</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -279,7 +857,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>83</integer>
+      <integer>99</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -295,7 +873,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>85</integer>
+      <integer>101</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -311,7 +889,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>93</integer>
+      <integer>109</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -327,7 +905,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>94</integer>
+      <integer>110</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -343,7 +921,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>96</integer>
+      <integer>112</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -359,7 +937,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>133</integer>
+      <integer>149</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -375,7 +953,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>147</integer>
+      <integer>163</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -391,7 +969,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>148</integer>
+      <integer>164</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -407,7 +985,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>150</integer>
+      <integer>166</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -423,7 +1001,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>158</integer>
+      <integer>174</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -439,7 +1017,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>159</integer>
+      <integer>175</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -455,7 +1033,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>162</integer>
+      <integer>178</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -471,7 +1049,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>168</integer>
+      <integer>184</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -487,7 +1065,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>169</integer>
+      <integer>185</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -503,7 +1081,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>172</integer>
+      <integer>188</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -519,7 +1097,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>178</integer>
+      <integer>194</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -535,7 +1113,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>179</integer>
+      <integer>195</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -551,7 +1129,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>182</integer>
+      <integer>198</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -567,7 +1145,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>188</integer>
+      <integer>204</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -583,7 +1161,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>189</integer>
+      <integer>205</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -599,7 +1177,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>192</integer>
+      <integer>208</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -615,7 +1193,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>198</integer>
+      <integer>214</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -631,7 +1209,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>199</integer>
+      <integer>215</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -647,7 +1225,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>202</integer>
+      <integer>218</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -663,7 +1241,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>208</integer>
+      <integer>224</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -679,7 +1257,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>209</integer>
+      <integer>225</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -695,7 +1273,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>212</integer>
+      <integer>228</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -711,7 +1289,7 @@
       <key>filename</key>
       <string>receiver.cpp</string>
       <key>line</key>
-      <integer>265</integer>
+      <integer>282</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
