@@ -1,0 +1,13 @@
+receiver.cpp:112:35: warning: array index 192 is past the end of the array (which contains 97 elements) [-Warray-bounds]
+    filt_1_I[95] = filt_1_I[95] + filt_I[192];
+                                  ^      ~~~
+receiver.cpp:94:5: note: array 'filt_I' declared here
+    data_t filt_I[97] = {0};
+    ^
+receiver.cpp:113:35: warning: array index 192 is past the end of the array (which contains 97 elements) [-Warray-bounds]
+    filt_1_Q[95] = filt_1_Q[95] + filt_Q[192];
+                                  ^      ~~~
+receiver.cpp:95:5: note: array 'filt_Q' declared here
+    data_t filt_Q[97] = {0};
+    ^
+2 warnings generated.

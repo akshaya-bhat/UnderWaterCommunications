@@ -1,17 +1,17 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'lilian' on host 'lilian' (Linux_x86_64 version 5.15.0-105-generic) on Sat May 11 11:32:24 PDT 2024
+INFO: [HLS 200-10] For user 'lilian' on host 'lilian' (Linux_x86_64 version 5.15.0-105-generic) on Mon May 13 18:35:56 PDT 2024
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/lilian/school/UnderWaterCommunications/HLS_receiver'
-Sourcing Tcl script '/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/export.tcl'
-INFO: [HLS 200-1510] Running: source /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/export.tcl
+Sourcing Tcl script '/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl
 INFO: [HLS 200-1510] Running: open_project receiver 
 INFO: [HLS 200-10] Opening project '/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver'.
 INFO: [HLS 200-1510] Running: set_top receiver 
-INFO: [HLS 200-1510] Running: add_files receiver.cpp 
-INFO: [HLS 200-10] Adding design file 'receiver.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files receiver.h 
 INFO: [HLS 200-10] Adding design file 'receiver.h' to the project
-INFO: [HLS 200-1510] Running: add_files -tb receiver_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-1510] Running: add_files receiver.cpp 
+INFO: [HLS 200-10] Adding design file 'receiver.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb receiver_test.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'receiver_test.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution '/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1'.
@@ -26,27 +26,29 @@ INFO: [HLS 200-1510] Running: create_clock -period 8 -name default
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
 INFO: [HLS 200-1510] Running: source ./receiver/solution1/directives.tcl
 INFO: [HLS 200-1510] Running: set_directive_top -name receiver receiver 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
-Running Dispatch Server on port: 42135
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1728.828 ; gain = 110.023 ; free physical = 14020 ; free virtual = 23311
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'receiver_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'receiver_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'receiver_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sat May 11 11:32:59 2024...
-INFO: [HLS 200-802] Generated output file receiver/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 23.01 seconds. CPU system time: 0.98 seconds. Elapsed time: 26.15 seconds; current allocated memory: 17.469 MB.
-INFO: [HLS 200-112] Total CPU user time: 25.52 seconds. Total CPU system time: 1.39 seconds. Total elapsed time: 38.95 seconds; peak allocated memory: 773.918 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 45487
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.06 seconds; current allocated memory: 756.469 MB.
+INFO: [HLS 200-10] Analyzing design file 'receiver.cpp' ... 
+WARNING: [HLS 207-4611] array index 192 is past the end of the array (which contains 97 elements) (receiver.cpp:112:35)
+INFO: [HLS 207-4110] array 'filt_I' declared here (receiver.cpp:94:5)
+WARNING: [HLS 207-4611] array index 192 is past the end of the array (which contains 97 elements) (receiver.cpp:113:35)
+INFO: [HLS 207-4110] array 'filt_Q' declared here (receiver.cpp:95:5)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 9.61 seconds. CPU system time: 0.72 seconds. Elapsed time: 10.34 seconds; current allocated memory: 758.266 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+ERROR: [HLS 214-211] in function 'receiver(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)': Detected illegal out-of-bounds access on variable 'filt_Q' (receiver.cpp:113:33)
+ERROR: [HLS 214-211] in function 'receiver(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)': Detected illegal out-of-bounds access on variable 'filt_I' (receiver.cpp:112:33)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 15.72 seconds. CPU system time: 1.3 seconds. Elapsed time: 17.05 seconds; current allocated memory: 2.359 MB.
+Pre-synthesis failed.
+    while executing
+"source /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl"
+    invoked from within
+"hls::main /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 18.25 seconds. Total CPU system time: 1.76 seconds. Total elapsed time: 29.94 seconds; peak allocated memory: 758.828 MB.

@@ -18,6 +18,9 @@
 
 typedef ap_fixed<18, 2> data_t;
 typedef ap_fixed<24, 10> corr_t;
+//typedef float data_t;
+//typedef float corr_t;
+//typedef float float_t;
 typedef ap_fixed<32,2> input_t;
 typedef ap_fixed<32,10> output_t;
 
@@ -25,8 +28,8 @@ typedef ap_fixed<32,10> output_t;
 union fp_int
 {
 	int i;
-	input_t fp;
-	output_t ffp;
+	float fp;
+	float ffp;
 
 	fp_int() {std::memset( this, 0, sizeof( fp_int) ); }
 };
@@ -50,13 +53,14 @@ typedef int	coef_t;
 #define K 7
 #define GOL_LEN 32
 #define upsamplePacketSize 7168
-#define buffer_len 7692
+#define buffer_len 3858
 #define start_sample 140
-#define downsamplePacketSize 224
-#define filtsize 193
-#define presize 2240
+#define downsamplePacketSize 236
+#define filtsize 97
+#define presize 2240 //?????????????????????????????????
 #define threshold 10000 // TODO: Change to the actual threshold
-
+//7692
+//193
 //int upsampleSize = oversample*(preambleLen+N); //5248
 
 extern int carrier_pos;

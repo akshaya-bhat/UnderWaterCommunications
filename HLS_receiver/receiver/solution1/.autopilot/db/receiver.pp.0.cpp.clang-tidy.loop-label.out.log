@@ -23,118 +23,133 @@
       ^~~
       VITIS_LOOP_1245_1: 
 /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:3934:7: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35166:5: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
-    for(int i=0; i<7692 -1; i++) {
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35119:9: warning: Added loop label VITIS_LOOP_62_1:   [xilinx-label-all-loops]
+        for (unsigned i = 0; i < __SHIFT_DEPTH__; ++i)
+        ^~~
+        VITIS_LOOP_62_1: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35119:9: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35126:9: warning: Added loop label VITIS_LOOP_69_1:   [xilinx-label-all-loops]
+        for (unsigned i = 0; i < __SHIFT_DEPTH__; ++i)
+        ^~~
+        VITIS_LOOP_69_1: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35126:9: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35238:5: warning: Added loop label VITIS_LOOP_69_1:   [xilinx-label-all-loops]
+    for(int i=0; i<3858 -1; i++) {
     ^~~
-    VITIS_LOOP_68_1: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35166:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35177:2: warning: Added loop label VITIS_LOOP_79_2:   [xilinx-label-all-loops]
- for (int i = 193 -1; i > 0; i--) {
+    VITIS_LOOP_69_1: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35238:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35248:2: warning: Added loop label VITIS_LOOP_86_2:   [xilinx-label-all-loops]
+ for (int i = 97 -1; i > 0; i--) {
  ^~~
- VITIS_LOOP_79_2: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35177:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35189:2: warning: Added loop label VITIS_LOOP_91_3:   [xilinx-label-all-loops]
- for (int i=0; i < 193; i++) {
+ VITIS_LOOP_86_2: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35248:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35260:2: warning: Added loop label VITIS_LOOP_98_3:   [xilinx-label-all-loops]
+ for (int i=0; i < 97; i++) {
  ^~~
- VITIS_LOOP_91_3: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35189:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35198:2: warning: Added loop label VITIS_LOOP_100_4:   [xilinx-label-all-loops]
+ VITIS_LOOP_98_3: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35260:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35269:2: warning: Added loop label VITIS_LOOP_107_4:   [xilinx-label-all-loops]
  for (int i=0; i<192; i=i+2) {
  ^~~
- VITIS_LOOP_100_4: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35198:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35209:2: warning: Added loop label VITIS_LOOP_111_5:   [xilinx-label-all-loops]
+ VITIS_LOOP_107_4: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35269:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35280:2: warning: Added loop label VITIS_LOOP_118_5:   [xilinx-label-all-loops]
  for (int i=0; i<96; i=i+2) {
  ^~~
- VITIS_LOOP_111_5: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35209:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35216:5: warning: Added loop label VITIS_LOOP_118_6:   [xilinx-label-all-loops]
-    for (int i=0; i<48; i=i+2) {
+ VITIS_LOOP_118_5: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35280:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35287:5: warning: Added loop label VITIS_LOOP_125_6:   [xilinx-label-all-loops]
+    for (int i=0; i<64; i=i+2) {
     ^~~
-    VITIS_LOOP_118_6: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35216:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35222:5: warning: Added loop label VITIS_LOOP_124_7:   [xilinx-label-all-loops]
+    VITIS_LOOP_125_6: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35287:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35294:5: warning: Added loop label VITIS_LOOP_132_7:   [xilinx-label-all-loops]
     for (int i=0; i<24; i=i+2) {
     ^~~
-    VITIS_LOOP_124_7: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35222:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35228:5: warning: Added loop label VITIS_LOOP_130_8:   [xilinx-label-all-loops]
+    VITIS_LOOP_132_7: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35294:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35300:5: warning: Added loop label VITIS_LOOP_138_8:   [xilinx-label-all-loops]
     for (int i=0; i<12; i=i+2) {
     ^~~
-    VITIS_LOOP_130_8: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35228:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35234:5: warning: Added loop label VITIS_LOOP_136_9:   [xilinx-label-all-loops]
+    VITIS_LOOP_138_8: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35300:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35306:5: warning: Added loop label VITIS_LOOP_144_9:   [xilinx-label-all-loops]
     for (int i=0; i<6; i=i+2) {
     ^~~
-    VITIS_LOOP_136_9: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35234:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35246:5: warning: Added loop label VITIS_LOOP_148_10:   [xilinx-label-all-loops]
-    for(int i=0; i<7692 -1; i++) {
+    VITIS_LOOP_144_9: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35306:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35318:5: warning: Added loop label VITIS_LOOP_156_10:   [xilinx-label-all-loops]
+    for(int i = 0; i < 3858 - 1; i++) {
     ^~~
-    VITIS_LOOP_148_10: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35246:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35263:2: warning: Added loop label VITIS_LOOP_165_11:   [xilinx-label-all-loops]
+    VITIS_LOOP_156_10: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35318:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35324:5: warning: Added loop label VITIS_LOOP_162_11:   [xilinx-label-all-loops]
+    for(int i = 0; i < 3858 - 1; i++) {
+    ^~~
+    VITIS_LOOP_162_11: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35324:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35340:2: warning: Added loop label VITIS_LOOP_178_12:   [xilinx-label-all-loops]
  for (int i=140; i<140 +2240; i++) {
  ^~~
- VITIS_LOOP_165_11: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35263:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35275:2: warning: Added loop label VITIS_LOOP_177_12:   [xilinx-label-all-loops]
+ VITIS_LOOP_178_12: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35340:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35352:2: warning: Added loop label VITIS_LOOP_190_13:   [xilinx-label-all-loops]
  for (int i=0; i<2240; i=i+2) {
  ^~~
- VITIS_LOOP_177_12: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35275:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35285:2: warning: Added loop label VITIS_LOOP_187_13:   [xilinx-label-all-loops]
+ VITIS_LOOP_190_13: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35352:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35362:2: warning: Added loop label VITIS_LOOP_200_14:   [xilinx-label-all-loops]
  for (int i=0; i<2240>>1; i=i+2) {
  ^~~
- VITIS_LOOP_187_13: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35285:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35295:2: warning: Added loop label VITIS_LOOP_197_14:   [xilinx-label-all-loops]
+ VITIS_LOOP_200_14: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35362:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35372:2: warning: Added loop label VITIS_LOOP_210_15:   [xilinx-label-all-loops]
  for (int i=0; i<2240>>2; i=i+2) {
  ^~~
- VITIS_LOOP_197_14: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35295:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35305:2: warning: Added loop label VITIS_LOOP_207_15:   [xilinx-label-all-loops]
+ VITIS_LOOP_210_15: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35372:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35382:2: warning: Added loop label VITIS_LOOP_220_16:   [xilinx-label-all-loops]
  for (int i=0; i<2240>>3; i=i+2) {
  ^~~
- VITIS_LOOP_207_15: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35305:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35315:2: warning: Added loop label VITIS_LOOP_217_16:   [xilinx-label-all-loops]
+ VITIS_LOOP_220_16: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35382:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35392:2: warning: Added loop label VITIS_LOOP_230_17:   [xilinx-label-all-loops]
  for (int i=0; i<2240>>4; i=i+2) {
  ^~~
- VITIS_LOOP_217_16: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35315:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35325:2: warning: Added loop label VITIS_LOOP_227_17:   [xilinx-label-all-loops]
+ VITIS_LOOP_230_17: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35392:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35401:2: warning: Added loop label VITIS_LOOP_239_18:   [xilinx-label-all-loops]
  for (int i=0; i<2240>>5; i=i+2) {
  ^~~
- VITIS_LOOP_227_17: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35325:2: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35333:5: warning: Added loop label VITIS_LOOP_235_18:   [xilinx-label-all-loops]
+ VITIS_LOOP_239_18: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35401:2: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35408:5: warning: Added loop label VITIS_LOOP_246_19:   [xilinx-label-all-loops]
     for (int i=0; i<34; i=i+2) {
     ^~~
-    VITIS_LOOP_235_18: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35333:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35342:5: warning: Added loop label VITIS_LOOP_244_19:   [xilinx-label-all-loops]
+    VITIS_LOOP_246_19: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35408:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35417:5: warning: Added loop label VITIS_LOOP_255_20:   [xilinx-label-all-loops]
     for (int i=0; i<16; i=i+2) {
     ^~~
-    VITIS_LOOP_244_19: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35342:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35351:5: warning: Added loop label VITIS_LOOP_253_20:   [xilinx-label-all-loops]
+    VITIS_LOOP_255_20: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35417:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35426:5: warning: Added loop label VITIS_LOOP_264_21:   [xilinx-label-all-loops]
     for (int i=0; i<8; i=i+2) {
     ^~~
-    VITIS_LOOP_253_20: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35351:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35358:5: warning: Added loop label VITIS_LOOP_260_21:   [xilinx-label-all-loops]
+    VITIS_LOOP_264_21: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35426:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35433:5: warning: Added loop label VITIS_LOOP_271_22:   [xilinx-label-all-loops]
     for (int i=0; i<4; i=i+2) {
     ^~~
-    VITIS_LOOP_260_21: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35358:5: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35379:9: warning: Added loop label VITIS_LOOP_281_22:   [xilinx-label-all-loops]
+    VITIS_LOOP_271_22: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35433:5: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35454:9: warning: Added loop label VITIS_LOOP_292_23:   [xilinx-label-all-loops]
         for (int j=0; j<236; j++) {
         ^~~
-        VITIS_LOOP_281_22: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35379:9: note: FIX-IT applied suggested code changes
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35390:6: warning: Added loop label VITIS_LOOP_292_23:   [xilinx-label-all-loops]
-     for (int i = 0; i < 224; i++)
+        VITIS_LOOP_292_23: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35454:9: note: FIX-IT applied suggested code changes
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35465:6: warning: Added loop label VITIS_LOOP_303_24:   [xilinx-label-all-loops]
+     for (int i = 0; i < 236; i++)
      ^~~
-     VITIS_LOOP_292_23: 
-/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35390:6: note: FIX-IT applied suggested code changes
+     VITIS_LOOP_303_24: 
+/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp:35465:6: note: FIX-IT applied suggested code changes

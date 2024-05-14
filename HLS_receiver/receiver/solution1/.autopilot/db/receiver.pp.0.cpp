@@ -34800,6 +34800,9 @@ private:
 
 typedef ap_fixed<18, 2> data_t;
 typedef ap_fixed<24, 10> corr_t;
+
+
+
 typedef ap_fixed<32,2> input_t;
 typedef ap_fixed<32,10> output_t;
 
@@ -34807,8 +34810,8 @@ typedef ap_fixed<32,10> output_t;
 union fp_int
 {
  int i;
- input_t fp;
- output_t ffp;
+ float fp;
+ float ffp;
 
  fp_int() {std::memset( this, 0, sizeof( fp_int) ); }
 };
@@ -34818,16 +34821,16 @@ union fp_int
 typedef ap_axis<32,2,5,6> transPkt;
 
 typedef int coef_t;
-# 62 "./receiver.h"
+# 66 "./receiver.h"
 extern int carrier_pos;
 extern int packet_start;
 extern int samples_in_packet;
-extern data_t samples_I[7692];
-extern data_t samples_Q[7692];
-extern data_t matched_I[7692];
-extern data_t matched_Q[7692];
-extern data_t delay_line_I[193];
-extern data_t delay_line_Q[193];
+extern data_t samples_I[3858];
+extern data_t samples_Q[3858];
+extern data_t matched_I[3858];
+extern data_t matched_Q[3858];
+extern data_t delay_line_I[97];
+extern data_t delay_line_Q[97];
 extern corr_t corr_I_prev;
 extern corr_t corr_Q_prev;
 extern float corr_abs_prev;
@@ -35089,6 +35092,75 @@ const data_t sin_coefficients_table[23]={0,0.81697,-0.94226,0.2698,0.63109,-0.99
 
 __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &input, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q);
 # 2 "receiver.cpp" 2
+# 1 "/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_shift_reg.h" 1
+# 40 "/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_shift_reg.h"
+template<typename __SHIFT_T__, unsigned int __SHIFT_DEPTH__ = 32>
+class ap_shift_reg
+{
+  public:
+
+    inline __attribute__((always_inline)) ap_shift_reg(){
+#pragma HLS inline
+ if (std::is_class<__SHIFT_T__>::value) {
+#pragma HLS aggregate variable = Array bit
+ }
+    } inline __attribute__((always_inline)) ap_shift_reg(const char *name) {
+      (void)name;
+#pragma HLS inline
+ if (std::is_class<__SHIFT_T__>::value) {
+#pragma HLS aggregate variable = Array bit
+ }
+    }
+
+  private:
+
+    ap_shift_reg(const ap_shift_reg< __SHIFT_T__, __SHIFT_DEPTH__ >& shreg)
+    {
+        VITIS_LOOP_62_1: for (unsigned i = 0; i < __SHIFT_DEPTH__; ++i)
+            Array[i] = shreg.Array[i];
+    }
+
+    ap_shift_reg& operator = (const ap_shift_reg< __SHIFT_T__,
+        __SHIFT_DEPTH__ >& shreg)
+    {
+        VITIS_LOOP_69_1: for (unsigned i = 0; i < __SHIFT_DEPTH__; ++i)
+            Array[i] = shreg.Array[i];
+        return *this;
+    }
+
+  public:
+
+    inline __attribute__((always_inline)) __SHIFT_T__ shift(__SHIFT_T__ DataIn,
+        unsigned int Addr = __SHIFT_DEPTH__ - 1, bool Enable = true)
+    {
+
+
+
+
+
+        __SHIFT_T__ DataOut = __fpga_shift_register_peek((__SHIFT_T__*)Array, Addr);
+        __fpga_shift_register_shift(DataIn, (__SHIFT_T__*)&Array[Addr], Enable);
+        return DataOut;
+
+    }
+
+
+    inline __attribute__((always_inline)) __SHIFT_T__ read(unsigned int Addr = __SHIFT_DEPTH__ - 1) const
+    {
+
+
+
+
+
+
+        return __fpga_shift_register_peek((__SHIFT_T__*)Array, Addr);
+
+    }
+
+  protected:
+    __SHIFT_T__ Array[__SHIFT_DEPTH__] __attribute__((no_ctor));
+};
+# 3 "receiver.cpp" 2
 
 
 
@@ -35098,14 +35170,14 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 int carrier_pos = 0;
 
 
-data_t samples_I[7692] = {0};
-data_t samples_Q[7692] = {0};
+data_t samples_I[3858] = {0};
+data_t samples_Q[3858] = {0};
 
 
-data_t matched_I[7692] = {0};
-data_t matched_Q[7692] = {0};
-data_t delay_line_I[193] = {0};
-data_t delay_line_Q[193] = {0};
+data_t matched_I[3858] = {0};
+data_t matched_Q[3858] = {0};
+data_t delay_line_I[97] = {0};
+data_t delay_line_Q[97] = {0};
 
 
 float corr_abs_prev = 0;
@@ -35121,11 +35193,11 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 {
 #line 16 "/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=receiver
-# 31 "receiver.cpp"
+# 32 "receiver.cpp"
 
 #line 6 "/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=receiver
-# 31 "receiver.cpp"
+# 32 "receiver.cpp"
 
 #pragma HLS array_partition variable=samples_I type=cyclic factor=32
 #pragma HLS array_partition variable=samples_Q type=cyclic factor=32
@@ -35163,31 +35235,30 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
     }
 
 
-    VITIS_LOOP_68_1: for(int i=0; i<7692 -1; i++) {
+    VITIS_LOOP_69_1: for(int i=0; i<3858 -1; i++) {
 #pragma HLS UNROLL factor=32
  samples_I[i] = samples_I[i+1];
         samples_Q[i] = samples_Q[i+1];
     }
-    samples_I[7692 -1] = new_sample_I;
-    samples_Q[7692 -1] = new_sample_Q;
-
-
+    samples_I[3858 -1] = new_sample_I;
+    samples_Q[3858 -1] = new_sample_Q;
+# 84 "receiver.cpp"
  data_t accum_I = 0.0;
     data_t accum_Q = 0.0;
- VITIS_LOOP_79_2: for (int i = 193 -1; i > 0; i--) {
-#pragma HLS UNROLL factor=8
+ VITIS_LOOP_86_2: for (int i = 97 -1; i > 0; i--) {
+#pragma HLS UNROLL factor=32
  delay_line_I[i] = delay_line_I[i-1];
         delay_line_Q[i] = delay_line_Q[i-1];
  }
  delay_line_I[0] = new_sample_I;
     delay_line_Q[0] = new_sample_Q;
 
-    data_t filt_I[193] = {0};
-    data_t filt_Q[193] = {0};
+    data_t filt_I[97] = {0};
+    data_t filt_Q[97] = {0};
 #pragma HLS array_partition variable=filt_I type=cyclic factor=8
 #pragma HLS array_partition variable=filt_Q type=cyclic factor=8
- VITIS_LOOP_91_3: for (int i=0; i < 193; i++) {
-#pragma HLS UNROLL factor=8
+ VITIS_LOOP_98_3: for (int i=0; i < 97; i++) {
+#pragma HLS UNROLL factor=16
  filt_I[i] = delay_line_I[i] * h[i];
      filt_Q[i] = delay_line_Q[i] * h[i];
     }
@@ -35195,43 +35266,44 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
     data_t filt_1_Q[96] = {0};
 #pragma HLS array_partition variable=filt_1_I type=cyclic factor=8
 #pragma HLS array_partition variable=filt_1_Q type=cyclic factor=8
- VITIS_LOOP_100_4: for (int i=0; i<192; i=i+2) {
-#pragma HLS UNROLL factor=8
+ VITIS_LOOP_107_4: for (int i=0; i<192; i=i+2) {
+#pragma HLS UNROLL factor=16
  filt_1_I[i>>1] = filt_I[i] + filt_I[i+1];
         filt_1_Q[i>>1] = filt_Q[i] + filt_Q[i+1];
     }
     filt_1_I[95] = filt_1_I[95] + filt_I[192];
     filt_1_Q[95] = filt_1_Q[95] + filt_Q[192];
-    data_t filt_2_I[48] = {0};
-    data_t filt_2_Q[48] = {0};
+    data_t filt_2_I[64] = {0};
+    data_t filt_2_Q[64] = {0};
 #pragma HLS array_partition variable=filt_2_I type=cyclic factor=8
 #pragma HLS array_partition variable=filt_2_Q type=cyclic factor=8
- VITIS_LOOP_111_5: for (int i=0; i<96; i=i+2) {
-#pragma HLS UNROLL factor=8
+ VITIS_LOOP_118_5: for (int i=0; i<96; i=i+2) {
+#pragma HLS UNROLL factor=16
  filt_2_I[i>>1] = filt_1_I[i] + filt_1_I[i+1];
         filt_2_Q[i>>1] = filt_1_Q[i] + filt_1_Q[i+1];
     }
     data_t filt_3_I[24] = {0};
     data_t filt_3_Q[24] = {0};
-    VITIS_LOOP_118_6: for (int i=0; i<48; i=i+2) {
-        filt_3_I[i>>1] = filt_2_I[i] + filt_2_I[i+1];
+    VITIS_LOOP_125_6: for (int i=0; i<64; i=i+2) {
+#pragma HLS UNROLL factor=8
+ filt_3_I[i>>1] = filt_2_I[i] + filt_2_I[i+1];
         filt_3_Q[i>>1] = filt_2_Q[i] + filt_2_Q[i+1];
     }
     data_t filt_4_I[12] = {0};
     data_t filt_4_Q[12] = {0};
-    VITIS_LOOP_124_7: for (int i=0; i<24; i=i+2) {
+    VITIS_LOOP_132_7: for (int i=0; i<24; i=i+2) {
         filt_4_I[i>>1] = filt_3_I[i] + filt_3_I[i+1];
         filt_4_Q[i>>1] = filt_3_Q[i] + filt_3_Q[i+1];
     }
     data_t filt_5_I[6] = {0};
     data_t filt_5_Q[6] = {0};
-    VITIS_LOOP_130_8: for (int i=0; i<12; i=i+2) {
+    VITIS_LOOP_138_8: for (int i=0; i<12; i=i+2) {
         filt_5_I[i>>1] = filt_4_I[i] + filt_4_I[i+1];
         filt_5_Q[i>>1] = filt_4_Q[i] + filt_4_Q[i+1];
     }
     data_t filt_6_I[3] = {0};
     data_t filt_6_Q[3] = {0};
-    VITIS_LOOP_136_9: for (int i=0; i<6; i=i+2) {
+    VITIS_LOOP_144_9: for (int i=0; i<6; i=i+2) {
         filt_6_I[i>>1] = filt_5_I[i] + filt_5_I[i+1];
         filt_6_Q[i>>1] = filt_5_Q[i] + filt_5_Q[i+1];
     }
@@ -35243,13 +35315,18 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 
 
 
-    VITIS_LOOP_148_10: for(int i=0; i<7692 -1; i++) {
-#pragma HLS UNROLL factor=32
- matched_I[i] = matched_I[i+1];
-        matched_Q[i] = matched_Q[i+1];
+    VITIS_LOOP_156_10: for(int i = 0; i < 3858 - 1; i++) {
+#pragma HLS UNROLL factor=64
+ matched_I[i] = matched_I[i + 1];
     }
-    matched_I[7692 -1] = accum_I;
-    matched_Q[7692 -1] = accum_Q;
+
+
+    VITIS_LOOP_162_11: for(int i = 0; i < 3858 - 1; i++) {
+#pragma HLS UNROLL factor=64
+ matched_Q[i] = matched_Q[i + 1];
+    }
+    matched_I[3858 -1] = accum_I;
+    matched_Q[3858 -1] = accum_Q;
 
 
     corr_t corr_accum_I = 0.0;
@@ -35260,7 +35337,7 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
     data_t arr_Q[2240] = {0};
 #pragma HLS array_partition variable=arr_I type=cyclic factor=64
 #pragma HLS array_partition variable=arr_Q type=cyclic factor=64
- VITIS_LOOP_165_11: for (int i=140; i<140 +2240; i++) {
+ VITIS_LOOP_178_12: for (int i=140; i<140 +2240; i++) {
 #pragma HLS UNROLL factor=64
  arr_I[i-140] = matched_I[i] * preamble_upsampled[i-140];
         arr_Q[i-140] = matched_Q[i] * preamble_upsampled[i-140];
@@ -35272,8 +35349,8 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 #pragma HLS array_partition variable=arr_1_I type=cyclic factor=32
 #pragma HLS array_partition variable=arr_1_Q type=cyclic factor=32
 
- VITIS_LOOP_177_12: for (int i=0; i<2240; i=i+2) {
-#pragma HLS UNROLL factor=32
+ VITIS_LOOP_190_13: for (int i=0; i<2240; i=i+2) {
+#pragma HLS UNROLL factor=64
  arr_1_I[i>>1] = arr_I[i] + arr_I[i+1];
         arr_1_Q[i>>1] = arr_Q[i] + arr_Q[i+1];
     }
@@ -35282,8 +35359,8 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 #pragma HLS array_partition variable=arr_2_I type=cyclic factor=32
 #pragma HLS array_partition variable=arr_2_Q type=cyclic factor=32
 
- VITIS_LOOP_187_13: for (int i=0; i<2240>>1; i=i+2) {
-#pragma HLS UNROLL factor=32
+ VITIS_LOOP_200_14: for (int i=0; i<2240>>1; i=i+2) {
+#pragma HLS UNROLL factor=16
  arr_2_I[i>>1] = arr_1_I[i] + arr_1_I[i+1];
         arr_2_Q[i>>1] = arr_1_Q[i] + arr_1_Q[i+1];
     }
@@ -35292,7 +35369,7 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 #pragma HLS array_partition variable=arr_3_I type=cyclic factor=8
 #pragma HLS array_partition variable=arr_3_Q type=cyclic factor=8
 
- VITIS_LOOP_197_14: for (int i=0; i<2240>>2; i=i+2) {
+ VITIS_LOOP_210_15: for (int i=0; i<2240>>2; i=i+2) {
 #pragma HLS UNROLL factor=8
  arr_3_I[i>>1] = arr_2_I[i] + arr_2_I[i+1];
         arr_3_Q[i>>1] = arr_2_Q[i] + arr_2_Q[i+1];
@@ -35302,8 +35379,8 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 #pragma HLS array_partition variable=arr_4_I type=cyclic factor=8
 #pragma HLS array_partition variable=arr_4_Q type=cyclic factor=8
 
- VITIS_LOOP_207_15: for (int i=0; i<2240>>3; i=i+2) {
-#pragma HLS UNROLL factor=8
+ VITIS_LOOP_220_16: for (int i=0; i<2240>>3; i=i+2) {
+#pragma HLS UNROLL factor=4
  arr_4_I[i>>1] = arr_3_I[i] + arr_3_I[i+1];
         arr_4_Q[i>>1] = arr_3_Q[i] + arr_3_Q[i+1];
     }
@@ -35312,9 +35389,8 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 #pragma HLS array_partition variable=arr_5_I type=cyclic factor=4
 #pragma HLS array_partition variable=arr_5_Q type=cyclic factor=4
 
- VITIS_LOOP_217_16: for (int i=0; i<2240>>4; i=i+2) {
-#pragma HLS UNROLL factor=4
- arr_5_I[i>>1] = arr_4_I[i] + arr_4_I[i+1];
+ VITIS_LOOP_230_17: for (int i=0; i<2240>>4; i=i+2) {
+        arr_5_I[i>>1] = arr_4_I[i] + arr_4_I[i+1];
         arr_5_Q[i>>1] = arr_4_Q[i] + arr_4_Q[i+1];
     }
     ap_fixed<29, 7> arr_6_I[2240>>6] = {0};
@@ -35322,15 +35398,14 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
 #pragma HLS array_partition variable=arr_6_I type=cyclic factor=2
 #pragma HLS array_partition variable=arr_6_Q type=cyclic factor=2
 
- VITIS_LOOP_227_17: for (int i=0; i<2240>>5; i=i+2) {
-#pragma HLS UNROLL factor=2
- arr_6_I[i>>1] = arr_5_I[i] + arr_5_I[i+1];
+ VITIS_LOOP_239_18: for (int i=0; i<2240>>5; i=i+2) {
+        arr_6_I[i>>1] = arr_5_I[i] + arr_5_I[i+1];
         arr_6_Q[i>>1] = arr_5_Q[i] + arr_5_Q[i+1];
     }
     ap_fixed<30, 8> arr_7_I[17] = {0};
     ap_fixed<30, 8> arr_7_Q[17] = {0};
 
-    VITIS_LOOP_235_18: for (int i=0; i<34; i=i+2) {
+    VITIS_LOOP_246_19: for (int i=0; i<34; i=i+2) {
         arr_7_I[i>>1] = arr_6_I[i] + arr_6_I[i+1];
         arr_7_Q[i>>1] = arr_6_Q[i] + arr_6_Q[i+1];
     }
@@ -35339,7 +35414,7 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
     ap_fixed<31, 9> arr_8_I[8] = {0};
     ap_fixed<31, 9> arr_8_Q[8] = {0};
 
-    VITIS_LOOP_244_19: for (int i=0; i<16; i=i+2) {
+    VITIS_LOOP_255_20: for (int i=0; i<16; i=i+2) {
         arr_8_I[i>>1] = arr_7_I[i] + arr_7_I[i+1];
         arr_8_Q[i>>1] = arr_7_Q[i] + arr_7_Q[i+1];
     }
@@ -35348,14 +35423,14 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
     corr_t arr_9_I[4] = {0};
     corr_t arr_9_Q[4] = {0};
 
-    VITIS_LOOP_253_20: for (int i=0; i<8; i=i+2) {
+    VITIS_LOOP_264_21: for (int i=0; i<8; i=i+2) {
         arr_9_I[i>>1] = arr_8_I[i] + arr_8_I[i+1];
         arr_9_Q[i>>1] = arr_8_Q[i] + arr_8_Q[i+1];
     }
     corr_t arr_10_I[2] = {0};
     corr_t arr_10_Q[2] = {0};
 
-    VITIS_LOOP_260_21: for (int i=0; i<4; i=i+2) {
+    VITIS_LOOP_271_22: for (int i=0; i<4; i=i+2) {
         arr_10_I[i>>1] = arr_9_I[i] + arr_9_I[i+1];
         arr_10_Q[i>>1] = arr_9_Q[i] + arr_9_Q[i+1];
     }
@@ -35375,21 +35450,20 @@ __attribute__((sdx_kernel("receiver", 0))) void receiver(hls::stream<transPkt> &
     if ((corr_abs_prev > 10000) && (corr_abs_prev > corr_abs)) {
 
 
-        int i = 140 +193/2;
-        VITIS_LOOP_281_22: for (int j=0; j<236; j++) {
-#pragma HLS UNROLL factor=16
+        int i = 140 +97/2;
+        VITIS_LOOP_292_23: for (int j=0; j<236; j++) {
+#pragma HLS UNROLL factor=4
 
 
- real_output[j].ffp = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];
-            imag_output[j].ffp = corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
+ real_output[j].ffp = (float)(corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i]);
+            imag_output[j].ffp = (float)(corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i]);
             i = i+32;
         }
 
 
 
-     VITIS_LOOP_292_23: for (int i = 0; i < 224; i++)
+     VITIS_LOOP_303_24: for (int i = 0; i < 236; i++)
      {
-
       real_sample_pkt.data = real_output[i].i;
       real_sample_pkt.last = (i==236-1) ? 1:0;
       output_i.write(real_sample_pkt);

@@ -47,210 +47,237 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1245_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_68_1:  '
-    FileOffset:      68
+    Message:         'Added loop label VITIS_LOOP_62_1:  '
+    FileOffset:      62
+    FilePath:        /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_shift_reg.h
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
+        Offset:          1681271
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_62_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_1:  '
+    FileOffset:      69
+    FilePath:        /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_shift_reg.h
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
+        Offset:          1681475
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_69_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_69_1:  '
+    FileOffset:      69
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1682367
+        Offset:          1684085
         Length:          0
-        ReplacementText: 'VITIS_LOOP_68_1: '
+        ReplacementText: 'VITIS_LOOP_69_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_79_2:  '
-    FileOffset:      79
+    Message:         'Added loop label VITIS_LOOP_86_2:  '
+    FileOffset:      86
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1682634
+        Offset:          1684370
         Length:          0
-        ReplacementText: 'VITIS_LOOP_79_2: '
+        ReplacementText: 'VITIS_LOOP_86_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_91_3:  '
-    FileOffset:      91
+    Message:         'Added loop label VITIS_LOOP_98_3:  '
+    FileOffset:      98
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1683044
+        Offset:          1684778
         Length:          0
-        ReplacementText: 'VITIS_LOOP_91_3: '
+        ReplacementText: 'VITIS_LOOP_98_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_100_4:  '
-    FileOffset:      100
+    Message:         'Added loop label VITIS_LOOP_107_4:  '
+    FileOffset:      107
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1683383
+        Offset:          1685117
         Length:          0
-        ReplacementText: 'VITIS_LOOP_100_4: '
+        ReplacementText: 'VITIS_LOOP_107_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_111_5:  '
-    FileOffset:      111
-    FilePath:        receiver.cpp
-    Replacements:    
-      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1683831
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_111_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_118_6:  '
+    Message:         'Added loop label VITIS_LOOP_118_5:  '
     FileOffset:      118
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1684061
+        Offset:          1685566
         Length:          0
-        ReplacementText: 'VITIS_LOOP_118_6: '
+        ReplacementText: 'VITIS_LOOP_118_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_124_7:  '
-    FileOffset:      124
+    Message:         'Added loop label VITIS_LOOP_125_6:  '
+    FileOffset:      125
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1684270
+        Offset:          1685797
         Length:          0
-        ReplacementText: 'VITIS_LOOP_124_7: '
+        ReplacementText: 'VITIS_LOOP_125_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_130_8:  '
-    FileOffset:      130
+    Message:         'Added loop label VITIS_LOOP_132_7:  '
+    FileOffset:      132
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1684477
+        Offset:          1686027
         Length:          0
-        ReplacementText: 'VITIS_LOOP_130_8: '
+        ReplacementText: 'VITIS_LOOP_132_7: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_136_9:  '
-    FileOffset:      136
+    Message:         'Added loop label VITIS_LOOP_138_8:  '
+    FileOffset:      138
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1684684
+        Offset:          1686234
         Length:          0
-        ReplacementText: 'VITIS_LOOP_136_9: '
+        ReplacementText: 'VITIS_LOOP_138_8: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_148_10:  '
-    FileOffset:      148
+    Message:         'Added loop label VITIS_LOOP_144_9:  '
+    FileOffset:      144
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1684946
+        Offset:          1686441
         Length:          0
-        ReplacementText: 'VITIS_LOOP_148_10: '
+        ReplacementText: 'VITIS_LOOP_144_9: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_165_11:  '
-    FileOffset:      165
+    Message:         'Added loop label VITIS_LOOP_156_10:  '
+    FileOffset:      156
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1685408
+        Offset:          1686703
         Length:          0
-        ReplacementText: 'VITIS_LOOP_165_11: '
+        ReplacementText: 'VITIS_LOOP_156_10: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_177_12:  '
-    FileOffset:      177
+    Message:         'Added loop label VITIS_LOOP_162_11:  '
+    FileOffset:      162
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1685810
+        Offset:          1686814
         Length:          0
-        ReplacementText: 'VITIS_LOOP_177_12: '
+        ReplacementText: 'VITIS_LOOP_162_11: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_187_13:  '
-    FileOffset:      187
+    Message:         'Added loop label VITIS_LOOP_178_12:  '
+    FileOffset:      178
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1686187
+        Offset:          1687244
         Length:          0
-        ReplacementText: 'VITIS_LOOP_187_13: '
+        ReplacementText: 'VITIS_LOOP_178_12: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_197_14:  '
-    FileOffset:      197
+    Message:         'Added loop label VITIS_LOOP_190_13:  '
+    FileOffset:      190
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1686573
+        Offset:          1687646
         Length:          0
-        ReplacementText: 'VITIS_LOOP_197_14: '
+        ReplacementText: 'VITIS_LOOP_190_13: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_207_15:  '
-    FileOffset:      207
+    Message:         'Added loop label VITIS_LOOP_200_14:  '
+    FileOffset:      200
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1686958
+        Offset:          1688023
         Length:          0
-        ReplacementText: 'VITIS_LOOP_207_15: '
+        ReplacementText: 'VITIS_LOOP_200_14: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_217_16:  '
-    FileOffset:      217
+    Message:         'Added loop label VITIS_LOOP_210_15:  '
+    FileOffset:      210
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1687343
+        Offset:          1688409
         Length:          0
-        ReplacementText: 'VITIS_LOOP_217_16: '
+        ReplacementText: 'VITIS_LOOP_210_15: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_227_17:  '
-    FileOffset:      227
+    Message:         'Added loop label VITIS_LOOP_220_16:  '
+    FileOffset:      220
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1687728
+        Offset:          1688794
         Length:          0
-        ReplacementText: 'VITIS_LOOP_227_17: '
+        ReplacementText: 'VITIS_LOOP_220_16: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_235_18:  '
-    FileOffset:      235
+    Message:         'Added loop label VITIS_LOOP_230_17:  '
+    FileOffset:      230
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1687974
+        Offset:          1689179
         Length:          0
-        ReplacementText: 'VITIS_LOOP_235_18: '
+        ReplacementText: 'VITIS_LOOP_230_17: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_244_19:  '
-    FileOffset:      244
+    Message:         'Added loop label VITIS_LOOP_239_18:  '
+    FileOffset:      239
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1688282
+        Offset:          1689543
         Length:          0
-        ReplacementText: 'VITIS_LOOP_244_19: '
+        ReplacementText: 'VITIS_LOOP_239_18: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_253_20:  '
-    FileOffset:      253
+    Message:         'Added loop label VITIS_LOOP_246_19:  '
+    FileOffset:      246
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1688568
+        Offset:          1689768
         Length:          0
-        ReplacementText: 'VITIS_LOOP_253_20: '
+        ReplacementText: 'VITIS_LOOP_246_19: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_260_21:  '
-    FileOffset:      260
+    Message:         'Added loop label VITIS_LOOP_255_20:  '
+    FileOffset:      255
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1688769
+        Offset:          1690076
         Length:          0
-        ReplacementText: 'VITIS_LOOP_260_21: '
+        ReplacementText: 'VITIS_LOOP_255_20: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_281_22:  '
-    FileOffset:      281
+    Message:         'Added loop label VITIS_LOOP_264_21:  '
+    FileOffset:      264
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1689313
+        Offset:          1690362
         Length:          0
-        ReplacementText: 'VITIS_LOOP_281_22: '
+        ReplacementText: 'VITIS_LOOP_264_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_271_22:  '
+    FileOffset:      271
+    FilePath:        receiver.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
+        Offset:          1690563
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_271_22: '
   - DiagnosticName:  xilinx-label-all-loops
     Message:         'Added loop label VITIS_LOOP_292_23:  '
     FileOffset:      292
     FilePath:        receiver.cpp
     Replacements:    
       - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
-        Offset:          1689573
+        Offset:          1691106
         Length:          0
         ReplacementText: 'VITIS_LOOP_292_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_303_24:  '
+    FileOffset:      303
+    FilePath:        receiver.cpp
+    Replacements:    
+      - FilePath:        /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp
+        Offset:          1691383
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_303_24: '
 ...

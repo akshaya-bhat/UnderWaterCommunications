@@ -1,0 +1,67 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/.autopilot/db/receiver.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>receiver.cpp</string>
+      <key>line</key>
+      <integer>112</integer>
+      <key>column</key>
+      <integer>35</integer>
+      <key>message</key>
+      <string>array index 192 is past the end of the array (which contains 97 elements)</string>
+      <key>ID</key>
+      <integer>4611</integer>
+      <key>WarningOption</key>
+      <string>array-bounds</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>receiver.cpp</string>
+      <key>line</key>
+      <integer>94</integer>
+      <key>column</key>
+      <integer>5</integer>
+      <key>message</key>
+      <string>array &apos;filt_I&apos; declared here</string>
+      <key>ID</key>
+      <integer>4110</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>receiver.cpp</string>
+      <key>line</key>
+      <integer>113</integer>
+      <key>column</key>
+      <integer>35</integer>
+      <key>message</key>
+      <string>array index 192 is past the end of the array (which contains 97 elements)</string>
+      <key>ID</key>
+      <integer>4611</integer>
+      <key>WarningOption</key>
+      <string>array-bounds</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>receiver.cpp</string>
+      <key>line</key>
+      <integer>95</integer>
+      <key>column</key>
+      <integer>5</integer>
+      <key>message</key>
+      <string>array &apos;filt_Q&apos; declared here</string>
+      <key>ID</key>
+      <integer>4110</integer>
+    </dict>
+  </array>
+</dict>

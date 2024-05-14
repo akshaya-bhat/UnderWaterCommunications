@@ -5,9 +5,9 @@
 ############################################################
 open_project receiver
 set_top receiver
-add_files receiver.cpp
 add_files receiver.h
-add_files -tb receiver_test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files receiver.cpp
+add_files -tb receiver_test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
 create_clock -period 8 -name default
