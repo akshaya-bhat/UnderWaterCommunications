@@ -16,7 +16,7 @@
             <Obj class_id="5" tracking_level="0" version="0">
               <type>1</type>
               <id>1</id>
-              <name>filt_3_I_V</name>
+              <name>filt_3_I</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -34,14 +34,14 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1031040613</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>18</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
-          <array_size>24</array_size>
+          <array_size>12</array_size>
           <bit_vecs class_id="7" tracking_level="0" version="0">
             <count>0</count>
             <item_version>0</item_version>
@@ -52,7 +52,7 @@
             <Obj>
               <type>1</type>
               <id>2</id>
-              <name>filt_4_I_V</name>
+              <name>filt_4_I</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -70,14 +70,14 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967294</coreId>
+              <coreId>1031040613</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>18</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>1</if_type>
-          <array_size>12</array_size>
+          <array_size>6</array_size>
           <bit_vecs>
             <count>0</count>
             <item_version>0</item_version>
@@ -88,7 +88,7 @@
             <Obj>
               <type>1</type>
               <id>3</id>
-              <name>filt_3_Q_V</name>
+              <name>filt_3_Q</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -106,14 +106,14 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1031040613</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>18</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>1</if_type>
-          <array_size>24</array_size>
+          <array_size>12</array_size>
           <bit_vecs>
             <count>0</count>
             <item_version>0</item_version>
@@ -124,7 +124,7 @@
             <Obj>
               <type>1</type>
               <id>4</id>
-              <name>filt_4_Q_V</name>
+              <name>filt_4_Q</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -142,14 +142,14 @@
               <coreName>RAM</coreName>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3290042064</coreId>
+              <coreId>774971453</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>18</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>1</if_type>
-          <array_size>12</array_size>
+          <array_size>6</array_size>
           <bit_vecs>
             <count>0</count>
             <item_version>0</item_version>
@@ -182,10 +182,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>16</coreId>
+              <coreId>1667853600</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -224,7 +224,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>10</coreId>
+              <coreId>1734439968</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -267,7 +267,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3291063328</coreId>
+              <coreId>1213932093</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -293,7 +293,7 @@
               <id>9</id>
               <name>i</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -301,7 +301,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item class_id="11" tracking_level="0" version="0">
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second class_id="12" tracking_level="0" version="0">
                     <count>1</count>
                     <item_version>0</item_version>
@@ -323,10 +323,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3289626064</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -350,7 +350,7 @@
               <id>11</id>
               <name>icmp_ln124</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -358,7 +358,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -396,7 +396,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.36</m_delay>
+          <m_delay>1.73</m_delay>
           <m_topoIndex>5</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -404,10 +404,10 @@
           <Value>
             <Obj>
               <type>0</type>
-              <id>13</id>
+              <id>12</id>
               <name>br_ln124</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -415,7 +415,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -437,7 +437,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>26</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -462,10 +462,10 @@
           <Value>
             <Obj>
               <type>0</type>
-              <id>15</id>
-              <name>i_6_cast14</name>
+              <id>14</id>
+              <name>i_6_cast68</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -473,7 +473,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -488,14 +488,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>i_6_cast14_fu_134_p1</rtlName>
+              <rtlName>i_6_cast68_fu_134_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -521,7 +521,7 @@
               <id>17</id>
               <name>or_ln125</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>125</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -529,7 +529,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -551,10 +551,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>1702129263</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -576,39 +576,39 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>zext_ln813</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>zext_ln125</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>125</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln813_fu_146_p1</rtlName>
+              <rtlName>zext_ln125_fu_146_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>895439701</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -632,26 +632,26 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>filt_3_I_V_addr</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_I_addr</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>125</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
@@ -664,10 +664,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -690,26 +690,26 @@
             <Obj>
               <type>0</type>
               <id>20</id>
-              <name>filt_3_I_V_load</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_I_load</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>125</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
@@ -746,26 +746,26 @@
             <Obj>
               <type>0</type>
               <id>21</id>
-              <name>filt_3_I_V_addr_1</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_I_addr_1</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>125</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
@@ -778,10 +778,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -804,26 +804,26 @@
             <Obj>
               <type>0</type>
               <id>22</id>
-              <name>filt_3_I_V_load_1</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_I_load_1</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>125</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
@@ -860,32 +860,32 @@
             <Obj>
               <type>0</type>
               <id>23</id>
-              <name>add_ln813_36</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;19, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_19_3_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>add_ln125</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>125</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;19, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>125</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln813_36_fu_173_p2</rtlName>
+              <rtlName>add_ln125_fu_173_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -917,9 +917,9 @@
             <Obj>
               <type>0</type>
               <id>24</id>
-              <name>lshr_ln7</name>
+              <name>lshr_ln6</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>125</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -927,7 +927,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -942,17 +942,17 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>lshr_ln7_reg_211</rtlName>
+              <rtlName>lshr_ln6_reg_211</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>4</bitwidth>
+            <bitwidth>3</bitwidth>
           </Value>
           <oprand_edges>
             <count>4</count>
@@ -976,9 +976,9 @@
             <Obj>
               <type>0</type>
               <id>25</id>
-              <name>zext_ln125</name>
+              <name>zext_ln125_1</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>125</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -986,7 +986,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1001,14 +1001,14 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>zext_ln125_fu_185_p1</rtlName>
+              <rtlName>zext_ln125_1_fu_185_p1</rtlName>
               <control/>
               <opType/>
               <implIndex/>
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1032,9 +1032,9 @@
             <Obj>
               <type>0</type>
               <id>26</id>
-              <name>filt_4_I_V_addr_1</name>
+              <name>filt_4_I_addr_1</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>125</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1042,7 +1042,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1064,10 +1064,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>4</bitwidth>
+            <bitwidth>3</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1090,9 +1090,9 @@
             <Obj>
               <type>0</type>
               <id>27</id>
-              <name>filt_4_I_V_addr_1_write_ln125</name>
+              <name>filt_4_I_addr_1_write_ln125</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>125</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1100,7 +1100,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1147,26 +1147,26 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>filt_3_Q_V_addr</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_Q_addr</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>126</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>126</second>
                     </item>
                   </second>
                 </item>
@@ -1179,10 +1179,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1205,26 +1205,26 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>filt_3_Q_V_load</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_Q_load</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>126</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>126</second>
                     </item>
                   </second>
                 </item>
@@ -1261,26 +1261,26 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>filt_3_Q_V_addr_1</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_Q_addr_1</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>126</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>126</second>
                     </item>
                   </second>
                 </item>
@@ -1293,10 +1293,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1319,26 +1319,26 @@
             <Obj>
               <type>0</type>
               <id>31</id>
-              <name>filt_3_Q_V_load_1</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_18_2_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>filt_3_Q_load_1</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>126</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;18, 2, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>126</second>
                     </item>
                   </second>
                 </item>
@@ -1375,32 +1375,32 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>add_ln813_37</name>
-              <fileName>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</fileName>
-              <fileDirectory>..</fileDirectory>
-              <lineNumber>813</lineNumber>
-              <contextFuncName>operator=&amp;lt;19, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;</contextFuncName>
-              <contextNormFuncName>operator_assign_19_3_true_AP_TRN_AP_WRAP_0</contextNormFuncName>
+              <name>add_ln126</name>
+              <fileName>receiver.cpp</fileName>
+              <fileDirectory>../.</fileDirectory>
+              <lineNumber>126</lineNumber>
+              <contextFuncName>receiver</contextFuncName>
+              <contextNormFuncName>receiver</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>/tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_fixed_base.h</first>
-                        <second>operator=&amp;lt;19, 3, true, AP_TRN, AP_WRAP, 0&amp;gt;</second>
+                        <first>receiver.cpp</first>
+                        <second>receiver</second>
                       </first>
-                      <second>813</second>
+                      <second>126</second>
                     </item>
                   </second>
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln813_37_fu_179_p2</rtlName>
+              <rtlName>add_ln126_fu_179_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -1432,9 +1432,9 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>filt_4_Q_V_addr_1</name>
+              <name>filt_4_Q_addr_1</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>126</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1442,7 +1442,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1464,10 +1464,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>1667592992</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>4</bitwidth>
+            <bitwidth>3</bitwidth>
           </Value>
           <oprand_edges>
             <count>3</count>
@@ -1490,9 +1490,9 @@
             <Obj>
               <type>0</type>
               <id>34</id>
-              <name>filt_4_Q_V_addr_1_write_ln126</name>
+              <name>filt_4_Q_addr_1_write_ln126</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>126</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1500,7 +1500,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1549,7 +1549,7 @@
               <id>35</id>
               <name>add_ln124</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1557,7 +1557,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1582,7 +1582,7 @@
               <coreId>1</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -1595,7 +1595,7 @@
           <m_isOnCriticalPath>0</m_isOnCriticalPath>
           <m_isLCDNode>0</m_isLCDNode>
           <m_isStartOfPath>0</m_isStartOfPath>
-          <m_delay>1.78</m_delay>
+          <m_delay>1.73</m_delay>
           <m_topoIndex>19</m_topoIndex>
           <m_clusterGroupNumber>-1</m_clusterGroupNumber>
         </item>
@@ -1606,7 +1606,7 @@
               <id>36</id>
               <name>i_6_write_ln124</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1614,7 +1614,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1636,7 +1636,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1665,7 +1665,7 @@
               <id>37</id>
               <name>br_ln124</name>
               <fileName>receiver.cpp</fileName>
-              <fileDirectory>..</fileDirectory>
+              <fileDirectory>../.</fileDirectory>
               <lineNumber>124</lineNumber>
               <contextFuncName>receiver</contextFuncName>
               <contextNormFuncName>receiver</contextNormFuncName>
@@ -1673,7 +1673,7 @@
                 <count>1</count>
                 <item_version>0</item_version>
                 <item>
-                  <first>/home/lilian/school/UnderWaterCommunications/HLS_receiver</first>
+                  <first>C:\Users\sophi\OneDrive\Documents\MATLAB\UnderWaterCommunications\HLS_receiver</first>
                   <second>
                     <count>1</count>
                     <item_version>0</item_version>
@@ -1695,7 +1695,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1737,7 +1737,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>574452846</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -1782,7 +1782,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1330007625</coreId>
+              <coreId>774971453</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -1813,10 +1813,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>0</content>
@@ -1844,13 +1844,13 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292071712</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>24</content>
+          <content>12</content>
         </item>
         <item class_id_reference="16" object_id="_37">
           <Value>
@@ -1875,10 +1875,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3288480640</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>1</content>
@@ -1906,7 +1906,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3288692368</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1937,13 +1937,13 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3291489232</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>4</content>
+          <content>3</content>
         </item>
         <item class_id_reference="16" object_id="_40">
           <Value>
@@ -1968,10 +1968,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>3292198144</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>5</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
           <content>2</content>
@@ -2002,7 +2002,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>16843009</coreId>
+            <coreId>1043347246</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2016,7 +2016,7 @@
         <item class_id_reference="18" object_id="_42">
           <Obj>
             <type>3</type>
-            <id>14</id>
+            <id>13</id>
             <name>for.body228</name>
             <fileName/>
             <fileDirectory/>
@@ -2035,7 +2035,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>3290626304</coreId>
+            <coreId>2108125960</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2043,7 +2043,7 @@
             <item_version>0</item_version>
             <item>9</item>
             <item>11</item>
-            <item>13</item>
+            <item>12</item>
           </node_objs>
         </item>
         <item class_id_reference="18" object_id="_43">
@@ -2068,13 +2068,13 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>1397508187</coreId>
+            <coreId>588</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
             <count>22</count>
             <item_version>0</item_version>
-            <item>15</item>
+            <item>14</item>
             <item>17</item>
             <item>18</item>
             <item>19</item>
@@ -2102,7 +2102,7 @@
           <Obj>
             <type>3</type>
             <id>40</id>
-            <name>for.end251.exitStub</name>
+            <name>for.body270.preheader.exitStub</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -2120,7 +2120,7 @@
             <coreName/>
             <isStorage>0</isStorage>
             <storageDepth>0</storageDepth>
-            <coreId>3292071712</coreId>
+            <coreId>630</coreId>
             <rtlModuleName/>
           </Obj>
           <node_objs>
@@ -2157,7 +2157,7 @@
         <item class_id_reference="20" object_id="_48">
           <id>46</id>
           <edge_type>2</edge_type>
-          <source_obj>14</source_obj>
+          <source_obj>13</source_obj>
           <sink_obj>7</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -2186,28 +2186,28 @@
           <id>51</id>
           <edge_type>1</edge_type>
           <source_obj>11</source_obj>
-          <sink_obj>13</sink_obj>
+          <sink_obj>12</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_53">
           <id>52</id>
           <edge_type>2</edge_type>
           <source_obj>40</source_obj>
-          <sink_obj>13</sink_obj>
+          <sink_obj>12</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_54">
           <id>53</id>
           <edge_type>2</edge_type>
           <source_obj>38</source_obj>
-          <sink_obj>13</sink_obj>
+          <sink_obj>12</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_55">
           <id>54</id>
           <edge_type>1</edge_type>
           <source_obj>9</source_obj>
-          <sink_obj>15</sink_obj>
+          <sink_obj>14</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_56">
@@ -2248,7 +2248,7 @@
         <item class_id_reference="20" object_id="_61">
           <id>62</id>
           <edge_type>1</edge_type>
-          <source_obj>15</source_obj>
+          <source_obj>14</source_obj>
           <sink_obj>19</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -2381,7 +2381,7 @@
         <item class_id_reference="20" object_id="_80">
           <id>84</id>
           <edge_type>1</edge_type>
-          <source_obj>15</source_obj>
+          <source_obj>14</source_obj>
           <sink_obj>28</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -2500,7 +2500,7 @@
         <item class_id_reference="20" object_id="_97">
           <id>102</id>
           <edge_type>2</edge_type>
-          <source_obj>14</source_obj>
+          <source_obj>13</source_obj>
           <sink_obj>37</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -2508,20 +2508,20 @@
           <id>123</id>
           <edge_type>2</edge_type>
           <source_obj>8</source_obj>
-          <sink_obj>14</sink_obj>
+          <sink_obj>13</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_99">
           <id>124</id>
           <edge_type>2</edge_type>
-          <source_obj>14</source_obj>
+          <source_obj>13</source_obj>
           <sink_obj>38</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_100">
           <id>125</id>
           <edge_type>2</edge_type>
-          <source_obj>14</source_obj>
+          <source_obj>13</source_obj>
           <sink_obj>40</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
@@ -2529,7 +2529,7 @@
           <id>126</id>
           <edge_type>2</edge_type>
           <source_obj>38</source_obj>
-          <sink_obj>14</sink_obj>
+          <sink_obj>13</sink_obj>
           <is_back_edge>1</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_102">
@@ -2578,8 +2578,8 @@
         <mDepth>-1</mDepth>
         <mMinTripCount>-1</mMinTripCount>
         <mMaxTripCount>-1</mMaxTripCount>
-        <mMinLatency>15</mMinLatency>
-        <mMaxLatency>15</mMaxLatency>
+        <mMinLatency>9</mMinLatency>
+        <mMaxLatency>9</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -2618,15 +2618,15 @@
         <basic_blocks>
           <count>2</count>
           <item_version>0</item_version>
-          <item>14</item>
+          <item>13</item>
           <item>38</item>
         </basic_blocks>
         <mII>1</mII>
         <mDepth>3</mDepth>
-        <mMinTripCount>12</mMinTripCount>
-        <mMaxTripCount>12</mMaxTripCount>
-        <mMinLatency>13</mMinLatency>
-        <mMaxLatency>13</mMaxLatency>
+        <mMinTripCount>6</mMinTripCount>
+        <mMaxTripCount>6</mMaxTripCount>
+        <mMinLatency>7</mMinLatency>
+        <mMaxLatency>7</mMaxLatency>
         <mIsDfPipe>0</mIsDfPipe>
         <mDfPipe class_id="-1"/>
       </item>
@@ -2661,7 +2661,7 @@
         <item class_id="26" tracking_level="1" version="0" object_id="_110">
           <id>1</id>
           <operations class_id="27" tracking_level="0" version="0">
-            <count>22</count>
+            <count>21</count>
             <item_version>0</item_version>
             <item class_id="28" tracking_level="1" version="0" object_id="_111">
               <id>5</id>
@@ -2699,129 +2699,129 @@
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_118">
-              <id>13</id>
+              <id>14</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
             <item class_id_reference="28" object_id="_119">
-              <id>15</id>
-              <stage>1</stage>
-              <latency>1</latency>
-            </item>
-            <item class_id_reference="28" object_id="_120">
               <id>17</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_121">
+            <item class_id_reference="28" object_id="_120">
               <id>18</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_122">
+            <item class_id_reference="28" object_id="_121">
               <id>19</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_123">
+            <item class_id_reference="28" object_id="_122">
               <id>20</id>
               <stage>2</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_124">
+            <item class_id_reference="28" object_id="_123">
               <id>21</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_125">
+            <item class_id_reference="28" object_id="_124">
               <id>22</id>
               <stage>2</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_126">
+            <item class_id_reference="28" object_id="_125">
               <id>24</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_127">
+            <item class_id_reference="28" object_id="_126">
               <id>28</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_128">
+            <item class_id_reference="28" object_id="_127">
               <id>29</id>
               <stage>2</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_129">
+            <item class_id_reference="28" object_id="_128">
               <id>30</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_130">
+            <item class_id_reference="28" object_id="_129">
               <id>31</id>
               <stage>2</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_131">
+            <item class_id_reference="28" object_id="_130">
               <id>35</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_132">
+            <item class_id_reference="28" object_id="_131">
               <id>36</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
           </operations>
         </item>
-        <item class_id_reference="26" object_id="_133">
+        <item class_id_reference="26" object_id="_132">
           <id>2</id>
           <operations>
             <count>7</count>
             <item_version>0</item_version>
-            <item class_id_reference="28" object_id="_134">
+            <item class_id_reference="28" object_id="_133">
               <id>20</id>
               <stage>1</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_135">
+            <item class_id_reference="28" object_id="_134">
               <id>22</id>
               <stage>1</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_136">
+            <item class_id_reference="28" object_id="_135">
               <id>23</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_137">
+            <item class_id_reference="28" object_id="_136">
               <id>29</id>
               <stage>1</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_138">
+            <item class_id_reference="28" object_id="_137">
               <id>31</id>
               <stage>1</stage>
               <latency>2</latency>
             </item>
-            <item class_id_reference="28" object_id="_139">
+            <item class_id_reference="28" object_id="_138">
               <id>32</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
-            <item class_id_reference="28" object_id="_140">
+            <item class_id_reference="28" object_id="_139">
               <id>39</id>
               <stage>1</stage>
               <latency>1</latency>
             </item>
           </operations>
         </item>
-        <item class_id_reference="26" object_id="_141">
+        <item class_id_reference="26" object_id="_140">
           <id>3</id>
           <operations>
-            <count>7</count>
+            <count>8</count>
             <item_version>0</item_version>
+            <item class_id_reference="28" object_id="_141">
+              <id>15</id>
+              <stage>1</stage>
+              <latency>1</latency>
+            </item>
             <item class_id_reference="28" object_id="_142">
               <id>16</id>
               <stage>1</stage>
@@ -2917,7 +2917,7 @@
             <item_version>0</item_version>
             <item class_id="38" tracking_level="0" version="0">
               <first>(0P0)</first>
-              <second>5</second>
+              <second>4</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -2934,7 +2934,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln813_36_fu_173_p2 ( + ) </first>
+          <first>add_ln125_fu_173_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -2957,7 +2957,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln813_37_fu_179_p2 ( + ) </first>
+          <first>add_ln126_fu_179_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -3009,11 +3009,11 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>5</second>
+              <second>4</second>
             </item>
             <item>
               <first>(1P1)</first>
-              <second>5</second>
+              <second>4</second>
             </item>
             <item>
               <first>FF</first>
@@ -3021,7 +3021,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>9</second>
+              <second>13</second>
             </item>
           </second>
         </item>
@@ -3032,7 +3032,7 @@
             <item_version>0</item_version>
             <item>
               <first>(0P0)</first>
-              <second>5</second>
+              <second>4</second>
             </item>
             <item>
               <first>(1P1)</first>
@@ -3044,7 +3044,7 @@
             </item>
             <item>
               <first>LUT</first>
-              <second>5</second>
+              <second>4</second>
             </item>
           </second>
         </item>
@@ -3117,11 +3117,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>5</second>
+              <second>4</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>10</second>
+              <second>8</second>
             </item>
             <item>
               <first>LUT</first>
@@ -3140,11 +3140,11 @@
             </item>
             <item>
               <first>(1Bits)</first>
-              <second>5</second>
+              <second>4</second>
             </item>
             <item>
               <first>(2Count)</first>
-              <second>10</second>
+              <second>8</second>
             </item>
             <item>
               <first>LUT</first>
@@ -3157,7 +3157,7 @@
         <count>10</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln813_36_reg_226</first>
+          <first>add_ln125_reg_226</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -3176,7 +3176,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln813_37_reg_231</first>
+          <first>add_ln126_reg_231</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -3296,25 +3296,6 @@
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>5</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>5</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>lshr_ln7_reg_211</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
               <second>4</second>
             </item>
             <item>
@@ -3328,13 +3309,13 @@
           </second>
         </item>
         <item>
-          <first>lshr_ln7_reg_211_pp0_iter1_reg</first>
+          <first>lshr_ln6_reg_211</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>(Bits)</first>
-              <second>4</second>
+              <second>3</second>
             </item>
             <item>
               <first>(Consts)</first>
@@ -3342,7 +3323,26 @@
             </item>
             <item>
               <first>FF</first>
-              <second>4</second>
+              <second>3</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>lshr_ln6_reg_211_pp0_iter1_reg</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>3</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>3</second>
             </item>
           </second>
         </item>
@@ -3374,7 +3374,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln813_36_fu_173_p2 ( + ) </first>
+          <first>add_ln125_fu_173_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3382,7 +3382,7 @@
           </second>
         </item>
         <item>
-          <first>add_ln813_37_fu_179_p2 ( + ) </first>
+          <first>add_ln126_fu_179_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -3454,14 +3454,14 @@
         </second>
       </item>
       <item>
-        <first>13</first>
+        <first>12</first>
         <second>
           <first>0</first>
           <second>0</second>
         </second>
       </item>
       <item>
-        <first>15</first>
+        <first>14</first>
         <second>
           <first>0</first>
           <second>0</second>
@@ -3633,7 +3633,7 @@
         </second>
       </item>
       <item>
-        <first>14</first>
+        <first>13</first>
         <second>
           <first>1</first>
           <second>1</second>
@@ -3662,7 +3662,7 @@
         <basic_blocks>
           <count>2</count>
           <item_version>0</item_version>
-          <item>14</item>
+          <item>13</item>
           <item>38</item>
         </basic_blocks>
         <nodes>
@@ -3805,7 +3805,7 @@
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>15</item>
+          <item>14</item>
         </second>
       </item>
       <item>
@@ -3885,7 +3885,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln813_36_fu_173</first>
+        <first>add_ln125_fu_173</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3893,7 +3893,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln813_37_fu_179</first>
+        <first>add_ln126_fu_179</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3901,7 +3901,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_I_V_addr_1_gep_fu_61</first>
+        <first>filt_3_I_addr_1_gep_fu_61</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3909,7 +3909,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_I_V_addr_gep_fu_44</first>
+        <first>filt_3_I_addr_gep_fu_44</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3917,7 +3917,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_Q_V_addr_1_gep_fu_86</first>
+        <first>filt_3_Q_addr_1_gep_fu_86</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3925,7 +3925,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_Q_V_addr_gep_fu_69</first>
+        <first>filt_3_Q_addr_gep_fu_69</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3933,7 +3933,7 @@
         </second>
       </item>
       <item>
-        <first>filt_4_I_V_addr_1_gep_fu_94</first>
+        <first>filt_4_I_addr_1_gep_fu_94</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3941,7 +3941,7 @@
         </second>
       </item>
       <item>
-        <first>filt_4_Q_V_addr_1_gep_fu_107</first>
+        <first>filt_4_Q_addr_1_gep_fu_107</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3949,11 +3949,11 @@
         </second>
       </item>
       <item>
-        <first>i_6_cast14_fu_134</first>
+        <first>i_6_cast68_fu_134</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>15</item>
+          <item>14</item>
         </second>
       </item>
       <item>
@@ -3973,7 +3973,7 @@
         </second>
       </item>
       <item>
-        <first>lshr_ln7_fu_152</first>
+        <first>lshr_ln6_fu_152</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3989,7 +3989,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln125_fu_185</first>
+        <first>zext_ln125_1_fu_185</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -3997,7 +3997,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln813_fu_146</first>
+        <first>zext_ln125_fu_146</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4046,7 +4046,7 @@
       <item_version>0</item_version>
       <item class_id="56" tracking_level="0" version="0">
         <first class_id="57" tracking_level="0" version="0">
-          <first>filt_3_I_V</first>
+          <first>filt_3_I</first>
           <second>0</second>
         </first>
         <second>
@@ -4058,7 +4058,7 @@
       </item>
       <item>
         <first>
-          <first>filt_3_I_V</first>
+          <first>filt_3_I</first>
           <second>1</second>
         </first>
         <second>
@@ -4070,7 +4070,7 @@
       </item>
       <item>
         <first>
-          <first>filt_3_Q_V</first>
+          <first>filt_3_Q</first>
           <second>0</second>
         </first>
         <second>
@@ -4082,7 +4082,7 @@
       </item>
       <item>
         <first>
-          <first>filt_3_Q_V</first>
+          <first>filt_3_Q</first>
           <second>1</second>
         </first>
         <second>
@@ -4094,7 +4094,7 @@
       </item>
       <item>
         <first>
-          <first>filt_4_I_V</first>
+          <first>filt_4_I</first>
           <second>0</second>
         </first>
         <second>
@@ -4105,7 +4105,7 @@
       </item>
       <item>
         <first>
-          <first>filt_4_Q_V</first>
+          <first>filt_4_Q</first>
           <second>0</second>
         </first>
         <second>
@@ -4195,7 +4195,7 @@
       <count>9</count>
       <item_version>0</item_version>
       <item>
-        <first>add_ln813_36_reg_226</first>
+        <first>add_ln125_reg_226</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4203,7 +4203,7 @@
         </second>
       </item>
       <item>
-        <first>add_ln813_37_reg_231</first>
+        <first>add_ln126_reg_231</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4211,7 +4211,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_I_V_addr_1_reg_206</first>
+        <first>filt_3_I_addr_1_reg_206</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4219,7 +4219,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_I_V_addr_reg_201</first>
+        <first>filt_3_I_addr_reg_201</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4227,7 +4227,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_Q_V_addr_1_reg_221</first>
+        <first>filt_3_Q_addr_1_reg_221</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4235,7 +4235,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_Q_V_addr_reg_216</first>
+        <first>filt_3_Q_addr_reg_216</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4259,7 +4259,7 @@
         </second>
       </item>
       <item>
-        <first>lshr_ln7_reg_211</first>
+        <first>lshr_ln6_reg_211</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4279,7 +4279,7 @@
       <count>6</count>
       <item_version>0</item_version>
       <item class_id="59" tracking_level="0" version="0">
-        <first>filt_3_I_V(p0)</first>
+        <first>filt_3_I(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4295,7 +4295,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_I_V(p1)</first>
+        <first>filt_3_I(p1)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4311,7 +4311,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_Q_V(p0)</first>
+        <first>filt_3_Q(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4327,7 +4327,7 @@
         </second>
       </item>
       <item>
-        <first>filt_3_Q_V(p1)</first>
+        <first>filt_3_Q(p1)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4343,7 +4343,7 @@
         </second>
       </item>
       <item>
-        <first>filt_4_I_V(p0)</first>
+        <first>filt_4_I(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -4358,7 +4358,7 @@
         </second>
       </item>
       <item>
-        <first>filt_4_Q_V(p0)</first>
+        <first>filt_4_Q(p0)</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

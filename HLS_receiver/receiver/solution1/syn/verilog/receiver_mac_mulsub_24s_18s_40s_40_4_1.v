@@ -1,11 +1,13 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
-// Tool Version Limit: 2019.12
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+// Tool Version Limit: 2023.05
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+// 
 // ==============================================================
 `timescale 1 ns / 1 ps
 
-module receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5(
+module receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0(
     input clk,
     input rst,
     input ce,
@@ -69,7 +71,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5 receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U(
+receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0 receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

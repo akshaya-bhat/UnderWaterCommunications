@@ -12,16 +12,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 6 \
-    name delay_line_I_7 \
+    name delay_line_I \
     reset_level 1 \
     sync_rst true \
     dir IO \
-    corename delay_line_I_7 \
+    corename delay_line_I \
     op interface \
-    ports { delay_line_I_7_address0 { O 5 vector } delay_line_I_7_ce0 { O 1 bit } delay_line_I_7_we0 { O 1 bit } delay_line_I_7_d0 { O 18 vector } delay_line_I_7_address1 { O 5 vector } delay_line_I_7_ce1 { O 1 bit } delay_line_I_7_q1 { I 18 vector } } \
+    ports { delay_line_I_address0 { O 7 vector } delay_line_I_ce0 { O 1 bit } delay_line_I_we0 { O 1 bit } delay_line_I_d0 { O 18 vector } delay_line_I_address1 { O 7 vector } delay_line_I_ce1 { O 1 bit } delay_line_I_q1 { I 18 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_7'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I'"
 }
 }
 
@@ -31,282 +31,16 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     id 7 \
-    name delay_line_I_0 \
+    name delay_line_Q \
     reset_level 1 \
     sync_rst true \
     dir IO \
-    corename delay_line_I_0 \
+    corename delay_line_Q \
     op interface \
-    ports { delay_line_I_0_address0 { O 5 vector } delay_line_I_0_ce0 { O 1 bit } delay_line_I_0_we0 { O 1 bit } delay_line_I_0_d0 { O 18 vector } delay_line_I_0_address1 { O 5 vector } delay_line_I_0_ce1 { O 1 bit } delay_line_I_0_q1 { I 18 vector } } \
+    ports { delay_line_Q_address0 { O 7 vector } delay_line_Q_ce0 { O 1 bit } delay_line_Q_we0 { O 1 bit } delay_line_Q_d0 { O 18 vector } delay_line_Q_address1 { O 7 vector } delay_line_Q_ce1 { O 1 bit } delay_line_Q_q1 { I 18 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_0'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 8 \
-    name delay_line_Q_7 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_7 \
-    op interface \
-    ports { delay_line_Q_7_address0 { O 5 vector } delay_line_Q_7_ce0 { O 1 bit } delay_line_Q_7_we0 { O 1 bit } delay_line_Q_7_d0 { O 18 vector } delay_line_Q_7_address1 { O 5 vector } delay_line_Q_7_ce1 { O 1 bit } delay_line_Q_7_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_7'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 9 \
-    name delay_line_Q_0 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_0 \
-    op interface \
-    ports { delay_line_Q_0_address0 { O 5 vector } delay_line_Q_0_ce0 { O 1 bit } delay_line_Q_0_we0 { O 1 bit } delay_line_Q_0_d0 { O 18 vector } delay_line_Q_0_address1 { O 5 vector } delay_line_Q_0_ce1 { O 1 bit } delay_line_Q_0_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_0'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 10 \
-    name delay_line_I_6 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_I_6 \
-    op interface \
-    ports { delay_line_I_6_address0 { O 5 vector } delay_line_I_6_ce0 { O 1 bit } delay_line_I_6_we0 { O 1 bit } delay_line_I_6_d0 { O 18 vector } delay_line_I_6_address1 { O 5 vector } delay_line_I_6_ce1 { O 1 bit } delay_line_I_6_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_6'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 11 \
-    name delay_line_Q_6 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_6 \
-    op interface \
-    ports { delay_line_Q_6_address0 { O 5 vector } delay_line_Q_6_ce0 { O 1 bit } delay_line_Q_6_we0 { O 1 bit } delay_line_Q_6_d0 { O 18 vector } delay_line_Q_6_address1 { O 5 vector } delay_line_Q_6_ce1 { O 1 bit } delay_line_Q_6_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_6'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 12 \
-    name delay_line_I_5 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_I_5 \
-    op interface \
-    ports { delay_line_I_5_address0 { O 5 vector } delay_line_I_5_ce0 { O 1 bit } delay_line_I_5_we0 { O 1 bit } delay_line_I_5_d0 { O 18 vector } delay_line_I_5_address1 { O 5 vector } delay_line_I_5_ce1 { O 1 bit } delay_line_I_5_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_5'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 13 \
-    name delay_line_Q_5 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_5 \
-    op interface \
-    ports { delay_line_Q_5_address0 { O 5 vector } delay_line_Q_5_ce0 { O 1 bit } delay_line_Q_5_we0 { O 1 bit } delay_line_Q_5_d0 { O 18 vector } delay_line_Q_5_address1 { O 5 vector } delay_line_Q_5_ce1 { O 1 bit } delay_line_Q_5_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_5'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 14 \
-    name delay_line_I_4 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_I_4 \
-    op interface \
-    ports { delay_line_I_4_address0 { O 5 vector } delay_line_I_4_ce0 { O 1 bit } delay_line_I_4_we0 { O 1 bit } delay_line_I_4_d0 { O 18 vector } delay_line_I_4_address1 { O 5 vector } delay_line_I_4_ce1 { O 1 bit } delay_line_I_4_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_4'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 15 \
-    name delay_line_Q_4 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_4 \
-    op interface \
-    ports { delay_line_Q_4_address0 { O 5 vector } delay_line_Q_4_ce0 { O 1 bit } delay_line_Q_4_we0 { O 1 bit } delay_line_Q_4_d0 { O 18 vector } delay_line_Q_4_address1 { O 5 vector } delay_line_Q_4_ce1 { O 1 bit } delay_line_Q_4_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_4'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 16 \
-    name delay_line_I_3 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_I_3 \
-    op interface \
-    ports { delay_line_I_3_address0 { O 5 vector } delay_line_I_3_ce0 { O 1 bit } delay_line_I_3_we0 { O 1 bit } delay_line_I_3_d0 { O 18 vector } delay_line_I_3_address1 { O 5 vector } delay_line_I_3_ce1 { O 1 bit } delay_line_I_3_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_3'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 17 \
-    name delay_line_Q_3 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_3 \
-    op interface \
-    ports { delay_line_Q_3_address0 { O 5 vector } delay_line_Q_3_ce0 { O 1 bit } delay_line_Q_3_we0 { O 1 bit } delay_line_Q_3_d0 { O 18 vector } delay_line_Q_3_address1 { O 5 vector } delay_line_Q_3_ce1 { O 1 bit } delay_line_Q_3_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_3'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 18 \
-    name delay_line_I_2 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_I_2 \
-    op interface \
-    ports { delay_line_I_2_address0 { O 5 vector } delay_line_I_2_ce0 { O 1 bit } delay_line_I_2_we0 { O 1 bit } delay_line_I_2_d0 { O 18 vector } delay_line_I_2_address1 { O 5 vector } delay_line_I_2_ce1 { O 1 bit } delay_line_I_2_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_2'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 19 \
-    name delay_line_Q_2 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_2 \
-    op interface \
-    ports { delay_line_Q_2_address0 { O 5 vector } delay_line_Q_2_ce0 { O 1 bit } delay_line_Q_2_we0 { O 1 bit } delay_line_Q_2_d0 { O 18 vector } delay_line_Q_2_address1 { O 5 vector } delay_line_Q_2_ce1 { O 1 bit } delay_line_Q_2_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_2'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 20 \
-    name delay_line_I_1 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_I_1 \
-    op interface \
-    ports { delay_line_I_1_address0 { O 5 vector } delay_line_I_1_ce0 { O 1 bit } delay_line_I_1_we0 { O 1 bit } delay_line_I_1_d0 { O 18 vector } delay_line_I_1_address1 { O 5 vector } delay_line_I_1_ce1 { O 1 bit } delay_line_I_1_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_I_1'"
-}
-}
-
-
-# XIL_BRAM:
-if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 21 \
-    name delay_line_Q_1 \
-    reset_level 1 \
-    sync_rst true \
-    dir IO \
-    corename delay_line_Q_1 \
-    op interface \
-    ports { delay_line_Q_1_address0 { O 5 vector } delay_line_Q_1_ce0 { O 1 bit } delay_line_Q_1_we0 { O 1 bit } delay_line_Q_1_d0 { O 18 vector } delay_line_Q_1_address1 { O 5 vector } delay_line_Q_1_ce1 { O 1 bit } delay_line_Q_1_q1 { I 18 vector } } \
-} "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q_1'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'delay_line_Q'"
 }
 }
 

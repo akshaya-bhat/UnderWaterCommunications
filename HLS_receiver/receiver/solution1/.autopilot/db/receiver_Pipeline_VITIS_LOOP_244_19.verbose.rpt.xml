@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_244_19'" level="0">
-<item name = "Date">Sat May 11 11:31:40 2024
+<item name = "Date">Mon May 13 18:48:24 2024
 </item>
-<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00 ns, 4.815 ns, 2.16 ns</column>
+<column name="ap_clk">8.00 ns, 4.573 ns, 2.16 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">11, 11, 88.000 ns, 88.000 ns, 11, 11, no</column>
+<column name="">4, 4, 32.000 ns, 32.000 ns, 4, 4, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_244_19">9, 9, 3, 1, 1, 8, yes</column>
+<column name="- VITIS_LOOP_244_19">2, 2, 2, 1, 1, 2, yes</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 95, -</column>
+<column name="Expression">-, -, 0, 289, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 36, -</column>
-<column name="Register">-, -, 78, -, -</column>
+<column name="Multiplexer">-, -, -, 54, -</column>
+<column name="Register">-, -, 151, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -78,10 +78,20 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln244_fu_170_p2">+, 0, 0, 13, 5, 2</column>
-<column name="ret_V_33_fu_203_p2">+, 0, 0, 38, 31, 31</column>
-<column name="ret_V_fu_189_p2">+, 0, 0, 38, 31, 31</column>
-<column name="or_ln245_fu_148_p2">or, 0, 0, 4, 4, 1</column>
+<column name="add_ln244_fu_278_p2">+, 0, 0, 11, 3, 2</column>
+<column name="arr_9_I_0_fu_226_p2">+, 0, 0, 31, 24, 24</column>
+<column name="arr_9_Q_0_fu_264_p2">+, 0, 0, 31, 24, 24</column>
+<column name="icmp_ln245_1_fu_212_p2">icmp, 0, 0, 10, 2, 1</column>
+<column name="icmp_ln245_fu_192_p2">icmp, 0, 0, 10, 2, 1</column>
+<column name="or_ln245_fu_206_p2">or, 0, 0, 2, 2, 1</column>
+<column name="arr_9_I_1_5_fu_240_p3">select, 0, 0, 24, 1, 24</column>
+<column name="arr_9_I_1_6_fu_305_p3">select, 0, 0, 24, 1, 24</column>
+<column name="arr_9_Q_1_5_fu_270_p3">select, 0, 0, 24, 1, 24</column>
+<column name="arr_9_Q_1_6_fu_311_p3">select, 0, 0, 24, 1, 24</column>
+<column name="select_ln245_1_fu_218_p3">select, 0, 0, 24, 1, 24</column>
+<column name="select_ln245_fu_198_p3">select, 0, 0, 24, 1, 24</column>
+<column name="select_ln246_1_fu_256_p3">select, 0, 0, 24, 1, 24</column>
+<column name="select_ln246_fu_248_p3">select, 0, 0, 24, 1, 24</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -89,8 +99,10 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_i_7">9, 2, 5, 10</column>
-<column name="i_fu_42">9, 2, 5, 10</column>
+<column name="ap_sig_allocacmp_i_5">9, 2, 3, 6</column>
+<column name="arr_9_I_1_fu_64">9, 2, 24, 48</column>
+<column name="arr_9_Q_1_fu_72">9, 2, 24, 48</column>
+<column name="i_fu_60">9, 2, 3, 6</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -98,13 +110,14 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="i_fu_42">5, 0, 5, 0</column>
-<column name="lshr_ln_reg_235">3, 0, 3, 0</column>
-<column name="lshr_ln_reg_235_pp0_iter1_reg">3, 0, 3, 0</column>
-<column name="ret_V_33_reg_255">31, 0, 31, 0</column>
-<column name="ret_V_reg_250">31, 0, 31, 0</column>
+<column name="arr_9_I_0_reg_383">24, 0, 24, 0</column>
+<column name="arr_9_I_1_3_fu_68">24, 0, 24, 0</column>
+<column name="arr_9_I_1_fu_64">24, 0, 24, 0</column>
+<column name="arr_9_Q_0_reg_394">24, 0, 24, 0</column>
+<column name="arr_9_Q_1_3_fu_76">24, 0, 24, 0</column>
+<column name="arr_9_Q_1_fu_72">24, 0, 24, 0</column>
+<column name="i_fu_60">3, 0, 3, 0</column>
+<column name="tmp_1_reg_388">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
@@ -120,26 +133,22 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_244_19, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_244_19, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_244_19, return value</column>
-<column name="arr_7_I_V_address0">out, 5, ap_memory, arr_7_I_V, array</column>
-<column name="arr_7_I_V_ce0">out, 1, ap_memory, arr_7_I_V, array</column>
-<column name="arr_7_I_V_q0">in, 30, ap_memory, arr_7_I_V, array</column>
-<column name="arr_7_I_V_address1">out, 5, ap_memory, arr_7_I_V, array</column>
-<column name="arr_7_I_V_ce1">out, 1, ap_memory, arr_7_I_V, array</column>
-<column name="arr_7_I_V_q1">in, 30, ap_memory, arr_7_I_V, array</column>
-<column name="arr_8_I_V_address0">out, 3, ap_memory, arr_8_I_V, array</column>
-<column name="arr_8_I_V_ce0">out, 1, ap_memory, arr_8_I_V, array</column>
-<column name="arr_8_I_V_we0">out, 1, ap_memory, arr_8_I_V, array</column>
-<column name="arr_8_I_V_d0">out, 31, ap_memory, arr_8_I_V, array</column>
-<column name="arr_7_Q_V_address0">out, 5, ap_memory, arr_7_Q_V, array</column>
-<column name="arr_7_Q_V_ce0">out, 1, ap_memory, arr_7_Q_V, array</column>
-<column name="arr_7_Q_V_q0">in, 30, ap_memory, arr_7_Q_V, array</column>
-<column name="arr_7_Q_V_address1">out, 5, ap_memory, arr_7_Q_V, array</column>
-<column name="arr_7_Q_V_ce1">out, 1, ap_memory, arr_7_Q_V, array</column>
-<column name="arr_7_Q_V_q1">in, 30, ap_memory, arr_7_Q_V, array</column>
-<column name="arr_8_Q_V_address0">out, 3, ap_memory, arr_8_Q_V, array</column>
-<column name="arr_8_Q_V_ce0">out, 1, ap_memory, arr_8_Q_V, array</column>
-<column name="arr_8_Q_V_we0">out, 1, ap_memory, arr_8_Q_V, array</column>
-<column name="arr_8_Q_V_d0">out, 31, ap_memory, arr_8_Q_V, array</column>
+<column name="arr_8_I_0_0_reload">in, 24, ap_none, arr_8_I_0_0_reload, scalar</column>
+<column name="arr_8_I_2_0275_reload">in, 24, ap_none, arr_8_I_2_0275_reload, scalar</column>
+<column name="arr_8_I_1_0274_reload">in, 24, ap_none, arr_8_I_1_0274_reload, scalar</column>
+<column name="arr_8_I_3_0276_reload">in, 24, ap_none, arr_8_I_3_0276_reload, scalar</column>
+<column name="arr_8_Q_0_0_reload">in, 24, ap_none, arr_8_Q_0_0_reload, scalar</column>
+<column name="arr_8_Q_2_0278_reload">in, 24, ap_none, arr_8_Q_2_0278_reload, scalar</column>
+<column name="arr_8_Q_1_0277_reload">in, 24, ap_none, arr_8_Q_1_0277_reload, scalar</column>
+<column name="arr_8_Q_3_0279_reload">in, 24, ap_none, arr_8_Q_3_0279_reload, scalar</column>
+<column name="arr_9_Q_1_0281_out">out, 24, ap_vld, arr_9_Q_1_0281_out, pointer</column>
+<column name="arr_9_Q_1_0281_out_ap_vld">out, 1, ap_vld, arr_9_Q_1_0281_out, pointer</column>
+<column name="arr_9_Q_0_0_out">out, 24, ap_vld, arr_9_Q_0_0_out, pointer</column>
+<column name="arr_9_Q_0_0_out_ap_vld">out, 1, ap_vld, arr_9_Q_0_0_out, pointer</column>
+<column name="arr_9_I_1_0280_out">out, 24, ap_vld, arr_9_I_1_0280_out, pointer</column>
+<column name="arr_9_I_1_0280_out_ap_vld">out, 1, ap_vld, arr_9_I_1_0280_out, pointer</column>
+<column name="arr_9_I_0_0_out">out, 24, ap_vld, arr_9_I_0_0_out, pointer</column>
+<column name="arr_9_I_0_0_out_ap_vld">out, 1, ap_vld, arr_9_I_0_0_out, pointer</column>
 </table>
 </item>
 </section>

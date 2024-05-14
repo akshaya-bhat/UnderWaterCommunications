@@ -1,3 +1,4 @@
+#include "hls_signal_handler.h"
 #include <algorithm>
 #include <cassert>
 #include <fstream>
@@ -32,24 +33,136 @@ namespace hls::sim
   };
 
   struct SimException : public std::exception {
-    const char *msg;
+    const std::string msg;
     const size_t line;
-    SimException(const char *msg, const size_t line)
+    SimException(const std::string &msg, const size_t line)
       : msg(msg), line(line)
     {
     }
   };
 
-  void errExit(const size_t line, const char *msg)
+  void errExit(const size_t line, const std::string &msg)
   {
     std::string s;
-    s += "at line ";
-    s += std::to_string(line);
-    s += " occurred problem: ";
+    s += "ERROR";
+//  s += '(';
+//  s += __FILE__;
+//  s += ":";
+//  s += std::to_string(line);
+//  s += ')';
+    s += ": ";
     s += msg;
     s += "\n";
     fputs(s.c_str(), stderr);
     exit(1);
+  }
+}
+
+
+namespace hls::sim
+{
+  template<size_t n>
+  void move(void* to, void* from)
+  {
+    auto t = (hls::stream<ap_uint<n>>*)to;
+    auto f = (hls::stream<ap_uint<n>>*)from;
+    while (!f->empty()) {
+      t->write(f->read());
+    }
+  }
+
+  template<size_t n>
+  void task_move(void* to, void* from)
+  {
+    auto t = (hls::stream<ap_uint<n>>*)to;
+    auto f = (hls::stream<ap_uint<n>>*)from;
+    std::thread(
+      [=] () { while (true) { t->write(f->read()); } }
+    ).detach();
+  }
+
+  template<typename A, typename K, typename S, typename U, typename L, typename I, typename E>
+  struct MoveAXIS
+  {
+    struct ST { A data; K keep; S strb; U user; L last; I id; E dest; };
+
+    static void toSC(void* data, void* keep, void* strb, void* user, void* last, void* id, void* dest, void* axis)
+    {
+      ST st;
+      ((hls::stream<ST>*)axis)->read(st);
+      ((hls::stream<A>*)data)->write(st.data);
+      ((hls::stream<K>*)keep)->write(st.keep);
+      ((hls::stream<S>*)strb)->write(st.strb);
+      ((hls::stream<U>*)user)->write(st.user);
+      ((hls::stream<L>*)last)->write(st.last);
+      ((hls::stream<I>*)id)->write(st.id);
+      ((hls::stream<E>*)dest)->write(st.dest);
+    }
+
+    static void fromSC(void* data, void* keep, void* strb, void* user, void* last, void* id, void* dest, void* axis)
+    {
+      ST st;
+      ((hls::stream<A>*)data)->read(st.data);
+      ((hls::stream<K>*)keep)->read(st.keep);
+      ((hls::stream<S>*)strb)->read(st.strb);
+      ((hls::stream<U>*)user)->read(st.user);
+      ((hls::stream<L>*)last)->read(st.last);
+      ((hls::stream<I>*)id)->read(st.id);
+      ((hls::stream<E>*)dest)->read(st.dest);
+      ((hls::stream<ST>*)axis)->write(st);
+    }
+  };
+
+  template<size_t sdata, size_t skeep, size_t sstrb, size_t suser,
+           size_t slast, size_t sid, size_t sdest>
+  void move_to_SC(void* data, void* keep, void* strb, void* user, void* last,
+                  void* id, void* dest, void* axis)
+  {
+    typedef MoveAXIS<ap_uint<sdata>, ap_uint<skeep>, ap_uint<sstrb>,
+                     ap_uint<suser>, ap_uint<slast>, ap_uint<sid>,
+                     ap_uint<sdest>> M;
+    while (!((hls::stream<typename M::ST>*)axis)->empty()) {
+      M::toSC(data, keep, strb, user, last, id, dest, axis);
+    }
+  }
+
+  template<size_t sdata, size_t skeep, size_t sstrb, size_t suser,
+           size_t slast, size_t sid, size_t sdest>
+  void task_move_to_SC(void* data, void* keep, void* strb, void* user, void* last,
+                       void* id, void* dest, void* axis)
+  {
+    typedef MoveAXIS<ap_uint<sdata>, ap_uint<skeep>, ap_uint<sstrb>,
+                     ap_uint<suser>, ap_uint<slast>, ap_uint<sid>,
+                     ap_uint<sdest>> M;
+    std::thread(
+      [=] () { while (true) M::toSC(data, keep, strb, user, last, id, dest, axis); }
+    ).detach();
+  }
+
+  template<size_t sdata, size_t skeep, size_t sstrb, size_t suser,
+           size_t slast, size_t sid, size_t sdest>
+  void move_from_SC(void* axis, void* data, void* keep, void* strb, void* user, void* last,
+                    void* id, void* dest)
+  {
+    typedef MoveAXIS<ap_uint<sdata>, ap_uint<skeep>, ap_uint<sstrb>,
+                     ap_uint<suser>, ap_uint<slast>, ap_uint<sid>,
+                     ap_uint<sdest>> M;
+    while (!((hls::stream<ap_uint<sdata>>*)data)->empty()) {
+      M::fromSC(data, keep, strb, user, last, id, dest, axis);
+    }
+  }
+
+  template<size_t sdata, size_t skeep, size_t sstrb, size_t suser,
+           size_t slast, size_t sid, size_t sdest>
+  void task_move_from_SC(void* axis, void* data, void* keep, void* strb, void* user, void* last,
+                         void* id, void* dest)
+  {
+    typedef MoveAXIS<ap_uint<sdata>, ap_uint<skeep>, ap_uint<sstrb>,
+                     ap_uint<suser>, ap_uint<slast>, ap_uint<sid>,
+                     ap_uint<sdest>> M;
+    std::thread(
+      [=] () { while (true) M::fromSC(data, keep, strb, user, last, id, dest, axis); }
+    ).detach();
   }
 }
 

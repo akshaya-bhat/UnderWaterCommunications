@@ -10,11 +10,14 @@ set ProfileFlag 0
 set StallSigGenFlag 0
 set isEnableWaveformDebug 1
 set hasInterrupt 0
+set DLRegFirstOffset 0
+set DLRegItemOffset 0
 set C_modelName {receiver_Pipeline_1}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ real_output int 32 regular {array 236 { 0 3 } 0 1 }  }
 }
+set hasAXIMCache 0
 set C_modelArgMapList {[ 
 	{ "Name" : "real_output", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
@@ -50,7 +53,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "238", "EstimateLatencyMax" : "238",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "237", "EstimateLatencyMax" : "237",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -61,7 +64,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "real_output", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
+			{"Name" : "Loop 1", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_state1", "FirstStateIter" : "", "FirstStateBlock" : "ap_ST_fsm_state1_blk", "LastState" : "ap_ST_fsm_state1", "LastStateIter" : "", "LastStateBlock" : "ap_ST_fsm_state1_blk", "QuitState" : "ap_ST_fsm_state1", "QuitStateIter" : "", "QuitStateBlock" : "ap_ST_fsm_state1_blk", "OneDepthLoop" : "1", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
 
 
@@ -72,8 +76,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "238", "Max" : "238"}
-	, {"Name" : "Interval", "Min" : "238", "Max" : "238"}
+	{"Name" : "Latency", "Min" : "237", "Max" : "237"}
+	, {"Name" : "Interval", "Min" : "237", "Max" : "237"}
 ]}
 
 set PipelineEnableSignalInfo {[

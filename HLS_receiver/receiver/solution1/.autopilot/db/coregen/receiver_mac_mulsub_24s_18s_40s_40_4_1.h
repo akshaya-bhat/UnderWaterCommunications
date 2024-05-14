@@ -1,11 +1,13 @@
 // ==============================================================
-// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
-// Tool Version Limit: 2019.12
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+// Tool Version Limit: 2023.05
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+// 
 // ==============================================================
 #ifndef __receiver_mac_mulsub_24s_18s_40s_40_4_1__HH__
 #define __receiver_mac_mulsub_24s_18s_40s_40_4_1__HH__
-#include "receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5.h"
+#include "receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0.h"
 
 template<
     int ID,
@@ -25,16 +27,16 @@ SC_MODULE(receiver_mac_mulsub_24s_18s_40s_40_4_1) {
 
 
 
-    receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5 receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U;
+    receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0 receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U;
 
-    SC_CTOR(receiver_mac_mulsub_24s_18s_40s_40_4_1):  receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U ("receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U") {
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.clk(clk);
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.rst(reset);
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.ce(ce);
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.in0(din0);
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.in1(din1);
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.in2(din2);
-        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U.dout(dout);
+    SC_CTOR(receiver_mac_mulsub_24s_18s_40s_40_4_1):  receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U ("receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U") {
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.clk(clk);
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.rst(reset);
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.ce(ce);
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.in0(din0);
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.in1(din1);
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.in2(din2);
+        receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U.dout(dout);
 
     }
 

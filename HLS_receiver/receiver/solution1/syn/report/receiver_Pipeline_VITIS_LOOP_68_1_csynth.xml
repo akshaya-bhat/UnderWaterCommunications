@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2022.2</Version>
+<Version>2023.1</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -22,21 +22,21 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>244</Best-caseLatency>
-<Average-caseLatency>244</Average-caseLatency>
-<Worst-caseLatency>244</Worst-caseLatency>
-<Best-caseRealTimeLatency>1.952 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>1.952 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>1.952 us</Worst-caseRealTimeLatency>
-<Interval-min>244</Interval-min>
-<Interval-max>244</Interval-max>
+<Best-caseLatency>248</Best-caseLatency>
+<Average-caseLatency>248</Average-caseLatency>
+<Worst-caseLatency>248</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.984 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.984 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.984 us</Worst-caseRealTimeLatency>
+<Interval-min>248</Interval-min>
+<Interval-max>248</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_68_1>
 <Slack>5.84</Slack>
-<TripCount>240</TripCount>
-<Latency>242</Latency>
-<AbsoluteTimeLatency>1936</AbsoluteTimeLatency>
+<TripCount>244</TripCount>
+<Latency>246</Latency>
+<AbsoluteTimeLatency>1968</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>3</PipelineDepth>
 <InstanceList>
@@ -47,9 +47,9 @@
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>62</BRAM_18K>
-<FF>2181</FF>
-<LUT>92</LUT>
+<BRAM_18K>30</BRAM_18K>
+<FF>1092</FF>
+<LUT>89</LUT>
 <URAM>0</URAM>
 <DSP>0</DSP>
 </Resources>

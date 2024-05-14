@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../receiver.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/lilian/school/UnderWaterCommunications/HLS_receiver/receiver/solution1/solution1.directive
+set DirectiveFile {}
 set TBFiles {verilog ../../receiver_test.cpp bc ../../receiver_test.cpp vhdl ../../receiver_test.cpp sc ../../receiver_test.cpp cas ../../receiver_test.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
@@ -56,7 +56,7 @@ set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_ga
 set TBTVFileNotFound {}
 set AppFile ../hls.app
 set ApsFile solution1.aps
-set AvePath ../..
+set AvePath ../../.
 set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}

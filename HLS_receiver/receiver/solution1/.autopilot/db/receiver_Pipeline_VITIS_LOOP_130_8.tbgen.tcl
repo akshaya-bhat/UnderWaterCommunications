@@ -10,21 +10,32 @@ set ProfileFlag 0
 set StallSigGenFlag 0
 set isEnableWaveformDebug 1
 set hasInterrupt 0
+set DLRegFirstOffset 0
+set DLRegItemOffset 0
 set C_modelName {receiver_Pipeline_VITIS_LOOP_130_8}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ filt_4_I_V int 18 regular {array 12 { 1 1 } 1 1 }  }
-	{ filt_5_I_V int 18 regular {array 6 { 0 3 } 0 1 }  }
-	{ filt_4_Q_V int 18 regular {array 12 { 1 1 } 1 1 }  }
-	{ filt_5_Q_V int 18 regular {array 6 { 0 3 } 0 1 }  }
+	{ filt_4_Q int 18 regular {array 6 { 1 1 } 1 1 }  }
+	{ filt_4_I int 18 regular {array 6 { 1 1 } 1 1 }  }
+	{ filt_5_Q_2_0273_out int 18 regular {pointer 1}  }
+	{ filt_5_Q_1_0272_out int 18 regular {pointer 1}  }
+	{ filt_5_Q_0_0_out int 18 regular {pointer 1}  }
+	{ filt_5_I_2_0271_out int 18 regular {pointer 1}  }
+	{ filt_5_I_1_0270_out int 18 regular {pointer 1}  }
+	{ filt_5_I_0_0_out int 18 regular {pointer 1}  }
 }
+set hasAXIMCache 0
 set C_modelArgMapList {[ 
-	{ "Name" : "filt_4_I_V", "interface" : "memory", "bitwidth" : 18, "direction" : "READONLY"} , 
- 	{ "Name" : "filt_5_I_V", "interface" : "memory", "bitwidth" : 18, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "filt_4_Q_V", "interface" : "memory", "bitwidth" : 18, "direction" : "READONLY"} , 
- 	{ "Name" : "filt_5_Q_V", "interface" : "memory", "bitwidth" : 18, "direction" : "WRITEONLY"} ]}
+	{ "Name" : "filt_4_Q", "interface" : "memory", "bitwidth" : 18, "direction" : "READONLY"} , 
+ 	{ "Name" : "filt_4_I", "interface" : "memory", "bitwidth" : 18, "direction" : "READONLY"} , 
+ 	{ "Name" : "filt_5_Q_2_0273_out", "interface" : "wire", "bitwidth" : 18, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "filt_5_Q_1_0272_out", "interface" : "wire", "bitwidth" : 18, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "filt_5_Q_0_0_out", "interface" : "wire", "bitwidth" : 18, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "filt_5_I_2_0271_out", "interface" : "wire", "bitwidth" : 18, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "filt_5_I_1_0270_out", "interface" : "wire", "bitwidth" : 18, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "filt_5_I_0_0_out", "interface" : "wire", "bitwidth" : 18, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
-set portNum 26
+set portNum 30
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -32,26 +43,30 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ filt_4_I_V_address0 sc_out sc_lv 4 signal 0 } 
-	{ filt_4_I_V_ce0 sc_out sc_logic 1 signal 0 } 
-	{ filt_4_I_V_q0 sc_in sc_lv 18 signal 0 } 
-	{ filt_4_I_V_address1 sc_out sc_lv 4 signal 0 } 
-	{ filt_4_I_V_ce1 sc_out sc_logic 1 signal 0 } 
-	{ filt_4_I_V_q1 sc_in sc_lv 18 signal 0 } 
-	{ filt_5_I_V_address0 sc_out sc_lv 3 signal 1 } 
-	{ filt_5_I_V_ce0 sc_out sc_logic 1 signal 1 } 
-	{ filt_5_I_V_we0 sc_out sc_logic 1 signal 1 } 
-	{ filt_5_I_V_d0 sc_out sc_lv 18 signal 1 } 
-	{ filt_4_Q_V_address0 sc_out sc_lv 4 signal 2 } 
-	{ filt_4_Q_V_ce0 sc_out sc_logic 1 signal 2 } 
-	{ filt_4_Q_V_q0 sc_in sc_lv 18 signal 2 } 
-	{ filt_4_Q_V_address1 sc_out sc_lv 4 signal 2 } 
-	{ filt_4_Q_V_ce1 sc_out sc_logic 1 signal 2 } 
-	{ filt_4_Q_V_q1 sc_in sc_lv 18 signal 2 } 
-	{ filt_5_Q_V_address0 sc_out sc_lv 3 signal 3 } 
-	{ filt_5_Q_V_ce0 sc_out sc_logic 1 signal 3 } 
-	{ filt_5_Q_V_we0 sc_out sc_logic 1 signal 3 } 
-	{ filt_5_Q_V_d0 sc_out sc_lv 18 signal 3 } 
+	{ filt_4_Q_address0 sc_out sc_lv 3 signal 0 } 
+	{ filt_4_Q_ce0 sc_out sc_logic 1 signal 0 } 
+	{ filt_4_Q_q0 sc_in sc_lv 18 signal 0 } 
+	{ filt_4_Q_address1 sc_out sc_lv 3 signal 0 } 
+	{ filt_4_Q_ce1 sc_out sc_logic 1 signal 0 } 
+	{ filt_4_Q_q1 sc_in sc_lv 18 signal 0 } 
+	{ filt_4_I_address0 sc_out sc_lv 3 signal 1 } 
+	{ filt_4_I_ce0 sc_out sc_logic 1 signal 1 } 
+	{ filt_4_I_q0 sc_in sc_lv 18 signal 1 } 
+	{ filt_4_I_address1 sc_out sc_lv 3 signal 1 } 
+	{ filt_4_I_ce1 sc_out sc_logic 1 signal 1 } 
+	{ filt_4_I_q1 sc_in sc_lv 18 signal 1 } 
+	{ filt_5_Q_2_0273_out sc_out sc_lv 18 signal 2 } 
+	{ filt_5_Q_2_0273_out_ap_vld sc_out sc_logic 1 outvld 2 } 
+	{ filt_5_Q_1_0272_out sc_out sc_lv 18 signal 3 } 
+	{ filt_5_Q_1_0272_out_ap_vld sc_out sc_logic 1 outvld 3 } 
+	{ filt_5_Q_0_0_out sc_out sc_lv 18 signal 4 } 
+	{ filt_5_Q_0_0_out_ap_vld sc_out sc_logic 1 outvld 4 } 
+	{ filt_5_I_2_0271_out sc_out sc_lv 18 signal 5 } 
+	{ filt_5_I_2_0271_out_ap_vld sc_out sc_logic 1 outvld 5 } 
+	{ filt_5_I_1_0270_out sc_out sc_lv 18 signal 6 } 
+	{ filt_5_I_1_0270_out_ap_vld sc_out sc_logic 1 outvld 6 } 
+	{ filt_5_I_0_0_out sc_out sc_lv 18 signal 7 } 
+	{ filt_5_I_0_0_out_ap_vld sc_out sc_logic 1 outvld 7 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -60,26 +75,30 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "filt_4_I_V_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "filt_4_I_V", "role": "address0" }} , 
- 	{ "name": "filt_4_I_V_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_I_V", "role": "ce0" }} , 
- 	{ "name": "filt_4_I_V_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_I_V", "role": "q0" }} , 
- 	{ "name": "filt_4_I_V_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "filt_4_I_V", "role": "address1" }} , 
- 	{ "name": "filt_4_I_V_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_I_V", "role": "ce1" }} , 
- 	{ "name": "filt_4_I_V_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_I_V", "role": "q1" }} , 
- 	{ "name": "filt_5_I_V_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "filt_5_I_V", "role": "address0" }} , 
- 	{ "name": "filt_5_I_V_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_5_I_V", "role": "ce0" }} , 
- 	{ "name": "filt_5_I_V_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_5_I_V", "role": "we0" }} , 
- 	{ "name": "filt_5_I_V_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_I_V", "role": "d0" }} , 
- 	{ "name": "filt_4_Q_V_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "filt_4_Q_V", "role": "address0" }} , 
- 	{ "name": "filt_4_Q_V_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_Q_V", "role": "ce0" }} , 
- 	{ "name": "filt_4_Q_V_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_Q_V", "role": "q0" }} , 
- 	{ "name": "filt_4_Q_V_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "filt_4_Q_V", "role": "address1" }} , 
- 	{ "name": "filt_4_Q_V_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_Q_V", "role": "ce1" }} , 
- 	{ "name": "filt_4_Q_V_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_Q_V", "role": "q1" }} , 
- 	{ "name": "filt_5_Q_V_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "filt_5_Q_V", "role": "address0" }} , 
- 	{ "name": "filt_5_Q_V_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_5_Q_V", "role": "ce0" }} , 
- 	{ "name": "filt_5_Q_V_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_5_Q_V", "role": "we0" }} , 
- 	{ "name": "filt_5_Q_V_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_Q_V", "role": "d0" }}  ]}
+ 	{ "name": "filt_4_Q_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "filt_4_Q", "role": "address0" }} , 
+ 	{ "name": "filt_4_Q_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_Q", "role": "ce0" }} , 
+ 	{ "name": "filt_4_Q_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_Q", "role": "q0" }} , 
+ 	{ "name": "filt_4_Q_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "filt_4_Q", "role": "address1" }} , 
+ 	{ "name": "filt_4_Q_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_Q", "role": "ce1" }} , 
+ 	{ "name": "filt_4_Q_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_Q", "role": "q1" }} , 
+ 	{ "name": "filt_4_I_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "filt_4_I", "role": "address0" }} , 
+ 	{ "name": "filt_4_I_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_I", "role": "ce0" }} , 
+ 	{ "name": "filt_4_I_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_I", "role": "q0" }} , 
+ 	{ "name": "filt_4_I_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "filt_4_I", "role": "address1" }} , 
+ 	{ "name": "filt_4_I_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "filt_4_I", "role": "ce1" }} , 
+ 	{ "name": "filt_4_I_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_4_I", "role": "q1" }} , 
+ 	{ "name": "filt_5_Q_2_0273_out", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_Q_2_0273_out", "role": "default" }} , 
+ 	{ "name": "filt_5_Q_2_0273_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "filt_5_Q_2_0273_out", "role": "ap_vld" }} , 
+ 	{ "name": "filt_5_Q_1_0272_out", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_Q_1_0272_out", "role": "default" }} , 
+ 	{ "name": "filt_5_Q_1_0272_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "filt_5_Q_1_0272_out", "role": "ap_vld" }} , 
+ 	{ "name": "filt_5_Q_0_0_out", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_Q_0_0_out", "role": "default" }} , 
+ 	{ "name": "filt_5_Q_0_0_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "filt_5_Q_0_0_out", "role": "ap_vld" }} , 
+ 	{ "name": "filt_5_I_2_0271_out", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_I_2_0271_out", "role": "default" }} , 
+ 	{ "name": "filt_5_I_2_0271_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "filt_5_I_2_0271_out", "role": "ap_vld" }} , 
+ 	{ "name": "filt_5_I_1_0270_out", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_I_1_0270_out", "role": "default" }} , 
+ 	{ "name": "filt_5_I_1_0270_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "filt_5_I_1_0270_out", "role": "ap_vld" }} , 
+ 	{ "name": "filt_5_I_0_0_out", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "filt_5_I_0_0_out", "role": "default" }} , 
+ 	{ "name": "filt_5_I_0_0_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "filt_5_I_0_0_out", "role": "ap_vld" }}  ]}
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
@@ -88,7 +107,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "9", "EstimateLatencyMax" : "9",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "6", "EstimateLatencyMax" : "6",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -97,10 +116,14 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "filt_4_I_V", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "filt_5_I_V", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "filt_4_Q_V", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "filt_5_Q_V", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "filt_4_Q", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "filt_4_I", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "filt_5_Q_2_0273_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "filt_5_Q_1_0272_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "filt_5_Q_0_0_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "filt_5_I_2_0271_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "filt_5_I_1_0270_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "filt_5_I_0_0_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_130_8", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter2", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
@@ -109,16 +132,20 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	receiver_Pipeline_VITIS_LOOP_130_8 {
-		filt_4_I_V {Type I LastRead 1 FirstWrite -1}
-		filt_5_I_V {Type O LastRead -1 FirstWrite 2}
-		filt_4_Q_V {Type I LastRead 1 FirstWrite -1}
-		filt_5_Q_V {Type O LastRead -1 FirstWrite 2}}}
+		filt_4_Q {Type I LastRead 1 FirstWrite -1}
+		filt_4_I {Type I LastRead 1 FirstWrite -1}
+		filt_5_Q_2_0273_out {Type O LastRead -1 FirstWrite 1}
+		filt_5_Q_1_0272_out {Type O LastRead -1 FirstWrite 1}
+		filt_5_Q_0_0_out {Type O LastRead -1 FirstWrite 1}
+		filt_5_I_2_0271_out {Type O LastRead -1 FirstWrite 1}
+		filt_5_I_1_0270_out {Type O LastRead -1 FirstWrite 1}
+		filt_5_I_0_0_out {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "9", "Max" : "9"}
-	, {"Name" : "Interval", "Min" : "9", "Max" : "9"}
+	{"Name" : "Latency", "Min" : "6", "Max" : "6"}
+	, {"Name" : "Interval", "Min" : "6", "Max" : "6"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -126,8 +153,12 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	filt_4_I_V { ap_memory {  { filt_4_I_V_address0 mem_address 1 4 }  { filt_4_I_V_ce0 mem_ce 1 1 }  { filt_4_I_V_q0 in_data 0 18 }  { filt_4_I_V_address1 MemPortADDR2 1 4 }  { filt_4_I_V_ce1 MemPortCE2 1 1 }  { filt_4_I_V_q1 in_data 0 18 } } }
-	filt_5_I_V { ap_memory {  { filt_5_I_V_address0 mem_address 1 3 }  { filt_5_I_V_ce0 mem_ce 1 1 }  { filt_5_I_V_we0 mem_we 1 1 }  { filt_5_I_V_d0 mem_din 1 18 } } }
-	filt_4_Q_V { ap_memory {  { filt_4_Q_V_address0 mem_address 1 4 }  { filt_4_Q_V_ce0 mem_ce 1 1 }  { filt_4_Q_V_q0 in_data 0 18 }  { filt_4_Q_V_address1 MemPortADDR2 1 4 }  { filt_4_Q_V_ce1 MemPortCE2 1 1 }  { filt_4_Q_V_q1 in_data 0 18 } } }
-	filt_5_Q_V { ap_memory {  { filt_5_Q_V_address0 mem_address 1 3 }  { filt_5_Q_V_ce0 mem_ce 1 1 }  { filt_5_Q_V_we0 mem_we 1 1 }  { filt_5_Q_V_d0 mem_din 1 18 } } }
+	filt_4_Q { ap_memory {  { filt_4_Q_address0 mem_address 1 3 }  { filt_4_Q_ce0 mem_ce 1 1 }  { filt_4_Q_q0 in_data 0 18 }  { filt_4_Q_address1 MemPortADDR2 1 3 }  { filt_4_Q_ce1 MemPortCE2 1 1 }  { filt_4_Q_q1 in_data 0 18 } } }
+	filt_4_I { ap_memory {  { filt_4_I_address0 mem_address 1 3 }  { filt_4_I_ce0 mem_ce 1 1 }  { filt_4_I_q0 in_data 0 18 }  { filt_4_I_address1 MemPortADDR2 1 3 }  { filt_4_I_ce1 MemPortCE2 1 1 }  { filt_4_I_q1 in_data 0 18 } } }
+	filt_5_Q_2_0273_out { ap_vld {  { filt_5_Q_2_0273_out out_data 1 18 }  { filt_5_Q_2_0273_out_ap_vld out_vld 1 1 } } }
+	filt_5_Q_1_0272_out { ap_vld {  { filt_5_Q_1_0272_out out_data 1 18 }  { filt_5_Q_1_0272_out_ap_vld out_vld 1 1 } } }
+	filt_5_Q_0_0_out { ap_vld {  { filt_5_Q_0_0_out out_data 1 18 }  { filt_5_Q_0_0_out_ap_vld out_vld 1 1 } } }
+	filt_5_I_2_0271_out { ap_vld {  { filt_5_I_2_0271_out out_data 1 18 }  { filt_5_I_2_0271_out_ap_vld out_vld 1 1 } } }
+	filt_5_I_1_0270_out { ap_vld {  { filt_5_I_1_0270_out out_data 1 18 }  { filt_5_I_1_0270_out_ap_vld out_vld 1 1 } } }
+	filt_5_I_0_0_out { ap_vld {  { filt_5_I_0_0_out out_data 1 18 }  { filt_5_I_0_0_out_ap_vld out_vld 1 1 } } }
 }

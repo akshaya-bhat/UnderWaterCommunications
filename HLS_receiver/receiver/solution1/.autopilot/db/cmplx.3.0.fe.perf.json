@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 65,
+    "calls": "",
+    "file": "receiver.cpp",
+    "fileloc": 30,
+    "instructions": 5069,
+    "loads": {
+      "G": 184,
+      "L": 344
+    },
+    "name": "receiver",
+    "stores": {
+      "G": 76,
+      "L": 268
+    },
+    "total_instructions": 5069
+  }
+}

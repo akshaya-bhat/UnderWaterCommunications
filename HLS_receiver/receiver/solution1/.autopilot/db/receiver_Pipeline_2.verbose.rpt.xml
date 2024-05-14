@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver_Pipeline_2'" level="0">
-<item name = "Date">Sat May 11 11:31:33 2024
+<item name = "Date">Mon May 13 18:48:15 2024
 </item>
-<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">238, 238, 1.904 us, 1.904 us, 238, 238, no</column>
+<column name="">237, 237, 1.896 us, 1.896 us, 237, 237, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">236, 236, 1, 1, 1, 236, yes</column>
+<column name="- Loop 1">235, 235, 1, 1, 1, 236, yes</column>
 </table>
 </item>
 </section>
@@ -48,7 +48,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 26, -</column>
+<column name="Expression">-, -, 0, 30, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
@@ -78,22 +78,22 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln51_fu_50_p2">+, 0, 0, 15, 8, 1</column>
-<column name="icmp_ln51_fu_61_p2">icmp, 0, 0, 11, 8, 6</column>
+<column name="add_ln51_fu_55_p2">+, 0, 0, 15, 8, 1</column>
+<column name="icmp_ln51_fu_61_p2">icmp, 0, 0, 15, 8, 6</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_indvar7_load">9, 2, 8, 16</column>
-<column name="indvar7_fu_24">9, 2, 8, 16</column>
+<column name="ap_sig_allocacmp_indvars_iv5834_load">9, 2, 8, 16</column>
+<column name="indvars_iv5834_fu_24">9, 2, 8, 16</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
-<column name="indvar7_fu_24">8, 0, 8, 0</column>
+<column name="indvars_iv5834_fu_24">8, 0, 8, 0</column>
 </table>
 </item>
 </section>

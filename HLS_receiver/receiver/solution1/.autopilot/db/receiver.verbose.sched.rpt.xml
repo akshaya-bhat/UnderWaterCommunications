@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'receiver'" level="0">
-<item name = "Date">Sat May 11 11:31:31 2024
+<item name = "Date">Mon May 13 18:48:13 2024
 </item>
-<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">receiver</item>
 <item name = "Solution">solution1 (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00 ns, 5.745 ns, 2.16 ns</column>
+<column name="ap_clk">8.00 ns, 5.802 ns, 2.16 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">660, 1013, 5.280 us, 8.104 us, 661, 1014, no</column>
+<column name="">695, 1049, 5.560 us, 8.392 us, 696, 1050, no</column>
 </table>
 </item>
 <item name = "Detail">

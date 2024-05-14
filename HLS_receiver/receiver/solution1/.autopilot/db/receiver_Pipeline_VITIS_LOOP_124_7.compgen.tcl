@@ -11,17 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 160 \
-    name filt_3_I_V \
+    id 213 \
+    name filt_3_I \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename filt_3_I_V \
+    corename filt_3_I \
     op interface \
-    ports { filt_3_I_V_address0 { O 5 vector } filt_3_I_V_ce0 { O 1 bit } filt_3_I_V_q0 { I 18 vector } filt_3_I_V_address1 { O 5 vector } filt_3_I_V_ce1 { O 1 bit } filt_3_I_V_q1 { I 18 vector } } \
+    ports { filt_3_I_address0 { O 4 vector } filt_3_I_ce0 { O 1 bit } filt_3_I_q0 { I 18 vector } filt_3_I_address1 { O 4 vector } filt_3_I_ce1 { O 1 bit } filt_3_I_q1 { I 18 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_3_I_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_3_I'"
 }
 }
 
@@ -30,17 +30,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 161 \
-    name filt_4_I_V \
+    id 214 \
+    name filt_4_I \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename filt_4_I_V \
+    corename filt_4_I \
     op interface \
-    ports { filt_4_I_V_address0 { O 4 vector } filt_4_I_V_ce0 { O 1 bit } filt_4_I_V_we0 { O 1 bit } filt_4_I_V_d0 { O 18 vector } } \
+    ports { filt_4_I_address0 { O 3 vector } filt_4_I_ce0 { O 1 bit } filt_4_I_we0 { O 1 bit } filt_4_I_d0 { O 18 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_4_I_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_4_I'"
 }
 }
 
@@ -49,17 +49,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 162 \
-    name filt_3_Q_V \
+    id 215 \
+    name filt_3_Q \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename filt_3_Q_V \
+    corename filt_3_Q \
     op interface \
-    ports { filt_3_Q_V_address0 { O 5 vector } filt_3_Q_V_ce0 { O 1 bit } filt_3_Q_V_q0 { I 18 vector } filt_3_Q_V_address1 { O 5 vector } filt_3_Q_V_ce1 { O 1 bit } filt_3_Q_V_q1 { I 18 vector } } \
+    ports { filt_3_Q_address0 { O 4 vector } filt_3_Q_ce0 { O 1 bit } filt_3_Q_q0 { I 18 vector } filt_3_Q_address1 { O 4 vector } filt_3_Q_ce1 { O 1 bit } filt_3_Q_q1 { I 18 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_3_Q_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_3_Q'"
 }
 }
 
@@ -68,17 +68,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 163 \
-    name filt_4_Q_V \
+    id 216 \
+    name filt_4_Q \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename filt_4_Q_V \
+    corename filt_4_Q \
     op interface \
-    ports { filt_4_Q_V_address0 { O 4 vector } filt_4_Q_V_ce0 { O 1 bit } filt_4_Q_V_we0 { O 1 bit } filt_4_Q_V_d0 { O 18 vector } } \
+    ports { filt_4_Q_address0 { O 3 vector } filt_4_Q_ce0 { O 1 bit } filt_4_Q_we0 { O 1 bit } filt_4_Q_d0 { O 18 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_4_Q_V'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'filt_4_Q'"
 }
 }
 

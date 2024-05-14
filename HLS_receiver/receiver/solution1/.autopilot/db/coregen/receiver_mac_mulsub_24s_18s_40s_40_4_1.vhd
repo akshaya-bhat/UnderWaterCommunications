@@ -1,13 +1,15 @@
 -- ==============================================================
--- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
--- Tool Version Limit: 2019.12
+-- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+-- Tool Version Limit: 2023.05
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-- 
 -- ==============================================================
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5 is
+entity receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0 is
 port (
     clk: in  std_logic;
     rst: in  std_logic;
@@ -19,7 +21,7 @@ port (
 
 end entity;
 
-architecture behav of receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5 is
+architecture behav of receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0 is
     signal a       : signed(25-1 downto 0);
     signal b       : signed(18-1 downto 0);
     signal c       : signed(48-1 downto 0);
@@ -73,7 +75,7 @@ entity receiver_mac_mulsub_24s_18s_40s_40_4_1 is
 end entity;
 
 architecture arch of receiver_mac_mulsub_24s_18s_40s_40_4_1 is
-    component receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5 is
+    component receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0 is
         port (
             clk : IN STD_LOGIC;
             rst : IN STD_LOGIC;
@@ -87,7 +89,7 @@ architecture arch of receiver_mac_mulsub_24s_18s_40s_40_4_1 is
 
 
 begin
-    receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5_U :  component receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_5
+    receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0_U :  component receiver_mac_mulsub_24s_18s_40s_40_4_1_DSP48_0
     port map (
         clk => clk,
         rst => reset,

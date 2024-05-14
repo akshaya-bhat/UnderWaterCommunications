@@ -3,9 +3,9 @@
 ================================================================
 == Vitis HLS Report for 'receiver_Pipeline_2'
 ================================================================
-* Date:           Sat May 11 11:31:21 2024
+* Date:           Mon May 13 18:48:00 2024
 
-* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        receiver
 * Solution:       solution1 (Vivado IP Flow Target)
 * Product family: zynq
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
     |   min   |   max   |    min   |    max   | min | max |   Type  |
     +---------+---------+----------+----------+-----+-----+---------+
-    |      238|      238|  1.904 us|  1.904 us|  238|  238|       no|
+    |      237|      237|  1.896 us|  1.896 us|  237|  237|       no|
     +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
-        |- Loop 1  |      236|      236|         1|          1|          1|   236|       yes|
+        |- Loop 1  |      235|      235|         1|          1|          1|   236|       yes|
         +----------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -84,34 +84,33 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 3.50>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%indvar7 = alloca i32 1"   --->   Operation 4 'alloca' 'indvar7' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %indvar7"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%indvars_iv5834 = alloca i32 1"   --->   Operation 4 'alloca' 'indvars_iv5834' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %indvars_iv5834"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %arrayctor.loop6"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvar7_load = load i8 %indvar7" [receiver.cpp:51]   --->   Operation 7 'load' 'indvar7_load' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (1.91ns)   --->   "%add_ln51 = add i8 %indvar7_load, i8 1" [receiver.cpp:51]   --->   Operation 9 'add' 'add_ln51' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i8 %indvar7_load" [receiver.cpp:51]   --->   Operation 10 'zext' 'zext_ln51' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%imag_output_addr = getelementptr i32 %imag_output, i64 0, i64 %zext_ln51" [receiver.cpp:51]   --->   Operation 11 'getelementptr' 'imag_output_addr' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (3.25ns)   --->   "%store_ln51 = store i32 0, i8 %imag_output_addr" [receiver.cpp:51]   --->   Operation 12 'store' 'store_ln51' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 236> <RAM>
-ST_1 : Operation 13 [1/1] (1.55ns)   --->   "%icmp_ln51 = icmp_eq  i8 %indvar7_load, i8 235" [receiver.cpp:51]   --->   Operation 13 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 236, i64 236, i64 236"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %arrayctor.loop6.arrayctor.loop6_crit_edge, void %entry14.exitStub" [receiver.cpp:51]   --->   Operation 15 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln51 = store i8 %add_ln51, i8 %indvar7" [receiver.cpp:51]   --->   Operation 16 'store' 'store_ln51' <Predicate = (!icmp_ln51)> <Delay = 1.58>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln51 = br void %arrayctor.loop6" [receiver.cpp:51]   --->   Operation 17 'br' 'br_ln51' <Predicate = (!icmp_ln51)> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvars_iv5834_load = load i8 %indvars_iv5834" [receiver.cpp:51]   --->   Operation 7 'load' 'indvars_iv5834_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvars_iv5834_cast = zext i8 %indvars_iv5834_load" [receiver.cpp:51]   --->   Operation 8 'zext' 'indvars_iv5834_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%speclooptripcount_ln51 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 236, i64 236, i64 236" [receiver.cpp:51]   --->   Operation 10 'speclooptripcount' 'speclooptripcount_ln51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.91ns)   --->   "%add_ln51 = add i8 %indvars_iv5834_load, i8 1" [receiver.cpp:51]   --->   Operation 11 'add' 'add_ln51' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%imag_output_addr = getelementptr i32 %imag_output, i64 0, i64 %indvars_iv5834_cast" [receiver.cpp:51]   --->   Operation 12 'getelementptr' 'imag_output_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (3.25ns)   --->   "%store_ln51 = store i32 0, i8 %imag_output_addr" [receiver.cpp:51]   --->   Operation 13 'store' 'store_ln51' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 236> <RAM>
+ST_1 : Operation 14 [1/1] (1.91ns)   --->   "%icmp_ln51 = icmp_eq  i8 %indvars_iv5834_load, i8 235" [receiver.cpp:51]   --->   Operation 14 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (1.58ns)   --->   "%store_ln51 = store i8 %add_ln51, i8 %indvars_iv5834" [receiver.cpp:51]   --->   Operation 15 'store' 'store_ln51' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %arrayctor.loop6, void %entry14.exitStub" [receiver.cpp:51]   --->   Operation 16 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 17 'ret' 'ret_ln0' <Predicate = (icmp_ln51)> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 8ns, clock uncertainty: 2.16ns.
+Target clock period: 8.000ns, clock uncertainty: 2.160ns.
 
- <State 1>: 3.5ns
+ <State 1>: 3.503ns
 The critical path consists of the following:
-	'alloca' operation ('indvar7') [2]  (0 ns)
-	'load' operation ('indvar7_load', receiver.cpp:51) on local variable 'indvar7' [6]  (0 ns)
-	'add' operation ('add_ln51', receiver.cpp:51) [8]  (1.92 ns)
-	'store' operation ('store_ln51', receiver.cpp:51) of variable 'add_ln51', receiver.cpp:51 on local variable 'indvar7' [16]  (1.59 ns)
+	'alloca' operation ('indvars_iv5834') [2]  (0.000 ns)
+	'load' operation ('indvars_iv5834_load', receiver.cpp:51) on local variable 'indvars_iv5834' [6]  (0.000 ns)
+	'add' operation ('add_ln51', receiver.cpp:51) [10]  (1.915 ns)
+	'store' operation ('store_ln51', receiver.cpp:51) of variable 'add_ln51', receiver.cpp:51 on local variable 'indvars_iv5834' [14]  (1.588 ns)
 
 
 ============================================================

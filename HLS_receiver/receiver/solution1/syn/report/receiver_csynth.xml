@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2022.2</Version>
+<Version>2023.1</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -18,27 +18,27 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.745</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.508</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>660</Best-caseLatency>
-<Average-caseLatency>837</Average-caseLatency>
-<Worst-caseLatency>1013</Worst-caseLatency>
-<Best-caseRealTimeLatency>5.280 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>6.696 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>8.104 us</Worst-caseRealTimeLatency>
-<Interval-min>661</Interval-min>
-<Interval-max>1014</Interval-max>
+<Best-caseLatency>695</Best-caseLatency>
+<Average-caseLatency>872</Average-caseLatency>
+<Worst-caseLatency>1049</Worst-caseLatency>
+<Best-caseRealTimeLatency>5.560 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>6.976 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>8.392 us</Worst-caseRealTimeLatency>
+<Interval-min>696</Interval-min>
+<Interval-max>1050</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>264</BRAM_18K>
-<DSP>212</DSP>
-<FF>28403</FF>
-<LUT>40328</LUT>
+<BRAM_18K>127</BRAM_18K>
+<DSP>102</DSP>
+<FF>22376</FF>
+<LUT>22428</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

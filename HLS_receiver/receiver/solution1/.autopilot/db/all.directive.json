@@ -1,35 +1,44 @@
-{"sourceFile": [{
-      "name": "",
-      "directive": [
+[
+  {
+    "functionLabel": "",
+    "functionName": "receiver",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
         {
-          "functionName": "receiver",
-          "label": "",
-          "functionLabel": "",
-          "id": "1",
-          "sourceFile": "\/home\/lilian\/school\/UnderWaterCommunications\/HLS_receiver\/receiver\/solution1\/directives.tcl",
-          "sourceLine": "6",
-          "pragma": {
-            "name": "TOP",
-            "option": [{
-                "name": "name",
-                "value": "receiver"
-              }]
-          }
-        },
-        {
-          "functionName": "receiver",
-          "label": "",
-          "functionLabel": "",
-          "id": "2",
-          "sourceFile": "\/home\/lilian\/school\/UnderWaterCommunications\/HLS_receiver\/receiver\/solution1\/csynth.tcl",
-          "sourceLine": "16",
-          "pragma": {
-            "name": "TOP",
-            "option": [{
-                "name": "name",
-                "value": "receiver"
-              }]
-          }
+          "name": "name",
+          "value": "receiver"
         }
       ]
-    }]}
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "receiver",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "receiver"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]
