@@ -58,6 +58,7 @@
 #include "circular_buffer.h"
 #include "spi.h"
 #include "timer.h"
+#include <stdio.h>
 
 static spi device;
 /*
@@ -368,7 +369,7 @@ void RandomWaveGen(u8 channels, u8 numofcycles, u16 delay) {
 static void init_delay_timer() {
     static int initialized = 0;
     if (initialized == 0) {
-        timer_open_device(XPAR_XTMRCTR_NUM_INSTANCES - 1);
+        timer_open_device(XPAR_XTMRCTR_NUM_INSTANCES-1);
         initialized = 1;
     }
 }
@@ -379,7 +380,7 @@ void delay_p1us(unsigned int p1us){
     timer_delay(XPAR_XTMRCTR_NUM_INSTANCES - 1, cycles_per_p1us * p1us);
 }
 
-void SendBuffer(u8 channels, u16 delay) {
+void SendBuffer(u32 cmd) {
     int i;
     int num;
     u16 sample1;
@@ -388,7 +389,10 @@ void SendBuffer(u8 channels, u16 delay) {
     WriteBuffer[3] = 0x55;
     WriteBuffer[0] = 0x03;
 
-    u32 *num_addr = 0xf000;
+    u8 channels = 0;
+    u16 delay = 87;
+
+    u32 *num_addr = (u32 *) cmd;
     for(i=0; i<3776; i++) {
         num = *num_addr;
         sample1 = num & 0xFFFF0000;
@@ -417,18 +421,14 @@ void dac(u8 channels, u8 mode, u16 fixedvalue, u8 numofcycles, u16 delay)
         case 2:SqWaveGen(channels, numofcycles, delay); break;
         case 3:SawToothWaveGen(channels, numofcycles, delay); break;
         case 4:TriangleWaveGen(channels, numofcycles, delay); break;
-        case 5:SendBuffer(channels, delay); break;
+        case 5:SendBuffer(delay); break;
         case 6:RandomWaveGen(channels, numofcycles, delay); break;
     }
 }
 
 int main(void)
 {
-    u16 delay;
     u32 cmd;
-    u8 numofcycles;
-    u16 fixedvalue;
-    u8 mode, channels;
 
     device = spi_open(3, 2, 1, 0);
     device = spi_configure(device, 0, 1);
@@ -437,35 +437,7 @@ int main(void)
     while(1){
         while((MAILBOX_CMD_ADDR & 0x01)==0);
         cmd = MAILBOX_CMD_ADDR;
-        mode=0;
-        if((cmd >> 1) & 0x01)
-            mode=1;
-        else if((cmd >> 2) & 0x01)
-            mode=2;
-        else if((cmd >> 3) & 0x01)
-            mode=3;
-        else if((cmd >> 4) & 0x01)
-            mode=4;
-        else if((cmd >> 5) & 0x01)
-            mode=5;
-        else if((cmd >> 6) & 0x01)
-            mode=6;
-        mode=5;
-        channels = (cmd >> 16) & 0x0f;
-        fixedvalue = (cmd >> 20) & 0x0fff;
-        if(((cmd >> 20) & 0x0fff)==0)
-            // set to 1 second if the field is set to 0
-            delay = 1000;
-        else
-            // multiple of approximate milliseconds
-            delay=(cmd >> 20) & 0xfff;
-        if(((cmd >> 8) & 0x000ff)==0)
-            // indicate infinite number of samples
-            numofcycles = 0;
-        else
-            // set to number of samples
-            numofcycles=(cmd >> 8) & 0x0ff;
-        dac(channels,mode,fixedvalue,numofcycles,delay);
+	SendBuffer(cmd);
         MAILBOX_CMD_ADDR = 0x0;
     }
     return 0;
