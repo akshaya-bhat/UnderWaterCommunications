@@ -1,0 +1,263 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_68_1'" level="0">
+<item name = "Date">Mon May 13 18:48:15 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">receiver</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">8.00 ns, 5.169 ns, 2.16 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">248, 248, 1.984 us, 1.984 us, 248, 248, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_68_1">246, 246, 3, 1, 1, 244, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 53, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">30, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, -, 36, -</column>
+<column name="Register">-, -, 1092, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">10, 0, 1, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="samples_I_1_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_2_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_3_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_4_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_5_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_6_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_7_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_8_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_9_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_10_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_0_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_1_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_0_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_2_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_3_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_4_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_5_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_6_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_7_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_8_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_9_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_10_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_12_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_13_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_14_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_I_15_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_12_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_13_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_14_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+<column name="samples_Q_15_U">receiver_Pipeline_VITIS_LOOP_68_1_samples_I_1_RAM_AUTO_1R1W, 1, 0, 0, 0, 245, 18, 1, 4410</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln70_1_fu_734_p2">+, 0, 0, 15, 8, 1</column>
+<column name="add_ln70_fu_728_p2">+, 0, 0, 12, 12, 5</column>
+<column name="icmp_ln68_fu_722_p2">icmp, 0, 0, 12, 12, 9</column>
+<column name="or_ln70_fu_716_p2">or, 0, 0, 12, 12, 4</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i_2">9, 2, 12, 24</column>
+<column name="i_fu_100">9, 2, 12, 24</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="i_fu_100">12, 0, 12, 0</column>
+<column name="icmp_ln68_reg_896">1, 0, 1, 0</column>
+<column name="icmp_ln68_reg_896_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="samples_I_0_load_reg_1088">18, 0, 18, 0</column>
+<column name="samples_I_10_addr_reg_872">8, 0, 8, 0</column>
+<column name="samples_I_10_addr_reg_872_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_10_load_reg_1003">18, 0, 18, 0</column>
+<column name="samples_I_11_addr_reg_884">8, 0, 8, 0</column>
+<column name="samples_I_11_addr_reg_884_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_11_load_reg_1008">18, 0, 18, 0</column>
+<column name="samples_I_12_addr_reg_900">8, 0, 8, 0</column>
+<column name="samples_I_12_addr_reg_900_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_12_load_reg_1068">18, 0, 18, 0</column>
+<column name="samples_I_13_addr_reg_912">8, 0, 8, 0</column>
+<column name="samples_I_13_addr_reg_912_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_13_load_reg_1073">18, 0, 18, 0</column>
+<column name="samples_I_14_addr_reg_924">8, 0, 8, 0</column>
+<column name="samples_I_14_addr_reg_924_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_14_load_reg_1078">18, 0, 18, 0</column>
+<column name="samples_I_15_addr_reg_936">8, 0, 8, 0</column>
+<column name="samples_I_15_addr_reg_936_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_15_load_reg_1083">18, 0, 18, 0</column>
+<column name="samples_I_1_addr_reg_764">8, 0, 8, 0</column>
+<column name="samples_I_1_addr_reg_764_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_1_load_reg_958">18, 0, 18, 0</column>
+<column name="samples_I_2_addr_reg_776">8, 0, 8, 0</column>
+<column name="samples_I_2_addr_reg_776_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_2_load_reg_963">18, 0, 18, 0</column>
+<column name="samples_I_3_addr_reg_788">8, 0, 8, 0</column>
+<column name="samples_I_3_addr_reg_788_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_3_load_reg_968">18, 0, 18, 0</column>
+<column name="samples_I_4_addr_reg_800">8, 0, 8, 0</column>
+<column name="samples_I_4_addr_reg_800_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_4_load_reg_973">18, 0, 18, 0</column>
+<column name="samples_I_5_addr_reg_812">8, 0, 8, 0</column>
+<column name="samples_I_5_addr_reg_812_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_5_load_reg_978">18, 0, 18, 0</column>
+<column name="samples_I_6_addr_reg_824">8, 0, 8, 0</column>
+<column name="samples_I_6_addr_reg_824_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_6_load_reg_983">18, 0, 18, 0</column>
+<column name="samples_I_7_addr_reg_836">8, 0, 8, 0</column>
+<column name="samples_I_7_addr_reg_836_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_7_load_reg_988">18, 0, 18, 0</column>
+<column name="samples_I_8_addr_reg_848">8, 0, 8, 0</column>
+<column name="samples_I_8_addr_reg_848_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_8_load_reg_993">18, 0, 18, 0</column>
+<column name="samples_I_9_addr_reg_860">8, 0, 8, 0</column>
+<column name="samples_I_9_addr_reg_860_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_I_9_load_reg_998">18, 0, 18, 0</column>
+<column name="samples_Q_0_load_reg_1093">18, 0, 18, 0</column>
+<column name="samples_Q_10_addr_reg_878">8, 0, 8, 0</column>
+<column name="samples_Q_10_addr_reg_878_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_10_load_reg_1063">18, 0, 18, 0</column>
+<column name="samples_Q_11_addr_reg_890">8, 0, 8, 0</column>
+<column name="samples_Q_11_addr_reg_890_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_11_load_reg_1013">18, 0, 18, 0</column>
+<column name="samples_Q_12_addr_reg_906">8, 0, 8, 0</column>
+<column name="samples_Q_12_addr_reg_906_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_12_load_reg_1098">18, 0, 18, 0</column>
+<column name="samples_Q_13_addr_reg_918">8, 0, 8, 0</column>
+<column name="samples_Q_13_addr_reg_918_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_13_load_reg_1103">18, 0, 18, 0</column>
+<column name="samples_Q_14_addr_reg_930">8, 0, 8, 0</column>
+<column name="samples_Q_14_addr_reg_930_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_14_load_reg_1108">18, 0, 18, 0</column>
+<column name="samples_Q_15_addr_reg_942">8, 0, 8, 0</column>
+<column name="samples_Q_15_addr_reg_942_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_15_load_reg_1113">18, 0, 18, 0</column>
+<column name="samples_Q_1_addr_reg_770">8, 0, 8, 0</column>
+<column name="samples_Q_1_addr_reg_770_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_1_load_reg_1018">18, 0, 18, 0</column>
+<column name="samples_Q_2_addr_reg_782">8, 0, 8, 0</column>
+<column name="samples_Q_2_addr_reg_782_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_2_load_reg_1023">18, 0, 18, 0</column>
+<column name="samples_Q_3_addr_reg_794">8, 0, 8, 0</column>
+<column name="samples_Q_3_addr_reg_794_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_3_load_reg_1028">18, 0, 18, 0</column>
+<column name="samples_Q_4_addr_reg_806">8, 0, 8, 0</column>
+<column name="samples_Q_4_addr_reg_806_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_4_load_reg_1033">18, 0, 18, 0</column>
+<column name="samples_Q_5_addr_reg_818">8, 0, 8, 0</column>
+<column name="samples_Q_5_addr_reg_818_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_5_load_reg_1038">18, 0, 18, 0</column>
+<column name="samples_Q_6_addr_reg_830">8, 0, 8, 0</column>
+<column name="samples_Q_6_addr_reg_830_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_6_load_reg_1043">18, 0, 18, 0</column>
+<column name="samples_Q_7_addr_reg_842">8, 0, 8, 0</column>
+<column name="samples_Q_7_addr_reg_842_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_7_load_reg_1048">18, 0, 18, 0</column>
+<column name="samples_Q_8_addr_reg_854">8, 0, 8, 0</column>
+<column name="samples_Q_8_addr_reg_854_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_8_load_reg_1053">18, 0, 18, 0</column>
+<column name="samples_Q_9_addr_reg_866">8, 0, 8, 0</column>
+<column name="samples_Q_9_addr_reg_866_pp0_iter1_reg">8, 0, 8, 0</column>
+<column name="samples_Q_9_load_reg_1058">18, 0, 18, 0</column>
+<column name="zext_ln68_reg_758">8, 0, 64, 56</column>
+<column name="zext_ln68_reg_758_pp0_iter1_reg">8, 0, 64, 56</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_68_1, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_68_1, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_68_1, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_68_1, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_68_1, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_68_1, return value</column>
+<column name="samples_I_11_address0">out, 8, ap_memory, samples_I_11, array</column>
+<column name="samples_I_11_ce0">out, 1, ap_memory, samples_I_11, array</column>
+<column name="samples_I_11_we0">out, 1, ap_memory, samples_I_11, array</column>
+<column name="samples_I_11_d0">out, 18, ap_memory, samples_I_11, array</column>
+<column name="samples_I_11_address1">out, 8, ap_memory, samples_I_11, array</column>
+<column name="samples_I_11_ce1">out, 1, ap_memory, samples_I_11, array</column>
+<column name="samples_I_11_q1">in, 18, ap_memory, samples_I_11, array</column>
+<column name="samples_Q_11_address0">out, 8, ap_memory, samples_Q_11, array</column>
+<column name="samples_Q_11_ce0">out, 1, ap_memory, samples_Q_11, array</column>
+<column name="samples_Q_11_we0">out, 1, ap_memory, samples_Q_11, array</column>
+<column name="samples_Q_11_d0">out, 18, ap_memory, samples_Q_11, array</column>
+<column name="samples_Q_11_address1">out, 8, ap_memory, samples_Q_11, array</column>
+<column name="samples_Q_11_ce1">out, 1, ap_memory, samples_Q_11, array</column>
+<column name="samples_Q_11_q1">in, 18, ap_memory, samples_Q_11, array</column>
+</table>
+</item>
+</section>
+</profile>

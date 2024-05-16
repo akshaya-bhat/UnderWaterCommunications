@@ -13,8 +13,8 @@ module receiver_arr_5_I_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 28;
-parameter AddressWidth = 5;
-parameter AddressRange = 18;
+parameter AddressWidth = 4;
+parameter AddressRange = 9;
  
 input[AddressWidth-1:0] address0;
 input ce0;

@@ -12,8 +12,8 @@ entity receiver_arr_3_I_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 26; 
-        AddressWidth    : integer   := 6;
-        AddressRange    : integer   := 35
+        AddressWidth    : integer   := 5;
+        AddressRange    : integer   := 18
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

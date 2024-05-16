@@ -6,14 +6,15 @@
 ############################################################
 open_project receiver
 set_top receiver
-add_files receiver.hpp
+add_files receiver.h
 add_files receiver.cpp
-add_files -tb receiver_test.cpp -cflags "-Wno-unknown-pragmas"
+add_files -tb receiver_test.cpp -cflags "-Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xc7z020-clg400-1}
-create_clock -period 10 -name default
+create_clock -period 8 -name default
+config_export -format ip_catalog -rtl verilog
 source "./receiver/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl verilog -format ip_catalog

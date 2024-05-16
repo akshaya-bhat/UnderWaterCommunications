@@ -1,13 +1,13 @@
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_264_22
+  - LoopName:        VITIS_LOOP_265_20
   - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:264:28'
+  - LoopLoc:         'receiver.cpp:265:28'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
@@ -19,31 +19,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_211_17
+  - LoopName:        VITIS_LOOP_211_15
   - String:          ''' ('
   - LoopLoc:         'receiver.cpp:211:21'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          receiver
-  - String:          ''' partially '
-  - String:          ''
-  - String:          'with a factor of '
-  - Factor:          '2'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_201_16
-  - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:201:21'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
@@ -55,11 +37,29 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_191_15
+  - LoopName:        VITIS_LOOP_201_14
+  - String:          ''' ('
+  - LoopLoc:         'receiver.cpp:201:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          receiver
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_191_13
   - String:          ''' ('
   - LoopLoc:         'receiver.cpp:191:21'
   - String:          ') '
@@ -73,11 +73,11 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_181_14
+  - LoopName:        VITIS_LOOP_181_12
   - String:          ''' ('
   - LoopLoc:         'receiver.cpp:181:21'
   - String:          ') '
@@ -86,16 +86,16 @@ Args:
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '8'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_171_13
+  - LoopName:        VITIS_LOOP_171_11
   - String:          ''' ('
   - LoopLoc:         'receiver.cpp:171:21'
   - String:          ') '
@@ -104,72 +104,18 @@ Args:
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '32'
+  - Factor:          '16'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_161_12
+  - LoopName:        VITIS_LOOP_159_10
   - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:161:21'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          receiver
-  - String:          ''' partially '
-  - String:          ''
-  - String:          'with a factor of '
-  - Factor:          '32'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_149_11
-  - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:149:21'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          receiver
-  - String:          ''' partially '
-  - String:          ''
-  - String:          'with a factor of '
-  - Factor:          '64'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_132_10
-  - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:132:24'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          receiver
-  - String:          ''' partially '
-  - String:          ''
-  - String:          'with a factor of '
-  - Factor:          '32'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_95_5
-  - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:95:19'
+  - LoopLoc:         'receiver.cpp:159:21'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
@@ -181,13 +127,31 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_84_4
+  - LoopName:        VITIS_LOOP_142_9
   - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:84:19'
+  - LoopLoc:         'receiver.cpp:142:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          receiver
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_111_5
+  - String:          ''' ('
+  - LoopLoc:         'receiver.cpp:111:20'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
@@ -199,13 +163,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_75_3
+  - LoopName:        VITIS_LOOP_100_4
   - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:75:19'
+  - LoopLoc:         'receiver.cpp:100:20'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
@@ -217,13 +181,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_63_2
+  - LoopName:        VITIS_LOOP_91_3
   - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:63:19'
+  - LoopLoc:         'receiver.cpp:91:19'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
@@ -235,126 +199,74 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaPartiallyUnroll
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_52_1
+  - LoopName:        VITIS_LOOP_68_1
   - String:          ''' ('
-  - LoopLoc:         'receiver.cpp:52:22'
+  - LoopLoc:         'receiver.cpp:68:22'
   - String:          ') '
   - String:          'in function '''
   - String:          receiver
   - String:          ''' partially '
   - String:          ''
   - String:          'with a factor of '
-  - Factor:          '32'
+  - Factor:          '16'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: receiver.cpp, Line: 50, Column: 10 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'fp_int::fp_int()'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: receiver.cpp, Line: 51, Column: 10 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'fp_int::fp_int()'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 18, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          delay_line_Q
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '8'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'fp_int::fp_int()'
+    DebugLoc:        { File: ./receiver.h, Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'receiver(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
+    DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 17, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          delay_line_I
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '8'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 16, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          matched_Q
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '32'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 15, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          matched_I
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '32'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 12, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          samples_Q
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '32'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
+  - String:          'Inlining function '''
+  - Callee:          'fp_int::fp_int() (.27)'
+    DebugLoc:        { File: ./receiver.h, Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'receiver(hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&, hls::stream<hls::axis<ap_int<32>, 2ul, 5ul, 6ul>, 0>&)'
+    DebugLoc:        { File: receiver.cpp, Line: 31, Column: 0 }
+  - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: receiver.cpp, Line: 11, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -365,7 +277,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '32'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -373,8 +285,68 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 71, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 12, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          samples_Q
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: receiver.cpp, Line: 15, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          matched_I
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: receiver.cpp, Line: 16, Column: 0 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          matched_Q
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '16'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: receiver.cpp, Line: 87, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -393,8 +365,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 72, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 88, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -413,8 +385,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 80, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 96, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -433,8 +405,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 81, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 97, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -453,8 +425,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 91, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 107, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -473,8 +445,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 92, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 108, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -493,8 +465,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 145, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 155, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -505,7 +477,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '64'
+  - Factor:          '8'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -513,8 +485,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 146, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 156, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -525,7 +497,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '64'
+  - Factor:          '8'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -533,8 +505,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 156, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 166, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -545,7 +517,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '32'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -553,8 +525,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 157, Column: 12 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 167, Column: 12 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -565,7 +537,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '32'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -573,8 +545,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 166, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 176, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -585,7 +557,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '32'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -593,8 +565,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 167, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 177, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -605,7 +577,7 @@ Args:
   - Mode:            Cyclic
   - String:          ' partitioning'
   - String:          ' with factor '
-  - Factor:          '32'
+  - Factor:          '16'
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
@@ -613,8 +585,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 176, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 186, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -633,8 +605,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 177, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 187, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -653,8 +625,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 186, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 196, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -673,8 +645,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 187, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 197, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -693,8 +665,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 196, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 206, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -713,8 +685,8 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 197, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
+DebugLoc:        { File: receiver.cpp, Line: 207, Column: 21 }
+Function:        _Z8receiverRN3hls6streamINS_4axisI6ap_intILi32EELm2ELm5ELm6EEELi0EEES6_S6_
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -729,340 +701,4 @@ Args:
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 206, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          arr_6_I
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '2'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 207, Column: 21 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          arr_6_Q
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '2'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          result_I
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '16'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: receiver.cpp, Line: 30, Column: 0 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          result_Q
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Cyclic
-  - String:          ' partitioning'
-  - String:          ' with factor '
-  - Factor:          '16'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 268, Column: 14 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
-...
---- !Failure
-Pass:            reflow-syncheck
-Name:            WarningOutOfBoundArrayAccess
-DebugLoc:        { File: receiver.cpp, Line: 269, Column: 25 }
-Function:        _Z8receiverP8ap_fixedILi24ELi10EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S_ILi18ELi2ELS0_5ELS1_3ELi0EE
-Args:            
-  - String:          The program may have out of bound array access
 ...

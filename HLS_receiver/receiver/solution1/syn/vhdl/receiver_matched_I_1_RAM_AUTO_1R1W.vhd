@@ -13,7 +13,7 @@ entity receiver_matched_I_1_RAM_AUTO_1R1W is
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 18; 
         AddressWidth    : integer   := 8;
-        AddressRange    : integer   := 241
+        AddressRange    : integer   := 245
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

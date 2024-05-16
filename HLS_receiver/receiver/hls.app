@@ -6,7 +6,7 @@
     </Simulation>
     <files xmlns="">
         <file name="../../receiver_test.cpp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
-        <file name="receiver.hpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="receiver.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="receiver.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">

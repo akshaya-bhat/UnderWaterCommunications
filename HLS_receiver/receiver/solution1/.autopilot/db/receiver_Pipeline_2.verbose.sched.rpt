@@ -1,0 +1,130 @@
+
+
+================================================================
+== Vitis HLS Report for 'receiver_Pipeline_2'
+================================================================
+* Date:           Mon May 13 18:48:00 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        receiver
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  8.00 ns|  3.503 ns|     2.16 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      237|      237|  1.896 us|  1.896 us|  237|  237|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |      235|      235|         1|          1|          1|   236|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.50>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%indvars_iv5834 = alloca i32 1"   --->   Operation 4 'alloca' 'indvars_iv5834' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln0 = store i8 0, i8 %indvars_iv5834"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %arrayctor.loop6"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvars_iv5834_load = load i8 %indvars_iv5834" [receiver.cpp:51]   --->   Operation 7 'load' 'indvars_iv5834_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvars_iv5834_cast = zext i8 %indvars_iv5834_load" [receiver.cpp:51]   --->   Operation 8 'zext' 'indvars_iv5834_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%speclooptripcount_ln51 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 236, i64 236, i64 236" [receiver.cpp:51]   --->   Operation 10 'speclooptripcount' 'speclooptripcount_ln51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.91ns)   --->   "%add_ln51 = add i8 %indvars_iv5834_load, i8 1" [receiver.cpp:51]   --->   Operation 11 'add' 'add_ln51' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%imag_output_addr = getelementptr i32 %imag_output, i64 0, i64 %indvars_iv5834_cast" [receiver.cpp:51]   --->   Operation 12 'getelementptr' 'imag_output_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (3.25ns)   --->   "%store_ln51 = store i32 0, i8 %imag_output_addr" [receiver.cpp:51]   --->   Operation 13 'store' 'store_ln51' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 236> <RAM>
+ST_1 : Operation 14 [1/1] (1.91ns)   --->   "%icmp_ln51 = icmp_eq  i8 %indvars_iv5834_load, i8 235" [receiver.cpp:51]   --->   Operation 14 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.91> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (1.58ns)   --->   "%store_ln51 = store i8 %add_ln51, i8 %indvars_iv5834" [receiver.cpp:51]   --->   Operation 15 'store' 'store_ln51' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %arrayctor.loop6, void %entry14.exitStub" [receiver.cpp:51]   --->   Operation 16 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 17 'ret' 'ret_ln0' <Predicate = (icmp_ln51)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 8.000ns, clock uncertainty: 2.160ns.
+
+ <State 1>: 3.503ns
+The critical path consists of the following:
+	'alloca' operation ('indvars_iv5834') [2]  (0.000 ns)
+	'load' operation ('indvars_iv5834_load', receiver.cpp:51) on local variable 'indvars_iv5834' [6]  (0.000 ns)
+	'add' operation ('add_ln51', receiver.cpp:51) [10]  (1.915 ns)
+	'store' operation ('store_ln51', receiver.cpp:51) of variable 'add_ln51', receiver.cpp:51 on local variable 'indvars_iv5834' [14]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

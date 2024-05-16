@@ -16,9 +16,9 @@ module receiver_filt_I_RAM_AUTO_1R1W (
      
     reset, clk);
 
-parameter DataWidth = 17;
-parameter AddressWidth = 5;
-parameter AddressRange = 25;
+parameter DataWidth = 18;
+parameter AddressWidth = 4;
+parameter AddressRange = 13;
  
 input[AddressWidth-1:0] address0;
 input ce0;

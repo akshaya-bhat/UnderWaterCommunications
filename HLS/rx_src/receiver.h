@@ -38,7 +38,7 @@ typedef hls::stream<transPkt> DTYPE;
  */
  //sampling frequency
 //#define fs 128e3 //carrier frequency (40kHz)
-#define NN 227 //length of data payload
+#define NN 236 //length of data payload
 #define NHalf 113
 #define oversample 32 //samples per symbol
 #define preambleLen 64
