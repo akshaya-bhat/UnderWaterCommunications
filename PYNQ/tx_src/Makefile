@@ -5,7 +5,8 @@ EXEC=transmitter
 
 # C++ source files
 //CXXSRCS := transmitter.cpp transmitter_tb.cpp
-CXXSRCS := transmitter.cpp main.cpp
+CXXSRCS := src/transmitter.cpp src/main.cpp
+INCLUDES=-Iinc
 
 OBJS := $(CXXSRCS:src/%.cxx=$(BUILD_DIR)%.o)
 
@@ -13,7 +14,7 @@ OBJS := $(CXXSRCS:src/%.cxx=$(BUILD_DIR)%.o)
 all:	$(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(EXEC) $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) ${INCLUDES} $(OBJS) -o $(EXEC) $(LDFLAGS)
 
 $(BUILD_DIR)%.o: src/%.cxx
 	$(CXX) $(CXXFLAGS) -c $< -o $@
