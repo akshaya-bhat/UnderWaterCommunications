@@ -1,137 +1,219 @@
 In file included from receiver.cpp:1:
-./receiver.hpp:9:17: warning: using directive refers to implicitly-defined namespace 'std'
-using namespace std;
-                ^
-C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=name=receiver_XLX_SEP_ [-Wdump-hls-pragmas]
+In file included from ./receiver.h:16:
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:76:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_user_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:80:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_id_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:84:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_dest_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:114:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_strb_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:118:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_user_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:122:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_id_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:126:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_dest_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:132:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:136:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_keep_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:140:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_last_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:145:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_keep_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:153:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_last_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=keep_all_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:171:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:176:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:181:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:185:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator=_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:220:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=empty_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:227:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=full_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:235:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:245:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:256:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:266:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:281:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:317:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=empty_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:324:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=full_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:332:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:342:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:353:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:363:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:379:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/csynth.tcl:17:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=name=receiver_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=receiver
         ^
 C:/Users/sophi/OneDrive/Documents/MATLAB/UnderWaterCommunications/HLS_receiver/receiver/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=name=receiver_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=receiver
         ^
-receiver.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=samples_I type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=samples_I type=cyclic factor=32
+receiver.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=samples_I type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=samples_I type=cyclic factor=16
         ^
-receiver.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=samples_Q type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=samples_Q type=cyclic factor=32
+receiver.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=samples_Q type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=samples_Q type=cyclic factor=16
         ^
-receiver.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=matched_I type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=matched_I type=cyclic factor=32
+receiver.cpp:34:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=matched_I type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=matched_I type=cyclic factor=16
         ^
-receiver.cpp:34:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=matched_Q type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=matched_Q type=cyclic factor=32
+receiver.cpp:35:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=matched_Q type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=matched_Q type=cyclic factor=16
         ^
-receiver.cpp:35:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=delay_line_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=delay_line_I type=cyclic factor=8
+receiver.cpp:40:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=mode=axis port=input_r,output_i,output_q_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=axis port=input_r,output_i,output_q
         ^
-receiver.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=delay_line_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=delay_line_Q type=cyclic factor=8
+receiver.cpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=mode=s_axilite port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=s_axilite port=return
         ^
-receiver.cpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=result_I type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=result_I type=cyclic factor=16
+receiver.cpp:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=16
         ^
-receiver.cpp:38:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=result_Q type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=result_Q type=cyclic factor=16
-        ^
-receiver.cpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=32
-        ^
-receiver.cpp:64:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=8
-        ^
-receiver.cpp:73:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:89:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=filt_I type=cyclic factor=8
         ^
-receiver.cpp:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:90:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=filt_Q type=cyclic factor=8
         ^
-receiver.cpp:76:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:92:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=8
         ^
-receiver.cpp:82:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_1_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:98:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_1_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=filt_1_I type=cyclic factor=8
         ^
-receiver.cpp:83:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_1_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:99:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_1_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=filt_1_Q type=cyclic factor=8
         ^
-receiver.cpp:85:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:101:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=8
         ^
-receiver.cpp:93:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_2_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:109:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_2_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=filt_2_I type=cyclic factor=8
         ^
-receiver.cpp:94:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_2_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:110:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=filt_2_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=filt_2_Q type=cyclic factor=8
         ^
-receiver.cpp:96:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:112:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=8
         ^
-receiver.cpp:133:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=32
+receiver.cpp:143:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=16
         ^
-receiver.cpp:147:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_I type=cyclic factor=64_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_I type=cyclic factor=64
+receiver.cpp:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_I type=cyclic factor=8
         ^
-receiver.cpp:148:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_Q type=cyclic factor=64_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_Q type=cyclic factor=64
+receiver.cpp:158:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_Q type=cyclic factor=8
         ^
-receiver.cpp:150:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=64_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=64
+receiver.cpp:160:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=8
         ^
-receiver.cpp:158:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_1_I type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_1_I type=cyclic factor=32
+receiver.cpp:168:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_1_I type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_1_I type=cyclic factor=16
         ^
-receiver.cpp:159:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_1_Q type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_1_Q type=cyclic factor=32
+receiver.cpp:169:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_1_Q type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_1_Q type=cyclic factor=16
         ^
-receiver.cpp:162:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=32
+receiver.cpp:172:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=16
         ^
-receiver.cpp:168:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_2_I type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_2_I type=cyclic factor=32
+receiver.cpp:178:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_2_I type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_2_I type=cyclic factor=16
         ^
-receiver.cpp:169:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_2_Q type=cyclic factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_2_Q type=cyclic factor=32
+receiver.cpp:179:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_2_Q type=cyclic factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_2_Q type=cyclic factor=16
         ^
-receiver.cpp:172:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=32_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=32
+receiver.cpp:182:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=16
         ^
-receiver.cpp:178:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_3_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_3_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=arr_3_I type=cyclic factor=8
         ^
-receiver.cpp:179:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_3_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_3_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=arr_3_Q type=cyclic factor=8
-        ^
-receiver.cpp:182:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=8
-        ^
-receiver.cpp:188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_4_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_4_I type=cyclic factor=8
-        ^
-receiver.cpp:189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_4_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_4_Q type=cyclic factor=8
         ^
 receiver.cpp:192:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=8
         ^
-receiver.cpp:198:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_5_I type=cyclic factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:198:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_4_I type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_4_I type=cyclic factor=8
+        ^
+receiver.cpp:199:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_4_Q type=cyclic factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=arr_4_Q type=cyclic factor=8
+        ^
+receiver.cpp:202:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL factor=8
+        ^
+receiver.cpp:208:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_5_I type=cyclic factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=arr_5_I type=cyclic factor=4
         ^
-receiver.cpp:199:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_5_Q type=cyclic factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:209:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_5_Q type=cyclic factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS array_partition variable=arr_5_Q type=cyclic factor=4
         ^
-receiver.cpp:202:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:212:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=4_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=4
         ^
-receiver.cpp:208:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_6_I type=cyclic factor=2_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_6_I type=cyclic factor=2
-        ^
-receiver.cpp:209:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=variable=arr_6_Q type=cyclic factor=2_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS array_partition variable=arr_6_Q type=cyclic factor=2
-        ^
-receiver.cpp:212:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=2_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS UNROLL factor=2
-        ^
-receiver.cpp:265:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
+receiver.cpp:266:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=receiver_XLX_SEP_ PragmaOptions=factor=16_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS UNROLL factor=16
         ^
-45 warnings generated.
+72 warnings generated.

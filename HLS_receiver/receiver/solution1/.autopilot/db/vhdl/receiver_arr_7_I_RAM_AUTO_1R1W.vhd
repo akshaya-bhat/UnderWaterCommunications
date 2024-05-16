@@ -11,9 +11,9 @@ use ieee.std_logic_unsigned.all;
 entity receiver_arr_7_I_RAM_AUTO_1R1W is 
     generic(
         MEM_TYPE        : string    := "auto"; 
-        DataWidth       : integer   := 30; 
-        AddressWidth    : integer   := 5;
-        AddressRange    : integer   := 17
+        DataWidth       : integer   := 31; 
+        AddressWidth    : integer   := 3;
+        AddressRange    : integer   := 8
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

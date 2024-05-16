@@ -12,8 +12,8 @@ entity receiver_filt_1_I_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 18; 
-        AddressWidth    : integer   := 4;
-        AddressRange    : integer   := 12
+        AddressWidth    : integer   := 3;
+        AddressRange    : integer   := 6
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

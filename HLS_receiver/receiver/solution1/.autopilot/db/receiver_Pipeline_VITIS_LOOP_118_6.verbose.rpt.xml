@@ -1,0 +1,201 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'receiver_Pipeline_VITIS_LOOP_118_6'" level="0">
+<item name = "Date">Mon May 13 18:48:18 2024
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">receiver</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">8.00 ns, 4.458 ns, 2.16 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">14, 14, 0.112 us, 0.112 us, 14, 14, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_118_6">12, 12, 2, 1, 1, 12, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 78, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 372, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 36, -</column>
+<column name="Register">-, -, 84, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_3_2_18_1_1_U141">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U142">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U143">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U144">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U146">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U147">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U148">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U149">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U151">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U152">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U153">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U154">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U156">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U157">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U158">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_3_2_18_1_1_U159">mux_3_2_18_1_1, 0, 0, 0, 14, 0</column>
+<column name="mux_7_3_18_1_1_U145">mux_7_3_18_1_1, 0, 0, 0, 37, 0</column>
+<column name="mux_7_3_18_1_1_U150">mux_7_3_18_1_1, 0, 0, 0, 37, 0</column>
+<column name="mux_7_3_18_1_1_U155">mux_7_3_18_1_1, 0, 0, 0, 37, 0</column>
+<column name="mux_7_3_18_1_1_U160">mux_7_3_18_1_1, 0, 0, 0, 37, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln118_fu_770_p2">+, 0, 0, 13, 5, 2</column>
+<column name="filt_3_I_d0">+, 0, 0, 25, 18, 18</column>
+<column name="filt_3_Q_d0">+, 0, 0, 25, 18, 18</column>
+<column name="icmp_ln118_fu_468_p2">icmp, 0, 0, 13, 5, 5</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_i">9, 2, 5, 10</column>
+<column name="i_5_fu_142">9, 2, 5, 10</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="i_5_fu_142">5, 0, 5, 0</column>
+<column name="lshr_ln5_reg_816">4, 0, 4, 0</column>
+<column name="tmp_1_reg_811">18, 0, 18, 0</column>
+<column name="tmp_2_reg_821">18, 0, 18, 0</column>
+<column name="tmp_3_reg_826">18, 0, 18, 0</column>
+<column name="tmp_reg_806">18, 0, 18, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_118_6, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_118_6, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_118_6, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_118_6, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_118_6, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, receiver_Pipeline_VITIS_LOOP_118_6, return value</column>
+<column name="filt_2_I_0_0_reload">in, 18, ap_none, filt_2_I_0_0_reload, scalar</column>
+<column name="filt_2_I_1_02_reload">in, 18, ap_none, filt_2_I_1_02_reload, scalar</column>
+<column name="filt_2_I_2_04_reload">in, 18, ap_none, filt_2_I_2_04_reload, scalar</column>
+<column name="filt_2_I_0_2_09_reload">in, 18, ap_none, filt_2_I_0_2_09_reload, scalar</column>
+<column name="filt_2_I_1_2_010_reload">in, 18, ap_none, filt_2_I_1_2_010_reload, scalar</column>
+<column name="filt_2_I_2_2_011_reload">in, 18, ap_none, filt_2_I_2_2_011_reload, scalar</column>
+<column name="filt_2_I_0_4_015_reload">in, 18, ap_none, filt_2_I_0_4_015_reload, scalar</column>
+<column name="filt_2_I_1_4_016_reload">in, 18, ap_none, filt_2_I_1_4_016_reload, scalar</column>
+<column name="filt_2_I_2_4_017_reload">in, 18, ap_none, filt_2_I_2_4_017_reload, scalar</column>
+<column name="filt_2_I_0_6_021_reload">in, 18, ap_none, filt_2_I_0_6_021_reload, scalar</column>
+<column name="filt_2_I_1_6_022_reload">in, 18, ap_none, filt_2_I_1_6_022_reload, scalar</column>
+<column name="filt_2_I_2_6_023_reload">in, 18, ap_none, filt_2_I_2_6_023_reload, scalar</column>
+<column name="filt_2_I_0_1_06_reload">in, 18, ap_none, filt_2_I_0_1_06_reload, scalar</column>
+<column name="filt_2_I_1_1_07_reload">in, 18, ap_none, filt_2_I_1_1_07_reload, scalar</column>
+<column name="filt_2_I_2_1_08_reload">in, 18, ap_none, filt_2_I_2_1_08_reload, scalar</column>
+<column name="filt_2_I_0_3_012_reload">in, 18, ap_none, filt_2_I_0_3_012_reload, scalar</column>
+<column name="filt_2_I_1_3_013_reload">in, 18, ap_none, filt_2_I_1_3_013_reload, scalar</column>
+<column name="filt_2_I_2_3_014_reload">in, 18, ap_none, filt_2_I_2_3_014_reload, scalar</column>
+<column name="filt_2_I_0_5_018_reload">in, 18, ap_none, filt_2_I_0_5_018_reload, scalar</column>
+<column name="filt_2_I_1_5_019_reload">in, 18, ap_none, filt_2_I_1_5_019_reload, scalar</column>
+<column name="filt_2_I_2_5_020_reload">in, 18, ap_none, filt_2_I_2_5_020_reload, scalar</column>
+<column name="filt_2_I_0_7_024_reload">in, 18, ap_none, filt_2_I_0_7_024_reload, scalar</column>
+<column name="filt_2_I_1_7_025_reload">in, 18, ap_none, filt_2_I_1_7_025_reload, scalar</column>
+<column name="filt_2_I_2_7_026_reload">in, 18, ap_none, filt_2_I_2_7_026_reload, scalar</column>
+<column name="filt_3_I_address0">out, 4, ap_memory, filt_3_I, array</column>
+<column name="filt_3_I_ce0">out, 1, ap_memory, filt_3_I, array</column>
+<column name="filt_3_I_we0">out, 1, ap_memory, filt_3_I, array</column>
+<column name="filt_3_I_d0">out, 18, ap_memory, filt_3_I, array</column>
+<column name="filt_2_Q_0_0_reload">in, 18, ap_none, filt_2_Q_0_0_reload, scalar</column>
+<column name="filt_2_Q_1_028_reload">in, 18, ap_none, filt_2_Q_1_028_reload, scalar</column>
+<column name="filt_2_Q_2_030_reload">in, 18, ap_none, filt_2_Q_2_030_reload, scalar</column>
+<column name="filt_2_Q_0_2_035_reload">in, 18, ap_none, filt_2_Q_0_2_035_reload, scalar</column>
+<column name="filt_2_Q_1_2_036_reload">in, 18, ap_none, filt_2_Q_1_2_036_reload, scalar</column>
+<column name="filt_2_Q_2_2_037_reload">in, 18, ap_none, filt_2_Q_2_2_037_reload, scalar</column>
+<column name="filt_2_Q_0_4_041_reload">in, 18, ap_none, filt_2_Q_0_4_041_reload, scalar</column>
+<column name="filt_2_Q_1_4_042_reload">in, 18, ap_none, filt_2_Q_1_4_042_reload, scalar</column>
+<column name="filt_2_Q_2_4_043_reload">in, 18, ap_none, filt_2_Q_2_4_043_reload, scalar</column>
+<column name="filt_2_Q_0_6_047_reload">in, 18, ap_none, filt_2_Q_0_6_047_reload, scalar</column>
+<column name="filt_2_Q_1_6_048_reload">in, 18, ap_none, filt_2_Q_1_6_048_reload, scalar</column>
+<column name="filt_2_Q_2_6_049_reload">in, 18, ap_none, filt_2_Q_2_6_049_reload, scalar</column>
+<column name="filt_2_Q_0_1_032_reload">in, 18, ap_none, filt_2_Q_0_1_032_reload, scalar</column>
+<column name="filt_2_Q_1_1_033_reload">in, 18, ap_none, filt_2_Q_1_1_033_reload, scalar</column>
+<column name="filt_2_Q_2_1_034_reload">in, 18, ap_none, filt_2_Q_2_1_034_reload, scalar</column>
+<column name="filt_2_Q_0_3_038_reload">in, 18, ap_none, filt_2_Q_0_3_038_reload, scalar</column>
+<column name="filt_2_Q_1_3_039_reload">in, 18, ap_none, filt_2_Q_1_3_039_reload, scalar</column>
+<column name="filt_2_Q_2_3_040_reload">in, 18, ap_none, filt_2_Q_2_3_040_reload, scalar</column>
+<column name="filt_2_Q_0_5_044_reload">in, 18, ap_none, filt_2_Q_0_5_044_reload, scalar</column>
+<column name="filt_2_Q_1_5_045_reload">in, 18, ap_none, filt_2_Q_1_5_045_reload, scalar</column>
+<column name="filt_2_Q_2_5_046_reload">in, 18, ap_none, filt_2_Q_2_5_046_reload, scalar</column>
+<column name="filt_2_Q_0_7_050_reload">in, 18, ap_none, filt_2_Q_0_7_050_reload, scalar</column>
+<column name="filt_2_Q_1_7_051_reload">in, 18, ap_none, filt_2_Q_1_7_051_reload, scalar</column>
+<column name="filt_2_Q_2_7_052_reload">in, 18, ap_none, filt_2_Q_2_7_052_reload, scalar</column>
+<column name="filt_3_Q_address0">out, 4, ap_memory, filt_3_Q, array</column>
+<column name="filt_3_Q_ce0">out, 1, ap_memory, filt_3_Q, array</column>
+<column name="filt_3_Q_we0">out, 1, ap_memory, filt_3_Q, array</column>
+<column name="filt_3_Q_d0">out, 18, ap_memory, filt_3_Q, array</column>
+</table>
+</item>
+</section>
+</profile>
