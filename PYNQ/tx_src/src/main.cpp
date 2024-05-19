@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
   string in  = argv[1];
   std::string::size_type len = in.length();
  
-  int N = (len * 8 * 2) + 12; // The encoder doubles the size and convolutional encoder is zero tailed instead of tail biting so it adds 12 tail bits at thencend.
+  int N = (len * 8) + 12; // The encoder doubles the size and convolutional encoder is zero tailed instead of tail biting so it adds 12 tail bits at thencend.
   int upsampleSize = oversample*(N+preambleLen+32);  
   float output_i[upsampleSize];
   
@@ -39,7 +39,8 @@ int main(int argc, char *argv[]){
 	  return 1; 
   }
 
- for (int i = 0; i < upsampleSize; ++i) { 
+ for (int i = 0; i < upsampleSize; ++i) {
+	 //cout << output_i[i] << endl; 
 	 outfile << output_i[i] << " "; 
  } 
   

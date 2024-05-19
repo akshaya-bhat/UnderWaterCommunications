@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <cstring>
 #include <string.h>
 #include <algorithm>
 #include <algorithm>
@@ -57,23 +58,48 @@ void transmitter (string input, float* output_i, int len)
  
 	cout << "size of code: " << n << endl;
 
-	for (int i = 0; i < n; i = i+2)
-	{
-	  //cout << i << endl;
-	  input_i[i/2] = atoi(&s[i]); 
-	  input_q[i/2] = atoi(&s[i+1]); 
-  	}
+	char* char_array = new char[n + 1];
+	int input_bits[n];
+        strcpy(char_array, s.c_str()); 	
+	for (int i=0; i<n; i++) {
+	    input_bits[i] = char_array[i] - '0';
+	}
+	for (int i=0; i<n; i=i+2) {
+		input_i[i/2] = input_bits[i];
+		input_q[i/2] = input_bits[i+1];
+        }
+
+	// we do now need to bit pack this
+	int bytes_i[len/2];
+	int bytes_q[len/2];
+	for (int i=0; i<len/2; i++) {
+		bytes_i[i] = 0;
+		bytes_q[i] = 0;
+		for (int j=0; j<8; j++) {
+			bytes_i[i] += input_i[i*8+j] << (7-j);
+			bytes_q[i] += input_q[i*8+j] << (7-j);
+		}
+        }
+	cout << "after bit packing" << endl;
+	for (int i=0; i<len/2; i++) {
+		cout << "i: " << bytes_i[i] << ", q: " << bytes_q[i] << endl;
+	}
+
 	/**
 	 * Scrambler
 	 * xor with PN gen sequence LUT
 	*/
 
 	int NHalf = n/2;
-	int N = (n * 2) + 12; // The encoder doubles the size and convolutional encoder is zero tailed instead of tail biting so it adds 12 tail bits at thencend.
-	data_t scrambledDataI[NHalf], scrambledDataQ[NHalf];
-	for (int i = 0; i < NHalf; i++) {
-		scrambledDataI[i] = input_i[i] ^ pnGenSequence[i];
-		scrambledDataQ[i] = input_q[i] ^ pnGenSequence[i];
+	int N = n + 12; // The encoder doubles the size and convolutional encoder is zero tailed instead of tail biting so it adds 12 tail bits at thencend.
+	data_t scrambledDataI[len/2], scrambledDataQ[len/2];
+	for (int i = 0; i < len/2; i++) {
+		scrambledDataI[i] = bytes_i[i] ^ pnGenSequence[i];
+		scrambledDataQ[i] = bytes_q[i] ^ pnGenSequence[i];
+	}
+	cout << "scrambling results" << endl;
+	for (int i=0; i<len/2; i++) {
+		cout << "i: " << scrambledDataI[i] << ", q: " << scrambledDataQ[i] << endl;
 	}
 
 	/**
@@ -90,7 +116,7 @@ void transmitter (string input, float* output_i, int len)
 	const int16_t soft_decision_high = +127;
 	const int16_t soft_decision_low  = -127;
 
-	const size_t total_input_bytes = len;
+	const size_t total_input_bytes = len/2;
 	const size_t total_input_bits = total_input_bytes*8u; //128
 	const size_t noise_level = 0;
 	auto enc = ConvolutionalEncoder_Lookup(K, R, G);
@@ -103,7 +129,7 @@ void transmitter (string input, float* output_i, int len)
 	data_t encodedDataI[total_symbols];
 	data_t encodedDataQ[total_symbols];
 	output_symbols.resize(total_symbols);
-   
+
 	encode_data(&enc, tx_input_bytes.data(), tx_input_bytes.size(),
 		output_symbols.data(), output_symbols.size(),
 		soft_decision_high, soft_decision_low);
@@ -119,6 +145,12 @@ void transmitter (string input, float* output_i, int len)
 	tx_input_bytesQ.resize(total_input_bytes);
 	output_symbolsQ.resize(total_symbols);
 
+	// debug
+	cout << "Q input bytes" << endl;
+	for (int i=0; i<total_input_bytes; i++) {
+		cout << static_cast<int>(tx_input_bytesQ[i]) << endl;
+        }
+
 	//    generate_random_bytes(tx_input_bytes.data(), tx_input_bytes.size());
 	encode_data(&enc, tx_input_bytesQ.data(), tx_input_bytesQ.size(),
 			output_symbolsQ.data(), output_symbolsQ.size(),
@@ -130,7 +162,7 @@ void transmitter (string input, float* output_i, int len)
 		           for (int i = 0; i < output_symbolsQ.size(); i++) {
 				   encodedDataQ[i] = output_symbolsQ[i];
 		           }
-		               
+		           
 			   //cout << "copied encodedQ\n";
 
 		/**
@@ -208,6 +240,16 @@ void transmitter (string input, float* output_i, int len)
 										for (int i = 0; i < 140; i++) {
 												            	   //cout << symbolsQ[i] << endl;
 												               }
+		// Write the symbols to an output file
+		cout << "tx symbols:" << endl;
+                FILE *fpsense = fopen("/home/xilinx/tx_symbols.bin","wb");
+                for (int i = 0; i < 236; ++i) {
+                	double realPart = symbolsI[i];
+                        double imagPart = symbolsQ[i];
+                        fwrite(&(realPart), sizeof(double),1, fpsense);
+                        fwrite(&(imagPart), sizeof(double),1, fpsense);
+                 }
+		fclose(fpsense);
 		/**
 		 * Pulse Shaping
 		 * 	SRRC Filter
@@ -228,7 +270,6 @@ void transmitter (string input, float* output_i, int len)
 				dataUpsampledQ[i] = symbolsQ[j];
 				j++;
 			}
-
 		//cout << "pulse shaped start 1" << endl;
 
 
@@ -238,7 +279,7 @@ void transmitter (string input, float* output_i, int len)
 			for (int i = 0; i < upsampleSize; i++) {
 				dataPulseShapedI[i] = 0.0;
 				dataPulseShapedQ[i] = 0.0;
-				for (int j = 0; j < 193; j++) {
+				for (int j = 0; j < 97; j++) {
 					dataPulseShapedI[i] += dataUpsampledI[i-j] * h[j];
 					dataPulseShapedQ[i] += dataUpsampledQ[i-j] * h[j];
 				}
@@ -260,11 +301,11 @@ void transmitter (string input, float* output_i, int len)
 		 */
 
 		cout << "modulation 1 " << upsampleSize << endl;
-		double theta;
+		int index = 0;
 		for (int i = 0; i < upsampleSize; i++) {
-			double t = static_cast<double>(i) / fs;
-			theta = fc * t;
-			int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
+			//double t = static_cast<double>(i) / fs;
+			//theta = fc * t;
+			//int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
 			double cos = cos_coefficients_table[index];
 			double sin = -1.0 * sin_coefficients_table[index];
 			//cout << " i " << i << " cos " << cos << endl;
@@ -273,6 +314,10 @@ void transmitter (string input, float* output_i, int len)
 			double modQ = dataPulseShapedI[i] * sin + dataPulseShapedQ[i] * cos;
 
 			output_i[i] =  modI + modQ;
+			index++;
+			if (index >= 23) {
+				index = 0;
+			}
 		}
 
 		cout << "output_i\n";
