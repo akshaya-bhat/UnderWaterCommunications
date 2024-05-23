@@ -17,13 +17,16 @@ data_t matched_Q[buffer_len] = {0};
 data_t delay_line_I[filtsize] = {0};
 data_t delay_line_Q[filtsize] = {0};
 
-// Global variables for
+// Global variables for correlation
 float corr_abs_prev = 0;
 corr_t corr_I_prev = 0;
 corr_t corr_Q_prev = 0;
 float corr_abs = 0;
 corr_t corr_I = 0;
 corr_t corr_Q = 0;
+
+// packet cooldown period
+int since_packet = -1;
 
 
 //int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
@@ -256,24 +259,34 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     corr_Q = corr_accum_Q;
     corr_abs = corr_accum_I*corr_accum_I + corr_accum_Q*corr_accum_Q;
 
+    if (since_packet != -1) {
+    	since_packet++;
+    }
+    if (since_packet >= 300) {
+    	since_packet = -1;
+    }
+
     // have we reached the peak of our correlation?
     // e.g. are we at a local peak and above the threshold
-    if ((corr_abs_prev > threshold) && (corr_abs_prev > corr_abs)) {
+    if ((corr_abs_prev > threshold) && (corr_abs_prev > corr_abs) && (since_packet == -1)) {
 
         // then we've identified the start of the packet!
+    	since_packet = 0;
+
         int i = start_sample+filtsize/2;
+
         for (int j=0; j<236; j++) {
 #pragma HLS UNROLL factor=16
         	// rotate to get rid of phase offset, by -theta
             // use x and y directly instead of normalizing to get sin and cos
-            real_output[j].ffp = corr_I_prev*matched_I[i] - corr_Q_prev*matched_Q[i];
-            imag_output[j].ffp = corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
-            i = i+32;
+            real_output[j].ffp = corr_I_prev*matched_I[i] + corr_Q_prev*matched_Q[i];
+            imag_output[j].ffp = -corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
+            i = i+oversample;
         }
         /**
     	 * DMA Streaming OUTPUT
     	 */
-    	for (int i = 0; i < 224; i++)
+    	for (int i = 0; i < 236; i++)
     	{
     //#pragma HLS UNROLL factor=64
     		real_sample_pkt.data = real_output[i].i;

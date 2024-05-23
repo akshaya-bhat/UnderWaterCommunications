@@ -16,10 +16,14 @@
 #include "ap_axi_sdata.h"
 
 
-typedef ap_fixed<18, 2> data_t;
-typedef ap_fixed<24, 10> corr_t;
-typedef ap_fixed<32,2> input_t;
-typedef ap_fixed<32,10> output_t;
+//typedef ap_fixed<18, 2> data_t;
+//typedef ap_fixed<24, 10> corr_t;
+//typedef ap_fixed<32,2> input_t;
+//typedef ap_fixed<32,10> output_t;
+typedef float data_t;
+typedef float corr_t;
+typedef float input_t;
+typedef float output_t;
 
 
 union fp_int
@@ -74,6 +78,7 @@ extern float corr_abs_prev;
 extern corr_t corr_I;
 extern corr_t corr_Q;
 extern float corr_abs;
+extern int since_packet;
 
 
 
