@@ -8,22 +8,22 @@
 int carrier_pos = 0;
 
 // Global variable where we put the samples we're currently keeping track of
-data_t samples_I[buffer_len] = {0};
-data_t samples_Q[buffer_len] = {0};
+sample_t samples_I[buffer_len] = {0};
+sample_t samples_Q[buffer_len] = {0};
 
 // Global variables for the matched filter outputs
-data_t matched_I[buffer_len] = {0};
-data_t matched_Q[buffer_len] = {0};
-data_t delay_line_I[filtsize] = {0};
-data_t delay_line_Q[filtsize] = {0};
+matched_t matched_I[buffer_len] = {0};
+matched_t matched_Q[buffer_len] = {0};
+sample_t delay_line_I[filtsize] = {0};
+sample_t delay_line_Q[filtsize] = {0};
 
 // Global variables for correlation
-float corr_abs_prev = 0;
-corr_t corr_I_prev = 0;
-corr_t corr_Q_prev = 0;
-float corr_abs = 0;
-corr_t corr_I = 0;
-corr_t corr_Q = 0;
+double corr_abs_prev = 0;
+float corr_I_prev = 0;
+float corr_Q_prev = 0;
+double corr_abs = 0;
+float corr_I = 0;
+float corr_Q = 0;
 
 // packet cooldown period
 int since_packet = -1;
@@ -49,19 +49,19 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
 	/**
 		 * DMA Streaming INPUT
 		 */
-		fp_int real_sample;
 		fp_int real_output[236];
 		fp_int imag_output[236];
-		transPkt real_sample_pkt, imag_sample_pkt;
+		transPkt sample_pkt;
 
-		real_sample_pkt = input_r.read();
+		sample_pkt = input_r.read();
 
-		real_sample.i = real_sample_pkt.data;
+		uint16_t sample_data = sample_pkt.data;
+		int16_t sample_signed = sample_data - (1<<15); // TODO: don't know if this is right
 
 
     // Multiply our new sample by our I and Q carrier
-    data_t new_sample_I = (data_t)real_sample.fp * cos_coefficients_table[carrier_pos];
-    data_t new_sample_Q = (data_t)real_sample.fp * sin_coefficients_table[carrier_pos];
+    sample_t new_sample_I = (sample_signed * cos_coefficients_table[carrier_pos])>>14;
+    sample_t new_sample_Q = (sample_signed * sin_coefficients_table[carrier_pos])>>14;
     carrier_pos++;
     if(carrier_pos >= CS) {
         carrier_pos = 0;
@@ -77,8 +77,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     samples_Q[buffer_len-1] = new_sample_Q;
 
     // apply the pulse shaping filter
-	data_t accum_I = 0.0;
-    data_t accum_Q = 0.0;
+	matched_t accum_I = 0.0;
+    matched_t accum_Q = 0.0;
 	for (int i = filtsize-1; i > 0; i--) {
 //#pragma HLS UNROLL factor=8
 		delay_line_I[i] = delay_line_I[i-1];
@@ -87,8 +87,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
 	delay_line_I[0] = new_sample_I;
     delay_line_Q[0] = new_sample_Q;
 
-    data_t filt_I[filtsize] = {0};
-    data_t filt_Q[filtsize] = {0};
+    ap_fixed<24,2> filt_I[filtsize] = {0};
+    ap_fixed<24,2> filt_Q[filtsize] = {0};
 #pragma HLS array_partition variable=filt_I type=cyclic factor=8
 #pragma HLS array_partition variable=filt_Q type=cyclic factor=8
     for (int i=0; i < filtsize; i++) {
@@ -96,8 +96,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     	filt_I[i] = delay_line_I[i] * h[i];
     	filt_Q[i] = delay_line_Q[i] * h[i];
     }
-    data_t filt_1_I[48] = {0};
-    data_t filt_1_Q[48] = {0};
+    ap_fixed<24,3> filt_1_I[48] = {0};
+    ap_fixed<24,3> filt_1_Q[48] = {0};
 #pragma HLS array_partition variable=filt_1_I type=cyclic factor=8
 #pragma HLS array_partition variable=filt_1_Q type=cyclic factor=8
     for (int i=0; i<96; i=i+2) {
@@ -107,8 +107,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     }
     filt_1_I[47] = filt_1_I[47] + filt_I[96];
     filt_1_Q[47] = filt_1_Q[47] + filt_Q[96];
-    data_t filt_2_I[24] = {0};
-    data_t filt_2_Q[24] = {0};
+    ap_fixed<24,4> filt_2_I[24] = {0};
+    ap_fixed<24,4> filt_2_Q[24] = {0};
 #pragma HLS array_partition variable=filt_2_I type=cyclic factor=8
 #pragma HLS array_partition variable=filt_2_Q type=cyclic factor=8
     for (int i=0; i<48; i=i+2) {
@@ -116,20 +116,20 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
         filt_2_I[i>>1] = filt_1_I[i] + filt_1_I[i+1];
         filt_2_Q[i>>1] = filt_1_Q[i] + filt_1_Q[i+1];
     }
-    data_t filt_3_I[12] = {0};
-    data_t filt_3_Q[12] = {0};
+    ap_fixed<24,5> filt_3_I[12] = {0};
+    ap_fixed<24,5> filt_3_Q[12] = {0};
     for (int i=0; i<24; i=i+2) {
         filt_3_I[i>>1] = filt_2_I[i] + filt_2_I[i+1];
         filt_3_Q[i>>1] = filt_2_Q[i] + filt_2_Q[i+1];
     }
-    data_t filt_4_I[6] = {0};
-    data_t filt_4_Q[6] = {0};
+    ap_fixed<24,5> filt_4_I[6] = {0};
+    ap_fixed<24,5> filt_4_Q[6] = {0};
     for (int i=0; i<12; i=i+2) {
         filt_4_I[i>>1] = filt_3_I[i] + filt_3_I[i+1];
         filt_4_Q[i>>1] = filt_3_Q[i] + filt_3_Q[i+1];
     }
-    data_t filt_5_I[3] = {0};
-    data_t filt_5_Q[3] = {0};
+    matched_t filt_5_I[3] = {0};
+    matched_t filt_5_Q[3] = {0};
     for (int i=0; i<6; i=i+2) {
         filt_5_I[i>>1] = filt_4_I[i] + filt_4_I[i+1];
         filt_5_Q[i>>1] = filt_4_Q[i] + filt_4_Q[i+1];
@@ -151,12 +151,12 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     matched_Q[buffer_len-1] = accum_Q;
 
     // run a correlation for both I and Q (only final sample)
-    corr_t corr_accum_I = 0.0;
-    corr_t corr_accum_Q = 0.0;
+    float corr_accum_I = 0.0;
+    float corr_accum_Q = 0.0;
     // We do this in multiple steps for optimization. First we do the point by point multiplication,
     // then we accumulate the results
-    data_t arr_I[presize] = {0};
-    data_t arr_Q[presize] = {0};
+    matched_t arr_I[presize] = {0};
+    matched_t arr_Q[presize] = {0};
 #pragma HLS array_partition variable=arr_I type=cyclic factor=8
 #pragma HLS array_partition variable=arr_Q type=cyclic factor=8
     for (int i=start_sample; i<start_sample+presize; i++) {
@@ -166,8 +166,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     }
     // start accumulation
     // we do this by powers of 2, starting by adding each even and odd together
-    data_t arr_1_I[presize>>1] = {0};
-    data_t arr_1_Q[presize>>1] = {0};
+    ap_fixed<25,7> arr_1_I[presize>>1] = {0};
+    ap_fixed<25,7> arr_1_Q[presize>>1] = {0};
 #pragma HLS array_partition variable=arr_1_I type=cyclic factor=16
 #pragma HLS array_partition variable=arr_1_Q type=cyclic factor=16
     // 560 long
@@ -176,8 +176,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
         arr_1_I[i>>1] = arr_I[i] + arr_I[i+1];
         arr_1_Q[i>>1] = arr_Q[i] + arr_Q[i+1];
     }
-    ap_fixed<25, 3> arr_2_I[presize>>2] = {0};
-    ap_fixed<25, 3> arr_2_Q[presize>>2] = {0};
+    ap_fixed<26,8> arr_2_I[presize>>2] = {0};
+    ap_fixed<26,8> arr_2_Q[presize>>2] = {0};
 #pragma HLS array_partition variable=arr_2_I type=cyclic factor=16
 #pragma HLS array_partition variable=arr_2_Q type=cyclic factor=16
     // 280 long
@@ -186,8 +186,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
         arr_2_I[i>>1] = arr_1_I[i] + arr_1_I[i+1];
         arr_2_Q[i>>1] = arr_1_Q[i] + arr_1_Q[i+1];
     }
-    ap_fixed<26, 4> arr_3_I[presize>>3] = {0};
-    ap_fixed<26, 4> arr_3_Q[presize>>3] = {0};
+    ap_fixed<27,9> arr_3_I[presize>>3] = {0};
+    ap_fixed<27,9> arr_3_Q[presize>>3] = {0};
 #pragma HLS array_partition variable=arr_3_I type=cyclic factor=8
 #pragma HLS array_partition variable=arr_3_Q type=cyclic factor=8
     // 140 long
@@ -196,8 +196,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
         arr_3_I[i>>1] = arr_2_I[i] + arr_2_I[i+1];
         arr_3_Q[i>>1] = arr_2_Q[i] + arr_2_Q[i+1];
     }
-    ap_fixed<27, 5> arr_4_I[presize>>4] = {0};
-    ap_fixed<27, 5> arr_4_Q[presize>>4] = {0};
+    ap_fixed<27,9> arr_4_I[presize>>4] = {0};
+    ap_fixed<27,9> arr_4_Q[presize>>4] = {0};
 #pragma HLS array_partition variable=arr_4_I type=cyclic factor=8
 #pragma HLS array_partition variable=arr_4_Q type=cyclic factor=8
     // 70 long
@@ -206,8 +206,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
         arr_4_I[i>>1] = arr_3_I[i] + arr_3_I[i+1];
         arr_4_Q[i>>1] = arr_3_Q[i] + arr_3_Q[i+1];
     }
-    ap_fixed<28, 6> arr_5_I[presize>>5] = {0};
-    ap_fixed<28, 6> arr_5_Q[presize>>5] = {0};
+    ap_fixed<28,10> arr_5_I[presize>>5] = {0};
+    ap_fixed<28,10> arr_5_Q[presize>>5] = {0};
 #pragma HLS array_partition variable=arr_5_I type=cyclic factor=4
 #pragma HLS array_partition variable=arr_5_Q type=cyclic factor=4
     // 35 long
@@ -216,8 +216,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
         arr_5_I[i>>1] = arr_4_I[i] + arr_4_I[i+1];
         arr_5_Q[i>>1] = arr_4_Q[i] + arr_4_Q[i+1];
     }
-    ap_fixed<29, 7> arr_6_I[17] = {0};
-    ap_fixed<29, 7> arr_6_Q[17] = {0};
+    ap_fixed<29,11> arr_6_I[17] = {0};
+    ap_fixed<29,11> arr_6_Q[17] = {0};
     // 17 long
     for (int i=0; i<34; i=i+2) {
         arr_6_I[i>>1] = arr_5_I[i] + arr_5_I[i+1];
@@ -225,8 +225,8 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     }
     arr_6_I[16] = arr_6_I[16] + arr_5_I[34];
     arr_6_Q[16] = arr_6_Q[16] + arr_5_Q[34];
-    ap_fixed<31, 9> arr_7_I[8] = {0};
-    ap_fixed<31, 9> arr_7_Q[8] = {0};
+    ap_fixed<30,12> arr_7_I[8] = {0};
+    ap_fixed<30,12> arr_7_Q[8] = {0};
     // 8 long
     for (int i=0; i<16; i=i+2) {
         arr_7_I[i>>1] = arr_6_I[i] + arr_6_I[i+1];
@@ -234,15 +234,15 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     }
     arr_7_I[7] = arr_7_I[7] + arr_6_I[16];
     arr_7_Q[7] = arr_7_Q[7] + arr_6_Q[16];
-    corr_t arr_8_I[4] = {0};
-    corr_t arr_8_Q[4] = {0};
+    float arr_8_I[4] = {0};
+    float arr_8_Q[4] = {0};
     // 4 long
     for (int i=0; i<8; i=i+2) {
-        arr_8_I[i>>1] = arr_7_I[i] + arr_7_I[i+1];
-        arr_8_Q[i>>1] = arr_7_Q[i] + arr_7_Q[i+1];
+        arr_8_I[i>>1] = (float)(arr_7_I[i] + arr_7_I[i+1]);
+        arr_8_Q[i>>1] = (float)(arr_7_Q[i] + arr_7_Q[i+1]);
     }
-    corr_t arr_9_I[2] = {0};
-    corr_t arr_9_Q[2] = {0};
+    float arr_9_I[2] = {0};
+    float arr_9_Q[2] = {0};
     // 2 long
     for (int i=0; i<4; i=i+2) {
         arr_9_I[i>>1] = arr_8_I[i] + arr_8_I[i+1];
@@ -274,13 +274,16 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     	since_packet = 0;
 
         int i = start_sample+filtsize/2;
+//        std::cout << std::endl << "We found our packet" << std::endl;
+//        std::cout << i << std::endl;
+//        std::cout << corr_abs_prev << std::endl << std::endl;
 
         for (int j=0; j<236; j++) {
 #pragma HLS UNROLL factor=16
         	// rotate to get rid of phase offset, by -theta
             // use x and y directly instead of normalizing to get sin and cos
-            real_output[j].ffp = corr_I_prev*matched_I[i] + corr_Q_prev*matched_Q[i];
-            imag_output[j].ffp = -corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i];
+            real_output[j].fp = corr_I_prev*(float)matched_I[i] + corr_Q_prev*(float)matched_Q[i];
+            imag_output[j].fp = -corr_Q_prev*(float)matched_I[i] + corr_I_prev*(float)matched_Q[i];
             i = i+oversample;
         }
         /**
@@ -289,13 +292,13 @@ void receiver(hls::stream<transPkt> &input_r, hls::stream<transPkt> &output_i, h
     	for (int i = 0; i < 236; i++)
     	{
     //#pragma HLS UNROLL factor=64
-    		real_sample_pkt.data = real_output[i].i;
-    		real_sample_pkt.last = (i==236-1) ? 1:0;
-    		output_i.write(real_sample_pkt);
+    		sample_pkt.data = real_output[i].i;
+    		sample_pkt.last = (i==236-1) ? 1:0;
+    		output_i.write(sample_pkt);
 
-    		imag_sample_pkt.data = imag_output[i].i;
-    		imag_sample_pkt.last = (i==236-1) ? 1:0;
-    		output_q.write(imag_sample_pkt);
+    		sample_pkt.data = imag_output[i].i;
+    		sample_pkt.last = (i==236-1) ? 1:0;
+    		output_q.write(sample_pkt);
     	}
     }
 
