@@ -29,7 +29,8 @@ union fp_int
 
 
 
-typedef ap_axis<32,2,5,6> transPkt;
+typedef ap_axis<16,2,5,6> transPkt_16;
+typedef ap_axis<32,2,5,6> transPkt_32;
 
 typedef int	coef_t;
 //typedef ap_fixed<12,2> data_t;
@@ -87,6 +88,6 @@ const sample_t sin_coefficients_table[CS]={0,0.81697,-0.94226,0.2698,0.63109,-0.
 
 //void transmitter (data_t* input_i, data_t* input_q, double* output_i);
 //int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample);
-void receiver(hls::stream<transPkt> &input, hls::stream<transPkt> &output_i, hls::stream<transPkt> &output_q);
+void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_i, hls::stream<transPkt_32> &output_q);
 
 #endif
