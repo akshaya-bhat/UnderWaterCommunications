@@ -27,6 +27,7 @@ float corr_Q = 0;
 
 // packet cooldown period
 int since_packet = -1;
+bool wrote_packet = false;
 
 
 //int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
@@ -56,17 +57,18 @@ void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_
 	transPkt_32 imag_sample_pkt;
 
 
-	int x = 0;
-	for (int n = 0; n < 128; n+=2) {
+	wrote_packet = false;
+
+	for (int x = 0; x < 64; x++) {
 #pragma HLS UNROLL factor=64
 		real_sample_pkt = input.read();
-		real_sample[x] = real_sample_pkt.data - (1<<15);;
-		x++;
+		uint16_t temp_uint = real_sample_pkt.data;
+		real_sample[x] = temp_uint - (1<<15);
 
-
+		real_sample_pkt = input.read(); // I think we need to read again to throw out the odd numbered samples?
 	}
 
-    for (int x = 0; x<64; x++) {
+	for (int x = 0; x<64; x++) {
     	// Multiply our new sample by our I and Q carrier
     	sample_t new_sample_I = (real_sample[x] * cos_coefficients_table[carrier_pos])>>14;
     	sample_t new_sample_Q = (real_sample[x] * sin_coefficients_table[carrier_pos])>>14;
@@ -280,11 +282,9 @@ void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_
 
     		// then we've identified the start of the packet!
     		since_packet = 0;
+    		wrote_packet = true;
 
     		int i = start_sample+filtsize/2;
-    		//        std::cout << std::endl << "We found our packet" << std::endl;
-    		//        std::cout << i << std::endl;
-    		//        std::cout << corr_abs_prev << std::endl << std::endl;
 
     		for (int j=0; j<236; j++) {
 #pragma HLS UNROLL factor=16
@@ -309,23 +309,21 @@ void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_
     			output_q.write(imag_sample_pkt);
     		}
     	}
-    	else {
-    		// If no packet, just write zeros
-    		fp_int dummy;
-    		dummy.fp = 0;
-    		for (int i = 0; i < 236; i++)
-    		    		{
-    		    //#pragma HLS UNROLL factor=64
-    		    imag_sample_pkt.data = dummy.i;
-    		    imag_sample_pkt.last = (i==236-1) ? 1:0;
-    		    output_i.write(imag_sample_pkt);
-
-    		    imag_sample_pkt.data = dummy.i;
-    		    imag_sample_pkt.last = (i==236-1) ? 1:0;
-    		    output_q.write(imag_sample_pkt);
-    	    }
-    	}
-
     }
+	if (wrote_packet == false) {
+		// If no packet, just write zeros
+		fp_int dummy;
+		dummy.fp = 0;
+		for (int i = 0; i < 236; i++) {
+		    //#pragma HLS UNROLL factor=64
+		    imag_sample_pkt.data = dummy.i;
+		    imag_sample_pkt.last = (i==236-1) ? 1:0;
+		    output_i.write(imag_sample_pkt);
+
+		    imag_sample_pkt.data = dummy.i;
+		    imag_sample_pkt.last = (i==236-1) ? 1:0;
+		    output_q.write(imag_sample_pkt);
+	    }
+	}
 }
 
