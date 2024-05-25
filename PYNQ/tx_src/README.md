@@ -17,6 +17,7 @@ scp pmod_dac.c transmitter.h transmitter.cpp main.cpp convolutional_encoder_look
 7. Type `make clean; make`
 
 ## Expected Output
+The `transmitter` executable should have been created
 ```
 xilinx@ethernetHost:~/pynq/lib/pmod/pmod_dac$ ls
 Debug  Makefile  src
