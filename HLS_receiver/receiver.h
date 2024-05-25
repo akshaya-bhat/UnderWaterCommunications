@@ -52,7 +52,7 @@ typedef int	coef_t;
 #define downsamplePacketSize 236
 #define filtsize 97
 #define presize 1120
-#define threshold 10000 // TODO: Change to the actual threshold
+#define threshold 50000 // TODO: Change to the actual threshold
 
 //int upsampleSize = oversample*(preambleLen+N); //5248
 
@@ -64,13 +64,14 @@ extern matched_t matched_I[buffer_len];
 extern matched_t matched_Q[buffer_len];
 extern sample_t delay_line_I[filtsize];
 extern sample_t delay_line_Q[filtsize];
-extern float corr_I_prev;
-extern float corr_Q_prev;
+extern ap_fixed<24,10> corr_I_prev;
+extern ap_fixed<24,10> corr_Q_prev;
 extern double corr_abs_prev;
-extern float corr_I;
-extern float corr_Q;
+extern ap_fixed<24,10> corr_I;
+extern ap_fixed<24,10> corr_Q;
 extern double corr_abs;
 extern int since_packet;
+extern bool wrote_packet;
 
 
 
