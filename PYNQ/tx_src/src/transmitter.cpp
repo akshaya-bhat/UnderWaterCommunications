@@ -69,6 +69,12 @@ void transmitter (string input, float* output_i, int len)
 		input_q[i/2] = input_bits[i+1];
         }
 
+	// Check our input bits
+	cout << "Input Bits" << endl;
+	for (int i=0; i<n; i++) {
+		cout << input_bits[i] << endl;
+	}
+
 	// we do now need to bit pack this
 	int bytes_i[len/2];
 	int bytes_q[len/2];
@@ -92,7 +98,7 @@ void transmitter (string input, float* output_i, int len)
 
 	int NHalf = n/2;
 	int N = n + 12; // The encoder doubles the size and convolutional encoder is zero tailed instead of tail biting so it adds 12 tail bits at thencend.
-	data_t scrambledDataI[len/2], scrambledDataQ[len/2];
+	float scrambledDataI[len/2], scrambledDataQ[len/2];
 	for (int i = 0; i < len/2; i++) {
 		scrambledDataI[i] = bytes_i[i] ^ pnGenSequence[i];
 		scrambledDataQ[i] = bytes_q[i] ^ pnGenSequence[i];
@@ -126,8 +132,8 @@ void transmitter (string input, float* output_i, int len)
 	const size_t total_data_bits = total_input_bytes*8;
 	const size_t total_bits = total_data_bits + total_tail_bits;
 	const size_t total_symbols = total_bits * R;
-	data_t encodedDataI[total_symbols];
-	data_t encodedDataQ[total_symbols];
+	float encodedDataI[total_symbols];
+	float encodedDataQ[total_symbols];
 	output_symbols.resize(total_symbols);
 
 	encode_data(&enc, tx_input_bytes.data(), tx_input_bytes.size(),
@@ -169,8 +175,8 @@ void transmitter (string input, float* output_i, int len)
 		 * Symbol Mapping
 		 * 	QPSK
 		 */
-		data_t qpskDataI[N];
-		data_t qpskDataQ[N];
+		float qpskDataI[N];
+		float qpskDataQ[N];
 
 		for (int i = 0; i < N; i++) {
 			if (encodedDataI[i] < 0) {
@@ -192,18 +198,14 @@ void transmitter (string input, float* output_i, int len)
 		/**
 		 * Golay Preamble
 		 */
-//		std::complex<double> raw_symbols[100];
-//
-//			for (int i = 0; i < 100; i++) {
-//				raw_symbols[i] = std::complex<double>(qpskDataI[i], qpskDataQ[i]);
-//			}
+
 		//Theres a weird zero somewhere
 		//put in zeros in the middle
-		double preamble_qpsk[preambleLen];
+		float preamble_qpsk[preambleLen];
 		for (int i = 0; i < preambleLenHalf; ++i) {
 			preamble_qpsk[i] = Ga[i]*1.414;
 		}
-		//cout << "golay\n";
+
 		int x = 0;
 		for (int i = preambleLenHalf; i < preambleLen; ++i) {
 			preamble_qpsk[i] = Gb[x]*1.414;
@@ -212,8 +214,8 @@ void transmitter (string input, float* output_i, int len)
 
 		//cout << "golay2\n";
 
-		double symbolsI[N+preambleLen+32];
-		double symbolsQ[N+preambleLen+32];
+		float symbolsI[N+preambleLen+32];
+		float symbolsQ[N+preambleLen+32];
 			for (int i = 0; i < preambleLen; ++i) {
 				symbolsI[i] = preamble_qpsk[i];
 				symbolsQ[i] = 0.0;
@@ -232,23 +234,19 @@ void transmitter (string input, float* output_i, int len)
 				x++;
 			}
 
-			//cout << "symbolsI\n";
-					for (int i = 0; i < 140; i++) {
-							            	   //cout << symbolsI[i] << endl;
-							               }
-					//cout << "symbolsQ\n";
-										for (int i = 0; i < 140; i++) {
-												            	   //cout << symbolsQ[i] << endl;
-												               }
 		// Write the symbols to an output file
 		cout << "tx symbols:" << endl;
-                FILE *fpsense = fopen("/home/xilinx/tx_symbols.bin","wb");
-                for (int i = 0; i < 236; ++i) {
-                	double realPart = symbolsI[i];
-                        double imagPart = symbolsQ[i];
-                        fwrite(&(realPart), sizeof(double),1, fpsense);
-                        fwrite(&(imagPart), sizeof(double),1, fpsense);
-                 }
+        FILE *fpsense = fopen("/home/xilinx/tx_symbols.bin","wb");
+        for (int i = 0; i < 236; ++i) {
+            float realPart = symbolsI[i];
+			float imagPart = symbolsQ[i];
+            fwrite(&(realPart), sizeof(float),1, fpsense);
+			fwrite(&(imagPart), sizeof(float),1, fpsense);
+			cout << "i: " <<realPart << ", q: " << imagPart << endl;
+        }
+		cout << endl;
+
+		//cout << endl;
 		fclose(fpsense);
 		/**
 		 * Pulse Shaping
@@ -257,24 +255,26 @@ void transmitter (string input, float* output_i, int len)
 		//Upsample
 
 		int upsampleSize = oversample*(N+preambleLen+32);
+		cout << "len: " << len << endl;
+		cout << "N: " << N << endl;
+		cout << "oversample: " << oversample << endl;
+		cout << "number of bits to upsample: " << N+preambleLen+32 << endl;
 		cout << "upsamplesize: " << upsampleSize << endl;
-		double dataUpsampledI[upsampleSize];
-		double dataUpsampledQ[upsampleSize];
+		float dataUpsampledI[upsampleSize];
+		float dataUpsampledQ[upsampleSize];
 		std::fill(dataUpsampledI, dataUpsampledI + upsampleSize, 0.0);
 		std::fill(dataUpsampledQ, dataUpsampledQ + upsampleSize, 0.0);
 
-		//cout << "pulse shaped start " << endl;
 			int j = 0;
 			for (int i = 0; i < upsampleSize; i+=oversample) {
 				dataUpsampledI[i] = symbolsI[j];
 				dataUpsampledQ[i] = symbolsQ[j];
 				j++;
 			}
-		//cout << "pulse shaped start 1" << endl;
 
 
-		double dataPulseShapedI[upsampleSize];
-		double dataPulseShapedQ[upsampleSize];
+		float dataPulseShapedI[upsampleSize];
+		float dataPulseShapedQ[upsampleSize];
 			//Convolution
 			for (int i = 0; i < upsampleSize; i++) {
 				dataPulseShapedI[i] = 0.0;
@@ -285,16 +285,20 @@ void transmitter (string input, float* output_i, int len)
 				}
 			}
 		//cout << "pulse shaped " << endl;
-		FILE *fp2 = fopen("/home/xilinx/capstone/armcode/data/outPulseShapred_HLS_new.bin","wb");
-			for (int i = 0; i < (upsampleSize); ++i) {
-				//cout << i << " " << dataPulseShapedI[i] << " " << dataPulseShapedQ[i] << endl;
-				float realPart = dataPulseShapedI[i];
-				float imagPart = dataPulseShapedQ[i];
-				fwrite(&(realPart), sizeof(float),1, fp2);
-				fwrite(&(imagPart), sizeof(float),1, fp2);
-			}
-
+		FILE *fp2 = fopen("/home/xilinx/tx_pulse_shaped.txt","w");
+		for (int i = 0; i < (upsampleSize); ++i) {
+			float realPart = dataPulseShapedI[i];
+			fwrite(&(realPart), sizeof(float),1, fp2);
+			//cout << realPart << "," << endl;
+		}
+		//cout << endl;
+		for (int i = 0; i < (upsampleSize); ++i) {
+			float imagPart = dataPulseShapedQ[i];
+			fwrite(&(imagPart), sizeof(float),1, fp2);
+			//cout << imagPart << "," << endl;
+		}
 		fclose(fp2);
+		//cout << endl;
 
 		/**
 		 * Modulation
@@ -303,15 +307,11 @@ void transmitter (string input, float* output_i, int len)
 		cout << "modulation 1 " << upsampleSize << endl;
 		int index = 0;
 		for (int i = 0; i < upsampleSize; i++) {
-			//double t = static_cast<double>(i) / fs;
-			//theta = fc * t;
-			//int index = static_cast<int>(theta*(32.0)) % 32; //size of cos/sin LUT -1
-			double cos = cos_coefficients_table[index];
-			double sin = -1.0 * sin_coefficients_table[index];
-			//cout << " i " << i << " cos " << cos << endl;
+			float cos = cos_coefficients_table[index];
+			float sin = -1.0 * sin_coefficients_table[index];
 
-			double modI = dataPulseShapedI[i] * cos - dataPulseShapedQ[i] * sin;
-			double modQ = dataPulseShapedI[i] * sin + dataPulseShapedQ[i] * cos;
+			float modI = dataPulseShapedI[i] * cos - dataPulseShapedQ[i] * sin;
+			float modQ = dataPulseShapedI[i] * sin + dataPulseShapedQ[i] * cos;
 
 			output_i[i] =  modI + modQ;
 			index++;
@@ -320,10 +320,16 @@ void transmitter (string input, float* output_i, int len)
 			}
 		}
 
-		cout << "output_i\n";
-							for (int i = 0; i < 140; i++) {
-									            	   //cout << output_i[i] << endl;
-									               }
+                FILE *fp3 = fopen("/home/xilinx/tx_modulated_output.txt","w");
+				//cout << "output" << endl;
+                for (int i = 0; i < (upsampleSize); ++i) {
+					float out_sample = output_i[i];
+                    fwrite(&(out_sample), sizeof(float),1, fp3);
+					//cout << out_sample << "," << endl;
+                }
+
+                fclose(fp3);
+
 
 
 

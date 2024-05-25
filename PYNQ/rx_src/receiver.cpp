@@ -36,128 +36,25 @@ using namespace std;
 void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q)
 {
 	int size = sizeof(input_i) / sizeof(input_i[0]);
-	cout << "size " << sizeof(input_i) << endl;
+	//cout << "size " << sizeof(input_i) << endl;
 
-	cout << "Inputs:" <<endl;
-	for (int i=0; i<236; i++) {
-		cout << "i: " << input_i[i] << ", q: " << input_q[i] << endl;
-	}
+	// cout << "Inputs:" <<endl;
+	// for (int i=0; i<236; i++) {
+	// 	cout << "i: " << input_i[i] << ", q: " << input_q[i] << endl;
+	// }
+	// cout << endl;
 
 	data_t preamble_symbolsI[64];
 	std::copy(input_i, input_i+64, preamble_symbolsI);
 	data_t preamble_symbolsQ[64];
 	std::copy(input_q, input_q+64, preamble_symbolsQ);
 
-//	for (int i = 0; i < 64; i++)
-//	{
-//		preamble_symbolsI[i] = input_i[i];
-//		preamble_symbolsQ[i] = input_q[i];
-//
-//	}
-
-	for (int i = 0; i < 64; i++) {
-		//cout << "preamble_symbolsI " << preamble_symbolsI[i] << endl;
-	}
 	int payloadSize = NN-96;
 	//cout << "payloadSize " << payloadSize << endl;
 	data_t payload_symbolsI[payloadSize];
 	std::copy(input_i+96, input_i+NN, payload_symbolsI);
 	data_t payload_symbolsQ[payloadSize];
 	std::copy(input_q+96, input_q+NN, payload_symbolsQ);
-
-//	int x = 0;
-//	for (int i = 96; i < 227; i++)
-//	{
-//		payload_symbolsI[x] = input_i[i];
-//		payload_symbolsQ[x] = input_q[i];
-//		x++;
-//
-//	}
-
-	//for (int i = 0; i < payloadSize; i++) {
-		//cout << "payload_symbolsQ " << payload_symbolsQ[i] << endl;
-	//}
-
-	//data_t top_rowI[32];
-	//std::fill(std::begin(top_rowI), std::end(top_rowI), 0.0);
-	//top_rowI[0] = preamble_symbolsI[0];
-
-	//data_t top_rowQ[32];
-	//std::fill(std::begin(top_rowQ), std::end(top_rowQ), 0.0);
-	//top_rowQ[0] = preamble_symbolsQ[0];
-
-	//data_t RmatI[64][32];
-	//data_t RmatQ[64][32];
-	//int m = 64;
-	//int n = 32;
-	//toeplitz
-	//teoplitz(m, n, preamble_symbolsI, top_rowI, RmatI);
-	//teoplitz(m, n, preamble_symbolsI, top_rowI, RmatQ);
-
-	//for (int i = 0; i < m; ++i) {
-	//        for (int j = 0; j < n; ++j) {
-	            //std::cout << RmatI[i][j] << " ";
-	//        }
-	        //std::cout << std::endl;
-	//    }
-
-	        //std::cout << "convert to 1D " << std::endl;
-	//////////////////everything accurate until here
-	//float pI[32*64];
-	//float pQ[32*64];
-	//float RmmatI[64*32];
-	//float RmmatQ[64*32];
-
-	//convertTo1D(RmatI, m, n, RmmatI);
-	//convertTo1D(RmatQ, m, n, RmmatQ);
-
-
-	//svd and pInv
-	//this causes output to be off
-	        //std::cout << "psInv " << std::endl;
-	//psInv(pI, RmmatI,m,n);
-	//psInv(pQ, RmmatQ,m,n);
-
-
-//	data_t pInvI[32][64];
-//	data_t pInvQ[32][64];
-//	convert1DTo2D(pI,m,n,pInvI);
-//	convert1DTo2D(pQ,m,n,pInvQ);
-	//cout << "pInv\n";
-	//for (int i = 0; i < n; ++i) {
-	//	        for (int j = 0; j < m; ++j) {
-		            //std::cout << pQ[i*m +j] << " ";
-	//	        }
-		        //std::cout << std::endl;
-	//	    }
-//	for (int i = 0; i < 64; i++) {
-//			//cout << "pI " << pI[i] << endl;
-//		}
-
-	//data_t ghatI[32];
-	//data_t ghatQ[32];
-	//matrixMult(pI,preamble_qpsk,m,n,ghatI);
-	//matrixMult(pQ,preamble_qpsk,m,n,ghatQ);
-
-	//for (int i = 0; i < 32; i++) {
-			//cout << "ghatI " << ghatI[i] << endl;
-	//	}
-
-	//Convolution
-	//data_t equalized_symbolsI[140];
-	//data_t equalized_symbolsQ[140];
-	//			for (int i = 0; i < 140; i++) {
-	//				equalized_symbolsI[i] = 0.0;
-	//				equalized_symbolsQ[i] = 0.0;
-	//				for (int j = 0; j < 32; j++) {
-	//					equalized_symbolsI[i] += payload_symbolsI[i-j] * ghatI[j];
-	//					equalized_symbolsQ[i] += payload_symbolsQ[i-j] * ghatQ[j];
-	//				}
-	//			}
-//
-//				for (int i = 0; i < 140; i++) {
-							//cout << "equalized_symbolsI " << equalized_symbolsI[i] << endl;
-//						}
 
 	data_t normI_simplest[140];
 	data_t normQ_simplest[140];
@@ -167,7 +64,6 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 	data_t payload_symbolsQQ[140];
 	data_t payload_symbolsII_abs[140];
 	data_t payload_symbolsQQ_abs[140];
-//	std::copy(payload_symbolsI, payload_symbolsI + 140, payload_symbolsII);
 
 	for (int i = 0; i < 140; i++)
 	{
@@ -197,57 +93,6 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 		shiftedQ_simplest[i] = (normQ_simplest[i]) / 2 * ((1 << nsdec) - 1);
 	}
 
-	for (int i = 0; i < 140; i++) {
-			//cout << "normQ_simplest " << normQ_simplest[i] << endl;
-		}
-	for (int i = 0; i < 140; i++) {
-		//cout << "shiftedQ_simplest " << shiftedQ_simplest[i] << endl;
-	}
-
-
-//		data_t normI_equalizer[140];
-//		data_t normQ_equalizer[140];
-//		int shiftedI_equalizer[140];
-//		int shiftedQ_equalizer[140];
-//		data_t equalized_symbolsII[140];
-//		data_t equalized_symbolsQQ[140];
-//		data_t equalized_symbolsII_abs[140];
-//		data_t equalized_symbolsQQ_abs[140];
-
-//		for (int i = 0; i < 140; i++)
-//		{
-//			equalized_symbolsII[i] = equalized_symbolsI[i];
-//			equalized_symbolsQQ[i] = equalized_symbolsQ[i];
-//
-//		}
-//		std::copy(equalized_symbolsI, equalized_symbolsI + 140, equalized_symbolsII);
-//		std::transform(equalized_symbolsII, equalized_symbolsII + 140, equalized_symbolsII_abs, [](const data_t& val) { return std::abs(val); });
-
-//		std::copy(equalized_symbolsQ, equalized_symbolsQ + 140, equalized_symbolsQQ);
-
-//		std::transform(equalized_symbolsQQ, equalized_symbolsQQ + 140, equalized_symbolsQQ_abs, [](const data_t& val) { return std::abs(val); });
-//		max_valI = *std::max_element(equalized_symbolsII_abs, equalized_symbolsII_abs + 140);
-		//cout << "max_valI " << max_valI << endl;
-
-//		std::transform(equalized_symbolsQQ, equalized_symbolsQQ + 140, equalized_symbolsQQ, [](const data_t& val) { return std::abs(val); });
-//		max_valQ = *std::max_element(equalized_symbolsQQ_abs, equalized_symbolsQQ_abs + 140);
-
-
-//		for (int i = 0; i < 140; i++)
-//		{
-//			normI_equalizer[i] = equalized_symbolsII[i] / max_valI;
-//			normQ_equalizer[i] = equalized_symbolsQQ[i] / max_valQ;
-//			shiftedI_equalizer[i] = (normI_equalizer[i]) / 2 * ((1 << nsdec) - 1);
-//			shiftedQ_equalizer[i] = (normQ_equalizer[i]) / 2 * ((1 << nsdec) - 1);
-//		}
-
-//		for (int i = 0; i < 140; i++) {
-						//cout << "normI_equalizer " << normI_equalizer[i] << endl;
-//					}
-//		for (int i = 0; i < 140; i++) {
-				//cout << "shiftedQ_equalizer " << shiftedQ_equalizer[i] << endl;
-//			}
-
 		/**
 		 * Viterbi Decoder
 		 */
@@ -270,24 +115,6 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 						{
 							shiftedQ_simplest[i] = -127;
 						}
-
-//			if (shiftedI_equalizer[i] > 0)
-//						{
-//				shiftedI_equalizer[i] = +127;
-//						}
-//						else
-//						{
-//							shiftedI_equalizer[i] = -127;
-//						}
-//
-//			if (shiftedQ_equalizer[i] > 0)
-//						{
-//				shiftedQ_equalizer[i] = +127;
-//						}
-//						else
-//						{
-//							shiftedQ_equalizer[i] = -127;
-//						}
 		}
 		//decodedI_equalizer = vitdec(integerI_equalizer,trellis,30,'trunc','soft', nsdec);
 		constexpr size_t K = 7;
@@ -371,13 +198,6 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 ////    add_noise(output_symbols.data(), output_symbols.size(), noise_level);
 //    clamp_vector(output_symbols.data(), output_symbols.size(), soft_decision_low, soft_decision_high);
 
-    //std::cout << "output_symbols data: ";
-            for (int16_t byte : output_symbols) {
-                //std::cout << byte << endl;
-
-            }
-            //cout << endl;
-           //cout << output_symbols.size() << endl;
     // Decode the data
     std::vector<uint8_t> rx_input_bytes;
     rx_input_bytes.resize(total_input_bytes);
@@ -409,13 +229,7 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 
        ////////////////////////////////// VITERBI DECODER Q
            std::vector<int16_t> output_symbolsQ(shiftedQ_simplest,shiftedQ_simplest+140);//(array, array+140);
-       //std::cout << "output_symbols data: ";
-               for (int16_t byte : output_symbolsQ) {
-                  // std::cout << byte << endl;
 
-               }
-               cout << endl;
-              cout << output_symbolsQ.size() << endl;
        // Decode the data
        std::vector<uint8_t> rx_input_bytesQ;
        rx_input_bytesQ.resize(total_input_bytes);
@@ -433,16 +247,8 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
        const uint64_t accumulated_errorQ = Decoder::template update<uint64_t>(vitdec, output_symbolsQ.data(), output_symbolsQ.size());
        const uint64_t errorQ = accumulated_error + uint64_t(vitdec.get_error());
        vitdec.chainback(rx_input_bytesQ.data(), total_input_bits);
-       std::cout << "Vector data: ";
-           //for (uint8_t byte : rx_input_bytesQ) {
-            //   std::cout << static_cast<int>(byte) << endl;
-             //  for (int i = 7; i >= 0; --i) {
-              //         std::cout << ((byte >> i) & 1);
-               //    }
-               //    std::cout << std::endl;
-           //}
-           //cout << endl;
-          cout << rx_input_bytesQ.size() << endl;
+    //    std::cout << "Vector data: ";
+    //    cout << rx_input_bytesQ.size() << endl;
 
 		///////////////////////////////////////////////////////
 //		for (int i = 0; i < 140; i++)
@@ -458,10 +264,10 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 //		        descrambledI_equalizer = +xor(decodedI_equalizer,pnGen);
 //		        descrambledQ_equalizer = +xor(decodedQ_equalizer,pnGen);
 
-	  cout << "After viterbi decoding, in bytes:" << endl;
-	  for (int i=0; i<total_input_bytes; i++) {
-		  cout << "i: " << static_cast<int>(rx_input_bytes[i]) << ", q: " << static_cast<int>(rx_input_bytesQ[i]) << endl;
-	  }
+	//   cout << "After viterbi decoding, in bytes:" << endl;
+	//   for (int i=0; i<total_input_bytes; i++) {
+	// 	  cout << "i: " << static_cast<int>(rx_input_bytes[i]) << ", q: " << static_cast<int>(rx_input_bytesQ[i]) << endl;
+	//   }
        //in bytes
 		data_t descrambledDataI[8], descrambledDataQ[8];
 				for (int i = 0; i < 8; i++) {
@@ -469,9 +275,9 @@ void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_tt
 					output_q[i] = rx_input_bytesQ[i] ^ pnGenSequence[i];
 				}
 
-                                cout << "descrambled data" << endl;
-				for (int i = 0; i < 8; i++) {
-					cout << "i: " << output_i[i] << ", q: " << output_q[i] << endl;									}
+                //                 cout << "descrambled data" << endl;
+				// for (int i = 0; i < 8; i++) {
+				// 	cout << "i: " << output_i[i] << ", q: " << output_q[i] << endl;									}
 }
 
 void teoplitz(int m, int n, data_t* c, data_t* r, data_t t[][32])
