@@ -17,7 +17,7 @@ using namespace std;
 
 
 typedef int	coef_t;
-typedef double data_t;
+typedef float data_t;
 typedef float double_tt;
 typedef int double_ttt;
 //typedef ap_fixed<16,1> fixed_16;
