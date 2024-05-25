@@ -27,3 +27,10 @@ g++ -O3 -Iinc src/transmitter.cpp src/main.cpp -o transmitter
 xilinx@ethernetHost:~/pynq/lib/pmod/pmod_dac$ ls
 Debug  Makefile  src  transmitter
 ```
+
+8. In your PYNQ-Z2 board's Jupyter Notebook, upload `Transmitter.ipynb`
+9. Connect the Ultrasonic Transducer and DAC to the PYNQ-Z2 board's PMODB
+10. Run `Transmitter.ipynb` cells
+
+## Expected Output
+The Ultrasonic Transducer should send a signal, which you can hear if you bring your ear very close to the transducer
