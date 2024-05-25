@@ -11813,38 +11813,58 @@ float tx_symbols_imag[236] = {0,
 int main()
 {
 
-	hls::stream<transPkt> output_i_stream;
-	hls::stream<transPkt> output_q_stream;
-
-	transPkt input_packet;
+	transPkt_16 input_packet;
+	transPkt_32 output_packet;
 	fp_int input_sample;
 
+	float output_i[236];
+	float output_q[236];
 
 	// Write in our 3776 samples to the receiver function
-    for(int i=0; i<3776; i++) {
-    	hls::stream<transPkt> input_stream;
+    for(int i=0; i<61; i++) {
+    	hls::stream<transPkt_16> input_stream("Input Stream");
+    	hls::stream<transPkt_32> output_i_stream("I Output Stream");
+    	hls::stream<transPkt_32> output_q_stream("Q Output Stream");
 
-    	//input_sample.fp = tx_output[i];
-    	//input_packet.data = input_sample.i;
-    	input_packet.data = tx_unsigned_output[i];
-    	input_stream.write(input_packet);
-
+    	// Do this in sets of 64 samples
+    	for (int j=0; j<64; j++) {
+    		if (i < 59) {
+    			input_packet.data = tx_unsigned_output[i*64 + j];
+    			input_stream.write(input_packet);
+    			// write twice because we're only taking every other sample
+    			input_packet.data = tx_unsigned_output[i*64 + j];
+    			input_stream.write(input_packet);
+    		} else {
+    			input_packet.data = 32768;
+    		    input_stream.write(input_packet);
+    		    input_packet.data = 32768;
+    		    input_stream.write(input_packet);
+    		}
+    	}
     	receiver(input_stream, output_i_stream, output_q_stream);
     	//std::cout << corr_abs << std::endl;
-    }
-    for (int i=0; i<140; i++) {
-    	// write zeros to make sure we get to the point where we see our correlation
-    	hls::stream<transPkt> input_stream;
-    	transPkt input_packet;
-    	fp_int input_sample;
 
-    	//input_sample.fp = 0;
-    	//input_packet.data = input_sample.i;
-    	input_packet.data = 32768;
-    	input_stream.write(input_packet);
+        for (int j=0; j<236; j++) {
+        	fp_int out;
+            output_packet = output_i_stream.read();
+        	out.i = output_packet.data;
+        	output_i[j] = out.fp;
+        	output_packet = output_q_stream.read();
+            out.i = output_packet.data;
+        	output_q[j] = out.fp;
+        }
+        if (output_i[0] != 0) {
+        	std::cout << "I Outputs" << std::endl;
+        	for (int j=0; j<236; j++) {
+        	    std::cout << output_i[j]<< std::endl;
+        	}
+        	std::cout << std::endl;
+        	std::cout << "Q Outputs" << std::endl;
+        	for (int j=0; j<236; j++) {
+        	    std::cout << output_q[j]<< std::endl;
+        	}
+        }
 
-    	receiver(input_stream, output_i_stream, output_q_stream);
-    	//std::cout << corr_abs << std::endl;
     }
     std::cout << std::endl << std::endl;
 
@@ -11859,25 +11879,4 @@ int main()
 //        std::cout << matched_Q[i] << "," << std::endl;
 //        //std::cout << samples_Q[i] << std::endl;
 //    }
-
-    // And what is our output from the hls stream (if we can read it?)
-    float output_i[236];
-    float output_q[236];
-    for (int i=0; i<236; i++) {
-    	fp_int out;
-        input_packet = output_i_stream.read();
-    	out.i = input_packet.data;
-    	output_i[i] = out.fp;
-    	input_packet = output_q_stream.read();
-        out.i = input_packet.data;
-    	output_q[i] = out.fp;
-    }
-    std::cout << "I Outputs" << std::endl;
-    for (int i=0; i<236; i++) {
-    	std::cout << output_i[i]<< std::endl;
-    }
-    std::cout << "Q Outputs" << std::endl;
-    for (int i=0; i<236; i++) {
-        std::cout << output_q[i]<< std::endl;
-    }
 }
