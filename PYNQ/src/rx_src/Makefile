@@ -1,12 +1,10 @@
 CXX?=g++
 CXXFLAGS=-O3
 
-EXEC=transmitter
+EXEC=receiver
 
 # C++ source files
-//CXXSRCS := transmitter.cpp transmitter_tb.cpp
-CXXSRCS := src/transmitter.cpp src/main.cpp
-INCLUDES=-Iinc
+CXXSRCS := receiver.cpp receiver_tb.cpp svd.cpp matrixOperations.cpp eigen.cpp QR.cpp
 
 OBJS := $(CXXSRCS:src/%.cxx=$(BUILD_DIR)%.o)
 
@@ -14,7 +12,7 @@ OBJS := $(CXXSRCS:src/%.cxx=$(BUILD_DIR)%.o)
 all:	$(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CXX) $(CXXFLAGS) ${INCLUDES} $(OBJS) -o $(EXEC) $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(EXEC) $(LDFLAGS)
 
 $(BUILD_DIR)%.o: src/%.cxx
 	$(CXX) $(CXXFLAGS) -c $< -o $@
