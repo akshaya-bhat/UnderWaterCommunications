@@ -1,38 +1,15 @@
-clear all;
-close all;
-clc;
+close all
+clear all
 
 %% Parameters
 
-fs = 128e3;              % sampling frequency
+fs = 115e3;              % sampling frequency
 fc = 40e3;               % carrier frequency 40kHz
 M = 4;                   % pngen sequence order
 N = 128;                 % length of data payload
-Tx_PowDB = 0.5;           % power out of amplifier
+Tx_PowDB = -2;           % power out of amplifier
 rolloff = 0.5;
-oversample = 32;         % samples per symbol
-<<<<<<< HEAD:Matlab/tx_rx_2_lilian.m
-% make it 128 samples
-
-%% Transmitter
-
-% % Create random binary data
-% dataI = randi([0,1], 1, N/2);
-% dataQ = randi([0,1], 1, N/2);
-
-% Write to file for testing
-% data = [dataI;dataQ];
-% fid = fopen('/home/lilian/school/UnderWaterCommunications/data/input_file.dat', 'w');
-% fwrite(fid, data,'int16');
-% fclose(fid);
-
-%read file for consistent data
-fid = fopen("/home/lilian/school/UnderWaterCommunications/data/input_file.dat","r");
-data = fread(fid,'int16');
-dataI = data(1:2:end);
-dataQ = data(2:2:end);
-fclose(fid);
-=======
+oversample = 16;         % samples per symbol
 correlation_threshold = 0.5; % half of highest peak
 nsdec = 13;              % number of bits for soft decision decoding
 
@@ -48,34 +25,16 @@ nsdec = 13;              % number of bits for soft decision decoding
 y = load('data_errors.mat');
 dataI = y.dataI;
 dataQ = y.dataQ;
->>>>>>> origin/main:Matlab/tx_rx_2.m
 
 % scramble with pngen to whiten data
-% C++ pnGen 
 pnGen = pngen(M,length(dataI));
-scrambledDataI = +xor(dataI',pnGen);
-scrambledDataQ = +xor(dataQ',pnGen);
+scrambledDataI = +xor(dataI,pnGen);
+scrambledDataQ = +xor(dataQ,pnGen);
 
 % apply convolutional encoder (7 [171 133] code)
-<<<<<<< HEAD:Matlab/tx_rx_2_lilian.m
-% encodedDataI = zeros(1, 2*length(scrambledDataI)-6);
-% encodedDataQ = zeros(1, 2*length(scrambledDataQ)-6);
-% for i=1:length(scrambledDataI)-6
-%     encodedDataI(2*i-1) = mod(scrambledDataI(i)+scrambledDataI(i+1)+scrambledDataI(i+2)+scrambledDataI(i+3)+scrambledDataI(i+6),2);
-%     encodedDataI(2*i) = mod(scrambledDataI(i)+scrambledDataI(i+2)+scrambledDataI(i+3)+scrambledDataI(i+5)+scrambledDataI(i+6),2);
-%     encodedDataQ(2*i-1) = mod(scrambledDataQ(i)+scrambledDataQ(i+1)+scrambledDataQ(i+2)+scrambledDataQ(i+3)+scrambledDataQ(i+6),2);
-%     encodedDataQ(2*i) = mod(scrambledDataQ(i)+scrambledDataQ(i+2)+scrambledDataQ(i+3)+scrambledDataQ(i+5)+scrambledDataQ(i+6),2);
-% end
-
-trellis_K7 = poly2trellis(7, [133 171]);
-%     trellis_K9 = poly2trellis(9, [657 435]);
-encodedDataI= convenc(scrambledDataI,trellis_K7);
-encodedDataQ= convenc(scrambledDataQ,trellis_K7);
-=======
-trellis = poly2trellis(7, [171 133]);
+trellis = poly2trellis(7, [133 171]);
 encodedDataI = convenc(scrambledDataI,trellis);
 encodedDataQ = convenc(scrambledDataQ,trellis);
->>>>>>> origin/main:Matlab/tx_rx_2.m
 
 % qpsk symbol mapping
 qpskDataI = encodedDataI;
@@ -89,79 +48,36 @@ symbols = qpskDataI + 1j*qpskDataQ;
 % add Golay Preamble and guard interval
 [Ga, Gb] = wlanGolaySequence(32);
 preamble_bpsk = [Ga' Gb'].*sqrt(2);
-<<<<<<< HEAD:Matlab/tx_rx_2_lilian.m
-symbols = [preamble_bpsk symbols];
-=======
 symbols = [preamble_bpsk zeros(1,32) symbols];
->>>>>>> origin/main:Matlab/tx_rx_2.m
 
 % upsample and apply pulse shaping
-%%% Decide on optimize taps for pulsing shaping filter
 dataUpsampled = upsample(symbols,oversample);
-% B = rcosdesign(BETA, SPAN, SPS, SHAPE)
-% rolloff factor = 0.5
-% truncate the filter to 6 symbols and represent each symbol with 32
-% 6 symbols * 32 samples = 192 samples
-% 32 samples per symbol because of the high ADC and DAC rates
-% 3 symbols 
-%preamble = BPSK
-%data = QPSK
-
 h = rcosdesign(rolloff,6,oversample,'sqrt');
-
 dataPulseShaped = conv(h,dataUpsampled);
-<<<<<<< HEAD:Matlab/tx_rx_2_lilian.m
-MOD_PREAMBLE = conv(h,upsample([Ga' Gb'],oversample));
-%% Read from HLS File PULSE SHAPRE
-fid = fopen("/home/lilian/school/UnderWaterCommunications/data/outPulseShapred_HLS.bin", "r");
-data_HLS = fread(fid, "float");
-realData = data_HLS(1:2:end);
-imagData = data_HLS(2:2:end);
-figure; plot(realData); hold on; plot(imagData); title("HLS");
-figure; plot(real(dataPulseShaped)); hold on; plot(imag(dataPulseShaped)); title("Matlab");
-%%
-
-=======
 MOD_PREAMBLE = conv(h,upsample(preamble_bpsk,oversample));
->>>>>>> origin/main:Matlab/tx_rx_2.m
 
 % modulate with carrier
 t = (0:1/fs:(length(dataPulseShaped)-1)/fs);
 carrierI = cos(2*pi*fc.*t);
 carrierQ = sin(2*pi*fc.*t);
-realPart = real(dataPulseShaped);
-imagPart = imag(dataPulseShaped);
 dataModI = real(dataPulseShaped).*carrierI;
 dataModQ = imag(dataPulseShaped).*carrierQ;
 dataMod = dataModI + dataModQ;
 
-%%
-fid = fopen("/home/lilian/school/UnderWaterCommunications/data/output.bin", "r");
-data_HLS1 = fread(fid, "float");
-realData1 = data_HLS1(1:end);
-% imagData1 = data_HLS1(2:2:end);
-figure; plot(data_HLS1); title("HLS");
-figure; plot(real(dataMod)); hold on; plot(imag(dataMod)); title("Matlab");
-
-%%
-% % Create gold data file to compare
-% fid1 = fopen("tx_gold.dat","w");
-% fwrite(fid1, dataMod,'double');
-% fclose(fid1);
-
 % amplifier (will be analog)
-%tx_power = sum(abs(dataMod).^2)/length(dataMod);
-%amp_const = 10^(Tx_PowDB/10)/tx_power;
-%dataMod = amp_const*dataMod;
+tx_power = sum(abs(dataMod).^2)/length(dataMod);
+amp_const = 10^(Tx_PowDB/10)/tx_power;
+dataMod = amp_const*dataMod;
 
- 
 
 %% Channel
-%received = dataMod;
-received = channel(dataMod);
+received = dataMod;
+%received = channel(dataMod);
 %rayleigh_vector = raylrnd(1/sqrt(2), 1, length(dataMod));
 %noise_vector = randn(1,length(dataMod));
 %received = rayleigh_vector.*dataMod + noise_vector;
+%multipath_vector = [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1];
+%received = conv(received, multipath_vector, "same");
 
 
 %% Receiver
@@ -194,7 +110,7 @@ matched_symbols = matchedI+1j*matchedQ;
 rotated_symbols = matched_symbols(max_index:max_index+length(dataPulseShaped)-1).*exp(-1j*peak_phase);
         
 start_idx = 1 + ceil(length(h)/2);
-sense_symbols = rotated_symbols(start_idx:32:end);
+sense_symbols = rotated_symbols(start_idx:oversample:end);
 
 % separate preamble from payload
 preamble_symbols = sense_symbols(1:64);
@@ -298,6 +214,9 @@ plot(dataMod)
 
 figure(13)
 scatter(real(sense_symbols), imag(sense_symbols))
+
+figure(14)
+scatter(real(equalized_symbols), imag(equalized_symbols))
 
 
 
