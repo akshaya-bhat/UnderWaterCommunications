@@ -392,7 +392,8 @@ void SendBuffer(u32 cmd) {
     u8 channels = 0;
     u16 delay = 87;
 
-    u32 *num_addr = (u32 *) cmd;
+    //u32 *num_addr = (u32 *) cmd;
+    u32 *num_addr = (u32 *) (cmd |0x20000000);
     for(i=0; i<3776; i++) {
         num = *num_addr;
         sample1 = num & 0xFFFF0000;
@@ -402,6 +403,46 @@ void SendBuffer(u32 cmd) {
         WriteBuffer[1] = (channels << 4) | ((sample1 >> 8 ) & 0x0f);
         spi_transfer(device, (char*)WriteBuffer, NULL, 4);
         delay_p1us(delay);
+
+        WriteBuffer[2] = sample2 & 0xff;
+        WriteBuffer[1] = (channels << 4) | ((sample2 >> 8 ) & 0x0f);
+        spi_transfer(device, (char*)WriteBuffer, NULL, 4);
+        delay_p1us(delay);
+
+        num_addr++;
+    }
+
+}
+
+void SendBufferTest(u32 cmd) {
+    int i;
+    int num;
+    u16 sample1;
+    u16 sample2;
+
+    WriteBuffer[3] = 0x55;
+    WriteBuffer[0] = 0x03;
+
+    u8 channels = 0;
+    //u16 delay = 500;
+    //u16 delay = 25;
+    u16 delay = 8.7;
+    //u16 delay = 0.2174;
+
+    //u32 *num_addr = (u32 *) cmd;
+    u32 *num_addr = (u32 *) (cmd |0x20000000);
+    for(i=0; i<3776; i++) {
+        num = *num_addr;
+       // sample1 = (num & 0xFFFF0000) >> 16;
+        sample2 = num & 0x0000FFFF;
+
+       // sample1 = 4095;
+       // sample2 = 0002;
+        
+	WriteBuffer[2] = sample1 & 0xff;
+        WriteBuffer[1] = (channels << 4) | ((sample1 >> 8 ) & 0x0f);
+       // spi_transfer(device, (char*)WriteBuffer, NULL, 4);
+        //delay_p1us(delay);
 
         WriteBuffer[2] = sample2 & 0xff;
         WriteBuffer[1] = (channels << 4) | ((sample2 >> 8 ) & 0x0f);
@@ -436,8 +477,8 @@ int main(void)
     RefOn();
     while(1){
         while((MAILBOX_CMD_ADDR & 0x01)==0);
-        cmd = MAILBOX_CMD_ADDR;
-	SendBuffer(cmd);
+        cmd = MAILBOX_CMD_ADDR & (~3);
+	SendBufferTest(cmd);
         MAILBOX_CMD_ADDR = 0x0;
     }
     return 0;
