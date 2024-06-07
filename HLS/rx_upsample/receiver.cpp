@@ -31,7 +31,7 @@ bool wrote_packet = false;
 
 
 //int receiver(corr_t *result_I, corr_t *result_Q, data_t new_sample)
-void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_i, hls::stream<transPkt_32> &output_q)
+void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_16> &output_i, hls::stream<transPkt_16> &output_q)
 {
 #pragma HLS array_partition variable=samples_I type=cyclic factor=16
 #pragma HLS array_partition variable=samples_Q type=cyclic factor=16
@@ -50,11 +50,10 @@ void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_
 	/**
 		 * DMA Streaming INPUT
     */
-	int16_t real_sample[64];
-	fp_int real_output[236]; //make into float
-	fp_int imag_output[236]; //make into float
+	uint16_t real_sample[64];
+	int16_t real_output[236]; //make into float
+	int16_t imag_output[236]; //make into float
 	transPkt_16 real_sample_pkt;
-	transPkt_32 imag_sample_pkt;
 
 
 	wrote_packet = false;
@@ -266,6 +265,7 @@ void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_
     	corr_I = corr_accum_I;
     	corr_Q = corr_accum_Q;
     	corr_abs = (double)corr_accum_I*(double)corr_accum_I + (double)corr_accum_Q*(double)corr_accum_Q;
+//		std::cout << corr_abs_prev << std::endl;
 
     	if (since_packet != -1) {
     		since_packet++;
@@ -287,38 +287,31 @@ void receiver(hls::stream<transPkt_16> &input, hls::stream<transPkt_32> &output_
     		for (int j=0; j<236; j++) {
     			// rotate to get rid of phase offset, by -theta
     			// use x and y directly instead of normalizing to get sin and cos
-    			real_output[j].fp = (float)(corr_I_prev*matched_I[i] + corr_Q_prev*matched_Q[i]);
-    			imag_output[j].fp = (float)(-corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i]);
+    			real_output[j] = (int16_t)(corr_I_prev*matched_I[i] + corr_Q_prev*matched_Q[i]);
+    			imag_output[j] = (int16_t)(-corr_Q_prev*matched_I[i] + corr_I_prev*matched_Q[i]);
     			i = i+oversample;
     		}
     	}
     }
-	if (wrote_packet == true) {
-		for (int i = 0; i < 236; i++) {
+	if (wrote_packet == false) {
+		int16_t dummy = 5;
+		for (int i = 0; i < 256; i++) {
 		    //#pragma HLS UNROLL factor=64
-		    imag_sample_pkt.data = real_output[i].i;
-		    imag_sample_pkt.last = (i==236-1) ? 1:0;
-		    output_i.write(imag_sample_pkt);
+			real_output[i] = dummy;
 
-		    imag_sample_pkt.data = imag_output[i].i;
-		    imag_sample_pkt.last = (i==236-1) ? 1:0;
-		    output_q.write(imag_sample_pkt);
-		}
-	}
-	else {
-		// If no packet, just write zeros
-		fp_int dummy;
-		dummy.fp = 0;
-		for (int i = 0; i < 236; i++) {
-		    //#pragma HLS UNROLL factor=64
-		    imag_sample_pkt.data = dummy.i;
-		    imag_sample_pkt.last = (i==236-1) ? 1:0;
-		    output_i.write(imag_sample_pkt);
-
-		    imag_sample_pkt.data = dummy.i;
-		    imag_sample_pkt.last = (i==236-1) ? 1:0;
-		    output_q.write(imag_sample_pkt);
+			imag_output[i] = dummy;
 	    }
 	}
-}
 
+	int16_t five = 5;
+	for(int i=0; i<256; i++) {
+		real_sample_pkt.data = real_output[i];
+		real_sample_pkt.last = (i==256-1) ? 1:0;
+		output_i.write(real_sample_pkt);
+
+		real_sample_pkt.data = imag_output[i];
+		real_sample_pkt.last = (i==256-1) ? 1:0;
+		output_q.write(real_sample_pkt);
+
+	}
+}

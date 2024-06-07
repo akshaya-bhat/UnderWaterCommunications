@@ -7,21 +7,20 @@
 #ifndef RECEIVER_H_
 #define RECEIVER_H_
 
-//#include <ap_fixed.h>
-//#include <ap_int.h>
+#include <ap_fixed.h>
+#include <ap_int.h>
 #include <iostream>
-//#include "hls_stream.h"
-//#include "ap_axi_sdata.h"
+#include "hls_stream.h"
+#include "ap_axi_sdata.h"
 
 using namespace std;
 
 
 typedef int	coef_t;
-typedef float data_t;
+typedef double data_t;
 typedef float double_tt;
-typedef int double_ttt;
-//typedef ap_fixed<16,1> fixed_16;
-typedef float fixed_16;
+typedef float double_ttt;
+typedef ap_fixed<16,1> fixed_16;
 
 //DMA
 
@@ -31,8 +30,8 @@ union fp_int
 	float fp;
 };
 
-//typedef ap_axis<16,2,5,6> transPkt;
-//typedef hls::stream<transPkt> DTYPE;
+typedef ap_axis<16,2,5,6> transPkt;
+typedef hls::stream<transPkt> DTYPE;
 
 /**
  * Parameters
@@ -55,9 +54,8 @@ const double_ttt fs = 128000;
 const int pnGenSequence[8] = {245, 145, 235, 35, 214, 71, 172, 142};
 //GOLAY PREAMBLE
 const data_t preamble_qpsk[64] = {1.41421356237310,	1.41421356237310,	1.41421356237310,	1.41421356237310,	1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	1.41421356237310,	1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	1.41421356237310,	-1.41421356237310,	1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310,	1.41421356237310,	-1.41421356237310 };
-extern "C" {
+
 void receiver (data_t* input_i, data_t* input_q, double_ttt* output_i, double_ttt* output_q);
-}
 void teoplitz(int m, int n, data_t* c, data_t* r, data_t t[][32]);
 void convertTo1D(const data_t Rmat[][32], int m, int n, float Rmmat[]);
 void convert1DTo2D(const float input[], int m, int n, data_t output[][64]);

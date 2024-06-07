@@ -26,7 +26,7 @@ int main () {
 
   //FILE *fid=fopen("/home/xilinx/capstone/armcode/rx_src/sense_file.dat","r");
   //FILE *fid=fopen("/home/xilinx/capstone/armcode/tx_src/output-ds.dat","r");
-  FILE *fid=fopen("/home/xilinx/tx_symbols.bin","rb");
+  FILE *fid=fopen("/home/xilinx/jupyter_notebooks/ScubaChat/receiver_pynq/downsample_cpp/tx_symbols.bin","rb");
   //FILE *fp2= fopen("/home/xilinx/capstone/armcode/rx_src/rx_output.bin","w");
   //FILE *fp_gold = fopen("/home/xilinx/capstone/armcode/rx_src/tx_gold.dat", "rb");
 

@@ -5,6 +5,7 @@ EXEC=receiver
 
 # C++ source files
 CXXSRCS := receiver.cpp receiver_tb.cpp svd.cpp matrixOperations.cpp eigen.cpp QR.cpp
+//CXXSRCS := transmitter.cpp main.cpp
 
 OBJS := $(CXXSRCS:src/%.cxx=$(BUILD_DIR)%.o)
 
